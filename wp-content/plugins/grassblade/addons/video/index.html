@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="./js/html5shiv/3.7.0/html5shiv.js"></script>
+      <script type="text/javascript" src="./js/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- support scripts -->
+    <script type="text/javascript" src="./js/2.5.3-crypto-sha1.js"></script>
+    <script type="text/javascript" src="./js/base64.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/popcorn-complete.js"></script>
+    
+    <!-- ADL scripts -->
+    <script type="text/javascript" src="./js/verbs.js"></script>
+    <script type="text/javascript" src="./js/xapiwrapper.js"></script>
+    <script type="text/javascript" src="./js/xapipopcorn.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            if (ADL.XAPIWrapper.lrs['actor'] === undefined) {
+                ADL.XAPIWrapper.lrs['actor'] = JSON.stringify({"mbox":"mailto:anon@example.com", "name":"anonymous"});
+            }
+            if (ADL.XAPIWrapper.lrs['endpoint'] === undefined) {
+                ADL.XAPIWrapper.lrs['endpoint'] = "https://lrs.adlnet.gov/xapi/";
+            }
+            if (ADL.XAPIWrapper.lrs['user'] === undefined) {
+                ADL.XAPIWrapper.lrs['user'] = "test";
+            }
+            if (ADL.XAPIWrapper.lrs['password'] === undefined) {
+                ADL.XAPIWrapper.lrs['password'] = "password";
+            }
+            qvars = parseQueryString();
+
+            var comp = Popcorn.smart("#video", qvars.activity_id);////player.vimeo.com/video/23960514");
+            comp.media.src = qvars.activity_id;
+            comp.autoplay(false);
+            comp.video_name = decodeURIComponent(qvars.activity_name);
+            ADL.XAPIVideo.addVideo(comp);//, "http://adlnet.gov/competency/scorm/choosing-an-lms/part5");
+            
+            jQuery("#video").width(jQuery(window).width() * 0.99);
+            jQuery("#video").height(jQuery(window).height() * 0.99);
+        });
+
+    </script>
+</head>
+
+<body style="padding:0; margin:0;">
+<div class="container">
+        <div class="starter-template" style="padding:0; margin:0; text-align:center;">        
+            <div style="width:450px;height:360px;margin:0 auto;" id="video"></div>
+        </div>
+</div>
+</body>
+</html>

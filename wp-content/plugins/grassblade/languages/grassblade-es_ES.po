@@ -1,0 +1,660 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GrassBlade - xAPI Companion v0.6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-08-05 18:18:21+0000\n"
+"Last-Translator: admin <pankaj.visitme@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: addons/StatementViewer/functions.php:13
+#: addons/pageviews/functions.php:15
+#: grassblade.php:210
+#: wp_autoupdate.php:204
+#@ default
+#@ grassblade
+msgid "You do not have sufficient permissions to access this page."
+msgstr "No tiene permisos suficientes para acceder a esta página."
+
+#: addons/StatementViewer/help.php:38
+#@ grassblade
+msgid "Statement Viewer"
+msgstr "Visor de declaración"
+
+#: addons/StatementViewer/help.php:40
+#@ grassblade
+msgid "What is Statement Viewer?"
+msgstr "¿Qué es el visor de la declaración?"
+
+#: addons/StatementViewer/help.php:43
+#@ grassblade
+msgid "Statement Viewer lets you view your Tin Can Statements rigth from Wordpress. No need to login to your LRS."
+msgstr "Declaración Viewer le permite ver su derecho de lata declaraciones de Wordpress. No es necesario para entrar en el LRS."
+
+#: addons/contentuploader/functions.php:28
+#@ default
+msgctxt "post type general name"
+msgid "xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:29
+#@ default
+msgctxt "post type singular name"
+msgid "xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:30
+#@ default
+msgctxt "book"
+msgid "Add New"
+msgstr ""
+
+#: addons/contentuploader/functions.php:31
+#@ default
+msgid "Add New xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:32
+#@ default
+msgid "Edit xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:33
+#@ default
+msgid "New xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:34
+#@ default
+msgid "All xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:35
+#@ default
+msgid "View xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:36
+#@ default
+msgid "Search xAPI Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:37
+#@ default
+msgid "No xAPI Content found"
+msgstr ""
+
+#: addons/contentuploader/functions.php:38
+#@ default
+msgid "No xAPI Content found in the Trash"
+msgstr ""
+
+#: addons/contentuploader/functions.php:257
+#: addons/contentuploader/functions.php:258
+#@ grassblade
+msgid "Content Url"
+msgstr "Url de contenido"
+
+#: addons/contentuploader/functions.php:257
+#: addons/contentuploader/functions.php:258
+#@ grassblade
+msgid "(Set the content launch url, or uploading a content will automatically generate it. Needs to be a valid URL. Required)"
+msgstr ""
+
+#: addons/contentuploader/functions.php:258
+#@ grassblade
+msgid "Upload Content"
+msgstr ""
+
+#: addons/contentuploader/functions.php:259
+#@ grassblade
+msgid "Activity ID"
+msgstr ""
+
+#: addons/contentuploader/functions.php:259
+#@ grassblade
+msgid "A Unique URL"
+msgstr ""
+
+#: addons/contentuploader/functions.php:260
+#@ grassblade
+msgid "Version"
+msgstr ""
+
+#: addons/contentuploader/functions.php:260
+#@ grassblade
+msgid "Set the version of xAPI the content uses. "
+msgstr ""
+
+#: addons/contentuploader/functions.php:260
+#: addons/contentuploader/functions.php:263
+#: addons/contentuploader/functions.php:264
+#: addons/contentuploader/functions.php:265
+#: addons/contentuploader/functions.php:266
+#: addons/contentuploader/functions.php:267
+#@ grassblade
+msgid "Global"
+msgstr ""
+
+#: addons/contentuploader/functions.php:261
+#@ grassblade
+msgid "Where to launch this content?"
+msgstr ""
+
+#: addons/contentuploader/functions.php:261
+#@ grassblade
+msgid "Default: In Page"
+msgstr ""
+
+#: addons/contentuploader/functions.php:262
+#@ grassblade
+msgid "Link text if opening in new window?"
+msgstr ""
+
+#: addons/contentuploader/functions.php:262
+#@ grassblade
+msgid "Default: Launch"
+msgstr ""
+
+#: addons/contentuploader/functions.php:263
+#@ grassblade
+msgid "Width"
+msgstr ""
+
+#: addons/contentuploader/functions.php:264
+#@ grassblade
+msgid "Height"
+msgstr ""
+
+#: addons/contentuploader/functions.php:265
+#@ grassblade
+msgid "Endpoint"
+msgstr ""
+
+#: addons/contentuploader/functions.php:266
+#@ grassblade
+msgid "User"
+msgstr ""
+
+#: addons/contentuploader/functions.php:267
+#@ grassblade
+msgid "Password"
+msgstr ""
+
+#: addons/contentuploader/functions.php:268
+#@ grassblade
+msgid "Registration"
+msgstr ""
+
+#: addons/contentuploader/functions.php:268
+#@ grassblade
+msgid "Auotmatically generated per attempt, set a value to override. Needs to be in UUID format. Optional."
+msgstr ""
+
+#: addons/contentuploader/functions.php:269
+#@ grassblade
+msgid "Guest Access"
+msgstr ""
+
+#: addons/contentuploader/functions.php:269
+#@ grassblade
+msgid "Allow not logged in user to access content. Optional."
+msgstr ""
+
+#: addons/contentuploader/functions.php:270
+#@ grassblade
+msgid "I want to show the content on this page."
+msgstr ""
+
+#: addons/contentuploader/functions.php:270
+#@ grassblade
+msgid "Check to show the content on this page. Click View above to see."
+msgstr ""
+
+#: addons/contentuploader/functions.php:337
+#@ grassblade
+msgid "xAPI Content Details"
+msgstr ""
+
+#: addons/contentuploader/help.php:38
+#@ grassblade
+msgid "xAPI Content Manager"
+msgstr ""
+
+#: addons/contentuploader/help.php:40
+#@ grassblade
+msgid "How to upload an xAPI (Tin Can) content package from Articualate or other provider?"
+msgstr ""
+
+#: addons/contentuploader/help.php:44
+#@ grassblade
+msgid ""
+"xAPI Content menu option can be used to upload xAPI Content zip Package. You have to click on 'Add New' under 'xAPI Content' menu option. Write a title, select the zip package using uploader, select the version and hit publish. Simple!<br><br>\n"
+"You can test the upload using the View button next to launch url<br><br>\n"
+"Use the provided shortcode, or the Launch Url as the SRC parameter in the shortcode generator to add the content to the page, post or courses you want to add it to.<br><br>\n"
+"Make sure you are using the right version. e.g. For a 0.90 Articulate Content you need to select 0.90 in both content uploader, and the shortcode."
+msgstr ""
+
+#: addons/contentuploader/help.php:51
+#@ grassblade
+msgid "Can I upload Non Tin Can content package from Articulate or other provider?"
+msgstr ""
+
+#: addons/contentuploader/help.php:54
+#@ grassblade
+msgid "Currently you can upload Articulate Studio packages using xAPI Content Upload tool. PageViews can be tracked for such packages if you have PageViews feature enabled on your GrassBlade version. Please contact us if you need support for more packages."
+msgstr ""
+
+#: addons/pageviews/functions.php:50
+#: grassblade.php:251
+#: wp_autoupdate.php:227
+#@ grassblade
+#@ nss_plugin_updater
+msgid "settings saved."
+msgstr ""
+
+#: addons/pageviews/functions.php:122
+#: grassblade.php:279
+#@ grassblade
+msgid "Update Settings"
+msgstr ""
+
+#: addons/pageviews/help.php:38
+#@ grassblade
+msgid "PageViews Tracking"
+msgstr ""
+
+#: addons/pageviews/help.php:40
+#@ grassblade
+msgid "What is PageViews tracking?"
+msgstr ""
+
+#: addons/pageviews/help.php:43
+#@ grassblade
+msgid "PageViews tracking feature sends page view details to the LRS. Every time someone visits a page that is being tracked by PageViews, an xAPI statement is sent to the LRS."
+msgstr ""
+
+#: addons/pageviews/help.php:47
+#@ grassblade
+msgid "Which TinCan(xAPI) Version is used to send statement sent for PageViews?"
+msgstr ""
+
+#: addons/pageviews/help.php:50
+#@ grassblade
+msgid "Currently PageViews Tracking information is sent in the latest TinCan(xAPI) Version. i.e. 0.95<br>Please look for GrassBlade Updates if a newer xAPI version is released."
+msgstr ""
+
+#: addons/pageviews/help.php:55
+#@ grassblade
+msgid "How does GrassBlade decide which Pages/Posts to track?"
+msgstr ""
+
+#: addons/pageviews/help.php:58
+#@ grassblade
+msgid "Based on the settings on PageViews Settings page, you can choose to track all Pages and Posts. Or, choose to track posts in specific categories or specific tags."
+msgstr ""
+
+#: grassblade.php:58
+#@ grassblade
+msgid "Please login."
+msgstr ""
+
+#: grassblade.php:259
+#@ grassblade
+msgid "GrassBlade Settings"
+msgstr ""
+
+#: grassblade.php:260
+#@ grassblade
+msgid "Endpoint URL "
+msgstr ""
+
+#: grassblade.php:260
+#: grassblade.php:263
+#: grassblade.php:265
+#@ grassblade
+msgid "(provided by your LRS, check FAQ below for details)"
+msgstr ""
+
+#: grassblade.php:263
+#@ grassblade
+msgid "User "
+msgstr ""
+
+#: grassblade.php:265
+#@ grassblade
+msgid "Password "
+msgstr ""
+
+#: grassblade.php:267
+#@ grassblade
+msgid "Version "
+msgstr ""
+
+#: grassblade.php:267
+#@ grassblade
+msgid "(Default xAPI (Tin Can) version of content)"
+msgstr ""
+
+#: grassblade.php:272
+#@ grassblade
+msgid "Track Guest Users "
+msgstr ""
+
+#: grassblade.php:272
+#@ grassblade
+msgid "(Not Logged In users will be able to access content, and their page views will also be tracked)"
+msgstr ""
+
+#: grassblade.php:273
+#@ grassblade
+msgid " Check  to track guest users (Tracked as <b>{\"name\":\"Guest XXX.XXX.XXX.XXX\", \"actor\":{\"mbox\": \"mailto:guest-XXX.XXX.XXX.XXX@\"}</b>) where <i>XXX.XXX.XXX.XXX</i> is users IP."
+msgstr ""
+
+#: grassblade.php:274
+#@ grassblade
+msgid "Width "
+msgstr ""
+
+#: grassblade.php:274
+#@ grassblade
+msgid "(Default width of iframe in which content is launched)"
+msgstr ""
+
+#: grassblade.php:276
+#@ grassblade
+msgid "Height "
+msgstr ""
+
+#: grassblade.php:276
+#@ grassblade
+msgid "(Default height of iframe in which content is launched)"
+msgstr ""
+
+#: grassblade.php:281
+#@ grassblade
+msgid "Don't have an LRS? "
+msgstr ""
+
+#: grassblade.php:281
+#@ grassblade
+msgid " Find an LRS"
+msgstr ""
+
+#: grassbladepopup.php:13
+#@ grassblade
+msgid "You are not allowed to be here"
+msgstr ""
+
+#: grassbladepopup.php:91
+#@ grassblade
+msgid "Guests can access"
+msgstr ""
+
+#: grassbladepopup.php:91
+#@ grassblade
+msgid "Require Login"
+msgstr ""
+
+#: grassbladepopup.php:107
+#@ grassblade
+msgid "Warning! Global LRS settings is not complete. "
+msgstr ""
+
+#: grassbladepopup.php:107
+#@ grassblade
+msgid "Click here to update"
+msgstr ""
+
+#: grassbladepopup.php:110
+#@ grassblade
+msgid " Click here "
+msgstr ""
+
+#: grassbladepopup.php:110
+#@ grassblade
+msgid "to change your global settings."
+msgstr ""
+
+#: help.php:37
+#@ grassblade
+msgid "Help FAQ"
+msgstr ""
+
+#: help.php:39
+#@ grassblade
+msgid "What can GrassBlade be used for?"
+msgstr ""
+
+#: help.php:42
+#@ grassblade
+msgid "1. You can use it for launching TinCan content from wordpress, and track user activity on your LRS."
+msgstr ""
+
+#: help.php:44
+#@ grassblade
+msgid "2. GrassBlade can track and send statements for common activities like page views to your LRS."
+msgstr ""
+
+#: help.php:50
+#@ grassblade
+msgid "Where will I get the endpoint url, user and password from?"
+msgstr ""
+
+#: help.php:52
+#@ grassblade
+msgid "These details are provided by your LRS. If you are using Scorm Cloud from Rustici or WaxLRS. The following details can help:"
+msgstr ""
+
+#: help.php:54
+#@ grassblade
+msgid "Configuring GrassBlade with Scorm Cloud"
+msgstr ""
+
+#: help.php:55
+#@ grassblade
+msgid "1. Create an application in Scorm Cloud. Get the Application ID and Secret."
+msgstr ""
+
+#: help.php:56
+#@ grassblade
+msgid "2. In GrassBlade Settings you will have to enter the following details:"
+msgstr ""
+
+#: help.php:57
+#@ grassblade
+msgid "<b>Endpoint URL:</b> https://cloud.scorm.com/ScormEngineInterface/TCAPI/<b>&lt;APPLICATIONID&gt;</b>/"
+msgstr ""
+
+#: help.php:58
+#@ grassblade
+msgid "<b>User:</b> <b>&lt;APPLICATIONID&gt;</b>"
+msgstr ""
+
+#: help.php:59
+#@ grassblade
+msgid "<b>Password:</b> <b>&lt;APPLICATION SECRET&gt;</b>"
+msgstr ""
+
+#: help.php:61
+#@ grassblade
+msgid "<b>Configuring GrassBlade with WaxLRS</b>"
+msgstr ""
+
+#: help.php:62
+#@ grassblade
+msgid "1. Go to Settings.<br> 2. Under \"Basic Credentials\" click on \"New Basic Credentials\".<br><b>Endpoint URL:</b> Endpoint as mentioned on the settings page e.g. https://&lt;yourcompany&gt;.waxlrs.com/TCAPI/<br><b>User:</b> <b>&lt;APPLICATIONID&gt;</b><br><b>Password:</b> <b>&lt;APPLICATION SECRET&gt;</b><br><br>"
+msgstr ""
+
+#: help.php:70
+#@ grassblade
+msgid "Shortcode Generator - What is easiest way to add grassblade shortcode?"
+msgstr ""
+
+#: help.php:72
+#@ grassblade
+msgid "You can generate shortcode using the GrassBlade Shortcode Generator. Click the button with GrassBlade icon "
+msgstr ""
+
+#: help.php:72
+#@ grassblade
+msgid " on the WYSIWYG editor when creating a page."
+msgstr ""
+
+#: addons/state/help.php:46
+#: help.php:79
+#@ grassblade
+msgid "What are the example usage?"
+msgstr ""
+
+#: help.php:83
+#@ grassblade
+msgid ""
+"1. <b>[grassblade src='http://www.nextsoftwaresolutions.com/demo/articulate/story.html']</b>: This will launch the page url http://www.nextsoftwaresolutions.com/demo/articulate/story.html in a 960 X 640px iframe<br>\n"
+"<br>\n"
+"2. <b>[grassblade src='http://www.nextsoftwaresolutions.com/demo/articulate/story.html' width='900px' height='600px']</b>: This will launch the page url http://www.nextsoftwaresolutions.com/demo/articulate/story.html in a 900 X 600px iframe\n"
+"<br>\n"
+"<br>\n"
+"3. <b>[grassblade src='http://www.nextsoftwaresolutions.com/demo/articulate/story.html' width='900px' height='600px' endpoint='https://mylrsendpoint.com' user='myauthuser' pass='myauthpass']</b>: Using endpoint details for the tag instead of using them from this settings page. This is for being able to use diffenent LRS for different pieces of content.\n"
+"</p>"
+msgstr ""
+
+#: help.php:93
+#@ grassblade
+msgid "What parameters can be used in the shortcode?"
+msgstr ""
+
+#: help.php:96
+#@ grassblade
+msgid "1. <b>src</b>*: (Required) . This URL of content's launch page where the content is to be accessed."
+msgstr ""
+
+#: help.php:98
+#@ grassblade
+msgid "2. <b>width</b>: Optional. Default 940px. Width is the iframe width for the content in which content is launched."
+msgstr ""
+
+#: help.php:100
+#@ grassblade
+msgid "3. <b>height</b>: Optional. Default 640px. Height is the iframe height for the content in which content is launched."
+msgstr ""
+
+#: help.php:102
+#@ grassblade
+msgid "4. <b>endpoint</b>: Optional. Default is the value of LRS endpoint on this page."
+msgstr ""
+
+#: help.php:104
+#@ grassblade
+msgid "5. <b>user</b>: Optional. Default is the value of User on this page."
+msgstr ""
+
+#: help.php:106
+#@ grassblade
+msgid "6. <b>pass</b>: Optional. Default is the value if Password on this page."
+msgstr ""
+
+#: help.php:108
+#@ grassblade
+msgid "7. <b>Version</b>: Optional. Default <b>0.95</b>. If using 0.90 content, set the version to 0.90"
+msgstr ""
+
+#: help.php:110
+#@ grassblade
+msgid "8. <b>target</b>: Optional. Default <b>iframe</b>. Use target='_blank' to open in new window."
+msgstr ""
+
+#: help.php:112
+#@ grassblade
+msgid "9. <b>guest</b>: Optional. Default <b>is the setting on this page.</b>. Set to 1 or 0 to allow or disable guest access for specific content."
+msgstr ""
+
+#: help.php:114
+#@ grassblade
+msgid "10. <b>activity_id</b>: Optional**.  This should be a URL unique to your content/activity. **Required by some package types."
+msgstr ""
+
+#: help.php:116
+#@ grassblade
+msgid "11. <b>registration</b>: Optional. This should be a unique UUID for a group of activities. By default GrassBlade adds a unique UUID for every launch. Hence every attempt is assumed to be unique, as long as the page is refreshed before re-launch."
+msgstr ""
+
+#: help.php:122
+#@ grassblade
+msgid "How does Guest tracking work?"
+msgstr ""
+
+#: help.php:125
+#@ grassblade
+msgid "Guest Tracking feature is to be able to track activities of users who are not logged in. Just for tracking purposes, Name and Email will be decided as mentioned in the grassblade settings page."
+msgstr ""
+
+#: help.php:134
+#@ grassblade
+msgid "Need More Features?"
+msgstr ""
+
+#: help.php:136
+#@ grassblade
+msgid "Contact us if you need more features, custom reports or want any customizations to GrassBlade."
+msgstr ""
+
+#: help.php:137
+#@ grassblade
+msgid "Email"
+msgstr ""
+
+#: help.php:138
+#@ grassblade
+msgid "Contact Page"
+msgstr ""
+
+#: wp_autoupdate.php:250
+#@ nss_plugin_updater
+msgid "Update License"
+msgstr ""
+
+#: addons/state/help.php:37
+#@ grassblade
+msgid "State API Shortcodes"
+msgstr ""
+
+#: addons/state/help.php:39
+#@ grassblade
+msgid "What does State API do?"
+msgstr ""
+
+#: addons/state/help.php:42
+#@ grassblade
+msgid "This is a scratch area for Activity Providers on the LRS. It can be used to store user specific data related or specific activities. A perfect example would be bookmark. State API can be used to track which lesson of a course user was last on. It could be in turn used to resume the users session from where he left."
+msgstr ""
+
+#: addons/state/help.php:50
+#@ grassblade
+msgid ""
+"1. <b>[set_state activityid=\"http://www.nextsoftwaresolutions.com/activity/course-01\" stateid=\"bookmark\"  data=\"http://www.nextsoftwaresolutions.com/activity/lesson-01\" ]</b>: When a user visits the page with this shortcode, it will store the lesson url as the current state of bookmark for the activity.<br>\n"
+"<br>\n"
+"2. <b>[get_state activityid=\"http://www.nextsoftwaresolutions.com/activity/course-01\" stateid=\"bookmark\"]</b>: This will fetch and display the bookmark url of the course anywhere this shortcode is used. \n"
+"<br><br>\n"
+"<b>Example use: Pause and Resume</b><br>\n"
+"One can easily add these shortcodes on each training/lesson page of a course. And create a resume button on the Course Page, something like:\n"
+"<xmp><a href='[get_state activityid=\"http://www.nextsoftwaresolutions.com/activity/course-01\" stateid=\"bookmark\"]'>Resume</a></xmp>\n"
+"\n"
+"Now everytime a user comes back to the course page, he can click on the Resume button and start back where he left. \n"
+"\n"
+"</p>"
+msgstr ""
+

@@ -1,0 +1,3549 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wp-Pro-Quiz\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-pro-quiz\n"
+"POT-Creation-Date: 2016-09-27 20:42+0200\n"
+"PO-Revision-Date: 2016-09-28 09:46+0200\n"
+"Last-Translator: Björn Granberg <write@maskinmedia.se>\n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:105
+#, php-format
+msgctxt "Do you really want to delete the quiz/question?"
+msgid "Do you really want to delete the %s/question?"
+msgstr "Vill du verkligen radera %set/frågan?"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:106
+msgid "Title is not filled!"
+msgstr "Överskriften är tom!"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:107
+msgid "No question deposited!"
+msgstr "Ingen fråga inlagd!"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:108
+msgid "Correct answer was not selected!"
+msgstr "Rätt svar var inte markerat!"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:109
+msgid "No answer deposited!"
+msgstr "Inget svar inskrivet!"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:110
+#, php-format
+msgctxt "No quiz description filled!"
+msgid "No %s description filled!"
+msgstr "%sbeskrivning ej ifylld!"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:111
+msgid "The percent values in result text are incorrect."
+msgstr "Procenttalet för resultattexten är inkorrekt."
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:112
+msgid "No number in the field \"Points\" or less than 1"
+msgstr "Inget nummer i fältet \"Poäng\" är mindre än 1"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:113
+msgid "No number in the field \"Points\" or less than 0"
+msgstr "Inget nummer i fältet \"Poäng\" är mindre än 0"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:114
+#, php-format
+msgctxt "No quiz selected"
+msgid "No %s selected"
+msgstr "Inget %s har valts"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:115
+msgid "Do you really want to reset the statistic?"
+msgstr "Vill du verkligen nollställa statistiken?"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:116
+#: lib/view/WpProQuiz_View_FrontToplist.php:26
+#: lib/view/WpProQuiz_View_QuestionOverall.php:95
+#: lib/view/WpProQuiz_View_QuizOverall.php:107
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:33
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:643
+msgid "No data available"
+msgstr "Uppgifter saknas"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:117
+msgid "No sort element in the criterion"
+msgstr "Inget sorteringsord i kriteriet"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:118
+msgid ""
+"\"Different points for every answer\" is not possible at \"Free\" choice"
+msgstr "”Olika poäng för varje svar” inte är möjligt i gratisversionen"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:119
+msgid "You must specify a name."
+msgstr "Du måste ange ett namn."
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:120
+msgid "This entry should really be deleted?"
+msgstr "Vill du verkligen radera detta?"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:121
+msgid "Not all fields completed."
+msgstr "Alla fält är inte ifyllda."
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:122
+msgid "You must specify a template name."
+msgstr "Du måste ange ett namn för mallen."
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:125
+#: lib/view/WpProQuiz_View_StatisticsNew.php:180
+msgid "Close"
+msgstr "Stäng"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:126
+msgid "Today"
+msgstr "Idag"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:164
+#, php-format
+msgctxt "Advanced %s"
+msgid "Advanced %s"
+msgstr "Avancerad %s"
+
+#: lib/controller/WpProQuiz_Controller_Admin.php:164
+#, php-format
+msgctxt "Advanced Quiz"
+msgid "Advanced %s"
+msgstr "Avancerad %s"
+
+#: lib/controller/WpProQuiz_Controller_Front.php:50
+#: lib/controller/WpProQuiz_Controller_Front.php:81
+#: lib/controller/WpProQuiz_Controller_Preview.php:17
+#: lib/view/WpProQuiz_View_AdminToplist.php:47
+#: lib/view/WpProQuiz_View_FrontQuiz.php:330
+#: lib/view/WpProQuiz_View_QuestionOverall.php:128
+#: lib/view/WpProQuiz_View_StatisticsNew.php:72
+#: lib/view/WpProQuiz_View_StatisticsNew.php:148
+#: lib/view/WpProQuiz_View_StatisticsNew.php:186
+#: lib/view/WpProQuiz_View_StatisticsNew.php:232
+#: lib/view/WpProQuiz_View_Statistics.php:46
+msgid "Loading"
+msgstr "Laddar"
+
+#: lib/controller/WpProQuiz_Controller_Front.php:51
+#: lib/controller/WpProQuiz_Controller_Front.php:82
+#: lib/controller/WpProQuiz_Controller_Preview.php:18
+msgid "You must answer this question."
+msgstr "Du måste besvara denna fråga."
+
+#: lib/controller/WpProQuiz_Controller_Front.php:52
+#: lib/controller/WpProQuiz_Controller_Front.php:83
+#: lib/controller/WpProQuiz_Controller_Preview.php:19
+#, php-format
+msgctxt "You must answer all questions before you can complete the quiz."
+msgid "You must answer all questions before you can complete the %s."
+msgstr "Alla frågor måste besvaras innan %s kan slutföras."
+
+#: lib/controller/WpProQuiz_Controller_Front.php:53
+#: lib/controller/WpProQuiz_Controller_Front.php:84
+#: lib/controller/WpProQuiz_Controller_Preview.php:20
+msgid "All fields have to be filled."
+msgstr "Alla fält måste vara ifyllda."
+
+#: lib/controller/WpProQuiz_Controller_GlobalSettings.php:11
+#: lib/controller/WpProQuiz_Controller_ImportExport.php:23
+#: lib/controller/WpProQuiz_Controller_ImportExport.php:47
+#: lib/controller/WpProQuiz_Controller_Question.php:67
+#: lib/controller/WpProQuiz_Controller_Question.php:71
+#: lib/controller/WpProQuiz_Controller_Question.php:200
+#: lib/controller/WpProQuiz_Controller_Question.php:279
+#: lib/controller/WpProQuiz_Controller_Question.php:294
+#: lib/controller/WpProQuiz_Controller_Question.php:375
+#: lib/controller/WpProQuiz_Controller_Question.php:580
+#: lib/controller/WpProQuiz_Controller_Quiz.php:45
+#: lib/controller/WpProQuiz_Controller_Quiz.php:49
+#: lib/controller/WpProQuiz_Controller_Quiz.php:346
+#: lib/controller/WpProQuiz_Controller_Quiz.php:360
+#: lib/controller/WpProQuiz_Controller_Quiz.php:444
+#: lib/controller/WpProQuiz_Controller_Quiz.php:650
+#: lib/controller/WpProQuiz_Controller_Statistics.php:40
+#: lib/controller/WpProQuiz_Controller_Toplist.php:88
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Du har inte tillrätta befogenheter för att se denna sida."
+
+#: lib/controller/WpProQuiz_Controller_GlobalSettings.php:22
+msgid "Settings saved"
+msgstr "Inställningar sparade"
+
+#: lib/controller/WpProQuiz_Controller_GlobalSettings.php:46
+msgid "Database repaired"
+msgstr "Databasen reparerades"
+
+#: lib/controller/WpProQuiz_Controller_ImportExport.php:91
+#: lib/helper/WpProQuiz_Helper_Import.php:59
+#: lib/helper/WpProQuiz_Helper_Import.php:68
+#: lib/helper/WpProQuiz_Helper_Import.php:75
+msgid "File cannot be processed"
+msgstr "Filen kan inte processeras"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:10
+#: lib/controller/WpProQuiz_Controller_Question.php:21
+#: lib/controller/WpProQuiz_Controller_Quiz.php:68
+#: lib/controller/WpProQuiz_Controller_Quiz.php:377
+#, php-format
+msgctxt "Quiz not found"
+msgid "%s not found"
+msgstr "%s hittades inte"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:81
+msgid "Question not found"
+msgstr "Fråga ej funnen"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:104
+msgid "Click here to add another question."
+msgstr "Skapa ny fråga"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:106
+#: lib/controller/WpProQuiz_Controller_Question.php:365
+msgid "Question edited"
+msgstr "Fråga ändrad"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:108
+msgid "Question added"
+msgstr "Fråga tillagd"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:127
+#: lib/controller/WpProQuiz_Controller_Question.php:315
+msgid "Edit question"
+msgstr "Ändra fråga"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:127
+#: lib/controller/WpProQuiz_Controller_Question.php:433
+msgid "New question"
+msgstr "Ny fråga"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:173
+#: lib/controller/WpProQuiz_Controller_Question.php:343
+#, php-format
+msgid "Question: %d"
+msgstr "Fråga: %d"
+
+#: lib/controller/WpProQuiz_Controller_Question.php:214
+msgid "questions copied"
+msgstr "Frågor kopierade"
+
+#: lib/controller/WpProQuiz_Controller_QuizCompleted.php:208
+#: lib/controller/WpProQuiz_Controller_Quiz.php:912
+#: lib/view/WpProQuiz_View_FrontQuiz.php:840
+msgid "Not categorized"
+msgstr "Ej kategoriserad"
+
+#: lib/controller/WpProQuiz_Controller_QuizCompleted.php:214
+#: lib/controller/WpProQuiz_Controller_Quiz.php:918
+#: lib/view/WpProQuiz_View_FrontQuiz.php:834
+msgid "Categories"
+msgstr "Kategorier"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:104
+#: lib/controller/WpProQuiz_Controller_Quiz.php:392
+#, php-format
+msgctxt "Quiz edited"
+msgid "%s edited"
+msgstr "%s redigerat"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:106
+#, php-format
+msgctxt "Quiz created"
+msgid "%s created"
+msgstr "%s skapat"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:139
+#: lib/controller/WpProQuiz_Controller_Quiz.php:413
+#: lib/controller/WpProQuiz_Controller_Quiz.php:485
+#, php-format
+msgctxt "Quiz title or quiz description are not filled"
+msgid "%s title or %s description are not filled"
+msgstr "%sets titel eller %sets beskrivning är ej ifyllda"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:156
+#: lib/controller/WpProQuiz_Controller_Quiz.php:370
+#, php-format
+msgctxt "Edit quiz"
+msgid "Edit %s"
+msgstr "Redigera %s"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:156
+#: lib/controller/WpProQuiz_Controller_Quiz.php:448
+#: lib/controller/WpProQuiz_Controller_Quiz.php:466
+#, php-format
+msgctxt "Create quiz"
+msgid "Create %s"
+msgstr "Nytt %s"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:563
+msgid "Template stored"
+msgstr "Mallen sparad"
+
+#: lib/controller/WpProQuiz_Controller_Quiz.php:669
+#, php-format
+msgctxt "Quiz deleted"
+msgid "%s deleted"
+msgstr "%s raderat"
+
+#: lib/controller/WpProQuiz_Controller_Statistics.php:56
+#: lib/controller/WpProQuiz_Controller_Statistics.php:689
+#: lib/view/WpProQuiz_View_QuestionEdit.php:91
+msgid "No category"
+msgstr "Ingen kategori"
+
+#: lib/controller/WpProQuiz_Controller_Statistics.php:570
+#: lib/controller/WpProQuiz_Controller_Statistics.php:617
+#: lib/controller/WpProQuiz_Controller_Statistics.php:762
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:652
+msgid "Anonymous"
+msgstr "Anonym"
+
+#: lib/controller/WpProQuiz_Controller_Statistics.php:619
+#: lib/controller/WpProQuiz_Controller_Statistics.php:770
+msgid "Deleted user"
+msgstr "Raderad användare"
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:80
+#: lib/controller/WpProQuiz_Controller_Toplist.php:211
+msgid "No name or e-mail entered."
+msgstr "Namn eller e-post har inte fyllts i."
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:148
+msgid "You signed up successfully."
+msgstr "Ditt resultat har lagts upp."
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:156
+#: lib/controller/WpProQuiz_Controller_Toplist.php:160
+#: lib/controller/WpProQuiz_Controller_Toplist.php:177
+#: lib/controller/WpProQuiz_Controller_Toplist.php:181
+#: lib/controller/WpProQuiz_Controller_Toplist.php:187
+msgid "An error has occurred."
+msgstr "Ett fel inträffade."
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:198
+#: lib/controller/WpProQuiz_Controller_Toplist.php:207
+msgid "You can not enter again."
+msgstr "Du kan bara skicka resultat från samma prov en gång."
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:215
+msgid "Your name can not exceed 15 characters."
+msgstr "Ditt namn får inte överstiga 15 tecken."
+
+#: lib/controller/WpProQuiz_Controller_Toplist.php:223
+msgid "You entered wrong captcha code."
+msgstr "Du fyllde i fel captcha."
+
+#: lib/helper/WpProQuiz_Helper_Import.php:9
+#: lib/helper/WpProQuiz_Helper_ImportXml.php:8
+msgid "File was not uploaded"
+msgstr "Fil laddades ej upp"
+
+#: lib/helper/WpProQuiz_Helper_Import.php:40
+msgid "File have wrong format"
+msgstr "Filen har fel format"
+
+#: lib/helper/WpProQuiz_Helper_Import.php:45
+msgid "File is not compatible with the current version"
+msgstr "Filen är inte kompatibel med nuvarande version"
+
+#: lib/helper/WpProQuiz_Helper_ImportXml.php:31
+#: lib/helper/WpProQuiz_Helper_ImportXml.php:44
+msgid "XML could not be loaded."
+msgstr "XML kunde inte laddas."
+
+#: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:67
+#: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:99
+#, php-format
+msgctxt "LearnDash Quiz: One user completed a quiz"
+msgid "LearnDash %s: One user completed a %s"
+msgstr "LearnDash %s: En elev har slutfört ett %s"
+
+#: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:69
+#, php-format
+msgctxt "placeholders: Quiz, quiz"
+msgid ""
+"LearnDash %s\n"
+"\n"
+"The user \"$username\" has completed \"$quizname\" the %s.\n"
+"\n"
+"Points: $points\n"
+"Result: $result\n"
+"\n"
+msgstr ""
+"LearnDash %s\n"
+"\n"
+"Eleven \"$username\" slutförde nyligen \"$quizname\"-%set.\n"
+"\n"
+"Poäng: $points\n"
+"Resultat: $result\n"
+"\n"
+
+#: lib/model/WpProQuiz_Model_GlobalSettingsMapper.php:101
+#, php-format
+msgctxt "placeholders: Quiz, quiz"
+msgid ""
+"LearnDash %s\n"
+"\t\t\t\n"
+"You have completed the %s \"$quizname\".\n"
+"\n"
+"Points: $points\n"
+"Result: $result\n"
+"\n"
+msgstr ""
+"LearnDash %s\n"
+"\t\t\t\n"
+"Du slutförde nyss %s \"$quizname\".\n"
+"\n"
+"Poäng: $points\n"
+"Resultat: $result\n"
+"\n"
+
+#: lib/plugin/WpProQuiz_Plugin_BpAchievementsV2.php:33
+#: lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php:6
+#, php-format
+msgctxt "The user completed a quiz."
+msgid "The user completed a %s."
+msgstr "Eleven har avslutat ett %s."
+
+#: lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php:7
+#, php-format
+msgctxt "The user completed a quiz with 100 percent."
+msgid "The user completed a %s with 100 percent."
+msgstr "En användare slutförde ett %s med 100 procent rätta svar."
+
+#: lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php:18
+#, php-format
+msgctxt "A powerful and beautiful quiz plugin for WordPress."
+msgid "A powerful and beautiful %s plugin for WordPress."
+msgstr "En kraftfull och noga utvecklad %s-plugin för WordPress."
+
+#. Plugin Name of the plugin/theme
+#: lib/plugin/WpProQuiz_Plugin_BpAchievementsV3.php:21
+msgid "WP-Pro-Quiz"
+msgstr "WP-Pro-Quiz"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:7
+#: lib/view/WpProQuiz_View_FrontToplist.php:8
+#: lib/view/WpProQuiz_View_QuizEdit.php:1041
+#: lib/view/WpProQuiz_View_QuizEdit.php:1053
+#: lib/view/WpProQuiz_View_QuizOverall.php:92
+msgid "Leaderboard"
+msgstr "Topplista"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:11
+#: lib/view/WpProQuiz_View_StatisticsNew.php:93
+#: lib/view/WpProQuiz_View_StatisticsNew.php:139
+#: lib/view/WpProQuiz_View_StatisticsNew.php:200
+#: lib/view/WpProQuiz_View_StatisticsNew.php:223
+#: lib/view/WpProQuiz_View_Statistics.php:209
+#: lib/view/WpProQuiz_View_Statistics.php:288
+msgid "Filter"
+msgstr "Filtrera"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:16
+msgid "Sort by:"
+msgstr "Sortera efter:"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:18
+#: lib/view/WpProQuiz_View_QuizEdit.php:1133
+msgid "best user"
+msgstr "Bäst resultat"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:19
+#: lib/view/WpProQuiz_View_QuizEdit.php:1137
+msgid "newest entry"
+msgstr "Nyast resultat"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:20
+#: lib/view/WpProQuiz_View_QuizEdit.php:1141
+msgid "oldest entry"
+msgstr "Äldst resultat"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:26
+#: lib/view/WpProQuiz_View_StatisticsNew.php:119
+#: lib/view/WpProQuiz_View_StatisticsNew.php:211
+#: lib/view/WpProQuiz_View_Statistics.php:220
+#: lib/view/WpProQuiz_View_Statistics.php:303
+msgid "How many entries should be shown on one page:"
+msgstr "Hur många resultat ska visas på en sida"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:38
+#: lib/view/WpProQuiz_View_AdminToplist.php:57
+#: lib/view/WpProQuiz_View_QuestionOverall.php:30
+#: lib/view/WpProQuiz_View_QuizEdit.php:1401
+msgid "Type"
+msgstr "Typ"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:38
+msgid "UR = unregistered user, R = registered user"
+msgstr "UR = Oregistrerad användare, R = Registrerad användare"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:55
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:631
+#: lib/view/WpProQuiz_View_StatisticsNew.php:106
+#: lib/view/WpProQuiz_View_Statistics.php:239
+msgid "User"
+msgstr "Elev"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:56
+#: lib/view/WpProQuiz_View_FrontQuiz.php:342
+#: lib/view/WpProQuiz_View_FrontQuiz.php:343
+msgid "E-Mail"
+msgstr "E-post"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:58
+#: lib/view/WpProQuiz_View_FrontToplist.php:16
+msgid "Entered on"
+msgstr "Datum"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:59
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1206
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1223
+#: lib/view/WpProQuiz_View_FrontToplist.php:17
+#: lib/view/WpProQuiz_View_QuestionEdit.php:49
+#: lib/view/WpProQuiz_View_QuestionEdit.php:56
+#: lib/view/WpProQuiz_View_QuestionEdit.php:324
+#: lib/view/WpProQuiz_View_QuestionEdit.php:362
+#: lib/view/WpProQuiz_View_QuestionEdit.php:421
+#: lib/view/WpProQuiz_View_QuestionOverall.php:32
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:26
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:158
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:632
+#: lib/view/WpProQuiz_View_Statistics.php:105
+#: lib/view/WpProQuiz_View_Statistics.php:240
+msgid "Points"
+msgstr "Poäng"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:60
+#: lib/view/WpProQuiz_View_FrontQuiz.php:763
+#: lib/view/WpProQuiz_View_FrontQuiz.php:778
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:27
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:164
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:637
+#: lib/view/WpProQuiz_View_Statistics.php:111
+#: lib/view/WpProQuiz_View_Statistics.php:245
+#: lib/view/WpProQuiz_View_Statistics.php:324
+msgid "Results"
+msgstr "Resultat"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:72
+#: lib/view/WpProQuiz_View_QuestionOverall.php:64
+#: lib/view/WpProQuiz_View_QuizOverall.php:76
+msgid "Edit"
+msgstr "Ändra"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:75
+#: lib/view/WpProQuiz_View_AdminToplist.php:100
+#: lib/view/WpProQuiz_View_GobalSettings.php:139
+#: lib/view/WpProQuiz_View_GobalSettings.php:170
+#: lib/view/WpProQuiz_View_GobalSettings.php:203
+#: lib/view/WpProQuiz_View_QuestionOverall.php:68
+#: lib/view/WpProQuiz_View_QuizEdit.php:1448
+#: lib/view/WpProQuiz_View_QuizOverall.php:80
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:43
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:677
+msgid "Delete"
+msgstr "Ta bort"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:80
+msgid "save"
+msgstr "Spara"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:81
+msgid "cancel"
+msgstr "Avbryt"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:99
+msgid "Action"
+msgstr "Åtgärder"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:102
+msgid "Apply"
+msgstr "Utför"
+
+#: lib/view/WpProQuiz_View_AdminToplist.php:103
+msgid "Delete all entries"
+msgstr "Radera alla resultat"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:159
+#: lib/view/WpProQuiz_View_FrontQuiz.php:228
+#: lib/view/WpProQuiz_View_FrontQuiz.php:597
+#: lib/view/WpProQuiz_View_FrontQuiz.php:750
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1288
+#: lib/view/WpProQuiz_View_QuizEdit.php:425
+#: lib/view/WpProQuiz_View_QuizEdit.php:435
+#: lib/view/WpProQuiz_View_QuizEdit.php:440
+#, php-format
+msgctxt "Quiz-summary"
+msgid "%s-summary"
+msgstr "%s-sammanfattning"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:159
+#: lib/view/WpProQuiz_View_FrontQuiz.php:228
+#: lib/view/WpProQuiz_View_FrontQuiz.php:627
+#: lib/view/WpProQuiz_View_FrontQuiz.php:647
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1291
+#, php-format
+msgctxt "Finish Quiz Button Label"
+msgid "Finish %s"
+msgstr "Avsluta %s"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:326
+msgid "Your result has been entered into leaderboard"
+msgstr "Skicka dina resultat till topplistan"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:335
+#: lib/view/WpProQuiz_View_FrontQuiz.php:336
+#: lib/view/WpProQuiz_View_FrontToplist.php:15
+#: lib/view/WpProQuiz_View_QuestionOverall.php:29
+#: lib/view/WpProQuiz_View_QuizOverall.php:54
+msgid "Name"
+msgstr "Namn"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:351
+msgid "Captcha"
+msgstr "Captcha"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:358
+msgid "Send"
+msgstr "Skicka"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:450
+#: lib/view/WpProQuiz_View_FrontQuiz.php:549
+msgid "You must fill out this field."
+msgstr "Du måste fylla i detta fält"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:453
+msgid "You must specify a number."
+msgstr "Du måste specificera ett nummer."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:454
+msgid "You must specify a text."
+msgstr "Du måste specificera en text."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:455
+msgid "You must specify an email address."
+msgstr "Du måsta fylla i en e-postadress."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:456
+msgid "You must specify a date."
+msgstr "Du måste specificera ett datum"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:535
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:595
+msgid "Yes"
+msgstr "Ja"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:540
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:595
+msgid "No"
+msgstr "Nej"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:567
+#, php-format
+msgctxt ""
+"You have already completed the quiz before. Hence you can not start it again."
+msgid ""
+"You have already completed the %s before. Hence you can not start it again."
+msgstr "Du har redan gjort detta %s och kan inte göra det en gång till."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:577
+#, php-format
+msgctxt "You must sign in or sign up to start the quiz."
+msgid "You must sign in or sign up to start the %s."
+msgstr "Du måste logga in eller registrera dig för att starta ett %s."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:587
+#, php-format
+msgctxt ""
+"You have to pass the previous Module's Quiz in order to start this Quiz"
+msgid "You have to pass the previous Module's %s in order to start this %s"
+msgstr ""
+"Du måste göra färdigt %set från föregående moment innan detta %s kan "
+"påbörjas."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:600
+#, php-format
+msgid "%s of %s questions completed"
+msgstr "%s av %s frågor besvarade"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:603
+#: lib/view/WpProQuiz_View_Import.php:44
+#: lib/view/WpProQuiz_View_QuizOverall.php:71
+msgid "Questions"
+msgstr "Frågor"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:620
+#: lib/view/WpProQuiz_View_FrontQuiz.php:636
+msgid "Information"
+msgstr "Information"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:664
+#, php-format
+msgctxt "Start Quiz Button Label"
+msgid "Start %s"
+msgstr "Starta %s"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:697
+#, php-format
+msgctxt "Start Quiz Statistics Button Label"
+msgid "View %s Statistics"
+msgstr "Visa %sstatistik"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:715
+#: lib/view/WpProQuiz_View_QuizEdit.php:155
+#: lib/view/WpProQuiz_View_QuizEdit.php:160
+msgid "Time limit"
+msgstr "Tid kvar"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:736
+msgid "Answered"
+msgstr "Besvarad"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:740
+msgid "Review"
+msgstr "Oklar"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:747
+msgid "Review question"
+msgstr "Besvarad/Oklar"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:767
+#, php-format
+msgctxt "Quiz complete. Results are being recorded."
+msgid "%s complete. Results are being recorded."
+msgstr "%set är klart. Resultaten sparas och skickas."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:782
+#, php-format
+msgid "%s of %s questions answered correctly"
+msgstr "%s frågor av %s besvarades korrekt"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:788
+msgid "Your time: <span></span>"
+msgstr "Din tid: <span></span>"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:793
+msgid "Time has elapsed"
+msgstr "Tiden är ute"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:798
+#, php-format
+msgid "You have reached %s of %s points, (%s)"
+msgstr "Du fick %s poäng av %s möjliga, (%s)"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:801
+#, php-format
+msgid "Earned Points: %s of %s, (%s)"
+msgstr "Tilldelade poäng: %s av %s, (%s)"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:802
+#, php-format
+msgid "%s Essay(s) Pending (Possible Points: %s)"
+msgstr "%s ännu ej betygsatta essäfrågor (möjliga poäng: %s)"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:815
+msgid "Average score"
+msgstr "Rikssnitt"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:822
+msgid "Your score"
+msgstr "Din poäng"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:877
+#, php-format
+msgctxt "Restart Quiz Button Label"
+msgid "Restart %s"
+msgstr "Starta om %s"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:881
+msgid "View questions"
+msgstr "Visa svar"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:885
+msgid "Show leaderboard"
+msgstr "Visa topplistan"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:946
+#, php-format
+msgid "Question %s of %s"
+msgstr "Fråga %s av %s"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:950
+#: lib/view/WpProQuiz_View_QuestionEdit.php:110
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:157
+#: lib/view/WpProQuiz_View_Statistics.php:104
+msgid "Question"
+msgstr "Fråga"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:955
+#, php-format
+msgid "%d points"
+msgstr "%d poäng"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:961
+#, php-format
+msgid "Category: %s"
+msgstr "Frågekategori: <strong>%s</strong>"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:976
+#: lib/view/WpProQuiz_View_QuestionEdit.php:354
+msgid "Sort elements"
+msgstr "Dra och släpp till rätt plats"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1162
+msgid "Type your response here"
+msgstr "Skriv ditt svar här"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1166
+msgid "Upload your answer to this question."
+msgstr "Bifoga en fil."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1177
+msgid "Essay type not found"
+msgstr "Essäfrågans typ kunde ej hittas"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1182
+msgid ""
+"This response will be awarded full points automatically, but it can be "
+"reviewed and adjusted after submission."
+msgstr ""
+"Detta svar tilldelas automatisk full poäng, men kan granskas manuellt i "
+"efterhand med möjlig justering av poängen."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1184
+msgid ""
+"This response will be awarded full points automatically, but it will be "
+"reviewed and possibly adjusted after submission."
+msgstr ""
+"Detta svar tilldelas full poäng automatiskt, men kommer att granskas "
+"manuellt i efterhand med möjlig justering av poängen."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1186
+msgid "This response will be reviewed and graded after submission."
+msgstr "Svaret kommer att granskas och betygsättas manuellt."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1205
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1212
+#: lib/view/WpProQuiz_View_QuestionEdit.php:312
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:24
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:159
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:360
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:633
+#: lib/view/WpProQuiz_View_Statistics.php:106
+#: lib/view/WpProQuiz_View_Statistics.php:241
+msgid "Correct"
+msgstr "Rätt"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1210
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1228
+msgid "Grading can be reviewed and adjusted."
+msgstr "Betygssättningen kan komma att granskas och justeras."
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1221
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1231
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:25
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:160
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:634
+#: lib/view/WpProQuiz_View_Statistics.php:107
+#: lib/view/WpProQuiz_View_Statistics.php:242
+msgid "Incorrect"
+msgstr "Fel"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1244
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1259
+#: lib/view/WpProQuiz_View_QuestionEdit.php:154
+msgid "Hint"
+msgstr "Ledtråd"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1251
+#: lib/view/WpProQuiz_View_QuizEdit.php:454
+#: lib/view/WpProQuiz_View_QuizEdit.php:459
+msgid "Skip question"
+msgstr "Hoppa över"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1255
+msgid "Back"
+msgstr "Tillbaka"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1263
+msgid "Check"
+msgstr "Kontrollera"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1266
+msgid "Next"
+msgstr "Nästa"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1281
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1284
+#, php-format
+msgid "Page %d"
+msgstr "Sid %d"
+
+#: lib/view/WpProQuiz_View_FrontQuiz.php:1307
+#, php-format
+msgctxt "quiz is loading... Label"
+msgid "%s is loading..."
+msgstr "%s laddar…"
+
+#: lib/view/WpProQuiz_View_FrontToplist.php:11
+#, php-format
+msgid "maximum of %s points"
+msgstr "Maxpoäng på detta prov: %s."
+
+#: lib/view/WpProQuiz_View_FrontToplist.php:14
+msgid "Pos."
+msgstr "Pos."
+
+#: lib/view/WpProQuiz_View_FrontToplist.php:18
+msgid "Result"
+msgstr "Resultat"
+
+#: lib/view/WpProQuiz_View_FrontToplist.php:23
+msgid "Table is loading"
+msgstr "Tabellen laddas"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:7
+#: lib/view/WpProQuiz_View_GobalSettings.php:12
+#, php-format
+msgctxt "Quiz Options"
+msgid "%s Options"
+msgstr "%sinställningar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:9
+#: lib/view/WpProQuiz_View_Statistics.php:29
+msgid "back to overview"
+msgstr "Tillbaka till översikten"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:13
+msgid "E-Mail settings"
+msgstr "E-postinställningar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:14
+#: lib/view/WpProQuiz_View_GobalSettings.php:393
+msgid "Settings in case of problems"
+msgstr "I händelse av problem"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:30
+#: lib/view/WpProQuiz_View_QuestionEdit.php:270
+#: lib/view/WpProQuiz_View_QuizEdit.php:667
+msgid "Save"
+msgstr "Spara"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:42
+msgid "Global settings"
+msgstr "Globala inställningar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:48
+#: lib/view/WpProQuiz_View_GobalSettings.php:53
+msgid "Leaderboard time format"
+msgstr "Topplistans tidformat"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:75
+msgid "Custom"
+msgstr "Egen:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:79
+#: lib/view/WpProQuiz_View_GobalSettings.php:113
+msgid "Documentation on date and time formatting"
+msgstr "Instruktioner för datum- och tidsformatering"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:87
+#: lib/view/WpProQuiz_View_GobalSettings.php:92
+msgid "Statistic time format"
+msgstr "Statistikens tidformat"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:96
+msgid "Select example:"
+msgstr "Välj exempel:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:109
+msgid "Time format:"
+msgstr "Tidsformat:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:122
+#: lib/view/WpProQuiz_View_GobalSettings.php:127
+msgid "Question Category management"
+msgstr "Hantera frågekategorier"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:130
+msgid "Select Question Category"
+msgstr "Välj frågekategori"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:139
+msgid "Delete selected Question Category"
+msgstr "Radera markerad frågekategori"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:140
+msgid "Save changed to selected Question Category"
+msgstr "Spara ändringar i vald frågekategori"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:140
+#: lib/view/WpProQuiz_View_GobalSettings.php:171
+#: lib/view/WpProQuiz_View_GobalSettings.php:204
+msgid "Save Changes"
+msgstr "Spara ändringar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:142
+msgid "Question Category Saved"
+msgstr "Frågekategorin sparades"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:143
+msgid "Question Category Deleted"
+msgstr "Frågekategorin raderades"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:152
+#: lib/view/WpProQuiz_View_GobalSettings.php:157
+#, php-format
+msgctxt "Quiz template management"
+msgid "%s template management"
+msgstr "Hantera %small"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:160
+#, php-format
+msgctxt "Select Quiz template"
+msgid "Select %s template"
+msgstr "Välj %small"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:170
+#, php-format
+msgctxt "Delete selected Quiz template"
+msgid "Delete selected %s template"
+msgstr "Radera markerad %small"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:171
+#, php-format
+msgctxt "Save changed to selected Quiz template"
+msgid "Save changed to selected %s template"
+msgstr "Spara ändringar i vald %small"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:173
+#, php-format
+msgctxt "Quiz template Saved"
+msgid "%s template Saved"
+msgstr "%small sparad"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:174
+#, php-format
+msgctxt "Quiz template Deleted"
+msgid "%s template Deleted"
+msgstr "%small raderad"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:184
+#: lib/view/WpProQuiz_View_GobalSettings.php:189
+msgid "Question template management"
+msgstr "Hantera frågemallar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:192
+msgid "Select Question template"
+msgstr "Välj frågemall"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:203
+msgid "Delete selected Question template"
+msgstr "Radera vald frågemall"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:204
+msgid "Save changed to selected Question template"
+msgstr "Spara ändringar i vald frågemall"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:206
+msgid "Question template Saved"
+msgstr "Frågemallen sparades"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:207
+msgid "Question template Deleted"
+msgstr "Frågemallen raderades"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:224
+#: lib/view/WpProQuiz_View_GobalSettings.php:518
+msgid "Admin e-mail settings"
+msgstr "Admin e-postinställningar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:230
+msgid "To:"
+msgstr "Till:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:237
+msgid ""
+"Separate multiple email addresses with a comma, e.g. wp@test.com, test@test."
+"com"
+msgstr ""
+"Separera flera e-postadresser med komma, t ex: wp@test.com, test@test.com"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:243
+#: lib/view/WpProQuiz_View_GobalSettings.php:315
+msgid "From:"
+msgstr "Från:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:250
+#: lib/view/WpProQuiz_View_GobalSettings.php:322
+msgid "This is the email address of the sender"
+msgstr "Detta är avsändarens e-posttadress"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:256
+#: lib/view/WpProQuiz_View_GobalSettings.php:328
+msgid "Subject:"
+msgstr "Ämne:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:266
+#: lib/view/WpProQuiz_View_GobalSettings.php:338
+msgid "HTML"
+msgstr "HTML"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:270
+#: lib/view/WpProQuiz_View_GobalSettings.php:342
+#: lib/view/WpProQuiz_View_GobalSettings.php:408
+#: lib/view/WpProQuiz_View_GobalSettings.php:430
+#: lib/view/WpProQuiz_View_GobalSettings.php:477
+#: lib/view/WpProQuiz_View_QuizEdit.php:56
+#: lib/view/WpProQuiz_View_QuizEdit.php:75
+#: lib/view/WpProQuiz_View_QuizEdit.php:94
+#: lib/view/WpProQuiz_View_QuizEdit.php:113
+#: lib/view/WpProQuiz_View_QuizEdit.php:129
+#: lib/view/WpProQuiz_View_QuizEdit.php:145
+#: lib/view/WpProQuiz_View_QuizEdit.php:200
+#: lib/view/WpProQuiz_View_QuizEdit.php:239
+#: lib/view/WpProQuiz_View_QuizEdit.php:262
+#: lib/view/WpProQuiz_View_QuizEdit.php:320
+#: lib/view/WpProQuiz_View_QuizEdit.php:349
+#: lib/view/WpProQuiz_View_QuizEdit.php:410
+#: lib/view/WpProQuiz_View_QuizEdit.php:512
+#: lib/view/WpProQuiz_View_QuizEdit.php:534
+#: lib/view/WpProQuiz_View_QuizEdit.php:553
+#: lib/view/WpProQuiz_View_QuizEdit.php:707
+#: lib/view/WpProQuiz_View_QuizEdit.php:732
+#: lib/view/WpProQuiz_View_QuizEdit.php:758
+#: lib/view/WpProQuiz_View_QuizEdit.php:784
+#: lib/view/WpProQuiz_View_QuizEdit.php:810
+#: lib/view/WpProQuiz_View_QuizEdit.php:852
+#: lib/view/WpProQuiz_View_QuizEdit.php:871
+#: lib/view/WpProQuiz_View_QuizEdit.php:896
+#: lib/view/WpProQuiz_View_QuizEdit.php:946
+#: lib/view/WpProQuiz_View_QuizEdit.php:966
+#: lib/view/WpProQuiz_View_QuizEdit.php:991
+#: lib/view/WpProQuiz_View_QuizEdit.php:1016
+#: lib/view/WpProQuiz_View_QuizEdit.php:1058
+#: lib/view/WpProQuiz_View_QuizEdit.php:1091
+#: lib/view/WpProQuiz_View_QuizEdit.php:1105
+#: lib/view/WpProQuiz_View_QuizEdit.php:1153
+#: lib/view/WpProQuiz_View_QuizEdit.php:1235
+#: lib/view/WpProQuiz_View_QuizEdit.php:1236
+#: lib/view/WpProQuiz_View_QuizEdit.php:1237
+#: lib/view/WpProQuiz_View_QuizEdit.php:1238
+#: lib/view/WpProQuiz_View_QuizEdit.php:1341
+msgid "Activate"
+msgstr "Aktivera"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:276
+#: lib/view/WpProQuiz_View_GobalSettings.php:348
+msgid "Message body:"
+msgstr "Meddelande:"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:284
+#: lib/view/WpProQuiz_View_GobalSettings.php:356
+msgid "Allowed variables"
+msgstr "Tillåtna variabler"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:286
+#: lib/view/WpProQuiz_View_GobalSettings.php:358
+msgid "User-ID"
+msgstr "Användar-ID"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:287
+#: lib/view/WpProQuiz_View_GobalSettings.php:359
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:22
+#: lib/view/WpProQuiz_View_Statistics.php:322
+msgid "Username"
+msgstr "Användarnamn"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:288
+#: lib/view/WpProQuiz_View_GobalSettings.php:360
+msgid "Quiz-Name"
+msgstr "Provets namn"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:289
+#: lib/view/WpProQuiz_View_GobalSettings.php:361
+msgid "Result in precent"
+msgstr "Resultat i procent"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:290
+#: lib/view/WpProQuiz_View_GobalSettings.php:362
+msgid "Reached points"
+msgstr "Nådda poäng"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:291
+#: lib/view/WpProQuiz_View_GobalSettings.php:363
+msgid "IP-address of the user"
+msgstr "Användarens IP-adress"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:292
+#: lib/view/WpProQuiz_View_GobalSettings.php:364
+msgid "Category-Overview"
+msgstr "Kategoriöversikt"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:309
+#: lib/view/WpProQuiz_View_GobalSettings.php:519
+msgid "User e-mail settings"
+msgstr "Användares E-postinställningar"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:379
+msgid "to activate"
+msgstr "att aktivera"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:381
+msgid "not to activate"
+msgstr "inte att aktivera"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:387
+msgid "Please note"
+msgstr "Vänligen notera"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:389
+msgid ""
+"These settings should only be set in cases of problems with LD Advanced Quiz."
+msgstr ""
+"Dessa inställningar bör endast användas vid problem med LD Advanced Quiz."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:399
+#: lib/view/WpProQuiz_View_GobalSettings.php:404
+msgid "Automatically add [raw] shortcode"
+msgstr "Lägg automatiskt till [raw]-kortkod"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:408
+#, php-format
+msgid "It is recommended %s this option on your system."
+msgstr "Det är rekommenderat att %s detta val på ditt system"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:411
+msgid ""
+"If this option is activated, a [raw] shortcode is automatically set around "
+"LDAdvQuiz shortcode ( [LDAdvQuiz X] ) into [raw] [LDAdvQuiz X] [/raw]"
+msgstr ""
+"Om det här alternativet aktiveras, kommer en [raw] kortkod automatiskt "
+"läggas runt LDAdvQuiz kortkod ( [LDAdvQuiz X] ) så här: [raw] [LDAdvQuiz X] "
+"[/ raw]"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:414
+#: lib/view/WpProQuiz_View_QuizOverall.php:42
+msgid ""
+"Own themes changes internal  order of filters, what causes the problems. "
+"With additional shortcode [raw] this is prevented."
+msgstr ""
+"Egna teman ändrar filtrens interna sekvens, vilket kan orsaka problem. "
+"Förhindra detta genom att lägga till kortkoden [raw]."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:421
+#: lib/view/WpProQuiz_View_GobalSettings.php:426
+msgid "Do not load the Javascript-files in the footer"
+msgstr "Ladda inte Javascript-filerna i footer"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:433
+msgid ""
+"Generally all LDAdvQuiz-Javascript files are loaded in the footer and only "
+"when they are really needed."
+msgstr ""
+"Vanligen laddas alla LDAdvQuiz-Javascript filer i sidfoten och endast när de "
+"behövs."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:436
+msgid "In very old Wordpress themes this can lead to problems."
+msgstr "I väldigt gamla Wordpress-tema kan detta leda till problem."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:439
+msgid ""
+"If you activate this option, all LDAdvQuiz-Javascript files are loaded in "
+"the header even if they are not needed."
+msgstr ""
+"Om du aktiverar det här alternativet, kommer alla LDAdvQuiz-Javascript filer "
+"laddas i headern, även om de inte behövs."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:446
+#: lib/view/WpProQuiz_View_GobalSettings.php:451
+msgid "Touch Library"
+msgstr "Touch Library"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:455
+#: lib/view/WpProQuiz_View_QuizEdit.php:444
+#: lib/view/WpProQuiz_View_QuizEdit.php:463
+#: lib/view/WpProQuiz_View_QuizEdit.php:482
+#: lib/view/WpProQuiz_View_QuizEdit.php:921
+msgid "Deactivate"
+msgstr "Avaktivera"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:458
+msgid "In Version 0.13 a new Touch Library was added for mobile devices."
+msgstr "I version 0.13 lades ett nytt Touch Library till för mobila enheter."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:461
+msgid "If you have any problems with the Touch Library, please deactivate it."
+msgstr "Om du har några problem med Touch Library, vänligen deaktivera det."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:468
+#: lib/view/WpProQuiz_View_GobalSettings.php:473
+msgid "jQuery support cors"
+msgstr "jQuery stödjer cors"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:480
+msgid "Is required only in rare cases."
+msgstr "Krävs endast i sällsynta fall."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:483
+msgid "If you have problems with the front ajax, please activate it."
+msgstr "Om du har problem med framsidans ajax, vänligen aktivera det."
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:486
+msgid "e.g. Domain with special characters in combination with IE"
+msgstr "t.ex. domän med specialtecken i kombination med IE"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:493
+#: lib/view/WpProQuiz_View_GobalSettings.php:498
+#: lib/view/WpProQuiz_View_GobalSettings.php:500
+msgid "Repair database"
+msgstr "Reparera databas"
+
+#: lib/view/WpProQuiz_View_GobalSettings.php:502
+msgid "No data will be deleted. Only LDAdvQuiz tables will be repaired."
+msgstr ""
+"Inga data kommer att raderas. Endast LDAdvQuiz tabeller kommer att repareras."
+
+#: lib/view/WpProQuiz_View_Import.php:21
+#: lib/view/WpProQuiz_View_QuizOverall.php:114
+#: lib/view/WpProQuiz_View_QuizOverall.php:137
+msgid "Import"
+msgstr "Importera"
+
+#: lib/view/WpProQuiz_View_Import.php:25
+msgid "Error"
+msgstr "Fel"
+
+#: lib/view/WpProQuiz_View_Import.php:32
+msgid "Successfully"
+msgstr "Lyckades"
+
+#: lib/view/WpProQuiz_View_Import.php:34
+msgid "Import completed successfully"
+msgstr "Importen klar"
+
+#: lib/view/WpProQuiz_View_Import.php:43
+#, php-format
+msgctxt "Quiz name"
+msgid "%s name"
+msgstr "%sets namn"
+
+#: lib/view/WpProQuiz_View_Import.php:69
+#: lib/view/WpProQuiz_View_QuizOverall.php:148
+msgid "Start import"
+msgstr "Starta import"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:24
+msgid "Return to Questions Overview"
+msgstr "Tillbaka till frågeöversikt"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:33
+#: lib/view/WpProQuiz_View_QuizEdit.php:27
+msgid "load template"
+msgstr "Ladda mall"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:40
+msgid "Title"
+msgstr "Titel"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:40
+#: lib/view/WpProQuiz_View_QuestionEdit.php:80
+#: lib/view/WpProQuiz_View_QuestionEdit.php:125
+#: lib/view/WpProQuiz_View_QuestionEdit.php:142
+#: lib/view/WpProQuiz_View_QuestionEdit.php:154
+#: lib/view/WpProQuiz_View_QuizEdit.php:599
+#: lib/view/WpProQuiz_View_QuizEdit.php:1041
+msgid "(optional)"
+msgstr "(valfritt)"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:43
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"The title is used for overview, it is not visible in %s. If you leave the "
+"title field empty, a title will be generated."
+msgstr ""
+"Rubriken används för att få överblick, den syns inte i själva %set. Lämna "
+"fältet tomt för att skapa rubriken automatiskt."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:49
+#: lib/view/WpProQuiz_View_QuestionEdit.php:110
+#: lib/view/WpProQuiz_View_QuestionEdit.php:215
+#: lib/view/WpProQuiz_View_QuizEdit.php:1222
+msgid "(required)"
+msgstr "(obligatorisk)"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:53
+msgid "Points for this question (Standard is 1 point)"
+msgstr "Poäng för denna fråga (förval är 1 poäng)"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:59
+msgid ""
+"This points will be rewarded, only if the user closes the question correctly."
+msgstr "Poängen tillgodoräknas bara om användaren svarar rätt på frågan."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:65
+msgid "Different points for each answer"
+msgstr "Svaren har olika poäng"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:68
+msgid ""
+"If you enable this option, you can enter different points for every answer."
+msgstr ""
+"Aktivera för att sätta olika poäng för varje svarsalternativ.<br />I "
+"grundläget ger detta alternativ poäng för kryssade rätta svar OCH poäng för "
+"ej kryssade fel svar. Se förklaring under Ett Svar - inställningar Läge 2 "
+"(nedan)."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:74
+msgid "Show reached points in the correct- and incorrect message?"
+msgstr "Visa uppnådda poäng i rätt/fel-meddelandet?"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:80
+#: lib/view/WpProQuiz_View_QuestionOverall.php:31
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:176
+#: lib/view/WpProQuiz_View_Statistics.php:124
+msgid "Category"
+msgstr "Kategori"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:83
+msgid ""
+"You can assign classify category for a question. Categories are e.g. visible "
+"in statistics function."
+msgstr ""
+"Klassificera frågan med en kategori. Kategorier är synliga t ex i "
+"statistikfunktionen."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:86
+msgid "You can manage categories in global settings."
+msgstr ""
+"Kategoriinställningar finns i de globala inställningarna - Gäller ej "
+"frågekategorier."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:90
+#: lib/view/WpProQuiz_View_QuestionEdit.php:100
+msgid "Create new category"
+msgstr "Skapa ny kategori"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:102
+msgid "Create"
+msgstr "Skapa"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:118
+msgid "Message with the correct / incorrect answer"
+msgstr "Meddelade med rätt / fel svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:120
+#, php-format
+msgctxt "Deactivated in quiz settings."
+msgid "Deactivated in %s settings."
+msgstr "Avaktiverad i %sets inställningar."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:125
+msgid "Message with the correct answer"
+msgstr "Meddelande till rätt svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:128
+msgid ""
+"This text will be visible if answered correctly. It can be used as "
+"explanation for complex questions. The message \"Right\" or \"Wrong\" is "
+"always displayed automatically."
+msgstr ""
+"Detta meddelande visas när användaren svarar rätt. Kan användas för att "
+"förklara en komplicerad fråga. Meddelanderutan \"Rätt\" eller \"Fel\" visas "
+"automatiskt. Funktionen kan stängas av under fliken ”Redigera prov”."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:132
+msgid "Same text for correct- and incorrect-message?"
+msgstr "Använd samma meddelande för både rätt- och fel svar  "
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:142
+msgid "Message with the incorrect answer"
+msgstr "Meddelande till felaktigt svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:145
+msgid ""
+"This text will be visible if answered incorrectly. It can be used as "
+"explanation for complex questions. The message \"Right\" or \"Wrong\" is "
+"always displayed automatically."
+msgstr ""
+"Detta meddelande visas om användaren svarar fel. Använd till exempel för att "
+"förklara en komplicerad fråga. Meddelanderutan \"Rätt\" eller \"Fel\" visas "
+"automatiskt. Funktionen kan stängas av under fliken ”Redigera prov”."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:157
+msgid "Here you can enter solution hint."
+msgstr "Skriv in en ledtråd."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:161
+msgid "Activate hint for this question?"
+msgstr "Aktivera ledtråd för denna fråga  "
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:173
+msgid "Answer type"
+msgstr "Svarstyp"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:181 wp-pro-quiz.php:34
+msgid "Single choice"
+msgstr "Ett svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:185 wp-pro-quiz.php:35
+msgid "Multiple choice"
+msgstr "Flera svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:189 wp-pro-quiz.php:36
+msgid "\"Free\" choice"
+msgstr "Kort textsvar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:193 wp-pro-quiz.php:37
+msgid "\"Sorting\" choice"
+msgstr "Lägg i ordning"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:197 wp-pro-quiz.php:38
+msgid "\"Matrix Sorting\" choice"
+msgstr "Sortera 2 kolumner"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:201 wp-pro-quiz.php:39
+msgid "Fill in the blank"
+msgstr "Fyll i tomt fält"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:205 wp-pro-quiz.php:40
+msgid "Assessment"
+msgstr "Skattning"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:209 wp-pro-quiz.php:41
+msgid "Essay / Open Answer"
+msgstr "Essä / öppet svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:215
+msgid "Answers"
+msgstr "Svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:222
+msgid ""
+"Please sort the answers in right order with the \"Move\" - Button. The "
+"answers will be displayed randomly."
+msgstr ""
+"Sortera svaren i rätt ordning med \"flytta\"-knappen. Svaren kommer att "
+"visas i blandad ordning."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:227
+#: lib/view/WpProQuiz_View_QuestionEdit.php:233
+#: lib/view/WpProQuiz_View_QuestionEdit.php:255
+msgid "Add new answer"
+msgstr "Lägg till nytt svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:237
+msgid ""
+"In this mode, not a list have to be sorted, but elements must be assigned to "
+"matching criterion."
+msgstr ""
+"Skapa en serie kriterier och en motsvarande lista av element/objekt som ska "
+"matchas mot kriterierna."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:240
+msgid ""
+"You can create sort elements with empty criteria, which can't be assigned by "
+"user."
+msgstr ""
+"Du kan skapa blinda sorterings element (alternativ) som saknar motsvarande "
+"kriteria, och alltså inte kan sorteras."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:244
+msgid "Percentage width of criteria table column:"
+msgstr "Kriteriekolumnens bredd i procent:"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:249
+msgid ""
+"Allows adjustment of the left column's width, and the right column will auto-"
+"fill the rest of the available space. Increase this to allow accommodate "
+"longer criterion text. Defaults to 20%."
+msgstr ""
+"Medger justering av den vänstra kolumnens bredd, och den högra kolumnen "
+"kommer automatiskt fylla resten av tillgängligt utrymme. Öka detta för att "
+"möjliggöra rymma längre texter för kriterierna. Standardvärde är 20%."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:273
+#: lib/view/WpProQuiz_View_QuizEdit.php:670
+msgid "template name"
+msgstr "Mallens namn"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:275
+#: lib/view/WpProQuiz_View_QuizEdit.php:672
+msgid "Create new template"
+msgstr "Skapa ny mall"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:283
+#: lib/view/WpProQuiz_View_QuizEdit.php:680
+msgid "Save as template"
+msgstr "Spara som mall"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:302
+#: lib/view/WpProQuiz_View_QuestionEdit.php:352
+#: lib/view/WpProQuiz_View_QuestionEdit.php:405
+#: lib/view/WpProQuiz_View_QuizEdit.php:41
+msgid "Options"
+msgstr "Alternativ"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:303
+#: lib/view/WpProQuiz_View_QuestionEdit.php:406
+msgid "Answer"
+msgstr "Svara"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:318
+#: lib/view/WpProQuiz_View_QuestionEdit.php:377
+#: lib/view/WpProQuiz_View_QuestionEdit.php:383
+#: lib/view/WpProQuiz_View_QuestionEdit.php:415
+msgid "Allow HTML"
+msgstr "Tillåt HTML"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:335
+#: lib/view/WpProQuiz_View_QuestionEdit.php:390
+#: lib/view/WpProQuiz_View_QuestionEdit.php:432
+msgid "Delete answer"
+msgstr "Radera svar"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:336
+#: lib/view/WpProQuiz_View_QuestionEdit.php:391
+#: lib/view/WpProQuiz_View_QuestionEdit.php:433
+msgid "Add Media"
+msgstr "Lägg till media"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:337
+#: lib/view/WpProQuiz_View_QuestionEdit.php:392
+#: lib/view/WpProQuiz_View_QuestionEdit.php:434
+#: lib/view/WpProQuiz_View_QuestionOverall.php:72
+#: lib/view/WpProQuiz_View_QuizEdit.php:1449
+msgid "Move"
+msgstr "Flytta"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:353
+msgid "Criterion"
+msgstr "Kriterie"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:445
+msgid ""
+"correct answers (one per line) (answers will be converted to lower case)"
+msgstr "Skriv de rätta svarsalternativen (ett per rad). Använd små bokstäver."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:458
+msgid ""
+"Enclose the searched words with { } e.g. \"I {play} soccer\". Capital and "
+"small letters will be ignored."
+msgstr ""
+"Klamra saknat ord med {} t.ex \"Jag {spelar} fotboll\". Stora och små "
+"bokstäver ignoreras."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:461
+msgid ""
+"You can specify multiple options for a search word. Enclose the word with "
+"[ ] e.g. <span style=\"font-style: normal; letter-spacing: 2px;\"> \"I "
+"{[play][love][hate]} soccer\" </span>. In this case answers play, love OR "
+"hate are correct."
+msgstr ""
+"Du kan ange flera alternativ till det saknade ordet. Klamra orden med [ ] t."
+"ex: <span style=\"font-style: normal; letter-spacing: 2px;\">”Jag {[spelar]"
+"[älskar][hatar]} fotboll”</span>. Varje svarsalternativ (spelar, älskar "
+"ELLER hatar) räknas som rätt svar."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:464
+msgid ""
+"If mode \"Different points for every answer\" is activated, you can assign "
+"points with |POINTS. Otherwise 1 point will be awarded for every answer."
+msgstr ""
+"Om ”Olika poäng för varje svar” är aktiverat, kan du ge varje "
+"svarsalternativ egen poäng med |POÄNG. I annat fall kommer alla svar få 1 "
+"poäng."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:467
+msgid ""
+"e.g. \"I {play} soccer, with a {ball|3}\" - \"play\" gives 1 point and \"ball"
+"\" 3 points."
+msgstr ""
+"Exempel: ”Jag {spelar} fotboll, med en {boll|3}\" - ”spelar” ger 1 poäng "
+"medan \"boll\" ger 3 poäng. OBS: ”Olika poäng för varje svar” fungerar inte "
+"tillsammans med alternativa ord."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:479
+msgid "Here you can create an assessment question."
+msgstr "Här skapar du en skattningsfråga."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:482
+msgid ""
+"Enclose a assesment with {}. The individual assessments are marked with []."
+msgstr "Sätt skattningen inom {} och varje enskild skattning inom []."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:484
+msgid "The number of options in the maximum score."
+msgstr "Antalet val är samma som maxpoängen."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:487
+msgid "Examples:"
+msgstr "Exempel_"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:489
+msgid "less true { [1] [2] [3] [4] [5] } more true"
+msgstr "Mindre sant { [1] [2] [3] [4] [5] } mer sant"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:492
+#: lib/view/WpProQuiz_View_QuestionEdit.php:501
+#: lib/view/WpProQuiz_View_QuizEdit.php:419
+#: lib/view/WpProQuiz_View_QuizEdit.php:425
+#: lib/view/WpProQuiz_View_QuizEdit.php:713
+#: lib/view/WpProQuiz_View_QuizEdit.php:740
+#: lib/view/WpProQuiz_View_QuizEdit.php:766
+#: lib/view/WpProQuiz_View_QuizEdit.php:792
+#: lib/view/WpProQuiz_View_QuizEdit.php:818
+#: lib/view/WpProQuiz_View_QuizEdit.php:877
+#: lib/view/WpProQuiz_View_QuizEdit.php:902
+#: lib/view/WpProQuiz_View_QuizEdit.php:927
+#: lib/view/WpProQuiz_View_QuizEdit.php:972
+#: lib/view/WpProQuiz_View_QuizEdit.php:997
+#: lib/view/WpProQuiz_View_QuizEdit.php:1022
+#: lib/view/WpProQuiz_View_QuizEdit.php:1194
+#: lib/view/WpProQuiz_View_QuizEdit.php:1204
+#: lib/view/WpProQuiz_View_QuizEdit.php:1257
+#: lib/view/WpProQuiz_View_QuizEdit.php:1265
+#: lib/view/WpProQuiz_View_QuizEdit.php:1273
+#: lib/view/WpProQuiz_View_QuizEdit.php:1281
+#: lib/view/WpProQuiz_View_QuizEdit.php:1364
+#: lib/view/WpProQuiz_View_QuizEdit.php:1376
+#: lib/view/WpProQuiz_View_QuizEdit.php:1383
+msgid "Demo"
+msgstr "Demo"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:498
+msgid "less true { [a] [b] [c] } more true"
+msgstr "Mindre sant { [a] [b] [c] } Mer sant"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:519
+msgid "How should the user submit their answer?"
+msgstr "Hur ska användaren skicka in sitt svar?"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:526
+#, php-format
+msgctxt "placeholders: course"
+msgid ""
+"This is a question that can be graded and potentially prevent a user from "
+"progressing to the next step of the %s."
+msgstr ""
+"Detta är en fråga som kan betygsättas så att den eventuellt hindrar en elev "
+"från att fortsätta till nästa steg i %sen."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:527
+msgid ""
+"The user can only progress if the essay is marked as \"Graded\" and if the "
+"user has enough points to move on."
+msgstr ""
+"Användaren kan bara fortsätta om essäfrågan har markerats ”betygsatt” och om "
+"användaren har tillräckliga poäng för att gå vidare."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:528
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"How should the answer to this question be marked and graded upon %s "
+"submission?"
+msgstr ""
+"Hur ska svaret på denna fråga markeras och betygsättas när %set skickas in?"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:545
+msgid "Single choice options"
+msgstr "Inställningar för ettsvarsfrågor"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:548
+msgid ""
+"If \"Different points for each answer\" is activated, you can activate a "
+"special mode.<br> This changes the calculation of the points"
+msgstr ""
+"Om ”Olika poäng för olika svar” är aktiverat, så kan alternativet ”Olika "
+"poäng - Läge 2” aktiveras.<br>Detta förändrar hur poängen beräknas ( I "
+"princip så att poäng ej ges till ej ifyllda felaktiga svar - se info nedan)."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:552
+msgid "Different points - modus 2 activate"
+msgstr "Aktivera olika poäng - Läge 2"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:556
+msgid "Disables the distinction between correct and incorrect."
+msgstr "Stänger av skillnaden mellan rätt och fel."
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:560
+msgid "disable correct and incorrent"
+msgstr "Stäng av rätt och fel"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:564
+msgid "Explanation of points calculation"
+msgstr "Förklaring av poängberäkning"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:584
+#: lib/view/WpProQuiz_View_QuestionEdit.php:589
+msgid "\"Different points for each answer\" enabled"
+msgstr "”Olika poäng för olika svar” aktiverat"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:586
+msgid "\"Different points - mode 2\" disable"
+msgstr "”Olika poäng - Läge 2” Ej aktiverat"
+
+#: lib/view/WpProQuiz_View_QuestionEdit.php:591
+msgid "\"Different points - mode 2\" enabled"
+msgstr "”Olika poäng - Läge 2” Aktiverat"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:18
+msgid "Questions sorted"
+msgstr "Frågorna sorterade"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:22
+#: lib/view/WpProQuiz_View_QuestionOverall.php:114
+msgid "Add question"
+msgstr "Lägg till fråga"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:104
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:275
+#: lib/view/WpProQuiz_View_Statistics.php:169
+msgid "Total"
+msgstr "Totalt"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:115
+msgid "Save order"
+msgstr "Spara ordning"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:116
+#: lib/view/WpProQuiz_View_QuestionOverall.php:123
+#, php-format
+msgctxt "Copy questions from another Quiz"
+msgid "Copy questions from another %s"
+msgstr "Kopiera frågor från ett annat %s"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:124
+#, php-format
+msgctxt "placeholders: quiz, quiz"
+msgid ""
+"Here you can copy questions from another %s into this %s. (Multiple "
+"selection enabled)"
+msgstr ""
+"Här kan du kopiera frågor från ett annat %s in i detta %s. (välj flera "
+"samtidigt)"
+
+#: lib/view/WpProQuiz_View_QuestionOverall.php:136
+msgid "Copy questions"
+msgstr "Kopiera frågor"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:47
+#, php-format
+msgctxt "Hide quiz title"
+msgid "Hide %s title"
+msgstr "Dölj %sets titel"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:52
+msgid "Hide title"
+msgstr "Dölj överskrift"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:59
+#, php-format
+msgctxt "The title serves as quiz heading."
+msgid "The title serves as %s heading."
+msgstr "Titeln fungerar som %sets rubrik."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:66
+#: lib/view/WpProQuiz_View_QuizEdit.php:71
+#, php-format
+msgctxt "Hide \"Restart quiz\" button"
+msgid "Hide \"Restart %s\" button"
+msgstr "Dölj \"Starta om %s”-knappen"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:78
+#, php-format
+msgctxt "Hide the \"Restart quiz\" button in the Frontend."
+msgid "Hide the \"Restart %s\" button in the Frontend."
+msgstr "Döljer \"Starta om %s”-knappen för användaren."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:85
+#: lib/view/WpProQuiz_View_QuizEdit.php:90
+msgid "Hide \"View question\" button"
+msgstr "Dölj \"Visa fråga\"-knappen"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:97
+msgid "Hide the \"View question\" button in the Frontend."
+msgstr "Döljer ”Visa fråga\"-knappen för användaren"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:104
+#: lib/view/WpProQuiz_View_QuizEdit.php:109
+msgid "Display question randomly"
+msgstr "Frågor i blandad ordning"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:120
+#: lib/view/WpProQuiz_View_QuizEdit.php:125
+msgid "Display answers randomly"
+msgstr "Svaren i blandad ordning"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:136
+#: lib/view/WpProQuiz_View_QuizEdit.php:141
+msgid "Sort questions by category"
+msgstr "Sortera frågorna efter kategori"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:148
+msgid ""
+"Also works in conjunction with the \"display randomly question\" option."
+msgstr "Fungerar även tillsammans med ”Visa frågor i blandad ordning”."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:163
+#: lib/view/WpProQuiz_View_QuizEdit.php:181
+msgid "Seconds"
+msgstr "Sekunder"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:166
+msgid "0 = no limit"
+msgstr ""
+"Tvinga användaren att göra provet inom en viss tid. 0 = ingen "
+"tidsbegränsning."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:173
+#, php-format
+msgctxt "Protect Quiz Answers in Browser Cookie"
+msgid "Protect %s Answers in Browser Cookie"
+msgstr "Skydda %ssvaren i en webbläsarkaka."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:178
+#, php-format
+msgctxt "Use cookies for Quiz Answers"
+msgid "Use cookies for %s Answers"
+msgstr "Använd kakor för %sns svar"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:184
+#, php-format
+msgctxt "placeholders: Quiz"
+msgid ""
+"0 = Don't save answers. This option will save the user's answers into a "
+"browser cookie until the %s is submitted."
+msgstr ""
+"0 = Spara inte svaren. Detta alternativ sparar användarens svar i en "
+"webbläsarkaka till dess %set skickas."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:191
+#: lib/view/WpProQuiz_View_QuizEdit.php:196
+#: lib/view/WpProQuiz_View_QuizOverall.php:88
+msgid "Statistics"
+msgstr "Statistik"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:203
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"Statistics about right or wrong answers. Statistics will be saved by "
+"completed %s, not after every question. The statistics is only visible over "
+"administration menu. (internal statistics)"
+msgstr ""
+"Statistik över rätt eller fel svar. Statistiken sparas när %set är klart, "
+"inte efter varje fråga. Statistiken visas enbart för administratörer (intern "
+"statistik)."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:210
+#: lib/view/WpProQuiz_View_QuizEdit.php:215
+msgid "Statistics IP-lock"
+msgstr "IP-lås"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:219
+msgid "in minutes (recommended 1440 minutes = 1 day)"
+msgstr " minuter (rekommenderat: 720 minuter = 1/2 dag)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:222
+msgid ""
+"Protect the statistics from spam. Result will only be saved every X minutes "
+"from same IP. (0 = deactivated)"
+msgstr ""
+"Skydda statistiken mot spam. Resultaten kommer endast att sparas var x minut "
+"från samma IP-adress. (0 = deaktiverad). Var medveten om att om fler elever "
+"sitter i samma lektionssal kommer de dela IP-adress. Stäng i så fall av IP-"
+"låset."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:230
+#: lib/view/WpProQuiz_View_QuizEdit.php:235
+msgid "View Profile Statistics"
+msgstr "Visa användarstatistik"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:242
+#, php-format
+msgctxt "placeholders: quiz"
+msgid "Enable user to view statistics for this %s on their profile."
+msgstr "Tillåt användare att se statistik för detta %s på sin profilsida."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:251
+#: lib/view/WpProQuiz_View_QuizEdit.php:257
+#, php-format
+msgctxt "Execute quiz only once"
+msgid "Execute %s only once"
+msgstr "Begränsa %set till ett försök"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:265
+#, php-format
+msgctxt "placeholders: quiz, quiz"
+msgid ""
+"If you activate this option, the user can complete the %s only once. "
+"Afterwards the %s is blocked for this user."
+msgstr ""
+"Aktivering av detta alternativ, tillåter användaren att utföra %set endast "
+"en gång. Därefter är %set spärrat för denna användare."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:269
+msgid "This option applies to:"
+msgstr "Detta val gäller:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:277
+#: lib/view/WpProQuiz_View_QuizEdit.php:1069
+#: lib/view/WpProQuiz_View_StatisticsNew.php:101
+msgid "all users"
+msgstr "alla användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:281
+msgid "registered useres only"
+msgstr "endast registrerade användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:285
+#: lib/view/WpProQuiz_View_QuizEdit.php:1077
+msgid "anonymous users only"
+msgstr "Enbart anonyma användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:291
+msgid "user identification by cookie"
+msgstr "Användaridentifiering med kakor"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:294
+msgid ""
+"If you activate this option, a cookie is set additionally for unregistrated "
+"(anonymous) users. This ensures a longer assignment of the user than the "
+"simple assignment by the IP address."
+msgstr ""
+"Sätter en kaka för varje oregistrerad (anonym) användare. Detta är ett "
+"säkrare alternativ jämfört med den enklare standardkontrollen via IP-adress. "
+"Det säkerställer samtidigt att anonyma användare inte förlorar sina "
+"uppgifter under pågående prov."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:299
+msgid "Reset the user identification"
+msgstr "Nollställ användaridentifiering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:300
+msgid "User identification has been reset."
+msgstr "Användaridentifiering nollställd."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:302
+msgid "Resets user identification for all users."
+msgstr "Nollställ användaridentifiering för alla användare."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:311
+#: lib/view/WpProQuiz_View_QuizEdit.php:316
+msgid "Show only specific number of questions"
+msgstr "Begränsa antalet frågor"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:323
+msgid ""
+"If you enable this option, maximum number of displayed questions will be X "
+"from X questions. (The output of questions is random)"
+msgstr ""
+"Visa bara ett visst antal frågor av de frågor som finns till detta prov. "
+"Frågorna väljs ut slumpvis till varje provtagare."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:327
+msgid "How many questions should be displayed simultaneously:"
+msgstr "Hur många frågor ska provet bestå av:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:332
+msgid "in percent"
+msgstr "i procent"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:340
+#: lib/view/WpProQuiz_View_QuizEdit.php:345
+msgid "Prerequisites"
+msgstr "Förutsättningar"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:352
+#, php-format
+msgctxt "placeholders: quiz, quiz"
+msgid ""
+"If you enable this option, you can choose %s, which user have to finish "
+"before he can start this %s."
+msgstr ""
+"Om du aktiverar det här alternativet kan du välja ett %s som användaren "
+"måste avsluta, innan detta %s kan påbörjas."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:355
+#, php-format
+msgctxt "placeholders: quizzes"
+msgid ""
+"In all selected %s statistic function have to be active. If it is not it "
+"will be activated automatically."
+msgstr ""
+"I alla valda %s måste statistikfunktionen vara aktiv. Är den inte det kommer "
+"den att aktiveras automatiskt."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:360
+#, php-format
+msgctxt "Quiz"
+msgid "%s"
+msgstr "%s"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:362
+#, php-format
+msgctxt "Prerequisites (This quiz have to be finished)"
+msgid "Prerequisites (This %s have to be finished)"
+msgstr "Förutsättningar (Detta %s måste avslutas)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:401
+#: lib/view/WpProQuiz_View_QuizEdit.php:406
+#: lib/view/WpProQuiz_View_QuizEdit.php:419
+msgid "Question overview"
+msgstr "Frågeöversikt"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:413
+msgid ""
+"Add at the top of the quiz a question overview, which allows easy "
+"navigation. Additional questions can be marked \"to review\"."
+msgstr ""
+"Över provet läggs en frågeöversikt som förenklar navigering. Svåra frågor "
+"kan märkas för senare granskning.  Se även ”Dölj sammanställning” nedan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:416
+#, php-format
+msgctxt "placeholders: quiz, quiz"
+msgid "Additional %s overview will be displayed, before %s is finished."
+msgstr "Visar särskild %söversikt, innan %set slutförs."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:447
+#, php-format
+msgctxt "placeholders: quiz, quiz"
+msgid ""
+"If you enable this option, no %s overview will be displayed, before "
+"finishing %s."
+msgstr ""
+"Aktivering av detta alternativ, gör att %söversikten döljs, till dess %set "
+"är avslutat."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:466
+msgid ""
+"If you enable this option, user won't be able to skip question. (only in "
+"\"Overview -> next\" mode). User still will be able to navigate over "
+"\"Question-Overview\""
+msgstr ""
+"Begränsar möjligheten att hoppa över frågor. Obs: är ”Frågeöversikt” "
+"aktiverat kommer eleven fortfarande kunna navigera via ”Frågor-Översikt” "
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:473
+#: lib/view/WpProQuiz_View_QuizEdit.php:478
+msgid "Admin e-mail notification"
+msgstr "Meddela admin"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:486
+msgid "for registered users only"
+msgstr "endast om användaren är registrerad"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:490
+msgid "for all users"
+msgstr "för alla användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:493
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"If you enable this option, you will be informed if a user completes this %s."
+msgstr ""
+"Om denna är aktiverad kommer du få ett meddelande när någon gör klart %set."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:496
+#: lib/view/WpProQuiz_View_QuizEdit.php:518
+msgid "E-Mail settings can be edited in global settings."
+msgstr "E-postinställningarna kan ändras i de globala inställningarna"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:503
+#: lib/view/WpProQuiz_View_QuizEdit.php:508
+msgid "User e-mail notification"
+msgstr "Meddela användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:515
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"If you enable this option, an email is sent with his %s result to the user. "
+"(only registered users)"
+msgstr ""
+"Aktivera för att skicka ett E-postmeddelande med %sresultatet till "
+"användaren (endast registrerade användare)."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:525
+#: lib/view/WpProQuiz_View_QuizEdit.php:530
+msgid "Autostart"
+msgstr "Autostart"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:537
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"If you enable this option, the %s will start automatically after the page is "
+"loaded."
+msgstr ""
+"Om du aktiverar detta alternativ, kommer %set att startas automatiskt när "
+"sidan laddas."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:544
+#: lib/view/WpProQuiz_View_QuizEdit.php:549
+#, php-format
+msgctxt "placeholders: quiz"
+msgid "Only registered users are allowed to start the %s"
+msgstr "Tillåt endast registrerade användare att starta %set"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:556
+#, php-format
+msgctxt "placeholders: quiz"
+msgid "If you enable this option, only registered users allowed start the %s."
+msgstr ""
+"Om du aktiverar detta alternativ, kommer %set endast kunna startas av "
+"registrerade användare."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:599
+msgid "Results text"
+msgstr "Resultattext"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:602
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"This text will be displayed at the end of the %s (in results). (this text is "
+"optional)"
+msgstr "Denna text kommer att visas efter %s (i resultaten). Texten är valfri."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:606
+msgid "Activate graduation"
+msgstr "Aktivera gradering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:612
+msgid "Hint:"
+msgstr "Tips:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:614
+msgid "Maximal 15 levels"
+msgstr "Maximalt 15 nivåer"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:616
+#, php-format
+msgctxt "placeholders: quiz, question points, question count"
+msgid ""
+"Percentages refer to the total score of the %s. (Current total %d points in "
+"%d questions."
+msgstr ""
+"Procentsatsen refererar till %s totala poäng. (Aktuell totalpoäng är %d "
+"poäng från %d frågor.)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:618
+msgid "Values can also be mixed up"
+msgstr "Värden kan även blandas"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:619
+msgid "10,15% or 10.15% allowed (max. two digits after the decimal point)"
+msgstr "10,15% och 10.15% tillåtet (max två siffror efter decimalen)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:635
+#: lib/view/WpProQuiz_View_QuizEdit.php:646
+msgid "from:"
+msgstr "från:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:635
+#: lib/view/WpProQuiz_View_QuizEdit.php:646
+msgid "percent"
+msgstr "procent"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:635
+#: lib/view/WpProQuiz_View_QuizEdit.php:646
+#, php-format
+msgid ""
+"(Will be displayed, when result-percent is >= <span class=\"resultProzent\">"
+"%s</span>%%)"
+msgstr ""
+"(Kommer visas när resultatprocenten är större än eller lika med <span class="
+"\"resultProzent\">%s</span>%%)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:636
+#: lib/view/WpProQuiz_View_QuizEdit.php:647
+msgid "Delete graduation"
+msgstr "Ta bort gradering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:654
+msgid "Add graduation"
+msgstr "Lägg till gradering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:692
+msgid "Result-Options"
+msgstr "<strong>Alternativ för resultatvisning</strong>"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:698
+#: lib/view/WpProQuiz_View_QuizEdit.php:703
+msgid "Show average points"
+msgstr "Visa genomsnittspoäng"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:710
+msgid "Statistics-function must be enabled."
+msgstr "Statistikfunktionen måste vara aktiverad."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:723
+#: lib/view/WpProQuiz_View_QuizEdit.php:728
+msgid "Show category score"
+msgstr "Visa poäng per kategori"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:735
+msgid ""
+"If you enable this option, the results of each category is displayed on the "
+"results page."
+msgstr "Visar resultaten i enskilda kategorier på resultatsidan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:749
+#: lib/view/WpProQuiz_View_QuizEdit.php:754
+msgid "Hide correct questions - display"
+msgstr "Dölj visning av rätta svar"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:761
+msgid ""
+"If you select this option, no longer the number of correctly answered "
+"questions are displayed on the results page."
+msgstr "Dölj visning av antal rätt besvarade frågor på resultatsidan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:775
+#: lib/view/WpProQuiz_View_QuizEdit.php:780
+#, php-format
+msgctxt "Hide quiz time - display"
+msgid "Hide %s time - display"
+msgstr "Dölj visning av %sets tidsåtgång"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:787
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"If you enable this option, the time for finishing the %s won't be displayed "
+"on the results page anymore."
+msgstr ""
+"Om du aktiverar detta alternativ kommer tidsåtgången för %s inte längre "
+"visas på resultatsidan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:801
+#: lib/view/WpProQuiz_View_QuizEdit.php:806
+msgid "Hide score - display"
+msgstr "Dölj poängvisning"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:813
+msgid ""
+"If you enable this option, final score won't be displayed on the results "
+"page anymore."
+msgstr "Döljer slutpoängen på provets resultatsida."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:837
+msgid "Question-Options"
+msgstr "<strong>Visning av resultat</strong>"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:843
+#: lib/view/WpProQuiz_View_QuizEdit.php:848
+msgid "Show points"
+msgstr "Visa poäng"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:855
+#, php-format
+msgctxt "placeholders: quiz"
+msgid "Shows in %s, how many points are reachable for respective question."
+msgstr "Visas i %s, antal möjliga poäng för respektive fråga."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:862
+#: lib/view/WpProQuiz_View_QuizEdit.php:867
+msgid "Number answers"
+msgstr "Numrera svarsalternativ"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:874
+msgid ""
+"If this option is activated, all answers are numbered (only single and "
+"multiple choice)"
+msgstr ""
+"Numrera svarsalternativen på kryssfrågor (”Ett svar” och ”Flera svar”)."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:887
+#: lib/view/WpProQuiz_View_QuizEdit.php:892
+msgid "Hide correct- and incorrect message"
+msgstr "Dölj svarskommentar"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:899
+msgid ""
+"If you enable this option, no correct- or incorrect message will be "
+"displayed."
+msgstr "Dölj kommentar till rätt och fel svar."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:912
+#: lib/view/WpProQuiz_View_QuizEdit.php:917
+msgid "Correct and incorrect answer mark"
+msgstr "Rättningsmarkering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:924
+msgid ""
+"If you enable this option, answers won't be color highlighted as correct or "
+"incorrect. "
+msgstr "Dölj färgmarkeringar av rätt och fel svar. "
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:937
+#: lib/view/WpProQuiz_View_QuizEdit.php:942
+msgid "Force user to answer each question"
+msgstr "Tvinga svar"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:949
+msgid "If you enable this option, the user is forced to answer each question."
+msgstr "Tvinga användaren att besvara varje fråga."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:950
+msgid ""
+"If the option \"Question overview\" is activated, this notification will "
+"appear after end of the quiz, otherwise after each question."
+msgstr ""
+"Om alternativet ”Frågeöversikt” är aktiverat kommer den döljas och endast "
+"visas när alla frågor är besvarade."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:957
+#: lib/view/WpProQuiz_View_QuizEdit.php:962
+msgid "Hide question position overview"
+msgstr "Dölj sammanställning"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:969
+msgid "If you enable this option, the question position overview is hidden."
+msgstr ""
+"Detta alternativ gäller om ”Frågeöversikt” är aktiverat, och döljer "
+"sammanställningen innan provet slutförs. Endast frågeöversikten över varje "
+"fråga kommer visas. "
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:982
+#: lib/view/WpProQuiz_View_QuizEdit.php:987
+msgid "Hide question numbering"
+msgstr "Dölj numrering"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:994
+msgid "If you enable this option, the question numbering is hidden."
+msgstr "Detta alternativ döljer frågornas numrering."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1007
+#: lib/view/WpProQuiz_View_QuizEdit.php:1012
+msgid "Display category"
+msgstr "Visa kategori"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1019
+msgid "If you enable this option, category will be displayed in the question."
+msgstr "Detta alternativ visar frågans kategori i anslutning till frågan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1044
+msgid ""
+"The leaderboard allows users to enter results in public list and to share "
+"the result this way."
+msgstr ""
+"I topplistan kan användare dela sina provresultat till alla som besöker "
+"sidan."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1047
+msgid "The leaderboard works independent from internal statistics function."
+msgstr "Topplistan fungerar oberoende av den interna statistikfunktionen"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1064
+msgid "Who can sign up to the list"
+msgstr "Vem kan sätta upp sig på listan"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1073
+msgid "registered users only"
+msgstr "endast för registrerade användare"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1080
+msgid ""
+"Not registered users have to enter name and e-mail (e-mail won't be "
+"displayed)"
+msgstr ""
+"oregistrerade användare måste skriva in namn och e-post (e-post kommer inte "
+"att visas)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1086
+msgid "insert automatically"
+msgstr "Lägg upp automatiskt"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1094
+msgid ""
+"If you enable this option, logged in users will be automatically entered "
+"into leaderboard"
+msgstr ""
+"Aktivera denna för att automatisk lägga inloggade användares resultat på "
+"topplistan"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1100
+msgid "display captcha"
+msgstr "visa captcha"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1108
+msgid ""
+"If you enable this option, additional captcha will be displayed for users "
+"who are not registered."
+msgstr "Aktivera captcha för oregistrerade användare."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1111
+msgid "This option requires additional plugin:"
+msgstr "Detta alternativ kräver detta tilläggsprogram:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1116
+msgid "Plugin has been detected."
+msgstr "Tillägget har upptäckts."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1120
+msgid "Plugin is not installed."
+msgstr "Tillägget är inte installerat."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1128
+msgid "Sort list by"
+msgstr "Sortera efter"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1147
+msgid "Users can apply multiple times"
+msgstr "Användare kan lägga upp resultat från detta prov flera gånger"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1158
+msgid "User can apply after:"
+msgstr "Nytt resultat kan läggas upp efter: "
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1160
+msgid "minute"
+msgstr "minuter"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1167
+msgid "How many entries should be displayed"
+msgstr "Hur många resultat ska visas"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1173
+msgid "Entries"
+msgstr "Resultat"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1180
+#, php-format
+msgctxt "Automatically display leaderboard in quiz result"
+msgid "Automatically display leaderboard in %s result"
+msgstr "Visa topplistan automatiskt i samband med %sresultat"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1184
+msgid "Where should leaderboard be displayed:"
+msgstr "Var ska topplistan visas:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1187
+msgid "don't display"
+msgstr "visa inte"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1191
+msgid "below the \"result text\""
+msgstr "under ”resultattexten” "
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1201
+msgid "in a button"
+msgstr "i en knapp"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1222
+#, php-format
+msgctxt "Quiz-Mode"
+msgid "%s-Mode"
+msgstr "%släge"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1227
+msgid "Normal"
+msgstr "Normalt"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1228
+msgid "Normal + Back-Button"
+msgstr "Normalt + tillbakaknapp"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1229
+msgid "Check -> continue"
+msgstr "Visa rätt svar innan användaren fortsätter"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1230
+msgid "Questions below each other"
+msgstr "Frågor under varandra"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1242
+#, php-format
+msgctxt "placeholders: quiz"
+msgid ""
+"Displays all questions sequentially, \"right\" or \"false\" will be "
+"displayed at the end of the %s."
+msgstr ""
+"Visar alla frågor i följd, ”rätt” eller ”fel” kommer att visas efter %s."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1245
+msgid "Allows to use the back button in a question."
+msgstr "Tillåt användning av tillbakaknappen i ett prov."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1248
+msgid "Shows \"right or wrong\" after each question."
+msgstr "Visar ”rätt eller fel” efter varje fråga."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1251
+msgid ""
+"If this option is activated, all answers are displayed below each other, i."
+"e. all questions are on a single page."
+msgstr ""
+"Detta alternativ visar alla svar under varandra, det vill säga alla frågor "
+"ligger på en enda sida."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1293
+msgid "How many questions to be displayed on a page:"
+msgstr "Hur många frågor ska visas på en fråga:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1296
+msgid "(0 = All on one page)"
+msgstr "(0 = Alla på en sida)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1318
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:566
+#: lib/view/WpProQuiz_View_Statistics.php:41
+#: lib/view/WpProQuiz_View_Statistics.php:364
+msgid "Custom fields"
+msgstr "Egna fält"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1322
+msgid ""
+"You can create custom fields, e.g. to request the name or the e-mail address "
+"of the users."
+msgstr ""
+"Du kan skapa egna fält, t ex för att begära namn eller e-post av användarna."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1325
+msgid "The statistic function have to be enabled."
+msgstr "Statistikfunktionen måsta vara aktiverad."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1332
+#: lib/view/WpProQuiz_View_QuizEdit.php:1337
+msgid "Custom fields enable"
+msgstr "Aktivera egna fält"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1344
+msgid "If you enable this option, custom fields are enabled."
+msgstr "Med detta alternativ visas egna fält."
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1351
+#: lib/view/WpProQuiz_View_QuizEdit.php:1356
+msgid "Display position"
+msgstr "Visningsställe"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1358
+msgid "Where should the fileds be displayed:"
+msgstr "Var ska fälten visas:"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1361
+#, php-format
+msgctxt "On the quiz startpage"
+msgid "On the %s startpage"
+msgstr "På %ssstartsida"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1373
+#, php-format
+msgctxt "At the end of the quiz (before the quiz result)"
+msgid "At the end of the %s (before the %s result)"
+msgstr "I slutet av %s (före %sresultatet)"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1400
+msgid "Field name"
+msgstr "Fältnamn"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1402
+msgid "Required?"
+msgstr "Obligatorisk?"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1422
+msgid "Text"
+msgstr "Text"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1423
+msgid "Textarea"
+msgstr "Textruta"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1424
+msgid "Checkbox"
+msgstr "Kryssruta"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1425
+msgid "Drop-Down menu"
+msgstr "Rullgardinsmeny"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1426
+msgid "Radio"
+msgstr "Radioknapp"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1427
+msgid "Number"
+msgstr "Nummer"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1428
+msgid "Email"
+msgstr "E-post"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1429
+msgid "Yes/No"
+msgstr "Ja/Nej"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1430
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:23
+#: lib/view/WpProQuiz_View_Statistics.php:323
+msgid "Date"
+msgstr "Datum"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1433
+msgid "Edit list"
+msgstr "Ändra lista"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1436
+msgid "One entry per line"
+msgstr "Ett inlägg per rad"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1441
+msgid "OK"
+msgstr "OK"
+
+#: lib/view/WpProQuiz_View_QuizEdit.php:1460
+msgid "Add field"
+msgstr "Lägg till fält"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:32
+msgid "Import/Export Associated Settings"
+msgstr "Import / Export tillhörande inställningar"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:34
+msgid "In case of problems"
+msgstr "i händelse av problem"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:36
+#, php-format
+msgctxt "placeholders: quiz"
+msgid "If %s doesn't work in front-end, please try following:"
+msgstr "Om %s inte fungerar för användarna, pröva följande:"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:46
+msgid "Style Manager"
+msgstr "Stil-hanterare"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:53
+msgid "ID"
+msgstr "ID"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:55
+msgid "Shortcode"
+msgstr "Kortkod"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:56
+msgid "Shortcode-Leaderboard"
+msgstr "Kortkod-Topplista"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:84
+msgid "Preview"
+msgstr "Förhandsvisa"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:116
+#: lib/view/WpProQuiz_View_QuizOverall.php:121
+msgid "Export"
+msgstr "Exportera"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:122
+msgid ""
+"Choose the respective question, which you would like to export and press on "
+"\"Start export\""
+msgstr ""
+"Välj respektive fråga som du vill exportera och klicka på \"Starta export\""
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:127
+msgid "Format:"
+msgstr "Format"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:128
+msgid "*.wpq"
+msgstr ".wpq"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:129
+msgid "or"
+msgstr "eller"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:130
+msgid "*.xml"
+msgstr ".xml"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:132
+msgid "Start export"
+msgstr "Starta export"
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:138
+msgid "Import only *.wpq or *.xml files from known and trusted sources."
+msgstr ""
+"Importera endast .wpq- eller .xml-filer om du är säker på att de är säkra."
+
+#: lib/view/WpProQuiz_View_QuizOverall.php:146
+#, php-format
+msgid "Maximal %d MiB"
+msgstr "Största filstorlek: %d Mb"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:138
+#, php-format
+msgid "User statistics: %s"
+msgstr "Användarstatistik: %s"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:161
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:635
+#: lib/view/WpProQuiz_View_Statistics.php:108
+#: lib/view/WpProQuiz_View_Statistics.php:243
+msgid "Hints used"
+msgstr "Ledtråd använd"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:162
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:636
+#: lib/view/WpProQuiz_View_Statistics.php:109
+#: lib/view/WpProQuiz_View_Statistics.php:244
+msgid "Time"
+msgstr "Tid"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:163
+#: lib/view/WpProQuiz_View_Statistics.php:110
+msgid "Points scored"
+msgstr "Poäng"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:243
+#: lib/view/WpProQuiz_View_Statistics.php:148
+msgid "Sub-Total: "
+msgstr "Delsumma:"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:289
+#: lib/view/WpProQuiz_View_StatisticsNew.php:162
+#: lib/view/WpProQuiz_View_StatisticsNew.php:246
+#: lib/view/WpProQuiz_View_Statistics.php:183
+#: lib/view/WpProQuiz_View_Statistics.php:268
+#: lib/view/WpProQuiz_View_Statistics.php:343
+msgid "Refresh"
+msgstr "Uppdatera"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:293
+#: lib/view/WpProQuiz_View_Statistics.php:187
+msgid "Reset statistics"
+msgstr "Nollställ statistik"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:430
+msgid "Graded"
+msgstr "Betygsatt"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:432
+msgid "Not Graded"
+msgstr "Ej betygsatt"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:437
+msgid "Status"
+msgstr "Status"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:439
+msgid "view"
+msgstr "visa"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:592
+msgid "ticked"
+msgstr "ikryssad"
+
+#: lib/view/WpProQuiz_View_StatisticsAjax.php:592
+msgid "not ticked"
+msgstr "ej ikryssad"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:56
+#: lib/view/WpProQuiz_View_Statistics.php:28
+#, php-format
+msgctxt "placeholders: Quiz, Quiz Name/Title"
+msgid "%s: %s - Statistics"
+msgstr "%s: %s - statistik"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:60
+#: lib/view/WpProQuiz_View_Statistics.php:33
+msgid "Stats not enabled"
+msgstr "Statistik inte påsatt"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:61
+#: lib/view/WpProQuiz_View_Statistics.php:34
+msgid "Activate statistics"
+msgstr "Aktivera statistik"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:66
+msgid "History"
+msgstr "Historik"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:67
+#: lib/view/WpProQuiz_View_Statistics.php:40
+msgid "Overview"
+msgstr "Överblick"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:98
+#: lib/view/WpProQuiz_View_Statistics.php:293
+msgid "Which users should be displayed:"
+msgstr "Vilka användare ska visas:"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:100
+msgid "special filter"
+msgstr "specialfilter"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:102
+#: lib/view/WpProQuiz_View_Statistics.php:296
+msgid "only registered users"
+msgstr "enbart registrerade användare"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:103
+#: lib/view/WpProQuiz_View_Statistics.php:297
+msgid "only anonymous users"
+msgstr "enbart anonyma användare"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:135
+#, php-format
+msgid "Search to date limit from %s to %s"
+msgstr "Datumsök från %s till %s"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:164
+#: lib/view/WpProQuiz_View_StatisticsNew.php:248
+#: lib/view/WpProQuiz_View_Statistics.php:189
+#: lib/view/WpProQuiz_View_Statistics.php:270
+#: lib/view/WpProQuiz_View_Statistics.php:345
+msgid "Reset entire statistic"
+msgstr "Nollställ all statistik"
+
+#: lib/view/WpProQuiz_View_StatisticsNew.php:205
+#: lib/view/WpProQuiz_View_Statistics.php:214
+#, php-format
+msgctxt "Show only users, who solved the quiz:"
+msgid "Show only users, who solved the %s:"
+msgstr "Visa bara användare som klarat %s:"
+
+#: lib/view/WpProQuiz_View_Statistics.php:39
+msgid "Users"
+msgstr "Användare"
+
+#: lib/view/WpProQuiz_View_Statistics.php:68
+msgid "Please select user name:"
+msgstr "Vänligen markera användarnamn"
+
+#: lib/view/WpProQuiz_View_Statistics.php:72
+msgid "Select a test:"
+msgstr "Välj ett test: "
+
+#: lib/view/WpProQuiz_View_Statistics.php:82
+msgid "Anonymous user"
+msgstr "Anonym användare"
+
+#: lib/view/WpProQuiz_View_Statistics.php:91
+msgid "average"
+msgstr "Genomsnitt"
+
+#: lib/view/WpProQuiz_View_Statistics.php:188
+msgid "Reset user statistics"
+msgstr "Återställ användarstatistik"
+
+#: lib/view/WpProQuiz_View_Statistics.php:295
+msgid "all"
+msgstr "alla"
+
+#: lib/view/WpProQuiz_View_StyleManager.php:15
+msgid "Front"
+msgstr "Front"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/wp-pro-quiz"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A powerful and beautiful quiz plugin for WordPress."
+msgstr ""
+"Ett kraftfullt insticksprogram för kunskapstester och quiz för WordPress"
+
+#. Author of the plugin/theme
+msgid "Julius Fischer"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.it-gecko.de"
+msgstr ""
+
+#~ msgctxt "You have to finish following quiz, to start this quiz:"
+#~ msgid "You have to finish following %s, to start this %s:"
+#~ msgstr "Du måste avsluta följande %s, innan detta %s kan startas:"
+
+#~ msgid "Do you really want to delete the quiz/question?"
+#~ msgstr "Vill du verkligen radera provet/frågan?"
+
+#~ msgid "No quiz description filled!"
+#~ msgstr "Ingen quiz-beskrivning iskriven!"
+
+#~ msgid "No quiz selected"
+#~ msgstr "Inget prov markerat"
+
+#~ msgid "Advanced Quiz"
+#~ msgstr "Avancerat prov"
+
+#~ msgid "You must answer all questions before you can complete the quiz."
+#~ msgstr "Alla frågor måste besvaras innan provet kan slutföras."
+
+#~ msgid "Quiz not found"
+#~ msgstr "Prov hittades ej"
+
+#~ msgid "Quiz edited"
+#~ msgstr "Prov ändrat"
+
+#~ msgid "quiz created"
+#~ msgstr "Prov skapades"
+
+#~ msgid "Quiz title or quiz description are not filled"
+#~ msgstr "Provets rubrik eller beskrivning är inte ifylld"
+
+#~ msgid "Edit quiz"
+#~ msgstr "Ändra prov"
+
+#~ msgid "Create quiz"
+#~ msgstr "Skapa prov"
+
+#~ msgid "Quiz deleted"
+#~ msgstr "Prov borttaget"
+
+#~ msgid "LearnDash Quiz: One user completed a quiz"
+#~ msgstr "LearnDash: En elev har just slutfört ett prov"
+
+#~ msgid ""
+#~ "LearnDash Quiz\n"
+#~ "\n"
+#~ "The user \"$username\" has completed \"$quizname\" the quiz.\n"
+#~ "\n"
+#~ "Points: $points\n"
+#~ "Result: $result\n"
+#~ "\n"
+#~ msgstr ""
+#~ "LearnDash Prov\n"
+#~ "\n"
+#~ "Användare ”$username” har just klarat provet ”$quizname”.\n"
+#~ "\n"
+#~ "Poäng: $points\n"
+#~ "Resultat: $result\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "LearnDash Quiz\n"
+#~ "\t\t\t\n"
+#~ "You have completed the quiz \"$quizname\".\n"
+#~ "\n"
+#~ "Points: $points\n"
+#~ "Result: $result\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Utbildning Prov\n"
+#~ "\t\t\t\n"
+#~ "Du har slutfört provet ”$quizname”.\n"
+#~ "\n"
+#~ "Poäng: $points\n"
+#~ "Resultat: $result\n"
+#~ "\n"
+
+#~ msgid "The user completed a quiz."
+#~ msgstr "Eleven slutförde ett prov."
+
+#~ msgid "The user completed a quiz with 100 percent."
+#~ msgstr "Eleven klarade provet med 100% rätt svar."
+
+#~ msgid "Quiz-summary"
+#~ msgstr "Sammanställning"
+
+#~ msgid ""
+#~ "You have already completed the quiz before. Hence you can not start it "
+#~ "again."
+#~ msgstr ""
+#~ "Du har redan gjort detta prov och kan därför inte göra det fler gånger."
+
+#~ msgid "You must sign in or sign up to start the quiz."
+#~ msgstr "Du måste registrera dig för att kunna göra provet."
+
+#~ msgid "You have to finish following quiz, to start this quiz:"
+#~ msgstr "Innan du kan göra detta prov, måste följande vara avklarat:"
+
+#~ msgid "Quiz complete. Results are being recorded."
+#~ msgstr "Provet är klart. Resultaten sparas."
+
+#~ msgid "Quiz Options"
+#~ msgstr "Provinställningar"
+
+#~ msgid "Quiz template management"
+#~ msgstr "Hantera provmallar"
+
+#~ msgid "Select Quiz template"
+#~ msgstr "Välj provmall"
+
+#~ msgid "Delete selected Quiz template"
+#~ msgstr "Radera vald provmall"
+
+#~ msgid "Save changed to selected Quiz template"
+#~ msgstr "Spara ändringar i vald provmall"
+
+#~ msgid "Quiz template Saved"
+#~ msgstr "Provmallen sparades"
+
+#~ msgid "Quiz template Deleted"
+#~ msgstr "Provmallen raderades"
+
+#~ msgid "Quiz name"
+#~ msgstr "Provets namn"
+
+#~ msgid ""
+#~ "The title is used for overview, it is not visible in quiz. If you leave "
+#~ "the title field empty, a title will be generated."
+#~ msgstr ""
+#~ "Frågans titel används bara admin-gränssnittet, inte i själva provet. Om "
+#~ "fältet lämnas tomt skapas en titel automatiskt."
+
+#~ msgid "Deactivated in quiz settings."
+#~ msgstr "Avaktiverad i inställningar för prov"
+
+#~ msgid ""
+#~ "This is a question that can be graded and potentially prevent a user from "
+#~ "progressing to the next step of the course."
+#~ msgstr ""
+#~ "Denna fråga kan betygsättas och eventuellt hindra en användare från att "
+#~ "gå vidare till nästa steg i kursen."
+
+#~ msgid ""
+#~ "How should the answer to this question be marked and graded upon quiz "
+#~ "submission?"
+#~ msgstr ""
+#~ "Hur ska svaret till denna fråga markeras och betygsättas när provet "
+#~ "skickas in?"
+
+#~ msgid "Copy questions from another Quiz"
+#~ msgstr "Kopiera frågor från ett annat prov"
+
+#~ msgid ""
+#~ "Here you can copy questions from another quiz into this quiz. (Multiple "
+#~ "selection enabled)"
+#~ msgstr ""
+#~ "Här kan du kopiera frågor från ett annat prov till detta prov (Du kan "
+#~ "göra markera flera samtidigt)"
+
+#~ msgid "Hide quiz title"
+#~ msgstr "Dölj provets rubrik"
+
+#~ msgid "The title serves as quiz heading."
+#~ msgstr "Titeln fungerar som provets rubrik."
+
+#~ msgid "Hide \"Restart quiz\" button"
+#~ msgstr "Dölj \"Starta om”-knappen"
+
+#~ msgid "Hide the \"Restart quiz\" button in the Frontend."
+#~ msgstr "Döljer \"Starta om”-knappen för användaren"
+
+#~ msgid "Protect Quiz Answers in Browser Cookie"
+#~ msgstr "Skydda provsvaren i en webbläsarkaka."
+
+#~ msgid "Use cookies for Quiz Answers"
+#~ msgstr "Använd kakor för provens svar"
+
+#~ msgid ""
+#~ "0 = Don't save answers. This option will save the user's answers into a "
+#~ "browser cookie until the Quiz is submitted."
+#~ msgstr ""
+#~ "0 = Spara inte svaren. Detta alternativ sparar användarens svar i en "
+#~ "webbläsarkaka till dess provet skickats in."
+
+#~ msgid ""
+#~ "Statistics about right or wrong answers. Statistics will be saved by "
+#~ "completed quiz, not after every question. The statistics is only visible "
+#~ "over administration menu. (internal statistics)"
+#~ msgstr ""
+#~ "Statistik över hur proven besvaras. Statistiken sparas i samband med att "
+#~ "provet slutförs, inte efter varje fråga. Den är endast tillgänglig i "
+#~ "administratörsmenyn (intern statistik)."
+
+#~ msgid "Execute quiz only once"
+#~ msgstr "Begränsa till ett försök"
+
+#~ msgid ""
+#~ "If you activate this option, the user can complete the quiz only once. "
+#~ "Afterwards the quiz is blocked for this user."
+#~ msgstr "Detta alternativ förhindrar användaren att göra om provet."
+
+#~ msgid ""
+#~ "If you enable this option, you can choose quiz, which user have to finish "
+#~ "before he can start this quiz."
+#~ msgstr ""
+#~ "Välja ett prov som användaren måste avsluta innan detta prov kan påbörjas."
+
+#~ msgid ""
+#~ "In all selected quizzes statistic function have to be active. If it is "
+#~ "not it will be activated automatically."
+#~ msgstr ""
+#~ "I alla valda prov måste statistikfunktionen vara aktiv. Är den inte det "
+#~ "kommer den att aktiveras automatiskt."
+
+#~ msgid "Quiz"
+#~ msgstr "<strong>Grundinställningar</strong>"
+
+#~ msgid "Prerequisites (This quiz have to be finished)"
+#~ msgstr "Förutsättningar (Detta prov måste avslutas)"
+
+#~ msgid "Additional quiz overview will be displayed, before quiz is finished."
+#~ msgstr "Innan provet slutförs kommer en sammanställning att visas."
+
+#~ msgid ""
+#~ "If you enable this option, no quiz overview will be displayed, before "
+#~ "finishing quiz."
+#~ msgstr "Dölj översikt av prov till dess att provet avslutats."
+
+#~ msgid ""
+#~ "If you enable this option, you will be informed if a user completes this "
+#~ "quiz."
+#~ msgstr ""
+#~ "Om denna är aktiverad kommer du få ett meddelande när någon gör klart "
+#~ "provet."
+
+#~ msgid ""
+#~ "If you enable this option, an email is sent with his quiz result to the "
+#~ "user. (only registered users)"
+#~ msgstr ""
+#~ "Aktivera för att skicka E-post med provresultatet till användaren (endast "
+#~ "registrerade användare)."
+
+#~ msgid ""
+#~ "If you enable this option, the quiz will start automatically after the "
+#~ "page is loaded."
+#~ msgstr "Aktivera för att starta provet automatiskt när sidan laddas."
+
+#~ msgid "Only registered users are allowed to start the quiz"
+#~ msgstr "Endast registrerade användare får göra provet"
+
+#~ msgid ""
+#~ "If you enable this option, only registered users allowed start the quiz."
+#~ msgstr ""
+#~ "Aktivera för att enbart tillåta registrerade användare att starta provet."
+
+#~ msgid ""
+#~ "This text will be displayed at the end of the quiz (in results). (this "
+#~ "text is optional)"
+#~ msgstr ""
+#~ "Denna text visas efter provet på resultatsidan. Gradering gör det möjligt "
+#~ "att informera om uppnådd brons, silver eller guldnivå eller liknande. "
+#~ "(Denna text är frivillig)."
+
+#~ msgid ""
+#~ "Percentages refer to the total score of the quiz. (Current total %d "
+#~ "points in %d questions."
+#~ msgstr ""
+#~ "Procentsatsen refererar till provets totalpoäng. (För närvarande totalt "
+#~ "%d poäng från %d frågor)"
+
+#~ msgid "Hide quiz time - display"
+#~ msgstr "Dölj visning av tidsåtgång"
+
+#~ msgid ""
+#~ "If you enable this option, the time for finishing the quiz won't be "
+#~ "displayed on the results page anymore."
+#~ msgstr "Döljer tiden det tog att skriva provet på resultatsidan."
+
+#~ msgid ""
+#~ "Shows in quiz, how many points are reachable for respective question."
+#~ msgstr "Visar varje frågas maxpoäng."
+
+#~ msgid "Automatically display leaderboard in quiz result"
+#~ msgstr "Automatisk visning av topplista i resultatet"
+
+#~ msgid "Quiz-Mode"
+#~ msgstr "Typ av prov"
+
+#~ msgid ""
+#~ "Displays all questions sequentially, \"right\" or \"false\" will be "
+#~ "displayed at the end of the quiz."
+#~ msgstr ""
+#~ "Visar alla frågor i en följd, ”rätt” eller ”fel” visas i slutet av provet."
+
+#~ msgid "On the quiz startpage"
+#~ msgstr "På provets startsida"
+
+#~ msgid "At the end of the quiz (before the quiz result)"
+#~ msgstr "Efter provet, före provresultatet."
+
+#~ msgid "If quiz doesn't work in front-end, please try following:"
+#~ msgstr "Om provet inte fungerar för användarna, vänligen pröva följande:"
+
+#~ msgid "Quiz: %s - Statistics"
+#~ msgstr "Prov: %s - Statistik"
+
+#~ msgid "Show only users, who solved the quiz:"
+#~ msgstr "Visa endast användare som klarat provet"
+
+#~ msgid "You must answer all questions before you can completed the quiz."
+#~ msgstr "Du måste besvara alla frågor innan du kan avsluta provet."
+
+#~ msgid "Finish quiz"
+#~ msgstr "Avsluta prov"
+
+#~ msgid "Start quiz"
+#~ msgstr "Börja"
+
+#~ msgid "Restart quiz"
+#~ msgstr "Börja om"
+
+#~ msgid "Quiz is loading..."
+#~ msgstr "Provet laddar…"
+
+#~ msgid "Cloze"
+#~ msgstr "Saknat ord"
+
+#~ msgid "Support & More"
+#~ msgstr "Support och hjälp"
+
+#~ msgid "Wp-Pro-Quiz: One user completed a quiz"
+#~ msgstr "Wp-Pro-Quiz: En elev har just slutfört ett prov"
+
+#~ msgid ""
+#~ "Wp-Pro-Quiz\n"
+#~ "\n"
+#~ "The user \"$username\" has completed \"$quizname\" the quiz.\n"
+#~ "\n"
+#~ "Points: $points\n"
+#~ "Result: $result\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Wp-Pro-Quiz\n"
+#~ "\n"
+#~ "Användaren \"$username\" har just slutfört provet \"$quizname\".\n"
+#~ "\n"
+#~ "Poäng: $points\n"
+#~ "Resultat: $result\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Wp-Pro-Quiz\n"
+#~ "\n"
+#~ "You have completed the quiz \"$quizname\".\n"
+#~ "\n"
+#~ "Points: $points\n"
+#~ "Result: $result\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Wp-Pro-Quiz\n"
+#~ "\n"
+#~ "Du har slutfört provet \"$quizname\".\n"
+#~ "\n"
+#~ "Poäng: $points\n"
+#~ "Resultat: $result\n"
+#~ "\n"
+
+#~ msgid "Wp-Pro-Quiz"
+#~ msgstr "WP-Pro-Quiz"
+
+#~ msgid "Donate"
+#~ msgstr "Donera"
+
+#~ msgid "For more information:"
+#~ msgstr "För mer information:"
+
+#~ msgid "Support"
+#~ msgstr "Support"
+
+#~ msgid "Wiki"
+#~ msgstr "Wiki"
+
+#~ msgid "Category management"
+#~ msgstr "Hantera kategorier"
+
+#~ msgid "Quiz Category management"
+#~ msgstr "Hantera frågekategorier"
+
+#~ msgid ""
+#~ "These settings should only be set in cases of problems with Wp-Pro-Quiz."
+#~ msgstr ""
+#~ "Dessa inställningar skall endast användas vid problemet med Wp-Pro-Quiz"
+
+#~ msgid ""
+#~ "If this option is activated, a [raw] shortcode is automatically set "
+#~ "around WpProQuiz shortcode ( [WpProQuiz X] ) into [raw] [WpProQuiz X] [/"
+#~ "raw]"
+#~ msgstr ""
+#~ "Om det här valet är aktiverat, en [raw]-kortkod sätts automatiskt runt "
+#~ "WpProQuiz-kortkodet ([WpProQuiz X] ) blir [raw] [WpProQuiz X]m[/raw]"
+
+#~ msgid ""
+#~ "Generally all WpProQuiz-Javascript files are loaded in the footer and "
+#~ "only when they are really needed."
+#~ msgstr ""
+#~ "Generellt laddas alla WpProQuiz-javascriptfiler i footern och endast när "
+#~ "de behövs."
+
+#~ msgid ""
+#~ "If you activate this option, all WpProQuiz-Javascript files are loaded in "
+#~ "the header even if they are not needed."
+#~ msgstr ""
+#~ "Om du aktiverar detta val, så kommer alla WpProQuiz-javascriptfiler att "
+#~ "laddas i headern även om det inte behövs."
+
+#~ msgid ""
+#~ "Anyone who wants to learn more about this topic should read through the "
+#~ "following websites %s and %s."
+#~ msgstr ""
+#~ "Alla som vill lära sig mer om detta ämne bör läsa igenom de följande "
+#~ "webbsidorna %s och %s."
+
+#~ msgid "WP-Pro-Quiz special modification"
+#~ msgstr "WP-Pro-Quiz speciella modifikationer"
+
+#~ msgid "You need special WP-Pro-Quiz modification for your website?"
+#~ msgstr "Du behöver särskild WP-Pro-Quiz modifiering för din webbplats?"
+
+#~ msgid "We offer you:"
+#~ msgstr "Vi erbjuder dig:"
+
+#~ msgid "Design adaption for your theme"
+#~ msgstr "Anpassa designen till ditt tema"
+
+#~ msgid "Creation of additional modules for your needs"
+#~ msgstr "Skapande av tilläggsmoduler för dina behov"
+
+#~ msgid "Premium Support"
+#~ msgstr "Premium-support"
+
+#~ msgid "Contact us:"
+#~ msgstr "Kontakta oss:"
+
+#~ msgid "Send us an e-mail"
+#~ msgstr "Kontakta oss via E-post"
+
+#~ msgid "The e-mail must be written in english or german"
+#~ msgstr "E-postmeddelandet måste skrivas på engelska eller tyska"
+
+#~ msgid "Explain your wish detailed and exactly as possible"
+#~ msgstr "Förklara din önskan så detaljerat och exakt som möjligt"
+
+#~ msgid "You can send us screenshots, sketches and attachments"
+#~ msgstr "Du kan skicka oss skärmdumpar, skisser och bilagor"
+
+#~ msgid "Send us your full name and your web address (webpage-URL)"
+#~ msgstr "Skicka oss ditt fullständiga namn och din webbadress (webbsida-URL)"
+
+#~ msgid ""
+#~ "If you wish design adaption, we additionally need the name of your theme"
+#~ msgstr ""
+#~ "Om du önskar designen anpassning behöver vi dessutom namnet på ditt tema"
+
+#~ msgid ""
+#~ "After receiving your e-mail we will verify your request on feasibility. "
+#~ "After this you will receive e-mail from us with further details and offer."
+#~ msgstr ""
+#~ "Efter att ha fått din e-post kommer vi att bekräfta din begäran om "
+#~ "genomförbart. Efter detta kommer du att ta emot e-post från oss med "
+#~ "ytterligare information och erbjudande."
+
+#~ msgid ""
+#~ "Extended support in first 6 months. Reported bugs and updates of WP Pro "
+#~ "Quiz are supported. Exception are major releases (update of main version)"
+#~ msgstr ""
+#~ "Utökad support i första 6 månader. Rapporterade fel och uppdateringar av "
+#~ "WP Pro Quiz stöds. Undantag är stora releaser (uppdateringar av "
+#~ "huvudversionen)"
+
+#~ msgid "Quiz: %s"
+#~ msgstr "Prov: %s"
+
+#~ msgid "Sort Question"
+#~ msgstr "Sortera fråga"
+
+#~ msgid "Search"
+#~ msgstr "Sök"
+
+#~ msgid "Set Question Categories"
+#~ msgstr "Ställ in frågekategorier"
+
+#~ msgid "Sets multiple question categories"
+#~ msgstr "Ställer in flera frågekategorier"
+
+#~ msgid "You can assign classify category for a question."
+#~ msgstr "Du kan ange klassificera kategori för en fråga."
+
+#~ msgid "Set Category"
+#~ msgstr "Ange kategori"
+
+#~ msgid "Filter by category"
+#~ msgstr "Filtrera kategori"
+
+#~ msgid "All categories"
+#~ msgstr "Alla kategorier"
+
+#~ msgid "Quiz title"
+#~ msgstr "Provets rubrik"
+
+#~ msgid "You can assign classify category for a quiz."
+#~ msgstr "Du kan ge provet en kategori."
+
+#~ msgid "Quiz description"
+#~ msgstr "Prov-beskrivning"
+
+#~ msgid "This text will be displayed before start of the quiz."
+#~ msgstr "Denna text kommer att visas innan provet startas."
+
+#~ msgid "Custom fields - Variables"
+#~ msgstr "Anpassade fält - variabler"
+
+#~ msgid "Show in statistic table?"
+#~ msgstr "Visa i statistiktabellen?"
+
+#~ msgid ""
+#~ "If you enable this option, an email is sent with his quiz result to the "
+#~ "user."
+#~ msgstr ""
+#~ "Aktivera för att skicka E-post med provresultatet till användaren (endast "
+#~ "registrerade användare)."
+
+#~ msgid "User Email-Address (only registered users)"
+#~ msgstr "Användares E-postadress (endast registrerade användare)"
+
+#~ msgid "Quiz overview"
+#~ msgstr "Överblick prov"
+
+#~ msgid "Add quiz"
+#~ msgstr "Lägg till prov"
+
+#~ msgid "Learn more"
+#~ msgstr "Ta reda på mer"
+
+#~ msgid "Set Quiz Categories"
+#~ msgstr "Ställ in frågekategorier"
+
+#~ msgid "Sets multiple quiz categories "
+#~ msgstr "Ställer in flera frågekategorier"
+
+#~ msgid "Solved"
+#~ msgstr "Löst"
+
+#~ msgid "%d of %d"
+#~ msgstr "%d av %d"
+
+#~ msgid "yes"
+#~ msgstr "ja"
+
+#~ msgid "no"
+#~ msgstr "nej"
+
+#~ msgid "You need:"
+#~ msgstr "Du behöver:"
+
+#~ msgid "Latest POT file"
+#~ msgstr "Senaste POT-fil"
+
+#~ msgid "Open PoEdit"
+#~ msgstr "Öppna PoEdit"
+
+#~ msgid "Translate"
+#~ msgstr "Översätt"
+
+#~ msgid "Finished"
+#~ msgstr "Klar"

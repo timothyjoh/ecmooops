@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="no" ?>
+<manifest identifier="RusticiSoftwareSCORMDriverTemplate" version="1.3"
+          xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+          xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
+          xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3"
+          xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+     <metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>CAM 1.3</schemaversion>
+		<adlcp:location>metadata.xml</adlcp:location>
+	</metadata>
+	<organizations default="B0">
+		<organization identifier="B0" adlseq:objectivesGlobalToSystem="false">
+			<!--****** Title ******-->
+			<title>Course Title</title>
+			<item identifier="i1" identifierref="r1" isvisible="true">
+				<!--****** Title ******-->
+				<title>Course Title</title>
+
+				<imsss:sequencing>
+					<imsss:objectives>
+					        <imsss:primaryObjective objectiveID="PRIMARYOBJ"/>
+					</imsss:objectives>
+					<imsss:deliveryControls tracked="true" completionSetByContent="true" objectiveSetByContent="true"/>
+				</imsss:sequencing>
+				
+			</item>
+			<metadata>
+				<adlcp:location>metadata.xml</adlcp:location>
+			</metadata>			
+			<imsss:sequencing>
+				<imsss:controlMode choice="true" flow="true"/>
+                <imsss:rollupRules>
+                    <imsss:rollupRule childActivitySet="all">
+                        <imsss:rollupConditions>
+                            <imsss:rollupCondition condition="satisfied"/>
+                        </imsss:rollupConditions>
+                        <imsss:rollupAction action="satisfied"/>
+                    </imsss:rollupRule>
+                    <imsss:rollupRule childActivitySet="all">
+                        <imsss:rollupConditions>
+                            <imsss:rollupCondition operator="not" condition="satisfied"/>
+                        </imsss:rollupConditions>
+                        <imsss:rollupAction action="notSatisfied"/>
+                    </imsss:rollupRule>
+                    <imsss:rollupRule childActivitySet="all">
+                        <imsss:rollupConditions>
+                            <imsss:rollupCondition condition="completed"/>
+                        </imsss:rollupConditions>
+                        <imsss:rollupAction action="completed"/>
+                    </imsss:rollupRule>
+                    <imsss:rollupRule childActivitySet="all">
+                        <imsss:rollupConditions>
+                            <imsss:rollupCondition operator="not" condition="completed"/>
+                        </imsss:rollupConditions>
+                        <imsss:rollupAction action="incomplete"/>
+                    </imsss:rollupRule>
+                </imsss:rollupRules>
+			</imsss:sequencing>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="r1" type="webcontent" adlcp:scormType="sco" href="scormdriver/indexAPI.html">
+			 <file href="scormdriver/indexAPI.html" />
+				<file href="LICENSE.txt" />
+	            <file href="readme.txt" /> 
+	 			<file href="scormcontent/index.html" /> 
+	 			<file href="scormdriver/AICCComm.html" /> 
+	 			<file href="scormdriver/auto-scripts/AutoBookmark.js" /> 
+	 			<file href="scormdriver/auto-scripts/AutoCompleteSCO.js" /> 
+	 			<file href="scormdriver/auto-scripts/CourseExit.js" /> 
+	 			<file href="scormdriver/blank.html" /> 
+	 			<file href="scormdriver/goodbye.html" /> 
+	 			<file href="scormdriver/scormdriver.js" />
+				<file href="scormdriver/browsersniff.js" />
+		</resource>
+	</resources>
+</manifest>

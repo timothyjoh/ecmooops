@@ -1,0 +1,38 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">sfwd-courses</custom-type>
+		<custom-type translate="1">sfwd-lessons</custom-type>
+		<custom-type translate="1">sfwd-quiz</custom-type>
+		<custom-type translate="1">sfwd-assignment</custom-type>
+	</custom-types>
+
+
+	<admin-texts>
+		<key name="sfwd_cpt_options" >
+			<key name="modules" >
+				<key name="sfwd-courses_options" >
+					<key name="sfwd-courses_paypal_currency" />
+					<key name="sfwd-courses_paypal_country" />
+					<key name="sfwd-courses_paypal_cancelurl" />
+					<key name="sfwd-courses_paypal_returnurl" />
+					<key name="sfwd-courses_paypal_notifyurl" />
+				</key>
+			</key>
+		</key>
+		<key name="learndash_custom_label_settings" >
+			<key name="course" />
+			<key name="courses" />
+			<key name="lesson" />
+			<key name="lessons" />
+			<key name="topic" />
+			<key name="topics" />
+			<key name="quiz" />
+			<key name="quizzes" />
+			<key name="button_take_this_course" />
+			<key name="button_mark_complete" />
+			<key name="button_click_here_to_continue" />
+		</key>
+	</admin-texts>
+</wpml-config>
+
+

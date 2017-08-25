@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tincan xmlns="http://projecttincan.com/tincan.xsd">
+	<activities>
+		<activity id="http://propel.scitent.us/xapi-packages/SexualHarassmentScitent" type="http://adlnet.gov/expapi/activities/course">
+			<name>Sexual Harassment Course</name>
+			<description lang="en-US">Sexual Harassment Course</description>
+			<launch lang="en-us">scormdriver/indexAPI.html</launch>
+		</activity>
+	</activities>
+</tincan>

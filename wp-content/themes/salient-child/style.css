@@ -1,0 +1,149 @@
+/*
+Theme Name: Salient Child Theme
+Theme URI: http: //mysite.com/
+Description: Salient Child Theme for Clean Start
+Author: SDiamond for Scitent
+Author URI: http: //mysite.com/
+Template: salient
+Version: 0.1
+*/
+/******************************************************************************************/
+/*
+
+Color Palette:
+
+FONTS:
+
+*/
+/*
+TABLE OF CONTENTS:
+1-resets
+2-universals
+3-Links & Buttons
+4-Header
+5-Menus
+6-Footer
+7-Individual Pages
+x-Media Queries
+*/
+
+/******************************************************************************************/
+/**1-resets**/
+.screen-reader-text{
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/**2-universals***************************************************************************/
+
+.clearboth{
+  clear:both;
+  height:0;
+}
+.nomargin{
+  margin: 0 !important;
+}
+.hideme{
+  display:none !important;
+  height: 0 !important;
+}
+
+/**3-Links & Buttons**********************************************************************/
+button,
+button[type="submit"],
+a.button {
+    padding: 6px 8px !important;
+    transition: all 1s !important;
+    text-transform: uppercase !important;
+}
+#ld_course_list .btn-primary,
+#ld_course_list .btn,
+.woocommerce .AAASaddtocart button.button, 
+.woocommerce-page .AAASaddtocart button.button, 
+.woocommerce-page .AAASaddtocart button.single_add_to_cart_button,
+.woocommerce .AAASaddtocart button.single_add_to_cart_button{
+    padding: 6px 8px !important;
+    transition: all 1s !important;
+    text-transform: uppercase !important;
+	  font-size: 1.1em !important;
+}
+
+
+button:hover,
+button:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+a.button:hover,
+a.button:focus,
+#ld_course_list .btn-primary:hover,
+#ld_course_list .btn-primary:focus,
+#ld_course_list .btn:hover,
+#ld_course_list .btn:focus,
+.woocommerce .AAASaddtocart button.button:hover, 
+.woocommerce .AAASaddtocart button.button:focus, 
+.woocommerce-page .AAASaddtocart button.button:hover, 
+.woocommerce-page .AAASaddtocart button.button:focus, 
+.woocommerce-page .AAASaddtocart button.single_add_to_cart_button:hover,
+.woocommerce-page .AAASaddtocart button.single_add_to_cart_button:focus,
+.woocommerce .AAASaddtocart button.single_add_to_cart_button:hover,
+.woocommerce .AAASaddtocart button.single_add_to_cart_button:focus
+{
+}
+
+/**4-Header*******************************************************************************/
+/**5-Menus********************************************************************************/
+/**6-Footer*******************************************************************************/
+/**7-Individual Pages*********************************************************************/
+/* HOME */
+/* Course Catalog */
+/* FAQ */
+
+ /*checkout*/
+#customer_details > div.col-1 > div.woocommerce-shipping-fields > h3{
+  display:none;
+}
+
+/* order history */
+
+/* cloned from cleanstart, order-history body class="page-id-70" */
+.page-id-70 .woocommerce .address .edit{
+    display: none;
+}
+/*thankyou.php*/
+#checkoutthankyouCta{
+  display:block;
+  padding:10px;
+  background-color: #d9ebf7;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+#checkoutthankyouCta a{
+  margin-left: 5px;
+}
+/*inside courses*/
+.container .row div.return-to-course{
+  float: none;
+  width: 100%;
+  text-align: right;
+  line-height: 0;
+  margin: 20px;
+}
+/* MY COURSES */
+
+
+.ld_course_grid dd.course_progress div.course_progress_blue {
+  /* color for completed portion of progress bar*/
+    background-color: #7A9B49 !important;
+}
+/**x-Media Queries************************************************************************/
+@media screen and (max-width: 477px){
+
+  .hideonmobile{
+    display:none;
+  }
+
+}

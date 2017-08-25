@@ -1,0 +1,135 @@
+<?php
+
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_ld-course-extras',
+    'title' => 'LD Course Extras',
+    'fields' => array (
+      array (
+        'key' => 'field_56f019a1329a4',
+        'label' => 'OKM Certificate Embed Code',
+        'name' => 'embed_code',
+        'type' => 'text',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57911ecf77ce5',
+        'label' => 'Course Authors',
+        'name' => 'course_authors',
+        'type' => 'text',
+        'instructions' => 'Use this field for how the author names will display on the my courses page and the course catalog',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57911f0b77ce6',
+        'label' => 'Credit Type',
+        'name' => 'credit_type',
+        'type' => 'text',
+        'instructions' => 'Use this field for how the certificate info will display on the my courses page above the claim button',
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57912c27bdc69',
+        'label' => 'Certificate Button Label',
+        'name' => 'certificate_button_label',
+        'type' => 'text',
+        'instructions' => 'Change the button label to get access to the certificate(s)',
+        'required' => 1,
+        'default_value' => 'Access Certificates',
+        'placeholder' => 'button label',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'html',
+        'maxlength' => '',
+      ),
+      array (
+        'key' => 'field_57962cc9d3f01',
+        'label' => 'Show My Courses Flag',
+        'name' => 'show_my_courses_flag',
+        'type' => 'true_false',
+        'instructions' => 'Set this field to True to show a flag on the my courses page',
+        'message' => '',
+        'default_value' => 0,
+      ),
+      array (
+        'key' => 'field_57962d85d3f02',
+        'label' => 'My Courses Flag Label',
+        'name' => 'my_courses_flag_label',
+        'type' => 'text',
+        'instructions' => 'The label for the flag on the My Courses page',
+        'conditional_logic' => array (
+          'status' => 1,
+          'rules' => array (
+            array (
+              'field' => 'field_57962cc9d3f01',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+          'allorany' => 'all',
+        ),
+        'default_value' => 'update',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'formatting' => 'none',
+        'maxlength' => 35,
+      ),
+      array (
+        'key' => 'field_57962dc8d3f03',
+        'label' => 'My Courses Flag Popover Content',
+        'name' => 'my_courses_flag_popover_content',
+        'type' => 'wysiwyg',
+        'instructions' => 'The content for the popover when the flag is clicked',
+        'conditional_logic' => array (
+          'status' => 1,
+          'rules' => array (
+            array (
+              'field' => 'field_57962cc9d3f01',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+          'allorany' => 'all',
+        ),
+        'default_value' => '',
+        'toolbar' => 'basic',
+        'media_upload' => 'no',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'sfwd-courses',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'default',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}

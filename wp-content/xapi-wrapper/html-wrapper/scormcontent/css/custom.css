@@ -1,0 +1,202 @@
+/*-- Custom Text Styles --*/
+
+.percentages-header {
+	font-size: 4em;
+	padding-top: 50px;
+}
+
+.percentages-text {
+	font-size: 20px;
+	padding-bottom: 5px;
+}
+
+.header-bottom-padding {
+	padding-bottom: 40px;
+}
+
+.header-white {
+	color: #fff;
+}
+
+.header-blue {
+	color: #0f6cb6;
+}
+
+.header-purp {
+	color: #3f3066;
+}
+
+.header-cust-size {
+	font-size: 4em;
+}
+
+.intro-pad {
+    padding-bottom: 100px;
+}
+
+.goals-text {
+    font-size: 20px;
+}
+
+.intro-color-cust {
+    color: #00ccff;
+}
+
+/*-- Parallax --*/
+
+#goals {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/goals-bg-1.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#whatis {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/whatis-bg.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#intro1 {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/inform-bg.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#intro2 {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/intro2-bg.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#employer {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/employer-bg.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#recognize {
+    background-color: #444;
+    background-position: center 0%;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../img/recognize-bg.jpg);
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+/*-- Buttons --*/
+
+.next-sec-btn {
+    border-radius: 5px;
+    border-color: #522f91;
+    width: 500px;
+    color: #0f6cb6;
+    font-size: 20px;
+}
+
+.next-sec-btn:hover {
+    border-radius: 5px;
+    border-color: #522f91;
+    width: 500px;
+    color: #fff;
+    background-color: #0f6cb6;
+    font-size: 20px;
+}
+
+/*-- Custom Image --*/
+
+.pad-bottom {
+    padding-bottom: 50px;
+}
+
+.pad-bottom-2 {
+    padding-bottom: 200px;
+}
+
+.perc-pad {
+    max-width: 275px;
+    padding-bottom: 25px;
+}
+
+.types-pad {
+    max-width: 275px;
+    padding-bottom: 25px;
+}
+
+/*-- Miscellaneous --*/
+
+.cust-icon {
+    padding-top: 100px;
+    color: white;
+}
+
+.icon-goals-cust-1 {
+    padding-bottom: 20px;
+    color: #522f91;
+}
+
+.goals-header-color {
+    color: #0f6cb6;
+}

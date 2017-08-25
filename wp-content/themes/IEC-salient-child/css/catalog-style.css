@@ -1,0 +1,323 @@
+br.clear {
+  font-size: 1px;
+  clear: both;
+}
+.ascend .container-wrap {
+  background-color: #fff !important;
+}
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product, 
+.woocommerce .span_9 ul.products li.product, 
+.woocommerce-page .span_9 ul.products li.product {
+  width: 31% !important;
+  margin: 0 2% 4% 0;
+}
+
+.woocommerce ul.products {
+  margin-top: 1em;
+}
+ul.products li.product a: {
+  display: block;
+}
+
+ul.products li.product a.course-info.btn {
+  display: block;
+  float: right;
+  color: #0d679c;
+  border: 1px solid #0d679c;
+  background: none;
+  font-size: 14px;
+}
+
+ul.products li.product a.course-info.btn:hover {
+  background: #0d679c;
+  border: 1px solid #0d679c;
+  color: #fff;
+}
+
+/*  Universal */
+#social {
+  display: none;
+}
+
+/*  Course Catalog Header */
+
+.course-catalog-header {
+  height: 63px;
+  margin-bottom: 0;
+}
+
+.sort-by-block {
+  padding: 15px 25px
+}
+
+.woocommerce-result-count {
+  display: none;
+}
+
+.course-catalog .page-description {
+  margin-top: -35px;
+}
+
+.course-catalog .page-description p {
+  display: none !important;
+}
+
+.woocommerce .woocommerce-ordering, .woocommerce .span_9 .woocommerce-ordering {
+  position: relative;
+  top: 4px;
+}
+
+.course-catalog-btns {
+  color: #00669f;
+  text-align: right;
+  padding: 14px 25px;
+}
+
+.course-catalog-btns i {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #676767;
+  padding: 5px;
+}
+
+.course-catalog-btns i:hover {
+  color: white;
+  background-color: #00669f;
+  border-color: #00669f;
+}
+
+.rows-btn {
+  margin-right: 12px;
+}
+
+/*  Course Catalog Sidebar  */
+
+#products_predictive_search-2 h4 {
+  display: none;
+}
+
+#woocommerce_top_rated_products-2 h4 {
+  font-size: 28px;
+  color: #263746;
+  letter-spacing: 0;
+  font-weight: 800;
+
+}
+
+.widget-title span {
+  font-size: 28px;
+  color: #263746;
+  letter-spacing: 0;
+  font-weight: 100;
+}
+
+/*  Universal Catalog Views */
+
+.ascend .container-wrap {
+  background-color: #fff;
+}
+
+.product-wrap .add_to_cart_button {
+  display: none !important;
+}
+
+.products h3 {
+  color: #263746;
+  font-weight: bold !important;
+}
+
+.woocommerce ul.products li.product.classic h3, 
+.woocommerce-page ul.products li.product.classic h3 {
+  font-size: 20px !important;
+  height: auto !important;
+}
+
+.price span {
+  color: #00669f;
+  font-size: 20px;
+}
+
+.collateral-product-columns-2 .page-title {
+  display: none;
+}
+
+/*  This is what styles the search field */
+
+.course-catalog .container-wrap .ctr_search input[type="text"] {
+  border-width: 0 !important;
+}
+
+.course-catalog .bt_search .predictive_search_bt {
+
+}
+
+/*  Tile View  */
+ul.products li.product p {
+  display: none;
+}
+
+.woocommerce ul.products li.product .price,
+.woocommerce-page ul.products li.product .price {
+  line-height: 44px !important; 
+  margin-bottom: 0px;
+  float: left;
+}
+.woocommerce ul.products li.product .product-wrap {
+  height: 160px;
+}
+.woocommerce ul.products li.product .price span {
+  font-size: 28px !important;
+  font-weight: 600;
+}
+.woocommerce ul.products li.product .button.add_to_cart_button {
+  display: none;
+}
+.woocommerce ul.products li.product .rowtitle {
+  display: none !important;
+}
+
+.woocommerce ul.products li.product a:link h3,
+.woocommerce-page ul.products li.product a:link h3 {
+  display:block;
+  color: #263746;
+  line-height: 24px;
+}
+.woocommerce ul.products li.product a:hover h3,
+.woocommerce-page ul.products li.product a:hover h3 {
+  color: #00669E;
+  text-decoration: underline;
+}
+
+.woocommerce ul.products li.product.classic h3.tiletitle, 
+.woocommerce-page ul.products li.product.classic h3.tiletitle {
+  display: block;
+  min-height: 5em;
+  font-size: 17px !important;
+  margin: 0px !important;
+}
+
+/*  Row View  */
+
+.rows-view #product-category-mobile-list {
+  margin: 0px !important;
+}
+.rows-view ul.products li p {
+  padding-bottom: 0;
+}
+
+.rows-view ul.products li .product-wrap {
+  display: none;
+}
+.woocommerce .rows-view ul.products li.product, 
+.woocommerce-page .rows-view ul.products li.product, 
+.woocommerce .rows-view .span_9 ul.products li.product, 
+.woocommerce-page .rows-view .span_9 ul.products li.product {
+  width: 100% !important;
+  margin: 0 0 2%;
+  clear: both;
+  padding: 0.5em 1em;
+}
+.rows-view ul.products li.product:nth-child(even) {
+  background: #ddd;
+}
+.rows-view ul.products li.product.product-category:nth-child(even) {
+  background: none;
+}
+.rows-view ul.products li.product p {
+  margin: 0 0 10px 0 !important;
+  line-height: 20px;
+  display: block;
+}
+
+
+.woocommerce .rows-view ul.products li.product.classic h3.rowtitle,
+.woocommerce-page .rows-view ul.products li.product.classic h3.rowtitle {
+  display: block !important;
+  font-size: 17px !important;
+  line-height: 44px;
+}
+
+.rows-view ul.products li.product.classic h3.tiletitle {
+  min-height: 0em;
+  display: none !important;
+}
+
+/* Categories */
+
+.woocommerce ul.products li.product.product-category a img {
+  display: none;
+}
+.woocommerce ul.products li.product.product-category {
+  margin: 0px;
+  padding: 0px 1em;
+  width: 100% !important;
+}
+.woocommerce ul.products li.product.product-category a {
+}
+.woocommerce ul.products li.product.product-category a h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+a.the-price-link:hover .price {
+  color: #000;
+}
+a.the-desc-link:hover, a.the-desc-link {
+  color: #000;
+}
+
+.berocket_aapf_widget_selected_area_text {
+margin-right: 0;
+padding: 3%;
+background: #ddd;
+margin-top: -5px;
+}
+
+
+/*  Responsive Block */
+@media only screen and (max-width: 1000px) {
+  .course-catalog-header {
+    display: none;
+  }
+
+  .rows-view ul.products li .product-wrap {
+    display: none;
+  }
+  ul.products li.product p {
+    display: block;
+  }
+  .woocommerce-page ul.products li.product.classic h3.tiletitle {
+    min-height: 1em;
+  }
+  .woocommerce ul.products li.product, 
+  .woocommerce-page .span_9 ul.products li.product {
+    margin: 0;
+    width: 100% !important;
+    clear: both;
+  }
+  .berocket_aapf_widget_selected_area_text {
+    background: #fff;
+    display: none;
+  }
+
+  .rows-view ul.products .tiletitle {
+    display: none;
+  }
+
+  .rows-view ul.products .rowtitle {
+    display: block;
+  }
+
+  .woocommerce ul.products li.product.classic h3, 
+  .woocommerce-page ul.products li.product.classic h3 {
+    font-size: 20px !important;
+    height: auto !important;
+    line-height: 30px !important;
+  }
+
+  #sidebar {
+    display: none;
+  }
+}

@@ -1,0 +1,753 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Products List\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-27 09:19+0300\n"
+"PO-Revision-Date: 2016-10-27 09:19+0300\n"
+"Last-Translator: Angelo <lazzari.angelo@gmail.com>\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: woo-products-list.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: editor_plugins.php:40
+msgid "Filters"
+msgstr "Filtri"
+
+#: editor_plugins.php:46
+msgid "Search term"
+msgstr "Termini di ricerca"
+
+#: editor_plugins.php:55
+msgid "Include Categories"
+msgstr "includi le Categorie"
+
+#: editor_plugins.php:58 editor_plugins.php:78 editor_plugins.php:97
+#: editor_plugins.php:118
+msgid "Select or type to search"
+msgstr "Seleziona o scrivi per ricercare"
+
+#: editor_plugins.php:75
+msgid "Exculde Categories"
+msgstr "Escludi Categorie"
+
+#: editor_plugins.php:94
+msgid "Include Tags"
+msgstr "includi Tags"
+
+#: editor_plugins.php:115
+msgid "Exculde Tags"
+msgstr "Escludi Tags"
+
+#: editor_plugins.php:135
+msgid "Include Products"
+msgstr "Includi Prodotti"
+
+#: editor_plugins.php:135 editor_plugins.php:144
+msgid "(enter IDs eg. 14,22,73)"
+msgstr "(metti gli ID es: 14,22,73)"
+
+#: editor_plugins.php:144
+msgid "Exclude Products"
+msgstr "Escludi Prodotti"
+
+#: editor_plugins.php:153
+msgid "Enable categories dropdown filter"
+msgstr "Abilita la tendina di selezione categorie"
+
+#: editor_plugins.php:157 editor_plugins.php:170 editor_plugins.php:184
+#: editor_plugins.php:199 editor_plugins.php:232 editor_plugins.php:248
+#: editor_plugins.php:283 editor_plugins.php:305 editor_plugins.php:335
+#: editor_plugins.php:351 editor_plugins.php:377
+msgid "Default"
+msgstr "Default"
+
+#: editor_plugins.php:158 editor_plugins.php:171
+msgid "Disable"
+msgstr "Disabilita"
+
+#: editor_plugins.php:159 editor_plugins.php:172
+msgid "Enable"
+msgstr "Abilita"
+
+#: editor_plugins.php:166
+msgid "Enable tags dropdown filter"
+msgstr "Abilita la tendina di filtro dei tags"
+
+#: editor_plugins.php:180 grid_options_page.php:71 grid_options_page.php:665
+msgid "Dropdown filters Position"
+msgstr "Posizione della tendina dei filtri"
+
+#: editor_plugins.php:185 editor_plugins.php:284 editor_plugins.php:306
+#: grid_options_page.php:667
+msgid "Hide"
+msgstr "Nascondi"
+
+#: editor_plugins.php:186 editor_plugins.php:201 grid_options_page.php:616
+#: grid_options_page.php:668
+msgid "Before the list"
+msgstr "Prima della lista"
+
+#: editor_plugins.php:187 editor_plugins.php:202 grid_options_page.php:617
+#: grid_options_page.php:669
+msgid "After the list"
+msgstr "Dopo della lista"
+
+#: editor_plugins.php:188 editor_plugins.php:203 grid_options_page.php:618
+#: grid_options_page.php:670
+msgid "Both, before and after the list"
+msgstr "Entrambi, prima e dopo della lista"
+
+#: editor_plugins.php:195
+msgid "Enable pagination"
+msgstr "Abilita la paginazione"
+
+#: editor_plugins.php:200 editor_plugins.php:378 grid_options_page.php:165
+#: grid_options_page.php:175 grid_options_page.php:185
+#: grid_options_page.php:204 grid_options_page.php:215
+#: grid_options_page.php:226 grid_options_page.php:238
+#: grid_options_page.php:249 grid_options_page.php:260
+#: grid_options_page.php:271 grid_options_page.php:282
+#: grid_options_page.php:293 grid_options_page.php:313
+#: grid_options_page.php:325 grid_options_page.php:336
+#: grid_options_page.php:347 grid_options_page.php:358
+#: grid_options_page.php:386 grid_options_page.php:415
+#: grid_options_page.php:440 grid_options_page.php:452
+#: grid_options_page.php:465 grid_options_page.php:477
+#: grid_options_page.php:496 grid_options_page.php:516
+#: grid_options_page.php:532 grid_options_page.php:543
+#: grid_options_page.php:556 grid_options_page.php:569
+#: grid_options_page.php:615 product_options_meta.php:27
+msgid "No"
+msgstr "No"
+
+#: editor_plugins.php:210 grid_options_page.php:68 grid_options_page.php:628
+msgid "Products per page"
+msgstr "Prodotti per pagina"
+
+#: editor_plugins.php:219
+msgid "Sorting"
+msgstr "Ordinamento"
+
+#: editor_plugins.php:227 grid_options_page.php:64 grid_options_page.php:577
+msgid "Order Direction"
+msgstr "Verso Ordinamento"
+
+#: editor_plugins.php:233 grid_options_page.php:579
+msgid "Descending"
+msgstr "Discendente"
+
+#: editor_plugins.php:234 grid_options_page.php:580
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: editor_plugins.php:243 grid_options_page.php:65 grid_options_page.php:590
+msgid "Order By"
+msgstr "Ordinato per"
+
+#: editor_plugins.php:265
+msgid "Columns"
+msgstr "Colonne"
+
+#: editor_plugins.php:285
+msgid "Show"
+msgstr "Mostra"
+
+#: editor_plugins.php:286
+msgid "Hide, but keep the buttons"
+msgstr "Nascondi, pero mantieni i pulsanti"
+
+#: editor_plugins.php:300 grid_options_page.php:66
+msgid "YITH Quick View"
+msgstr "YITH Quick View"
+
+#: editor_plugins.php:307
+msgid "On all product types but variable"
+msgstr "Su tutti i prodotti ma variabili"
+
+#: editor_plugins.php:308 grid_options_page.php:388
+msgid "On variable products"
+msgstr "Sui prodotti variabili"
+
+#: editor_plugins.php:309 grid_options_page.php:389
+msgid "On all types of products"
+msgstr "Su tutti i tipi di prodotti"
+
+#: editor_plugins.php:322 woo-products-list.php:1384
+msgid "Settings"
+msgstr "Configurazioni"
+
+#: editor_plugins.php:330 grid_options_page.php:368
+msgid "Global Add To Cart Button Position"
+msgstr "Posizione di Aggiungi al carrello globale"
+
+#: editor_plugins.php:336 grid_options_page.php:370
+msgid "Bottom"
+msgstr "Sotto"
+
+#: editor_plugins.php:337 grid_options_page.php:371
+msgid "Top"
+msgstr "Sopra"
+
+#: editor_plugins.php:338 grid_options_page.php:372
+msgid "Both"
+msgstr "Entrambi"
+
+#: editor_plugins.php:346
+msgid "Global Add To Cart Button Status"
+msgstr "Stato del pulsante aggiungi al carrello globale"
+
+#: editor_plugins.php:352 grid_options_page.php:402
+msgid "Un-Checked"
+msgstr "Deselezionato"
+
+#: editor_plugins.php:353 grid_options_page.php:403
+msgid "Checked"
+msgstr "Selezionato"
+
+#: editor_plugins.php:362
+msgid "Custom meta"
+msgstr "Meta Custom"
+
+#: editor_plugins.php:362
+msgid "(Comma separated, no spaces)"
+msgstr "(separati da virgola, senza spazi)"
+
+#: editor_plugins.php:372 grid_options_page.php:436
+msgid "Display Attributes"
+msgstr "Attributi di Visualizzazione"
+
+#: editor_plugins.php:379 grid_options_page.php:164 grid_options_page.php:174
+#: grid_options_page.php:184 grid_options_page.php:203
+#: grid_options_page.php:214 grid_options_page.php:225
+#: grid_options_page.php:237 grid_options_page.php:248
+#: grid_options_page.php:259 grid_options_page.php:270
+#: grid_options_page.php:281 grid_options_page.php:292
+#: grid_options_page.php:312 grid_options_page.php:324
+#: grid_options_page.php:335 grid_options_page.php:346
+#: grid_options_page.php:357 grid_options_page.php:414
+#: grid_options_page.php:439 grid_options_page.php:451
+#: grid_options_page.php:464 grid_options_page.php:476
+#: grid_options_page.php:495 grid_options_page.php:515
+#: grid_options_page.php:531 grid_options_page.php:544
+#: grid_options_page.php:557 grid_options_page.php:568
+#: product_options_meta.php:28
+msgid "Yes"
+msgstr "Si"
+
+#: grid_options_page.php:21 grid_options_page.php:108 woo-products-list.php:49
+msgid "SKU"
+msgstr "SKU"
+
+#: grid_options_page.php:22
+msgid "Name"
+msgstr "Nome"
+
+#: grid_options_page.php:23 woo-products-list.php:48
+msgid "Thumbnail"
+msgstr "Immagine"
+
+#: grid_options_page.php:24 woo-products-list.php:52
+msgid "Categories"
+msgstr "Categorie"
+
+#: grid_options_page.php:25 woo-products-list.php:53
+msgid "Tags"
+msgstr "Tags"
+
+#: grid_options_page.php:26 grid_options_page.php:112 woo-products-list.php:54
+msgid "Stock"
+msgstr "Stock"
+
+#: grid_options_page.php:27 grid_options_page.php:105 woo-products-list.php:58
+msgid "Price"
+msgstr "Prezzo"
+
+#: grid_options_page.php:28 woo-products-list.php:59
+msgid "Total"
+msgstr "Totale"
+
+#: grid_options_page.php:29
+msgid "Extra Image"
+msgstr "Immagine aggiuntiva"
+
+#: grid_options_page.php:30 woo-products-list.php:60
+msgid "Add to Cart Button"
+msgstr "Pulsante aggiungi al carrello"
+
+#: grid_options_page.php:31
+msgid "Global Add to Cart Checkbox"
+msgstr "Pulsante globale aggiungi al carrello"
+
+#: grid_options_page.php:32 woo-products-list.php:57
+msgid "Quantity"
+msgstr "Quantità"
+
+#: grid_options_page.php:33 grid_options_page.php:109
+msgid "Weight"
+msgstr "Peso"
+
+#: grid_options_page.php:34
+msgid "Dimensions"
+msgstr "Dimensioni"
+
+#: grid_options_page.php:35 woo-products-list.php:56
+msgid "Wishlist"
+msgstr "Lista dei desideri"
+
+#: grid_options_page.php:36 woo-products-list.php:55
+msgid "Gift Wrap"
+msgstr "Gift Wrap"
+
+#: grid_options_page.php:37
+msgid "Description"
+msgstr "Descrizione"
+
+#: grid_options_page.php:38
+msgid "Custom Meta"
+msgstr "Meta Custom"
+
+#: grid_options_page.php:48
+msgid "Default Quantity"
+msgstr "Quantità di default"
+
+#: grid_options_page.php:49
+msgid "Display Quantity Controls ( - / + buttons)"
+msgstr "Visualizza i controlli della quantità (pulsanti - / +)"
+
+#: grid_options_page.php:50
+msgid "Thumbnail Size"
+msgstr "Dimensione immagine"
+
+#: grid_options_page.php:51
+msgid "Extra Image File"
+msgstr "File immagine aggiuntiva"
+
+#: grid_options_page.php:52
+msgid "Columns Order"
+msgstr "Ordine colonne"
+
+#: grid_options_page.php:53
+msgid "Enable Ajax Add to Cart"
+msgstr "Abilita Ajax nell’aggiunta al carrello"
+
+#: grid_options_page.php:54
+msgid "Table Head"
+msgstr "Intestazione tabella"
+
+#: grid_options_page.php:55 grid_options_page.php:553
+msgid "Enable Sorting"
+msgstr "Abilita ordinamento"
+
+#: grid_options_page.php:56
+msgid "Hide zero priced products"
+msgstr "Nascondi i prodotti con prezzo a zero"
+
+#: grid_options_page.php:57
+msgid "Hide out of stock products"
+msgstr "Nascondi prodotti senza stock"
+
+#: grid_options_page.php:58
+msgid "Treat zero quantity products as out of stock"
+msgstr "Tratta i prodotti con quantità a zero come senza stock"
+
+#: grid_options_page.php:59
+msgid "Global Add to Cart Button Position"
+msgstr "Posizione del pulsante globale aggiungi al carrello"
+
+#: grid_options_page.php:60
+msgid "Description Inline"
+msgstr "Descrizione sulla stessa riga"
+
+#: grid_options_page.php:61
+msgid "Global Add to Cart Button Default Status"
+msgstr "Stato di default del pulsante globale aggiungi al carrello"
+
+#: grid_options_page.php:62 grid_options_page.php:541
+msgid "Manually close the notification panel"
+msgstr "Chiudi manualmente il pannello delle notifiche"
+
+#: grid_options_page.php:63 grid_options_page.php:504
+msgid "Excerpt max length in characters"
+msgstr "Lunghezza massima dell'excerpt"
+
+#: grid_options_page.php:67 grid_options_page.php:613
+msgid "Display Pagination"
+msgstr "Visualizza la paginazione"
+
+#: grid_options_page.php:69
+msgid "Enable Categories Dropdown Filter"
+msgstr "Abilita la tendina di filtro categorie"
+
+#: grid_options_page.php:70 grid_options_page.php:656
+msgid "Enable Tags Dropdown Filter"
+msgstr "Abilita la tendina di filtro tags"
+
+#: grid_options_page.php:72
+msgid "Attributes"
+msgstr "Attributi"
+
+#: grid_options_page.php:73
+msgid "Meta Keys"
+msgstr "Chiavi Meta"
+
+#: grid_options_page.php:103
+msgid "Date"
+msgstr "Data"
+
+#: grid_options_page.php:104 woo-products-list.php:50
+msgid "Product Title"
+msgstr "Titolo del prodotto"
+
+#: grid_options_page.php:106
+msgid "Sale Price"
+msgstr "Prezzo d’offerta"
+
+#: grid_options_page.php:107
+msgid "Regular Price"
+msgstr "Prezzo normale"
+
+#: grid_options_page.php:110
+msgid "Length"
+msgstr "Lunghezza"
+
+#: grid_options_page.php:111
+msgid "Width"
+msgstr "Altezza"
+
+#: grid_options_page.php:113
+msgid "Total Sales"
+msgstr "Vendite totali"
+
+#: grid_options_page.php:114
+msgid "Stock Status"
+msgstr "Situazione Stock"
+
+#: grid_options_page.php:115
+msgid "Rating"
+msgstr "Rating"
+
+#: grid_options_page.php:130
+msgid "Woocommerce Products List Settings"
+msgstr "Configurazione Woocommerce Products List"
+
+#: grid_options_page.php:136 grid_options_page.php:707
+msgid "Save Changes on All Tabs"
+msgstr "Salva i cambiamenti in tutte le tab"
+
+#: grid_options_page.php:162
+msgid "Display Product Title"
+msgstr "Mostra il titolo del prodotto "
+
+#: grid_options_page.php:172
+msgid "Display SKU"
+msgstr "Mostra SKU"
+
+#: grid_options_page.php:182
+msgid "Display Thumbnail"
+msgstr "Mostra immagine"
+
+#: grid_options_page.php:193
+msgid "Thumbnail Width in Pixels"
+msgstr "Lunghezza in pixel dell’immagine"
+
+#: grid_options_page.php:201
+msgid "Display Categories"
+msgstr "Mostra Categorie"
+
+#: grid_options_page.php:212
+msgid "Display Tags"
+msgstr "Mostra Tags"
+
+#: grid_options_page.php:223
+msgid "Display Stock"
+msgstr "Mostra Stock"
+
+#: grid_options_page.php:235
+msgid "Hide Zero Priced Products"
+msgstr "Nascondi prodotti con prezzo a zero"
+
+#: grid_options_page.php:246
+msgid "Hide Out of Stock Products"
+msgstr "Nascondi prodotti senza stock"
+
+#: grid_options_page.php:257
+msgid "Treat zero quantity Products as Out of Stock"
+msgstr "Tratta i prodotti con quantità a zero come senza stock"
+
+#: grid_options_page.php:268
+msgid "Display Price"
+msgstr "Mostra Prezzo"
+
+#: grid_options_page.php:279
+msgid "Display Total"
+msgstr "Mostra Totale"
+
+#: grid_options_page.php:290
+msgid "Display Quantity Field"
+msgstr "Mostra il campo quantità"
+
+#: grid_options_page.php:301
+msgid "Default Quantity Value"
+msgstr "Valore di default per la quantità"
+
+#: grid_options_page.php:310
+msgid "Display Quantity Controls"
+msgstr "Mostra i controlli della quantità"
+
+#: grid_options_page.php:322
+msgid "Display Weight"
+msgstr "Mostra Peso"
+
+#: grid_options_page.php:333
+msgid "Display Dimensions"
+msgstr "Mostra Dimensioni"
+
+#: grid_options_page.php:344
+msgid "Display Add To Cart"
+msgstr "Mostra Aggiungi al Carrello"
+
+#: grid_options_page.php:355
+msgid "Display Global Add To Cart"
+msgstr "Mostra Aggiungi al carrello globale"
+
+#: grid_options_page.php:359
+msgid ""
+"No, but keep the buttons (all quantities greater than 0 will be added to the "
+"cart)"
+msgstr ""
+"No, pero mantieni i pulsanti ( tutte le quantità maggiori di zero saranno "
+"aggiunte al carrello)"
+
+#: grid_options_page.php:383
+msgid "Display YITH Quick View"
+msgstr "Visualizza YITH Quick View"
+
+#: grid_options_page.php:384
+msgid ""
+"The quick view button will be displayed below or beside the add to cart "
+"button, hence the add to cart has to be enabled for the quick view to be "
+"displayed"
+msgstr ""
+"Il pulsante di visualizzazione rapida sarà mostrato sotto o al lato del "
+"bottone di aggiungi al carretto, quindi il bottone di aggiungi al carrello "
+"dovrà essere abilitato per poter visualizzare il Quick View"
+
+#: grid_options_page.php:387
+msgid "On all type of products but variable"
+msgstr "Su tutti i tipi di prodotti ma variabili"
+
+#: grid_options_page.php:400
+msgid "Global Add To Cart Button Default Status"
+msgstr "Dimensione di default del pulsante globale di aggiungi al carrello"
+
+#: grid_options_page.php:412
+msgid "Display Custom Meta"
+msgstr "Visualizza le meta personalizzate"
+
+#: grid_options_page.php:425
+msgid "Custom Meta Keys and Labels"
+msgstr ""
+
+#: grid_options_page.php:426
+msgid ""
+"Comma separate each key and label (no spaces). Separate keys and labels with "
+"a Vertical Pipe “|”, eg. custom_color|Color,custom_size|Size"
+msgstr ""
+
+#: grid_options_page.php:437
+msgid "Available attributes will be displayed below the title"
+msgstr "Gli attributi disponibili saranno visualizzati sotto al titolo"
+
+#: grid_options_page.php:449
+msgid "Display Wishlist"
+msgstr "Mostra Lista dei Desideri"
+
+#: grid_options_page.php:462
+msgid "Display Gift Wrap Option"
+msgstr "Mostra le opzioni di Gift Wrap"
+
+#: grid_options_page.php:474
+msgid "Display Image"
+msgstr "Mostra Immagine"
+
+#: grid_options_page.php:485
+msgid "Add Image"
+msgstr "Aggiungi Immagine"
+
+#: grid_options_page.php:493
+msgid "Display Excerpt"
+msgstr "Mostra Testo riassuntivo"
+
+#: grid_options_page.php:513
+msgid "Display Excerpt Inline"
+msgstr "Mostra testo riassuntivo sulla stessa linea"
+
+#: grid_options_page.php:529
+msgid "Display Table Head"
+msgstr "Mostra intestazioni di colonna"
+
+#: grid_options_page.php:554
+msgid ""
+"It will have strange results if you will also add description per variation"
+msgstr ""
+"Darà degli strani risultati se aggiungi anche la descrizioni per ogni "
+"variabile di prodotto"
+
+#: grid_options_page.php:565
+msgid "Enable AJAX"
+msgstr "Abilita AJAX"
+
+#: grid_options_page.php:566
+msgid ""
+"Enabling this will disable the stock quantity check when adding to cart via "
+"the plugin"
+msgstr ""
+"Abilitando questo disabiliterà il controllo sullo stock mentre si aggiunge "
+"al carrello "
+
+#: grid_options_page.php:639
+msgid "Filters Settings"
+msgstr "Configurazione dei filtri"
+
+#: grid_options_page.php:646
+msgid "Enable Caregories Dropdown Filter"
+msgstr "Abilita la tendina filtro categorie"
+
+#: grid_options_page.php:691
+msgid "Order Columns"
+msgstr "Ordine colonne"
+
+#: grid_options_page.php:692
+msgid ""
+"Please drag and drop the below list elements to order the columns of the "
+"table"
+msgstr ""
+"Per favore, seleziona e posiziona dove meglio credi gli elementi della lista "
+"qui sotto per ordinare l’ordine di visualizzazione"
+
+#: grid_options_page.php:714
+msgid "Hide this sidebar forever"
+msgstr "Nascondi questa barra laterale per sempre"
+
+#: grid_options_page.php:730
+msgid "More plugins to enhance your eshop"
+msgstr "Altri plugin per far crescere il tuo eCommerce"
+
+#: product_options_meta.php:16
+msgid "Woocommerce Products List Product Options"
+msgstr "Opzioni Prodotti Woocommerce Products List "
+
+#: product_options_meta.php:25
+msgid "Remove this product from Woocomerce Products List"
+msgstr "Rimuovi questo prodotto da Woocomerce Products List"
+
+#: product_options_meta.php:34
+msgid "Override extra image"
+msgstr "Sovrascrivi immagine aggiuntiva"
+
+#: woo-products-list.php:51
+msgid "Offer Image"
+msgstr ""
+
+#: woo-products-list.php:234
+#, php-format
+msgid "Gift wrap this item for %s?"
+msgstr "Lift wrap questo oggetto per %s?"
+
+#: woo-products-list.php:534 woo-products-list.php:1118
+msgid "Add selected to cart"
+msgstr "Aggiungi i selezionati al carrello"
+
+#: woo-products-list.php:756
+msgid "Placeholder"
+msgstr "Marcatore"
+
+#: woo-products-list.php:814 woo-products-list.php:821
+msgid "offer"
+msgstr "Offerta"
+
+#: woo-products-list.php:883
+msgid "free"
+msgstr "Gratis"
+
+#: woo-products-list.php:962
+msgid "Backorder"
+msgstr "Backorder"
+
+#: woo-products-list.php:964
+msgid "Add to cart"
+msgstr "Aggiunti al Carrello"
+
+#: woo-products-list.php:1227
+msgid "No products found"
+msgstr "Nessun prodotto trovato"
+
+#: woo-products-list.php:1371
+msgid "Go to cart"
+msgstr "Vai al carrello"
+
+#: woo-products-list.php:1371
+msgid "&times; product(s) added to cart"
+msgstr "&times; prodotto(i) aggiunto(i) al carrello"
+
+#: woo-products-list.php:1428
+msgid "Open Media Manager"
+msgstr "Apri il gestore dei media"
+
+#: woo-products-list.php:1513
+msgid "Filter by category"
+msgstr "Filtra per categoria"
+
+#: woo-products-list.php:1545
+msgid "Filter by tag"
+msgstr "Filtra per tag"
+
+#: woo-products-list.php:1583
+msgid "Filter"
+msgstr "Filtra"
+
+#: woo-products-list.php:1586
+msgid "Reset Filters"
+msgstr "Resetta i filtri"
+
+#: woo-products-list.php:1586
+msgid "Reset"
+msgstr "Resetta"
+
+#. Plugin Name of the plugin/theme
+msgid "Woocommerce Products List"
+msgstr "Woocommerce Products List"
+
+#. Plugin URI of the plugin/theme
+msgid "https://codecanyon.net/item/woocommerce-products-list-pro/17893660"
+msgstr "https://codecanyon.net/item/woocommerce-products-list-pro/17893660"
+
+#. Description of the plugin/theme
+msgid "Plugin to list all your Woocommerce products"
+msgstr "Plugin per elencare i tuoi prodotti di Woocommerce"
+
+#. Author of the plugin/theme
+msgid "Spyros Vlachopoulos"
+msgstr "Spyros Vlachopoulos"
+
+#. Author URI of the plugin/theme
+msgid "http://www.nitroweb.gr"
+msgstr "http://www.nitroweb.gr"
+
+#~ msgid "Custom Meta Keys"
+#~ msgstr "Chiavi Meta personalizzate "
+
+#~ msgid "Comma separate each key (no spaces)"
+#~ msgstr "Separate da virgola (senza spazi)"

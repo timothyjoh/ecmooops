@@ -1,0 +1,87 @@
+	.infoblocks {
+		background: greenyellow;
+		border: 1px solid black;
+		display: block;
+		padding: 10px 20px;
+	}
+	.grassblade_lightbox {
+		position: fixed; border: 11px solid black; max-width: 100%;max-height: 100%; margin: auto; bottom: 0px; left: 0px; right: 0px; top: 30px;  overflow: hidden; padding: 0px; z-index: 1000000; background: white;
+	} 
+	.grassblade_lightbox .grassblade_close{
+		float: right; font-weight: bold; background: transparent; right: 0px; top: 0px; font-family: verdana; font-size: 20px; text-decoration: none; z-index: 10; position: absolute;
+	} 
+	.grassblade_lightbox .grassblade_close a {
+		color: transparent; text-decoration: none; padding: 7px; 
+	}
+	.grassblade_lightbox .grassblade_close {
+		background: white;
+	}
+	.grassblade_lightbox .grassblade_close a{
+		color: black;
+	}
+	.grassblade_lightbox iframe {
+		width:100%;height:100%;
+	}
+	.grassblade_lightbox_overlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 999999;
+		opacity: 0.8;
+		background: black;
+	}
+	#xapi_posts_list ul {
+		list-style-type:lower-alpha;
+		list-style-position: inside;
+		margin: 5px;
+	}
+	#show_xapi_content {
+		margin: 5px;
+	}
+	h2.gb-content-selector {
+		padding: 0 !important;
+	}
+	.has_xapi_content #sfwd-quiz_quiz_pro,.has_xapi_content #sfwd-quiz_quiz_pro_html {display: none;}
+
+	#grassblade_settings_form {
+		background: white;
+		padding: 20px;
+		margin: 10px 0;
+		max-width: 900px; 
+	}
+	.grassblade_field_group > div.grassblade_field_group_label {
+		background: none repeat scroll 0 0 #f1f1f1;
+	    border: 1px solid #ddd;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	    cursor: pointer;
+	    font-weight: bold;
+	    padding: 5px 10px;
+	}
+	.grassblade_field_group > div.grassblade_field_group_fields {
+		border: 1px solid #eee;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	    display: block;
+	    margin: 10px 0;
+	    padding: 10px;
+	}
+	.grassblade_field_group_label .dashicons-arrow-right-alt2:before { 
+		content: "\f345";
+		display: inline-block;
+		color: #85ab3d;
+		-webkit-font-smoothing: antialiased;
+	}
+	.grassblade_field_group_label .dashicons-arrow-down-alt2:before { 
+		content: "\f347";
+		display: inline-block;
+		color: #85ab3d;
+		-webkit-font-smoothing: antialiased;
+	}
+	.grassblade_field_group_label span {
+		margin-left: 5px;
+	}

@@ -1,0 +1,51 @@
+.okm-key-activation {
+  margin: 40px 0;
+}
+.okm-key-activation ul.confirmations {
+  width: 100%;
+}
+.okm-key-activation ul.confirmations li {
+  width: 100%;
+  text-align: center;
+}
+#okm-key {
+  max-width: 160px;
+  margin-left: 20px;
+  background: #fff !important;
+  border: 2px solid #ee9 !important;
+}
+
+img.load { display: none; width: 200px; }	
+
+.dashicons { height: 30px; }
+.dashicons-no  { font-size: 40px !important; color: red; }
+.dashicons-yes { font-size: 40px !important; color: green; }
+
+.message { 
+  margin-left: 20px; 
+  font-size: 21px;
+}
+
+.success { 
+  color: green; 
+  border-width: 2px;
+  border-color: green; 
+  font-weight: bold;
+}
+
+.error { 
+  color: red; 
+  border-width: 2px;
+  border-color: red; 
+  font-weight: bold;
+}
+
+.confirmations { 
+  display: inline-block;
+  margin-left: 10px !important; margin-bottom: 0 !important;
+  list-style: none;
+  }
+  .confirmations li {
+    float: left;
+    list-style-type: none !important;
+  } 

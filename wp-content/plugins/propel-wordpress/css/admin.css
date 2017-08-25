@@ -1,0 +1,96 @@
+#message { display:none;}
+div.error { display:none;}
+#screen-options-link-wrap { /*display: none;*/}
+.tab-content {
+   text-align: center;
+   margin: 0 auto;
+}
+.tab-content div {
+   display: inline-block;
+   width: auto;
+   vertical-align: top;
+}
+div.highcharts-container {
+   display:inline-block;
+   margin: 10px;
+   border: 1px solid #ccc;
+}
+.chart-header {
+   padding: 5px 0 0 10px;
+}
+.main-report {
+   margin-right: 15px;
+   background-color: white;
+   outline: 1px solid #ccc;
+   position: relative;
+   min-height: 330px;
+}
+div.DateRangeSelector {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+}
+.DateRangeSelector-item > input {
+   width: 160px;
+   font-size: 0.9em;
+   height: 25px;
+}
+.DateRangeSelector-item > label {
+   width: 100px;
+   text-align: right;
+   margin-right: 5px;
+   font-weight: 700;
+   display: inline-block;
+}
+.chart-title {
+   margin: 2px 0;
+   font-size: 1.15em;
+   font-weight: bold;
+}
+#loading {
+   font-size: 1.25em;
+   color: #999;
+   font-weight: 700;
+   text-align: center;
+   margin-top: 12%;
+}
+div.separator {
+   border-top: 1px solid #ccc;
+}
+div.chart-box {
+   display: inline-block;
+   margin-left: 25px;
+}
+div.chart-box.left {
+   border-left: 1px solid #ccc;
+}
+div.chart-report-wrap {
+   border: 1px solid #ccc;
+   margin: 5px;
+}
+h4.chart-lbl {
+    text-transform: capitalize;
+}
+#traffic-org {
+   margin: 10px 20px;
+}
+div.traffic-charts {
+   margin:0 auto;
+   text-align: center;
+}
+div.traffic-pie {
+   display: inline-block;
+}
+#active-users {
+   margin: 4px 10px;
+   border-top: 1px solid #ccc;
+   padding: 5px 0;
+   display: inline-block;
+}
+#no-cfg {
+   text-align: center;
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #888;
+   padding-top: 10%;
+}

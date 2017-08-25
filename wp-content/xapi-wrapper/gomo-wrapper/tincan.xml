@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tincan xmlns="http://projecttincan.com/tincan.xsd">
+	<activities>
+		<activity id="http://propel.scitent.us/gomo-no-special-tracking" type="http://adlnet.gov/expapi/activities/course">
+			<name>Gomo no Special tracking</name>
+			<description lang="en-US">Gomo no Special tracking</description>
+			<launch lang="en-us">scormdriver/indexAPI.html</launch>
+		</activity>
+	</activities>
+</tincan>

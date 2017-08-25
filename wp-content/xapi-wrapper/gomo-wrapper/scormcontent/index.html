@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test project</title>
+  <style type="text/css">
+    .wrap {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      top: 0;
+      height: 100%;
+    }
+    .wrap iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="porthole.min.js"></script>
+  <script src="//socialmediatoday.gomocentral.com/content/p5075_554382e393cb4/web/lmsshell.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <iframe id="gomo-content-frame" name="gomo-content-frame" src="about:blank"
+        allowfullscreen mozallowfullscreen webkitallowfullscreen ></iframe>
+  </div>
+  <script type="text/javascript">
+  function SetSCOComplete()
+  {
+    var SD = window.parent;
+    //This is the last page so set it complete
+    SD.SetReachedEnd();
+    SD.CommitData();
+  }
+  function SetBookmark(gomo) {
+    var SD = window.parent,
+        loc = window.location.href
+    ;
+
+    SD.SetBookmark(
+        loc.substring(loc.toLowerCase().lastIndexOf("/scormcontent/") + 14, loc.length),
+        gomo.pageTitle
+    );
+    SD.CommitData();
+  }
+  pipwerks.SCORM.set = function(c,b) {
+    console.log(["SCORM set called",c,b]);
+    if (c == 'status' && b == 'completed'){
+      SetSCOComplete();
+    }
+    if (c == 'location'){
+      console.log("Location tracking");
+      SetBookmark(JSON.parse(b));
+    }
+  }
+  // pipwerks.SCORM.quit = function() {
+  //   console.log([">> quit called"]);
+  //   return true;
+  // }
+  </script>
+</body>
+
+</html>

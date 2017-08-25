@@ -1,0 +1,147 @@
+/*this file holds the CSS for the OKG specific pages*/
+
+/* OKG GENERAL HEADER */
+
+.propel-org-name-header {
+	background-color: #F2F2F2;
+	font-size: medium;
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+	text-transform: none;
+	width: 100%;
+}
+.propel-org-name-header::before {
+	content: '->>| ';
+}
+.propel-org-name-header::after {
+	content: ' |<<-';
+}
+
+/* MANAGE OKMS */
+
+.propel-manage.propel-title {
+    display: inline;
+    float: left;
+    width: 55%;	
+}
+.propel-grid {
+	width: 100%;
+	float: left;
+	clear: both;
+/*	border: 1px solid black; FOR DEV */
+}
+.propel-grid-header {
+	font-weight: bold;
+/*	border: 1px solid black; FOR DEV */
+}
+.propel-grid-body {
+	width: 100%;
+	display: block;
+	float: left;
+	clear: both;
+}
+.propel-grid-row {
+	width: 100%;
+	float: left;
+	clear: both;
+	display: block;
+/*	border: 1px solid #F00;	 FOR DEV */
+}
+.propel-grid-cell {
+	width: 10%;
+	min-width: 140px;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 4px;
+/*	border: 1px solid black;  FOR DEV */
+}
+.propel-grid-row .propel-grid-cell {
+	border-top: 1px solid #DDD;	
+}
+.propel-grid-name-spot {
+	width: 40%;
+}
+
+.propel-new-okm-button {
+	float: left;
+	margin: 15px;
+}
+
+/* CREATE / MODIFY OKMS */
+form {
+	width: 460px;
+}
+.woocommerce form {
+	width: auto;
+}
+.propel-okm-header-name {
+	font-style: italic;
+	text-transform: none;
+}
+.propel-new-okm label {
+	display: none;
+	font-size: 12px;
+}
+input {
+	border: 1px solid rgb(221, 221, 221);
+	border-radius: 3px;
+	box-shadow: rgb(238, 238, 238) 0px -1px 4px 0px inset;
+	box-sizing: border-box;
+	cursor: auto;
+	display: inline-block;
+	height: 30px;
+	font-family: Arial;
+	color: rgb(51, 51, 51);
+	padding: 2px;
+	margin-bottom: 8px;
+}
+.propel-form-br {
+	display: none;
+}
+.propel-label {
+	float: left;
+	clear: both;
+}
+.propel-editing-button {
+	float: right;
+	height: 22px;
+	font-size: 12px;
+	line-height: 1;
+	cursor: pointer;
+}
+.propel-editing-input {
+	clear: both;
+	float: left;
+	width: 80% !important;
+}
+
+/* CREATE KEYS */
+.propel-globalcartbtn {
+	float: right;
+	margin: 5px;
+}
+.propel-globalcartbtn[data-active="no"], .propel-editing-button[data-active="no"] {
+	background-color: #999999 !important;
+    color: #CCC;
+    cursor: not-allowed;
+    font-size: 14px;
+    margin-bottom: 20px !important;
+    border-radius: 0 !important;
+    border: none;
+    padding: 6px 10px;
+    text-transform: uppercase !important;
+    text-decoration: none;
+}
+.propel-globalcartbtn[data-active="yes"], .propel-editing-button[data-active="yes"]  {
+	background-color: #00669E !important;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px !important;
+    border-radius: 0 !important;
+    border: none;
+    padding: 6px 10px;
+    text-transform: uppercase !important;
+    text-decoration: none;
+}

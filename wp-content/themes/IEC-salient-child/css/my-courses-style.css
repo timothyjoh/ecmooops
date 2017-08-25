@@ -1,0 +1,158 @@
+/********************   MY COURSES STYLES  **************************/
+/****************************************************************************************/
+/*NEW*/
+
+.OoopsNotice{
+  text-align: center;
+  background-color: #fea;
+  border-radius: 20px;
+  padding:30px;
+  font-size: 1.2em;
+}
+.OoopsNotice a:hover{
+  color: #002A41;
+}
+/*LAYOUT*/
+
+.ld_course_grid {
+    width: 100%;
+    min-height:100px;
+    max-height:100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  padding-left: 0;
+    /*background-color:#ddd;*/
+}
+.ld_course_grid div.infoSection{
+  float: left;
+  width:65%;
+  margin-right: 10px;
+  /*border-right: 1px solid #aaa;*/
+  height: 100px;
+}
+.ld_course_grid .btnWrapper{
+  float:right;
+  padding-top: 8px;
+}
+.myCoursesHR{
+  border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    float: none;
+    clear:both;
+}
+
+.if_topic_completed {
+  display: none;
+}
+
+/*BUTTONS*/
+
+.ld_course_grid .caption{
+  float:right;
+  margin-right: 10px;
+}
+.ld_course_grid .claimer-embed{
+  padding: 0 !important;
+}
+.ld_course_grid .btnWrapper .caption .courseBtn, a.grassblade_launch_link{
+  width: 205px !important;
+  margin: 0 5px 5px !important;
+  display: block;
+  text-align: center;
+  border: 1px solid;
+}
+a.grassblade_launch_link {
+  color: #fff;
+  background: #00669E;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+a.grassblade_launch_link:hover {
+  background-color:#002a41;
+  color:#f5bc47;
+}
+
+.ld_course_grid .claimer-embed button{
+  /*float:right;*/
+  top: -10px !important;
+  text-transform: uppercase;
+  background-color: #002a41;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 205px;
+  text-align: left;
+  margin-left:5px;
+}
+.ld_course_grid .claimer-embed button:hover{
+  background-color:#002a41;
+  color:#f5bc47;
+}
+.wpProQuiz_button, .wpProQuiz_button:hover {
+  margin: 0 !important;
+  padding: 5px 10px !important;
+  border-radius: 1px !important;
+}
+
+/*IMAGE*/
+.ld_course_grid .thumbnail.course img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.ld_course_grid .CourseGridImage{
+  height:100px;
+  width:100px;
+  float:left;
+  margin-right: 15px;
+  background-position: top right;
+  background-color: #999;
+  background-size: cover;
+}
+/*TITLES*/
+.ld_course_grid h3,
+.ld_course_grid h3.entry-title {
+  font-size: 17px !important;
+  line-height: 22px;
+  min-height: 3.3em;
+  margin-bottom: 14px;
+}
+
+.ld_course_grid a:link h3 {
+  color: #263746;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+.ld_course_grid a:hover h3 {
+  color: #00669e;
+  text-decoration: underline;
+}
+
+/*PROGRESS*/
+
+.ld_course_grid .progressWrapper{
+  float:left;
+  width:100%;
+}
+.ld_course_grid .percentCompleteLable{
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.ld_course_grid dd.course_progress{
+    position: relative;
+    top: unset;
+    width: 100%;
+  height: 25px !important;
+  margin: 0 !important;
+  background-color: #c6c6c6 !important;
+}
+
+/*Certificate Modal*/
+.page-id-17 .claimer-bootstrap-styles .modal{
+  /*NOTE: all my-courses pages cloned form CleanStart should have a class .page-id-17 as default*/
+  postition:relative !important;
+}

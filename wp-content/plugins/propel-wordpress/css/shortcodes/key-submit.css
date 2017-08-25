@@ -1,0 +1,6 @@
+input#activate_key {
+  margin: 10px 20px;
+  }
+  input#activate_key:disabled {
+    opacity: .5;
+  }

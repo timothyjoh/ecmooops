@@ -1,0 +1,27 @@
+label.autocomplete-label {
+   font-weight: bold;
+   display: block;
+   margin: 20px 0 2px 0;
+}
+#user-emails{
+   width:285px;
+   margin-bottom: 20px;
+}
+#working {
+	background-color: rgba(1,1,1,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+#work-spinner-box {
+	margin: 15% auto;
+    width: 200px;
+    background-color: #dedede;
+    text-align: center;
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+}

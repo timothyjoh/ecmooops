@@ -1,0 +1,353 @@
+/*
+Theme Name: IEC - Child of Salient
+Theme URI: http: //mysite.com/
+Description: Salient Child Theme for IEC
+Author: SDiamond for Scitent
+Author URI: http: //mysite.com/
+Template: salient
+Version: 0.1
+*/
+/******************************************************************************************/
+/*
+
+Color Palette:
+BLUE   primary: #0077C8;
+  dark: #004471;
+  med: #0066A9;
+  light: #4199D6;
+
+ORANGE  primary: #AD441D;
+  dark: #903800;
+  med: #B94700;
+  light: #DD6D25;
+
+GRAY  primary: #55565A;
+  dark: #282828;
+  med: #46474A;
+  light: #9A9A9A;
+
+
+FONTS:
+  Headers = Josefin Sans
+  Body = Roboto 16px
+
+*/
+/*
+TABLE OF CONTENTS:
+1-resets
+2-universals
+3-Links & Buttons
+4-Header
+5-Menus
+6-Footer
+7-Individual Pages
+x-Media Queries
+*/
+
+/******************************************************************************************/
+/**1-resets**/
+
+.screen-reader-text{
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/**2-universals***************************************************************************/
+
+.clearboth{
+  clear:both;
+  height:0;
+}
+.nomargin{
+  margin: 0 !important;
+}
+.hideme{
+  display:none !important;
+  height: 0 !important;
+}
+body,
+p{
+  color: #282828;
+}
+
+h2{
+  color: #0077C8;
+}
+h3, h5{
+  color: #AD441D;
+}
+h4, h6{
+  color: #282828;
+}
+h1, 
+body #page-header-bg h1{
+  color: #ffffff;
+}
+body #page-header-bg h1{
+  padding-top:10px;
+}
+
+/**3-Links & Buttons**********************************************************************/
+a:not(.button)
+a:not(.nectar-button){
+  color:#B94700 !important;
+  text-decoration: none;
+}
+a:not(.button):hover,
+a:not(.button):focus{
+  color:#B94700;
+  text-decoration: underline;
+}
+a.blueLink
+{
+  color:#0077C8 !important;
+  text-decoration: none;
+}
+a.blueLink:hover,
+a.blueLink:focus{
+  color:#0077C8;
+  text-decoration: underline;
+}
+.nectar-button.large span {
+    color: #fff;
+}
+.nectar-button.large:hover span {
+    color: #0077C8;
+}
+
+
+body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"], 
+body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"],
+.ascend .container-wrap .container input[type="submit"],
+.ascend .container-wrap .container button[type="submit"],
+.login-submit .ascend input[type="submit"],
+button,
+a.button,
+#ld_course_list .btn-primary,
+#ld_course_list .btn,
+.nectar-button.regular.regular-button,
+body[data-button-style="rounded"] .nectar-button {
+  display: inline-block;
+  transition: all 1s !important;
+  text-transform: uppercase !important;
+  padding: .7em !important;
+  border-radius: 8px !important;
+  font-family: Roboto;
+  font-size: 18px;
+  text-align: center;
+  line-height: 21px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-decoration: none;
+  color:#fff;
+}
+.nectar-button.regular.regular-button.has-icon{
+  padding: .7em 2em !important;
+  border-radius: 8px !important;
+  text-decoration: none;
+
+}
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+a.button:hover,
+a.button:focus,
+#ld_course_list .btn-primary:hover,
+#ld_course_list .btn-primary:focus,
+#ld_course_list .btn:hover,
+#ld_course_list .btn:focus{
+  background-color: transparent;
+  color: #B94700;  
+  text-decoration: none;  
+}
+body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"], 
+body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"],
+.ascend .container-wrap .container input[type="submit"],
+.ascend .container-wrap .container button[type="submit"],
+.button:not(.blueButton):not(.whiteButton),
+.login-submit .ascend input[type="submit"]
+{
+/* ORANGE BUTTON  = default*/  
+  border: 1px solid #903800;
+  background-color: #B94700;
+  color: #fff;
+}
+body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:hover, 
+body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:focus, 
+body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"]:hover,
+body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"]:focus,
+.ascend .container-wrap input[type="submit"]:hover,
+.ascend .container-wrap input[type="submit"]:focus,
+.ascend .container-wrap button[type="submit"]:hover,
+.ascend .container-wrap button[type="submit"]:focus,
+.button:not(.blueButton):hover,
+.button:not(.whiteButton):hover,
+.button:not(.blueButton):focus,
+.button:not(.whiteButton):focus,
+.login-submit .ascend input[type="submit"]:hover,
+.login-submit .ascend input[type="submit"]:focus
+{
+  background-color: transparent;
+  color: #B94700;
+}
+
+.blueButton,
+.nectar-button.regular.regular-button {
+  background-color: #0077C8 !important;
+  border: 1px solid #0065A9;
+  color: #fff;
+
+}
+.blueButton:hover, 
+.blueButton:focus,
+.nectar-button.regular.regular-button:hover,
+.nectar-button.regular.regular-button:focus {
+  background-color: transparent !important;
+  color: #0077C8 !important;
+}
+.whiteButton {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #b94700 !important;
+}
+.whiteButton:hover,
+.whiteButton:focus {
+  background-color: transparent;
+  color: #fff !important;
+}
+.smallButton{
+  max-height: 3em;
+  line-height: 1.5 !important;
+  padding: .7em 1.5em !important;
+}
+/**4-Header*******************************************************************************/
+#header-secondary-outer{
+  background-color: #282828;
+  color: #fff;
+}
+#header-secondary-outer nav > ul > li > a {
+  color: #fff;
+}
+#header-secondary-outer nav > ul > li > a:hover,
+#header-secondary-outer nav > ul > li > a:focus {
+  text-decoration: underline;
+  color: #fff;
+}
+#header-secondary-outer nav > ul > li > a > i {
+  color: #2E8FD2;
+}
+#header-secondary-outer nav > ul > li > a:hover i,
+#header-secondary-outer nav > ul > li > a:focus i,
+#header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a:hover,
+#header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a:focus{
+  text-decoration: none;
+}
+/**5-Menus********************************************************************************/
+/**6-Footer*******************************************************************************/
+#footer-outer .row {
+  padding: 30px 0px;
+}
+#footer-widgets{
+  text-transform: uppercase;
+}
+#footer-widgets > .container > .row > div:nth-child(1){
+  text-align: left;
+}
+#footer-widgets > .container > .row > div:nth-child(2){
+  text-align: center;
+}
+#footer-widgets > .container > .row > div:nth-child(3){
+  text-align: right;
+}
+#footer-outer #footer-widgets p{
+  color:#fff;
+}
+#footer-outer #footer-widgets a,
+#footer-outer #footer-widgets a:not(.button){
+  color:#0077C8 !important;
+  text-decoration: none;
+}
+#footer-outer #footer-widgets a:not(.button):hover,
+#footer-outer #footer-widgets a:not(.button):focus{
+  color:#0077C8;
+  text-decoration: underline;
+}
+/**7-Individual Pages*********************************************************************/
+/* HOME */
+/* Course Catalog */
+/* FAQ */
+
+ /*checkout*/
+#customer_details > div.col-1 > div.woocommerce-shipping-fields > h3{
+  display:none;
+}
+/*REGISTER*/
+#wpum-register-default_registration_form .field{
+  float:none;
+}
+#wpum-register-default_registration_form .propel-form-icon {
+  left: -40px;
+}
+#wpum-register-default_registration_form .propel-form-icon i {
+  top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* order history */
+/* cloned from cleanstart, order-history body class="page-id-70" */
+.page-id-70 .woocommerce .address .edit{
+    display: none;
+}
+/*thankyou.php*/
+#checkoutthankyouCta{
+  display:block;
+  padding:10px;
+  background-color: #d9ebf7;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+#checkoutthankyouCta a{
+  margin-left: 5px;
+}
+/*inside courses*/
+.container .row div.return-to-course{
+  float: none;
+  width: 100%;
+  text-align: right;
+  line-height: 0;
+  margin: 20px;
+}
+/* MY COURSES */
+
+
+.ld_course_grid dd.course_progress div.course_progress_blue {
+  /* color for completed portion of progress bar*/
+    background-color: #7A9B49 !important;
+}
+/**x-Media Queries************************************************************************/
+@media screen and (max-width: 477px){
+  .hideonmobile{
+    display:none;
+  }
+}
+@media screen and (max-width: 1000px){
+  #footer-widgets > .container > .row > div:nth-child(1),
+  #footer-widgets > .container > .row > div:nth-child(2),
+  #footer-widgets > .container > .row > div:nth-child(3){
+    text-align: center;
+  }
+}
