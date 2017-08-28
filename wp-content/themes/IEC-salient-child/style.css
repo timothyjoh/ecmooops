@@ -206,12 +206,19 @@ a.button:focus,
   padding: .7em 1.5em !important;
 }
 /**4-Header*******************************************************************************/
+#header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a {
+    font-size: 18px !important;
+    text-transform: uppercase;
+	letter-spacing: 1px;}
+	
 #header-secondary-outer{
   background-color: #282828;
   color: #fff;
 }
+
 #header-secondary-outer nav > ul > li > a {
-  color: #fff;
+    color: #fff;
+    font-size: 16px !important;
 }
 #header-secondary-outer nav > ul > li > a:hover,
 #header-secondary-outer nav > ul > li > a:focus {
