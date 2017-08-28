@@ -24,8 +24,6 @@ class ITSEC_File_Change {
 	 */
 	function run() {
 
-		global $itsec_globals;
-
 		$settings = ITSEC_Modules::get_settings( 'file-change' );
 		$interval = 86400; //Run daily
 
@@ -38,13 +36,13 @@ class ITSEC_File_Change {
 
 		add_filter( 'itsec_logger_displays', array( $this, 'itsec_logger_displays' ) ); //adds logs metaboxes
 		add_filter( 'itsec_logger_modules', array( $this, 'itsec_logger_modules' ) );
-		add_filter( 'itsec_sync_modules', array( $this, 'itsec_sync_modules' ) ); //register sync modules
+		add_action( 'ithemes_sync_register_verbs', array( $this, 'register_sync_verbs' ) );
 
 
 		if (
 			( ! defined( 'DOING_AJAX' ) || DOING_AJAX === false ) &&
 			isset( $settings['last_run'] ) &&
-			( $itsec_globals['current_time'] - $interval ) > $settings['last_run'] &&
+			( ITSEC_Core::get_current_time() - $interval ) > $settings['last_run'] &&
 			( ! defined( 'ITSEC_FILE_CHECK_CRON' ) || false === ITSEC_FILE_CHECK_CRON )
 		) {
 
@@ -58,10 +56,10 @@ class ITSEC_File_Change {
 		}
 
 	}
-	
+
 	public function run_scan() {
 		require_once( dirname( __FILE__ ) . '/scanner.php' );
-		
+
 		return ITSEC_File_Change_Scanner::run_scan();
 	}
 
@@ -122,8 +120,6 @@ class ITSEC_File_Change {
 	 */
 	public function logs_metabox_content() {
 
-		global $itsec_globals;
-
 		if ( ! class_exists( 'ITSEC_File_Change_Log' ) ) {
 			require( dirname( __FILE__ ) . '/class-itsec-file-change-log.php' );
 		}
@@ -145,7 +141,7 @@ class ITSEC_File_Change {
 
 		$next_run_raw = $settings['last_run'] + $interval;
 
-		if ( date( 'j', $next_run_raw ) == date( 'j', $itsec_globals['current_time'] ) ) {
+		if ( date( 'j', $next_run_raw ) == date( 'j', ITSEC_Core::get_current_time() ) ) {
 			$next_run_day = __( 'Today', 'better-wp-security' );
 		} else {
 			$next_run_day = __( 'Tomorrow', 'better-wp-security' );
@@ -164,27 +160,13 @@ class ITSEC_File_Change {
 	}
 
 	/**
-	 * Register file change detection for Sync
+	 * Register verbs for Sync.
 	 *
-	 * Reigsters iThemes Sync verbs for the file change detection module.
+	 * @since 3.6.0
 	 *
-	 * @since 4.0.0
-	 *
-	 * @param  array $sync_modules array of sync modules
-	 *
-	 * @return array array of sync modules
+	 * @param Ithemes_Sync_API $api Sync API object.
 	 */
-	public function itsec_sync_modules( $sync_modules ) {
-
-		$sync_modules['file-change'] = array(
-			'verbs' => array(
-				'itsec-perform-file-scan' => 'Ithemes_Sync_Verb_ITSEC_Perform_File_Scan',
-			),
-			'path'  => dirname( __FILE__ ),
-		);
-
-		return $sync_modules;
-
+	public function register_sync_verbs( $api ) {
+		$api->register( 'itsec-perform-file-scan', 'Ithemes_Sync_Verb_ITSEC_Perform_File_Scan', dirname( __FILE__ ) . '/sync-verbs/itsec-perform-file-scan.php' );
 	}
-
 }

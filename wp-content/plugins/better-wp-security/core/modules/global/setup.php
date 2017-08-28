@@ -45,6 +45,26 @@ if ( ! class_exists( 'ITSEC_Global_Setup' ) ) {
 		 * @return void
 		 */
 		public function execute_upgrade( $itsec_old_version ) {
+			if ( $itsec_old_version < 4040 ) {
+				$options = get_site_option( 'itsec_global' );
+
+				if ( $options['log_info'] ) {
+					$new_log_info = substr( sanitize_title( get_bloginfo( 'name' ) ), 0, 20 ) . '-' . wp_generate_password( 30, false );
+					$old_file = path_join( $options['log_location'], 'event-log-' . $options['log_info'] . '.log' );
+					$new_file = path_join( $options['log_location'], 'event-log-' . $new_log_info . '.log' );
+
+					// If the file exists already, don't update the location unless we successfully move it.
+					if ( file_exists( $old_file ) && rename( $old_file, $new_file ) ) {
+						$options['log_info'] = $new_log_info;
+						update_site_option( 'itsec_global', $options );
+					}
+				}
+
+				// Make sure we have an index files to block directory listing in logs directory
+				if ( is_dir( $options['log_location'] ) && ! file_exists( path_join( $options['log_location'], 'index.php' ) ) ) {
+					file_put_contents( path_join( $options['log_location'], 'index.php' ), "<?php\n// Silence is golden." );
+				}
+			}
 
 			if ( $itsec_old_version < 4041 ) {
 				$current_options = get_site_option( 'itsec_global' );
@@ -83,6 +103,25 @@ if ( ! class_exists( 'ITSEC_Global_Setup' ) ) {
 				}
 			}
 
+			if ( $itsec_old_version < 4059 ) {
+				$message_queue = get_site_option( 'itsec_message_queue' );
+
+				if ( false !== $message_queue ) {
+					if ( isset( $message_queue['last_sent'] ) ) {
+						ITSEC_Modules::set_setting( 'global', 'digest_last_sent', $message_queue['last_sent'] );
+					}
+
+					if ( isset( $message_queue['messages'] ) ) {
+						ITSEC_Modules::set_setting( 'global', 'digest_messages', $message_queue['messages'] );
+					}
+
+					delete_site_option( 'itsec_message_queue' );
+				}
+			}
+
+			if ( $itsec_old_version < 4064 ) {
+				delete_site_option( 'itsec_global' );
+			}
 		}
 
 	}

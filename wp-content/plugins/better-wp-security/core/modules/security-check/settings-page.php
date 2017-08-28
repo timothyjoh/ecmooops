@@ -1,7 +1,7 @@
 <?php
 
 final class ITSEC_Security_Check_Settings_Page extends ITSEC_Module_Settings_Page {
-	private $script_version = 1;
+	private $script_version = 3;
 
 
 	public function __construct() {
@@ -17,9 +17,8 @@ final class ITSEC_Security_Check_Settings_Page extends ITSEC_Module_Settings_Pag
 
 	public function enqueue_scripts_and_styles() {
 		$vars = array(
-			'securing_site'                  => __( 'Securing Site...', 'better-wp-security' ),
-			'rerun_secure_site'              => __( 'Run Secure Site Again', 'better-wp-security' ),
-			'activating_network_brute_force' => __( 'Activating Network Brute Force Protection...', 'better-wp-security' ),
+			'securing_site'     => __( 'Securing Site...', 'better-wp-security' ),
+			'rerun_secure_site' => __( 'Run Secure Site Again', 'better-wp-security' ),
 		);
 
 		wp_enqueue_script( 'itsec-security-check-settings-script', plugins_url( 'js/settings-page.js', __FILE__ ), array( 'jquery' ), $this->script_version, true );
@@ -29,37 +28,28 @@ final class ITSEC_Security_Check_Settings_Page extends ITSEC_Module_Settings_Pag
 	public function handle_ajax_request( $data ) {
 		if ( 'secure-site' === $data['method'] ) {
 			require_once( dirname( __FILE__ ) . '/scanner.php' );
+			require_once( dirname( __FILE__ ) . '/feedback-renderer.php' );
 
-			ITSEC_Security_Check_Scanner::run();
+			$results = ITSEC_Security_Check_Scanner::get_results();
+
+			ob_start();
+			ITSEC_Security_Check_Feedback_Renderer::render( $results );
+			ITSEC_Response::set_response( ob_get_clean() );
 		} else if ( 'activate-network-brute-force' === $data['method'] ) {
 			require_once( dirname( __FILE__ ) . '/scanner.php' );
 
-			ITSEC_Security_Check_Scanner::activate_network_brute_force();
+			ITSEC_Security_Check_Scanner::activate_network_brute_force( $_POST['data'] );
+		} else {
+			do_action( "itsec-security-check-{$data['method']}", $_POST['data'] );
 		}
 	}
 
 	protected function render_description( $form ) {}
 
 	protected function render_settings( $form ) {
-		$available_modules = ITSEC_Modules::get_available_modules();
+		require_once( dirname( __FILE__ ) . '/scanner.php' );
 
-		$modules_to_activate = array(
-			'ban-users'           => __( 'Banned Users', 'better-wp-security' ),
-			'backup'              => __( 'Database Backups', 'better-wp-security' ),
-			'brute-force'         => __( 'Local Brute Force Protection', 'better-wp-security' ),
-			'malware-scheduling'  => __( 'Malware Scan Scheduling', 'better-wp-security' ),
-			'network-brute-force' => __( 'Network Brute Force Protection', 'better-wp-security' ),
-			'strong-passwords'    => __( 'Strong Passwords', 'better-wp-security' ),
-			'two-factor'          => __( 'Two-Factor Authentication', 'better-wp-security' ),
-			'user-logging'        => __( 'User Logging', 'better-wp-security' ),
-			'wordpress-tweaks'    => __( 'WordPress Tweaks', 'better-wp-security' ),
-		);
-
-		foreach ( $modules_to_activate as $module => $val ) {
-			if ( ! in_array( $module, $available_modules ) ) {
-				unset( $modules_to_activate[$module] );
-			}
-		}
+		$modules_to_activate = ITSEC_Security_Check_Scanner::get_supported_modules();
 
 ?>
 	<div id="itsec-security-check-details-container">

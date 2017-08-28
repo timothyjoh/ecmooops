@@ -6,8 +6,6 @@ final class ITSEC_Global_Settings_New extends ITSEC_Settings {
 	}
 
 	public function get_defaults() {
-		global $itsec_globals;
-
 		$email = get_option( 'admin_email' );
 
 		return array(
@@ -38,19 +36,14 @@ final class ITSEC_Global_Settings_New extends ITSEC_Settings {
 			'show_error_codes'          => false,
 			'show_new_dashboard_notice' => true,
 			'show_security_check'       => true,
+			'digest_last_sent'          => 0,
+			'digest_messages'           => array(),
+			'build'                     => 0,
+			'activation_timestamp'      => 0,
 		);
 	}
 
 	protected function handle_settings_changes( $old_settings ) {
-		if ( $this->settings['digest_email'] && ! $old_settings['digest_email'] ) {
-			$digest_queue = array(
-				'last_sent' => ITSEC_Core::get_current_time_gmt(),
-				'messages'  => array(),
-			);
-
-			update_site_option( 'itsec_message_queue', $digest_queue );
-		}
-
 		if ( $this->settings['write_files'] && ! $old_settings['write_files'] ) {
 			ITSEC_Response::regenerate_server_config();
 			ITSEC_Response::regenerate_wp_config();

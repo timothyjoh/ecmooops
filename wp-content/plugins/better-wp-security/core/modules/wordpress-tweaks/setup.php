@@ -132,6 +132,15 @@ if ( ! class_exists( 'ITSEC_WordPress_Tweaks_Setup' ) ) {
 					ITSEC_Modules::set_settings( 'wordpress-tweaks', $settings );
 				}
 			}
+
+			if ( $itsec_old_version < 4073 ) {
+				$settings = ITSEC_Modules::get_settings( 'wordpress-tweaks' );
+
+				unset( $settings['safe_jquery'] );
+				unset( $settings['jquery_version'] );
+
+				ITSEC_Modules::set_settings( 'wordpress-tweaks', $settings );
+			}
 		}
 
 	}

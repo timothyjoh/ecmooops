@@ -20,16 +20,14 @@ if ( ! class_exists( 'ITSEC_Backup_Setup' ) ) {
 		 *
 		 * @return void
 		 */
-		public function execute_activate() {
-		}
+		public function execute_activate() {}
 
 		/**
 		 * Execute module deactivation
 		 *
 		 * @return void
 		 */
-		public function execute_deactivate() {
-		}
+		public function execute_deactivate() {}
 
 		/**
 		 * Execute module uninstall
@@ -49,9 +47,9 @@ if ( ! class_exists( 'ITSEC_Backup_Setup' ) ) {
 		 *
 		 * @return void
 		 */
-		public function execute_upgrade( $itsec_old_version ) {
+		public function execute_upgrade( $build ) {
 
-			if ( $itsec_old_version < 4000 ) {
+			if ( $build < 4000 ) {
 
 				global $itsec_bwps_options;
 
@@ -70,7 +68,15 @@ if ( ! class_exists( 'ITSEC_Backup_Setup' ) ) {
 
 			}
 
-			if ( $itsec_old_version < 4041 ) {
+			if ( $build < 4040 ) {
+				$backup_options = get_site_option( 'itsec_backup' );
+				// Make sure we have an index files to block directory listing in backups directory
+				if ( is_dir( $backup_options['location'] ) && ! file_exists( path_join( $backup_options['location'], 'index.php' ) ) ) {
+					file_put_contents( path_join( $backup_options['location'], 'index.php' ), "<?php\n// Silence is golden." );
+				}
+			}
+
+			if ( $build < 4041 ) {
 				$current_options = get_site_option( 'itsec_backup' );
 
 				// If there are no current options, go with the new defaults by not saving anything
@@ -98,6 +104,9 @@ if ( ! class_exists( 'ITSEC_Backup_Setup' ) ) {
 				}
 			}
 
+			if ( $build < 4069 ) {
+				delete_site_option( 'itsec_backup' );
+			}
 		}
 
 	}

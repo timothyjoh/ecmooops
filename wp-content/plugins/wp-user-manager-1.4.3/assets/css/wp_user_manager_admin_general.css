@@ -1,0 +1,151 @@
+/**
+ * WP User Manager
+ * http://wp-user-manager.com
+ *
+ * Copyright (c) 2015 Alessandro Tesoro
+ * Licensed under the GPLv2+ license.
+ */
+@font-face {
+  font-family: 'wpusermanager';
+  src: url("../../includes/admin/tinymce/css/fonts/wpusermanager.eot?yn0seh");
+  src: url("../../includes/admin/tinymce/css/fonts/wpusermanager.eot?#iefixyn0seh") format("embedded-opentype"), url("../../includes/admin/tinymce/css/fonts/wpusermanager.woff?yn0seh") format("woff"), url("../../includes/admin/tinymce/css/fonts/wpusermanager.ttf?yn0seh") format("truetype"), url("../../includes/admin/tinymce/css/fonts/wpusermanager.svg?yn0seh#wpusermanager") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'wpusermanager';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-wpusermanager:before {
+  content: "\e600"; }
+
+i.wpum-shortcodes-icon:before {
+  font-family: 'wpusermanager';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  content: '\e600'; }
+
+body .mce-window .mce-container-body.mce-abs-layout {
+  overflow-y: hidden; }
+
+td.page-title span.post-state i.wpum-shortcodes-icon:before {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ADADAD;
+  font-style: normal; }
+
+#widgets-right .widgets-holder-wrap .description {
+  padding-left: 0; }
+
+.wpum-addons {
+  padding: 3px 6px;
+  border-radius: 2px;
+  color: #0073aa;
+  background: #e0e0e0;
+  border-radius: 3px;
+  font-weight: bold; }
+
+body.wpum_addons_page .search-plugins,
+body.wpum_addons_page .add-new-h2 {
+  display: none !important; }
+body.wpum_addons_page li.plugin-install-featured, body.wpum_addons_page li.plugin-install-popular, body.wpum_addons_page li.plugin-install-recommended, body.wpum_addons_page li.plugin-install-favorites {
+  display: none !important; }
+body.wpum_addons_page h2 {
+  margin: 0 0 15px; }
+  body.wpum_addons_page h2 .button-primary {
+    position: absolute; }
+body.wpum_addons_page .wpum-extension {
+  float: left;
+  margin: 0 15px 15px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 320px;
+  padding: 14px;
+  height: 340px;
+  position: relative; }
+  body.wpum_addons_page .wpum-extension h3 {
+    margin: 0 0 8px;
+    font-size: 18px; }
+  body.wpum_addons_page .wpum-extension .wp-post-image {
+    width: 100%;
+    height: auto; }
+
+.spinner.wpum-admin-widget {
+  float: none; }
+
+#wpum_dashboard_users .spinner {
+  margin: 10px; }
+#wpum_dashboard_users .inside {
+  margin: 0;
+  padding: 0; }
+#wpum_dashboard_users .wpum_dashboard_widget {
+  text-align: center; }
+#wpum_dashboard_users ul {
+  overflow: hidden;
+  margin: 0; }
+  #wpum_dashboard_users ul li {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    border-top: 1px solid #ececec;
+    color: #aaa;
+    display: block;
+    color: #aaa;
+    padding: 9px 12px;
+    -webkit-transition: all ease .5s;
+    position: relative;
+    font-size: 12px; }
+    #wpum_dashboard_users ul li strong {
+      font-size: 18px;
+      line-height: 1.2em;
+      font-weight: 400;
+      display: block;
+      color: #21759b; }
+    #wpum_dashboard_users ul li:hover {
+      color: #2ea2cc; }
+      #wpum_dashboard_users ul li:hover:before {
+        color: #2ea2cc !important; }
+      #wpum_dashboard_users ul li:hover strong {
+        color: #2ea2cc !important; }
+    #wpum_dashboard_users ul li.fullwidth {
+      width: 100%; }
+    #wpum_dashboard_users ul li.spacer {
+      border-right: 1px solid #ececec; }
+    #wpum_dashboard_users ul li:first-child {
+      border-top: 0; }
+
+#wpum-tools-page .hndle:hover {
+  cursor: auto; }
+#wpum-tools-page .inside {
+  padding-bottom: 0px; }
+
+.wpum-field-editor-side-metaboxes h2.hndle {
+  cursor: auto !important; }
+
+.wpum-menu-controller label {
+  font-weight: bold;
+  display: block;
+  margin-top: 0.8em; }
+.wpum-menu-controller span {
+  padding-right: 13px;
+  display: block; }
+  .wpum-menu-controller span:nth-child(2) {
+    padding-top: 40px; }
+  .wpum-menu-controller span:nth-child(3) {
+    display: none; }
+.wpum-menu-controller select {
+  width: 100%; }
+.wpum-menu-controller .wpum-description {
+  font-style: italic; }
+
+/*# sourceMappingURL=wp_user_manager_admin_general.css.map */

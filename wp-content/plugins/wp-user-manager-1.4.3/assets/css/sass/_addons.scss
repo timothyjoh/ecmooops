@@ -1,0 +1,53 @@
+.wpum-addons {
+	padding: 3px 6px;
+	border-radius: 2px;
+	color: #0073aa;
+  background: #e0e0e0;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+body.wpum_addons_page {
+
+  .search-plugins,
+  .add-new-h2 {
+    display: none !important;
+  }
+
+  li {
+    &.plugin-install-featured,
+    &.plugin-install-popular,
+    &.plugin-install-recommended,
+    &.plugin-install-favorites {
+      display: none !important;
+    }
+  }
+
+  h2 {
+    margin: 0 0 15px;
+    .button-primary { position: absolute; }
+  }
+
+  .wpum-extension {
+    float: left;
+    margin: 0 15px 15px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 320px;
+    padding: 14px;
+    height: 340px;
+    position: relative;
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .wp-post-image {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+}

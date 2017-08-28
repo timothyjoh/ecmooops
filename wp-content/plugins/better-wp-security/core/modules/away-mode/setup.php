@@ -58,10 +58,10 @@ if ( ! class_exists( 'ITSEC_Away_Mode_Setup' ) ) {
 
 			if ( $itsec_old_version < 4000 ) {
 
-				global $itsec_bwps_options, $itsec_globals;
+				global $itsec_bwps_options;
 
 				$current_options = get_site_option( 'itsec_away_mode' );
-				$current_time    = $itsec_globals['current_time'];
+				$current_time    = ITSEC_Core::get_current_time();
 
 				// Don't do anything if settings haven't already been set, defaults exist in the module system and we prefer to use those
 				if ( false !== $current_options ) {

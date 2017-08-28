@@ -1,0 +1,2556 @@
+# Copyright (C) 2015 Alessandro Tesoro
+# This file is distributed under the GPLv2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP User Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wp-user-manager\n"
+"POT-Creation-Date: 2015-12-04 11:10+0100\n"
+"PO-Revision-Date: 2015-12-04 12:08+0100\n"
+"Last-Translator: Tobias Hopp <tobias.hopp@pon.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/abstracts/abstract-wpum-field-type.php:103
+msgid "Basic"
+msgstr "Basis"
+
+#: includes/abstracts/abstract-wpum-form.php:202
+#, fuzzy, php-format
+msgid "%s is a required field"
+msgstr "% ist ein Pflichtfeld"
+
+#: includes/abstracts/abstract-wpum-form.php:215
+#: includes/misc-functions.php:497
+#, php-format
+msgid "\"%s\" (filetype %s) needs to be one of the following file types: %s"
+msgstr "\"%s\" (Dateityp %s) muss einer der folgenden Dateitypen sein: %s"
+
+#: includes/actions.php:300 includes/install.php:33
+#, php-format
+msgid ""
+"This plugin requires a minimum PHP Version 5.3 to be installed on your host. "
+"<a href=\"%s\" target=\"_blank\">Click here to read how you can update your "
+"PHP version</a>."
+msgstr ""
+"Dieses Plugin benötigt mindestens die PHP Version 5.3 auf dem Server "
+"installiert sein.<a href=\"%s\" target=\"_blank\">Klick hier um zu erfahren, "
+"wie Du Deine PHP-Version aktualisieren kannst.</a>."
+
+#: includes/actions.php:318 templates/directory/single-user.php:14
+#: templates/profile-card.php:28
+msgid "View Profile"
+msgstr "Profil anzeigen"
+
+#: includes/admin/addons.php:80
+msgid "WP User Manager "
+msgstr "WP User Manager "
+
+#: includes/admin/addons.php:80
+msgid "Addons"
+msgstr "Addons"
+
+#: includes/admin/addons.php:99
+#, php-format
+msgid ""
+"Looks like there was a problem while retrieving the list of addons. Please "
+"visit <a href=\"%s\">%s</a> if you are looking for the WP User Manager "
+"addons."
+msgstr ""
+"Es sieht so aus als ob es ein Problem gibt, die Liste der Addons zu laden. "
+"Bitte besuche <a href=\"%s\">%s</a> wenn Du nach den WP User Manager Addons "
+"suchst."
+
+#: includes/admin/admin-actions.php:21 includes/admin/welcome.php:171
+#: includes/filters.php:41
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: includes/admin/admin-actions.php:22
+msgid "Add Ons"
+msgstr "Add Ons"
+
+#: includes/admin/admin-actions.php:37
+#, php-format
+msgid ""
+"<strong>Enabled.</strong> <br/> <small>Registrations can be disabled in <a "
+"href=\"%s\" target=\"_blank\">Settings -> General</a>.</small>"
+msgstr ""
+"<strong>angeschaltet</strong> <br/> <small>Registrierungen können unter <a "
+"href=\"%s\" target=\"_blank\">Einstellungen -> Allgemein</a> geändert werden."
+"</small>"
+
+#: includes/admin/admin-actions.php:39
+#, php-format
+msgid ""
+"Registrations are disabled. Enable the \"Membership\" option in <a href=\"%s"
+"\" target=\"_blank\">Settings -> General</a>."
+msgstr ""
+"Registrierungen sind deaktiviert. Aktiviere die Option in <a href=\"%s\" "
+"target=\"_blank\">Einstellungen -> Allgemein</a>."
+
+#: includes/admin/admin-actions.php:102
+#, php-format
+msgid ""
+"The default user role for registrations can be changed in <a href=\"%s"
+"\">Settings -> General</a>"
+msgstr ""
+"Die standard Benutzerrolle kann unter <a href=\"%s\">Einstellungen -> "
+"Allgemein</a>"
+
+#: includes/admin/admin-actions.php:135
+msgid "Restore default emails"
+msgstr "Standard E-Mail wieder herstellen"
+
+#: includes/admin/admin-actions.php:136
+msgid "Click the button to restore the default emails content and subject."
+msgstr ""
+"Klick den Button um die standard E-Mail Einstellungen wie Inhalt und Betreff "
+"wiederherzustellen."
+
+#: includes/admin/admin-actions.php:152
+msgid "Restore default pages"
+msgstr "Standard-Seiten wiederherstellen"
+
+#: includes/admin/admin-actions.php:153
+msgid "Click the button to restore the default core pages of the plugin."
+msgstr "Klick den Button um die standard Plugin-Seiten wieder herzustellen."
+
+#: includes/admin/admin-actions.php:169
+#, php-format
+msgid "Current profile permalink structure: %s%s"
+msgstr "Aktuelle Permalink Struktur: %s%s"
+
+#: includes/admin/admin-actions.php:170
+#, php-format
+msgid ""
+"You can change the profiles permalink structure into your <a href=\"%s"
+"\">permalink settings page</a>."
+msgstr ""
+"Du kannst die Profil-Permalink-Struktur auf Deiner <a href=\"%s"
+"\">Profilseite</a> ändern."
+
+#: includes/admin/admin-actions.php:174
+msgid "Your users profile page is not configured."
+msgstr "Die Seite zur Anzeige des Benutzerprofils ist nicht konfiguriert."
+
+#: includes/admin/admin-actions.php:174
+#, php-format
+msgid "<a href=\"%s\">Setup your profile page here.</a>"
+msgstr "<a href=\"%s\">Erstelle hier Deine Profseite.</a>"
+
+#: includes/admin/admin-actions.php:177 includes/admin/admin-notices.php:48
+#: includes/classes/class-wpum-permalinks.php:100
+#, php-format
+msgid ""
+"You must <a href=\"%s\">change your permalinks</a> to anything else other "
+"than \"default\" for profiles to work."
+msgstr ""
+"Du musst Deine <a href=\"%s\">Permalink</a> zu etwas anderem als \"Standard"
+"\" um zu Funktionieren."
+
+#: includes/admin/admin-actions.php:212
+msgid "Add New Line"
+msgstr "Neue Zeile einfügen"
+
+#: includes/admin/admin-actions.php:259
+#, php-format
+msgid ""
+"Hey, looks like you've been using the <b>WP User Manager</b> plugin for some "
+"time now - that's awesome! <br/> Could you please give it a review on "
+"wordpress.org ? Just to help us spread the word and boost our motivation :) "
+"<br/> <br/><a href='%s' class='button button-primary' target='_blank'>Yes, "
+"you deserve it!</a> - <a href='%s'>I've already done this!</a>"
+msgstr ""
+"Hey, es scheint so, dass Du <b>WP User Manager</b> jetzt schon eine ganze "
+"Weile verwendest - das ist super von Dir! <br/> Könntest Du? Just to help us "
+"spread the word and boost our motivation :) <br/> <br/><a href='%s' "
+"class='button button-primary' target='_blank'>Ja, Du verdienst es!</a> - <a "
+"href='%s'>Alter, hab' ich schon längst!</a>"
+
+#: includes/admin/admin-notices.php:27
+msgid ""
+"You have enabled the \"Minimum Password Strength\" option, the \"Users "
+"custom passwords\" is currently disabled and must be enabled for custom "
+"passwords to work."
+msgstr "Du hast die Option \"minimale "
+
+#: includes/admin/admin-notices.php:31
+msgid ""
+"Error: the option \"Login after registration\" can only work when the option "
+"\"Users custom passwords\" is enabled too."
+msgstr "Fehler: die Option \"\" "
+
+#: includes/admin/admin-notices.php:35
+msgid "Email successfully updated."
+msgstr "E-Mail erfolgreich aktualisiert."
+
+#: includes/admin/admin-notices.php:43
+msgid "One or more WPUM pages are not configured."
+msgstr "Eine oder mehrere WPUM Seiten sind nicht konfiguriert."
+
+#: includes/admin/admin-notices.php:43
+#, php-format
+msgid ""
+"<a href=\"%s\" class=\"button-primary\">Click here to setup your pages</a>"
+msgstr ""
+"<a href=\"%s\" class=\"button-primary\">Klick hier um Deine Seiten zu "
+"installieren</a>"
+
+#: includes/admin/admin-notices.php:52
+msgid "Pages setup completed."
+msgstr "Seiten erfolgreich installiert."
+
+#: includes/admin/admin-notices.php:62
+#, php-format
+msgid ""
+"Your uploads folder in \"%s\" is not writable. <br/>Avatar uploads will not "
+"work, please adjust folder permission.<br/><br/> <a href=\"%s\" class="
+"\"button\" target=\"_blank\">Read More</a>"
+msgstr ""
+"Dein Upload-Ordner in \"%s\" hat keine Schreibrechte. Avatar Uploads werden "
+"nicht funktionieren. Bitte korrigiere die Ordner-Berechtigungen. <br/><br/> "
+"<a href=\"%s\" class=\"button\" target=\"_blank\">Mehr lesen</a>"
+
+#: includes/admin/admin-notices.php:64
+msgid "No issues detected."
+msgstr "Keine Konflikte erkannt."
+
+#: includes/admin/admin-notices.php:72
+msgid "Field group successfully updated."
+msgstr "Feldgruppe erfolgreich aktualisiert."
+
+#: includes/admin/admin-notices.php:76
+msgid "Field group successfully deleted."
+msgstr "Feldgruppe erfolgreich gelöscht."
+
+#: includes/admin/admin-notices.php:80
+msgid "Field successfully updated."
+msgstr "Feld erfolgreich aktualisiert."
+
+#: includes/admin/admin-pages.php:26
+msgid "WPUM Profile Fields Editor"
+msgstr "WPUM Profilfeld-Editor"
+
+#: includes/admin/admin-pages.php:26
+msgid "Profile Fields"
+msgstr "Profilfelder"
+
+#: includes/admin/admin-pages.php:27
+msgid "WPUM Edit Field"
+msgstr "WPUM Feld editieren"
+
+#: includes/admin/admin-pages.php:27
+msgid "Edit Field"
+msgstr "Feld editieren"
+
+#: includes/admin/admin-pages.php:28
+msgid "WP User Manager Settings"
+msgstr "WP User Manager Einstellungen"
+
+#: includes/admin/admin-pages.php:28
+msgid "WPUM Settings"
+msgstr "WPUM Einstellungen"
+
+#: includes/admin/admin-pages.php:29
+msgid "WP User Manager Email Editor"
+msgstr "WP User Manager E-Mail Editor"
+
+#: includes/admin/admin-pages.php:29
+msgid "WPUM Email Editor"
+msgstr "WPUM E-Mail Editor"
+
+#: includes/admin/admin-pages.php:30
+msgid "WP User Manager Addons"
+msgstr "WP User Manager Addons"
+
+#: includes/admin/admin-pages.php:30
+msgid "WPUM Addons"
+msgstr "WPUM Addons"
+
+#: includes/admin/dashboard-widget.php:23
+msgid "WP User Manager Overview"
+msgstr "WP User Manager Übersicht"
+
+#: includes/admin/dashboard-widget.php:94
+#, fuzzy
+msgctxt "Used within the dashboard widget"
+msgid "Users"
+msgstr "Benutzerrollen"
+
+#: includes/admin/dashboard-widget.php:105
+#, php-format
+msgid "%s Registered today"
+msgstr "%s heute registriert"
+
+#: includes/admin/dashboard-widget.php:109
+#, php-format
+msgid "%s Registered this week"
+msgstr "%s diese Woche registriert"
+
+#: includes/admin/dashboard-widget.php:112
+#, php-format
+msgid "%s Registered this month"
+msgstr "%s diesen Monat registriert"
+
+#: includes/admin/dashboard-widget.php:115
+#, php-format
+msgid "%s Registered last month"
+msgstr "%s letzten Monat registriert"
+
+#: includes/admin/dashboard-widget.php:118
+#, fuzzy, php-format
+msgid "%s Registered this year"
+msgstr "Registriert"
+
+#: includes/admin/edit-email-page.php:44
+#, php-format
+msgid "WP User Manager - Editing \"%s\""
+msgstr "WP User Manager - Editieren \"%s\""
+
+#: includes/admin/edit-email-page.php:44
+msgid "Back to settings page &raquo;"
+msgstr "Zurück zur Einstellungs-Seite &raquo;"
+
+#: includes/admin/edit-email-page.php:52
+msgid "Email Subject:"
+msgstr "E-Mail Betreff:"
+
+#: includes/admin/edit-email-page.php:56
+msgid "The subject line of the email"
+msgstr "Betreff der E-Mail"
+
+#: includes/admin/edit-email-page.php:61
+msgid "Email Message:"
+msgstr "E-Mail Nachricht:"
+
+#: includes/admin/edit-email-page.php:65
+msgid ""
+"The email message to be sent into the notification. The following template "
+"tags can be used in the message:"
+msgstr ""
+"Die E-Mail Nachricht, die in der Benachrichtigung versendet wird. Die "
+"folgenden Template-Tags können in der Nachricht verwendet werden:"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:65
+msgid "Click the \"Edit Email\" button to customize notifications."
+msgstr "Klick auf \"E-Mail editieren\" Button um Nachrichten anzupassen."
+
+#: includes/admin/emails/class-wpum-emails-editor.php:65
+msgid ""
+"Only the emails into the list above, will use the \"From Name\" and \"From "
+"Email\" options above."
+msgstr ""
+"Nur E-Mails aus der oben stehenden Liste werden den \"Absender\" und \"E-Mail"
+"\" verwenden."
+
+#: includes/admin/emails/class-wpum-emails-editor.php:81
+#: includes/admin/emails/class-wpum-emails-editor.php:104
+#: includes/classes/class-wpum-permalinks.php:153
+msgctxt "_doing_it_wrong error message"
+msgid "You have no rights to access this page"
+msgstr "Du hast keine Rechte um diese Seite anzuzeigen"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:109
+msgctxt "_doing_it_wrong error message"
+msgid "Nonce verification failed"
+msgstr "Nonce Authentifizierung fehlgeschlagen"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:114
+msgctxt "_doing_it_wrong error message"
+msgid "No email ID was provided"
+msgstr "Keine E-Mail angegeben"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:119
+#, php-format
+msgid "%s email"
+msgstr "%s E-Mail"
+
+#: includes/admin/emails/class-wpum-emails-list.php:50
+msgid "Email Title"
+msgstr "E-Mail Titel"
+
+#: includes/admin/emails/class-wpum-emails-list.php:51
+msgid "Email Description"
+msgstr "E-Mail Beschreibung"
+
+#: includes/admin/emails/class-wpum-emails-list.php:52
+#: includes/admin/fields/class-wpum-groups-fields.php:64
+msgid "Actions"
+msgstr "Aktionen"
+
+#: includes/admin/emails/class-wpum-emails-list.php:153
+msgid "Edit Email"
+msgstr "E-Mail editieren"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:150
+msgid "WP User Manager - Fields Editor"
+msgstr "WP User Manager - Feld-Editor"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:204
+msgid ""
+"It seems you do not have any field groups. Please deactivate and re-activate "
+"the plugin."
+msgstr ""
+"Es scheint als ob Du noch keine Feldgruppen angelegt hast. Bitte deaktiviere "
+"das Plugin und aktiviere es anschließend wieder."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:223
+msgid "Select a field group to edit:"
+msgstr "Wähle eine Feldgruppe zum editieren:"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:233
+msgid "Select"
+msgstr "Auswählen"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:304
+msgid "Group Settings"
+msgstr "Gruppen-Einstellungen"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:305
+msgid "Fields Order"
+msgstr "Feld-Reifenfolge"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:318
+msgid "Requirement"
+msgstr "Anforderung"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:322
+msgid "Show on registration form"
+msgstr "Zeige auf Anmelde-Formular"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:334
+#, php-format
+msgid "Click and drag the %s button to change the order of the fields."
+msgstr ""
+"Klicke und ziehe den %s Button um die Reihenfolge der Felder festzulegen."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:354
+msgid "Fields into this group can appear on the signup page."
+msgstr ""
+"Felder in dieser Gruppe können auf der Registrierung-Seite angezeigt werden."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:371
+msgid "Group name"
+msgstr "Gruppenname"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:379
+msgid "Group description"
+msgstr "Gruppenbeschreibung"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:398
+msgid "Delete Group"
+msgstr "Gruppe löschen"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:405
+msgid "Save Group Settings"
+msgstr "Gruppeneinstellungen speichern"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:487
+msgid "Editing field"
+msgstr "Feld wird aktuell editiert"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:488
+msgid "Back to editor"
+msgstr "zurück zum Editor"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:510
+#: includes/admin/fields/class-wpum-fields-editor.php:519
+msgid "Save Field"
+msgstr "Feld speichern"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:556
+msgid "Enter a name for this field"
+msgstr "Gib' einen Namen für das Feld ein"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:590
+msgid "Field Description (optional)"
+msgstr "Feldbeschreibung (optional)"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:609
+msgid "Set this field as required ?"
+msgstr "Dieses Feld als Pflichtfeld markieren?"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:610
+msgid "Enable to force the user to fill this field."
+msgstr "Aktivieren um dieses Feld zu einem Pflichtfeld zu machen."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:628
+msgid "Display this field on registration ?"
+msgstr "Feld auf der Registrieren-Seite anzeigen?"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:629
+msgid "Enable to display this field on the registration form."
+msgstr "Aktivieren um dieses Feld auf der Registrieren-Seite anzuzugeigen."
+
+#: includes/admin/fields/class-wpum-groups-fields.php:48
+msgid "No fields have been found."
+msgstr "Es wurden keine Felder gefunden."
+
+#: includes/admin/fields/class-wpum-groups-fields.php:60
+msgid "Order"
+msgstr "Reihenfolge"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:61
+msgid "Field Title"
+msgstr "Feld-Titel"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:62
+msgid "Field Type"
+msgstr "Feld-Typ"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:63
+msgid "Required"
+msgstr "Pflicht"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:179
+msgid "Text"
+msgstr "Text"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:182
+#: includes/functions.php:90 templates/profile/profile-overview.php:28
+msgid "Email"
+msgstr "E-Mail"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:184
+msgid "Dropdown"
+msgstr "Dropdown"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:186
+msgid "Textarea"
+msgstr "Textfeld"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:188
+#: includes/classes/class-wpum-shortcodes.php:73
+#: includes/forms/class-wpum-form-update-password.php:55
+#: includes/functions.php:115
+msgid "Password"
+msgstr "Passwort"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:190
+#: includes/lib/wp-pretty-fields/fields/image.php:49
+msgid "Upload"
+msgstr "Upload"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:224
+msgid "Edit"
+msgstr "Editieren"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:230
+msgid "Delete"
+msgstr "Löschen"
+
+#: includes/admin/menu-functions.php:21
+msgid "WP User Manager"
+msgstr "WP User Manager"
+
+#: includes/admin/menu-functions.php:43 includes/admin/menu-functions.php:52
+#, fuzzy
+msgid "Logged-In"
+msgstr "Titel wenn eingeloggt"
+
+#: includes/admin/menu-functions.php:46 includes/admin/menu-functions.php:61
+msgid "Logged-Out"
+msgstr "Ausgeloggt"
+
+#: includes/admin/menu-functions.php:53
+msgid "Logged-In links are not visible to visitors who are not logged in."
+msgstr "Logged-In Links sind für ausgeloggte Benutzer nicht sichtbar."
+
+#: includes/admin/menu-functions.php:62
+msgid "Logged-Out links are not visible to users who are logged in."
+msgstr "Logged-Out Links sind für eingeloggte Benutzer nicht sichtbar."
+
+#: includes/admin/menu-functions.php:72
+msgid "Add to Menu"
+msgstr "Zum Menü hinzufügen"
+
+#: includes/admin/menu-functions.php:95 includes/misc-functions.php:692
+#: templates/user-overview.php:26
+msgid "Edit Account"
+msgstr "Account editieren"
+
+#: includes/admin/menu-functions.php:100
+msgid "Log out"
+msgstr "Log Out"
+
+#: includes/admin/menu-functions.php:145 includes/misc-functions.php:622
+#: includes/widgets/wpum-registration.php:41
+#: templates/forms/registration-form.php:38
+msgid "Register"
+msgstr "Registrieren"
+
+#: includes/admin/menu-functions.php:150
+msgid "Log in"
+msgstr "Log In"
+
+#: includes/admin/settings/display-settings.php:32
+#, php-format
+msgid "WP User Manager v%s Settings"
+msgstr "WP User Manager v%s Einstellungen"
+
+#: includes/admin/settings/register-settings.php:183
+msgid "Pages Setup"
+msgstr "Seiten Setup"
+
+#: includes/admin/settings/register-settings.php:188
+msgid "Login page:"
+msgstr "Login Seite:"
+
+#: includes/admin/settings/register-settings.php:189
+msgid "Select the page where you have added the login shortcode."
+msgstr "Wähle die Seite aus, wo Du den Login-Shortcode eingefügt hast."
+
+#: includes/admin/settings/register-settings.php:196
+msgid "Password recovery page:"
+msgstr "Passwort Wiederherstellungs-Seite:"
+
+#: includes/admin/settings/register-settings.php:197
+msgid "Select the page where you have added the password recovery shortcode."
+msgstr ""
+"Wähle die Seite, wo Du den Shortcode für die Passwort-Wiederherstellung "
+"eingefügt hast."
+
+#: includes/admin/settings/register-settings.php:204
+msgid "Registration page:"
+msgstr "Registrierungsseite:"
+
+#: includes/admin/settings/register-settings.php:205
+msgid "Select the page where you have added the registration shortcode."
+msgstr ""
+"Wähle die Seite aus, wo Du den Shortcode zur Registrierung eingefügt hast."
+
+#: includes/admin/settings/register-settings.php:212
+msgid "Account page:"
+msgstr "Benutzerkonto Seite:"
+
+#: includes/admin/settings/register-settings.php:213
+msgid "Select the page where you have added the account shortcode."
+msgstr ""
+"Wähle die Seite aus, wo Du den Shortcode für die Account-Seite eingefügt "
+"hast."
+
+#: includes/admin/settings/register-settings.php:220
+msgid "Profile page:"
+msgstr "Profilseite:"
+
+#: includes/admin/settings/register-settings.php:221
+msgid "Select the page where you have added the profile shortcode."
+msgstr ""
+"Wähle die Seite, wo Du den Shortcode für die Profil-Seite eingefügt hast."
+
+#: includes/admin/settings/register-settings.php:228
+msgid "Passwords Setup"
+msgstr "Passwort Einstellung"
+
+#: includes/admin/settings/register-settings.php:233
+msgid "Minimum Password Strength:"
+msgstr "Minimale Passwort-Stärke:"
+
+#: includes/admin/settings/register-settings.php:234
+msgid ""
+"Select the required password strength. This will be forced on registration "
+"and account page."
+msgstr ""
+"Wähle die benötigte Passwort Stärke. Diese wird auf der Registrierungs- und "
+"Accountseite angezeigt."
+
+#: includes/admin/settings/register-settings.php:240
+msgid "Display password meter:"
+msgstr "Zeige Passwort-Stärke:"
+
+#: includes/admin/settings/register-settings.php:241
+msgid "Enable to display a password meter into the forms."
+msgstr ""
+"Aktiviere diese Option um ein sog. \"Passwort Meter\" in den Formularen "
+"anzuzeigen."
+
+#: includes/admin/settings/register-settings.php:246
+#: includes/admin/settings/register-settings.php:332
+msgid "Extra"
+msgstr "Extra"
+
+#: includes/admin/settings/register-settings.php:251
+msgid "Allow users to login with:"
+msgstr "Erlaube Benutzern sich mit folgenden Daten anzumelden:"
+
+#: includes/admin/settings/register-settings.php:257
+msgid "Display registration link:"
+msgstr "Zeige Registrierungslink:"
+
+#: includes/admin/settings/register-settings.php:258
+msgid "Enable to display a registration link into the login form."
+msgstr "Aktivieren um auf der Registrierungsseite einen Login Link anzuzeigen."
+
+#: includes/admin/settings/register-settings.php:263
+msgid "Display password recovery link:"
+msgstr "Zeige Passwort Wiederherstellungslink:"
+
+#: includes/admin/settings/register-settings.php:264
+msgid "Enable to display a password recovery link into the login form."
+msgstr ""
+"Aktivieren um einen Passwort Wiederherstellungslink auf der Login-Formular "
+"anzuzeigen."
+
+#: includes/admin/settings/register-settings.php:269
+msgid "Admin Bar:"
+msgstr "Admin Bar:"
+
+#: includes/admin/settings/register-settings.php:270
+msgid "Hide admin bar for specific user roles."
+msgstr " Zeige Admin Bar für spezielle Benutzerrollen. "
+
+#: includes/admin/settings/register-settings.php:272
+#: includes/admin/settings/register-settings.php:307
+msgid "Select the user roles from the list."
+msgstr "Wähle die Benutzerrollen von der Liste."
+
+#: includes/admin/settings/register-settings.php:282
+msgid "Registrations Status:"
+msgstr "Registrierungsstatus:"
+
+#: includes/admin/settings/register-settings.php:287
+msgid "Default user registration role:"
+msgstr "Standard Benutzerrolle beim registrieren:"
+
+#: includes/admin/settings/register-settings.php:292
+msgid "Users custom passwords:"
+msgstr "Benutzerdefinierte Passwörter:"
+
+#: includes/admin/settings/register-settings.php:293
+msgid "Enable to allow users to set custom passwords on the registration page."
+msgstr ""
+"Aktiviere diese Option um benutzerdefinierte Passwörter auf der "
+"Registrierungsseite zu aktivieren."
+
+#: includes/admin/settings/register-settings.php:298
+msgid "Allow role section:"
+msgstr "Erlaube Auswahl der Benutzerrollen:"
+
+#: includes/admin/settings/register-settings.php:299
+msgid "Enable to allow users to select a user role on registration."
+msgstr ""
+"Aktivieren um bei der Registrierung die Wahl der Benutzerrollen zu erlauben."
+
+#: includes/admin/settings/register-settings.php:304
+msgid "Allowed Roles:"
+msgstr "Erlaubte Benutzerrollen:"
+
+#: includes/admin/settings/register-settings.php:305
+msgid "Select which roles can be selected upon registration."
+msgstr ""
+"Wähle welche Benutzerrollen bei der Registrierung ausgewählt werden dürfen."
+
+#: includes/admin/settings/register-settings.php:313
+#: includes/forms/class-wpum-form-register.php:272
+msgid "Terms &amp; Conditions"
+msgstr "Anmeldebedingungen"
+
+#: includes/admin/settings/register-settings.php:318
+msgid "Enable terms &amp conditions:"
+msgstr "Aktiviere Impressum oder AGBs:"
+
+#: includes/admin/settings/register-settings.php:319
+msgid ""
+"Enable to force users to agree to your terms before registering an account."
+msgstr ""
+"Aktivieren um Benutzer dazu zu verpflichten die Anmeldebedingungen zu "
+"akzeptieren."
+
+#: includes/admin/settings/register-settings.php:324
+msgid "Terms Page:"
+msgstr "Impressum oder AGBs Seite:"
+
+#: includes/admin/settings/register-settings.php:325
+msgid "Select the page that contains your terms."
+msgstr "Wähle die Seite, welche Dein Impressum oder Deine AGBs enthält."
+
+#: includes/admin/settings/register-settings.php:337
+msgid "Anti-spam Honeypot:"
+msgstr "Anti-spam Honeypot:"
+
+#: includes/admin/settings/register-settings.php:338
+msgid "Enables honeypot spam protection technique."
+msgstr "Aktiviert Honeypot-Spamschutz."
+
+#: includes/admin/settings/register-settings.php:343
+msgid "Login after registration:"
+msgstr "Login nach Registrierung:"
+
+#: includes/admin/settings/register-settings.php:344
+msgid "Enable this option to authenticate users after registration."
+msgstr ""
+"Aktiviere diese Option um Benutzer nach der Registrierung direkt einzuloggen."
+
+#: includes/admin/settings/register-settings.php:353
+msgid "From Name:"
+msgstr "Absender Name:"
+
+#: includes/admin/settings/register-settings.php:354
+msgid ""
+"The name emails are said to come from. This should probably be your site "
+"name."
+msgstr ""
+"Die E-Mail des Webseiten Namens von der die E-Mail stammt. Dies sollte "
+"normalerweise Dein Seitenname sein."
+
+#: includes/admin/settings/register-settings.php:360
+msgid "From Email:"
+msgstr "Absender E-Mail:"
+
+#: includes/admin/settings/register-settings.php:361
+msgid "This will act as the \"from\" and \"reply-to\" address."
+msgstr "Dies ist die \"from\" und \"reply-to\" Adresse."
+
+#: includes/admin/settings/register-settings.php:367
+msgid "Email Template"
+msgstr "E-Mail Template"
+
+#: includes/admin/settings/register-settings.php:368
+msgid "Choose a template."
+msgstr "Wähle ein Template."
+
+#: includes/admin/settings/register-settings.php:374
+msgid "Logo"
+msgstr "Logo"
+
+#: includes/admin/settings/register-settings.php:375
+msgid ""
+"Upload or choose a logo to be displayed at the top of emails. Displayed on "
+"HTML emails only."
+msgstr ""
+"Wähle und lade ein Logo hoch, welches im oberen Teil von E-Mails angezeigt "
+"wird. Das Logo with nur in HTML E-Mails angezeigt."
+
+#: includes/admin/settings/register-settings.php:380
+msgid "Emails Editor:"
+msgstr "E-Mail Editor:"
+
+#: includes/admin/settings/register-settings.php:385
+msgid "Notifications Settings"
+msgstr "Benachrichtungseinstellungen"
+
+#: includes/admin/settings/register-settings.php:390
+msgid "Disable admin registration email:"
+msgstr "Deaktivere Admin Registrierungsbenachrichtung per E-Maill:"
+
+#: includes/admin/settings/register-settings.php:391
+msgid ""
+"Enable this option to stop receiving notifications when a new user registers."
+msgstr ""
+"Aktiviere diese Option um keine E-Mails mehr zu erhalten, wenn sich ein "
+"neuer Benutzer registriert."
+
+#: includes/admin/settings/register-settings.php:396
+msgid "Disable admin password recovery email:"
+msgstr "Deaktivere Admin Passwort Wiederherstellungs E-Mail:"
+
+#: includes/admin/settings/register-settings.php:397
+msgid ""
+"Enable this option to stop receiving notifications when a new user resets "
+"his password."
+msgstr ""
+"Aktiviere diese Option um keine E-Mail Benachrichtigungen zu erhalten, wenn "
+"ein Benutzer sein Passwort zurücksetzt."
+
+#: includes/admin/settings/register-settings.php:406
+msgid "Profile permalink:"
+msgstr "Profil Permalink:"
+
+#: includes/admin/settings/register-settings.php:411
+msgid "Allow guests to view profiles"
+msgstr "Erlaube Gästen Profile anzuschauen"
+
+#: includes/admin/settings/register-settings.php:412
+msgid "Enable this option to allow guests to view users profiles."
+msgstr ""
+"Aktiviere diese Option um Gästen zu erlauben Benutzerprofile anzusehen."
+
+#: includes/admin/settings/register-settings.php:417
+msgid "Allow members to view profiles"
+msgstr "Erlaube Mitgliedern Profile zu sehen"
+
+#: includes/admin/settings/register-settings.php:418
+msgid ""
+"Enable this option to allow members to view users profiles. If disabled, "
+"users can only see their own profile."
+msgstr ""
+"Aktivere diese Option um Benutzern zu erlauben die Profile anderer Benutzer "
+"anzusehen. Wenn deaktiviert, können Benutzer nur ihr eigenes Profil ansehen."
+
+#: includes/admin/settings/register-settings.php:423
+msgid "Custom Avatars"
+msgstr "Benutzerdefinierte Profilbilder"
+
+#: includes/admin/settings/register-settings.php:424
+msgid ""
+"Enable this option to allow users to upload custom avatars for their "
+"profiles."
+msgstr ""
+"Aktiviere diese Option um Benutzern zu erlauben, eigene Profilbilder auf "
+"Ihrer Seite hochzuladen."
+
+#: includes/admin/settings/register-settings.php:429
+msgid "Display posts"
+msgstr "Zeige Posts"
+
+#: includes/admin/settings/register-settings.php:430
+msgid ""
+"Enable this option to display users submitted post on their profile page."
+msgstr ""
+"Aktiviere diese Option um von Usern gepostete Posts auf Ihrer Profilseite "
+"anzuzeigen."
+
+#: includes/admin/settings/register-settings.php:435
+msgid "Display comments"
+msgstr "Zeige Kommentare"
+
+#: includes/admin/settings/register-settings.php:436
+msgid ""
+"Enable this option to display users submitted comments on their profile page."
+msgstr "Aktiviere diese Option um die Kommentare"
+
+#: includes/admin/settings/register-settings.php:445
+#: includes/classes/class-wpum-shortcodes.php:77
+#: includes/classes/class-wpum-shortcodes.php:163 includes/functions.php:117
+#: includes/misc-functions.php:586 includes/widgets/wpum-login-form.php:41
+msgid "Login"
+msgstr "Login"
+
+#: includes/admin/settings/register-settings.php:446
+msgid ""
+"Select the page where you want to redirect users after they login. If empty "
+"will return to the current page."
+msgstr ""
+"Wähle die Seite, auf die Du die Benutzer weiterleiten möchtest, nachdem sie "
+"sich eingeloggt haben. Wenn dieses Feld leer gelassen wird, werden Sie zur "
+"aktuell besuchten Seite weitergeleitet."
+
+#: includes/admin/settings/register-settings.php:453
+#: includes/classes/class-wpum-shortcodes.php:140
+#: templates/user-overview.php:28
+msgid "Logout"
+msgstr "Logout"
+
+#: includes/admin/settings/register-settings.php:454
+msgid ""
+"Select the page where you want to redirect users after they logout. If empty "
+"will return to wp-login.php"
+msgstr ""
+"Wähle die Seite, die angezeigt werden soll, nachdem der Benutzer sich "
+"erfolgreich ausgeloggt hat. Wenn dieses Feld leer gelassen wird, wird auf wp-"
+"login.php weitergeleitet."
+
+#: includes/admin/settings/register-settings.php:461
+msgid "Registration Redirect"
+msgstr "Registrierungsweiterleitung"
+
+#: includes/admin/settings/register-settings.php:462
+#, fuzzy
+msgid ""
+"Select the page where you want to redirect users after they successfully "
+"register. If empty a message will be displayed instead."
+msgstr ""
+"Wähle die Seite, die angezeigt werden soll, nachdem der Benutzer sich "
+"erfolgreich ausgeloggt hat. Wenn dieses Feld leer gelassen wird, wird auf wp-"
+"login.php weitergeleitet."
+
+#: includes/admin/settings/register-settings.php:469
+#, fuzzy
+msgid "Backend register"
+msgstr "Backend Registrierungsweiterleitung:"
+
+#: includes/admin/settings/register-settings.php:470
+#, php-format
+msgid ""
+"Select a page if you wish to redirect users who try to signup through <a "
+"href=\"%s\">the default registration page on wp-login.php</a>"
+msgstr ""
+"Wähle eine Seite, auf die weitergeleitet werden soll, wenn Benutzer "
+"versuchen sich über die <a href=\"%s\">Standard Registrierungsseite</a> zu "
+"registrieren."
+
+#: includes/admin/settings/register-settings.php:477
+#, fuzzy
+msgid "Backend lost password"
+msgstr "Passwort wiederherstellen"
+
+#: includes/admin/settings/register-settings.php:478
+#, fuzzy, php-format
+msgid ""
+"Select a page if you wish to redirect users who try to recover a lost "
+"password through <a href=\"%s\">the default password recovery page on wp-"
+"login.php</a>"
+msgstr ""
+"Wähle eine Seite, auf die weitergeleitet werden soll, wenn Benutzer "
+"versuchen sich über die <a href=\"%s\">Standard Registrierungsseite</a> zu "
+"registrieren."
+
+#: includes/admin/settings/register-settings.php:485
+#, fuzzy
+msgid "Backend profile"
+msgstr "Backend Profilweiterleitung:"
+
+#: includes/admin/settings/register-settings.php:486
+msgid ""
+"Select the page where you want to redirect users who try to access their "
+"profile on the backend."
+msgstr ""
+"Wähle die Seite, die angezeigt werden soll, wenn Benutzer versuchen Ihr "
+"Backend Profil aufrufen."
+
+#: includes/admin/settings/register-settings.php:501
+msgid "Restore default emails:"
+msgstr "Standard E-Mails wiederherstellen:"
+
+#: includes/admin/settings/register-settings.php:506
+msgid "Restore Pages:"
+msgstr "Seiten wiederherstellen:"
+
+#: includes/admin/settings/register-settings.php:511
+msgid "Excluded usernames:"
+msgstr "Ausgeschlossene Benutzernamen:"
+
+#: includes/admin/settings/register-settings.php:512
+msgid ""
+"Enter the usernames that you wish to disable. Separate each username on a "
+"new line."
+msgstr ""
+"Gib' die Benutzernamen ein, welche Du deaktivieren möchtest. Ein Benutzer "
+"pro Zeile."
+
+#: includes/admin/settings/register-settings.php:582
+msgid "Settings successfully updated."
+msgstr "Einstellungen erfolgreich aktualisiert."
+
+#: includes/admin/settings/register-settings.php:610
+msgid "General"
+msgstr "Allgemein"
+
+#: includes/admin/settings/register-settings.php:611
+msgid "Registration"
+msgstr "Registrierung"
+
+#: includes/admin/settings/register-settings.php:612
+msgid "Emails"
+msgstr "E-Mails"
+
+#: includes/admin/settings/register-settings.php:613
+msgid "Profiles"
+msgstr "Profile"
+
+#: includes/admin/settings/register-settings.php:614
+msgid "Redirects"
+msgstr "Weiterleitungen"
+
+#: includes/admin/settings/register-settings.php:617 includes/filters.php:42
+msgid "Extensions"
+msgstr "Erweiterungen"
+
+#: includes/admin/settings/register-settings.php:620
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#: includes/admin/settings/register-settings.php:790
+#, php-format
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr ""
+"Die Callback-Funktion, welche für die <strong>%s</strong>Einstellung fehlt."
+
+#: includes/admin/settings/register-settings.php:972
+#, fuzzy
+msgid "Upload File"
+msgstr "Upload"
+
+#: includes/admin/welcome.php:51 includes/admin/welcome.php:52
+msgid "Getting started with WP User Manager"
+msgstr "Starte mit WP User Manager"
+
+#: includes/admin/welcome.php:125
+msgid "Getting Started"
+msgstr "Leg' los"
+
+#: includes/admin/welcome.php:143
+#, php-format
+msgid "Welcome to WP User Manager %s"
+msgstr "Willkommen zum WP User Manager %s"
+
+#: includes/admin/welcome.php:144
+#, php-format
+msgid ""
+"Thank you for installing the latest version! WP User Manager %s is ready to "
+"provide improved control over your WordPress users."
+msgstr ""
+"Danke, dass Du die neueste Version installiert hast! WP User manager %s ist "
+"starbereit um die eine verbesserte Kontrolle über Deine Wordpress benutzer "
+"zu geben."
+
+#: includes/admin/welcome.php:145
+#, php-format
+msgid "Version %s"
+msgstr "Version %s"
+
+#: includes/admin/welcome.php:149
+msgid ""
+"Use the tips below to get started using WP User Manager. You will be up and "
+"running in no time!"
+msgstr ""
+"Nutze die unten stehenden Tipps um mit WP User Manager zu beginnen. Du "
+"kannst blitzschnell loslegen!"
+
+#: includes/admin/welcome.php:155
+msgid "Configure WP User Manager"
+msgstr "Konfiguriere WP User Manager"
+
+#: includes/admin/welcome.php:157
+msgid "Strengthen your passwords"
+msgstr "Stärke Deine Passwörter"
+
+#: includes/admin/welcome.php:158
+msgid "Setup login method"
+msgstr "Wähle die Login-Methode"
+
+#: includes/admin/welcome.php:159
+msgid "Customize notifications"
+msgstr "Passe die Benachrichtungen an"
+
+#: includes/admin/welcome.php:163
+msgid "Customize Profiles"
+msgstr "Passe die Profilfelder an"
+
+#: includes/admin/welcome.php:165
+msgid "Customize profiles"
+msgstr "Passe die Profilfelder an"
+
+#: includes/admin/welcome.php:166
+msgid "Customize fields"
+msgstr "Passe die Felder an"
+
+#: includes/admin/welcome.php:167
+msgid "Create user directories"
+msgstr "Erstelle Benutzerverzeichnis"
+
+#: includes/admin/welcome.php:172
+#, php-format
+msgid ""
+"Looking for help? <a href=\"%s\" target=\"_blank\">WP User Manager "
+"documentation</a> has got you covered."
+msgstr ""
+"Benötigst Du Hilfe? <a href=\"%s\" target=\"_blank\">WP User Manager "
+"Dokumentation</a> hilft Dir."
+
+#: includes/admin/welcome.php:172
+msgid "Read documentation"
+msgstr "Lese Dokumentation"
+
+#: includes/admin/welcome.php:183
+msgid "Looking for help ?"
+msgstr "Du benötigst Hilfe?"
+
+#: includes/admin/welcome.php:184
+#, php-format
+msgid ""
+"We do all we can to provide every user with the best support possible. If "
+"you encounter a problem or have a question, please <a href=\"%s\" target="
+"\"_blank\">contact us.</a> Make sure you <a href=\"%s\">read the "
+"documentation</a> first."
+msgstr ""
+"Wir tuhen alles mögliche um unsere Benutzer mit den bestmöglichen Lösungen "
+"zu versorgen. Wenn ein Problem auftritt oder Du eine Frage hast, <a href=\"%s"
+"\" target=\"_blank\">kontaktiere uns</a>. Bitte lies' jedoch vorher zuerst "
+"die <a href=\"%s\" target=\"_blank\">Dokumentation</a>."
+
+#: includes/admin/welcome.php:188
+msgid "Get Notified of Extension Releases"
+msgstr "Du benötigst Hilfe?"
+
+#: includes/admin/welcome.php:189
+msgid ""
+"New extensions that make WP User Manager even more powerful will be released "
+"soon. Subscribe to the newsletter to stay up to date with our latest "
+"releases. Signup now to ensure you do not miss a release!"
+msgstr ""
+"Es werden bald neue Erweiterungen für WP User manager veröffentlicht. "
+"Abonniere unseren Newsletter um immer die neuesten Informationen zu erhalten "
+"und auf dem Laufenden zu bleiben. Trag' Dich ein und verpass' kein Relase."
+
+#: includes/admin/welcome.php:190
+msgid "Signup Now"
+msgstr "Registriere Dich jetzt"
+
+#: includes/admin/welcome.php:196
+msgid "Go To WP User Manager &rarr; Settings"
+msgstr "Gehe zu WP User Manager &rarr; Settings"
+
+#: includes/assets.php:64
+msgid "Are you sure you want to do this? This action cannot be reversed."
+msgstr ""
+"Bist Du sicher das Du das tun möchtest? Diese Aktion kann nicht rückgängig "
+"gemacht werden."
+
+#: includes/assets.php:65
+msgid "Use This File"
+msgstr "Diese Datei benutzen"
+
+#: includes/assets.php:66
+msgid "Upload or select a file"
+msgstr "Datei wählen und hochladen"
+
+#: includes/assets.php:135
+msgid "Strength indicator"
+msgstr "Stärke Indikator"
+
+#: includes/assets.php:136
+msgid "Very weak"
+msgstr "Sehr schwach"
+
+#: includes/assets.php:137 includes/functions.php:42
+msgid "Weak"
+msgstr "Schwach"
+
+#: includes/assets.php:138
+msgctxt "password strength"
+msgid "Medium"
+msgstr "Medium"
+
+#: includes/assets.php:139 includes/functions.php:44
+msgid "Strong"
+msgstr "Stark"
+
+#: includes/assets.php:147
+msgid "Checking credentials..."
+msgstr "Checke Benutzerdaten..."
+
+#: includes/classes/class-wpum-ajax-handler.php:57
+#: includes/classes/class-wpum-ajax-handler.php:138
+#: includes/classes/class-wpum-ajax-handler.php:155
+msgid "Error."
+msgstr "Fehler."
+
+#: includes/classes/class-wpum-ajax-handler.php:70
+msgid "Emails successfully restored."
+msgstr "E-Mails erfolgreich wieder hergestellt."
+
+#: includes/classes/class-wpum-ajax-handler.php:105
+msgid "Your profile picture has been deleted."
+msgstr "Dein Profilbild wurde gelöscht."
+
+#: includes/classes/class-wpum-ajax-handler.php:114
+#: includes/template-actions.php:151
+msgid "Something went wrong."
+msgstr "Etwas ist schief gelaufen."
+
+#: includes/classes/class-wpum-ajax-handler.php:162
+msgid "Fields order successfully updated."
+msgstr "Feldreihenfolge erfolgreich aktualisiert."
+
+#: includes/classes/class-wpum-html-helper.php:39
+msgctxt "all dropdown items"
+msgid "All"
+msgstr "Alle"
+
+#: includes/classes/class-wpum-html-helper.php:40
+msgctxt "no dropdown items"
+msgid "None"
+msgstr "keiner"
+
+#: includes/classes/class-wpum-permalinks.php:80
+msgid "User profiles permalink base"
+msgstr "Benutzerprofil Permalink Basis"
+
+#: includes/classes/class-wpum-permalinks.php:104
+msgid ""
+"These settings control the permalinks used for users profiles. These "
+"settings only apply when <strong>not using \"default\" permalinks above</"
+"strong>."
+msgstr ""
+"Diese Einstellungen kontrollieren die Permalinks welche für Benutzerprofile "
+"verwendet werden. Diese Einstellungen greifen nur wenn <strong>keine "
+"Standard-Permalinks</strong> verwendet werden."
+
+#: includes/classes/class-wpum-shortcodes.php:75 includes/functions.php:116
+msgid "Remember Me"
+msgstr "Erinnere Dich an mich"
+
+#: includes/classes/class-wpum-shortcodes.php:146
+#, php-format
+msgid "<a href=\"%s\">%s</a>"
+msgstr "<a href=\"%s\">%s</a>"
+
+#: includes/classes/class-wpum-shortcodes.php:363
+#: includes/classes/class-wpum-shortcodes.php:402
+#: includes/classes/class-wpum-shortcodes.php:443
+#: includes/profiles/functions.php:382 includes/profiles/functions.php:394
+#, fuzzy, php-format
+msgid ""
+"This content is available to members only. Please <a href=\"%s\">login</a> "
+"or <a href=\"%s\">register</a> to view this area."
+msgstr ""
+"Dieser Inhalt ist nur für angemeldete Benutzer verfügbar. Bitte log' Dich "
+"ein um diesen Inhalt zu sehen."
+
+#: includes/classes/class-wpum-shortcodes.php:480
+msgid ""
+"Something went wrong, you have not set a directory ID or the directory is "
+"not published."
+msgstr ""
+"Etwas ist schief gelaufen, Du hast keine Verzeichnis-ID angegeben oder das "
+"Verzeichnis ist nicht veröffentlicht."
+
+#: includes/directories/actions.php:52
+msgid "Previous page"
+msgstr "Vorherige Seite"
+
+#: includes/directories/actions.php:53
+msgid "Next page"
+msgstr "Nächste Seite"
+
+#: includes/directories/class-wpum-directory.php:70
+msgctxt "Post Type General Name"
+msgid "User Directories"
+msgstr "Benutzerverzeichnisse"
+
+#: includes/directories/class-wpum-directory.php:71
+msgctxt "Post Type Singular Name"
+msgid "Directory"
+msgstr "Ordner"
+
+#: includes/directories/class-wpum-directory.php:72
+#: includes/directories/class-wpum-directory.php:73
+#: includes/directories/class-wpum-directory.php:74
+msgid "Directory"
+msgstr "Verzeichnis"
+
+#: includes/directories/class-wpum-directory.php:75
+msgid "User Directories"
+msgstr "Benutzerverzeichnisse"
+
+#: includes/directories/class-wpum-directory.php:76
+#: includes/directories/class-wpum-directory.php:77
+msgid "Add New Directory"
+msgstr "neues Verzeichnis hinzufügen"
+
+#: includes/directories/class-wpum-directory.php:78
+msgid "New Directory"
+msgstr "Neues Verzeichnis"
+
+#: includes/directories/class-wpum-directory.php:79
+msgid "Edit Directory"
+msgstr "Verzeichnis editieren"
+
+#: includes/directories/class-wpum-directory.php:80
+msgid "Update Directory"
+msgstr "Verzeichnis aktualisieren"
+
+#: includes/directories/class-wpum-directory.php:81
+msgid "View Directory"
+msgstr "Verzeichnis anzeigen"
+
+#: includes/directories/class-wpum-directory.php:82
+msgid "Search Directory"
+msgstr "Verzeichnis durchsuchen"
+
+#: includes/directories/class-wpum-directory.php:83
+msgid "Not found"
+msgstr "nicht gefunden"
+
+#: includes/directories/class-wpum-directory.php:84
+msgid "Not found in Trash"
+msgstr "Nicht gefunden im Papierkorb"
+
+#: includes/directories/class-wpum-directory.php:87
+msgid "wpum_directory"
+msgstr "wpum_directory"
+
+#: includes/directories/class-wpum-directory.php:119
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: includes/directories/class-wpum-directory.php:124
+#: includes/directories/class-wpum-directory.php:215
+msgid "User Roles"
+msgstr "Benutzerrollen"
+
+#: includes/directories/class-wpum-directory.php:125
+msgid "Leave blank to display all user roles."
+msgstr "Leer lassen um alle Rollen anzuzeigen."
+
+#: includes/directories/class-wpum-directory.php:126
+msgid "Select the user roles you wish to display into this directory."
+msgstr ""
+"Wähle die Benutzerrollen aus, die Du in diesem Verzeichnis anzeigen möchtest."
+
+#: includes/directories/class-wpum-directory.php:140
+msgid "Exclude users"
+msgstr "Benutzer ausschließen"
+
+#: includes/directories/class-wpum-directory.php:141
+msgid "Comma separated list of users id you wish to exclude."
+msgstr "Kommagetrennte Liste mit Benutzern die Du ausschließen möchtest."
+
+#: includes/directories/class-wpum-directory.php:142
+#, php-format
+msgid " Example: type %s to exclude users with those id(s)."
+msgstr ""
+"Beispiel: gib' hier %s um IDs von Benutzern ein um diese zu blockieren."
+
+#: includes/directories/class-wpum-directory.php:147
+#: includes/directories/class-wpum-directory.php:217
+msgid "Profiles per page"
+msgstr "Profile pro Seite"
+
+#: includes/directories/class-wpum-directory.php:148
+msgid "Select how many profiles you wish to display per page."
+msgstr "Wähle aus, wie viele Profile zu pro Seite anzeigen möchtest."
+
+#: includes/directories/class-wpum-directory.php:154
+msgid "Directory Template"
+msgstr "Verzeichnis-Template"
+
+#: includes/directories/class-wpum-directory.php:155
+msgid "Select a template from the list."
+msgstr "Wähle ein Template aus der Liste."
+
+#: includes/directories/class-wpum-directory.php:168
+msgid "Users sorting"
+msgstr "Benutzersortierung"
+
+#: includes/directories/class-wpum-directory.php:173
+msgid "Display sorter"
+msgstr "Zeige Sortiermöglichkeit"
+
+#: includes/directories/class-wpum-directory.php:174
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"sorting options."
+msgstr ""
+"Aktiviere diese Option um ein Dropdown-Menü im Verzeichnis mit den "
+"Sortiermöglichkeiten anzuzeigen."
+
+#: includes/directories/class-wpum-directory.php:180
+msgid "Display amount filter"
+msgstr "Zeige Anzahl Filter"
+
+#: includes/directories/class-wpum-directory.php:181
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"results amount filter."
+msgstr ""
+"Aktiviere diese Anzeige um ein Dropdown Menü mit dem Verzeichnisfilter "
+"anzuzeigen."
+
+#: includes/directories/class-wpum-directory.php:187
+msgid "Sorting method"
+msgstr "Sortiermethode"
+
+#: includes/directories/class-wpum-directory.php:188
+msgid "Select the sorting method for the directory"
+msgstr "Wähle die Sortiermethode für das Verzeichnis"
+
+#: includes/directories/class-wpum-directory.php:189
+msgid "If the sorter field is visible, this will be used as default option."
+msgstr "Wenn die Sortierung aktiv ist, wird dies als Standardoption verwendet."
+
+#: includes/directories/class-wpum-directory.php:218
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/directories/class-wpum-directory.php:240
+msgid "All"
+msgstr "Alle"
+
+#: includes/directories/class-wpum-directory.php:290
+#: includes/directories/class-wpum-directory.php:293
+msgid "Directory updated."
+msgstr "Verzeichnis aktualisiert."
+
+#: includes/directories/class-wpum-directory.php:291
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertes Feld gelöscht."
+
+#: includes/directories/class-wpum-directory.php:292
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Felder gelöscht."
+
+#. translators: %s: date and time of the revision
+#: includes/directories/class-wpum-directory.php:295
+#, php-format
+msgid "Directory restored to revision from %s"
+msgstr "Verzeichnis wieder hergestellt von Revision %s"
+
+#: includes/directories/class-wpum-directory.php:296
+#, php-format
+msgid ""
+"Directory created. Use the following shortcode to display this directory %s"
+msgstr ""
+"Verzeichnis erstellt. Benutze folgenden Shortcode um das Verzeichnis "
+"anzuzeigen %s"
+
+#: includes/directories/class-wpum-directory.php:297
+msgid "Directory saved."
+msgstr "Ordner gespeichert."
+
+#: includes/directories/class-wpum-directory.php:298
+msgid "Directory submitted."
+msgstr "Ordner angelegt."
+
+#: includes/directories/class-wpum-directory.php:323
+#, php-format
+msgid "%s directory updated."
+msgid_plural "%s directory updated."
+msgstr[0] "$s Ordner aktualisiert."
+msgstr[1] "%s Ordner aktualisiert."
+
+#: includes/directories/class-wpum-directory.php:324
+#, php-format
+msgid "%s directory not updated, somebody is editing it."
+msgid_plural "%s directories not updated, somebody is editing them."
+msgstr[0] "%s Ordner nicht aktualisiert."
+msgstr[1] "%s Ordner nicht aktualisiert."
+
+#: includes/directories/class-wpum-directory.php:325
+#, php-format
+msgid "%s directory permanently deleted."
+msgid_plural "%s directories permanently deleted."
+msgstr[0] "%s Ordner permament gelöscht."
+msgstr[1] "%s Ordner permament gelöscht."
+
+#: includes/directories/class-wpum-directory.php:326
+#, php-format
+msgid "%s directory has been deleted."
+msgid_plural "%s directories have been deleted."
+msgstr[0] "Es wurden %s Ordner gelöscht."
+msgstr[1] "Es wurden %s Ordner gelöscht."
+
+#: includes/directories/class-wpum-directory.php:327
+#, php-format
+msgid "%s directory restored from the Trash."
+msgid_plural "%s directories restored from the Trash."
+msgstr[0] "%s Verzeichnisse wieder hergestellt aus dem Papierkorb."
+msgstr[1] "%s Ordner wieder herstellt aus dem Papierkorb."
+
+#: includes/directories/functions.php:138
+#: includes/emails/class-wpum-emails.php:200
+msgid "Default template"
+msgstr "Standard Template"
+
+#: includes/directories/functions.php:269
+msgid "By nickname"
+msgstr "nach Nicknamen"
+
+#: includes/directories/functions.php:270
+msgid "Newest users first"
+msgstr "Neueste Benutzer zuerst"
+
+#: includes/directories/functions.php:271
+msgid "Oldest users first"
+msgstr "Älteste Benutzer zuerst"
+
+#: includes/directories/functions.php:272
+msgid "First name"
+msgstr "Vorname"
+
+#: includes/directories/functions.php:273
+msgid "Last Name"
+msgstr "Nachname"
+
+#: includes/emails/class-wpum-emails-tags.php:278
+msgid "Your site name"
+msgstr "Name der Webseite"
+
+#: includes/emails/class-wpum-emails-tags.php:283
+msgid "Displays the username."
+msgstr "Zeigt den Benutzernamen an."
+
+#: includes/emails/class-wpum-emails-tags.php:288
+msgid ""
+"Displays the user password. If the \"custom passwords\" option is enabled, "
+"the password will not be displayed into the email."
+msgstr ""
+"Zeigt das Benutzerpasswort an. Wenn die Option \"eigene Passwörter\" "
+"aktiviert ist, wird das Passwort nicht in der E-Mail versandt."
+
+#: includes/emails/class-wpum-emails-tags.php:293
+msgid ""
+"Displays the password recovery url needed for the user to reset his password."
+msgstr ""
+"Zeigt die Passwort URL, die zur Passwort Wiederherstellung benötigt wird."
+
+#: includes/emails/class-wpum-emails-tags.php:338
+msgid "the password you chose upon registration."
+msgstr "Das Passwort, welches Du bei Deiner Registrierung wählst."
+
+#: includes/emails/class-wpum-emails.php:201
+msgid "No template, plain text only"
+msgstr "Kein Template, blanker Text"
+
+#: includes/emails/class-wpum-emails.php:287
+msgid ""
+"You cannot send email with WPUM_Emails until init/admin_init has been reached"
+msgstr ""
+"Du kannst mit WPUM_Emails keine E-Mails versenden bevor init/admin_init "
+"nicht erreicht wurde"
+
+#: includes/emails/functions.php:67
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "Neue Benutzerregistrierungen auf Deiner Seite %s:"
+
+#: includes/emails/functions.php:68
+#, php-format
+msgid "Username: %s"
+msgstr "Benutzername: %s"
+
+#: includes/emails/functions.php:69
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-Mail: %s"
+
+#: includes/emails/functions.php:70
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] neue Benutzerregistrierungen"
+
+#: includes/emails/functions.php:85
+msgid "Your account"
+msgstr "Dein Account"
+
+#: includes/emails/password-recovery-email.php:32
+msgid "Password Recovery Email"
+msgstr "Passwort Wiederherstellungs-Email"
+
+#: includes/emails/password-recovery-email.php:33
+msgid ""
+"This is the email that is sent to the visitor upon password reset request."
+msgstr ""
+"An diese E-Mail wird bei einer Anfrage zur Passwort Wiederherstellung  eine "
+"E-Mail gesendet."
+
+#: includes/emails/password-recovery-email.php:49
+#, php-format
+msgid "Reset Your %s Password"
+msgstr "Setze Dein %s Passwort zurück"
+
+#: includes/emails/password-recovery-email.php:63
+#: includes/emails/registration-email.php:63
+msgid ""
+"Hello {username}, \n"
+"\n"
+msgstr ""
+"Hallo {username},\n"
+"\n"
+
+#: includes/emails/password-recovery-email.php:64
+msgid ""
+"You are receiving this message because you or somebody else has attempted to "
+"reset your password on {sitename}.\n"
+"\n"
+msgstr ""
+"Du erhälst diese Nachricht, weil Du oder jemand anders versucht hat, Dein "
+"Passwort zurück zu setzen.\n"
+
+#: includes/emails/password-recovery-email.php:65
+msgid ""
+"If this was a mistake, just ignore this email and nothing will happen.\n"
+"\n"
+msgstr ""
+"Wenn dies ausversehen passiert ist, kannst Du diese E-Mail einfach "
+"ignorieren.\n"
+
+#: includes/emails/password-recovery-email.php:66
+msgid ""
+"To reset your password, visit the following address:\n"
+"\n"
+msgstr "Besuche folgende Adresse um Dein Passwort wieder herzustellen:\n"
+
+#: includes/emails/password-recovery-email.php:67
+msgid "{recovery_url}"
+msgstr "{recovery_url}"
+
+#: includes/emails/registration-email.php:32
+msgid "Registration Email"
+msgstr "Registrierungs E-Mail"
+
+#: includes/emails/registration-email.php:33
+msgid ""
+"This is the email that is sent to the user upon successful registration."
+msgstr ""
+"An diese E-Mail wird nach erfolgreicher Registrierung eine E-Mail versand."
+
+#: includes/emails/registration-email.php:49
+#, php-format
+msgid "Your %s Account"
+msgstr "Dein Account %s"
+
+#: includes/emails/registration-email.php:64
+msgid ""
+"Welcome to {sitename}, \n"
+"\n"
+msgstr "Willkommen zu {sitename}, \n"
+
+#: includes/emails/registration-email.php:65
+msgid ""
+"These are your account details \n"
+"\n"
+msgstr ""
+"Dies sind Deine Accountdetails \n"
+"\n"
+
+#: includes/emails/registration-email.php:66
+msgid "Username: {username},\n"
+msgstr "Benutzername: {username}, \n"
+
+#: includes/emails/registration-email.php:67
+msgid "Password: {password}"
+msgstr "Passwort: {password}"
+
+#: includes/fields/functions.php:248
+msgid "This field type has no output"
+msgstr "Dieser Feldtyp hat keine Ausgabe"
+
+#: includes/fields/types/avatar.php:32
+msgctxt "field type name"
+msgid "Avatar"
+msgstr "Profilbild"
+
+#: includes/fields/types/checkbox.php:32
+msgctxt "field type name"
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: includes/fields/types/display_name.php:32
+msgctxt "field type name"
+msgid "Name Display"
+msgstr "Anzeige Name"
+
+#: includes/fields/types/email.php:32
+msgctxt "field type name"
+msgid "Email"
+msgstr "E-Mail"
+
+#: includes/fields/types/file.php:32
+msgctxt "field type name"
+msgid "File"
+msgstr "Datei"
+
+#: includes/fields/types/nickname.php:32
+msgctxt "field type name"
+msgid "Nickname"
+msgstr "Nickname"
+
+#: includes/fields/types/password.php:32
+msgctxt "field type name"
+msgid "Password"
+msgstr "Passwort"
+
+#: includes/fields/types/select.php:32
+msgctxt "field type name"
+msgid "Dropdown"
+msgstr "Dropdown"
+
+#: includes/fields/types/text.php:32
+msgctxt "field type name"
+msgid "Text"
+msgstr "Text"
+
+#: includes/fields/types/textarea.php:32
+msgctxt "field type name"
+msgid "Textarea"
+msgstr "Textarea"
+
+#: includes/fields/types/username.php:32
+msgctxt "field type name"
+msgid "Username"
+msgstr "Benutzername"
+
+#: includes/filters.php:22
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/filters.php:59
+msgid "User ID"
+msgstr "Benutzer ID"
+
+#: includes/filters.php:109
+#, fuzzy, php-format
+msgid ""
+"Please support the future of <a href=\"%1$s\" target=\"_blank\">WP User "
+"Manager</a> by <a href=\"%2$s\" target=\"_blank\">rating us</a> on <a href="
+"\"%2$s\" target=\"_blank\">WordPress.org</a>"
+msgstr ""
+"Bitte unterstütze die Zukunft von <a href=\"%1$s\" target=\"_blank\" title="
+"\"Bewerte jetzt WP User Manager\">WP User Manager</a> indem Du auf <a href="
+"\"http://www.wordpress.org\" target=\"_blank\" title=\"Gehe zu Wordpress.org"
+"\">Wordpress.org</a> unser Plugin bewertest."
+
+#: includes/filters.php:330
+msgid "WPUM Page"
+msgstr "WPUM Page"
+
+#: includes/forms/class-wpum-form-password.php:59 includes/functions.php:92
+msgid "Username or email"
+msgstr "Benutzername oder E-Mail"
+
+#: includes/forms/class-wpum-form-password.php:68
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: includes/forms/class-wpum-form-password.php:75
+msgid "Re-enter new password"
+msgstr "Gib' das neue Passwort ein"
+
+#: includes/forms/class-wpum-form-password.php:110
+msgid "This user could not be found."
+msgstr "Dieser Benutzer konnte nicht gefunden werden."
+
+#: includes/forms/class-wpum-form-password.php:129
+msgid "Please enter your password."
+msgstr "Bitte gib' Dein Passwort ein"
+
+#: includes/forms/class-wpum-form-password.php:133
+#: includes/forms/class-wpum-form-update-password.php:108
+msgid "Passwords do not match."
+msgstr "Die Passwörter stimmen nicht überein."
+
+#: includes/forms/class-wpum-form-password.php:203
+#: includes/forms/class-wpum-form-password.php:208
+msgid "Invalid username or e-mail."
+msgstr "Ungültiger Benutzername oder E-Mail"
+
+#: includes/forms/class-wpum-form-password.php:222
+#: includes/forms/class-wpum-form-password.php:227
+msgid "Password reset is not allowed for this user"
+msgstr "Passwort Wiederherstellung ist für diesen Benutzer nicht zulässig."
+
+#: includes/forms/class-wpum-form-password.php:255
+msgid "Password Recovery"
+msgstr "Passwort Wiederherstellung"
+
+#: includes/forms/class-wpum-form-password.php:258
+msgid "Check your e-mail for the confirmation link."
+msgstr "Check' Deine E-Mails nach dem Bestätigungslink."
+
+#: includes/forms/class-wpum-form-password.php:314
+#: includes/forms/class-wpum-form-password.php:319
+#: includes/forms/class-wpum-form-password.php:335
+msgid "Invalid key."
+msgstr "Ungültiger Schlüssel."
+
+#: includes/forms/class-wpum-form-profile.php:231
+#: includes/forms/class-wpum-form-register.php:216
+msgid "Email address already exists."
+msgstr "Diese E-Mail Adresse existiert bereits."
+
+#: includes/forms/class-wpum-form-profile.php:249
+#: includes/forms/class-wpum-form-profile.php:257
+#: includes/forms/class-wpum-form-register.php:350
+#: includes/forms/class-wpum-form-register.php:358
+msgid "This nickname cannot be used."
+msgstr "Dieser Nickname kann nicht verwendet werden."
+
+#: includes/forms/class-wpum-form-profile.php:319
+#: includes/forms/class-wpum-form-register.php:213
+msgid "Please enter a valid email address."
+msgstr "Bitte gib' eine gültige E-Mail Adresse ein."
+
+#: includes/forms/class-wpum-form-register.php:163
+#: includes/forms/class-wpum-form-update-password.php:95
+msgid "Password must be at least 8 characters long."
+msgstr "Das Passwort muss mindestens 8 Zeichen lang sein."
+
+#: includes/forms/class-wpum-form-register.php:167
+#: includes/forms/class-wpum-form-update-password.php:99
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter."
+msgstr ""
+"Das Passwort muss mindestens 8 Zeichen lang sein, und 1 Nummer sowie 1 "
+"Großbuchstaben enthalten."
+
+#: includes/forms/class-wpum-form-register.php:171
+#: includes/forms/class-wpum-form-update-password.php:103
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter and 1 special character."
+msgstr ""
+"Das Passwort muss mindestens 8 Zeichen lang sein, mindestens 1 Nummer, 1 "
+"Großbuchstaben sowie 1 Sonderzeichen enthalten."
+
+#: includes/forms/class-wpum-form-register.php:256
+msgid "Failed Honeypot validation"
+msgstr "Honeypot Validierung nicht erfolgreich"
+
+#: includes/forms/class-wpum-form-register.php:274
+#, php-format
+msgid ""
+"By registering to this website you agree to the <a href=\"%s\" target="
+"\"_blank\">terms &amp; conditions</a>."
+msgstr ""
+"Mit der Registrierung erklärst Du Dich mit den <a href=\"%s\" target=\"_blank"
+"\">Anmeldebedingungen</a> einverstanden."
+
+#: includes/forms/class-wpum-form-register.php:293
+msgid "Select Role"
+msgstr "Wähle Benutzerrolle"
+
+#: includes/forms/class-wpum-form-register.php:297
+msgid "Select your user role"
+msgstr "Wähle Deine Benutzerrole"
+
+#: includes/forms/class-wpum-form-register.php:318
+msgid "Select a valid role from the list."
+msgstr "Wähle eine gültige Rolle von der Liste."
+
+#: includes/forms/class-wpum-form-register.php:468
+msgid ""
+"Registration complete. We have sent you a confirmation email with your "
+"password."
+msgstr ""
+"Registrierung erfolgreich. Dir wurde eine Email zur Bestätigung zugesandt."
+
+#: includes/forms/class-wpum-form-register.php:470
+msgid "Registration complete."
+msgstr "Registrierung vollständig."
+
+#: includes/forms/class-wpum-form-register.php:527
+msgid "Registrations are currently disabled."
+msgstr "Registrierungen sind momentan deaktiviert."
+
+#: includes/forms/class-wpum-form-update-password.php:62
+msgid "Repeat Password"
+msgstr "Passwort-Wiederholung"
+
+#: includes/forms/class-wpum-form-update-password.php:86
+msgid "Enter a password."
+msgstr "Gib' ein Passwort ein."
+
+#: includes/forms/class-wpum-form-update-password.php:161
+msgid "Password successfully updated."
+msgstr "Passwort erfolgreich aktualisiert."
+
+#: includes/functions.php:24
+msgid "Username only"
+msgstr "nur Benutzername"
+
+#: includes/functions.php:25
+msgid "Email only"
+msgstr "nur E-Mail"
+
+#: includes/functions.php:26
+msgid "Username or Email"
+msgstr "Benutzername oder E-Mail"
+
+#: includes/functions.php:41
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: includes/functions.php:43
+msgid "Medium"
+msgstr "Medium"
+
+#: includes/functions.php:87
+msgid "Username"
+msgstr "Benutzername"
+
+#: includes/install.php:33
+msgid "Back to your website."
+msgstr "zurück zur Webseite."
+
+#: includes/lib/wp-pretty-fields/classes/class.metabox.php:202
+msgid "Error: metabox must have an id."
+msgstr "Fehler: Metabox \"%s\" benötigt eine ID"
+
+#: includes/lib/wp-pretty-fields/classes/class.metabox.php:207
+#, php-format
+msgid "Error: metabox \"%s\" must have a title."
+msgstr "Fehler: Metabox \"%s\" benötigt einen Titel."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:112
+#, php-format
+msgid "Error: metabox \"%s\" must have an ID."
+msgstr "Fehler: Metabox \"%s\" benötigt eine ID."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:117
+#, php-format
+msgid "Error: metabox \"%s\" must have a taxonomy parameter assigned."
+msgstr "Fehler: Metabox \"%s\" muss ein Taxonomie-Parameter zugewiesen werden."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:122
+#, php-format
+msgid "Error: metabox \"%s\" taxonomy parameter must be an array."
+msgstr "Fehler: Metabox \"%s\" Taxonomy Parameter muss ein Array sein."
+
+#: includes/lib/wp-pretty-fields/classes/class.user_metabox.php:91
+msgid "Error: user metabox must have an ID."
+msgstr "Fehler: Benutzer-Metabox benötigt eine ID."
+
+#: includes/lib/wp-pretty-fields/demo.php:18
+msgid "Text Field"
+msgstr "Textfeld"
+
+#: includes/lib/wp-pretty-fields/demo.php:19
+#: includes/lib/wp-pretty-fields/demo.php:26
+#: includes/lib/wp-pretty-fields/demo.php:33
+#: includes/lib/wp-pretty-fields/demo.php:40
+#: includes/lib/wp-pretty-fields/demo.php:47
+#: includes/lib/wp-pretty-fields/demo.php:54
+#: includes/lib/wp-pretty-fields/demo.php:62
+#: includes/lib/wp-pretty-fields/demo.php:69
+#: includes/lib/wp-pretty-fields/demo.php:76
+#: includes/lib/wp-pretty-fields/demo.php:84
+#: includes/lib/wp-pretty-fields/demo.php:92
+#: includes/lib/wp-pretty-fields/demo.php:100
+#: includes/lib/wp-pretty-fields/demo.php:108
+#: includes/lib/wp-pretty-fields/demo.php:115
+#: includes/lib/wp-pretty-fields/demo.php:122
+msgid "Description goes here"
+msgstr "Hier die Beschreibung eingeben"
+
+#: includes/lib/wp-pretty-fields/demo.php:20
+#: includes/lib/wp-pretty-fields/demo.php:27
+#: includes/lib/wp-pretty-fields/demo.php:34
+#: includes/lib/wp-pretty-fields/demo.php:41
+#: includes/lib/wp-pretty-fields/demo.php:48
+#: includes/lib/wp-pretty-fields/demo.php:55
+#: includes/lib/wp-pretty-fields/demo.php:63
+#: includes/lib/wp-pretty-fields/demo.php:70
+#: includes/lib/wp-pretty-fields/demo.php:77
+#: includes/lib/wp-pretty-fields/demo.php:85
+#: includes/lib/wp-pretty-fields/demo.php:93
+#: includes/lib/wp-pretty-fields/demo.php:101
+#: includes/lib/wp-pretty-fields/demo.php:109
+#: includes/lib/wp-pretty-fields/demo.php:116
+#: includes/lib/wp-pretty-fields/demo.php:123
+msgid "Field Description goes here"
+msgstr "Hier die Feldbeschreibung eingeben"
+
+#: includes/lib/wp-pretty-fields/demo.php:25
+msgid "Textarea Field"
+msgstr "Textfeld"
+
+#: includes/lib/wp-pretty-fields/demo.php:32
+msgid "URL Field"
+msgstr "URL Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:39
+msgid "Number Field"
+msgstr "Numerisches Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:46
+msgid "Email Field"
+msgstr "E-Mail Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:53
+msgid "Button Field"
+msgstr "Buttonfeld"
+
+#: includes/lib/wp-pretty-fields/demo.php:61
+msgid "Color Field"
+msgstr "Farbfeld"
+
+#: includes/lib/wp-pretty-fields/demo.php:68
+msgid "Image Field"
+msgstr "Bild Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:75
+msgid "Select Field"
+msgstr "Select Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:83
+msgid "Radio Field"
+msgstr "Radio Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:91
+msgid "Multiselect Field"
+msgstr "Multiselect Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:99
+msgid "Checkbox list Field"
+msgstr "Checkbox Listen-Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:107
+msgid "Checkbox Field"
+msgstr "Checkbox Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:114
+msgid "Editor Field"
+msgstr "Editor Feld"
+
+#: includes/lib/wp-pretty-fields/demo.php:121
+msgid "Gallery Field"
+msgstr "Gallerie-Feld"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:90
+msgid "Add/Edit Gallery"
+msgstr "Gallerie hinzufügen/editieren"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:91
+msgid "Delete Gallery"
+msgstr "Gallerie löschen"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:92
+msgid "Select or upload images to create a gallery"
+msgstr "Wähle ein Bild oder lade ein Bild hoch um eine Gallerie zu erstellen"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:93
+msgid "Insert gallery"
+msgstr "Gallerie einfügen"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:94
+msgid "Are you sure you want to delete the gallery?"
+msgstr "Bist Du sicher, dass Du Gallerie löschen möchtest?"
+
+#: includes/lib/wp-pretty-fields/fields/image.php:50
+msgid "Select or upload an image"
+msgstr "Wähle ein Bild oder lade ein Bild hoch"
+
+#: includes/lib/wp-pretty-fields/fields/image.php:51
+msgid "Insert image"
+msgstr "Bild einfügen"
+
+#: includes/misc-functions.php:172
+msgctxt "Permalink structure"
+msgid "Display user ID"
+msgstr "Angezeigte User ID"
+
+#: includes/misc-functions.php:177
+msgctxt "Permalink structure"
+msgid "Display username"
+msgstr "Angezeigter Benutzername"
+
+#: includes/misc-functions.php:178
+msgctxt "Example of permalink setting"
+msgid "username"
+msgstr "Benutzername"
+
+#: includes/misc-functions.php:182
+msgctxt "Permalink structure"
+msgid "Display nickname"
+msgstr "Anzeigter Nickname"
+
+#: includes/misc-functions.php:183
+msgctxt "Example of permalink setting"
+msgid "nickname"
+msgstr "Nickname"
+
+#: includes/misc-functions.php:406
+#, php-format
+msgid "Allowed files types are: %s"
+msgstr "Erlaubte Dateitypen sind: %s"
+
+#: includes/misc-functions.php:409
+msgid "The uploaded file is too big."
+msgstr "Die hochgeladene Datei ist zu groß."
+
+#: includes/misc-functions.php:499
+#, php-format
+msgid "Uploaded files need to be one of the following file types: %s"
+msgstr "Die hochgeladenen Dateien müssen vom folgenden Dateitypen sein: %s"
+
+#: includes/misc-functions.php:550
+msgid "Verify upload permissions"
+msgstr "Upload Rechte verfizieren"
+
+#: includes/misc-functions.php:551
+msgid "Press the button above if avatar uploads does not work."
+msgstr ""
+"Drücke den oben stehenden Knopf wenn der Profilbild Upload nicht "
+"funktioniert."
+
+#: includes/misc-functions.php:604
+msgid "Password Reset"
+msgstr "Passwort wiederherstellen"
+
+#: includes/misc-functions.php:640
+msgid "Account"
+msgstr "Account"
+
+#: includes/misc-functions.php:658
+msgid "Profile"
+msgstr "Profil"
+
+#: includes/misc-functions.php:696
+msgid "Change Password"
+msgstr "Passwort ändern"
+
+#: includes/misc-functions.php:778
+msgid "Strength Indicator"
+msgstr "Stärke Anzeige"
+
+#: includes/profiles/actions.php:55
+msgid " (Edit Account)"
+msgstr "(Account editieren)"
+
+#: includes/profiles/functions.php:129
+msgid "Overview"
+msgstr "Übersicht"
+
+#: includes/profiles/functions.php:135
+msgid "Posts"
+msgstr "Posts"
+
+#: includes/profiles/functions.php:141
+msgid "Comments"
+msgstr "Kommentare"
+
+#: includes/profiles/functions.php:406
+msgid "You are not authorized to access this area."
+msgstr "Du bist nicht berechtigt auf diese Datei zuzugreifen."
+
+#: includes/template-actions.php:122
+msgid ""
+"Login failed: You have entered incorrect login details, please try again."
+msgstr "Login fehlgeschlagen"
+
+#: includes/template-actions.php:143
+msgid "Profile successfully updated."
+msgstr "Profil erfolgreich aktualisiert"
+
+#: includes/widgets/wpum-login-form.php:31
+msgid "[WPUM] Login Form"
+msgstr "[WPUM] Login Formular"
+
+#: includes/widgets/wpum-login-form.php:32
+msgid "Display login form."
+msgstr "Zeigen Login Formular"
+
+#: includes/widgets/wpum-login-form.php:37
+#: includes/widgets/wpum-password-recovery.php:37
+#: includes/widgets/wpum-recent-users.php:37
+#: includes/widgets/wpum-registration.php:37
+msgid "Title"
+msgstr "Titel"
+
+#: includes/widgets/wpum-login-form.php:45
+msgid "Logged In title"
+msgstr "Titel wenn eingeloggt"
+
+#: includes/widgets/wpum-login-form.php:46
+msgid " This title will be displayed when logged in."
+msgstr "Dieser Titel wird angezeigt, wenn der Benutzer eingeloggt ist."
+
+#: includes/widgets/wpum-login-form.php:50
+msgid "My Account"
+msgstr "Mein Account"
+
+#: includes/widgets/wpum-login-form.php:54
+#: includes/widgets/wpum-password-recovery.php:45
+#: includes/widgets/wpum-registration.php:45
+msgid "Display login link"
+msgstr "Zeige Login Link"
+
+#: includes/widgets/wpum-login-form.php:61
+#: includes/widgets/wpum-password-recovery.php:52
+#: includes/widgets/wpum-registration.php:52
+msgid "Display password recovery link"
+msgstr "Zeige Passwort-Wiederherstellungslink"
+
+#: includes/widgets/wpum-login-form.php:68
+#: includes/widgets/wpum-password-recovery.php:59
+#: includes/widgets/wpum-registration.php:59
+msgid "Display registration link"
+msgstr "Zeige Registrierungs-Link"
+
+#: includes/widgets/wpum-login-form.php:75
+msgid "Display profile overview"
+msgstr "Zeige Profilübersicht"
+
+#: includes/widgets/wpum-login-form.php:76
+msgid ""
+"If enabled, once logged in, an overview of the current user profile will "
+"appear."
+msgstr "Wenn aktiviert, wird eine Profilübersicht nach dem Login angezeigt."
+
+#: includes/widgets/wpum-password-recovery.php:31
+msgid "[WPUM] Password Recovery Form"
+msgstr "[WPUM] Passwort-Wiederherstellungsformular"
+
+#: includes/widgets/wpum-password-recovery.php:32
+msgid "Display a form for users to recover their password."
+msgstr "Zeige ein Feld zur Passwort-Wiederherstellung."
+
+#: includes/widgets/wpum-password-recovery.php:41
+msgid "Reset password"
+msgstr "Passwort wiederherstellen"
+
+#: includes/widgets/wpum-password-recovery.php:66
+#: includes/widgets/wpum-registration.php:66
+msgid "Custom form ID (optional)"
+msgstr "Eigene Form ID (optional)"
+
+#: includes/widgets/wpum-recent-users.php:31
+msgid "[WPUM] Recent Users"
+msgstr "[WPUM] Neueste Benutzer"
+
+#: includes/widgets/wpum-recent-users.php:32
+msgid "Display a list of recently registered users."
+msgstr "Zeige eine Liste mit den neuesten Benutzern."
+
+#: includes/widgets/wpum-recent-users.php:41
+msgid "Recent Users"
+msgstr "Neue Benutzer"
+
+#: includes/widgets/wpum-recent-users.php:45
+msgid "Amount"
+msgstr "Anzahl"
+
+#: includes/widgets/wpum-recent-users.php:46
+msgid "Enter the amount of users you wish to display."
+msgstr "Trage die Zahl der Benutzer ein, die Du anzeigen möchtest."
+
+#: includes/widgets/wpum-recent-users.php:55
+msgid "Link to user profile"
+msgstr "Link zum Benutzerprofil"
+
+#: includes/widgets/wpum-recent-users.php:56
+msgid "Enable to link to the user profile."
+msgstr "Aktivieren um zum Benutzerprofil zu verlinken."
+
+#: includes/widgets/wpum-registration.php:31
+msgid "[WPUM] Registration Form"
+msgstr "[WPUM] Registrierungs-Formular"
+
+#: includes/widgets/wpum-registration.php:32
+msgid "Display the registration form."
+msgstr "Zeige das Anmelde-Formular an."
+
+#: templates/account.php:38 templates/profile/profile-tabs.php:60
+msgid "Content not found."
+msgstr "Inhalt nicht gefunden."
+
+#: templates/already-logged-in.php:22
+#, php-format
+msgid "Your are currently logged in as %s. <a href=\"%s\">Logout &raquo;</a>"
+msgstr "Du bist aktuell als %s eingeloggt. <a href=\"%s\">Logout &raquo;</a>"
+
+#: templates/directory/single-user.php:28
+msgid "This user has not provided a description yet."
+msgstr "Dieser Benutzer hat noch keine Beschreibung eingegeben."
+
+#: templates/directory/single-user.php:37 templates/profile-card.php:31
+#: templates/profile/profile-links.php:17
+msgid "Send Email"
+msgstr "Sende E-Mail"
+
+#: templates/directory/single-user.php:43
+msgid "Visit Website"
+msgstr "Webseite besuchen"
+
+#: templates/directory/single-user.php:45
+msgid "Registered:"
+msgstr "Registriert:"
+
+#: templates/directory/top-bar.php:20
+#, php-format
+msgid "Found %s users."
+msgstr "%s gefundene Benutzer"
+
+#: templates/directory/top-bar.php:27
+msgid "Sort by:"
+msgstr "Sortieren nach:"
+
+#: templates/directory/top-bar.php:34
+msgid "Results per page:"
+msgstr "Ergebnisse pro Seite:"
+
+#: templates/form-fields/file-field.php:53
+#, php-format
+msgid "Maximum file size: %s."
+msgstr "Maximale Dateigröße: %s."
+
+#: templates/form-fields/uploaded-file-html.php:22
+msgid "remove"
+msgstr "entfernen"
+
+#: templates/forms/account-form.php:42
+msgid "Update Profile"
+msgstr "Profil aktualisieren"
+
+#: templates/forms/password-form.php:35
+msgid "Your password has been reset."
+msgstr "Dein Passwort wurde zurückgesetzt."
+
+#: templates/forms/password-form.php:48
+msgid "Enter a new password below."
+msgstr "Gib' unten ein neues Passwort ein."
+
+#: templates/forms/password-form.php:65
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Passwort vergessen? Bitte gib' Deinen Benutzername oder Deine E-Mail Adresse "
+"ein. Dir wird ein Link zur Erstellung Deines neuen Passworts zugesandt."
+
+#: templates/forms/password-form.php:90
+msgid "Reset Password"
+msgstr "Passwort wiederherstellen"
+
+#: templates/forms/password-update-form.php:39
+msgid "Update Password"
+msgstr "Passwort aktualisieren"
+
+#: templates/helper-links.php:16
+#, php-format
+msgid "Already have an account? <a href=\"%s\">Sign In &raquo;</a>"
+msgstr "Du bist schon registriert? <a href=\"%s\">Hier einloggen &raquo;</a>"
+
+#: templates/helper-links.php:22
+#, php-format
+msgid "Don't have an account? <a href=\"%s\">Signup Now &raquo;</a>"
+msgstr "Du hast noch keinen Account? <a href=\"%s\">Meld' Dich an &raquo;<a>"
+
+#: templates/helper-links.php:29
+msgid "Lost your password?"
+msgstr "Passwort vergessen?"
+
+#: templates/profile.php:17
+msgid "User not found."
+msgstr "Benutzer nicht gefunden."
+
+#: templates/profile/profile-comments.php:43
+#, php-format
+msgctxt "This text displays the comments left by the user on his profile page."
+msgid "\"%s\" on <a href=\"%s\">%s</a>, %s."
+msgstr "\"%s\" auf <a href=\"%s\">%s</a>, %s."
+
+#: templates/profile/profile-comments.php:55
+#, php-format
+msgid "%s has not made any comment yet."
+msgstr "%s hat noch keinen Kommentar hinterlassen."
+
+#: templates/profile/profile-links.php:21
+msgid "Visit website"
+msgstr "Website besuchen"
+
+#: templates/profile/profile-overview.php:18
+msgid "Name"
+msgstr "Name"
+
+#: templates/profile/profile-overview.php:23
+msgid "Nickname"
+msgstr "Nickname"
+
+#: templates/profile/profile-overview.php:33
+msgid "Website"
+msgstr "Webseite"
+
+#: templates/profile/profile-overview.php:37
+msgid "Registered"
+msgstr "Registriert"
+
+#: templates/profile/profile-posts.php:33
+msgid "Posted on:"
+msgstr "gepostet am:"
+
+#: templates/profile/profile-posts.php:37
+msgid "Comments:"
+msgstr "Kommentare:"
+
+#: templates/profile/profile-posts.php:38
+msgid "No Comments"
+msgstr "Keine Kommentare"
+
+#: templates/profile/profile-posts.php:38
+msgid "1 Comment"
+msgstr "Ein Kommentar"
+
+#: templates/profile/profile-posts.php:38
+msgid "% Comments"
+msgstr "% Kommentare"
+
+#: templates/profile/profile-posts.php:52
+#, php-format
+msgid "%s did not submit any posts yet."
+msgstr "%s hat noch keine Posts veröffentlicht."
+
+#: templates/recently-registered.php:41
+msgid "No user has been found."
+msgstr "Es wurde kein Benutzer gefunden."
+
+#: templates/user-directory.php:38
+msgid "No users have been found"
+msgstr "Es wurden keine Benutzer gefunden"
+
+#: wp-user-manager.php:151 wp-user-manager.php:163
+msgid "Cheatin&#8217; huh?"
+msgstr "Am Cheaten&#8217; huh?"
+
+#~ msgid ""
+#~ "Enable to display a password meter on registration page and account page."
+#~ msgstr ""
+#~ "Aktiviere die Anzeige der Stärke des Passworts auf der Registrierungs- "
+#~ "und Accountseite."
+
+#~ msgid "Login redirect:"
+#~ msgstr "Login Weiterleitung:"
+
+#~ msgid "Logout redirect:"
+#~ msgstr "Logout Weiterleitung:"
+
+#~ msgid "Welcome to WP User Manager"
+#~ msgstr "Willkommen zum WP User Manager"
+
+#~ msgid "What's New"
+#~ msgstr "Was gibt's Neues?"
+
+#~ msgid ""
+#~ "Thank you for updating to the latest version! WP User Manager %s is ready "
+#~ "to provide improved control over your WordPress users."
+#~ msgstr ""
+#~ "Danke, dass Du auf die neuste Version aktualisiert hast. WP User manager "
+#~ "ist einsatzbereit um Dir mehr Kontrolle über Deine WordPress Benutzer zu "
+#~ "geben."
+
+#~ msgid "Come back at a later point when major updates are released."
+#~ msgstr "Komm' später wieder wenn Hauptversionen veröffentlicht wurden."
+
+#~ msgid "Read More"
+#~ msgstr "mehr lesen"
+
+#~ msgid "Disable ajax on frontend:"
+#~ msgstr "Deaktivere AJAX im Frontend:"
+
+#~ msgid ""
+#~ "Enable this option to remove ajax functionalities from your frontend."
+#~ msgstr ""
+#~ "Aktiviere diese Option um AJAX-Funktionen vom Frontend zu entfernen."
+
+#~ msgid "Wrong username or password."
+#~ msgstr "Falscher Benutzername oder Passwort."
+
+#~ msgid "Login successful."
+#~ msgstr "Login erfolgreich."
+
+#~ msgid ""
+#~ "Thank you for using <a href=\"%1$s\" target=\"_blank\">WP User Manager</"
+#~ "a>! Please <a href=\"%2$s\" target=\"_blank\">rate us</a> on <a href="
+#~ "\"%2$s\" target=\"_blank\">WordPress.org</a>"
+#~ msgstr ""
+#~ "Danke, dass Du <a href=\"%1$s\" target=\"_blank\">WP User Manager</a>! "
+#~ "Bitte <a href=\"%2$s\" target=\"_blank\">bewerte uns</a>auf <a href=\"%2$s"
+#~ "\" target=\"_blank\">WordPress.org</a>"
+
+#~ msgid "http://wpusermanager.com"
+#~ msgstr "http://wpusermanager.com"
+
+#~ msgid ""
+#~ "Create customized user profiles and easily add custom user registration, "
+#~ "login and password recovery forms to your WordPress website. WP User "
+#~ "Manager is the best solution to manage your users."
+#~ msgstr "Erstelle angepasste Benutzerprofile und füge eigene Felder hinzu"
+
+#~ msgid "Alessandro Tesoro"
+#~ msgstr "Alessandro Tesoro"

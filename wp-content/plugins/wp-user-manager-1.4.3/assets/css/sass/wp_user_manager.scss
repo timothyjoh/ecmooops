@@ -1,0 +1,262 @@
+/**
+ * WP User Manager
+ * http://wp-user-manager.com
+ *
+ * Copyright (c) 2015 Alessandro Tesoro
+ * Licensed under the GPLv2+ license.
+ */
+
+/* Admin settings page */
+.wpum-admin-message {
+	strong {
+		color: green;
+	}
+}
+
+.wpum-page-title {
+	background: url('../../images/title.png') no-repeat;
+	padding-left: 65px !important;
+}
+
+.wpum-role-option {
+	text-transform: capitalize;
+	font-weight: bold;
+	color:green;
+}
+
+.select2-container-multi {
+	width: 350px;
+}
+
+.widefat.users_page_wpum-settings {
+	thead {
+		th {
+			padding: 10px;
+		}
+	}
+	tfoot {
+		th {
+			padding: 10px;
+		}
+	}
+}
+
+.wpum-spinner {
+	display: inline-block;
+	float: none;
+}
+
+.wpum-ajax-done-message {
+	display: inline-block;
+	margin-left: 10px;
+	color: green;
+}
+
+.footer-star {
+	font-size: 14px;
+	margin-top:3px;
+	height: auto;
+	width: auto;
+}
+
+/* Hide slug */
+body.post-type-wpum_directory {
+	#edit-slug-box,
+	#preview-action {
+		display: none;
+	}
+}
+
+body.users_page_wpum-custom-fields-editor #screen-options-link-wrap, body.post-type-wpum_directory #visibility {
+	display: none;
+}
+
+// Fields editor
+.wpum-fields-editor-wrap {
+	.wpum-page-title {
+		margin-bottom: 10px;
+	}
+	.wp-filter {
+		margin-bottom: 10px;
+	}
+	#wpum_group_selector {
+		margin-left: 10px;
+	}
+	.submit-btn {
+		margin-left: 5px;
+	}
+
+	#wpum_fields_editor_edit_group {
+		.accordion-section-content {
+			padding-left:0px;
+			padding-right: 0px;
+			padding-bottom: 0px;
+		}
+	}
+
+	.wpum-group-settings {
+		padding: 0px 20px 10px 20px;
+		label {
+			font-weight: bold;
+			margin-bottom: 5px;
+			display: block;
+		}
+		input[type=text], textarea {
+			width: 100%;
+		}
+		textarea {
+			height: 100px;
+		}
+		> span {
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+// Fields Editor table
+.wpum-editor-container {
+	position: relative;
+}
+
+.wpum-table-loader {
+	background-color: rgba(255, 255, 255, 0.7);
+	position:absolute;
+	width:100%;
+	height:100%;
+	top: 0;
+	cursor: wait;
+	display: none;
+	span {
+		background-position: center center;
+		display: table-cell;
+	    text-align: center;
+	    vertical-align: middle;
+	}
+}
+
+table.wpum_fields_table_list, table.users_page_wpum-profile-fields {
+
+	.row-dragging {
+		background-color: #ffffdc;
+	}
+	tbody {
+		tr:not(.wpum-fields-editor):hover {
+			background-color: #EAF9FF;
+		}
+	}
+	th.column-order, td.column-order {
+		max-width: 50px;
+		min-width: 50px;
+		width: 50px;
+		border-right:1px solid #e1e1e1;
+		text-align: center;
+		a.button {
+			padding-top:2px;
+		}
+	}
+	td {
+		  margin-bottom: 9px;
+		  padding: 10px 10px;
+		  line-height: 1.3;
+		  vertical-align: middle;
+	}
+	td.column-order {
+		cursor: move;
+		a {
+			&:hover {
+				cursor: move;
+			}
+		}
+	}
+
+	.move-field {
+		padding-top: 3px;
+	}
+
+	.wpum-window-hide {
+		display: none;
+	}
+
+}
+
+#wpum-edit-field-form {
+	#name {
+		padding: 3px 8px;
+		font-size: 1.7em;
+		line-height: 100%;
+		height: 1.7em;
+		width: 100%;
+		outline: none;
+		margin: 0 0 3px;
+		background-color: #fff;
+	}
+
+	.description-editor {
+		margin-top: 20px;
+	}
+
+	#normal-metaboxes-wrapper {
+		margin-top: 20px;
+	}
+
+	#save-field-container {
+		width: 280px;
+	}
+
+	#wpum_field_requirement,
+	#wpum_field_on_registration,
+	#wpum_field_adjust_name,
+	#wpum_profile_visibility {
+
+		.inside {
+			padding-top: 10px;
+		}
+
+		.wpum-description {
+			font-size: 12px;
+			margin-top: 10px;
+			font-style: italic;
+			color: #969696;
+			display: inline-block;
+		}
+
+	}
+
+	#wpum_profile_visibility {
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		select {
+			width: 100%;
+		}
+	}
+
+}
+
+/* Hide screen options window */
+body.users_page_wpum-profile-fields,
+body.users_page_wpum-edit-field {
+	#screen-options-link-wrap,
+	.postbox .handlediv,
+	#wpfooter {
+		display: none;
+	}
+
+	#poststuff h3 span, #poststuff h3 {
+		cursor: auto;
+	}
+
+}
+
+/* Settings panel adjustment */
+
+#wpum-settings-panel {
+	.radio-spacer {
+		margin-bottom: 10px;
+	}
+}
+
+/* Fields editor adjustments */
+@import 'fields_editor';

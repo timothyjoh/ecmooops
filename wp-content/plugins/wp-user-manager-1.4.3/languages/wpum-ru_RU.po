@@ -1,0 +1,2971 @@
+# Copyright (C) 2015 Alessandro Tesoro
+# This file is distributed under the GPLv2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP User Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/wp-user-manager\n"
+"POT-Creation-Date: 2015-07-11 03:31+0500\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-07-11 16:00+0500\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.2\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Language: ru_RU\n"
+"Last-Translator: \n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: includes/abstracts/abstract-wpum-field-type.php:103
+#: release/wp-user-manager/includes/abstracts/abstract-wpum-field-type.php:103
+msgid "Basic"
+msgstr "Основные"
+
+#: includes/abstracts/abstract-wpum-form.php:202
+#: release/wp-user-manager/includes/abstracts/abstract-wpum-form.php:202
+msgid "%s is a required field"
+msgstr "%s - обязательное поле"
+
+#: includes/abstracts/abstract-wpum-form.php:214
+#: includes/misc-functions.php:503
+#: release/wp-user-manager/includes/abstracts/abstract-wpum-form.php:214
+#: release/wp-user-manager/includes/misc-functions.php:503
+msgid "\"%s\" (filetype %s) needs to be one of the following file types: %s"
+msgstr "\"%s\" (тип файла%s) должен быть одним из следующих типов файлов:%s"
+
+#: includes/actions.php:192 includes/install.php:33
+#: release/wp-user-manager/includes/actions.php:192
+#: release/wp-user-manager/includes/install.php:33
+msgid ""
+"This plugin requires a minimum PHP Version 5.3 to be installed on your host. "
+"<a href=\"%s\" target=\"_blank\">Click here to read how you can update your "
+"PHP version</a>."
+msgstr ""
+"Этот плагин требует минимум PHP 5.3 версия для установки на ваш хост. <a "
+"href=\"%s\" target=\"_blank\">Нажмите здесь, чтобы читать, как вы можете "
+"обновлять вашу версию PHP</a>."
+
+#: includes/admin/addons.php:80
+#: release/wp-user-manager/includes/admin/addons.php:80
+msgid "WP User Manager "
+msgstr "Учетная запись пользователя"
+
+#: includes/admin/addons.php:80
+#: release/wp-user-manager/includes/admin/addons.php:80
+msgid "Addons"
+msgstr "Доступные аддоны"
+
+#: includes/admin/addons.php:99
+#: release/wp-user-manager/includes/admin/addons.php:99
+msgid ""
+"Looks like there was a problem while retrieving the list of addons. Please "
+"visit <a href=\"%s\">%s</a> if you are looking for the WP User Manager "
+"addons."
+msgstr ""
+"<strong>Внимание!</strong> Возникла ошибка отправки сообщения эл. почты. "
+"Повторите попытку."
+
+#: includes/admin/admin-actions.php:21 includes/admin/welcome.php:209
+#: includes/filters.php:41
+#: release/wp-user-manager/includes/admin/admin-actions.php:21
+#: release/wp-user-manager/includes/admin/welcome.php:209
+#: release/wp-user-manager/includes/filters.php:41
+msgid "Documentation"
+msgstr "Документация"
+
+#: includes/admin/admin-actions.php:22
+#: release/wp-user-manager/includes/admin/admin-actions.php:22
+msgid "Add Ons"
+msgstr "Дополнения"
+
+#: includes/admin/admin-actions.php:37
+#: release/wp-user-manager/includes/admin/admin-actions.php:37
+msgid ""
+"<strong>Enabled.</strong> <br/> <small>Registrations can be disabled in <a "
+"href=\"%s\" target=\"_blank\">Settings -> General</a>.</small>"
+msgstr ""
+"<strong>Разрешено.</strong> <br/> <small>Зарегистрированные могут быть "
+"удалены <a href=\"%s\" target=\"_blank\">Настройки -> Общее</a>.</small>"
+
+#: includes/admin/admin-actions.php:39
+#: release/wp-user-manager/includes/admin/admin-actions.php:39
+msgid ""
+"Registrations are disabled. Enable the \"Membership\" option in <a href=\"%s"
+"\" target=\"_blank\">Settings -> General</a>."
+msgstr ""
+"Регистрации были выключены. Включите опцию \"Членство\" в <a href=\"%s\" "
+"target=\"_blank\">Настройки -> Общее</a>."
+
+#: includes/admin/admin-actions.php:102
+#: release/wp-user-manager/includes/admin/admin-actions.php:102
+msgid ""
+"The default user role for registrations can be changed in <a href=\"%s"
+"\">Settings -> General</a>"
+msgstr ""
+"Роль пользователя по умолчанию могут быть изменены в <a href=\"%s"
+"\">Настройках -> Общее</a>"
+
+#: includes/admin/admin-actions.php:135
+#: release/wp-user-manager/includes/admin/admin-actions.php:135
+msgid "Restore default emails"
+msgstr "Восстановить email'ы по умолчанию"
+
+#: includes/admin/admin-actions.php:136
+#: release/wp-user-manager/includes/admin/admin-actions.php:136
+msgid "Click the button to restore the default emails content and subject."
+msgstr "Нажмите кнопку, чтобы восстановить содержание писем по умолчанию. "
+
+#: includes/admin/admin-actions.php:152
+#: release/wp-user-manager/includes/admin/admin-actions.php:152
+msgid "Restore default pages"
+msgstr "Восстановить страницы по умолчанию"
+
+#: includes/admin/admin-actions.php:153
+#: release/wp-user-manager/includes/admin/admin-actions.php:153
+msgid "Click the button to restore the default core pages of the plugin."
+msgstr "Нажмите на кнопку чтобы восстановить основные страницы по умолчанию."
+
+#: includes/admin/admin-actions.php:169
+#: release/wp-user-manager/includes/admin/admin-actions.php:169
+msgid "Current profile permalink structure: %s%s"
+msgstr "Нынешняя профильная постоянная ссылка: %s%s"
+
+#: includes/admin/admin-actions.php:170
+#: release/wp-user-manager/includes/admin/admin-actions.php:170
+msgid ""
+"You can change the profiles permalink structure into your <a href=\"%s"
+"\">permalink settings page</a>."
+msgstr ""
+"Вы можете изменить постоянную ссылку профилей в  <a href=\"%s\">страница "
+"настроек постоянной ссылки</a>."
+
+#: includes/admin/admin-actions.php:174
+#: release/wp-user-manager/includes/admin/admin-actions.php:174
+msgid "Your users profile page is not configured."
+msgstr "Профиль пользователя не был изменён."
+
+#: includes/admin/admin-actions.php:174
+#: release/wp-user-manager/includes/admin/admin-actions.php:174
+msgid "<a href=\"%s\">Setup your profile page here.</a>"
+msgstr "<a href=\"%s\">Настройте свою профильную страницу.</a>"
+
+#: includes/admin/admin-actions.php:177 includes/admin/admin-notices.php:48
+#: includes/classes/class-wpum-permalinks.php:100
+#: release/wp-user-manager/includes/admin/admin-actions.php:177
+#: release/wp-user-manager/includes/admin/admin-notices.php:48
+#: release/wp-user-manager/includes/classes/class-wpum-permalinks.php:100
+msgid ""
+"You must <a href=\"%s\">change your permalinks</a> to anything else other "
+"than \"default\" for profiles to work."
+msgstr ""
+"Вы должны <a href=\"%s\">сменить свои основные ссылки</a> иначе профиль \"по "
+"умолчанию\" не будет работать."
+
+#: includes/admin/admin-actions.php:212
+#: release/wp-user-manager/includes/admin/admin-actions.php:212
+msgid "Add New Line"
+msgstr "Добавить новую линию"
+
+#: includes/admin/admin-actions.php:260
+#: release/wp-user-manager/includes/admin/admin-actions.php:260
+msgid ""
+"Hey, looks like you've been using the <b>WP User Manager</b> plugin for some "
+"time now - that's awesome! <br/> Could you please give it a review on "
+"wordpress.org ? Just to help us spread the word and boost our motivation :) "
+"<br/> <br/><a href='%s' class='button button-primary' target='_blank'>Yes, "
+"you deserve it!</a> - <a href='%s'>I've already done this!</a>"
+msgstr ""
+"Эй выглядит как вы используете <b>Менеджер пользователей WP</b> плагин для "
+"некоторого времени - это огромная!<br>Могли бы вы пожалуйста дать ему обзор "
+"на wordpress.org? Просто, чтобы помочь нам распространить слово и увеличить "
+"нашу мотивацию :)<br><br><a href='%s' class='button button-primary' "
+"target='_blank'>Да, вы это заслужили!</a> - <a href='%s'>я уже сделал это!</"
+"a>"
+
+#: includes/admin/admin-notices.php:27
+#: release/wp-user-manager/includes/admin/admin-notices.php:27
+msgid ""
+"You have enabled the \"Minimum Password Strength\" option, the \"Users "
+"custom passwords\" is currently disabled and must be enabled for custom "
+"passwords to work."
+msgstr ""
+"Вы включили опцию «Минимальная сила пароля», «пользовательские пароли "
+"пользователей» в настоящее время отключена и должна быть включена для "
+"пользовательских паролей для работы."
+
+#: includes/admin/admin-notices.php:31
+#: release/wp-user-manager/includes/admin/admin-notices.php:31
+msgid ""
+"Error: the option \"Login after registration\" can only work when the option "
+"\"Users custom passwords\" is enabled too."
+msgstr ""
+"Ошибка: опция \"Войти после регистрации\" может работать только когда "
+"включена опция \"Пароли для пользователе\""
+
+#: includes/admin/admin-notices.php:35
+#: release/wp-user-manager/includes/admin/admin-notices.php:35
+msgid "Email successfully updated."
+msgstr "Электронная почта успешно обновлена."
+
+#: includes/admin/admin-notices.php:43
+#: release/wp-user-manager/includes/admin/admin-notices.php:43
+msgid "One or more WPUM pages are not configured."
+msgstr "Одна или более страниц WPUM не были изменены."
+
+#: includes/admin/admin-notices.php:43
+#: release/wp-user-manager/includes/admin/admin-notices.php:43
+msgid ""
+"<a href=\"%s\" class=\"button-primary\">Click here to setup your pages</a>"
+msgstr ""
+"<a href=\"%s\" class=\"button-primary\">Кликните сюда, чтобы настроить свою "
+"страницу</a>"
+
+#: includes/admin/admin-notices.php:52
+#: release/wp-user-manager/includes/admin/admin-notices.php:52
+msgid "Pages setup completed."
+msgstr "Настройка страницы завершена."
+
+#: includes/admin/admin-notices.php:62
+#: release/wp-user-manager/includes/admin/admin-notices.php:62
+msgid ""
+"Your uploads folder in \"%s\" is not writable. <br/>Avatar uploads will not "
+"work, please adjust folder permission.<br/><br/> <a href=\"%s\" class="
+"\"button\" target=\"_blank\">Read More</a>"
+msgstr ""
+"Ваша папка для загрузок \"%s\" не допустимо. <br/>Не удалось загрузить "
+"аватар, пожалуйста укажите правильную папку.<br/><br/> <a href=\"%s\" class="
+"\"button\" target=\"_blank\">Читайте Далее</a>"
+
+#: includes/admin/admin-notices.php:64
+#: release/wp-user-manager/includes/admin/admin-notices.php:64
+msgid "No issues detected."
+msgstr "Никаких проблем не обнаружено."
+
+#: includes/admin/admin-notices.php:72
+#: release/wp-user-manager/includes/admin/admin-notices.php:72
+msgid "Field group successfully updated."
+msgstr "Поле для группы успешно обновлено."
+
+#: includes/admin/admin-notices.php:76
+#: release/wp-user-manager/includes/admin/admin-notices.php:76
+msgid "Field group successfully deleted."
+msgstr "Поле для группы успешно удалено."
+
+#: includes/admin/admin-notices.php:80
+#: release/wp-user-manager/includes/admin/admin-notices.php:80
+msgid "Field successfully updated."
+msgstr "Поля успешно обновлены."
+
+#: includes/admin/admin-pages.php:26
+#: release/wp-user-manager/includes/admin/admin-pages.php:26
+msgid "WPUM Profile Fields Editor"
+msgstr "WPUM Редактирование Полей Профиля"
+
+#: includes/admin/admin-pages.php:26
+#: release/wp-user-manager/includes/admin/admin-pages.php:26
+msgid "Profile Fields"
+msgstr "Поле для Профилей"
+
+#: includes/admin/admin-pages.php:27
+#: release/wp-user-manager/includes/admin/admin-pages.php:27
+msgid "WPUM Edit Field"
+msgstr "Поле для Редактирования WPUM"
+
+#: includes/admin/admin-pages.php:27
+#: release/wp-user-manager/includes/admin/admin-pages.php:27
+msgid "Edit Field"
+msgstr "Редактировать Поля"
+
+#: includes/admin/admin-pages.php:28
+#: release/wp-user-manager/includes/admin/admin-pages.php:28
+msgid "WP User Manager Settings"
+msgstr "WP Менеджер Пользователей Настройки"
+
+#: includes/admin/admin-pages.php:28
+#: release/wp-user-manager/includes/admin/admin-pages.php:28
+msgid "WPUM Settings"
+msgstr "WPUM Настройки"
+
+#: includes/admin/admin-pages.php:29
+#: release/wp-user-manager/includes/admin/admin-pages.php:29
+msgid "WP User Manager Email Editor"
+msgstr "WP Менеджер Пользователей Редактор Писем"
+
+#: includes/admin/admin-pages.php:29
+#: release/wp-user-manager/includes/admin/admin-pages.php:29
+msgid "WPUM Email Editor"
+msgstr "WPUM Редактор Писем"
+
+#: includes/admin/admin-pages.php:30
+#: release/wp-user-manager/includes/admin/admin-pages.php:30
+msgid "WP User Manager Addons"
+msgstr "WP Менеджер Пользователей Дополнения"
+
+#: includes/admin/admin-pages.php:30
+#: release/wp-user-manager/includes/admin/admin-pages.php:30
+msgid "WPUM Addons"
+msgstr "WPUM Аддоны"
+
+#: includes/admin/edit-email-page.php:44
+#: release/wp-user-manager/includes/admin/edit-email-page.php:44
+msgid "WP User Manager - Editing \"%s\""
+msgstr "WP Менеджер Пользователей - Настройки \"%s\""
+
+#: includes/admin/edit-email-page.php:44
+#: release/wp-user-manager/includes/admin/edit-email-page.php:44
+msgid "Back to settings page &raquo;"
+msgstr "Обратно к настройкам страницы &raquo;"
+
+#: includes/admin/edit-email-page.php:52
+#: release/wp-user-manager/includes/admin/edit-email-page.php:52
+msgid "Email Subject:"
+msgstr "Тема Письма:"
+
+#: includes/admin/edit-email-page.php:56
+#: release/wp-user-manager/includes/admin/edit-email-page.php:56
+msgid "The subject line of the email"
+msgstr "Тема указанная в электронной почте"
+
+#: includes/admin/edit-email-page.php:61
+#: release/wp-user-manager/includes/admin/edit-email-page.php:61
+msgid "Email Message:"
+msgstr "Сообщения электронной почты:"
+
+#: includes/admin/edit-email-page.php:65
+#: release/wp-user-manager/includes/admin/edit-email-page.php:65
+msgid ""
+"The email message to be sent into the notification. The following template "
+"tags can be used in the message:"
+msgstr ""
+"Сообщение электронной почты для отправки в уведомлении. Следующие теги "
+"шаблонов можно использовать в сообщении :"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:64
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:64
+msgid "Click the \"Edit Email\" button to customize notifications."
+msgstr "Нажмите на \"изменить Email\" чтобы настроить уведомления."
+
+#: includes/admin/emails/class-wpum-emails-editor.php:64
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:64
+msgid ""
+"Only the emails into the list above, will use the \"From Name\" and \"From "
+"Email\" options above."
+msgstr ""
+"Письма указанные в этом списке , будут использованы в опциях \" От Имени \" "
+"и \" От Email'ов \"  ."
+
+#: includes/admin/emails/class-wpum-emails-editor.php:118
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:118
+msgid "%s email"
+msgstr "%s электронная почта"
+
+#: includes/admin/emails/class-wpum-emails-list.php:50
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-list.php:50
+msgid "Email Title"
+msgstr "Заголовок Письма"
+
+#: includes/admin/emails/class-wpum-emails-list.php:51
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-list.php:51
+msgid "Email Description"
+msgstr "Описание Письма"
+
+#: includes/admin/emails/class-wpum-emails-list.php:52
+#: includes/admin/fields/class-wpum-groups-fields.php:64
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-list.php:52
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:64
+msgid "Actions"
+msgstr "Действия"
+
+#: includes/admin/emails/class-wpum-emails-list.php:153
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-list.php:153
+msgid "Edit Email"
+msgstr "Редактировать Письмо"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:150
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:150
+msgid "WP User Manager - Fields Editor"
+msgstr "WP Менеджер Пользователей - Поля для Редактирования"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:204
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:204
+msgid ""
+"It seems you do not have any field groups. Please deactivate and re-activate "
+"the plugin."
+msgstr ""
+"Кажется у вас пропали поля для групп. Пожалуйста отключите и повторно "
+"включите плагин."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:223
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:223
+msgid "Select a field group to edit:"
+msgstr "Выберите поле для редактирование:"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:233
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:233
+msgid "Select"
+msgstr "Выбор"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:304
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:304
+msgid "Group Settings"
+msgstr "Настройки группы"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:305
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:305
+msgid "Fields Order"
+msgstr "Поля для Заказов"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:318
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:318
+msgid "Requirement"
+msgstr "Рекомендованные"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:322
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:322
+msgid "Show on registration form"
+msgstr "Показать форму для регистрации"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:334
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:334
+msgid "Click and drag the %s button to change the order of the fields."
+msgstr "Нажмите и перетащите кнопку %s , чтобы изменить порядок полей ."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:354
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:354
+msgid "Fields into this group can appear on the signup page."
+msgstr "Поля в этой группе могут появиться на странице регистрации."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:371
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:371
+msgid "Group name"
+msgstr "Имя группы"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:379
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:379
+msgid "Group description"
+msgstr "Групп"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:398
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:398
+msgid "Delete Group"
+msgstr "Удалить группу"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:405
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:405
+msgid "Save Group Settings"
+msgstr "Сохранить настройки группы"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:487
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:487
+msgid "Editing field"
+msgstr "Редактирование поля"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:488
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:488
+msgid "Back to editor"
+msgstr "Обратно к редактированию"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:510
+#: includes/admin/fields/class-wpum-fields-editor.php:519
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:510
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:519
+msgid "Save Field"
+msgstr "Сохранить поле"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:556
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:556
+msgid "Enter a name for this field"
+msgstr "Введите имя для этого поля"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:590
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:590
+msgid "Field Description (optional)"
+msgstr "Поле для описания (опционально)"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:609
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:609
+msgid "Set this field as required ?"
+msgstr "Сделаете это поле обязательным?"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:610
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:610
+msgid "Enable to force the user to fill this field."
+msgstr "Включить , чтобы заставить пользователя, заполнить это поле ."
+
+#: includes/admin/fields/class-wpum-fields-editor.php:628
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:628
+msgid "Display this field on registration ?"
+msgstr "Выводить это поля на регистрацию?"
+
+#: includes/admin/fields/class-wpum-fields-editor.php:629
+#: release/wp-user-manager/includes/admin/fields/class-wpum-fields-editor.php:629
+msgid "Enable to display this field on the registration form."
+msgstr "Включить вывод этого поля на форму регистрации."
+
+#: includes/admin/fields/class-wpum-groups-fields.php:48
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:48
+msgid "No fields have been found."
+msgstr "Ни одного поля не было найдено."
+
+#: includes/admin/fields/class-wpum-groups-fields.php:60
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:60
+msgid "Order"
+msgstr "Порядок"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:61
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:61
+msgid "Field Title"
+msgstr "Поле для Заголовка"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:62
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:62
+msgid "Field Type"
+msgstr "Поле для ввода"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:63
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:63
+msgid "Required"
+msgstr "Требования"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:179
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:179
+msgid "Text"
+msgstr "Текст"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:182
+#: includes/functions.php:90
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:182
+#: release/wp-user-manager/includes/functions.php:90
+#: release/wp-user-manager/templates/profile/profile-overview.php:28
+#: templates/profile/profile-overview.php:28
+msgid "Email"
+msgstr "Электронная почта"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:184
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:184
+msgid "Dropdown"
+msgstr "Падающая"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:186
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:186
+msgid "Textarea"
+msgstr "Место для текста"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:188
+#: includes/classes/class-wpum-shortcodes.php:72
+#: includes/forms/class-wpum-form-update-password.php:55
+#: includes/functions.php:115
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:188
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:72
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:55
+#: release/wp-user-manager/includes/functions.php:115
+msgid "Password"
+msgstr "Пароль"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:190
+#: includes/lib/wp-pretty-fields/fields/image.php:49
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:190
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/image.php:49
+msgid "Upload"
+msgstr "Загрузить"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:224
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:224
+msgid "Edit"
+msgstr "Исправить"
+
+#: includes/admin/fields/class-wpum-groups-fields.php:230
+#: release/wp-user-manager/includes/admin/fields/class-wpum-groups-fields.php:230
+msgid "Delete"
+msgstr "Удалить"
+
+#: includes/admin/settings/display-settings.php:32
+#: release/wp-user-manager/includes/admin/settings/display-settings.php:32
+msgid "WP User Manager v%s Settings"
+msgstr "WP Менеджер Пользователей v%s Настройки"
+
+#: includes/admin/settings/register-settings.php:183
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:183
+msgid "Pages Setup"
+msgstr "Настройка страниц"
+
+#: includes/admin/settings/register-settings.php:188
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:188
+msgid "Login page:"
+msgstr "Страница для входа:"
+
+#: includes/admin/settings/register-settings.php:189
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:189
+msgid "Select the page where you have added the login shortcode."
+msgstr ""
+"Выберите страницу, на которой вы хотите разместить shortcode входа на сайта."
+
+#: includes/admin/settings/register-settings.php:195
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:195
+msgid "Password recovery page:"
+msgstr "Страница восстановления паролей:"
+
+#: includes/admin/settings/register-settings.php:196
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:196
+msgid "Select the page where you have added the password recovery shortcode."
+msgstr ""
+"Выберите страницу на которой вы хотите разместить shortcode восстановление "
+"пароля."
+
+#: includes/admin/settings/register-settings.php:202
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:202
+msgid "Registration page:"
+msgstr "Страница регистрации:"
+
+#: includes/admin/settings/register-settings.php:203
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:203
+msgid "Select the page where you have added the registration shortcode."
+msgstr ""
+"Выберите страницу на которой вы хотите разместить shortcode регистрации на "
+"сайта."
+
+#: includes/admin/settings/register-settings.php:209
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:209
+msgid "Account page:"
+msgstr "Страница аккаунта:"
+
+#: includes/admin/settings/register-settings.php:210
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:210
+msgid "Select the page where you have added the account shortcode."
+msgstr "Выберите страницу на которой вы хотите разместить shortcode аккаунта."
+
+#: includes/admin/settings/register-settings.php:216
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:216
+msgid "Profile page:"
+msgstr "Страница профиля:"
+
+#: includes/admin/settings/register-settings.php:217
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:217
+msgid "Select the page where you have added the profile shortcode."
+msgstr "Выберите страницу на которой вы хотите разместить shortcode профиля."
+
+#: includes/admin/settings/register-settings.php:223
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:223
+msgid "Passwords Setup"
+msgstr "Настройки паролей"
+
+#: includes/admin/settings/register-settings.php:228
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:228
+msgid "Minimum Password Strength:"
+msgstr "Минимальная Защита Пароля"
+
+#: includes/admin/settings/register-settings.php:229
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:229
+msgid ""
+"Select the required password strength. This will be forced on registration "
+"and account page."
+msgstr ""
+"Выберите желаемую защиту для паролей. Это будет указано на странице "
+"регистрации аккаунта."
+
+#: includes/admin/settings/register-settings.php:235
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:235
+msgid "Display password meter:"
+msgstr "Вывести защиту пароля:"
+
+#: includes/admin/settings/register-settings.php:236
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:236
+msgid ""
+"Enable to display a password meter on registration page and account page."
+msgstr "Включить вывод защиты пароля на странице регистрации аккаунта."
+
+#: includes/admin/settings/register-settings.php:241
+#: includes/admin/settings/register-settings.php:326
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:241
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:326
+msgid "Extra"
+msgstr "Экстра"
+
+#: includes/admin/settings/register-settings.php:246
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:246
+msgid "Allow users to login with:"
+msgstr "Разрешить пользователем входить с:"
+
+#: includes/admin/settings/register-settings.php:252
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:252
+msgid "Display registration link:"
+msgstr "Вывести ссылку на регистрации:"
+
+#: includes/admin/settings/register-settings.php:253
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:253
+msgid "Enable to display a registration link into the login form."
+msgstr ""
+"Включить вывод регистрационной ссылки на страницу с формой входа на сайт."
+
+#: includes/admin/settings/register-settings.php:258
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:258
+msgid "Display password recovery link:"
+msgstr "Вывести ссылку на восстановление пароля."
+
+#: includes/admin/settings/register-settings.php:259
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:259
+msgid "Enable to display a password recovery link into the login form."
+msgstr ""
+"Включить вывод ссылки восстановление пароля на страницу с формой входа на "
+"сайт."
+
+#: includes/admin/settings/register-settings.php:264
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:264
+msgid "Admin Bar:"
+msgstr "Админка:"
+
+#: includes/admin/settings/register-settings.php:265
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:265
+msgid "Hide admin bar for specific user roles."
+msgstr "Спрятать панель админа для определённых ролей пользователей."
+
+#: includes/admin/settings/register-settings.php:267
+#: includes/admin/settings/register-settings.php:302
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:267
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:302
+msgid "Select the user roles from the list."
+msgstr "Выбрать роли пользователей из списка"
+
+#: includes/admin/settings/register-settings.php:277
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:277
+msgid "Registrations Status:"
+msgstr "Статус Регистрации:"
+
+#: includes/admin/settings/register-settings.php:282
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:282
+msgid "Default user registration role:"
+msgstr "Роль при регистрации пользователя по умолчанию:"
+
+#: includes/admin/settings/register-settings.php:287
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:287
+msgid "Users custom passwords:"
+msgstr "Обычный пароль пользователя:"
+
+#: includes/admin/settings/register-settings.php:288
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:288
+msgid "Enable to allow users to set custom passwords on the registration page."
+msgstr ""
+"Включить для того, чтобы пользователь мог сам выбрать пароль при регистрации."
+
+#: includes/admin/settings/register-settings.php:293
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:293
+msgid "Allow role section:"
+msgstr "Разрешит выбирать роль:"
+
+#: includes/admin/settings/register-settings.php:294
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:294
+msgid "Enable to allow users to select a user role on registration."
+msgstr ""
+"Включите для того, чтобы пользователь мог выбрать роль при регистрации."
+
+#: includes/admin/settings/register-settings.php:299
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:299
+msgid "Allowed Roles:"
+msgstr "Разрешённые Роли:"
+
+#: includes/admin/settings/register-settings.php:300
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:300
+msgid "Select which roles can be selected upon registration."
+msgstr "Выберите роли, которые можно будет выбрать при регистрации."
+
+#: includes/admin/settings/register-settings.php:308
+#: includes/forms/class-wpum-form-register.php:281
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:308
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:281
+msgid "Terms &amp; Conditions"
+msgstr "Правила &amp; Условия"
+
+#: includes/admin/settings/register-settings.php:313
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:313
+msgid "Enable terms &amp conditions:"
+msgstr "Включить правила &amp условия:"
+
+#: includes/admin/settings/register-settings.php:314
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:314
+msgid ""
+"Enable to force users to agree to your terms before registering an account."
+msgstr ""
+"Включите чтобы пользователь ознакомился и согласился с правилами вашего "
+"сайта до регистрации аккаунта."
+
+#: includes/admin/settings/register-settings.php:319
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:319
+msgid "Terms Page:"
+msgstr "Страница c Правилами сайта:"
+
+#: includes/admin/settings/register-settings.php:320
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:320
+msgid "Select the page that contains your terms."
+msgstr "Выберите страницу на которой размещены правила сайта."
+
+#: includes/admin/settings/register-settings.php:331
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:331
+msgid "Anti-spam Honeypot:"
+msgstr "Анти-спам ханипот:"
+
+#: includes/admin/settings/register-settings.php:332
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:332
+msgid "Enables honeypot spam protection technique."
+msgstr "Включить защитника от спама."
+
+#: includes/admin/settings/register-settings.php:337
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:337
+msgid "Login after registration:"
+msgstr "Войти на сайт после регистрации:"
+
+#: includes/admin/settings/register-settings.php:338
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:338
+msgid "Enable this option to authenticate users after registration."
+msgstr ""
+"Включите данную опции если вы хотите, чтобы пользователи входили на сайт "
+"после регистрации."
+
+#: includes/admin/settings/register-settings.php:347
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:347
+msgid "From Name:"
+msgstr "От Имени:"
+
+#: includes/admin/settings/register-settings.php:348
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:348
+msgid ""
+"The name emails are said to come from. This should probably be your site "
+"name."
+msgstr ""
+"Имена тех кто прислал вам email.  Это должно быть вашем именем на сайте."
+
+#: includes/admin/settings/register-settings.php:354
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:354
+msgid "From Email:"
+msgstr "От Email:"
+
+#: includes/admin/settings/register-settings.php:355
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:355
+msgid "This will act as the \"from\" and \"reply-to\" address."
+msgstr "Это будет действовать как \"от\" и \"ответить на\" адрес."
+
+#: includes/admin/settings/register-settings.php:361
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:361
+msgid "Email Template"
+msgstr "Шаблон Email"
+
+#: includes/admin/settings/register-settings.php:362
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:362
+msgid "Choose a template."
+msgstr "Выберите шаблон."
+
+#: includes/admin/settings/register-settings.php:368
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:368
+msgid "Emails Editor:"
+msgstr "Редактирование письма:"
+
+#: includes/admin/settings/register-settings.php:373
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:373
+msgid "Notifications Settings"
+msgstr "Уведомления Настройки"
+
+#: includes/admin/settings/register-settings.php:378
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:378
+msgid "Disable admin registration email:"
+msgstr "Отключите регистрацию по email Админа:"
+
+#: includes/admin/settings/register-settings.php:379
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:379
+msgid ""
+"Enable this option to stop receiving notifications when a new user registers."
+msgstr ""
+"Включите эту опцию, чтобы прекратить получать уведомления по почте, когда "
+"новые пользователи зарегистрировались."
+
+#: includes/admin/settings/register-settings.php:384
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:384
+msgid "Disable admin password recovery email:"
+msgstr "Отключите восстановление паролей по email Админа"
+
+#: includes/admin/settings/register-settings.php:385
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:385
+msgid ""
+"Enable this option to stop receiving notifications when a new user resets "
+"his password."
+msgstr ""
+"Включите эту опцию, чтобы прекратить получать уведомления , когда новый "
+"пользователь сбросил свой пароль."
+
+#: includes/admin/settings/register-settings.php:394
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:394
+msgid "Profile permalink:"
+msgstr "Профильные постоянные ссылки:"
+
+#: includes/admin/settings/register-settings.php:399
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:399
+msgid "Allow guests to view profiles"
+msgstr "Разрешить гостям просматривать профили"
+
+#: includes/admin/settings/register-settings.php:400
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:400
+msgid "Enable this option to allow guests to view users profiles."
+msgstr ""
+"Включите эту опцию , чтобы гости , могли просматривать профили пользователей."
+
+#: includes/admin/settings/register-settings.php:405
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:405
+msgid "Allow members to view profiles"
+msgstr "Разрешить пользователям просматривать профили"
+
+#: includes/admin/settings/register-settings.php:406
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:406
+msgid ""
+"Enable this option to allow members to view users profiles. If disabled, "
+"users can only see their own profile."
+msgstr ""
+"Включите эту опцию, чтобы разрешить подписчикам сайта смотреть профили "
+"пользователей . Если отключена , пользователи могут видеть только свой ​​"
+"собственный профиль."
+
+#: includes/admin/settings/register-settings.php:411
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:411
+msgid "Custom Avatars"
+msgstr "Пользовательские Аватары"
+
+#: includes/admin/settings/register-settings.php:412
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:412
+msgid ""
+"Enable this option to allow users to upload custom avatars for their "
+"profiles."
+msgstr ""
+"Включите эту опцию, чтобы разрешить пользователям загружать пользовательские "
+"аватары для своих профилей."
+
+#: includes/admin/settings/register-settings.php:417
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:417
+msgid "Display posts"
+msgstr "Показывать записи"
+
+#: includes/admin/settings/register-settings.php:418
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:418
+msgid ""
+"Enable this option to display users submitted post on their profile page."
+msgstr ""
+"Включите эту опцию для отображения пользователей, представленные записи на "
+"своей странице профиля."
+
+#: includes/admin/settings/register-settings.php:423
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:423
+msgid "Display comments"
+msgstr "Показать комментарии"
+
+#: includes/admin/settings/register-settings.php:424
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:424
+msgid ""
+"Enable this option to display users submitted comments on their profile page."
+msgstr ""
+"Включите эту опцию , чтобы пользователи смогли просматривать свои "
+"комментарии на странице профиля."
+
+#: includes/admin/settings/register-settings.php:433
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:433
+msgid "Login redirect:"
+msgstr "Направить после входа на сайт:"
+
+#: includes/admin/settings/register-settings.php:434
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:434
+msgid ""
+"Select the page where you want to redirect users after they login. If empty "
+"will return to the current page."
+msgstr ""
+"Выберите страницу , куда бы вы хотели, перенаправлять пользователей после "
+"того как они войдут в систему.  Если пусто вернется к текущей странице ."
+
+#: includes/admin/settings/register-settings.php:440
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:440
+msgid "Logout redirect:"
+msgstr "Направить после выхода с сайта:"
+
+#: includes/admin/settings/register-settings.php:441
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:441
+msgid ""
+"Select the page where you want to redirect users after they logout. If empty "
+"will return to wp-login.php"
+msgstr ""
+"Выберите страницу , куда бы вы хотели , перенаправлять пользователей после "
+"того как они выходят из системы . Если пусто вернется к WP- login.php"
+
+#: includes/admin/settings/register-settings.php:447
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:447
+msgid "Backend register redirect:"
+msgstr "Направить после backend регистрации на:"
+
+#: includes/admin/settings/register-settings.php:448
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:448
+msgid ""
+"Select a page if you wish to redirect users who try to signup through <a "
+"href=\"%s\">the default registration page on wp-login.php</a>"
+msgstr ""
+"Выберите страницу, куда бы вы хотели, перенаправить пользователей , которые "
+"пытаются зарегистрироваться через <a href=\"%s\">страницу регистрации по "
+"умолчанию на WP - login.php </a>"
+
+#: includes/admin/settings/register-settings.php:454
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:454
+msgid "Backend profile redirect:"
+msgstr "Направить после профиля backend на:"
+
+#: includes/admin/settings/register-settings.php:455
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:455
+msgid ""
+"Select the page where you want to redirect users who try to access their "
+"profile on the backend."
+msgstr ""
+"Выберите страницу , куда бы вы хотели , перенаправить пользователей, которые "
+"пытаются получить доступ к свой ​​профильной странице через интерфейс."
+
+#: includes/admin/settings/register-settings.php:469
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:465
+msgid "Restore default emails:"
+msgstr "Восстановить письма по умолчанию:"
+
+#: includes/admin/settings/register-settings.php:474
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:470
+msgid "Restore Pages:"
+msgstr "Восстановленные страницы:"
+
+#: includes/admin/settings/register-settings.php:479
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:481
+msgid "Excluded usernames:"
+msgstr "Исключенные имя пользователя"
+
+#: includes/admin/settings/register-settings.php:480
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:482
+msgid ""
+"Enter the usernames that you wish to disable. Separate each username on a "
+"new line."
+msgstr ""
+"Введите имена пользователей , которые вы хотите исключить . Отделите каждый "
+"логин с новой строки ."
+
+#: includes/admin/settings/register-settings.php:550
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:552
+msgid "Settings successfully updated."
+msgstr "Настойки успешно сохранены."
+
+#: includes/admin/settings/register-settings.php:578
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:580
+msgid "General"
+msgstr "Общие"
+
+#: includes/admin/settings/register-settings.php:579
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:581
+msgid "Registration"
+msgstr "Регистрация"
+
+#: includes/admin/settings/register-settings.php:580
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:582
+msgid "Emails"
+msgstr "Электронные почты"
+
+#: includes/admin/settings/register-settings.php:581
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:583
+msgid "Profiles"
+msgstr "Профили"
+
+#: includes/admin/settings/register-settings.php:582
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:584
+msgid "Redirects"
+msgstr "Переходы"
+
+#: includes/admin/settings/register-settings.php:585 includes/filters.php:42
+#: release/wp-user-manager/includes/filters.php:42
+msgid "Extensions"
+msgstr "Расширения"
+
+#: includes/admin/settings/register-settings.php:588
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:585
+msgid "Tools"
+msgstr "Настройки"
+
+#: includes/admin/settings/register-settings.php:758
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:755
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr ""
+"Функция обратного вызова для <strong>%s</strong> настройки отсутствуют."
+
+#: includes/admin/welcome.php:50 includes/admin/welcome.php:51
+#: release/wp-user-manager/includes/admin/welcome.php:50
+#: release/wp-user-manager/includes/admin/welcome.php:51
+msgid "Welcome to WP User Manager"
+msgstr "Добро пожаловать в WP Менеджер Пользователей"
+
+#: includes/admin/welcome.php:59 includes/admin/welcome.php:60
+#: release/wp-user-manager/includes/admin/welcome.php:59
+#: release/wp-user-manager/includes/admin/welcome.php:60
+msgid "Getting started with WP User Manager"
+msgstr "С чего начать знакомство с WP пользовательский менеджер"
+
+#: includes/admin/welcome.php:135
+#: release/wp-user-manager/includes/admin/welcome.php:135
+msgid "What's New"
+msgstr "Что нового"
+
+#: includes/admin/welcome.php:140
+#: release/wp-user-manager/includes/admin/welcome.php:140
+msgid "Getting Started"
+msgstr "С чего начать"
+
+#: includes/admin/welcome.php:158 includes/admin/welcome.php:181
+#: release/wp-user-manager/includes/admin/welcome.php:158
+#: release/wp-user-manager/includes/admin/welcome.php:181
+msgid "Welcome to WP User Manager %s"
+msgstr "Добро пожаловать в WP пользовательский менеджер %s"
+
+#: includes/admin/welcome.php:159
+#: release/wp-user-manager/includes/admin/welcome.php:159
+msgid ""
+"Thank you for updating to the latest version! WP User Manager %s is ready to "
+"provide improved control over your WordPress users."
+msgstr ""
+"Спасибо за обновление последней версии! WP менеджер пользователей %s готов "
+"предоставить улучшенный контроль за учётными записями Wordpress."
+
+#: includes/admin/welcome.php:160 includes/admin/welcome.php:183
+#: release/wp-user-manager/includes/admin/welcome.php:160
+#: release/wp-user-manager/includes/admin/welcome.php:183
+msgid "Version %s"
+msgstr "Версия"
+
+#: includes/admin/welcome.php:164
+#: release/wp-user-manager/includes/admin/welcome.php:164
+msgid "Come back at a later point when major updates are released."
+msgstr ""
+"Вернись на более позднем этапе , когда основные обновления будут выпущены ."
+
+#: includes/admin/welcome.php:182
+#: release/wp-user-manager/includes/admin/welcome.php:182
+msgid ""
+"Thank you for installing the latest version! WP User Manager %s is ready to "
+"provide improved control over your WordPress users."
+msgstr ""
+"Спасибо за установку последней версии! WP менеджер пользователей %s готов "
+"предоставить улучшенный контроль за учётными записями Wordpress."
+
+#: includes/admin/welcome.php:187
+#: release/wp-user-manager/includes/admin/welcome.php:187
+msgid ""
+"Use the tips below to get started using WP User Manager. You will be up and "
+"running in no time!"
+msgstr ""
+"Используйте советы ниже, чтобы начать использовать WP менеджер "
+"пользователей. Вы сможете и работает в кратчайшие сроки !"
+
+#: includes/admin/welcome.php:193
+#: release/wp-user-manager/includes/admin/welcome.php:193
+msgid "Configure WP User Manager"
+msgstr "Настрой WP Менеджер Пользователей"
+
+#: includes/admin/welcome.php:195
+#: release/wp-user-manager/includes/admin/welcome.php:195
+msgid "Strengthen your passwords"
+msgstr "Защита вашего пароля"
+
+#: includes/admin/welcome.php:196
+#: release/wp-user-manager/includes/admin/welcome.php:196
+msgid "Setup login method"
+msgstr "Настройка методов для входа"
+
+#: includes/admin/welcome.php:197
+#: release/wp-user-manager/includes/admin/welcome.php:197
+msgid "Customize notifications"
+msgstr "Изменить поля"
+
+#: includes/admin/welcome.php:201
+#: release/wp-user-manager/includes/admin/welcome.php:201
+msgid "Customize Profiles"
+msgstr "Изменить Профиля"
+
+#: includes/admin/welcome.php:203
+#: release/wp-user-manager/includes/admin/welcome.php:203
+msgid "Customize profiles"
+msgstr "Изменить профиля"
+
+#: includes/admin/welcome.php:204
+#: release/wp-user-manager/includes/admin/welcome.php:204
+msgid "Customize fields"
+msgstr "Изменить поля"
+
+#: includes/admin/welcome.php:205
+#: release/wp-user-manager/includes/admin/welcome.php:205
+msgid "Create user directories"
+msgstr "Создать пользовательские директории"
+
+#: includes/admin/welcome.php:210
+#: release/wp-user-manager/includes/admin/welcome.php:210
+msgid ""
+"Looking for help? <a href=\"%s\" target=\"_blank\">WP User Manager "
+"documentation</a> has got you covered."
+msgstr ""
+"Ищите помощь? <a href=\"%s\" target=\"_blank\">Документация WP Менеджер "
+"пользователей </a> вам поможет"
+
+#: includes/admin/welcome.php:210
+#: release/wp-user-manager/includes/admin/welcome.php:210
+msgid "Read documentation"
+msgstr "Прочитать документацию"
+
+#: includes/admin/welcome.php:221
+#: release/wp-user-manager/includes/admin/welcome.php:221
+msgid "Looking for help ?"
+msgstr "Нужна помощь?"
+
+#: includes/admin/welcome.php:222
+#: release/wp-user-manager/includes/admin/welcome.php:222
+msgid ""
+"We do all we can to provide every user with the best support possible. If "
+"you encounter a problem or have a question, please <a href=\"%s\" target="
+"\"_blank\">contact us.</a> Make sure you <a href=\"%s\">read the "
+"documentation</a> first."
+msgstr ""
+"Мы делаем все от нас зависящее , чтобы предоставить каждому пользователю "
+"максимально возможную поддержку . Если вы столкнулись с проблемой или есть "
+"вопросы , пожалуйста, <a href=\"%s\" target=\"_blank\">свяжитесь с нами.</a> "
+"Убедитесь сперва в том ,что <a href=\"%s\">прочли документацию</a>."
+
+#: includes/admin/welcome.php:226
+#: release/wp-user-manager/includes/admin/welcome.php:226
+msgid "Get Notified of Extension Releases"
+msgstr "Получать уведомления о продлении релизы"
+
+#: includes/admin/welcome.php:227
+#: release/wp-user-manager/includes/admin/welcome.php:227
+msgid ""
+"New extensions that make WP User Manager even more powerful will be released "
+"soon. Subscribe to the newsletter to stay up to date with our latest "
+"releases. Signup now to ensure you do not miss a release!"
+msgstr ""
+"Новые расширения , которые делают WP Менеджер Пользователей, более мощным "
+"будет выпущен в ближайшее время . Подписаться на рассылку новостей , чтобы "
+"оставаться в курсе наших последних релизов . Регистрацию сейчас, чтобы "
+"убедиться, что вы не пропустите выпуск !"
+
+#: includes/admin/welcome.php:228
+#: release/wp-user-manager/includes/admin/welcome.php:228
+msgid "Signup Now"
+msgstr "Зарегистрироваться сейчас"
+
+#: includes/admin/welcome.php:234
+#: release/wp-user-manager/includes/admin/welcome.php:234
+msgid "Go To WP User Manager &rarr; Settings"
+msgstr "Перейдите в WP Менеджер Пользователей &rarr; Настройки"
+
+#: includes/assets.php:60 release/wp-user-manager/includes/assets.php:60
+msgid "Are you sure you want to do this? This action cannot be reversed."
+msgstr "Вы действительно хотите это сделать? Эти действия будут необратимы."
+
+#: includes/assets.php:101 release/wp-user-manager/includes/assets.php:101
+msgid "Strength indicator"
+msgstr "Индикатор силы"
+
+#: includes/assets.php:102 release/wp-user-manager/includes/assets.php:102
+msgid "Very weak"
+msgstr "Очень слабо"
+
+#: includes/assets.php:103 includes/functions.php:42
+#: release/wp-user-manager/includes/assets.php:103
+#: release/wp-user-manager/includes/functions.php:42
+msgid "Weak"
+msgstr "Слабо"
+
+#: includes/assets.php:105 includes/functions.php:44
+#: release/wp-user-manager/includes/assets.php:105
+#: release/wp-user-manager/includes/functions.php:44
+msgid "Strong"
+msgstr "Сильно"
+
+#: includes/assets.php:113 release/wp-user-manager/includes/assets.php:113
+msgid "Checking credentials..."
+msgstr "Проверка учетных данных ..."
+
+#: includes/classes/class-wpum-ajax-handler.php:76
+#: includes/classes/class-wpum-ajax-handler.php:157
+#: includes/classes/class-wpum-ajax-handler.php:174
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:162
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:374
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:391
+msgid "Error."
+msgstr "Ошибка"
+
+#: includes/classes/class-wpum-ajax-handler.php:89
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:175
+msgid "Emails successfully restored."
+msgstr "Электронные почты успешно восстановлены"
+
+#: includes/classes/class-wpum-ajax-handler.php:124
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:341
+msgid "Your profile picture has been deleted."
+msgstr "Картинка вашего профиля была удалена"
+
+#: includes/classes/class-wpum-ajax-handler.php:133
+#: includes/template-actions.php:150
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:229
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:302
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:350
+#: release/wp-user-manager/includes/template-actions.php:150
+msgid "Something went wrong."
+msgstr "Что-то пошло не так."
+
+#: includes/classes/class-wpum-ajax-handler.php:181
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:398
+msgid "Fields order successfully updated."
+msgstr "Порядок поля успешно обновлён."
+
+#: includes/classes/class-wpum-permalinks.php:80
+#: release/wp-user-manager/includes/classes/class-wpum-permalinks.php:80
+msgid "User profiles permalink base"
+msgstr "Постоянная ссылка на профиль пользователя"
+
+#: includes/classes/class-wpum-permalinks.php:104
+#: release/wp-user-manager/includes/classes/class-wpum-permalinks.php:104
+msgid ""
+"These settings control the permalinks used for users profiles. These "
+"settings only apply when <strong>not using \"default\" permalinks above</"
+"strong>."
+msgstr ""
+"Эти параметры управляют постоянными ссылками профилями пользователей. Эти "
+"параметры применяются только тогда, когда <strong>не используются постоянные "
+"ссылки по умолчанию</strong>."
+
+#: includes/classes/class-wpum-shortcodes.php:74 includes/functions.php:116
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:74
+#: release/wp-user-manager/includes/functions.php:116
+msgid "Remember Me"
+msgstr "Запомнить Меня"
+
+#: includes/classes/class-wpum-shortcodes.php:76 includes/functions.php:117
+#: includes/misc-functions.php:592 includes/widgets/wpum-login-form.php:41
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:76
+#: release/wp-user-manager/includes/functions.php:117
+#: release/wp-user-manager/includes/misc-functions.php:592
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:41
+msgid "Login"
+msgstr "Войти"
+
+#: includes/classes/class-wpum-shortcodes.php:139
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:139
+#: release/wp-user-manager/templates/user-overview.php:28
+#: templates/user-overview.php:28
+msgid "Logout"
+msgstr "Выйти"
+
+#: includes/classes/class-wpum-shortcodes.php:145
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:145
+msgid "<a href=\"%s\">%s</a>"
+msgstr "<a href=\"%s\">%s</a>"
+
+#: includes/classes/class-wpum-shortcodes.php:331
+#: includes/classes/class-wpum-shortcodes.php:370
+#: includes/classes/class-wpum-shortcodes.php:411
+#: includes/profiles/functions.php:286 includes/profiles/functions.php:298
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:331
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:370
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:411
+#: release/wp-user-manager/includes/profiles/functions.php:286
+#: release/wp-user-manager/includes/profiles/functions.php:298
+msgid ""
+"This content is available to members only. Please <a href=\"%s\">login</a> "
+"or <a href=\"%s\">register</a> to view this area."
+msgstr ""
+"Данный контент доступен только подписчикам. Пожалуйста <a href=\"%s"
+"\">войдите на сайт</a> или<a href=\"%s\">зарегистрируйтесь</a> чтобы "
+"просмотреть информацию."
+
+#: includes/classes/class-wpum-shortcodes.php:448
+#: release/wp-user-manager/includes/classes/class-wpum-shortcodes.php:448
+msgid ""
+"Something went wrong, you have not set a directory ID or the directory is "
+"not published."
+msgstr "Что-то пошло не так, при публикации вы не указали ID директорию"
+
+#: includes/directories/actions.php:52
+#: release/wp-user-manager/includes/directories/actions.php:52
+msgid "Previous page"
+msgstr "Предыдущая страница"
+
+#: includes/directories/actions.php:53
+#: release/wp-user-manager/includes/directories/actions.php:53
+msgid "Next page"
+msgstr "Следующая страница"
+
+#: includes/directories/class-wpum-directory.php:72
+#: includes/directories/class-wpum-directory.php:73
+#: includes/directories/class-wpum-directory.php:74
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:72
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:73
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:74
+msgid "Directory"
+msgstr "Директория"
+
+#: includes/directories/class-wpum-directory.php:75
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:75
+msgid "User Directories"
+msgstr "Пользовательские Директории"
+
+#: includes/directories/class-wpum-directory.php:76
+#: includes/directories/class-wpum-directory.php:77
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:76
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:77
+msgid "Add New Directory"
+msgstr "Добавить Новую Директорию"
+
+#: includes/directories/class-wpum-directory.php:78
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:78
+msgid "New Directory"
+msgstr "Новая Директория"
+
+#: includes/directories/class-wpum-directory.php:79
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:79
+msgid "Edit Directory"
+msgstr "Изменить Директорию"
+
+#: includes/directories/class-wpum-directory.php:80
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:80
+msgid "Update Directory"
+msgstr "Обновить Директорию"
+
+#: includes/directories/class-wpum-directory.php:81
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:81
+msgid "View Directory"
+msgstr "Показать Директорию"
+
+#: includes/directories/class-wpum-directory.php:82
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:82
+msgid "Search Directory"
+msgstr "Поиск Директории"
+
+#: includes/directories/class-wpum-directory.php:83
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:83
+msgid "Not found"
+msgstr "Не найдено"
+
+#: includes/directories/class-wpum-directory.php:84
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:84
+msgid "Not found in Trash"
+msgstr "Не найдено в Мусоре"
+
+#: includes/directories/class-wpum-directory.php:87
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:87
+msgid "wpum_directory"
+msgstr "wpum_directory"
+
+#: includes/directories/class-wpum-directory.php:119
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:119
+msgid "General Settings"
+msgstr "Общие Настройки"
+
+#: includes/directories/class-wpum-directory.php:124
+#: includes/directories/class-wpum-directory.php:215
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:124
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:215
+msgid "User Roles"
+msgstr "Роли Пользователя"
+
+#: includes/directories/class-wpum-directory.php:125
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:125
+msgid "Leave blank to display all user roles."
+msgstr "Оставьте бланк пустым, чтобы вывести всех пользователей"
+
+#: includes/directories/class-wpum-directory.php:126
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:126
+msgid "Select the user roles you wish to display into this directory."
+msgstr "Выберите роли пользователей которых вы хотите вывести в каталог."
+
+#: includes/directories/class-wpum-directory.php:140
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:140
+msgid "Exclude users"
+msgstr "Исключённые пользователи"
+
+#: includes/directories/class-wpum-directory.php:141
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:141
+msgid "Comma separated list of users id you wish to exclude."
+msgstr "Разделите список пользователей, который вы хотите исключить."
+
+#: includes/directories/class-wpum-directory.php:142
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:142
+msgid " Example: type %s to exclude users with those id(s)."
+msgstr "Например: напишите %s id пользователей которые будут исключены."
+
+#: includes/directories/class-wpum-directory.php:147
+#: includes/directories/class-wpum-directory.php:217
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:147
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:217
+msgid "Profiles per page"
+msgstr "Профилей на странице"
+
+#: includes/directories/class-wpum-directory.php:148
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:148
+msgid "Select how many profiles you wish to display per page."
+msgstr "Выберите сколько профилей вы хотите вывести на страницу."
+
+#: includes/directories/class-wpum-directory.php:154
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:154
+msgid "Directory Template"
+msgstr "Каталоги Шаблонов"
+
+#: includes/directories/class-wpum-directory.php:155
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:155
+msgid "Select a template from the list."
+msgstr "Выберите шаблон из списка"
+
+#: includes/directories/class-wpum-directory.php:168
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:168
+msgid "Users sorting"
+msgstr "Сортировать пользователей"
+
+#: includes/directories/class-wpum-directory.php:173
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:173
+msgid "Display sorter"
+msgstr "Вывести сортировку"
+
+#: includes/directories/class-wpum-directory.php:174
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:174
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"sorting options."
+msgstr ""
+"Включите это настройку, чтобы вывести выпадающего меню в каталоге, с опцией "
+"сортировки."
+
+#: includes/directories/class-wpum-directory.php:180
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:180
+msgid "Display amount filter"
+msgstr "Вывести фильтр количество"
+
+#: includes/directories/class-wpum-directory.php:181
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:181
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"results amount filter."
+msgstr ""
+"Включите это настройку, чтобы вывести выпадающего меню в каталоге, с "
+"желаемым количеством."
+
+#: includes/directories/class-wpum-directory.php:187
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:187
+msgid "Sorting method"
+msgstr "Метод для сортировки"
+
+#: includes/directories/class-wpum-directory.php:188
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:188
+msgid "Select the sorting method for the directory"
+msgstr "Выберите метод для сортировки директорий"
+
+#: includes/directories/class-wpum-directory.php:189
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:189
+msgid "If the sorter field is visible, this will be used as default option."
+msgstr ""
+"Если отсортированное поле видимое, значит используется опция по умолчанию."
+
+#: includes/directories/class-wpum-directory.php:218
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:218
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: includes/directories/class-wpum-directory.php:240
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:240
+msgid "All"
+msgstr "Все"
+
+#: includes/directories/class-wpum-directory.php:290
+#: includes/directories/class-wpum-directory.php:293
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:290
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:293
+msgid "Directory updated."
+msgstr "Директория изменена."
+
+#: includes/directories/class-wpum-directory.php:291
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:291
+msgid "Custom field updated."
+msgstr "Обычное поле сохранено."
+
+#: includes/directories/class-wpum-directory.php:292
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:292
+msgid "Custom field deleted."
+msgstr "Обычное поле удалено."
+
+#. translators: %s: date and time of the revision
+#: includes/directories/class-wpum-directory.php:295
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:295
+msgid "Directory restored to revision from %s"
+msgstr "Каталог восстановлен в связи с %s"
+
+#: includes/directories/class-wpum-directory.php:296
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:296
+msgid ""
+"Directory created. Use the following shortcode to display this directory %s"
+msgstr ""
+"Каталоги созданы. Воспользуйтесь shortcode'ом, чтобы вывести каталог %s"
+
+#: includes/directories/class-wpum-directory.php:297
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:297
+msgid "Directory saved."
+msgstr "Каталог сохранён"
+
+#: includes/directories/class-wpum-directory.php:298
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:298
+msgid "Directory submitted."
+msgstr "Каталог представлен."
+
+#: includes/directories/class-wpum-directory.php:323
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:323
+msgid "%s directory updated."
+msgid_plural "%s directory updated."
+msgstr[0] "%s каталога сохранены."
+msgstr[1] "%s каталог сохранён."
+msgstr[2] "%s каталогов сохранено."
+
+#: includes/directories/class-wpum-directory.php:324
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:324
+msgid "%s directory not updated, somebody is editing it."
+msgid_plural "%s directories not updated, somebody is editing them."
+msgstr[0] "%s каталог не обновился, кто-то редактирует его."
+msgstr[1] "%s каталога не обновились, кто-то редактирует их."
+msgstr[2] "%s каталогов не обновились, кто-то редактирует их."
+
+#: includes/directories/class-wpum-directory.php:325
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:325
+msgid "%s directory permanently deleted."
+msgid_plural "%s directories permanently deleted."
+msgstr[0] "%s каталог был удалён безвозвратно."
+msgstr[1] "%s каталога были удалены безвозвратно."
+msgstr[2] "%s каталогов было удалено безвозвратно."
+
+#: includes/directories/class-wpum-directory.php:326
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:326
+msgid "%s directory has been deleted."
+msgid_plural "%s directories have been deleted."
+msgstr[0] "%s каталог был удалён."
+msgstr[1] "%s каталога были удалены."
+msgstr[2] "%s каталогов было удалено."
+
+#: includes/directories/class-wpum-directory.php:327
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:327
+msgid "%s directory restored from the Trash."
+msgid_plural "%s directories restored from the Trash."
+msgstr[0] "%s каталог был восстановлен из корзины."
+msgstr[1] "%s каталога были восстановлены из корзины."
+msgstr[2] "%s каталогов было восстановлено из корзины."
+
+#: includes/directories/functions.php:138
+#: includes/emails/class-wpum-emails.php:202
+#: release/wp-user-manager/includes/directories/functions.php:138
+#: release/wp-user-manager/includes/emails/class-wpum-emails.php:202
+msgid "Default template"
+msgstr "Шаблон по умолчанию"
+
+#: includes/directories/functions.php:266
+#: release/wp-user-manager/includes/directories/functions.php:266
+msgid "By nickname"
+msgstr "По никнейму"
+
+#: includes/directories/functions.php:267
+#: release/wp-user-manager/includes/directories/functions.php:267
+msgid "Newest users first"
+msgstr "Новый пользователи первые"
+
+#: includes/directories/functions.php:268
+#: release/wp-user-manager/includes/directories/functions.php:268
+msgid "Oldest users first"
+msgstr "Старые пользователи первые"
+
+#: includes/directories/functions.php:269
+#: release/wp-user-manager/includes/directories/functions.php:269
+msgid "First name"
+msgstr "Имя"
+
+#: includes/directories/functions.php:270
+#: release/wp-user-manager/includes/directories/functions.php:270
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: includes/emails/class-wpum-emails-tags.php:278
+#: release/wp-user-manager/includes/emails/class-wpum-emails-tags.php:278
+msgid "Your site name"
+msgstr "Сайт"
+
+#: includes/emails/class-wpum-emails-tags.php:283
+#: release/wp-user-manager/includes/emails/class-wpum-emails-tags.php:283
+msgid "Displays the username."
+msgstr "Показывать имена пользователей"
+
+#: includes/emails/class-wpum-emails-tags.php:288
+#: release/wp-user-manager/includes/emails/class-wpum-emails-tags.php:288
+msgid ""
+"Displays the user password. If the \"custom passwords\" option is enabled, "
+"the password will not be displayed into the email."
+msgstr ""
+"Отобразить пароль пользователя. Если включена опция \"обычный пароль\", "
+"пароль не будет выводится в письме."
+
+#: includes/emails/class-wpum-emails-tags.php:293
+#: release/wp-user-manager/includes/emails/class-wpum-emails-tags.php:293
+msgid ""
+"Displays the password recovery url needed for the user to reset his password."
+msgstr ""
+"Отобразить url восстановление пароля, необходимый пользователя для сброса "
+"пароля."
+
+#: includes/emails/class-wpum-emails-tags.php:338
+#: release/wp-user-manager/includes/emails/class-wpum-emails-tags.php:338
+msgid "the password you chose upon registration."
+msgstr "пароль который вы выбрали при регистрации"
+
+#: includes/emails/class-wpum-emails.php:203
+#: release/wp-user-manager/includes/emails/class-wpum-emails.php:203
+msgid "No template, plain text only"
+msgstr "Без шаблона, только текстовой"
+
+#: includes/emails/class-wpum-emails.php:288
+#: release/wp-user-manager/includes/emails/class-wpum-emails.php:288
+msgid ""
+"You cannot send email with WPUM_Emails until init/admin_init has been reached"
+msgstr ""
+"Вы не можете послать email с WPUM_Emails пока инициализация init/admin_init "
+"не была достигнута"
+
+#: includes/emails/functions.php:73
+#: release/wp-user-manager/includes/emails/functions.php:73
+msgid "New user registration on your site %s:"
+msgstr "Новый пользователь зарезервирован на вашем сайте %s:"
+
+#: includes/emails/functions.php:74
+#: release/wp-user-manager/includes/emails/functions.php:74
+msgid "Username: %s"
+msgstr "Пользователь: %s"
+
+#: includes/emails/functions.php:75
+#: release/wp-user-manager/includes/emails/functions.php:75
+msgid "E-mail: %s"
+msgstr "Электронная почта: %s"
+
+#: includes/emails/functions.php:76
+#: release/wp-user-manager/includes/emails/functions.php:76
+msgid "[%s] New User Registration"
+msgstr "[%s] Регистрация Нового Пользователя"
+
+#: includes/emails/functions.php:92
+#: release/wp-user-manager/includes/emails/functions.php:92
+msgid "Your account"
+msgstr "Ваш Аккаунт"
+
+#: includes/emails/password-recovery-email.php:32
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:32
+msgid "Password Recovery Email"
+msgstr "Восстановление пароля по электронной почте"
+
+#: includes/emails/password-recovery-email.php:33
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:33
+msgid ""
+"This is the email that is sent to the visitor upon password reset request."
+msgstr ""
+"Данная электронная почта отправляет посетителю запрос, о сбросе пароля."
+
+#: includes/emails/password-recovery-email.php:49
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:49
+msgid "Reset Your %s Password"
+msgstr "Сбросьте свой %s Пароль"
+
+#: includes/emails/password-recovery-email.php:63
+#: includes/emails/registration-email.php:63
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:63
+#: release/wp-user-manager/includes/emails/registration-email.php:63
+msgid ""
+"Hello {username}, \n"
+"\n"
+msgstr ""
+"Здравствуйте {username}, \n"
+"\n"
+
+#: includes/emails/password-recovery-email.php:64
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:64
+msgid ""
+"You are receiving this message because you or somebody else has attempted to "
+"reset your password on {sitename}.\n"
+"\n"
+msgstr ""
+"Вы получили это сообщение, потому что, вы или кто-то еще, пытался сбросить "
+"ваш пароль на сайте {sitename}.\n"
+"\n"
+
+#: includes/emails/password-recovery-email.php:65
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:65
+msgid ""
+"If this was a mistake, just ignore this email and nothing will happen.\n"
+"\n"
+msgstr ""
+"Если это было ошибкой, просто проигнорируйте это сообщение , и ничего не "
+"случится.\n"
+"\n"
+
+#: includes/emails/password-recovery-email.php:66
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:66
+msgid ""
+"To reset your password, visit the following address:\n"
+"\n"
+msgstr ""
+"Чтобы сбросить пароль, проследуйте по адресу:\n"
+"\n"
+
+#: includes/emails/password-recovery-email.php:67
+#: release/wp-user-manager/includes/emails/password-recovery-email.php:67
+msgid "{recovery_url}"
+msgstr "{recovery_url}"
+
+#: includes/emails/registration-email.php:32
+#: release/wp-user-manager/includes/emails/registration-email.php:32
+msgid "Registration Email"
+msgstr "Зарегистрированная Электронная почта"
+
+#: includes/emails/registration-email.php:33
+#: release/wp-user-manager/includes/emails/registration-email.php:33
+msgid ""
+"This is the email that is sent to the user upon successful registration."
+msgstr ""
+"Данное Email сообщение предназначено для оповещение в случает успешной "
+"регистрации пользователя"
+
+#: includes/emails/registration-email.php:49
+#: release/wp-user-manager/includes/emails/registration-email.php:49
+msgid "Your %s Account"
+msgstr "Ваш %s Профиль"
+
+#: includes/emails/registration-email.php:64
+#: release/wp-user-manager/includes/emails/registration-email.php:64
+msgid ""
+"Welcome to {sitename}, \n"
+"\n"
+msgstr ""
+"Добро пожаловать на {sitename}, \n"
+"\n"
+
+#: includes/emails/registration-email.php:65
+#: release/wp-user-manager/includes/emails/registration-email.php:65
+msgid ""
+"These are your account details \n"
+"\n"
+msgstr ""
+"Это реквизиты вашего аккаунта \n"
+"\n"
+
+#: includes/emails/registration-email.php:66
+#: release/wp-user-manager/includes/emails/registration-email.php:66
+msgid "Username: {username},\n"
+msgstr "Имя пользователь: {username},\n"
+
+#: includes/emails/registration-email.php:67
+#: release/wp-user-manager/includes/emails/registration-email.php:67
+msgid "Password: {password}"
+msgstr "Пароль: {password}"
+
+#: includes/fields/functions.php:253
+#: release/wp-user-manager/includes/fields/functions.php:253
+msgid "This field type has no output"
+msgstr "Данный тип поля не имеет выхода"
+
+#: includes/filters.php:22 release/wp-user-manager/includes/filters.php:22
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/filters.php:59 release/wp-user-manager/includes/filters.php:59
+msgid "User ID"
+msgstr "ID Пользователя"
+
+#: includes/filters.php:109
+msgid ""
+"Please support the future of <a href=\"%1$s\" target=\"_blank\">WP User "
+"Manager</a> by <a href=\"%2$s\" target=\"_blank\">rating us</a> on <a href="
+"\"%2$s\" target=\"_blank\">WordPress.org</a>"
+msgstr ""
+"Пожалуйста, поддержите будущее <a href=\"%1$s\" target=\"_blank\"> WP "
+"Менеджера Пользователей</a>с помощью <a href=\"%2$s\" target=\"_blank"
+"\">поднятия рейтинга</a>на <a href=\"%2$s\" target=\"_blank\">WordPress.org "
+"</a>"
+
+#: includes/filters.php:330 release/wp-user-manager/includes/filters.php:330
+msgid "WPUM Page"
+msgstr "WPUM Страница"
+
+#: includes/forms/class-wpum-form-password.php:55 includes/functions.php:92
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:55
+#: release/wp-user-manager/includes/functions.php:92
+msgid "Username or email"
+msgstr "Имя пользователя или электронная почта"
+
+#: includes/forms/class-wpum-form-password.php:64
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:64
+msgid "New password"
+msgstr "Новый пароль"
+
+#: includes/forms/class-wpum-form-password.php:71
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:71
+msgid "Re-enter new password"
+msgstr "Повторить ввод нового пароля"
+
+#: includes/forms/class-wpum-form-password.php:106
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:204
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:106
+msgid "This user could not be found."
+msgstr "Этот пользователь не найден"
+
+#: includes/forms/class-wpum-form-password.php:125
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:263
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:125
+msgid "Please enter your password."
+msgstr "Пожалуйста введи свой пароль"
+
+#: includes/forms/class-wpum-form-password.php:129
+#: includes/forms/class-wpum-form-update-password.php:119
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:275
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:129
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:119
+msgid "Passwords do not match."
+msgstr "Пароль не подходит"
+
+#: includes/forms/class-wpum-form-password.php:199
+#: includes/forms/class-wpum-form-password.php:204
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:199
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:204
+msgid "Invalid username or e-mail."
+msgstr "Недопустимое имя или электронная почта"
+
+#: includes/forms/class-wpum-form-password.php:218
+#: includes/forms/class-wpum-form-password.php:223
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:218
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:223
+msgid "Password reset is not allowed for this user"
+msgstr "Восстановление пароля не допускается для этого пользователя"
+
+#: includes/forms/class-wpum-form-password.php:251
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:251
+msgid "Password Recovery"
+msgstr "Восстановление Пароля"
+
+#: includes/forms/class-wpum-form-password.php:254
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:220
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:254
+msgid "Check your e-mail for the confirmation link."
+msgstr "Проверьте свою электронную почту, чтобы подтвердить учётную записать."
+
+#: includes/forms/class-wpum-form-password.php:310
+#: includes/forms/class-wpum-form-password.php:315
+#: includes/forms/class-wpum-form-password.php:331
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:310
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:315
+#: release/wp-user-manager/includes/forms/class-wpum-form-password.php:331
+msgid "Invalid key."
+msgstr "Неправильный ключ"
+
+#: includes/forms/class-wpum-form-profile.php:231
+#: includes/forms/class-wpum-form-register.php:225
+#: release/wp-user-manager/includes/forms/class-wpum-form-profile.php:231
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:225
+msgid "Email address already exists."
+msgstr "Данный email адрес уже существует."
+
+#: includes/forms/class-wpum-form-profile.php:249
+#: includes/forms/class-wpum-form-profile.php:257
+#: includes/forms/class-wpum-form-register.php:359
+#: includes/forms/class-wpum-form-register.php:367
+#: release/wp-user-manager/includes/forms/class-wpum-form-profile.php:249
+#: release/wp-user-manager/includes/forms/class-wpum-form-profile.php:257
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:359
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:367
+msgid "This nickname cannot be used."
+msgstr "Данный никнейм не может быть использован."
+
+#: includes/forms/class-wpum-form-profile.php:319
+#: includes/forms/class-wpum-form-register.php:222
+#: release/wp-user-manager/includes/forms/class-wpum-form-profile.php:319
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:222
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста введи существующий email адрес."
+
+#: includes/forms/class-wpum-form-register.php:161
+#: includes/forms/class-wpum-form-update-password.php:106
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:161
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:106
+msgid "Password must be at least 8 characters long."
+msgstr "Пароль должен состоять из 8 символов"
+
+#: includes/forms/class-wpum-form-register.php:165
+#: includes/forms/class-wpum-form-update-password.php:110
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:165
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:110
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter."
+msgstr ""
+"Пароль должен быть длиной не менее 8 символов и содержать по крайней мере: 1 "
+"номер, 1 заглавную букву. Например: 1P."
+
+#: includes/forms/class-wpum-form-register.php:169
+#: includes/forms/class-wpum-form-update-password.php:114
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:169
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:114
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter and 1 special character."
+msgstr ""
+"Пароль должен быть длиной не менее 8 символов и содержать по крайней мере: 1 "
+"номер, 1 заглавную букву, и 1 специальный символ. Например: 1Pp$."
+
+#: includes/forms/class-wpum-form-register.php:184
+#: includes/forms/class-wpum-form-update-password.php:81
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:184
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:81
+msgid "Strength Indicator"
+msgstr "Индикатор силы"
+
+#: includes/forms/class-wpum-form-register.php:265
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:265
+msgid "Failed Honeypot validation"
+msgstr "Проверка Ханипот не удалась"
+
+#: includes/forms/class-wpum-form-register.php:283
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:283
+msgid ""
+"By registering to this website you agree to the <a href=\"%s\" target="
+"\"_blank\">terms &amp; conditions</a>."
+msgstr ""
+"Регистрируясь на сайте вы соглашаетесь с <a href=\"%s\" target=\"_blank"
+"\">нашими &amp; условиями</a>."
+
+#: includes/forms/class-wpum-form-register.php:302
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:302
+msgid "Select Role"
+msgstr "Выберите роль"
+
+#: includes/forms/class-wpum-form-register.php:306
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:306
+msgid "Select your user role"
+msgstr "Выверите роль для пользователя"
+
+#: includes/forms/class-wpum-form-register.php:327
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:327
+msgid "Select a valid role from the list."
+msgstr "Выберите нужную роль в списке"
+
+#: includes/forms/class-wpum-form-register.php:473
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:472
+msgid "Registration complete."
+msgstr "Регистрация завершена"
+
+#: includes/forms/class-wpum-form-register.php:475
+msgid ""
+"Registration complete. We have sent you a confirmation email with your "
+"password."
+msgstr ""
+"Регистрация завершена. Мы выслали подтверждение с паролем на вашу "
+"электронную почту."
+
+#: includes/forms/class-wpum-form-register.php:511
+#: release/wp-user-manager/includes/forms/class-wpum-form-register.php:507
+msgid "Registrations are currently disabled."
+msgstr "Регистрация в настоящее время отключена."
+
+#: includes/forms/class-wpum-form-update-password.php:62
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:62
+msgid "Repeat Password"
+msgstr "Повторите пароль"
+
+#: includes/forms/class-wpum-form-update-password.php:97
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:97
+msgid "Enter a password."
+msgstr "Введите пароль"
+
+#: includes/forms/class-wpum-form-update-password.php:172
+#: release/wp-user-manager/includes/forms/class-wpum-form-update-password.php:172
+msgid "Password successfully updated."
+msgstr "Пароль успешно обновлён"
+
+#: includes/functions.php:24 release/wp-user-manager/includes/functions.php:24
+msgid "Username only"
+msgstr "Только имя пользователя"
+
+#: includes/functions.php:25 release/wp-user-manager/includes/functions.php:25
+msgid "Email only"
+msgstr "Только адрес электронной почты"
+
+#: includes/functions.php:26 release/wp-user-manager/includes/functions.php:26
+msgid "Username or Email"
+msgstr "Имя пользователя или Электронная почта"
+
+#: includes/functions.php:41 release/wp-user-manager/includes/functions.php:41
+msgid "Disabled"
+msgstr "Отключено"
+
+#: includes/functions.php:43 release/wp-user-manager/includes/functions.php:43
+msgid "Medium"
+msgstr "Средний"
+
+#: includes/functions.php:87 release/wp-user-manager/includes/functions.php:87
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: includes/install.php:33 release/wp-user-manager/includes/install.php:33
+msgid "Back to your website."
+msgstr "Вернуться на главную страницу"
+
+#: includes/lib/wp-pretty-fields/classes/class.metabox.php:202
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.metabox.php:202
+msgid "Error: metabox must have an id."
+msgstr "Ошибка: METABOX должны иметь ID."
+
+#: includes/lib/wp-pretty-fields/classes/class.metabox.php:207
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.metabox.php:207
+msgid "Error: metabox \"%s\" must have a title."
+msgstr "Ошибка: METABOX \"%s\" должен иметь название ."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:112
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:112
+msgid "Error: metabox \"%s\" must have an ID."
+msgstr "Ошибка: METABOX \"%s\" должен иметь ID."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:117
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:117
+msgid "Error: metabox \"%s\" must have a taxonomy parameter assigned."
+msgstr "Ошибка: METABOX \"%s\" должен иметь назначенный параметр таксономии ."
+
+#: includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:122
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:122
+msgid "Error: metabox \"%s\" taxonomy parameter must be an array."
+msgstr "Ошибка: METABOX параметр таксономии \"%s\" должно быть массивом."
+
+#: includes/lib/wp-pretty-fields/classes/class.user_metabox.php:91
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/classes/class.user_metabox.php:91
+msgid "Error: user metabox must have an ID."
+msgstr "Ошибка: пользователь METABOX должен иметь ID."
+
+#: includes/lib/wp-pretty-fields/demo.php:18
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:18
+msgid "Text Field"
+msgstr "Поле для текста"
+
+#: includes/lib/wp-pretty-fields/demo.php:19
+#: includes/lib/wp-pretty-fields/demo.php:26
+#: includes/lib/wp-pretty-fields/demo.php:33
+#: includes/lib/wp-pretty-fields/demo.php:40
+#: includes/lib/wp-pretty-fields/demo.php:47
+#: includes/lib/wp-pretty-fields/demo.php:54
+#: includes/lib/wp-pretty-fields/demo.php:62
+#: includes/lib/wp-pretty-fields/demo.php:69
+#: includes/lib/wp-pretty-fields/demo.php:76
+#: includes/lib/wp-pretty-fields/demo.php:84
+#: includes/lib/wp-pretty-fields/demo.php:92
+#: includes/lib/wp-pretty-fields/demo.php:100
+#: includes/lib/wp-pretty-fields/demo.php:108
+#: includes/lib/wp-pretty-fields/demo.php:115
+#: includes/lib/wp-pretty-fields/demo.php:122
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:19
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:26
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:33
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:40
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:47
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:54
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:62
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:69
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:76
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:84
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:92
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:100
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:108
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:115
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:122
+msgid "Description goes here"
+msgstr "Описание должно быть здесь"
+
+#: includes/lib/wp-pretty-fields/demo.php:20
+#: includes/lib/wp-pretty-fields/demo.php:27
+#: includes/lib/wp-pretty-fields/demo.php:34
+#: includes/lib/wp-pretty-fields/demo.php:41
+#: includes/lib/wp-pretty-fields/demo.php:48
+#: includes/lib/wp-pretty-fields/demo.php:55
+#: includes/lib/wp-pretty-fields/demo.php:63
+#: includes/lib/wp-pretty-fields/demo.php:70
+#: includes/lib/wp-pretty-fields/demo.php:77
+#: includes/lib/wp-pretty-fields/demo.php:85
+#: includes/lib/wp-pretty-fields/demo.php:93
+#: includes/lib/wp-pretty-fields/demo.php:101
+#: includes/lib/wp-pretty-fields/demo.php:109
+#: includes/lib/wp-pretty-fields/demo.php:116
+#: includes/lib/wp-pretty-fields/demo.php:123
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:20
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:27
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:34
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:41
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:48
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:55
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:63
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:70
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:77
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:85
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:93
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:101
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:109
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:116
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:123
+msgid "Field Description goes here"
+msgstr "Поле для описание находится здесь"
+
+#: includes/lib/wp-pretty-fields/demo.php:25
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:25
+msgid "Textarea Field"
+msgstr "Поле для место для текста"
+
+#: includes/lib/wp-pretty-fields/demo.php:32
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:32
+msgid "URL Field"
+msgstr "Поле для URL"
+
+#: includes/lib/wp-pretty-fields/demo.php:39
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:39
+msgid "Number Field"
+msgstr "Поле для чисел"
+
+#: includes/lib/wp-pretty-fields/demo.php:46
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:46
+msgid "Email Field"
+msgstr "Поле для электронной почты"
+
+#: includes/lib/wp-pretty-fields/demo.php:53
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:53
+msgid "Button Field"
+msgstr "Поле для кнопки"
+
+#: includes/lib/wp-pretty-fields/demo.php:61
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:61
+msgid "Color Field"
+msgstr "Поле для цвета"
+
+#: includes/lib/wp-pretty-fields/demo.php:68
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:68
+msgid "Image Field"
+msgstr "Поле для картинки"
+
+#: includes/lib/wp-pretty-fields/demo.php:75
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:75
+msgid "Select Field"
+msgstr "Выбранное поле"
+
+#: includes/lib/wp-pretty-fields/demo.php:83
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:83
+msgid "Radio Field"
+msgstr "Поле для радиокнопки"
+
+#: includes/lib/wp-pretty-fields/demo.php:91
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:91
+msgid "Multiselect Field"
+msgstr "Поле для выбора"
+
+#: includes/lib/wp-pretty-fields/demo.php:99
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:99
+msgid "Checkbox list Field"
+msgstr "Поле для списка с флажком"
+
+#: includes/lib/wp-pretty-fields/demo.php:107
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:107
+msgid "Checkbox Field"
+msgstr "Поле для флажка"
+
+#: includes/lib/wp-pretty-fields/demo.php:114
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:114
+msgid "Editor Field"
+msgstr "Редактор Полей"
+
+#: includes/lib/wp-pretty-fields/demo.php:121
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/demo.php:121
+msgid "Gallery Field"
+msgstr "Поле для Галереи"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:90
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/gallery.php:90
+msgid "Add/Edit Gallery"
+msgstr "Добавить/Редактировать Галерею"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:91
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/gallery.php:91
+msgid "Delete Gallery"
+msgstr "Удалить галерею"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:92
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/gallery.php:92
+msgid "Select or upload images to create a gallery"
+msgstr "Выбрать или загрузить изображения для создания галереи"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:93
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/gallery.php:93
+msgid "Insert gallery"
+msgstr "Вставить галерею"
+
+#: includes/lib/wp-pretty-fields/fields/gallery.php:94
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/gallery.php:94
+msgid "Are you sure you want to delete the gallery?"
+msgstr "Вы уверены что хотите удалить галерею?"
+
+#: includes/lib/wp-pretty-fields/fields/image.php:50
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/image.php:50
+msgid "Select or upload an image"
+msgstr "Выбрать загружаемое изображение"
+
+#: includes/lib/wp-pretty-fields/fields/image.php:51
+#: release/wp-user-manager/includes/lib/wp-pretty-fields/fields/image.php:51
+msgid "Insert image"
+msgstr "Вставить изображение"
+
+#: includes/misc-functions.php:414
+#: release/wp-user-manager/includes/misc-functions.php:414
+msgid "Allowed files types are: %s"
+msgstr "Допустимыми типами файлов являются: %s"
+
+#: includes/misc-functions.php:417
+#: release/wp-user-manager/includes/misc-functions.php:417
+msgid "The uploaded file is too big."
+msgstr "Загружаемый файл слишком большой"
+
+#: includes/misc-functions.php:505
+#: release/wp-user-manager/includes/misc-functions.php:505
+msgid "Uploaded files need to be one of the following file types: %s"
+msgstr "Загруженные файлы должны быть одним из следующих типов файлов: %s"
+
+#: includes/misc-functions.php:556
+#: release/wp-user-manager/includes/misc-functions.php:556
+msgid "Verify upload permissions"
+msgstr "Проверьте разрешение на загрузку"
+
+#: includes/misc-functions.php:557
+#: release/wp-user-manager/includes/misc-functions.php:557
+msgid "Press the button above if avatar uploads does not work."
+msgstr "Нажмите на кнопку если загрузка аватарки не работает"
+
+#: includes/misc-functions.php:610
+#: release/wp-user-manager/includes/misc-functions.php:610
+msgid "Password Reset"
+msgstr "Сбросить пароль"
+
+#: includes/misc-functions.php:628 includes/widgets/wpum-registration.php:41
+#: release/wp-user-manager/includes/misc-functions.php:628
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:41
+#: release/wp-user-manager/templates/forms/registration-form.php:38
+#: templates/forms/registration-form.php:38
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: includes/misc-functions.php:646
+#: release/wp-user-manager/includes/misc-functions.php:646
+msgid "Account"
+msgstr "Аккаунт"
+
+#: includes/misc-functions.php:664
+#: release/wp-user-manager/includes/misc-functions.php:664
+msgid "Profile"
+msgstr "Профиль"
+
+#: includes/misc-functions.php:698
+#: release/wp-user-manager/includes/misc-functions.php:698
+#: release/wp-user-manager/templates/user-overview.php:26
+#: templates/user-overview.php:26
+msgid "Edit Account"
+msgstr "настройки аккаунта"
+
+#: includes/misc-functions.php:702
+#: release/wp-user-manager/includes/misc-functions.php:702
+msgid "Change Password"
+msgstr "Изменить пароль"
+
+#: includes/profiles/actions.php:55
+#: release/wp-user-manager/includes/profiles/actions.php:55
+msgid " (Edit Account)"
+msgstr "(настройки аккаунта)"
+
+#: includes/profiles/functions.php:129
+#: release/wp-user-manager/includes/profiles/functions.php:129
+msgid "Overview"
+msgstr "Обзор"
+
+#: includes/profiles/functions.php:135
+#: release/wp-user-manager/includes/profiles/functions.php:135
+msgid "Posts"
+msgstr "Записи"
+
+#: includes/profiles/functions.php:141
+#: release/wp-user-manager/includes/profiles/functions.php:141
+msgid "Comments"
+msgstr "Комментарии"
+
+#: includes/profiles/functions.php:310
+#: release/wp-user-manager/includes/profiles/functions.php:310
+msgid "You are not authorized to access this area."
+msgstr "Вы не авторизированы для доступа к данной области."
+
+#: includes/template-actions.php:122
+#: release/wp-user-manager/includes/template-actions.php:122
+msgid ""
+"Login failed: You have entered incorrect login details, please try again."
+msgstr ""
+"Войти на сайт не удалось: Вы ввели неправильные данные для входа, пожалуйста "
+"попробуйте ещё раз."
+
+#: includes/template-actions.php:142
+#: release/wp-user-manager/includes/template-actions.php:142
+msgid "Profile successfully updated."
+msgstr "Профиль успешно обновлён."
+
+#: includes/widgets/wpum-login-form.php:31
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:31
+msgid "[WPUM] Login Form"
+msgstr "[WPUM] Логин форма"
+
+#: includes/widgets/wpum-login-form.php:32
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:32
+msgid "Display login form."
+msgstr "Показать логин форму."
+
+#: includes/widgets/wpum-login-form.php:37
+#: includes/widgets/wpum-password-recovery.php:37
+#: includes/widgets/wpum-recent-users.php:37
+#: includes/widgets/wpum-registration.php:37
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:37
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:37
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:37
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:37
+msgid "Title"
+msgstr "Заголовок"
+
+#: includes/widgets/wpum-login-form.php:45
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:45
+msgid "Logged In title"
+msgstr "Заголовок при входе"
+
+#: includes/widgets/wpum-login-form.php:46
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:46
+msgid " This title will be displayed when logged in."
+msgstr "Этот заголовок будет отображаться при входе на сайт."
+
+#: includes/widgets/wpum-login-form.php:50
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:50
+msgid "My Account"
+msgstr "Мой Аккаунт"
+
+#: includes/widgets/wpum-login-form.php:54
+#: includes/widgets/wpum-password-recovery.php:45
+#: includes/widgets/wpum-registration.php:45
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:54
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:45
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:45
+msgid "Display login link"
+msgstr "Показывать ссылка для входа"
+
+#: includes/widgets/wpum-login-form.php:61
+#: includes/widgets/wpum-password-recovery.php:52
+#: includes/widgets/wpum-registration.php:52
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:61
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:52
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:52
+msgid "Display password recovery link"
+msgstr "Вывести ссылку для восстановление пароля"
+
+#: includes/widgets/wpum-login-form.php:68
+#: includes/widgets/wpum-password-recovery.php:59
+#: includes/widgets/wpum-registration.php:59
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:68
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:59
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:59
+msgid "Display registration link"
+msgstr "Вывести ссылка для регистрации"
+
+#: includes/widgets/wpum-login-form.php:75
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:75
+msgid "Display profile overview"
+msgstr "Вывести профильный обзор"
+
+#: includes/widgets/wpum-login-form.php:76
+#: release/wp-user-manager/includes/widgets/wpum-login-form.php:76
+msgid ""
+"If enabled, once logged in, an overview of the current user profile will "
+"appear."
+msgstr ""
+"Если функция включена, то когда вы войдёте в систему, обзор текущего профиля "
+"тут же отобразится."
+
+#: includes/widgets/wpum-password-recovery.php:31
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:31
+msgid "[WPUM] Password Recovery Form"
+msgstr "[WPUM] Форма Восстановление Пароля"
+
+#: includes/widgets/wpum-password-recovery.php:32
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:32
+msgid "Display a form for users to recover their password."
+msgstr "Отображение форму для пользователей ,по восстановлению пароля."
+
+#: includes/widgets/wpum-password-recovery.php:41
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:41
+msgid "Reset password"
+msgstr "Сбросить пароль"
+
+#: includes/widgets/wpum-password-recovery.php:66
+#: includes/widgets/wpum-registration.php:66
+#: release/wp-user-manager/includes/widgets/wpum-password-recovery.php:66
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:66
+msgid "Custom form ID (optional)"
+msgstr "Пользовательские формы ID (опционально)"
+
+#: includes/widgets/wpum-recent-users.php:31
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:31
+msgid "[WPUM] Recent Users"
+msgstr "[WPUM] Новые Пользователи"
+
+#: includes/widgets/wpum-recent-users.php:32
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:32
+msgid "Display a list of recently registered users."
+msgstr "Отобразить список пользователей недавно зарегистрированных."
+
+#: includes/widgets/wpum-recent-users.php:41
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:41
+msgid "Recent Users"
+msgstr "Новые Пользователи"
+
+#: includes/widgets/wpum-recent-users.php:45
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:45
+msgid "Amount"
+msgstr "Количество"
+
+#: includes/widgets/wpum-recent-users.php:46
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:46
+msgid "Enter the amount of users you wish to display."
+msgstr "Введите количество пользователей, которые хотите отобразить."
+
+#: includes/widgets/wpum-recent-users.php:55
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:55
+msgid "Link to user profile"
+msgstr "Ссылка на профиль пользователя"
+
+#: includes/widgets/wpum-recent-users.php:56
+#: release/wp-user-manager/includes/widgets/wpum-recent-users.php:56
+msgid "Enable to link to the user profile."
+msgstr "Включить ссылки на профиль пользователя."
+
+#: includes/widgets/wpum-registration.php:31
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:31
+msgid "[WPUM] Registration Form"
+msgstr "[WPUM] Регистрационная форма"
+
+#: includes/widgets/wpum-registration.php:32
+#: release/wp-user-manager/includes/widgets/wpum-registration.php:32
+msgid "Display the registration form."
+msgstr "Вывести форму для регистрации."
+
+#: release/wp-user-manager/includes/admin/addons.php:140
+msgid "Read More"
+msgstr "Читать далее"
+
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:475
+msgid "Disable ajax on frontend:"
+msgstr "Отключить ajax в интерфейсе:"
+
+#: release/wp-user-manager/includes/admin/settings/register-settings.php:476
+msgid "Enable this option to remove ajax functionalities from your frontend."
+msgstr "Включите эту опцию, чтобы удалить функцию ajax с вашего интерфейса."
+
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:129
+msgid "Wrong username or password."
+msgstr "Неправильное имя пользователя или пароль"
+
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:138
+msgid "Login successful."
+msgstr "Вход завершён"
+
+#: release/wp-user-manager/includes/classes/class-wpum-ajax-handler.php:293
+#: release/wp-user-manager/templates/forms/password-form.php:35
+#: templates/forms/password-form.php:35
+msgid "Your password has been reset."
+msgstr "Ваш пароль был сброшен"
+
+#: release/wp-user-manager/includes/filters.php:109
+msgid ""
+"Thank you for using <a href=\"%1$s\" target=\"_blank\">WP User Manager</a>! "
+"Please <a href=\"%2$s\" target=\"_blank\">rate us</a> on <a href=\"%2$s\" "
+"target=\"_blank\">WordPress.org</a>"
+msgstr ""
+"Спасибо за использование <a href=\"%1$s\" target=\"_blank\">WP "
+"Пользовательского Менеджера</a>! Пожалуйста <a href=\"%2$s\" target=\"_blank"
+"\">проголосуйте</a> на <a href=\"%2$s\" target=\"_blank\">WordPress.org</a>"
+
+#: release/wp-user-manager/templates/account.php:38
+#: release/wp-user-manager/templates/profile/profile-tabs.php:60
+#: templates/account.php:38 templates/profile/profile-tabs.php:60
+msgid "Content not found."
+msgstr "Содержимое не найдено"
+
+#: release/wp-user-manager/templates/already-logged-in.php:22
+#: templates/already-logged-in.php:22
+msgid "Your are currently logged in as %s. <a href=\"%s\">Logout &raquo;</a>"
+msgstr "Вы вошли на сайт как %s. <a href=\"%s\">Выйти &raquo;</a>"
+
+#: release/wp-user-manager/templates/directory/single-user.php:14
+#: release/wp-user-manager/templates/profile-card.php:42
+#: templates/directory/single-user.php:14 templates/profile-card.php:42
+msgid "View Profile"
+msgstr "Просмотреть профиль"
+
+#: release/wp-user-manager/templates/directory/single-user.php:28
+#: templates/directory/single-user.php:28
+msgid "This user has not provided a description yet."
+msgstr "У пользователя всё ещё отсутствует описание"
+
+#: release/wp-user-manager/templates/directory/single-user.php:37
+#: release/wp-user-manager/templates/profile/profile-links.php:17
+#: release/wp-user-manager/templates/profile-card.php:45
+#: templates/directory/single-user.php:37
+#: templates/profile/profile-links.php:17 templates/profile-card.php:45
+msgid "Send Email"
+msgstr "Отправьте Email"
+
+#: release/wp-user-manager/templates/directory/single-user.php:43
+#: templates/directory/single-user.php:43
+msgid "Visit Website"
+msgstr "Посетите сайт"
+
+#: release/wp-user-manager/templates/directory/single-user.php:45
+#: templates/directory/single-user.php:45
+msgid "Registered:"
+msgstr "Зарегистрирован:"
+
+#: release/wp-user-manager/templates/directory/top-bar.php:20
+#: templates/directory/top-bar.php:20
+msgid "Found %s users."
+msgstr "Найдены %s пользователи."
+
+#: release/wp-user-manager/templates/directory/top-bar.php:27
+#: templates/directory/top-bar.php:27
+msgid "Sort by:"
+msgstr "Сортировать по:"
+
+#: release/wp-user-manager/templates/directory/top-bar.php:34
+#: templates/directory/top-bar.php:34
+msgid "Results per page:"
+msgstr "Результат на каждой странице"
+
+#: release/wp-user-manager/templates/form-fields/file-field.php:53
+#: templates/form-fields/file-field.php:53
+msgid "Maximum file size: %s."
+msgstr "Максимальный размер файла %s."
+
+#: release/wp-user-manager/templates/form-fields/uploaded-file-html.php:22
+#: templates/form-fields/uploaded-file-html.php:22
+msgid "remove"
+msgstr "удалить"
+
+#: release/wp-user-manager/templates/forms/account-form.php:42
+#: templates/forms/account-form.php:42
+msgid "Update Profile"
+msgstr "Изменить"
+
+#: release/wp-user-manager/templates/forms/password-form.php:48
+#: templates/forms/password-form.php:48
+msgid "Enter a new password below."
+msgstr "Введите новый пароль ниже."
+
+#: release/wp-user-manager/templates/forms/password-form.php:65
+#: templates/forms/password-form.php:65
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"Забыли пароль? Пожалуйста введи имя пользователя или электронный адрес. Мы "
+"отправим вам по почте форму для восстановления пароля."
+
+#: release/wp-user-manager/templates/forms/password-form.php:90
+#: templates/forms/password-form.php:90
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: release/wp-user-manager/templates/forms/password-update-form.php:39
+#: templates/forms/password-update-form.php:39
+msgid "Update Password"
+msgstr "Изменить"
+
+#: release/wp-user-manager/templates/helper-links.php:16
+#: templates/helper-links.php:16
+msgid "Already have an account? <a href=\"%s\">Sign In &raquo;</a>"
+msgstr "Вы уже зарегистрировалисьt? <a href=\"%s\">Войдите на сайт &raquo;</a>"
+
+#: release/wp-user-manager/templates/helper-links.php:22
+#: templates/helper-links.php:22
+msgid "Don't have an account? <a href=\"%s\">Signup Now &raquo;</a>"
+msgstr ""
+"Всё ещё не зарегистрировались? <a href=\"%s\">Зарегистрируйтесь на сайте "
+"&raquo;</a>"
+
+#: release/wp-user-manager/templates/helper-links.php:29
+#: templates/helper-links.php:29
+msgid "Lost your password?"
+msgstr "Забыли пароль?"
+
+#: release/wp-user-manager/templates/profile/profile-comments.php:55
+#: templates/profile/profile-comments.php:55
+msgid "%s has not made any comment yet."
+msgstr "%s ещё не добавлял комментариев"
+
+#: release/wp-user-manager/templates/profile/profile-links.php:21
+#: templates/profile/profile-links.php:21
+msgid "Visit website"
+msgstr "Посетить сайт"
+
+#: release/wp-user-manager/templates/profile/profile-overview.php:18
+#: templates/profile/profile-overview.php:18
+msgid "Name"
+msgstr "Имя"
+
+#: release/wp-user-manager/templates/profile/profile-overview.php:23
+#: templates/profile/profile-overview.php:23
+msgid "Nickname"
+msgstr "Никнейм"
+
+#: release/wp-user-manager/templates/profile/profile-overview.php:33
+#: templates/profile/profile-overview.php:33
+msgid "Website"
+msgstr "Сайт"
+
+#: release/wp-user-manager/templates/profile/profile-overview.php:37
+#: templates/profile/profile-overview.php:37
+msgid "Registered"
+msgstr "Зарегистрированный"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:33
+#: templates/profile/profile-posts.php:33
+msgid "Posted on:"
+msgstr "Записи:"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:37
+#: templates/profile/profile-posts.php:37
+msgid "Comments:"
+msgstr "Комментарии:"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:38
+#: templates/profile/profile-posts.php:38
+msgid "No Comments"
+msgstr "Нет Комментариев"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:38
+#: templates/profile/profile-posts.php:38
+msgid "1 Comment"
+msgstr "1 Комментарий"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:38
+#: templates/profile/profile-posts.php:38
+msgid "% Comments"
+msgstr "% Комментарии"
+
+#: release/wp-user-manager/templates/profile/profile-posts.php:52
+#: templates/profile/profile-posts.php:52
+msgid "%s did not submit any posts yet."
+msgstr "%s ещё не добавлял записей"
+
+#: release/wp-user-manager/templates/profile.php:17 templates/profile.php:17
+msgid "User not found."
+msgstr "Пользователь не найден"
+
+#: release/wp-user-manager/templates/recently-registered.php:41
+#: templates/recently-registered.php:41
+msgid "No user has been found."
+msgstr "Пользователь не был найден"
+
+#: release/wp-user-manager/templates/user-directory.php:48
+#: templates/user-directory.php:48
+msgid "No users have been found"
+msgstr "Ни один пользователь не найден"
+
+#: release/wp-user-manager/wp-user-manager.php:151
+#: release/wp-user-manager/wp-user-manager.php:163 wp-user-manager.php:151
+#: wp-user-manager.php:163
+msgid "Cheatin&#8217; huh?"
+msgstr "Cheatin&#8217; huh?"
+
+#. Plugin Name of the plugin/theme
+msgid "WP User Manager"
+msgstr "WP Менеджер Пользователей"
+
+#. Author URI of the plugin/theme
+msgid "http://wpusermanager.com"
+msgstr "http://wpusermanager.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Create customized user profiles and easily add custom user registration, "
+"login and password recovery forms to your WordPress website. WP User Manager "
+"is the best solution to manage your users."
+msgstr ""
+"Создание пользовательских профилей пользователей и легко добавлять "
+"пользовательские регистрации пользователя , логин и пароль восстановления "
+"формы на ваш сайт WordPress . WP менеджер Пользователь лучшее решение для "
+"управления пользователями ."
+
+#. Author of the plugin/theme
+msgid "Alessandro Tesoro"
+msgstr "Алессандро Тесоро"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:80
+#: includes/admin/emails/class-wpum-emails-editor.php:103
+#: includes/classes/class-wpum-permalinks.php:153
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:80
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:103
+#: release/wp-user-manager/includes/classes/class-wpum-permalinks.php:153
+msgctxt "_doing_it_wrong error message"
+msgid "You have no rights to access this page"
+msgstr "У вас нет доступа к этой странице"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:108
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:108
+msgctxt "_doing_it_wrong error message"
+msgid "Nonce verification failed"
+msgstr "Проверка завершена"
+
+#: includes/admin/emails/class-wpum-emails-editor.php:113
+#: release/wp-user-manager/includes/admin/emails/class-wpum-emails-editor.php:113
+msgctxt "_doing_it_wrong error message"
+msgid "No email ID was provided"
+msgstr "Не выбран ID электронной почты"
+
+#: includes/assets.php:104 release/wp-user-manager/includes/assets.php:104
+msgctxt "password strength"
+msgid "Medium"
+msgstr "Средний"
+
+#: includes/classes/class-wpum-html-helper.php:39
+#: release/wp-user-manager/includes/classes/class-wpum-html-helper.php:39
+msgctxt "all dropdown items"
+msgid "All"
+msgstr "Все"
+
+#: includes/classes/class-wpum-html-helper.php:40
+#: release/wp-user-manager/includes/classes/class-wpum-html-helper.php:40
+msgctxt "no dropdown items"
+msgid "None"
+msgstr "Ни одна"
+
+#: includes/directories/class-wpum-directory.php:70
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:70
+msgctxt "Post Type General Name"
+msgid "User Directories"
+msgstr "Директория пользователей"
+
+#: includes/directories/class-wpum-directory.php:71
+#: release/wp-user-manager/includes/directories/class-wpum-directory.php:71
+msgctxt "Post Type Singular Name"
+msgid "Directory"
+msgstr "Директория"
+
+#: includes/fields/types/avatar.php:32
+#: release/wp-user-manager/includes/fields/types/avatar.php:32
+msgctxt "field type name"
+msgid "Avatar"
+msgstr "Аватар"
+
+#: includes/fields/types/checkbox.php:32
+#: release/wp-user-manager/includes/fields/types/checkbox.php:32
+msgctxt "field type name"
+msgid "Checkbox"
+msgstr "Проверка"
+
+#: includes/fields/types/display_name.php:32
+#: release/wp-user-manager/includes/fields/types/display_name.php:32
+msgctxt "field type name"
+msgid "Name Display"
+msgstr "Показывать Имя"
+
+#: includes/fields/types/email.php:32
+#: release/wp-user-manager/includes/fields/types/email.php:32
+msgctxt "field type name"
+msgid "Email"
+msgstr "Электронная почта"
+
+#: includes/fields/types/file.php:32
+#: release/wp-user-manager/includes/fields/types/file.php:32
+msgctxt "field type name"
+msgid "File"
+msgstr "Файл"
+
+#: includes/fields/types/nickname.php:32
+#: release/wp-user-manager/includes/fields/types/nickname.php:32
+msgctxt "field type name"
+msgid "Nickname"
+msgstr "Никнейм"
+
+#: includes/fields/types/password.php:32
+#: release/wp-user-manager/includes/fields/types/password.php:32
+msgctxt "field type name"
+msgid "Password"
+msgstr "пароль"
+
+#: includes/fields/types/select.php:32
+#: release/wp-user-manager/includes/fields/types/select.php:32
+msgctxt "field type name"
+msgid "Dropdown"
+msgstr "Выбрасывать вниз"
+
+#: includes/fields/types/text.php:32
+#: release/wp-user-manager/includes/fields/types/text.php:32
+msgctxt "field type name"
+msgid "Text"
+msgstr "Текст"
+
+#: includes/fields/types/textarea.php:32
+#: release/wp-user-manager/includes/fields/types/textarea.php:32
+msgctxt "field type name"
+msgid "Textarea"
+msgstr "Место для текста"
+
+#: includes/fields/types/username.php:32
+#: release/wp-user-manager/includes/fields/types/username.php:32
+msgctxt "field type name"
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: includes/misc-functions.php:172
+#: release/wp-user-manager/includes/misc-functions.php:172
+msgctxt "Permalink structure"
+msgid "Display user ID"
+msgstr "Показывать ID пользователя"
+
+#: includes/misc-functions.php:177
+#: release/wp-user-manager/includes/misc-functions.php:177
+msgctxt "Permalink structure"
+msgid "Display username"
+msgstr "Показывать имя пользователя"
+
+#: includes/misc-functions.php:182
+#: release/wp-user-manager/includes/misc-functions.php:182
+msgctxt "Permalink structure"
+msgid "Display nickname"
+msgstr "Показывать никнейм"
+
+#: includes/misc-functions.php:178
+#: release/wp-user-manager/includes/misc-functions.php:178
+msgctxt "Example of permalink setting"
+msgid "username"
+msgstr "Имя пользователя"
+
+#: includes/misc-functions.php:183
+#: release/wp-user-manager/includes/misc-functions.php:183
+msgctxt "Example of permalink setting"
+msgid "nickname"
+msgstr "Никнейм"
+
+#: release/wp-user-manager/templates/profile/profile-comments.php:43
+#: templates/profile/profile-comments.php:43
+msgctxt "This text displays the comments left by the user on his profile page."
+msgid "\"%s\" on <a href=\"%s\">%s</a>, %s."
+msgstr "\"%s\" на <a href=\"%s\">%s</a>, %s."

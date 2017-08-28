@@ -3,17 +3,17 @@
 final class ITSEC_Database_Prefix_Utility {
 	public static function change_database_prefix() {
 		global $wpdb;
-		
-		
-		require_once( $GLOBALS['itsec_globals']['plugin_dir'] . 'core/lib/class-itsec-lib-config-file.php' );
-		require_once( $GLOBALS['itsec_globals']['plugin_dir'] . 'core/lib/class-itsec-lib-file.php' );
-		
+
+
+		require_once( ITSEC_Core::get_core_dir() . '/lib/class-itsec-lib-config-file.php' );
+		require_once( ITSEC_Core::get_core_dir() . '/lib/class-itsec-lib-file.php' );
+
 		$response = array(
 			'errors'     => array(),
 			'new_prefix' => false,
 		);
-		
-		
+
+
 		//suppress error messages due to timing
 //		error_reporting( 0 );
 //		@ini_set( 'display_errors', 0 );
@@ -48,26 +48,26 @@ final class ITSEC_Database_Prefix_Utility {
 
 		$config_file_path = ITSEC_Lib_Config_File::get_wp_config_file_path();
 		$config = ITSEC_Lib_File::read( $config_file_path );
-		
+
 		if ( is_wp_error( $config ) ) {
 			/* translators: 1: Specific error details */
-			$response['errors'][] = new WP_Error( $confix->get_error_code(), sprintf( __( 'Unable to read the <code>wp-config.php</code> file in order to update the Database Prefix. Error details as follows: %1$s', 'better-wp-security' ), $config->get_error_message() ) );
+			$response['errors'][] = new WP_Error( $config->get_error_code(), sprintf( __( 'Unable to read the <code>wp-config.php</code> file in order to update the Database Prefix. Error details as follows: %1$s', 'better-wp-security' ), $config->get_error_message() ) );
 			return $response;
 		}
-		
-		
+
+
 		$regex = '/(\$table_prefix\s*=\s*)([\'"]).+?\\2(\s*;)/';
 		$config = preg_replace( $regex, "\${1}'$new_prefix'\${3}", $config );
-		
+
 		$write_result = ITSEC_Lib_File::write( $config_file_path, $config );
-		
+
 		if ( is_wp_error( $write_result ) ) {
 			/* translators: 1: Specific error details */
-			$response['errors'][] = new WP_Error( $confix->get_error_code(), sprintf( __( 'Unable to update the <code>wp-config.php</code> file in order to update the Database Prefix. Error details as follows: %1$s', 'better-wp-security' ), $config->get_error_message() ) );
+			$response['errors'][] = new WP_Error( $write_result->get_error_code(), sprintf( __( 'Unable to update the <code>wp-config.php</code> file in order to update the Database Prefix. Error details as follows: %1$s', 'better-wp-security' ), $config->get_error_message() ) );
 			return $response;
 		}
-		
-		
+
+
 		$response['new_prefix'] = $new_prefix;
 
 

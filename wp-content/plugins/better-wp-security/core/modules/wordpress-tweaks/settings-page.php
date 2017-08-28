@@ -38,22 +38,6 @@ final class ITSEC_WordPress_Tweaks_Settings_Page extends ITSEC_Module_Settings_P
 			'default-access'  => esc_html__( 'Default Access', 'better-wp-security' ),
 		);
 
-
-		$jquery_version = ITSEC_Modules::get_setting( $this->id, 'jquery_version' );
-		$jquery_version_is_safe = ITSEC_Lib::is_jquery_version_safe();
-
-		if ( empty( $jquery_version ) ) {
-			$jquery_description = sprintf( __( 'Your current jQuery version is undetermined. Please <a href="%1$s" target="_blank" rel="noopener noreferrer">check your homepage</a> to see if you even need this feature' ), site_url() );
-		} else {
-			$jquery_description = sprintf( __( 'Your current jQuery version is %1$s' ), $jquery_version );
-		}
-
-		if ( $jquery_version_is_safe ) {
-			$jquery_description_color = 'green';
-		} else {
-			$jquery_description_color = 'red';
-		}
-
 ?>
 	<p><?php esc_html_e( 'Note: These settings are listed as advanced because they block common forms of attacks but they can also block legitimate plugins and themes that rely on the same techniques. When activating the settings below, we recommend enabling them one by one to test that everything on your site is still working as expected.', 'better-wp-security' ); ?></p>
 	<p><?php esc_html_e( 'Remember, some of these settings might conflict with other plugins or themes, so test your site after enabling each setting.', 'better-wp-security' ); ?></p>
@@ -122,19 +106,6 @@ final class ITSEC_WordPress_Tweaks_Settings_Page extends ITSEC_Module_Settings_P
 					<li><?php echo wp_kses( __( '<strong>Restricted Access</strong> - Restrict access to most REST API data. This means that most requests will require a logged in user or a user with specific privileges, blocking public requests for potentially-private data. We recommend selecting this option.', 'better-wp-security' ), array( 'strong' => array() ) ); ?></li>
 					<li><?php echo wp_kses( __( '<strong>Default Access</strong> - Access to REST API data is left as default. Information including published posts, user details, and media library entries is available for public access.', 'better-wp-security' ), array( 'strong' => array() ) ); ?></li>
 				</ul>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row"><label for="itsec-wordpress-tweaks-safe_jquery"><?php esc_html_e( 'Replace jQuery With a Safe Version', 'better-wp-security' ); ?></label></th>
-			<td>
-				<?php if ( $jquery_version_is_safe ) : ?>
-					<?php $form->add_checkbox( 'safe_jquery' ); ?>
-					<label for="itsec-wordpress-tweaks-safe_jquery"><?php esc_html_e( 'Enqueue a safe version of jQuery', 'better-wp-security' ); ?></label>
-					<p class="description"><?php esc_html_e( 'Remove the existing jQuery version used and replace it with a safe version (the version that comes default with WordPress).', 'better-wp-security' ); ?></p>
-				<?php endif; ?>
-
-				<p class="description" style="color: <?php echo esc_attr( $jquery_description_color ); ?>"><?php echo $jquery_description; ?></p>
-				<p class="description"><?php printf( wp_kses( __( 'Note that this only checks the homepage of your site and only for users who are logged in. This is done intentionally to save resources. If you think this is in error <a href="%s" target="_blank" rel="noopener noreferrer">click here to check again</a>. This will open your homepage in a new window allowing the plugin to determine the version of jQuery actually being used. You can then come back here and reload this page to see your version.', 'better-wp-security' ), array( 'a' => array( 'href' => array(), 'target' => array(), 'rel' => array() ) ) ), site_url() ); ?></p>
 			</td>
 		</tr>
 		<tr>

@@ -1,0 +1,4083 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-user-manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-06 10:58+0800\n"
+"PO-Revision-Date: 2015-10-08 13:18+0800\n"
+"Last-Translator: 倡萌@WordPress大学 <admin@cmhello.com>\n"
+"Language-Team: 倡萌@WordPress大学 <admin@cmhello.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/abstracts/abstract-wpum-field-type.php:103
+msgid "Basic"
+msgstr "基本"
+
+#: ../includes/abstracts/abstract-wpum-form.php:202
+#, php-format
+msgid "%s is a required field"
+msgstr "%s 是必填字段"
+
+#: ../includes/abstracts/abstract-wpum-form.php:215
+#: ../includes/misc-functions.php:503
+#, php-format
+msgid "\"%s\" (filetype %s) needs to be one of the following file types: %s"
+msgstr "\"%s\" (文件类型 %s) 必须是以下类型中的一种： %s"
+
+#: ../includes/actions.php:273 ../includes/install.php:33
+#, php-format
+msgid ""
+"This plugin requires a minimum PHP Version 5.3 to be installed on your host. "
+"<a href=\"%s\" target=\"_blank\">Click here to read how you can update your "
+"PHP version</a>."
+msgstr ""
+"该插件必须安装在 PHP 5.3 及以上版本的主机中。 <a href=\"%s\" target=\"_blank"
+"\">点击查看如何更新PHP版本</a>。"
+
+#: ../includes/admin/addons.php:80
+msgid "WP User Manager "
+msgstr "WP User Manager "
+
+#: ../includes/admin/addons.php:80
+msgid "Addons"
+msgstr "扩展"
+
+#: ../includes/admin/addons.php:99
+#, php-format
+msgid ""
+"Looks like there was a problem while retrieving the list of addons. Please "
+"visit <a href=\"%s\">%s</a> if you are looking for the WP User Manager "
+"addons."
+msgstr ""
+"获取扩展列表的过程中遇到了问题。请访问 <a href=\"%s\">%s</a> 查找 WP User "
+"Manager 扩展。"
+
+#: ../includes/admin/admin-actions.php:21 ../includes/admin/welcome.php:217
+msgid "Documentation"
+msgstr "文档"
+
+#: ../includes/admin/admin-actions.php:22
+msgid "Add Ons"
+msgstr "扩展"
+
+#: ../includes/admin/admin-actions.php:37
+#, php-format
+msgid ""
+"<strong>Enabled.</strong> <br/> <small>Registrations can be disabled in <a "
+"href=\"%s\" target=\"_blank\">Settings -> General</a>.</small>"
+msgstr ""
+"<strong>已启用。</strong> <br/> <small>注册功能可以在 <a href=\"%s\" target="
+"\"_blank\">设置 -> 常规</a> 中开启。</small>"
+
+#: ../includes/admin/admin-actions.php:39
+#, php-format
+msgid ""
+"Registrations are disabled. Enable the \"Membership\" option in <a href=\"%s"
+"\" target=\"_blank\">Settings -> General</a>."
+msgstr ""
+"注册功能已禁用。请在 <a href=\"%s\" target=\"_blank\">设置 -> 常规</a> 中开启"
+"注册功能。"
+
+#: ../includes/admin/admin-actions.php:102
+#, php-format
+msgid ""
+"The default user role for registrations can be changed in <a href=\"%s"
+"\">Settings -> General</a>"
+msgstr "默认注册的用户角色可以在 <a href=\"%s\">设置 -> 常规</a> 中更改。"
+
+#: ../includes/admin/admin-actions.php:135
+msgid "Restore default emails"
+msgstr "恢复默认的电子邮件"
+
+#: ../includes/admin/admin-actions.php:136
+msgid "Click the button to restore the default emails content and subject."
+msgstr "点击按钮，恢复默认的电子邮件的内容和主题。"
+
+#: ../includes/admin/admin-actions.php:152
+msgid "Restore default pages"
+msgstr "恢复默认的页面"
+
+#: ../includes/admin/admin-actions.php:153
+msgid "Click the button to restore the default core pages of the plugin."
+msgstr "点击按钮，即可恢复插件的默认核心页面。"
+
+#: ../includes/admin/admin-actions.php:169
+#, php-format
+msgid "Current profile permalink structure: %s%s"
+msgstr "当前设定固定链接结构：%s%s"
+
+#: ../includes/admin/admin-actions.php:170
+#, php-format
+msgid ""
+"You can change the profiles permalink structure into your <a href=\"%s"
+"\">permalink settings page</a>."
+msgstr "你可以在 <a href=\"%s\">设置 -> 固定链接</a> 页面修改固定链接结构。"
+
+#: ../includes/admin/admin-actions.php:174
+msgid "Your users profile page is not configured."
+msgstr "未配置您的用户个人资料页面。"
+
+#: ../includes/admin/admin-actions.php:174
+#, php-format
+msgid "<a href=\"%s\">Setup your profile page here.</a>"
+msgstr "<a href=\"%s\">在这里设置你的个人资料页面。</a>"
+
+#: ../includes/admin/admin-actions.php:177
+#: ../includes/admin/admin-notices.php:48
+#: ../includes/classes/class-wpum-permalinks.php:100
+#, php-format
+msgid ""
+"You must <a href=\"%s\">change your permalinks</a> to anything else other "
+"than \"default\" for profiles to work."
+msgstr ""
+"你必须 <a href=\"%s\">修改固定链接结构 </a>为 非\"默认\" 的结构，才能使个人资"
+"料页面链接生效。"
+
+#: ../includes/admin/admin-actions.php:212
+msgid "Add New Line"
+msgstr "添加新行"
+
+#: ../includes/admin/admin-actions.php:260
+#, php-format
+msgid ""
+"Hey, looks like you've been using the <b>WP User Manager</b> plugin for some "
+"time now - that's awesome! <br/> Could you please give it a review on "
+"wordpress.org ? Just to help us spread the word and boost our motivation :) "
+"<br/> <br/><a href='%s' class='button button-primary' target='_blank'>Yes, "
+"you deserve it!</a> - <a href='%s'>I've already done this!</a>"
+msgstr ""
+"嗨！看来你已经使用 <b>WP User Manager</b> 有一段时间了， 真是太棒了！ <br/> "
+"能否请你在 wordpress.org 给它一个评价？仅仅帮我们宣传和推动下我们前进的动"
+"力 :) <br/> <br/><a href='%s' class='button button-primary' target='_blank'>"
+"好的，这是应该的！</a> - <a href='%s'>我已经评价过啦！</a>"
+
+#: ../includes/admin/admin-notices.php:27
+msgid ""
+"You have enabled the \"Minimum Password Strength\" option, the \"Users "
+"custom passwords\" is currently disabled and must be enabled for custom "
+"passwords to work."
+msgstr ""
+"你已经启用了 \"最小密码强度\" 选项，但是 \"用户自定义密码\" 选项目前是禁用"
+"的，你必须启用它才能和 \"最小密码强度\" 一起工作。"
+
+#: ../includes/admin/admin-notices.php:31
+msgid ""
+"Error: the option \"Login after registration\" can only work when the option "
+"\"Users custom passwords\" is enabled too."
+msgstr ""
+"错误：\"注册后登录\"这个选项只有在\"用户自定义密码\" 这个选项启用时才生效。"
+
+#: ../includes/admin/admin-notices.php:35
+msgid "Email successfully updated."
+msgstr "邮件已成功更新。"
+
+#: ../includes/admin/admin-notices.php:43
+msgid "One or more WPUM pages are not configured."
+msgstr "一个或多个 WPUM 页面没有配置。"
+
+#: ../includes/admin/admin-notices.php:43
+#, php-format
+msgid ""
+"<a href=\"%s\" class=\"button-primary\">Click here to setup your pages</a>"
+msgstr "<a href=\"%s\" class=\"button-primary\">点击这里设置页面</a>"
+
+#: ../includes/admin/admin-notices.php:52
+msgid "Pages setup completed."
+msgstr "页面设置已完成。"
+
+#: ../includes/admin/admin-notices.php:62
+#, php-format
+msgid ""
+"Your uploads folder in \"%s\" is not writable. <br/>Avatar uploads will not "
+"work, please adjust folder permission.<br/><br/> <a href=\"%s\" class="
+"\"button\" target=\"_blank\">Read More</a>"
+msgstr ""
+"你的上传目录 \"%s\" 不可写。<br/>头像上传将无法正常工作，请调整文件夹的权限。"
+"<br/><br/> <a href=\"%s\" class=\"button\" target=\"_blank\">阅读更多</a>"
+
+#: ../includes/admin/admin-notices.php:64
+msgid "No issues detected."
+msgstr "没有检测到问题。"
+
+#: ../includes/admin/admin-notices.php:72
+msgid "Field group successfully updated."
+msgstr "字段分组已成功更新。"
+
+#: ../includes/admin/admin-notices.php:76
+msgid "Field group successfully deleted."
+msgstr "字段分组已删除。"
+
+#: ../includes/admin/admin-notices.php:80
+msgid "Field successfully updated."
+msgstr "字段已更新。"
+
+#: ../includes/admin/admin-pages.php:26
+msgid "WPUM Profile Fields Editor"
+msgstr "WPUM 个人资料字段编辑器"
+
+#: ../includes/admin/admin-pages.php:26
+msgid "Profile Fields"
+msgstr "个人资料字段"
+
+#: ../includes/admin/admin-pages.php:27
+msgid "WPUM Edit Field"
+msgstr "WPUF 编辑字段"
+
+#: ../includes/admin/admin-pages.php:27
+msgid "Edit Field"
+msgstr "编辑字段"
+
+#: ../includes/admin/admin-pages.php:28
+msgid "WP User Manager Settings"
+msgstr "WP User Manager 设置"
+
+#: ../includes/admin/admin-pages.php:28
+msgid "WPUM Settings"
+msgstr "WPUM 设置"
+
+#: ../includes/admin/admin-pages.php:29
+msgid "WP User Manager Email Editor"
+msgstr "WP User Manager 邮件编辑器"
+
+#: ../includes/admin/admin-pages.php:29
+msgid "WPUM Email Editor"
+msgstr "WPUM 邮件编辑器"
+
+#: ../includes/admin/admin-pages.php:30
+msgid "WP User Manager Addons"
+msgstr "WP User Manager 扩展"
+
+#: ../includes/admin/admin-pages.php:30
+msgid "WPUM Addons"
+msgstr "WPUM 扩展"
+
+#: ../includes/admin/edit-email-page.php:44
+#, php-format
+msgid "WP User Manager - Editing \"%s\""
+msgstr "WP User Manager - 编辑 \"%s\""
+
+#: ../includes/admin/edit-email-page.php:44
+msgid "Back to settings page &raquo;"
+msgstr "返回设置页面 &raquo;"
+
+#: ../includes/admin/edit-email-page.php:52
+msgid "Email Subject:"
+msgstr "邮件主题："
+
+#: ../includes/admin/edit-email-page.php:56
+msgid "The subject line of the email"
+msgstr "邮件的主题行"
+
+#: ../includes/admin/edit-email-page.php:61
+msgid "Email Message:"
+msgstr "邮件信息："
+
+#: ../includes/admin/edit-email-page.php:65
+msgid ""
+"The email message to be sent into the notification. The following template "
+"tags can be used in the message:"
+msgstr "要在通知中发送的邮件信息。以下模板标签可以在信息中使用："
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:64
+msgid "Click the \"Edit Email\" button to customize notifications."
+msgstr "点击 \"编辑邮件\" 按钮来自定义通知。"
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:64
+msgid ""
+"Only the emails into the list above, will use the \"From Name\" and \"From "
+"Email\" options above."
+msgstr ""
+"只有上面列表中的邮件，才使用上面的 \"发信人名字\" 和 \"发信邮箱\" 选项。"
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:80
+#: ../includes/admin/emails/class-wpum-emails-editor.php:103
+#: ../includes/classes/class-wpum-permalinks.php:153
+msgctxt "_doing_it_wrong error message"
+msgid "You have no rights to access this page"
+msgstr "你没有足够的权限访问这个页面"
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:108
+msgctxt "_doing_it_wrong error message"
+msgid "Nonce verification failed"
+msgstr "随机数验证失败"
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:113
+msgctxt "_doing_it_wrong error message"
+msgid "No email ID was provided"
+msgstr "没有提供邮件ID"
+
+#: ../includes/admin/emails/class-wpum-emails-editor.php:118
+#, php-format
+msgid "%s email"
+msgstr "%s 邮件"
+
+#: ../includes/admin/emails/class-wpum-emails-list.php:50
+msgid "Email Title"
+msgstr "邮件标题"
+
+#: ../includes/admin/emails/class-wpum-emails-list.php:51
+msgid "Email Description"
+msgstr "邮件描述"
+
+#: ../includes/admin/emails/class-wpum-emails-list.php:52
+#: ../includes/admin/fields/class-wpum-groups-fields.php:64
+msgid "Actions"
+msgstr "操作"
+
+#: ../includes/admin/emails/class-wpum-emails-list.php:153
+msgid "Edit Email"
+msgstr "编辑邮件"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:150
+msgid "WP User Manager - Fields Editor"
+msgstr "WP User Manager - 字段编辑器"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:204
+msgid ""
+"It seems you do not have any field groups. Please deactivate and re-activate "
+"the plugin."
+msgstr "貌似你没有字段分组。请停用后重新激活插件。"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:223
+msgid "Select a field group to edit:"
+msgstr "选择要编辑的字段分组："
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:233
+msgid "Select"
+msgstr "选择"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:304
+msgid "Group Settings"
+msgstr "分组设置"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:305
+msgid "Fields Order"
+msgstr "字段排序"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:318
+msgid "Requirement"
+msgstr "必填"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:322
+msgid "Show on registration form"
+msgstr "在注册表单中显示"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:334
+#, php-format
+msgid "Click and drag the %s button to change the order of the fields."
+msgstr "按住和拖放 %s 按钮来更改字段的顺序。"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:354
+msgid "Fields into this group can appear on the signup page."
+msgstr "在该分组的字段将在注册页面显示。"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:371
+msgid "Group name"
+msgstr "分组名称"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:379
+msgid "Group description"
+msgstr "分组描述"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:398
+msgid "Delete Group"
+msgstr "删除分组"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:405
+msgid "Save Group Settings"
+msgstr "保存分组设置"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:487
+msgid "Editing field"
+msgstr "编辑字段"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:488
+msgid "Back to editor"
+msgstr "返回编辑器"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:510
+#: ../includes/admin/fields/class-wpum-fields-editor.php:519
+msgid "Save Field"
+msgstr "保存字段"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:556
+msgid "Enter a name for this field"
+msgstr "输入字段名称"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:590
+msgid "Field Description (optional)"
+msgstr "字段描述（可选）"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:609
+msgid "Set this field as required ?"
+msgstr "设置这个字段为必填？"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:610
+msgid "Enable to force the user to fill this field."
+msgstr "强制用户必须填写这个字段。"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:628
+msgid "Display this field on registration ?"
+msgstr "在注册中显示这个字段？"
+
+#: ../includes/admin/fields/class-wpum-fields-editor.php:629
+msgid "Enable to display this field on the registration form."
+msgstr "将该字段在注册表单中显示。"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:48
+msgid "No fields have been found."
+msgstr "没有字段。"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:60
+msgid "Order"
+msgstr "订单"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:61
+msgid "Field Title"
+msgstr "字段标题"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:62
+msgid "Field Type"
+msgstr "字段类型"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:63
+msgid "Required"
+msgstr "必填"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:179
+msgid "Text"
+msgstr "文本"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:182
+#: ../includes/functions.php:90 ../templates/profile/profile-overview.php:28
+msgid "Email"
+msgstr "邮箱"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:184
+msgid "Dropdown"
+msgstr "下拉"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:186
+msgid "Textarea"
+msgstr "文本区域"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:188
+#: ../includes/classes/class-wpum-shortcodes.php:72
+#: ../includes/forms/class-wpum-form-update-password.php:55
+#: ../includes/functions.php:115
+msgid "Password"
+msgstr "密码"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:190
+#: ../includes/lib/wp-pretty-fields/fields/image.php:49
+msgid "Upload"
+msgstr "上传"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:224
+msgid "Edit"
+msgstr "编辑"
+
+#: ../includes/admin/fields/class-wpum-groups-fields.php:230
+msgid "Delete"
+msgstr "删除"
+
+#: ../includes/admin/settings/display-settings.php:32
+#, php-format
+msgid "WP User Manager v%s Settings"
+msgstr "WP User Manager v%s 设置"
+
+#: ../includes/admin/settings/register-settings.php:183
+msgid "Pages Setup"
+msgstr "页面设置"
+
+#: ../includes/admin/settings/register-settings.php:188
+msgid "Login page:"
+msgstr "登录页面："
+
+#: ../includes/admin/settings/register-settings.php:189
+msgid "Select the page where you have added the login shortcode."
+msgstr "选择添加了登录简码的页面"
+
+#: ../includes/admin/settings/register-settings.php:196
+msgid "Password recovery page:"
+msgstr "密码找回页面："
+
+#: ../includes/admin/settings/register-settings.php:197
+msgid "Select the page where you have added the password recovery shortcode."
+msgstr "选择添加了密码找回简码的页面。"
+
+#: ../includes/admin/settings/register-settings.php:204
+msgid "Registration page:"
+msgstr "注册页面："
+
+#: ../includes/admin/settings/register-settings.php:205
+msgid "Select the page where you have added the registration shortcode."
+msgstr "选择添加了注册简码的页面"
+
+#: ../includes/admin/settings/register-settings.php:212
+msgid "Account page:"
+msgstr "账号页面："
+
+#: ../includes/admin/settings/register-settings.php:213
+msgid "Select the page where you have added the account shortcode."
+msgstr "选择添加了账号简码的页面"
+
+#: ../includes/admin/settings/register-settings.php:220
+msgid "Profile page:"
+msgstr "个人资料页面："
+
+#: ../includes/admin/settings/register-settings.php:221
+msgid "Select the page where you have added the profile shortcode."
+msgstr "选择添加了个人资料简码的的页面"
+
+#: ../includes/admin/settings/register-settings.php:228
+msgid "Passwords Setup"
+msgstr "密码设置"
+
+#: ../includes/admin/settings/register-settings.php:233
+msgid "Minimum Password Strength:"
+msgstr "最小密码强度："
+
+#: ../includes/admin/settings/register-settings.php:234
+msgid ""
+"Select the required password strength. This will be forced on registration "
+"and account page."
+msgstr "选择所需的密码强度。这个将在注册和账号页面生效。"
+
+#: ../includes/admin/settings/register-settings.php:240
+msgid "Display password meter:"
+msgstr "显示密码评估："
+
+#: ../includes/admin/settings/register-settings.php:241
+msgid ""
+"Enable to display a password meter on registration page and account page."
+msgstr "在注册和账号页面显示密码强度评估。"
+
+#: ../includes/admin/settings/register-settings.php:246
+#: ../includes/admin/settings/register-settings.php:332
+msgid "Extra"
+msgstr "其他设置"
+
+#: ../includes/admin/settings/register-settings.php:251
+msgid "Allow users to login with:"
+msgstr "允许的用户登录方式："
+
+#: ../includes/admin/settings/register-settings.php:257
+msgid "Display registration link:"
+msgstr "显示注册链接："
+
+#: ../includes/admin/settings/register-settings.php:258
+msgid "Enable to display a registration link into the login form."
+msgstr "在登录表单显示注册链接。"
+
+#: ../includes/admin/settings/register-settings.php:263
+msgid "Display password recovery link:"
+msgstr "显示密码找回链接："
+
+#: ../includes/admin/settings/register-settings.php:264
+msgid "Enable to display a password recovery link into the login form."
+msgstr "在注册表单显示密码找回链接。"
+
+#: ../includes/admin/settings/register-settings.php:269
+msgid "Admin Bar:"
+msgstr "管理工具条："
+
+#: ../includes/admin/settings/register-settings.php:270
+msgid "Hide admin bar for specific user roles."
+msgstr "对特定的用户角色隐藏管理工具条。"
+
+#: ../includes/admin/settings/register-settings.php:272
+#: ../includes/admin/settings/register-settings.php:307
+msgid "Select the user roles from the list."
+msgstr "从列表中选择用户角色。"
+
+#: ../includes/admin/settings/register-settings.php:282
+msgid "Registrations Status:"
+msgstr "注册状态："
+
+#: ../includes/admin/settings/register-settings.php:287
+msgid "Default user registration role:"
+msgstr "默认用户注册角色："
+
+#: ../includes/admin/settings/register-settings.php:292
+msgid "Users custom passwords:"
+msgstr "用户自定义密码："
+
+#: ../includes/admin/settings/register-settings.php:293
+msgid "Enable to allow users to set custom passwords on the registration page."
+msgstr "允许用户在注册页面设置自定义密码。"
+
+#: ../includes/admin/settings/register-settings.php:298
+msgid "Allow role section:"
+msgstr "允许角色选择："
+
+#: ../includes/admin/settings/register-settings.php:299
+msgid "Enable to allow users to select a user role on registration."
+msgstr "允许用户在注册时选择用户角色。"
+
+#: ../includes/admin/settings/register-settings.php:304
+msgid "Allowed Roles:"
+msgstr "允许的角色："
+
+#: ../includes/admin/settings/register-settings.php:305
+msgid "Select which roles can be selected upon registration."
+msgstr "选择可在注册时选择的用户角色。"
+
+#: ../includes/admin/settings/register-settings.php:313
+#: ../includes/forms/class-wpum-form-register.php:283
+msgid "Terms &amp; Conditions"
+msgstr "协议条款"
+
+#: ../includes/admin/settings/register-settings.php:318
+msgid "Enable terms &amp conditions:"
+msgstr "启用协议条款："
+
+#: ../includes/admin/settings/register-settings.php:319
+msgid ""
+"Enable to force users to agree to your terms before registering an account."
+msgstr "强制要求用户同意协议条款才能注册账号。"
+
+#: ../includes/admin/settings/register-settings.php:324
+msgid "Terms Page:"
+msgstr "条款页面："
+
+#: ../includes/admin/settings/register-settings.php:325
+msgid "Select the page that contains your terms."
+msgstr "选择包含了协议条款内容的页面。"
+
+#: ../includes/admin/settings/register-settings.php:337
+msgid "Anti-spam Honeypot:"
+msgstr "反垃圾："
+
+#: ../includes/admin/settings/register-settings.php:338
+msgid "Enables honeypot spam protection technique."
+msgstr "使用反垃圾防护技术。"
+
+#: ../includes/admin/settings/register-settings.php:343
+msgid "Login after registration:"
+msgstr "注册后自动登录："
+
+#: ../includes/admin/settings/register-settings.php:344
+msgid "Enable this option to authenticate users after registration."
+msgstr "启用这个选项，使用户注册后可以自动登录。"
+
+#: ../includes/admin/settings/register-settings.php:353
+msgid "From Name:"
+msgstr "发信人名字："
+
+#: ../includes/admin/settings/register-settings.php:354
+msgid ""
+"The name emails are said to come from. This should probably be your site "
+"name."
+msgstr "这个名字说明邮件的来源。这个通常应该是你的网站名称。"
+
+#: ../includes/admin/settings/register-settings.php:360
+msgid "From Email:"
+msgstr "发信邮箱："
+
+#: ../includes/admin/settings/register-settings.php:361
+msgid "This will act as the \"from\" and \"reply-to\" address."
+msgstr "这个将作为  \"来自\" 和 \"回复给\" 的地址。"
+
+#: ../includes/admin/settings/register-settings.php:367
+msgid "Email Template"
+msgstr "邮件模板"
+
+#: ../includes/admin/settings/register-settings.php:368
+msgid "Choose a template."
+msgstr "选择一个模板"
+
+#: ../includes/admin/settings/register-settings.php:374
+msgid "Emails Editor:"
+msgstr "邮件编辑："
+
+#: ../includes/admin/settings/register-settings.php:379
+msgid "Notifications Settings"
+msgstr "通知设置"
+
+#: ../includes/admin/settings/register-settings.php:384
+msgid "Disable admin registration email:"
+msgstr "禁用管理员注册通知邮件："
+
+#: ../includes/admin/settings/register-settings.php:385
+msgid ""
+"Enable this option to stop receiving notifications when a new user registers."
+msgstr "启用这个选项，可以禁止新用户注册时通知管理员的邮件。"
+
+#: ../includes/admin/settings/register-settings.php:390
+msgid "Disable admin password recovery email:"
+msgstr "禁用管理员密码找回通知邮件："
+
+#: ../includes/admin/settings/register-settings.php:391
+msgid ""
+"Enable this option to stop receiving notifications when a new user resets "
+"his password."
+msgstr "启用这个选项，可以禁止用户重置密码时通知管理员的邮件。"
+
+#: ../includes/admin/settings/register-settings.php:400
+msgid "Profile permalink:"
+msgstr "个人资料链接："
+
+#: ../includes/admin/settings/register-settings.php:405
+msgid "Allow guests to view profiles"
+msgstr "允许游客查看个人资料"
+
+#: ../includes/admin/settings/register-settings.php:406
+msgid "Enable this option to allow guests to view users profiles."
+msgstr "启用这个选项允许游客访问用户的个人资料。"
+
+#: ../includes/admin/settings/register-settings.php:411
+msgid "Allow members to view profiles"
+msgstr "允许注册用户查看个人资料"
+
+#: ../includes/admin/settings/register-settings.php:412
+msgid ""
+"Enable this option to allow members to view users profiles. If disabled, "
+"users can only see their own profile."
+msgstr ""
+"启用这个选项允许注册用户查看其他用户的个人资料。如果禁用，用户仅能查看自己的"
+"个人资料。"
+
+#: ../includes/admin/settings/register-settings.php:417
+msgid "Custom Avatars"
+msgstr "自定义头像"
+
+#: ../includes/admin/settings/register-settings.php:418
+msgid ""
+"Enable this option to allow users to upload custom avatars for their "
+"profiles."
+msgstr "启用这个选项让用户可以上传一个自定义头像到他们的个人资料中。"
+
+#: ../includes/admin/settings/register-settings.php:423
+msgid "Display posts"
+msgstr "显示文章"
+
+#: ../includes/admin/settings/register-settings.php:424
+msgid ""
+"Enable this option to display users submitted post on their profile page."
+msgstr "启用这个选项可以在用户个人资料页面显示他们的文章。"
+
+#: ../includes/admin/settings/register-settings.php:429
+msgid "Display comments"
+msgstr "显示评论"
+
+#: ../includes/admin/settings/register-settings.php:430
+msgid ""
+"Enable this option to display users submitted comments on their profile page."
+msgstr "启用这个选项可以在用户个人资料页面显示他们的评论。"
+
+#: ../includes/admin/settings/register-settings.php:439
+msgid "Login redirect:"
+msgstr "登录重定向："
+
+#: ../includes/admin/settings/register-settings.php:440
+msgid ""
+"Select the page where you want to redirect users after they login. If empty "
+"will return to the current page."
+msgstr "选择你希望用户登录后被重定向到的页面。如果留空，将返回登录前的页面。"
+
+#: ../includes/admin/settings/register-settings.php:447
+msgid "Logout redirect:"
+msgstr "登出重定向："
+
+#: ../includes/admin/settings/register-settings.php:448
+msgid ""
+"Select the page where you want to redirect users after they logout. If empty "
+"will return to wp-login.php"
+msgstr ""
+"选择你希望用户登出后被重定向到的页面。如果留空，将返回  wp-login.php 页面。"
+
+#: ../includes/admin/settings/register-settings.php:455
+msgid "Backend register redirect:"
+msgstr "后台注册重定向："
+
+#: ../includes/admin/settings/register-settings.php:456
+#, php-format
+msgid ""
+"Select a page if you wish to redirect users who try to signup through <a "
+"href=\"%s\">the default registration page on wp-login.php</a>"
+msgstr ""
+"选择你希望用户尝试通过 <a href=\"%s\">默认注册页面 wp-login.php</a> 来注册时"
+"重定向到的页面。"
+
+#: ../includes/admin/settings/register-settings.php:463
+msgid "Backend profile redirect:"
+msgstr "后台个人资料重定向："
+
+#: ../includes/admin/settings/register-settings.php:464
+msgid ""
+"Select the page where you want to redirect users who try to access their "
+"profile on the backend."
+msgstr "选择你希望用户尝试访问后台个人资料页面时重定向到的页面。"
+
+#: ../includes/admin/settings/register-settings.php:479
+msgid "Restore default emails:"
+msgstr "恢复默认邮件："
+
+#: ../includes/admin/settings/register-settings.php:484
+msgid "Restore Pages:"
+msgstr "恢复页面："
+
+#: ../includes/admin/settings/register-settings.php:489
+msgid "Excluded usernames:"
+msgstr "排除的用户名："
+
+#: ../includes/admin/settings/register-settings.php:490
+msgid ""
+"Enter the usernames that you wish to disable. Separate each username on a "
+"new line."
+msgstr "输入你希望禁止注册的用户名。每行一个。"
+
+#: ../includes/admin/settings/register-settings.php:560
+msgid "Settings successfully updated."
+msgstr "设置已成功更新。"
+
+#: ../includes/admin/settings/register-settings.php:588
+msgid "General"
+msgstr "常规"
+
+#: ../includes/admin/settings/register-settings.php:589
+msgid "Registration"
+msgstr "注册"
+
+#: ../includes/admin/settings/register-settings.php:590
+msgid "Emails"
+msgstr "邮件"
+
+#: ../includes/admin/settings/register-settings.php:591
+msgid "Profiles"
+msgstr "个人资料"
+
+#: ../includes/admin/settings/register-settings.php:592
+msgid "Redirects"
+msgstr "重定向"
+
+#: ../includes/admin/settings/register-settings.php:595
+msgid "Extensions"
+msgstr "扩展"
+
+#: ../includes/admin/settings/register-settings.php:598
+msgid "Tools"
+msgstr "工具"
+
+#: ../includes/admin/settings/register-settings.php:768
+#, php-format
+msgid ""
+"The callback function used for the <strong>%s</strong> setting is missing."
+msgstr "用来 <strong>%s</strong> 设置的回调函数不存在。"
+
+#: ../includes/admin/welcome.php:50 ../includes/admin/welcome.php:51
+msgid "Welcome to WP User Manager"
+msgstr "欢迎使用 WP User Manager"
+
+#: ../includes/admin/welcome.php:59 ../includes/admin/welcome.php:60
+msgid "Getting started with WP User Manager"
+msgstr "WP User Manager 入门"
+
+#: ../includes/admin/welcome.php:135
+msgid "What's New"
+msgstr "此次更新"
+
+#: ../includes/admin/welcome.php:140
+msgid "Getting Started"
+msgstr "入门"
+
+#: ../includes/admin/welcome.php:158 ../includes/admin/welcome.php:189
+#, php-format
+msgid "Welcome to WP User Manager %s"
+msgstr "欢迎使用 WP User Manager %s"
+
+#: ../includes/admin/welcome.php:159
+#, php-format
+msgid ""
+"Thank you for updating to the latest version! WP User Manager %s is ready to "
+"provide improved control over your WordPress users."
+msgstr ""
+"感谢你升级到最新版本！WP User Manager %s  已经准备好为你提供更好的用户管理功"
+"能。"
+
+#: ../includes/admin/welcome.php:160 ../includes/admin/welcome.php:191
+#, php-format
+msgid "Version %s"
+msgstr "版本 %s"
+
+#: ../includes/admin/welcome.php:166
+msgid "Full Changelog"
+msgstr "完整的更新记录"
+
+#: ../includes/admin/welcome.php:190
+#, php-format
+msgid ""
+"Thank you for installing the latest version! WP User Manager %s is ready to "
+"provide improved control over your WordPress users."
+msgstr ""
+"感谢你安装最新版本！WP User Manager %s 已经准备好为你提供更好的用户管理功能。"
+
+#: ../includes/admin/welcome.php:195
+msgid ""
+"Use the tips below to get started using WP User Manager. You will be up and "
+"running in no time!"
+msgstr "根据下面的提示开始使用 WP User Manager。你可以在任何时间开始！"
+
+#: ../includes/admin/welcome.php:201
+msgid "Configure WP User Manager"
+msgstr "配置 WP User Manager"
+
+#: ../includes/admin/welcome.php:203
+msgid "Strengthen your passwords"
+msgstr "强化你的密码"
+
+#: ../includes/admin/welcome.php:204
+msgid "Setup login method"
+msgstr "设置登录方法"
+
+#: ../includes/admin/welcome.php:205
+msgid "Customize notifications"
+msgstr "自定义通知"
+
+#: ../includes/admin/welcome.php:209
+msgid "Customize Profiles"
+msgstr "自定义个人资料"
+
+#: ../includes/admin/welcome.php:211
+msgid "Customize profiles"
+msgstr "自定义个人资料"
+
+#: ../includes/admin/welcome.php:212
+msgid "Customize fields"
+msgstr "自定义字段"
+
+#: ../includes/admin/welcome.php:213
+msgid "Create user directories"
+msgstr "创建用户目录"
+
+#: ../includes/admin/welcome.php:218
+#, php-format
+msgid ""
+"Looking for help? <a href=\"%s\" target=\"_blank\">WP User Manager "
+"documentation</a> has got you covered."
+msgstr ""
+"需要帮助？<a href=\"%s\" target=\"_blank\">WP User Manager 文档</a> 可以帮助"
+"你。"
+
+#: ../includes/admin/welcome.php:218
+msgid "Read documentation"
+msgstr "阅读文档"
+
+#: ../includes/admin/welcome.php:229
+msgid "Looking for help ?"
+msgstr "需要帮助？"
+
+#: ../includes/admin/welcome.php:230
+#, php-format
+msgid ""
+"We do all we can to provide every user with the best support possible. If "
+"you encounter a problem or have a question, please <a href=\"%s\" target="
+"\"_blank\">contact us.</a> Make sure you <a href=\"%s\">read the "
+"documentation</a> first."
+msgstr ""
+"我们尽己所能为每个用户提供最好的帮助。如果你遇到问题或有疑问，请 <a href=\"%s"
+"\" target=\"_blank\">联系我们</a> 。确保你在联系之前已经 <a href=\"%s\">阅读"
+"文档</a>。"
+
+#: ../includes/admin/welcome.php:234
+msgid "Get Notified of Extension Releases"
+msgstr "获取扩展发布通知"
+
+#: ../includes/admin/welcome.php:235
+msgid ""
+"New extensions that make WP User Manager even more powerful will be released "
+"soon. Subscribe to the newsletter to stay up to date with our latest "
+"releases. Signup now to ensure you do not miss a release!"
+msgstr ""
+"新的扩展可以让 WP User Manager 更加强大，它们即将发布。订阅简报可以获取到我们"
+"的最新版本信息。马上注册，以确保你不会错过任何一个最新版本！"
+
+#: ../includes/admin/welcome.php:236
+msgid "Signup Now"
+msgstr "马上注册"
+
+#: ../includes/admin/welcome.php:242
+msgid "Go To WP User Manager &rarr; Settings"
+msgstr "访问 WP User Manager &rarr; 设置"
+
+#: ../includes/admin/welcome.php:262
+msgid "No valid changlog was found."
+msgstr "没有可用的更新日志。"
+
+#: ../includes/assets.php:60
+msgid "Are you sure you want to do this? This action cannot be reversed."
+msgstr "你确定要这样做吗？该操作不能逆转。"
+
+#: ../includes/assets.php:131
+msgid "Strength indicator"
+msgstr "强度评估"
+
+#: ../includes/assets.php:132
+msgid "Very weak"
+msgstr "极弱"
+
+#: ../includes/assets.php:133 ../includes/functions.php:42
+msgid "Weak"
+msgstr "弱"
+
+#: ../includes/assets.php:134
+msgctxt "password strength"
+msgid "Medium"
+msgstr "中等"
+
+#: ../includes/assets.php:135 ../includes/functions.php:44
+msgid "Strong"
+msgstr "强"
+
+#: ../includes/assets.php:143
+msgid "Checking credentials..."
+msgstr "检查凭证..."
+
+#: ../includes/classes/class-wpum-ajax-handler.php:57
+#: ../includes/classes/class-wpum-ajax-handler.php:138
+#: ../includes/classes/class-wpum-ajax-handler.php:155
+msgid "Error."
+msgstr "错误。"
+
+#: ../includes/classes/class-wpum-ajax-handler.php:70
+msgid "Emails successfully restored."
+msgstr "邮件已恢复。"
+
+#: ../includes/classes/class-wpum-ajax-handler.php:105
+msgid "Your profile picture has been deleted."
+msgstr "你的个人资料图片已被删除。"
+
+#: ../includes/classes/class-wpum-ajax-handler.php:114
+#: ../includes/template-actions.php:151
+msgid "Something went wrong."
+msgstr "出错了。"
+
+#: ../includes/classes/class-wpum-ajax-handler.php:162
+msgid "Fields order successfully updated."
+msgstr "字段顺序已更新。"
+
+#: ../includes/classes/class-wpum-html-helper.php:39
+msgctxt "all dropdown items"
+msgid "All"
+msgstr "所有"
+
+#: ../includes/classes/class-wpum-html-helper.php:40
+msgctxt "no dropdown items"
+msgid "None"
+msgstr "无"
+
+#: ../includes/classes/class-wpum-permalinks.php:80
+msgid "User profiles permalink base"
+msgstr "用户个人资料链接结构"
+
+#: ../includes/classes/class-wpum-permalinks.php:104
+msgid ""
+"These settings control the permalinks used for users profiles. These "
+"settings only apply when <strong>not using \"default\" permalinks above</"
+"strong>."
+msgstr ""
+"这些设置应用于用户个人资料的固定链接。并且只在 <strong>上面没有使用 \"默认\" "
+"链接</strong> 时才生效。"
+
+#: ../includes/classes/class-wpum-shortcodes.php:74
+#: ../includes/functions.php:116
+msgid "Remember Me"
+msgstr "记住我"
+
+#: ../includes/classes/class-wpum-shortcodes.php:76
+#: ../includes/functions.php:117 ../includes/misc-functions.php:592
+#: ../includes/widgets/wpum-login-form.php:41
+msgid "Login"
+msgstr "登录"
+
+#: ../includes/classes/class-wpum-shortcodes.php:139
+#: ../templates/user-overview.php:28
+msgid "Logout"
+msgstr "登出"
+
+#: ../includes/classes/class-wpum-shortcodes.php:145
+#, php-format
+msgid "<a href=\"%s\">%s</a>"
+msgstr "<a href=\"%s\">%s</a>"
+
+#: ../includes/classes/class-wpum-shortcodes.php:336
+#: ../includes/classes/class-wpum-shortcodes.php:375
+#: ../includes/classes/class-wpum-shortcodes.php:416
+#: ../includes/profiles/functions.php:286
+#: ../includes/profiles/functions.php:298
+#, php-format
+msgid ""
+"This content is available to members only. Please <a href=\"%s\">login</a> "
+"or <a href=\"%s\">register</a> to view this area."
+msgstr ""
+"只有已注册用户才可以查看这个内容。请 <a href=\"%s\">登录</a> 或 <a href=\"%s"
+"\">注册</a> 后查看。"
+
+#: ../includes/classes/class-wpum-shortcodes.php:453
+msgid ""
+"Something went wrong, you have not set a directory ID or the directory is "
+"not published."
+msgstr "出错了，你没有设置一个目录ID或该目录未公布。"
+
+#: ../includes/directories/actions.php:52
+msgid "Previous page"
+msgstr "上一页"
+
+#: ../includes/directories/actions.php:53
+msgid "Next page"
+msgstr "下一页"
+
+#: ../includes/directories/class-wpum-directory.php:70
+msgctxt "Post Type General Name"
+msgid "User Directories"
+msgstr "用户目录"
+
+#: ../includes/directories/class-wpum-directory.php:71
+msgctxt "Post Type Singular Name"
+msgid "Directory"
+msgstr "目录"
+
+#: ../includes/directories/class-wpum-directory.php:72
+#: ../includes/directories/class-wpum-directory.php:73
+#: ../includes/directories/class-wpum-directory.php:74
+msgid "Directory"
+msgstr "目录"
+
+#: ../includes/directories/class-wpum-directory.php:75
+msgid "User Directories"
+msgstr "用户目录"
+
+#: ../includes/directories/class-wpum-directory.php:76
+#: ../includes/directories/class-wpum-directory.php:77
+msgid "Add New Directory"
+msgstr "添加新目录"
+
+#: ../includes/directories/class-wpum-directory.php:78
+msgid "New Directory"
+msgstr "新建目录"
+
+#: ../includes/directories/class-wpum-directory.php:79
+msgid "Edit Directory"
+msgstr "编辑目录"
+
+#: ../includes/directories/class-wpum-directory.php:80
+msgid "Update Directory"
+msgstr "更新目录"
+
+#: ../includes/directories/class-wpum-directory.php:81
+msgid "View Directory"
+msgstr "查看目录"
+
+#: ../includes/directories/class-wpum-directory.php:82
+msgid "Search Directory"
+msgstr "搜索目录"
+
+#: ../includes/directories/class-wpum-directory.php:83
+msgid "Not found"
+msgstr "没有内容"
+
+#: ../includes/directories/class-wpum-directory.php:84
+msgid "Not found in Trash"
+msgstr "回收站里没有东西"
+
+#: ../includes/directories/class-wpum-directory.php:87
+msgid "wpum_directory"
+msgstr "wpum_directory"
+
+#: ../includes/directories/class-wpum-directory.php:119
+msgid "General Settings"
+msgstr "常规设置"
+
+#: ../includes/directories/class-wpum-directory.php:124
+#: ../includes/directories/class-wpum-directory.php:215
+msgid "User Roles"
+msgstr "用户角色"
+
+#: ../includes/directories/class-wpum-directory.php:125
+msgid "Leave blank to display all user roles."
+msgstr "留空将显示所有用户角色。"
+
+#: ../includes/directories/class-wpum-directory.php:126
+msgid "Select the user roles you wish to display into this directory."
+msgstr "选择你希望在这这个目录中显示的用户角色。"
+
+#: ../includes/directories/class-wpum-directory.php:140
+msgid "Exclude users"
+msgstr "排除用户"
+
+#: ../includes/directories/class-wpum-directory.php:141
+msgid "Comma separated list of users id you wish to exclude."
+msgstr "输入你希望排除的用户ID，多个ID请用英文半角逗号隔开。"
+
+#: ../includes/directories/class-wpum-directory.php:142
+#, php-format
+msgid " Example: type %s to exclude users with those id(s)."
+msgstr "例如：输入 %s 排除这些ID的用户。"
+
+#: ../includes/directories/class-wpum-directory.php:147
+#: ../includes/directories/class-wpum-directory.php:217
+msgid "Profiles per page"
+msgstr "每页个人资料数"
+
+#: ../includes/directories/class-wpum-directory.php:148
+msgid "Select how many profiles you wish to display per page."
+msgstr "选择你希望每页显示的个人资料数量。"
+
+#: ../includes/directories/class-wpum-directory.php:154
+msgid "Directory Template"
+msgstr "目录模板"
+
+#: ../includes/directories/class-wpum-directory.php:155
+msgid "Select a template from the list."
+msgstr "从列表中选择一个模板。"
+
+#: ../includes/directories/class-wpum-directory.php:168
+msgid "Users sorting"
+msgstr "用户分类"
+
+#: ../includes/directories/class-wpum-directory.php:173
+msgid "Display sorter"
+msgstr "显示排序器"
+
+#: ../includes/directories/class-wpum-directory.php:174
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"sorting options."
+msgstr "启用这个设置，可以在目录中显示一个包含排序选项的下拉菜单。"
+
+#: ../includes/directories/class-wpum-directory.php:180
+msgid "Display amount filter"
+msgstr "显示数量过滤器"
+
+#: ../includes/directories/class-wpum-directory.php:181
+msgid ""
+"Enable this setting to display a dropdown menu into the directory with the "
+"results amount filter."
+msgstr "启用这个设置，可以在目录中显示一个包含数量过滤选项的下拉菜单。"
+
+#: ../includes/directories/class-wpum-directory.php:187
+msgid "Sorting method"
+msgstr "排序方法"
+
+#: ../includes/directories/class-wpum-directory.php:188
+msgid "Select the sorting method for the directory"
+msgstr "选择目录的排序方法"
+
+#: ../includes/directories/class-wpum-directory.php:189
+msgid "If the sorter field is visible, this will be used as default option."
+msgstr "如果排序字段是可见的，这个将作为默认选项。"
+
+#: ../includes/directories/class-wpum-directory.php:218
+msgid "Shortcode"
+msgstr "简码"
+
+#: ../includes/directories/class-wpum-directory.php:240
+msgid "All"
+msgstr "所有"
+
+#: ../includes/directories/class-wpum-directory.php:290
+#: ../includes/directories/class-wpum-directory.php:293
+msgid "Directory updated."
+msgstr "目录已更新。"
+
+#: ../includes/directories/class-wpum-directory.php:291
+msgid "Custom field updated."
+msgstr "自定义字段已更新"
+
+#: ../includes/directories/class-wpum-directory.php:292
+msgid "Custom field deleted."
+msgstr "自定义字段已删除"
+
+#. translators: %s: date and time of the revision
+#: ../includes/directories/class-wpum-directory.php:295
+#, php-format
+msgid "Directory restored to revision from %s"
+msgstr "目录已从 %s 版本中恢复"
+
+#: ../includes/directories/class-wpum-directory.php:296
+#, php-format
+msgid ""
+"Directory created. Use the following shortcode to display this directory %s"
+msgstr "目录已创建。使用下面的简码来显示这个目录 %s"
+
+#: ../includes/directories/class-wpum-directory.php:297
+msgid "Directory saved."
+msgstr "目录已保存。"
+
+#: ../includes/directories/class-wpum-directory.php:298
+msgid "Directory submitted."
+msgstr "目录已提交。"
+
+#: ../includes/directories/class-wpum-directory.php:323
+#, php-format
+msgid "%s directory updated."
+msgid_plural "%s directory updated."
+msgstr[0] "%s 个目录已更新。"
+msgstr[1] "%s 个目录已更新。"
+
+#: ../includes/directories/class-wpum-directory.php:324
+#, php-format
+msgid "%s directory not updated, somebody is editing it."
+msgid_plural "%s directories not updated, somebody is editing them."
+msgstr[0] "%s 目录没有更新，有人正在编辑它。"
+msgstr[1] "%s 目录没有更新，有人正在编辑它。"
+
+#: ../includes/directories/class-wpum-directory.php:325
+#, php-format
+msgid "%s directory permanently deleted."
+msgid_plural "%s directories permanently deleted."
+msgstr[0] "%s 目录已永久删除。"
+msgstr[1] "%s 目录已永久删除。"
+
+#: ../includes/directories/class-wpum-directory.php:326
+#, php-format
+msgid "%s directory has been deleted."
+msgid_plural "%s directories have been deleted."
+msgstr[0] "%s 个目录已被删除。"
+msgstr[1] "%s 个目录已被删除。"
+
+#: ../includes/directories/class-wpum-directory.php:327
+#, php-format
+msgid "%s directory restored from the Trash."
+msgid_plural "%s directories restored from the Trash."
+msgstr[0] "%s 目录已从回收站中恢复。"
+msgstr[1] "%s 目录已从回收站中恢复。"
+
+#: ../includes/directories/functions.php:138
+#: ../includes/emails/class-wpum-emails.php:202
+msgid "Default template"
+msgstr "默认模板"
+
+#: ../includes/directories/functions.php:269
+msgid "By nickname"
+msgstr "按昵称"
+
+#: ../includes/directories/functions.php:270
+msgid "Newest users first"
+msgstr "最新用户优先"
+
+#: ../includes/directories/functions.php:271
+msgid "Oldest users first"
+msgstr "最老用户优先"
+
+#: ../includes/directories/functions.php:272
+msgid "First name"
+msgstr "名字"
+
+#: ../includes/directories/functions.php:273
+msgid "Last Name"
+msgstr "姓氏"
+
+#: ../includes/emails/class-wpum-emails-tags.php:278
+msgid "Your site name"
+msgstr "你的网站名称"
+
+#: ../includes/emails/class-wpum-emails-tags.php:283
+msgid "Displays the username."
+msgstr "显示用户名。"
+
+#: ../includes/emails/class-wpum-emails-tags.php:288
+msgid ""
+"Displays the user password. If the \"custom passwords\" option is enabled, "
+"the password will not be displayed into the email."
+msgstr ""
+"显示用户密码。如果 \"自定义密码\" 选项是启用的，密码将不会在邮件中显示。"
+
+#: ../includes/emails/class-wpum-emails-tags.php:293
+msgid ""
+"Displays the password recovery url needed for the user to reset his password."
+msgstr "显示密码找回链接，以便用户可以重置他们的密码。"
+
+#: ../includes/emails/class-wpum-emails-tags.php:338
+msgid "the password you chose upon registration."
+msgstr "你在注册时选择的密码。"
+
+#: ../includes/emails/class-wpum-emails.php:203
+msgid "No template, plain text only"
+msgstr "不用模板，只使用纯文本"
+
+#: ../includes/emails/class-wpum-emails.php:288
+msgid ""
+"You cannot send email with WPUM_Emails until init/admin_init has been reached"
+msgstr "你不能使用 WPUM_Emails 发送邮件，直到 init/admin_init 接口已到达。"
+
+#: ../includes/emails/functions.php:70
+#, php-format
+msgid "New user registration on your site %s:"
+msgstr "有新用户注册了你的网站  %s："
+
+#: ../includes/emails/functions.php:71
+#, php-format
+msgid "Username: %s"
+msgstr "用户名：%s"
+
+#: ../includes/emails/functions.php:72
+#, php-format
+msgid "E-mail: %s"
+msgstr "E-mail: %s"
+
+#: ../includes/emails/functions.php:73
+#, php-format
+msgid "[%s] New User Registration"
+msgstr "[%s] 新用户注册"
+
+#: ../includes/emails/functions.php:84
+msgid "Your account"
+msgstr "你的账号"
+
+#: ../includes/emails/password-recovery-email.php:32
+msgid "Password Recovery Email"
+msgstr "密码找回邮箱"
+
+#: ../includes/emails/password-recovery-email.php:33
+msgid ""
+"This is the email that is sent to the visitor upon password reset request."
+msgstr "这是发送给那些请求重置密码的用户的邮件。"
+
+#: ../includes/emails/password-recovery-email.php:49
+#, php-format
+msgid "Reset Your %s Password"
+msgstr "重置你的 %s  密码"
+
+#: ../includes/emails/password-recovery-email.php:63
+#: ../includes/emails/registration-email.php:63
+msgid ""
+"Hello {username}, \n"
+"\n"
+msgstr ""
+"你好  {username}， \n"
+"\n"
+
+#: ../includes/emails/password-recovery-email.php:64
+msgid ""
+"You are receiving this message because you or somebody else has attempted to "
+"reset your password on {sitename}.\n"
+"\n"
+msgstr ""
+"你收到这个信息，是因为你或别人尝试重置你在  {sitename} 的密码。\n"
+"\n"
+
+#: ../includes/emails/password-recovery-email.php:65
+msgid ""
+"If this was a mistake, just ignore this email and nothing will happen.\n"
+"\n"
+msgstr ""
+"如果这是个失误，请直接忽略该邮件，不会发生任何事情。\n"
+"\n"
+
+#: ../includes/emails/password-recovery-email.php:66
+msgid ""
+"To reset your password, visit the following address:\n"
+"\n"
+msgstr ""
+"要重置您的密码，请访问下面的地址：\n"
+"\n"
+
+#: ../includes/emails/password-recovery-email.php:67
+msgid "{recovery_url}"
+msgstr "{recovery_url}"
+
+#: ../includes/emails/registration-email.php:32
+msgid "Registration Email"
+msgstr "注册邮箱"
+
+#: ../includes/emails/registration-email.php:33
+msgid ""
+"This is the email that is sent to the user upon successful registration."
+msgstr "这是发送给那些注册成功的用户的邮件。"
+
+#: ../includes/emails/registration-email.php:49
+#, php-format
+msgid "Your %s Account"
+msgstr "你的 %s 账号"
+
+#: ../includes/emails/registration-email.php:64
+msgid ""
+"Welcome to {sitename}, \n"
+"\n"
+msgstr ""
+"欢迎访问 {sitename}，\n"
+"\n"
+
+#: ../includes/emails/registration-email.php:65
+msgid ""
+"These are your account details \n"
+"\n"
+msgstr ""
+"这是你的账号详情  \n"
+"\n"
+
+#: ../includes/emails/registration-email.php:66
+msgid "Username: {username},\n"
+msgstr "用户名： {username},\n"
+
+#: ../includes/emails/registration-email.php:67
+msgid "Password: {password}"
+msgstr "密码：{password}"
+
+#: ../includes/fields/functions.php:253
+msgid "This field type has no output"
+msgstr "该字段类型无输出"
+
+#: ../includes/fields/types/avatar.php:32
+msgctxt "field type name"
+msgid "Avatar"
+msgstr "头像"
+
+#: ../includes/fields/types/checkbox.php:32
+msgctxt "field type name"
+msgid "Checkbox"
+msgstr "复选框"
+
+#: ../includes/fields/types/display_name.php:32
+msgctxt "field type name"
+msgid "Name Display"
+msgstr "名称显示"
+
+#: ../includes/fields/types/email.php:32
+msgctxt "field type name"
+msgid "Email"
+msgstr "邮箱"
+
+#: ../includes/fields/types/file.php:32
+msgctxt "field type name"
+msgid "File"
+msgstr "文件"
+
+#: ../includes/fields/types/nickname.php:32
+msgctxt "field type name"
+msgid "Nickname"
+msgstr "昵称"
+
+#: ../includes/fields/types/password.php:32
+msgctxt "field type name"
+msgid "Password"
+msgstr "密码"
+
+#: ../includes/fields/types/select.php:32
+msgctxt "field type name"
+msgid "Dropdown"
+msgstr "下拉菜单"
+
+#: ../includes/fields/types/text.php:32
+msgctxt "field type name"
+msgid "Text"
+msgstr "文本"
+
+#: ../includes/fields/types/textarea.php:32
+msgctxt "field type name"
+msgid "Textarea"
+msgstr "文本区域"
+
+#: ../includes/fields/types/username.php:32
+msgctxt "field type name"
+msgid "Username"
+msgstr "用户名"
+
+#: ../includes/filters.php:22
+msgid "Settings"
+msgstr "设置"
+
+#: ../includes/filters.php:59
+msgid "User ID"
+msgstr "用户 ID"
+
+#: ../includes/filters.php:109
+#, php-format
+msgid ""
+"Please support the future of <a href=\"%1$s\" target=\"_blank\">WP User "
+"Manager</a> by <a href=\"%2$s\" target=\"_blank\">rating us</a> on <a href="
+"\"%2$s\" target=\"_blank\">WordPress.org</a>"
+msgstr ""
+"支持 <a href=\"%1$s\" target=\"_blank\">WP User Manager </a>的发展，请在<a "
+"href=\"%2$s\" target=\"_blank\">WordPress.org</a> 给 <a href=\"%2$s\" target="
+"\"_blank\">我们五星评级</a>。"
+
+#: ../includes/filters.php:330
+msgid "WPUM Page"
+msgstr "WPUM 页面"
+
+#: ../includes/forms/class-wpum-form-password.php:55
+#: ../includes/functions.php:92
+msgid "Username or email"
+msgstr "用户名或邮箱"
+
+#: ../includes/forms/class-wpum-form-password.php:64
+msgid "New password"
+msgstr "新密码"
+
+#: ../includes/forms/class-wpum-form-password.php:71
+msgid "Re-enter new password"
+msgstr "重新输入你的密码"
+
+#: ../includes/forms/class-wpum-form-password.php:106
+msgid "This user could not be found."
+msgstr "该用户不存在。"
+
+#: ../includes/forms/class-wpum-form-password.php:125
+msgid "Please enter your password."
+msgstr "请输入您的密码。"
+
+#: ../includes/forms/class-wpum-form-password.php:129
+#: ../includes/forms/class-wpum-form-update-password.php:119
+msgid "Passwords do not match."
+msgstr "密码不匹配。"
+
+#: ../includes/forms/class-wpum-form-password.php:199
+#: ../includes/forms/class-wpum-form-password.php:204
+msgid "Invalid username or e-mail."
+msgstr "无效的用户名或邮箱。"
+
+#: ../includes/forms/class-wpum-form-password.php:218
+#: ../includes/forms/class-wpum-form-password.php:223
+msgid "Password reset is not allowed for this user"
+msgstr "该用户不允许进行密码重设"
+
+#: ../includes/forms/class-wpum-form-password.php:251
+msgid "Password Recovery"
+msgstr "密码重置"
+
+#: ../includes/forms/class-wpum-form-password.php:254
+msgid "Check your e-mail for the confirmation link."
+msgstr "请检查您的电子邮件的确认链接。"
+
+#: ../includes/forms/class-wpum-form-password.php:310
+#: ../includes/forms/class-wpum-form-password.php:315
+#: ../includes/forms/class-wpum-form-password.php:331
+msgid "Invalid key."
+msgstr "无效的密钥。"
+
+#: ../includes/forms/class-wpum-form-profile.php:231
+#: ../includes/forms/class-wpum-form-register.php:227
+msgid "Email address already exists."
+msgstr "邮箱地址已存在。"
+
+#: ../includes/forms/class-wpum-form-profile.php:249
+#: ../includes/forms/class-wpum-form-profile.php:257
+#: ../includes/forms/class-wpum-form-register.php:361
+#: ../includes/forms/class-wpum-form-register.php:369
+msgid "This nickname cannot be used."
+msgstr "该用户名不能使用。"
+
+#: ../includes/forms/class-wpum-form-profile.php:319
+#: ../includes/forms/class-wpum-form-register.php:224
+msgid "Please enter a valid email address."
+msgstr "请输入一个有效的邮箱地址。"
+
+#: ../includes/forms/class-wpum-form-register.php:163
+#: ../includes/forms/class-wpum-form-update-password.php:106
+msgid "Password must be at least 8 characters long."
+msgstr "密码必须至少 %s 个字符。"
+
+#: ../includes/forms/class-wpum-form-register.php:167
+#: ../includes/forms/class-wpum-form-update-password.php:110
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter."
+msgstr "密码必须至少 8 个字符，且至少 1 个数字和 1 个大写字母。"
+
+#: ../includes/forms/class-wpum-form-register.php:171
+#: ../includes/forms/class-wpum-form-update-password.php:114
+msgid ""
+"Password must be at least 8 characters long and contain at least 1 number "
+"and 1 uppercase letter and 1 special character."
+msgstr "密码必须至少 8 个字符，且至少 1 个数字、 1 个大写字母和 1 个特殊字符。"
+
+#: ../includes/forms/class-wpum-form-register.php:186
+#: ../includes/forms/class-wpum-form-update-password.php:81
+msgid "Strength Indicator"
+msgstr "强度评估"
+
+#: ../includes/forms/class-wpum-form-register.php:267
+msgid "Failed Honeypot validation"
+msgstr "反垃圾验证失败"
+
+#: ../includes/forms/class-wpum-form-register.php:285
+#, php-format
+msgid ""
+"By registering to this website you agree to the <a href=\"%s\" target="
+"\"_blank\">terms &amp; conditions</a>."
+msgstr ""
+"要注册这个网站，你必须同意  <a href=\"%s\" target=\"_blank\">协议条款</a>。"
+
+#: ../includes/forms/class-wpum-form-register.php:304
+msgid "Select Role"
+msgstr "选择角色"
+
+#: ../includes/forms/class-wpum-form-register.php:308
+msgid "Select your user role"
+msgstr "选择你的用户角色"
+
+#: ../includes/forms/class-wpum-form-register.php:329
+msgid "Select a valid role from the list."
+msgstr "从列表中选择一个可用的角色。"
+
+#: ../includes/forms/class-wpum-form-register.php:479
+msgid ""
+"Registration complete. We have sent you a confirmation email with your "
+"password."
+msgstr "注册已完成。我们已发送一封包含密码的确认邮件到你的邮箱。"
+
+#: ../includes/forms/class-wpum-form-register.php:481
+msgid "Registration complete."
+msgstr "注册已完成。"
+
+#: ../includes/forms/class-wpum-form-register.php:538
+msgid "Registrations are currently disabled."
+msgstr "注册功能目前已被禁用。"
+
+#: ../includes/forms/class-wpum-form-update-password.php:62
+msgid "Repeat Password"
+msgstr "重复密码"
+
+#: ../includes/forms/class-wpum-form-update-password.php:97
+msgid "Enter a password."
+msgstr "输入密码。"
+
+#: ../includes/forms/class-wpum-form-update-password.php:172
+msgid "Password successfully updated."
+msgstr "密码已成功更新。"
+
+#: ../includes/functions.php:24
+msgid "Username only"
+msgstr "仅用户名"
+
+#: ../includes/functions.php:25
+msgid "Email only"
+msgstr "仅邮箱"
+
+#: ../includes/functions.php:26
+msgid "Username or Email"
+msgstr "用户名或邮箱"
+
+#: ../includes/functions.php:41
+msgid "Disabled"
+msgstr "禁用"
+
+#: ../includes/functions.php:43
+msgid "Medium"
+msgstr "中等"
+
+#: ../includes/functions.php:87
+msgid "Username"
+msgstr "用户名"
+
+#: ../includes/install.php:33
+msgid "Back to your website."
+msgstr "返回你的网站。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.metabox.php:202
+msgid "Error: metabox must have an id."
+msgstr "错误：元数据箱（metabox）必须有一个ID。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.metabox.php:207
+#, php-format
+msgid "Error: metabox \"%s\" must have a title."
+msgstr "错误：元数据箱（metabox） \"%s\" 必须有一个标题。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:112
+#, php-format
+msgid "Error: metabox \"%s\" must have an ID."
+msgstr "错误：元数据箱（metabox） \"%s\" 必须有一个ID。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:117
+#, php-format
+msgid "Error: metabox \"%s\" must have a taxonomy parameter assigned."
+msgstr "错误：元数据箱（metabox） \"%s\" 必须分配一个分类参数。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.taxonomy_metabox.php:122
+#, php-format
+msgid "Error: metabox \"%s\" taxonomy parameter must be an array."
+msgstr "错误：元数据箱（metabox） \"%s\" 分类擦数必须是一个数组。"
+
+#: ../includes/lib/wp-pretty-fields/classes/class.user_metabox.php:91
+msgid "Error: user metabox must have an ID."
+msgstr "错误：用户元数据箱（metabox）必须有一个ID"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:18
+msgid "Text Field"
+msgstr "文本字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:19
+#: ../includes/lib/wp-pretty-fields/demo.php:26
+#: ../includes/lib/wp-pretty-fields/demo.php:33
+#: ../includes/lib/wp-pretty-fields/demo.php:40
+#: ../includes/lib/wp-pretty-fields/demo.php:47
+#: ../includes/lib/wp-pretty-fields/demo.php:54
+#: ../includes/lib/wp-pretty-fields/demo.php:62
+#: ../includes/lib/wp-pretty-fields/demo.php:69
+#: ../includes/lib/wp-pretty-fields/demo.php:76
+#: ../includes/lib/wp-pretty-fields/demo.php:84
+#: ../includes/lib/wp-pretty-fields/demo.php:92
+#: ../includes/lib/wp-pretty-fields/demo.php:100
+#: ../includes/lib/wp-pretty-fields/demo.php:108
+#: ../includes/lib/wp-pretty-fields/demo.php:115
+#: ../includes/lib/wp-pretty-fields/demo.php:122
+msgid "Description goes here"
+msgstr "在这里填入描述"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:20
+#: ../includes/lib/wp-pretty-fields/demo.php:27
+#: ../includes/lib/wp-pretty-fields/demo.php:34
+#: ../includes/lib/wp-pretty-fields/demo.php:41
+#: ../includes/lib/wp-pretty-fields/demo.php:48
+#: ../includes/lib/wp-pretty-fields/demo.php:55
+#: ../includes/lib/wp-pretty-fields/demo.php:63
+#: ../includes/lib/wp-pretty-fields/demo.php:70
+#: ../includes/lib/wp-pretty-fields/demo.php:77
+#: ../includes/lib/wp-pretty-fields/demo.php:85
+#: ../includes/lib/wp-pretty-fields/demo.php:93
+#: ../includes/lib/wp-pretty-fields/demo.php:101
+#: ../includes/lib/wp-pretty-fields/demo.php:109
+#: ../includes/lib/wp-pretty-fields/demo.php:116
+#: ../includes/lib/wp-pretty-fields/demo.php:123
+msgid "Field Description goes here"
+msgstr "在这里添加字段描述"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:25
+msgid "Textarea Field"
+msgstr "多行文本字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:32
+msgid "URL Field"
+msgstr "链接字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:39
+msgid "Number Field"
+msgstr "数字字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:46
+msgid "Email Field"
+msgstr "邮箱字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:53
+msgid "Button Field"
+msgstr "按钮字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:61
+msgid "Color Field"
+msgstr "颜色字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:68
+msgid "Image Field"
+msgstr "图片字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:75
+msgid "Select Field"
+msgstr "选择字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:83
+msgid "Radio Field"
+msgstr "单选字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:91
+msgid "Multiselect Field"
+msgstr "多选字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:99
+msgid "Checkbox list Field"
+msgstr "复选框列表字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:107
+msgid "Checkbox Field"
+msgstr "复选框字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:114
+msgid "Editor Field"
+msgstr "编辑字段"
+
+#: ../includes/lib/wp-pretty-fields/demo.php:121
+msgid "Gallery Field"
+msgstr "相册字段"
+
+#: ../includes/lib/wp-pretty-fields/fields/gallery.php:90
+msgid "Add/Edit Gallery"
+msgstr "添加/编辑相册"
+
+#: ../includes/lib/wp-pretty-fields/fields/gallery.php:91
+msgid "Delete Gallery"
+msgstr "删除相册"
+
+#: ../includes/lib/wp-pretty-fields/fields/gallery.php:92
+msgid "Select or upload images to create a gallery"
+msgstr "选择或上传图片来创建相册"
+
+#: ../includes/lib/wp-pretty-fields/fields/gallery.php:93
+msgid "Insert gallery"
+msgstr "插入相册"
+
+#: ../includes/lib/wp-pretty-fields/fields/gallery.php:94
+msgid "Are you sure you want to delete the gallery?"
+msgstr "您确定删除这个相册？"
+
+#: ../includes/lib/wp-pretty-fields/fields/image.php:50
+msgid "Select or upload an image"
+msgstr "选择或上传图片"
+
+#: ../includes/lib/wp-pretty-fields/fields/image.php:51
+msgid "Insert image"
+msgstr "插入图片"
+
+#: ../includes/misc-functions.php:172
+msgctxt "Permalink structure"
+msgid "Display user ID"
+msgstr "显示用户ID"
+
+#: ../includes/misc-functions.php:177
+msgctxt "Permalink structure"
+msgid "Display username"
+msgstr "显示用户名"
+
+#: ../includes/misc-functions.php:178
+msgctxt "Example of permalink setting"
+msgid "username"
+msgstr "用户名"
+
+#: ../includes/misc-functions.php:182
+msgctxt "Permalink structure"
+msgid "Display nickname"
+msgstr "公开显示为"
+
+#: ../includes/misc-functions.php:183
+msgctxt "Example of permalink setting"
+msgid "nickname"
+msgstr "昵称"
+
+#: ../includes/misc-functions.php:412
+#, php-format
+msgid "Allowed files types are: %s"
+msgstr "允许上传的文件类型：%s"
+
+#: ../includes/misc-functions.php:415
+msgid "The uploaded file is too big."
+msgstr "上传的文件太大了。"
+
+#: ../includes/misc-functions.php:505
+#, php-format
+msgid "Uploaded files need to be one of the following file types: %s"
+msgstr "上传的文件必须是以下类型中的一个：%s"
+
+#: ../includes/misc-functions.php:556
+msgid "Verify upload permissions"
+msgstr "验证上传权限"
+
+#: ../includes/misc-functions.php:557
+msgid "Press the button above if avatar uploads does not work."
+msgstr "如果头像上传没有正常工作，请点击上面的按钮。"
+
+#: ../includes/misc-functions.php:610
+msgid "Password Reset"
+msgstr "密码重置"
+
+#: ../includes/misc-functions.php:628
+#: ../includes/widgets/wpum-registration.php:41
+#: ../templates/forms/registration-form.php:38
+msgid "Register"
+msgstr "注册"
+
+#: ../includes/misc-functions.php:646
+msgid "Account"
+msgstr "账号"
+
+#: ../includes/misc-functions.php:664
+msgid "Profile"
+msgstr "个人资料"
+
+#: ../includes/misc-functions.php:698 ../templates/user-overview.php:26
+msgid "Edit Account"
+msgstr "编辑账号"
+
+#: ../includes/misc-functions.php:702
+msgid "Change Password"
+msgstr "更改密码"
+
+#: ../includes/profiles/actions.php:55
+msgid " (Edit Account)"
+msgstr " (编辑账号)"
+
+#: ../includes/profiles/functions.php:129
+msgid "Overview"
+msgstr "概览"
+
+#: ../includes/profiles/functions.php:135
+msgid "Posts"
+msgstr "文章"
+
+#: ../includes/profiles/functions.php:141
+msgid "Comments"
+msgstr "评论"
+
+#: ../includes/profiles/functions.php:310
+msgid "You are not authorized to access this area."
+msgstr "你没有足够的权限访问这个页面。"
+
+#: ../includes/template-actions.php:122
+msgid ""
+"Login failed: You have entered incorrect login details, please try again."
+msgstr "登录失败：你输入的登录信息不正确，请重试。"
+
+#: ../includes/template-actions.php:143
+msgid "Profile successfully updated."
+msgstr "个人资料已更新。"
+
+#: ../includes/widgets/wpum-login-form.php:31
+msgid "[WPUM] Login Form"
+msgstr "[WPUM] 登录表单"
+
+#: ../includes/widgets/wpum-login-form.php:32
+msgid "Display login form."
+msgstr "显示登录表单。"
+
+#: ../includes/widgets/wpum-login-form.php:37
+#: ../includes/widgets/wpum-password-recovery.php:37
+#: ../includes/widgets/wpum-recent-users.php:37
+#: ../includes/widgets/wpum-registration.php:37
+msgid "Title"
+msgstr "标题"
+
+#: ../includes/widgets/wpum-login-form.php:45
+msgid "Logged In title"
+msgstr "已登录标题"
+
+#: ../includes/widgets/wpum-login-form.php:46
+msgid " This title will be displayed when logged in."
+msgstr " 登录后将显示这个标题。"
+
+#: ../includes/widgets/wpum-login-form.php:50
+msgid "My Account"
+msgstr "我的账号"
+
+#: ../includes/widgets/wpum-login-form.php:54
+#: ../includes/widgets/wpum-password-recovery.php:45
+#: ../includes/widgets/wpum-registration.php:45
+msgid "Display login link"
+msgstr "显示登录链接"
+
+#: ../includes/widgets/wpum-login-form.php:61
+#: ../includes/widgets/wpum-password-recovery.php:52
+#: ../includes/widgets/wpum-registration.php:52
+msgid "Display password recovery link"
+msgstr "显示密码找回链接"
+
+#: ../includes/widgets/wpum-login-form.php:68
+#: ../includes/widgets/wpum-password-recovery.php:59
+#: ../includes/widgets/wpum-registration.php:59
+msgid "Display registration link"
+msgstr "显示注册链接"
+
+#: ../includes/widgets/wpum-login-form.php:75
+msgid "Display profile overview"
+msgstr "显示个人资料概览"
+
+#: ../includes/widgets/wpum-login-form.php:76
+msgid ""
+"If enabled, once logged in, an overview of the current user profile will "
+"appear."
+msgstr "如果启用，一旦登录，当前用户个人资料概览将会显示。"
+
+#: ../includes/widgets/wpum-password-recovery.php:31
+msgid "[WPUM] Password Recovery Form"
+msgstr "[WPUM] 密码重置表单"
+
+#: ../includes/widgets/wpum-password-recovery.php:32
+msgid "Display a form for users to recover their password."
+msgstr "显示表单让用户可以找回他们的密码。"
+
+#: ../includes/widgets/wpum-password-recovery.php:41
+msgid "Reset password"
+msgstr "重置密码"
+
+#: ../includes/widgets/wpum-password-recovery.php:66
+#: ../includes/widgets/wpum-registration.php:66
+msgid "Custom form ID (optional)"
+msgstr "自定义表单 ID（可选）"
+
+#: ../includes/widgets/wpum-recent-users.php:31
+msgid "[WPUM] Recent Users"
+msgstr "[WPUM] 最新用户"
+
+#: ../includes/widgets/wpum-recent-users.php:32
+msgid "Display a list of recently registered users."
+msgstr "显示最新注册的用户"
+
+#: ../includes/widgets/wpum-recent-users.php:41
+msgid "Recent Users"
+msgstr "最新用户"
+
+#: ../includes/widgets/wpum-recent-users.php:45
+msgid "Amount"
+msgstr "数量"
+
+#: ../includes/widgets/wpum-recent-users.php:46
+msgid "Enter the amount of users you wish to display."
+msgstr "输入你希望显示的用户数量。"
+
+#: ../includes/widgets/wpum-recent-users.php:55
+msgid "Link to user profile"
+msgstr "链接到用户个人资料"
+
+#: ../includes/widgets/wpum-recent-users.php:56
+msgid "Enable to link to the user profile."
+msgstr "启用链接到用户个人资料。"
+
+#: ../includes/widgets/wpum-registration.php:31
+msgid "[WPUM] Registration Form"
+msgstr "[WPUM] 注册表单"
+
+#: ../includes/widgets/wpum-registration.php:32
+msgid "Display the registration form."
+msgstr "显示注册表单。"
+
+#: ../templates/account.php:38 ../templates/profile/profile-tabs.php:60
+msgid "Content not found."
+msgstr "内容不存在。"
+
+#: ../templates/already-logged-in.php:22
+#, php-format
+msgid "Your are currently logged in as %s. <a href=\"%s\">Logout &raquo;</a>"
+msgstr "您已使用  %s 身份登录。<a href=\"%s\">登出 &raquo;</a>"
+
+#: ../templates/directory/single-user.php:14 ../templates/profile-card.php:28
+msgid "View Profile"
+msgstr "查看个人资料"
+
+#: ../templates/directory/single-user.php:28
+msgid "This user has not provided a description yet."
+msgstr "该用户还没有提供个人介绍。"
+
+#: ../templates/directory/single-user.php:37 ../templates/profile-card.php:31
+#: ../templates/profile/profile-links.php:17
+msgid "Send Email"
+msgstr "发送邮件"
+
+#: ../templates/directory/single-user.php:43
+msgid "Visit Website"
+msgstr "访问网站"
+
+#: ../templates/directory/single-user.php:45
+msgid "Registered:"
+msgstr "注册时间："
+
+#: ../templates/directory/top-bar.php:20
+#, php-format
+msgid "Found %s users."
+msgstr "找到 %s 个用户。"
+
+#: ../templates/directory/top-bar.php:27
+msgid "Sort by:"
+msgstr "排序方式："
+
+#: ../templates/directory/top-bar.php:34
+msgid "Results per page:"
+msgstr "每页结果数："
+
+#: ../templates/form-fields/file-field.php:53
+#, php-format
+msgid "Maximum file size: %s."
+msgstr "最大文件大小：%s"
+
+#: ../templates/form-fields/uploaded-file-html.php:22
+msgid "remove"
+msgstr "移除"
+
+#: ../templates/forms/account-form.php:42
+msgid "Update Profile"
+msgstr "更新个人资料"
+
+#: ../templates/forms/password-form.php:35
+msgid "Your password has been reset."
+msgstr "您的密码已重设。"
+
+#: ../templates/forms/password-form.php:48
+msgid "Enter a new password below."
+msgstr "在下面输入您的新密码。"
+
+#: ../templates/forms/password-form.php:65
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+"忘记了你的密码？请输入您的用户名或电子邮件地址。您将通过电子邮件收到一个创建"
+"新密码的链接。"
+
+#: ../templates/forms/password-form.php:90
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: ../templates/forms/password-update-form.php:39
+msgid "Update Password"
+msgstr "更改密码"
+
+#: ../templates/helper-links.php:16
+#, php-format
+msgid "Already have an account? <a href=\"%s\">Sign In &raquo;</a>"
+msgstr "已有账号？ <a href=\"%s\">登录 &raquo;</a>"
+
+#: ../templates/helper-links.php:22
+#, php-format
+msgid "Don't have an account? <a href=\"%s\">Signup Now &raquo;</a>"
+msgstr "还没有账号？ <a href=\"%s\">马上注册 &raquo;</a>"
+
+#: ../templates/helper-links.php:29
+msgid "Lost your password?"
+msgstr "忘记密码？"
+
+#: ../templates/profile.php:17
+msgid "User not found."
+msgstr "用户不存在。"
+
+#: ../templates/profile/profile-comments.php:43
+#, php-format
+msgctxt "This text displays the comments left by the user on his profile page."
+msgid "\"%s\" on <a href=\"%s\">%s</a>, %s."
+msgstr "\"%s\" on <a href=\"%s\">%s</a>, %s."
+
+#: ../templates/profile/profile-comments.php:55
+#, php-format
+msgid "%s has not made any comment yet."
+msgstr "%s 还没有发布任何评论。"
+
+#: ../templates/profile/profile-links.php:21
+msgid "Visit website"
+msgstr "查看网站"
+
+#: ../templates/profile/profile-overview.php:18
+msgid "Name"
+msgstr "名称"
+
+#: ../templates/profile/profile-overview.php:23
+msgid "Nickname"
+msgstr "昵称"
+
+#: ../templates/profile/profile-overview.php:33
+msgid "Website"
+msgstr "网址"
+
+#: ../templates/profile/profile-overview.php:37
+msgid "Registered"
+msgstr "注册时间"
+
+#: ../templates/profile/profile-posts.php:33
+msgid "Posted on:"
+msgstr "发布于："
+
+#: ../templates/profile/profile-posts.php:37
+msgid "Comments:"
+msgstr "评论："
+
+#: ../templates/profile/profile-posts.php:38
+msgid "No Comments"
+msgstr "暂无评论"
+
+#: ../templates/profile/profile-posts.php:38
+msgid "1 Comment"
+msgstr "1 条评论"
+
+#: ../templates/profile/profile-posts.php:38
+msgid "% Comments"
+msgstr "% 条评论"
+
+#: ../templates/profile/profile-posts.php:52
+#, php-format
+msgid "%s did not submit any posts yet."
+msgstr "%s 还没有发布任何文章。"
+
+#: ../templates/recently-registered.php:41
+msgid "No user has been found."
+msgstr "没找到用户。"
+
+#: ../templates/user-directory.php:38
+msgid "No users have been found"
+msgstr "没有用户"
+
+#: ../wp-user-manager.php:151 ../wp-user-manager.php:163
+msgid "Cheatin&#8217; huh?"
+msgstr "Cheatin&#8217; huh?"
+
+#~ msgid "Fixed Price"
+#~ msgstr "固定价格"
+
+#~ msgid "Percentage"
+#~ msgstr "百分比"
+
+#~ msgid "&infin;"
+#~ msgstr "&infin;"
+
+#~ msgid "Coupon Code"
+#~ msgstr "优惠券代码"
+
+#~ msgid "Coupon Type"
+#~ msgstr "优惠券类型"
+
+#~ msgid "Usage / Limit"
+#~ msgstr "用法 / 限制"
+
+#~ msgid "Expire date"
+#~ msgstr "到期日期"
+
+#~ msgid "Coupon updated."
+#~ msgstr "优惠券已更新"
+
+#~ msgid "Coupon restored to revision from %s"
+#~ msgstr "优惠券已从 %s版本中恢复"
+
+#~ msgid "Coupon published."
+#~ msgstr "优惠券已发布"
+
+#~ msgid "Coupon saved."
+#~ msgstr "优惠券已保存。"
+
+#~ msgid "Coupon submitted."
+#~ msgstr "优惠券已提交"
+
+#~ msgid "Coupon draft updated."
+#~ msgstr "优惠券草稿已更新"
+
+#~ msgid "Enter coupon code"
+#~ msgstr "输入优惠券代码"
+
+#~ msgid "Coupon"
+#~ msgstr "优惠券"
+
+#~ msgid "Add Coupon"
+#~ msgstr "添加优惠券"
+
+#~ msgid "Add New Coupon"
+#~ msgstr "添加新优惠券"
+
+#~ msgid "New Coupon"
+#~ msgstr "新优惠券"
+
+#~ msgid "View Coupon"
+#~ msgstr "查看优惠券"
+
+#~ msgid "Search Coupon"
+#~ msgstr "搜索优惠券"
+
+#~ msgid "No Coupon Found"
+#~ msgstr "没找到优惠券"
+
+#~ msgid "No Coupon Found in Trash"
+#~ msgstr "回收站里没有优惠券"
+
+#~ msgid "Parent Coupon"
+#~ msgstr "父优惠券"
+
+#~ msgid "Coupon Details"
+#~ msgstr "优惠券详情"
+
+#~ msgid "Type"
+#~ msgstr "类型"
+
+#~ msgid "Amount without <code>%</code> or currency symbol"
+#~ msgstr "数量没有 <code>%</code> 或 货币符号"
+
+#~ msgid "Package"
+#~ msgstr "套餐"
+
+#~ msgid "Select one or more packages to apply coupon"
+#~ msgstr "选择一个或多个套餐来应用优惠券"
+
+#~ msgid "Usage Limit"
+#~ msgstr "使用限制"
+
+#~ msgid "How many times the coupon can be used? Give a numeric value."
+#~ msgstr "优惠券可以使用多少次？给一个数值。"
+
+#~ msgid "Validity"
+#~ msgstr "有效期"
+
+#~ msgid "Start date"
+#~ msgstr "开始日期"
+
+#~ msgid "End date"
+#~ msgstr "结束日期"
+
+#~ msgid ""
+#~ "Only users with these email addresses will be able to use this coupon. "
+#~ "Enter Email addresses. One per each line."
+#~ msgstr ""
+#~ "只有具备这些电子邮件地址的用户才能够使用这个优惠券。输入电子邮件地址。一行"
+#~ "一个。"
+
+#~ msgid "All package"
+#~ msgstr "所有套餐"
+
+#~ msgid "Forms"
+#~ msgstr "表单"
+
+#~ msgid "Form"
+#~ msgstr "表单"
+
+#~ msgid "Add Form"
+#~ msgstr "添加表单"
+
+#~ msgid "New Form"
+#~ msgstr "新表单"
+
+#~ msgid "No Form Found"
+#~ msgstr "没找到表单"
+
+#~ msgid "Parent Form"
+#~ msgstr "父表单"
+
+#~ msgid "Registraton Forms"
+#~ msgstr "注册表单"
+
+#~ msgid "Form published."
+#~ msgstr "表单已发布"
+
+#~ msgid "Post Type"
+#~ msgstr "文章类型"
+
+#~ msgid "Post Status"
+#~ msgstr "文章状态"
+
+#~ msgid "Guest Post"
+#~ msgstr "访客文章"
+
+#~ msgid "No"
+#~ msgstr "否"
+
+#~ msgid "Yes"
+#~ msgstr "是"
+
+#~ msgid "Duplicate form"
+#~ msgstr "复制表单"
+
+#~ msgid "Duplicate"
+#~ msgstr "复制"
+
+#~ msgid "Form Editor"
+#~ msgstr "表单编辑器"
+
+#~ msgid "Form Elements"
+#~ msgstr "表单元素"
+
+#~ msgid "Preview Form"
+#~ msgstr "预览表单"
+
+#~ msgid "Schedule"
+#~ msgstr "日程"
+
+#~ msgid "Publish"
+#~ msgstr "发布"
+
+#~ msgid "Submit for Review"
+#~ msgstr "提交评论"
+
+#~ msgid "This page is restricted. Please Log in / Register to view this page."
+#~ msgstr "本文访问受限。请登录/注册以查看本文。"
+
+#~ msgid "Post saved"
+#~ msgstr "文章已保存"
+
+#~ msgid "Post updated successfully"
+#~ msgstr "文章已更新成功"
+
+#~ msgid "Submit"
+#~ msgstr "提交"
+
+#~ msgid "Save Draft"
+#~ msgstr "保存草稿"
+
+#~ msgid "Disable Subscription"
+#~ msgstr "禁用订购"
+
+#~ msgid ""
+#~ "If checked, any subscription and pay-per-post will be disabled on the "
+#~ "form and will take no effect."
+#~ msgstr ""
+#~ "如果选中，任何订购和按次付费发布会在表格上被禁用，并且不会有任何影响。"
+
+#~ msgid "Post Format"
+#~ msgstr "文章格式"
+
+#~ msgid "Default Post Category"
+#~ msgstr "默认文章类别"
+
+#~ msgid ""
+#~ "If users are not allowed to choose any category, this category will be "
+#~ "used instead (if post type supports)"
+#~ msgstr "如果用户被不允许选择分类，将使用这个分类"
+
+#~ msgid "Enable Guest Post"
+#~ msgstr "启用访客发文章"
+
+#~ msgid "Unregistered users will be able to submit posts"
+#~ msgstr "未注册用户将可以提交文章"
+
+#~ msgid "Require Name and Email address"
+#~ msgstr "需要名称和Email 地址"
+
+#~ msgid ""
+#~ "If requires, users will be automatically registered to the site using the "
+#~ "name and email address"
+#~ msgstr "如果需要，用户将使用这个用户名和email注册为网站用户。"
+
+#~ msgid "Name Label"
+#~ msgstr "姓名标签"
+
+#~ msgid "Label text for name field"
+#~ msgstr "名称字段的文字标签"
+
+#~ msgid "E-Mail Label"
+#~ msgstr "E-Mail 标签"
+
+#~ msgid "Label text for email field"
+#~ msgstr "email 字段的标签文字"
+
+#~ msgid "Unauthorized Message"
+#~ msgstr "未注册用户管理"
+
+#~ msgid "Not logged in users will see this message"
+#~ msgstr "没有登录用户将看到这个信息"
+
+#~ msgid "Newly created post"
+#~ msgstr "新创建的文章"
+
+#~ msgid "To a page"
+#~ msgstr "到一个页面"
+
+#~ msgid "To a custom URL"
+#~ msgstr "到一个自定义URL"
+
+#~ msgid "After successfull submit, where the page will redirect to"
+#~ msgstr "提交成功以后，页面将重定向到"
+
+#~ msgid "Message to show"
+#~ msgstr "信息显示"
+
+#~ msgid "Custom URL"
+#~ msgstr "自定义URL"
+
+#~ msgid "Open"
+#~ msgstr "打开"
+
+#~ msgid "Closed"
+#~ msgstr "关闭"
+
+#~ msgid "Submit Post Button text"
+#~ msgstr "提交文章按钮文字"
+
+#~ msgid "Post Draft"
+#~ msgstr "文章草稿"
+
+#~ msgid "Enable Saving as draft"
+#~ msgstr "启用保存为草稿"
+
+#~ msgid "It will show a button to save as draft"
+#~ msgstr "会显示一个保存为草稿按钮"
+
+#~ msgid "Update"
+#~ msgstr "更新"
+
+#~ msgid "Set Post Status to"
+#~ msgstr "设置文章状态到"
+
+#~ msgid "Post Update Message"
+#~ msgstr "文章更新信息"
+
+#~ msgid "Subscription Title"
+#~ msgstr "订购标题"
+
+#~ msgid "Update Post Button text"
+#~ msgstr "更新文章按钮文字"
+
+#~ msgid "New post created"
+#~ msgstr "新文章已创建"
+
+#~ msgid "A post has been edited"
+#~ msgstr "一个文章已被编辑"
+
+#~ msgid "New Post Notificatoin"
+#~ msgstr "新文章通知"
+
+#~ msgid "To"
+#~ msgstr "到"
+
+#~ msgid "Update Post Notificatoin"
+#~ msgstr "更新文章通知"
+
+#~ msgid "You may use in message:"
+#~ msgstr "您可以使用信息："
+
+#~ msgid "Enable Email Verfication"
+#~ msgstr "启用邮件验证"
+
+#~ msgid "New User Role"
+#~ msgstr "新用户角色"
+
+#~ msgid "Registration success message"
+#~ msgstr "注册成功信息"
+
+#~ msgid "Update profile message"
+#~ msgstr "更新个人简介信息"
+
+#~ msgid "Submit Button text"
+#~ msgstr "提交按钮文字"
+
+#~ msgid "Update Button text"
+#~ msgstr "更新按钮文字"
+
+#~ msgid "Edit Settings"
+#~ msgstr "编辑设置"
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Radio"
+#~ msgstr "单选"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Hidden Field"
+#~ msgstr "隐藏字段"
+
+#~ msgid "Google Maps"
+#~ msgstr "谷歌地图"
+
+#~ msgid "Others"
+#~ msgstr "其他"
+
+#~ msgid "reCaptcha"
+#~ msgstr "验证码"
+
+#~ msgid "Really Simple Captcha"
+#~ msgstr "真正简单的验证码"
+
+#~ msgid "Section Break"
+#~ msgstr "分节符"
+
+#~ msgid "HTML"
+#~ msgstr "HTML"
+
+#~ msgid "Action Hook"
+#~ msgstr "动作 Hook"
+
+#~ msgid "Post Title"
+#~ msgstr "文章标题"
+
+#~ msgid "Post Body"
+#~ msgstr "文章正文"
+
+#~ msgid "Excerpt"
+#~ msgstr "摘录"
+
+#~ msgid "Tags"
+#~ msgstr "标签"
+
+#~ msgid "Category"
+#~ msgstr "分类"
+
+#~ msgid "Featured Image"
+#~ msgstr "特色图像"
+
+#~ msgid "Custom Taxonomies"
+#~ msgstr "自定义分类"
+
+#~ msgid "No custom taxonomies found"
+#~ msgstr "没有找到自定义分类"
+
+#~ msgid "Biographical Info"
+#~ msgstr "个人简介"
+
+#~ msgid "Toggle All"
+#~ msgstr "展开/收起全部"
+
+#~ msgid "Click on a form element to add to the editor"
+#~ msgstr "单击一个表单元素以添加到编辑器"
+
+#~ msgid ""
+#~ "If you have not created <strong>WP User Frontend Pro</strong> pages yet, "
+#~ "you can do this by one click."
+#~ msgstr ""
+#~ "如果你还没有创建 <strong>WP User Frontend Pro</strong> 页面，你可以点击一"
+#~ "下完成创建。"
+
+#~ msgid "Install WPUF Pages"
+#~ msgstr "安装 WPUF 页面"
+
+#~ msgid "Skip Setup"
+#~ msgstr "跳过安装"
+
+#~ msgid "Congratulations!"
+#~ msgstr "恭喜您！"
+
+#~ msgid ""
+#~ "Pages for <strong>WP User Frontend Pro</strong> has been successfully "
+#~ "installed and saved!"
+#~ msgstr "<strong>WP User Frontend Pro</strong> 页面已被成功安装和保存！"
+
+#~ msgid "Dashboard"
+#~ msgstr "仪表盘"
+
+#~ msgid "Subscription"
+#~ msgstr "订购"
+
+#~ msgid "[wpuf_sub_pack]"
+#~ msgstr "[wpuf_sub_pack]"
+
+#~ msgid "Payment"
+#~ msgstr "支付"
+
+#~ msgid "Please select a gateway for payment"
+#~ msgstr "请选择支付网关"
+
+#~ msgid "Thank You"
+#~ msgstr "谢谢"
+
+#~ msgid ""
+#~ "<h1>Payment is complete</h1><p>Congratulations, your payment has been "
+#~ "completed!</p>"
+#~ msgstr "<h1>付款完成</h1><p>恭喜，您的付款已完成！</p>"
+
+#~ msgid "Order Received"
+#~ msgstr "收到的订单"
+
+#~ msgid ""
+#~ "Hi, we have received your order. We will validate the order and will take "
+#~ "necessary steps to move forward."
+#~ msgstr "嗨，我们已经收到您的订单。我们将验证订单和进行下一步操作。"
+
+#~ msgid "Sample Form"
+#~ msgstr "表单样本"
+
+#~ msgid "WPUF Post Lock"
+#~ msgstr "WPUF 发帖锁定"
+
+#~ msgid "Lock Post:"
+#~ msgstr "锁定发帖："
+
+#~ msgid "Lock user from creating new post."
+#~ msgstr "锁定该用户，不让其创建新文章"
+
+#~ msgid "Lock Reason:"
+#~ msgstr "锁定原因："
+
+#~ msgid "Are you sure?"
+#~ msgstr "您确定？"
+
+#~ msgid "Payments"
+#~ msgstr "支付"
+
+#~ msgid "Support"
+#~ msgstr "支持"
+
+#~ msgid "Fixed Form Elements "
+#~ msgstr "固定表单元素"
+
+#~ msgid "Show fixed form elements sidebar in form editor"
+#~ msgstr "在表单编辑器显示固定表单元素侧边栏"
+
+#~ msgid "Edit Page"
+#~ msgstr "编辑页面"
+
+#~ msgid "Default Post Owner"
+#~ msgstr "默认文章作者"
+
+#~ msgid ""
+#~ "If guest post is enabled and user details are OFF, the posts are assigned "
+#~ "to this user"
+#~ msgstr "如果访客发表文章是开启并且用户详情是关闭，本文指派给这个用户。"
+
+#~ msgid "Admin area access"
+#~ msgstr "管理区域访问"
+
+#~ msgid "Allow you to block specific user role to WordPress admin area."
+#~ msgstr "允许您阻止特定的用户角色访问WordPress管理区域。"
+
+#~ msgid "Admins, Editors, Authors"
+#~ msgstr "管理员，编辑者，作者"
+
+#~ msgid "Admins, Editors, Authors, Contributors"
+#~ msgstr "管理员，编辑者，作者，投稿者"
+
+#~ msgid "Default"
+#~ msgstr "默认"
+
+#~ msgid "Override the post edit link"
+#~ msgstr "重写文章编辑链接"
+
+#~ msgid ""
+#~ "Users see the edit link in post if s/he is capable to edit the post/page. "
+#~ "Selecting <strong>Yes</strong> will override the default WordPress edit "
+#~ "post link in frontend"
+#~ msgstr ""
+#~ "如果用户可以编辑文章/页面则他可以看到文章编辑链接. 选择 <strong>是</"
+#~ "strong> 将在前端重写链接地址"
+
+#~ msgid "Custom Fields in post"
+#~ msgstr "文章自定义字段"
+
+#~ msgid "Show custom fields on post content area"
+#~ msgstr "在文章内容区域显示自定义字段"
+
+#~ msgid "Load Scripts"
+#~ msgstr "加载代码"
+
+#~ msgid "Load scripts/styles in all pages"
+#~ msgstr "加载代码/样式到全部页面"
+
+#~ msgid ""
+#~ "Default image size of \"<strong>Insert Photo</strong>\" button in post "
+#~ "content area"
+#~ msgstr "在文章内容区域的\"<strong>插入图片</strong>\"按钮的默认图片大小"
+
+#~ msgid "Insert Photo image type"
+#~ msgstr "插入图片的类型"
+
+#~ msgid ""
+#~ "Default image type of \"<strong>Insert Photo</strong>\" button in post "
+#~ "content area"
+#~ msgstr "在文章内容区域的\"<strong>插入图片</strong>\"按钮的默认图片类型"
+
+#~ msgid "Image with link"
+#~ msgstr "包含链接的图片"
+
+#~ msgid "Enable Image Caption"
+#~ msgstr "启用图像说明"
+
+#~ msgid "Allow users to update image/video title, caption and description"
+#~ msgstr "允许用户更新图像/视频标题，说明和描述"
+
+#~ msgid "Default Post Form"
+#~ msgstr "默认文章表单"
+
+#~ msgid "Fallback form for post editing if no associated form found"
+#~ msgstr "如果没有发现相关的表单，就返回文章编辑表单"
+
+#~ msgid "reCAPTCHA Public Key"
+#~ msgstr "验证码公开密匙"
+
+#~ msgid "reCAPTCHA Private Key"
+#~ msgstr "验证码私密密匙"
+
+#~ msgid "Custom CSS codes"
+#~ msgstr "自定义CSS代码"
+
+#~ msgid ""
+#~ "If you want to add your custom CSS code, it will be added on page header "
+#~ "wrapped with style tag"
+#~ msgstr "如果您想添加自定义CSS代码，它将被添加到页面页眉"
+
+#~ msgid "Users can edit post?"
+#~ msgstr "用户可以编辑文章？"
+
+#~ msgid "Users will be able to edit their own posts"
+#~ msgstr "用户将可以编辑他们的文章"
+
+#~ msgid "User can delete post?"
+#~ msgstr "用户可以删除文章？"
+
+#~ msgid "Users will be able to delete their own posts"
+#~ msgstr "用户可以删除他们自己的文章"
+
+#~ msgid "Pending Post Edit"
+#~ msgstr "待审文章编辑"
+
+#~ msgid "Disable post editing while post in \"pending\" status"
+#~ msgstr "当文章处于“待审核”状态时，禁止编辑"
+
+#~ msgid "How many posts will be listed in a page"
+#~ msgstr "多少文章将在一页被呈现"
+
+#~ msgid "Show user bio"
+#~ msgstr "显示用户简介"
+
+#~ msgid "Users biographical info will be shown"
+#~ msgstr "将显示用户的个人简介"
+
+#~ msgid "Show post count"
+#~ msgstr "显示文章数"
+
+#~ msgid "Show how many posts are created by the user"
+#~ msgstr "显示用户创作的多少文章"
+
+#~ msgid "Show Featured Image"
+#~ msgstr "显示特色图像"
+
+#~ msgid "Show featured image of the post"
+#~ msgstr "显示文章特色图像"
+
+#~ msgid "Featured Image size"
+#~ msgstr "特色图像尺寸"
+
+#~ msgid "Login/Registration override"
+#~ msgstr "登录 / 注册覆盖"
+
+#~ msgid ""
+#~ "If enabled, default login and registration forms will be overridden by "
+#~ "WPUF with pages below"
+#~ msgstr "如果启用，默认的登录和注册表单将被以下 WPUF 的页面所替换"
+
+#~ msgid ""
+#~ "Select the page you want to use as registration page override <em>(should "
+#~ "have shortcode)</em>"
+#~ msgstr "选择您想用户用来注册的页面 <em>(应该有简码)</em>"
+
+#~ msgid "Charge for posting"
+#~ msgstr "发文章收费"
+
+#~ msgid "Charge user for submitting a post"
+#~ msgstr "收费用户才能提交文章"
+
+#~ msgid "Force pack purchase"
+#~ msgstr "强制购买套餐"
+
+#~ msgid "When active, users must have to buy a pack for posting"
+#~ msgstr "当激活时，用户必须得买一个套餐才能发布"
+
+#~ msgid "Enable"
+#~ msgstr "启用"
+
+#~ msgid "Subscription Pack Page"
+#~ msgstr "订购套餐页面"
+
+#~ msgid "Select the page where <code>[wpuf_sub_pack]</code> located."
+#~ msgstr "选择 <ode>[wpuf_sub_pack]</code> 所在的页面"
+
+#~ msgid "Registration time redirect to subscription page"
+#~ msgstr "重定向到订购页面的注册时间"
+
+#~ msgid "Currency"
+#~ msgstr "货币"
+
+#~ msgid "Currency Symbol"
+#~ msgstr "货币符号"
+
+#~ msgid "Cost"
+#~ msgstr "费用"
+
+#~ msgid "Cost per post"
+#~ msgstr "每文费用"
+
+#~ msgid "Enable demo/sandbox mode"
+#~ msgstr "启用演示/沙盒模式"
+
+#~ msgid ""
+#~ "When sandbox mode is active, all payment gateway will be used in demo mode"
+#~ msgstr "当沙盒模式激活，全部支付方式将用于演示模式"
+
+#~ msgid "Payment Page"
+#~ msgstr "付款页面"
+
+#~ msgid "This page will be used to process payment options"
+#~ msgstr "这个页面将用于付款流程选项"
+
+#~ msgid "Payment Success Page"
+#~ msgstr "付款成功页面"
+
+#~ msgid "After payment users will be redirected here"
+#~ msgstr "用户完成付款以后返回的页面"
+
+#~ msgid "Payment Gateways"
+#~ msgstr "支付方式"
+
+#~ msgid "Active payment gateways"
+#~ msgstr "激活支付方式"
+
+#~ msgid "Need Help?"
+#~ msgstr "需要帮助？"
+
+#~ msgid ""
+#~ "Select profile/registration forms for user roles. These forms will be "
+#~ "used to populate extra edit profile fields in backend."
+#~ msgstr ""
+#~ "选择用户角色的个人资料/注册表单。这个表单将用于填写后端额外的编辑个人资料"
+#~ "文件中的字段。"
+
+#~ msgid " - select - "
+#~ msgstr " - 选择 - "
+
+#~ msgid "Coupons"
+#~ msgstr "优惠券"
+
+#~ msgid "Transaction"
+#~ msgstr "交易"
+
+#~ msgid "Add-ons"
+#~ msgstr "扩展"
+
+#~ msgid "Subscription pack updated."
+#~ msgstr "订购套餐已更新。"
+
+#~ msgid "Subscription pack restored to revision from %s"
+#~ msgstr "订购套餐已从 %s版本中恢复"
+
+#~ msgid "Subscription pack published."
+#~ msgstr "订购套餐已发布。"
+
+#~ msgid "Subscription pack saved."
+#~ msgstr "订购套餐已保存。"
+
+#~ msgid "Subscription pack submitted."
+#~ msgstr "订购套餐已提交。"
+
+#~ msgid "Subscription pack draft updated."
+#~ msgstr "订购套餐草稿已更新。"
+
+#~ msgid "Free"
+#~ msgstr "免费"
+
+#~ msgid "Pack Name"
+#~ msgstr "套餐名称"
+
+#~ msgid "Recurring"
+#~ msgstr "经常性"
+
+#~ msgid "Pack Deleted"
+#~ msgstr "套餐已删除"
+
+#~ msgid "Post Count"
+#~ msgstr "文章数"
+
+#~ msgid "No subscription pack found"
+#~ msgstr "未发现订购套餐"
+
+#~ msgid "Pack Description"
+#~ msgstr "套餐描述"
+
+#~ msgid "Billing amount:"
+#~ msgstr "开票金额："
+
+#~ msgid "Billing amount each cycle:"
+#~ msgstr "开票金额每个周期："
+
+#~ msgid "Expires In:"
+#~ msgstr "到期日期："
+
+#~ msgid "Enable Recurring Payment"
+#~ msgstr "启用定期付款"
+
+#~ msgid "Billing cycle:"
+#~ msgstr "计费周期："
+
+#~ msgid "Billing cycle stop"
+#~ msgstr "计费周期停止"
+
+#~ msgid "Never"
+#~ msgstr "从不"
+
+#~ msgid "After how many cycles should billing stop?"
+#~ msgstr "经过多少个周期后计费停止？"
+
+#~ msgid "Trial"
+#~ msgstr "试用"
+
+#~ msgid "Enable trial period"
+#~ msgstr "启用试用期"
+
+#~ msgid "Trial amount"
+#~ msgstr "使用数量"
+
+#~ msgid "Amount to bill for the trial period"
+#~ msgstr "试用期的金额数量"
+
+#~ msgid "Trial period"
+#~ msgstr "试用期"
+
+#~ msgid "Define the trial period"
+#~ msgstr "定义试用期"
+
+#~ msgid "Day(s)"
+#~ msgstr "天"
+
+#~ msgid "Week(s)"
+#~ msgstr "周"
+
+#~ msgid "Month(s)"
+#~ msgstr "月"
+
+#~ msgid "Year(s)"
+#~ msgstr "年"
+
+#~ msgid "WPUF Subscription"
+#~ msgstr "WPUF 订购"
+
+#~ msgid "Assign Package"
+#~ msgstr "分配套餐"
+
+#~ msgid "Show Package"
+#~ msgstr "显示套餐"
+
+#~ msgid "Pack:"
+#~ msgstr "套餐:"
+
+#~ msgid "Subscription Details"
+#~ msgstr "订购详情"
+
+#~ msgid "Subcription Name: "
+#~ msgstr "订购名称："
+
+#~ msgid "Package billing details: "
+#~ msgstr "套餐计费的详细信息："
+
+#~ msgid "Remaining post: "
+#~ msgstr "剩余发帖量："
+
+#~ msgid "Expire date:"
+#~ msgstr "有效期至："
+
+#~ msgid "Enable Image Insertion"
+#~ msgstr "启用图像插入"
+
+#~ msgid "Enable image upload in post area"
+#~ msgstr "在内容编辑上方启用图像上传"
+
+#~ msgid "Enter maximum upload size limit in KB"
+#~ msgstr "输入最大上传大小 KB"
+
+#~ msgid "Text Input"
+#~ msgstr "文本输入框"
+
+#~ msgid "Ajax"
+#~ msgstr "Ajax"
+
+#~ msgid "Order By"
+#~ msgstr "排序方式"
+
+#~ msgid "Term ID"
+#~ msgstr "项目ID"
+
+#~ msgid "Slug"
+#~ msgstr "别名"
+
+#~ msgid "Count"
+#~ msgstr "数"
+
+#~ msgid "Term Group"
+#~ msgstr "Term Group"
+
+#~ msgid "ASC"
+#~ msgstr "正序"
+
+#~ msgid "DESC"
+#~ msgstr "倒序"
+
+#~ msgid "Selection Type"
+#~ msgstr "选择类型"
+
+#~ msgid "Include"
+#~ msgstr "包括"
+
+#~ msgid "Child of"
+#~ msgstr "子项目"
+
+#~ msgid "Selection terms"
+#~ msgstr "选择条款"
+
+#~ msgid ""
+#~ "Enter the term IDs as comma separated (without space) to exclude/include "
+#~ "in the form."
+#~ msgstr "输入排除/包含项目的ID，使用英文逗号分隔。"
+
+#~ msgid "WooCommerce Attribute"
+#~ msgstr "WooCommerce 属性"
+
+#~ msgid "This taxonomy is a WooCommerce attribute"
+#~ msgstr "这个分类是WooCommerce属性"
+
+#~ msgid "Visible on product page"
+#~ msgstr "产品页面上可见"
+
+#~ msgid "Confirm Password"
+#~ msgstr "确认密码"
+
+#~ msgid "Require Password repeat"
+#~ msgstr "必须重复密码"
+
+#~ msgid "Re-type password label"
+#~ msgstr "再次输入密码标签"
+
+#~ msgid "Password Strength Meter"
+#~ msgstr "密码强度表"
+
+#~ msgid "Show password strength meter"
+#~ msgstr "显示密码强度表"
+
+#~ msgid "Click and Drag to rearrange"
+#~ msgstr "单击并拖动重新排列"
+
+#~ msgid "Toggle"
+#~ msgstr "切换"
+
+#~ msgid "Meta Key"
+#~ msgstr "Meta Key"
+
+#~ msgid "Name of the meta key this field will save to"
+#~ msgstr "meta key 名称这个字段将保存到"
+
+#~ msgid "Help text"
+#~ msgstr "帮助文字"
+
+#~ msgid "Give the user some information about this field"
+#~ msgstr "关于这个字段给用户一些提示信息"
+
+#~ msgid "CSS Class Name"
+#~ msgstr "CSS类名称"
+
+#~ msgid "Add a CSS class name for this field"
+#~ msgstr "为这个字段添加一个CSS类名称"
+
+#~ msgid "Placeholder text"
+#~ msgstr "占位符文本"
+
+#~ msgid "Size"
+#~ msgstr "大小"
+
+#~ msgid "Rows"
+#~ msgstr "行"
+
+#~ msgid "Columns"
+#~ msgstr "列"
+
+#~ msgid "Normal"
+#~ msgstr "正常"
+
+#~ msgid "Rich textarea"
+#~ msgstr "丰富文本区域"
+
+#~ msgid "Teeny Rich textarea"
+#~ msgstr "极小丰富文本区域"
+
+#~ msgid "Show values"
+#~ msgstr "显示值"
+
+#~ msgid "Label"
+#~ msgstr "标签"
+
+#~ msgid "Value"
+#~ msgstr "值"
+
+#~ msgid "Conditional Logic"
+#~ msgstr "条件逻辑"
+
+#~ msgid "show values"
+#~ msgstr "显示值"
+
+#~ msgid "Options"
+#~ msgstr "操作"
+
+#~ msgid ""
+#~ "First element of the select dropdown. Leave this empty if you don't want "
+#~ "to show this field"
+#~ msgstr "选择下拉的第一个元素。如果您不想显示这个字段请留空"
+
+#~ msgid "Number of images can be uploaded"
+#~ msgstr "可以上传的图片数量"
+
+#~ msgid "Max. files"
+#~ msgstr "最大文件"
+
+#~ msgid "Multiple Column"
+#~ msgstr "多列"
+
+#~ msgid "HTML Codes"
+#~ msgstr "HTML 代码"
+
+#~ msgid "Meta Value"
+#~ msgstr "Meta 值"
+
+#~ msgid ""
+#~ "Insert your public key and private key in <a href='%s'>plugin settings</"
+#~ "a>. <a href='https://www.google.com/recaptcha/' target='_blank'>Register</"
+#~ "a> first if you don't have any keys."
+#~ msgstr ""
+#~ "插入您的公开和私密密匙在 <a href='%s'>插件设置</a>. 如果您还没有请在这里 "
+#~ "<a href='https://www.google.com/recaptcha/' target='_blank'>注册</a> ."
+
+#~ msgid ""
+#~ "Depends on <a href='http://wordpress.org/extend/plugins/really-simple-"
+#~ "captcha/' target='_blank'>Really Simple Captcha</a> Plugin. Install it "
+#~ "first."
+#~ msgstr ""
+#~ "取决于 <a href='http://wordpress.org/extend/plugins/really-simple-"
+#~ "captcha/' target='_blank'>真正简单验证码</a> 插件. 先安装它."
+
+#~ msgid "Hook Name"
+#~ msgstr "Hook 名"
+
+#~ msgid "Name of the hook"
+#~ msgstr "hook数量"
+
+#~ msgid ""
+#~ "An option for developers to add dynamic elements they want. It provides "
+#~ "the chance to add whatever input type you want to add in this form."
+#~ msgstr "为开发者添加动态元素。"
+
+#~ msgid ""
+#~ "This way, you can bind your own functions to render the form to this "
+#~ "action hook. You'll be given 3 parameters to play with: $form_id, "
+#~ "$post_id, $form_settings."
+#~ msgstr ""
+#~ "This way, you can bind your own functions to render the form to this "
+#~ "action hook. You'll be given 3 parameters to play with: $form_id, "
+#~ "$post_id, $form_settings."
+
+#~ msgid "The date format"
+#~ msgstr "日期格式"
+
+#~ msgid "Date Format"
+#~ msgstr "日期格式"
+
+#~ msgid "Time"
+#~ msgstr "时间"
+
+#~ msgid "Enable time input"
+#~ msgstr "启用时间输入框"
+
+#~ msgid "Set the map zoom level"
+#~ msgstr "设置地图放大层级"
+
+#~ msgid "Enter default latitude and longitude to center the map"
+#~ msgstr "为中心地图输入默认经度和纬度"
+
+#~ msgid "Zoom Level"
+#~ msgstr "放大层级"
+
+#~ msgid "Default Co-ordinate"
+#~ msgstr "默认协调"
+
+#~ msgid "Address Button"
+#~ msgstr "地址按钮"
+
+#~ msgid "Show address find button"
+#~ msgstr "显示地址查找按钮"
+
+#~ msgid "Show Latitude/Longitude"
+#~ msgstr "显示纬度/经度"
+
+#~ msgid "Show latitude and longitude input box value"
+#~ msgstr "显示纬度和经度输入框值"
+
+#~ msgid "Terms & Conditions"
+#~ msgstr "条款协议"
+
+#~ msgid "Insert terms and condtions here."
+#~ msgstr "输入条款协议在这里"
+
+#~ msgid "Form Export"
+#~ msgstr "表单导入"
+
+#~ msgid "Select individual"
+#~ msgstr "选择单个"
+
+#~ msgid "Export"
+#~ msgstr "导出"
+
+#~ msgid "Sorry you have no form to export"
+#~ msgstr "抱歉，没有表单可导出"
+
+#~ msgid "Registration Form Export"
+#~ msgstr "注册表单导出"
+
+#~ msgid "Somthing went wrong. Please choose a file again"
+#~ msgstr "出错了，请再次选择一个文件"
+
+#~ msgid "Import successful. Have fun!"
+#~ msgstr "导入成功了！"
+
+#~ msgid "Import forms"
+#~ msgstr "导入表单"
+
+#~ msgid "Click Browse button and choose a json file that you backup before."
+#~ msgstr "点击浏览按钮，选择一个你之前备份的JSON文件。"
+
+#~ msgid "Press Restore button, WordPress does the rest for you."
+#~ msgstr "按下还原按钮，WordPress 将为你完成剩下的工作。"
+
+#~ msgid "Import"
+#~ msgstr "导入"
+
+#~ msgid "Please select some form for exporting"
+#~ msgstr "请选择要导出的表单"
+
+#~ msgid "Settings has been cleared!"
+#~ msgstr "设置已被清除！"
+
+#~ msgid "All transactions has been deleted!"
+#~ msgstr "所有交易已被删除！"
+
+#~ msgid "Page Installation"
+#~ msgstr "页面安装"
+
+#~ msgid ""
+#~ "Clicking this button will create required pages for the plugin. Note: "
+#~ "It'll not delete/replace existing pages."
+#~ msgstr ""
+#~ "点击这个按钮将创建该插件所需的页面。注：这个操作不会删除/替换已经存在的页"
+#~ "面。"
+
+#~ msgid "Reset Settings"
+#~ msgstr "重置设置"
+
+#~ msgid ""
+#~ "<strong>Caution:</strong> This tool will delete all the plugin settings "
+#~ "of WP User Frontend Pro"
+#~ msgstr ""
+#~ "<strong>注意：</strong> 该工具会删除 WP User Frontend Pro 的所有设置"
+
+#~ msgid ""
+#~ "<strong>Caution:</strong> This tool will delete all the post and "
+#~ "registration/profile forms."
+#~ msgstr "<strong>注意：</strong> 该工具会删除所有投稿和注册/个人资料表单。"
+
+#~ msgid "Delete Post Forms"
+#~ msgstr "删除投稿表单"
+
+#~ msgid "Delete Subscriptions"
+#~ msgstr "删除订购"
+
+#~ msgid "Transactions"
+#~ msgstr "交易"
+
+#~ msgid ""
+#~ "This tool will delete all the transactions from the transaction table."
+#~ msgstr "该工具将从交易表中的删除所有事务。"
+
+#~ msgid "Delete Transactions"
+#~ msgstr "删除交易"
+
+#~ msgid "WP User Frontend: Payments Received"
+#~ msgstr "WP 用户前端: 付款"
+
+#~ msgid "Total Income:"
+#~ msgstr "总收入："
+
+#~ msgid "This Month:"
+#~ msgstr "本月："
+
+#~ msgid "Transaction(s) deleted"
+#~ msgstr "交易已删除"
+
+#~ msgid "Status"
+#~ msgstr "状态"
+
+#~ msgid "Pack ID"
+#~ msgstr "套餐 ID"
+
+#~ msgid "Payer"
+#~ msgstr "付款人"
+
+#~ msgid "Transaction ID"
+#~ msgstr "交易ID"
+
+#~ msgid "Created"
+#~ msgstr "已创建"
+
+#~ msgid "Nothing Found"
+#~ msgstr "嘛都没有"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "User"
+#~ msgstr "用户"
+
+#~ msgid "Item Details"
+#~ msgstr "项目详情"
+
+#~ msgid "Accept"
+#~ msgstr "接受"
+
+#~ msgid "Reject"
+#~ msgstr "拒绝"
+
+#~ msgid "No pending orders found"
+#~ msgstr "没有找到等待订单"
+
+#~ msgid "Sorry invalid coupon code!"
+#~ msgstr "抱歉，无效的优惠券代码！"
+
+#~ msgid "Coupon is not availiable for this package!"
+#~ msgstr "优惠券不适用于这个套餐！"
+
+#~ msgid "Coupon usage limit exceeded!"
+#~ msgstr "超过优惠券的使用限制！"
+
+#~ msgid "Sorry, this coupon is not start!"
+#~ msgstr "抱歉，该优惠券还没有启用！"
+
+#~ msgid "Sorry, this coupon has been expired!"
+#~ msgstr "抱歉，该优惠券已过期！"
+
+#~ msgid "This page is restricted. Please %s to view this page."
+#~ msgstr "此页面访问受限制。 请到%s 查看此页面。"
+
+#~ msgid "<strong>Success</strong>: Profile updated"
+#~ msgstr "<strong>成功</strong>: 个人资料已更新"
+
+#~ msgid "(required)"
+#~ msgstr "(必填)"
+
+#~ msgid "About Yourself"
+#~ msgstr "关于您自己"
+
+#~ msgid ""
+#~ "Share a little biographical information to fill out your profile. This "
+#~ "may be shown publicly."
+#~ msgstr "分享一个个人资料信息。这可能是公开的。"
+
+#~ msgid "Type your new password again."
+#~ msgstr "再次输入您的新密码"
+
+#~ msgid "Password Strength"
+#~ msgstr "密码强度"
+
+#~ msgid "Validity:"
+#~ msgstr "有效性:"
+
+#~ msgid "Post Deleted"
+#~ msgstr "文章已删除"
+
+#~ msgid "Author Info"
+#~ msgstr "作者信息"
+
+#~ msgid "You are not the post author. Cheeting huh!"
+#~ msgstr "您不是文章作者，Cheeting huh!"
+
+#~ msgid "You are not logged in"
+#~ msgstr "您没有登录"
+
+#~ msgid "Post Editing is disabled"
+#~ msgstr "禁止文章编辑"
+
+#~ msgid "Invalid post"
+#~ msgstr "无效文章"
+
+#~ msgid "You are not allowed to edit"
+#~ msgstr "您没有权限编辑"
+
+#~ msgid "I don't know how to edit this post, I don't have the form ID"
+#~ msgstr "我不知道如何编辑这个文章，我没有这个表单ID"
+
+#~ msgid "You can't edit a post while in pending mode."
+#~ msgstr "您不能编辑正处于待审状态的文章"
+
+#~ msgid "Please select subscription page"
+#~ msgstr "请选择订购页面"
+
+#~ msgid "You are already logged in!"
+#~ msgstr "您已经登录！"
+
+#~ msgid "An Email address is required"
+#~ msgstr "Email 地址是必填"
+
+#~ msgid "Username already exists."
+#~ msgstr "用户名已存在。"
+
+#~ msgid "Username is not valid"
+#~ msgstr "用户名无效"
+
+#~ msgid "Password didn't match"
+#~ msgstr "密码不匹配"
+
+#~ msgid "Please check your email for activation link"
+#~ msgstr "请检查您的邮箱激活链接"
+
+#~ msgid "Congrats! You are Successfully registered to %s:"
+#~ msgstr "恭喜！您已成功注册到 %s："
+
+#~ msgid "To activate your account, please click the link below"
+#~ msgstr "要激活您的账号，请点击下面的链接"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "[%s] Account Activation"
+#~ msgstr "[%s] 账号激活"
+
+#~ msgid "Log In"
+#~ msgstr "登录"
+
+#~ msgid "You are now logged out."
+#~ msgstr "您已登出。"
+
+#~ msgid "Password is required."
+#~ msgstr "密码是必填的。"
+
+#~ msgid "A user could not be found with this email address."
+#~ msgstr "无法找到使用这个电子邮箱的用户。"
+
+#~ msgid "Enter a username or e-mail address."
+#~ msgstr "输入一个用户名或邮箱地址。"
+
+#~ msgid "There is no user registered with that email address."
+#~ msgstr "没有发现使用那个邮箱注册的用户。"
+
+#~ msgid ""
+#~ "<strong>Your account is not active.</strong><br>Please check your email "
+#~ "for activation link."
+#~ msgstr "<strong>您的账号还没有激活。</strong><br>请检查您的邮箱激活链接。"
+
+#~ msgid "Your account has been activated"
+#~ msgstr "您的账号已经激活"
+
+#~ msgid ""
+#~ "Someone requested that the password be reset for the following account:"
+#~ msgstr "有人请求为下面的账号重置密码："
+
+#~ msgid "Possible reason: your host may have disabled the mail() function."
+#~ msgstr "可能的原因：您的主机可能已经禁用了mail() 函数。"
+
+#~ msgid "PayPal"
+#~ msgstr "PayPal"
+
+#~ msgid "Bank Payment"
+#~ msgstr "银行卡支付"
+
+#~ msgid "Please select your payment page from admin panel"
+#~ msgstr "请从管理面板选择付款页面"
+
+#~ msgid "Your free package has been activated. Enjoy!"
+#~ msgstr "您的免费套餐已经激活，尽情使用吧！"
+
+#~ msgid "You already have activated a free package previously."
+#~ msgstr "您之前已经激活过一个免费套餐了。"
+
+#~ msgid "Pricing & Plans"
+#~ msgstr "定价与计划"
+
+#~ msgid "Change Pack"
+#~ msgstr "更改套餐"
+
+#~ msgid "Selected Pack"
+#~ msgstr "选择套餐"
+
+#~ msgid "Apply Coupon"
+#~ msgstr "使用优惠券"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid "Have a discount code?"
+#~ msgstr "有优惠码？"
+
+#~ msgid "Choose Your Payment Method"
+#~ msgstr "选择您的支付方式"
+
+#~ msgid "Proceed"
+#~ msgstr "继续进行"
+
+#~ msgid "No Payment gateway found"
+#~ msgstr "没找到支付方式"
+
+#~ msgid "[%s] Payment Received"
+#~ msgstr "[%s] 已收到付款"
+
+#~ msgid "New payment received at %s"
+#~ msgstr "新的付款收到在%s"
+
+#~ msgid "Really Simple Captcha validation failed"
+#~ msgstr "验证码错误，请输入正确的验证码！"
+
+#~ msgid "Insert Photo"
+#~ msgstr "插入图片"
+
+#~ msgid "Download File"
+#~ msgstr "下载文件"
+
+#~ msgid "Select Image"
+#~ msgstr "选择图像"
+
+#~ msgid "If you want to set a new password, please re-enter."
+#~ msgstr "如果要设置新密码，请重新输入"
+
+#~ msgid "-- Select --"
+#~ msgstr "-- 选择 --"
+
+#~ msgid "Terms of Agreement"
+#~ msgstr "协议条款"
+
+#~ msgid "Error: Really Simple Captcha plugin not found!"
+#~ msgstr "错误：真正简单验证码插件没找到！"
+
+#~ msgid "Type an address to find"
+#~ msgstr "输入一个地址以查找"
+
+#~ msgid "Find Address"
+#~ msgstr "查找地址"
+
+#~ msgid "Add Subscription"
+#~ msgstr "添加订购"
+
+#~ msgid "Add New Subscription"
+#~ msgstr "添加新订购"
+
+#~ msgid "Edit Subscription"
+#~ msgstr "编辑订购"
+
+#~ msgid "New Subscription"
+#~ msgstr "新订购"
+
+#~ msgid "View Subscription"
+#~ msgstr "查看订购"
+
+#~ msgid "Search Subscription"
+#~ msgstr "搜索订购"
+
+#~ msgid "No Subscription Found"
+#~ msgstr "未发现订购套餐"
+
+#~ msgid "No Subscription Found in Trash"
+#~ msgstr "回收站里没有订购套餐"
+
+#~ msgid "Parent Subscription"
+#~ msgstr "父级订购"
+
+#~ msgid "Billing Details"
+#~ msgstr "账单详情"
+
+#~ msgid "Remain post: "
+#~ msgstr "剩余发帖量："
+
+#~ msgid "Change"
+#~ msgstr "更改"
+
+#~ msgid "Please enable force pack and charge posting from admin panel"
+#~ msgstr "请在管理面板启用强制套餐和付费发帖"
+
+#~ msgid "One time payment"
+#~ msgstr "一次性付款"
+
+#~ msgid "Sign Up"
+#~ msgstr "报名"
+
+#~ msgid "Buy Now"
+#~ msgstr "立即购买"
+
+#~ msgid "This will cost you <strong>%s</strong> to add a new post. "
+#~ msgstr "将花费您<strong>%s</strong>来添加新文章。"
+
+#~ msgid "You must <a href=\"%s\">purchase a pack</a> before posting"
+#~ msgstr "在发文章之前您必须 <a href=\"%s\">购买一个套餐</a>"
+
+#~ msgid "Updates"
+#~ msgstr "更新"
+
+#~ msgid ""
+#~ "Please <a href=\"%s\">enter</a> your <strong>WP User Frontend</strong> "
+#~ "plugin license key to get regular update and support."
+#~ msgstr ""
+#~ "请<a href=\"%s\">输入</a> 您的 <strong>WP 用户前端</strong>插件许可以方便"
+#~ "升级"
+
+#~ msgid "Pleae activate your copy"
+#~ msgstr "请激活您的副本"
+
+#~ msgid "WP User Frontend Error:"
+#~ msgstr "WP用户前端错误:"
+
+#~ msgid "Empty email address"
+#~ msgstr "空email 地址"
+
+#~ msgid "Empty license key"
+#~ msgstr "空的许可"
+
+#~ msgid "Plugin Activation"
+#~ msgstr "插件更新"
+
+#~ msgid "E-mail Address"
+#~ msgstr "E-mail 地址"
+
+#~ msgid "Enter your purchase Email address"
+#~ msgstr "输入您的购买Email 地址"
+
+#~ msgid "License Key"
+#~ msgstr "许可"
+
+#~ msgid "Enter your license key"
+#~ msgstr "输入您的许可"
+
+#~ msgid "Plugin is activated"
+#~ msgstr "插件已激活"
+
+#~ msgid "Delete License"
+#~ msgstr "删除许可证"
+
+#~ msgid "Caption"
+#~ msgstr "说明"
+
+#~ msgid "Mismatch"
+#~ msgstr "不匹配"
+
+#~ msgid "Live"
+#~ msgstr "已发布"
+
+#~ msgid "Offline"
+#~ msgstr "草稿"
+
+#~ msgid "Awaiting Approval"
+#~ msgstr "待审核"
+
+#~ msgid "Scheduled"
+#~ msgstr "定时发布"
+
+#~ msgid "Private"
+#~ msgstr "私人"
+
+#~ msgid "Bank Instruction"
+#~ msgstr "银行指令"
+
+#~ msgid "Bank Payment Success Page"
+#~ msgstr "银行卡付款成功页面"
+
+#~ msgid "[%s] New Bank Order Received"
+#~ msgstr "[%s] 新银行卡已收到付款"
+
+#~ msgid "New bank order received at %s, please check it out: %s"
+#~ msgstr "新银行已收到订单%s,请单击 %s"
+
+#~ msgid "Hello %s,"
+#~ msgstr "Hello %s,"
+
+#~ msgid "We have received your bank payment."
+#~ msgstr "我们已经收到您的银行付款。"
+
+#~ msgid "Thanks for being with us."
+#~ msgstr "谢谢您加入我们队伍"
+
+#~ msgid "Subscription %s at %s"
+#~ msgstr "订购 %s 于 %s"
+
+#~ msgid "PayPal Email"
+#~ msgstr "PayPal 邮箱"
+
+#~ msgid "PayPal Instruction"
+#~ msgstr "PayPal 指令"
+
+#~ msgid "PayPal API password"
+#~ msgstr "PayPal API 密码"
+
+#~ msgid "PayPal API signature"
+#~ msgstr "PayPal API 签名"
+
+#~ msgid "You have created <span>%d</span> %s"
+#~ msgstr "您已发布<span>%d</span>篇%s"
+
+#~ msgid ""
+#~ "Tips: If your manuscript is removed, meaning no reviews yet. Reviewers "
+#~ "will take time, please be patient."
+#~ msgstr "提示：如果稿件被删除，说明审核没有通过。审稿需要时间，请耐心等候。"
+
+#~ msgid "No Image"
+#~ msgstr "没有图片"
+
+#~ msgid "Pay Now"
+#~ msgstr "立即购买"
+
+#~ msgid "Prohibit edit"
+#~ msgstr "禁止编辑"
+
+#~ msgid "Are you sure to delete?"
+#~ msgstr "您确定要删除吗？"
+
+#~ msgid "Prohibit delete"
+#~ msgstr "禁止删除"
+
+#~ msgid "&laquo;"
+#~ msgstr "&laquo;"
+
+#~ msgid "&raquo;"
+#~ msgstr "&raquo;"
+
+#~ msgid "Hello %s"
+#~ msgstr "你好 %s"
+
+#~ msgid "Published"
+#~ msgstr "已发布"
+
+#~ msgid "Draft"
+#~ msgstr "草稿"
+
+#~ msgid "Pending"
+#~ msgstr "等待中"
+
+#~ msgid "-- select --"
+#~ msgstr "-- 选择 --"
+
+#~ msgid "Images"
+#~ msgstr "图像"
+
+#~ msgid "Audio"
+#~ msgstr "音频"
+
+#~ msgid "Videos"
+#~ msgstr "视频"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "Office Documents"
+#~ msgstr "办公文档"
+
+#~ msgid "Zip Archives"
+#~ msgstr "Zip 压缩包"
+
+#~ msgid "Executable Files"
+#~ msgstr "可执行文件"
+
+#~ msgid "CSV"
+#~ msgstr "CSV"
+
+#~ msgctxt "tag delimiter"
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Please fix the errors to proceed"
+#~ msgstr "请处理好出现的错误才能继续哦！"
+
+#~ msgid ""
+#~ "Access Denied. Your site administrator has blocked your access to the "
+#~ "WordPress back-office. return to <strong><a href=\"%s\">Home page</a></"
+#~ "strong> or <strong><a href=\"%s\">User center</a></strong>"
+#~ msgstr ""
+#~ "访问被拒绝。您的网站管理员已阻止您访问WordPress的后台。请返回 <strong><a "
+#~ "href=\"%s\"> 网站首页 </a></strong> 或 <strong><a href=\"%s\"> 个人中心 </"
+#~ "a></strong>。"
+
+#~ msgid ""
+#~ "Override registration link. <span class=\"description\">(check if you "
+#~ "have any custom registration page. Compatible with <strong>Theme My "
+#~ "Login</strong>. Changes the registration url on Meta widget and theme my "
+#~ "login plugin.)</span>"
+#~ msgstr ""
+#~ "重写注册链接。<span class=\"description\">(如果您有个注册页面请勾选. 兼容 "
+#~ "<strong>Theme My Login</strong>.改变注册的 url 在 Meta小工具和主题我的登录"
+#~ "插件.)</span>"
+
+#~ msgid "Pack update successful."
+#~ msgstr "包更新成功"
+
+#~ msgid "Pack creation successful."
+#~ msgstr "包创造成功。"
+
+#~ msgid "Pack Cost"
+#~ msgstr "包费用"
+
+#~ msgid "price/cost of the pack"
+#~ msgstr "此包的价格/费用"
+
+#~ msgid "Pack validity"
+#~ msgstr "包的有效时间"
+
+#~ msgid ""
+#~ "How many days this pack will remain valid? Enter <strong>0</strong> for "
+#~ "unlimited."
+#~ msgstr "这个包的有效时间是多少天？输入<strong>0</strong> 则无限制。"
+
+#~ msgid "Number of Posts"
+#~ msgstr "文章数量"
+
+#~ msgid ""
+#~ "How many posts the user can list with this pack? Enter <strong>0</strong> "
+#~ "for unlimited."
+#~ msgstr "用户可以使用这个包发多少个文章？输入<strong>0</strong>则无限制"
+
+#~ msgid "Update Package"
+#~ msgstr "更新包"
+
+#~ msgid "&larr; Back"
+#~ msgstr "&larr; 返回"
+
+#~ msgid "Unlimited duration"
+#~ msgstr "无限期"
+
+#~ msgid "Post Left:"
+#~ msgstr "文章剩余："
+
+#~ msgid "You can only buy the free pack once. Proceed?"
+#~ msgstr "您只能购买一次免费套餐，要继续吗？"
+
+#~ msgid "%s's Dashboard"
+#~ msgstr "%s's 的仪表盘"
+
+#~ msgid "Your new password for the account at:"
+#~ msgstr "您的账号新密码来自网站："
+
+#~ msgid "You can now login with your new password at: "
+#~ msgstr "您现在可以使用新密码进行登录："
+
+#~ msgid "Click here to complete the payment on %s"
+#~ msgstr "单击这里完成支付在 %s"
+
+#~ msgid "User doesn't exists"
+#~ msgstr "用户不存在"
+
+#~ msgid "You don't have permission for this purpose"
+#~ msgstr "您没有权限使用此功能"
+
+#~ msgid "User Deleted"
+#~ msgstr "用户已删除"
+
+#~ msgid "User Added"
+#~ msgstr "用户已添加"
+
+#~ msgid "Role"
+#~ msgstr "角色"
+
+#~ msgid "<strong>ERROR</strong>: Please enter a username."
+#~ msgstr "<strong>错误</strong>: 请输入一个用户名。"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: This username is invalid because it uses illegal "
+#~ "characters. Please enter a valid username."
+#~ msgstr ""
+#~ "<strong>错误</strong>: 这个用户名使用非法字符无效。请输入一个有效的用户"
+#~ "名。"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: This username is already registered, please "
+#~ "choose another one."
+#~ msgstr "<strong>错误</strong>: 这个用户名已被注册，请选择另一个"
+
+#~ msgid "<strong>ERROR</strong>: Please type your e-mail address."
+#~ msgstr "<strong>错误</strong>: 请输入您的e-mail 地址"
+
+#~ msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
+#~ msgstr "<strong>错误</strong>: email 地址不正确"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: This email is already registered, please choose "
+#~ "another one."
+#~ msgstr "<strong>错误</strong>: email 已被注册，请选择其他的"
+
+#~ msgid ""
+#~ "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the "
+#~ "<a href=\"mailto:%s\">webmaster</a> !"
+#~ msgstr ""
+#~ "<strong>错误</strong>: 不能注册，请联系<a href=\"mailto:%s\">站长</a> !"
+
+#~ msgid "投稿表单"
+#~ msgstr "投稿表单"
+
+#~ msgid "注册表单"
+#~ msgstr "注册表单"
+
+#~ msgid ""
+#~ "Sorry, your account login now in other places, for safety reasons, please "
+#~ "change your password to login again."
+#~ msgstr ""
+#~ "对不起，您的账号目前已在其他地方登录，为了安全起见，请修改密码后重新登录。"
+
+#~ msgid ""
+#~ "<div class=\"error\">This page is restricted. Please login to view this "
+#~ "page.</div>"
+#~ msgstr ""
+#~ "<div class=\"error\">该页面只允许已登录用户访问，请登录/注册后访问。</div>"
+
+#~ msgid ""
+#~ "Access Denied. Your site administrator has blocked your access to the "
+#~ "WordPress back-office."
+#~ msgstr "访问被拒绝。您的网站管理员已阻止您访问WordPress的后台。"

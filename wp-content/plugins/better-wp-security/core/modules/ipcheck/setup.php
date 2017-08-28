@@ -93,6 +93,10 @@ if ( ! class_exists( 'ITSEC_IPCheck_Setup' ) ) {
 					ITSEC_Modules::set_settings( 'network-brute-force', $settings );
 				}
 			}
+
+			if ( $itsec_old_version < 4056 ) {
+				delete_site_option( 'itsec_ipcheck' );
+			}
 		}
 
 	}

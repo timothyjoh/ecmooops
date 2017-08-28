@@ -1,0 +1,71 @@
+.spinner.wpum-admin-widget {
+	float: none;
+}
+
+#wpum_dashboard_users {
+
+    .spinner {
+        margin: 10px;
+    }
+
+	.inside {
+		margin: 0;
+		padding: 0;
+	}
+
+    .wpum_dashboard_widget {
+        text-align: center;
+    }
+
+    ul {
+        overflow: hidden;
+        margin: 0;
+
+        li {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            margin: 0;
+            border-top: 1px solid #ececec;
+            color: #aaa;
+            display: block;
+            color: #aaa;
+            padding: 9px 12px;
+            -webkit-transition: all ease .5s;
+            position: relative;
+            font-size: 12px;
+
+            strong {
+                font-size: 18px;
+                line-height: 1.2em;
+                font-weight: 400;
+                display: block;
+                color: #21759b
+            }
+
+            &:hover {
+                color: #2ea2cc;
+                &:before {
+                    color: #2ea2cc!important
+                }
+                strong {
+                    color: #2ea2cc!important
+                }
+            }
+
+            &.fullwidth {
+                width: 100%
+            }
+
+            &.spacer {
+                border-right: 1px solid #ececec;
+            }
+
+            &:first-child {
+                border-top: 0
+            }
+
+        }
+    }
+
+}

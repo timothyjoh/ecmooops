@@ -124,7 +124,6 @@ if ($http_user_agent ~* "^Xaldon WebSpider"){return 403;}
 if ($http_user_agent ~* "^Zeus"){return 403;}
 if ($http_user_agent ~* "^zmeu"){return 403;}
 if ($http_user_agent ~* "360Spider"){return 403;}
-if ($http_user_agent ~* "AhrefsBot"){return 403;}
 if ($http_user_agent ~* "CazoodleBot"){return 403;}
 if ($http_user_agent ~* "discobot"){return 403;}
 if ($http_user_agent ~* "EasouSpider"){return 403;}

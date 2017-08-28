@@ -34,8 +34,6 @@ final class ITSEC_File_Change_Scanner {
 
 	private function __construct() {
 
-		global $itsec_globals;
-
 		$this->settings = ITSEC_Modules::get_settings( 'file-change' );
 		$this->running  = false;
 		$this->excludes = array(
@@ -71,7 +69,7 @@ final class ITSEC_File_Change_Scanner {
 
 	public function execute_file_check( $scheduled_call = true, $return_data = false ) {
 
-		global $itsec_logger, $itsec_globals;
+		global $itsec_logger;
 
 		if ( false === $this->running ) {
 
@@ -80,9 +78,7 @@ final class ITSEC_File_Change_Scanner {
 
 			ITSEC_Lib::set_minimum_memory_limit( '256M' );
 
-			$itsec_files = ITSEC_Core::get_itsec_files();
-
-			if ( $itsec_files->get_file_lock( 'file_change', 300 ) ) { //make sure it isn't already running
+			if ( ITSEC_Lib::get_lock( 'file_change', 300 ) ) { //make sure it isn't already running
 
 				define( 'ITSEC_DOING_FILE_CHECK', true );
 
@@ -227,7 +223,7 @@ final class ITSEC_File_Change_Scanner {
 				unset( $files_changed );
 				unset( $current_files );
 
-				$this->settings['last_run']   = $itsec_globals['current_time'];
+				$this->settings['last_run']   = ITSEC_Core::get_current_time();
 				$this->settings['last_chunk'] = $chunk;
 
 				ITSEC_Modules::set_settings( 'file-change', $this->settings );
@@ -280,7 +276,7 @@ final class ITSEC_File_Change_Scanner {
 					ITSEC_Modules::set_setting( 'file-change', 'show_warning', true );
 				}
 
-				$itsec_files->release_file_lock( 'file_change' );
+				ITSEC_Lib::release_lock( 'file_change' );
 
 				if ( $files_added_count > 0 || $files_changed_count > 0 || $files_deleted_count > 0 ) {
 
@@ -330,13 +326,11 @@ final class ITSEC_File_Change_Scanner {
 	 */
 	public function get_email_report( $email_details ) {
 
-		global $itsec_globals;
-
 		//seperate array by category
 		$added   = $email_details[3]['added'];
 		$removed = $email_details[3]['removed'];
 		$changed = $email_details[3]['changed'];
-		$report  = '<strong>' . __( 'Scan Time:', 'better-wp-security' ) . '</strong> ' . date( 'l, F jS g:i a e', $itsec_globals['current_time'] ) . "<br />" . PHP_EOL;
+		$report  = '<strong>' . __( 'Scan Time:', 'better-wp-security' ) . '</strong> ' . date( 'l, F jS g:i a e', ITSEC_Core::get_current_time() ) . "<br />" . PHP_EOL;
 		$report .= '<strong>' . __( 'Files Added:', 'better-wp-security' ) . '</strong> ' . $email_details[0] . "<br />" . PHP_EOL;
 		$report .= '<strong>' . __( 'Files Deleted:', 'better-wp-security' ) . '</strong> ' . $email_details[1] . "<br />" . PHP_EOL;
 		$report .= '<strong>' . __( 'Files Modified:', 'better-wp-security' ) . '</strong> ' . $email_details[2] . "<br />" . PHP_EOL;
@@ -583,14 +577,12 @@ final class ITSEC_File_Change_Scanner {
 	 */
 	private function send_notification_email( $email_details ) {
 
-		global $itsec_globals;
-
 		$itsec_notify = ITSEC_Core::get_itsec_notify();
 
 		if ( ! ITSEC_Modules::get_setting( 'global', 'digest_email' ) ) {
 
 			$headers = 'From: ' . get_bloginfo( 'name' ) . ' <' . get_option( 'admin_email' ) . '>' . "\r\n";
-			$subject = '[' . get_option( 'siteurl' ) . '] ' . __( 'WordPress File Change Warning', 'better-wp-security' ) . ' ' . date( 'l, F jS, Y \a\\t g:i a e', $itsec_globals['current_time'] );
+			$subject = '[' . get_option( 'siteurl' ) . '] ' . __( 'WordPress File Change Warning', 'better-wp-security' ) . ' ' . date( 'l, F jS, Y \a\\t g:i a e', ITSEC_Core::get_current_time() );
 
 			$body = '<p>' . __( 'A file (or files) on your site at ', 'better-wp-security' ) . ' ' . get_option( 'siteurl' ) . __( ' have been changed. Please review the report below to verify changes are not the result of a compromise.', 'better-wp-security' ) . '</p>';
 			$body .= $this->get_email_report( $email_details ); //get report

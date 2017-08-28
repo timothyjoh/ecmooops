@@ -32,8 +32,6 @@ class ITSEC_Backup {
 	 */
 	function run() {
 
-		global $itsec_globals;
-
 		$this->settings = ITSEC_Modules::get_settings( 'backup' );
 
 		add_action( 'itsec_execute_backup_cron', array( $this, 'do_backup' ) );
@@ -48,6 +46,11 @@ class ITSEC_Backup {
 			return;
 		}
 
+		if ( ! $this->settings['enabled'] || $this->settings['interval'] <= 0 ) {
+			// Don't run when scheduled backups aren't enabled or the interval is zero or less.
+			return;
+		}
+
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			// Don't run on AJAX requests.
 			return;
@@ -58,15 +61,10 @@ class ITSEC_Backup {
 			return;
 		}
 
-		if ( $this->settings['interval'] <= 0 ) {
-			// Don't run when the interval is zero or less.
-			return;
-		}
-
 
 		$next_run = $this->settings['last_run'] + $this->settings['interval'] * DAY_IN_SECONDS;
 
-		if ( $next_run <= $itsec_globals['current_time_gmt'] ) {
+		if ( $next_run <= ITSEC_Core::get_current_time_gmt() ) {
 			add_action( 'init', array( $this, 'do_backup' ), 10, 0 );
 		}
 	}
@@ -83,28 +81,25 @@ class ITSEC_Backup {
 	 * @return mixed false on error or nothing
 	 */
 	public function do_backup( $one_time = false ) {
-		ITSEC_Lib::set_minimum_memory_limit( '256M' );
 
-		$itsec_files = ITSEC_Core::get_itsec_files();
-
-		if ( $itsec_files->get_file_lock( 'backup' ) ) {
-
-			$this->execute_backup( $one_time );
-
-			$itsec_files->release_file_lock( 'backup' );
-
-			switch ( $this->settings['method'] ) {
-
-				case 0:
-					return __( 'Backup complete. The backup was sent to the selected email recipients and was saved locally.', 'better-wp-security' );
-				case 1:
-					return __( 'Backup complete. The backup was sent to the selected email recipients.', 'better-wp-security' );
-				default:
-					return __( 'Backup complete. The backup was saved locally.', 'better-wp-security' );
-
-			}
-		} else {
+		if ( ! ITSEC_Lib::get_lock( 'backup', 180 ) ) {
 			return new WP_Error( 'itsec-backup-do-backup-already-running', __( 'Unable to create a backup at this time since a backup is currently being created. If you wish to create an additional backup, please wait a few minutes before trying again.', 'better-wp-security' ) );
+		}
+
+
+		ITSEC_Lib::set_minimum_memory_limit( '256M' );
+		$this->execute_backup( $one_time );
+		ITSEC_Lib::release_lock( 'backup' );
+
+		switch ( $this->settings['method'] ) {
+
+			case 0:
+				return __( 'Backup complete. The backup was sent to the selected email recipients and was saved locally.', 'better-wp-security' );
+			case 1:
+				return __( 'Backup complete. The backup was sent to the selected email recipients.', 'better-wp-security' );
+			default:
+				return __( 'Backup complete. The backup was saved locally.', 'better-wp-security' );
+
 		}
 	}
 
@@ -120,229 +115,193 @@ class ITSEC_Backup {
 	 * @return void
 	 */
 	private function execute_backup( $one_time = false ) {
+		global $wpdb, $itsec_logger;
 
-		global $wpdb, $itsec_globals, $itsec_logger;
 
-		//get all of the tables
-		if ( isset( $this->settings['all_sites'] ) && true === $this->settings['all_sites'] ) {
-
-			$tables = $wpdb->get_results( 'SHOW TABLES', ARRAY_N ); //retrieve a list of all tables in the DB
-
-		} else {
-
-			$tables = $wpdb->get_results( 'SHOW TABLES LIKE "' . $wpdb->base_prefix . '%"', ARRAY_N ); //retrieve a list of all tables for this WordPress installation
-
-		}
-
-		$return = '';
-
-		//cycle through each table
-		foreach ( $tables as $table ) {
-
-			$num_fields = sizeof( $wpdb->get_results( 'DESCRIBE `' . $table[0] . '`;' ) );
-
-			$return .= 'DROP TABLE IF EXISTS `' . $table[0] . '`;';
-
-			$row2 = $wpdb->get_row( 'SHOW CREATE TABLE `' . $table[0] . '`;', ARRAY_N );
-
-			$return .= PHP_EOL . PHP_EOL . $row2[1] . ";" . PHP_EOL . PHP_EOL;
-
-			if ( ! in_array( substr( $table[0], strlen( $wpdb->prefix ) ), $this->settings['exclude'] ) ) {
-
-				$result = $wpdb->get_results( 'SELECT * FROM `' . $table[0] . '`;', ARRAY_N );
-
-				foreach ( $result as $row ) {
-
-					$return .= 'INSERT INTO `' . $table[0] . '` VALUES(';
-
-					for ( $j = 0; $j < $num_fields; $j ++ ) {
-
-						$row[$j] = addslashes( $row[$j] );
-						$row[$j] = preg_replace( '#' . PHP_EOL . '#', "\n", $row[$j] );
-
-						if ( isset( $row[$j] ) ) {
-
-							$return .= '"' . $row[$j] . '"';
-
-						} else {
-
-							$return .= '""';
-
-						}
-
-						if ( $j < ( $num_fields - 1 ) ) {
-							$return .= ',';
-						}
-
-					}
-
-					$return .= ");" . PHP_EOL;
-
-				}
-
-			}
-
-			$return .= PHP_EOL . PHP_EOL;
-
-		}
-
-		$return .= PHP_EOL . PHP_EOL;
-
-		//save file
-		$file = 'backup-' . substr( sanitize_title( get_bloginfo( 'name' ) ), 0, 20 ) . '-' . current_time( 'Ymd-His' ) . '-' . wp_generate_password( 30, false );
 
 		require_once( ITSEC_Core::get_core_dir() . 'lib/class-itsec-lib-directory.php' );
 
 		$dir = $this->settings['location'];
-		ITSEC_Lib_Directory::create( $dir );
+		$result = ITSEC_Lib_Directory::create( $dir );
 
-
-		$fileext = '.sql';
-
-		$handle = @fopen( $dir . '/' . $file . '.sql', 'w+' );
-
-		@fwrite( $handle, $return );
-		@fclose( $handle );
-
-		//zip the file
-		if ( true === $this->settings['zip'] ) {
-
-			if ( ! class_exists( 'PclZip' ) ) {
-				require( ABSPATH . 'wp-admin/includes/class-pclzip.php' );
-			}
-
-			$zip = new PclZip( $dir . '/' . $file . '.zip' );
-
-			if ( 0 != $zip->create( $dir . '/' . $file . '.sql', PCLZIP_OPT_REMOVE_PATH, $dir ) ) {
-
-				//delete .sql and keep zip
-				@unlink( $dir . '/' . $file . '.sql' );
-
-				$fileext = '.zip';
-
-			}
-
+		if ( is_wp_error( $result ) ) {
+			return $result;
+		} else if ( ! $result ) {
+			return new WP_Error( 'itsec-backup-failed-to-create-backup-dir', esc_html__( 'Unable to create the backup directory due to an unknown error.', 'better-wp-security' ) );
 		}
 
-		if ( 2 !== $this->settings['method'] || true === $one_time ) {
-			require_once( ITSEC_Core::get_core_dir() . 'lib/class-itsec-mail.php' );
-			$mail = new ITSEC_Mail();
-			$mail->add_header( esc_html__( 'Database Backup', 'better-wp-security' ), sprintf( wp_kses( __( 'Site Database Backup for <b>%s</b>', 'better-wp-security' ), array( 'b' => array() ) ), date_i18n( get_option( 'date_format' ) ) ) );
-			$mail->add_info_box( esc_html__( 'Attached is the database backup file for your site.', 'better-wp-security' ), 'attachment' );
+		$file = "$dir/backup-" . substr( sanitize_title( get_bloginfo( 'name' ) ), 0, 20 ) . '-' . current_time( 'Ymd-His' ) . '-' . wp_generate_password( 30, false ) . '.sql';
 
-
-			$mail->add_section_heading( esc_html__( 'Website', 'better-wp-security' ) );
-			$mail->add_text( esc_html( network_home_url() ) );
-
-			$mail->add_section_heading( esc_html__( 'Date', 'better-wp-security' ) );
-			$mail->add_text( esc_html( date_i18n( get_option( 'date_format' ) ) ) );
-
-			$mail->add_footer();
-
-
-			$recipients = ITSEC_Modules::get_setting( 'global', 'backup_email' );
-			$mail->set_recipients( $recipients );
-
-			$subject = sprintf( esc_html__( '[%s] Database Backup', 'better-wp-security' ), esc_url( network_home_url() ) );
-			$subject = apply_filters( 'itsec_backup_email_subject', $subject );
-			$mail->set_subject( $subject, false );
-
-			$mail->add_attachment( "$dir/$file$fileext" );
-
-			$mail_success = $mail->send();
+		if ( false === ( $fh = @fopen( $file, 'w' ) ) ) {
+			return new WP_Error( 'itsec-backup-failed-to-write-backup-file', esc_html__( 'Unable to write the backup file. This may be due to a permissions or disk space issue.', 'better-wp-security' ) );
 		}
 
-		if ( 1 === $this->settings['method'] ) {
-
-			@unlink( $dir . '/' . $file . $fileext );
-
-		} else {
-
-			$retain = isset( $this->settings['retain'] ) ? absint( $this->settings['retain'] ) : 0;
-
-			//delete extra files
-			if ( 0 < $retain ) {
-
-				$files = scandir( $dir, 1 );
-
-				$count = 0;
-
-				if ( is_array( $files ) && 0 < count( $files ) ) {
-
-					foreach ( $files as $file ) {
-
-						if ( strstr( $file, 'backup' ) ) {
-
-							if ( $count >= $retain ) {
-								@unlink( trailingslashit( $dir ) . $file );
-							}
-
-							$count ++;
-						}
-
-					}
-
-				}
-
-			}
-
-		}
 
 		if ( false === $one_time ) {
 			ITSEC_Modules::set_setting( 'backup', 'last_run', ITSEC_Core::get_current_time_gmt() );
 		}
 
-		switch ( $this->settings['method'] ) {
 
-			case 0:
+		if ( $this->settings['all_sites'] ) {
+			$tables = $wpdb->get_col( 'SHOW TABLES' );
+		} else {
+			$tables = $wpdb->get_col( 'SHOW TABLES LIKE "' . $wpdb->base_prefix . '%"' );
+		}
 
-				if ( false === $mail_success ) {
+		$max_rows_per_query = 1000;
 
-					$status = array(
-						'status'  => __( 'Error', 'better-wp-security' ),
-						'details' => __( 'saved locally but email to backup recipients could not be sent.', 'better-wp-security' ),
-					);
+		foreach ( $tables as $table ) {
+			$create_table = $wpdb->get_var( "SHOW CREATE TABLE `$table`;", 1 ) . ';' . PHP_EOL . PHP_EOL;
+			$create_table = preg_replace( '/^CREATE TABLE /', 'CREATE TABLE IF NOT EXISTS ', $create_table );
+			@fwrite( $fh, $create_table );
 
-				} else {
+			if ( in_array( substr( $table, strlen( $wpdb->prefix ) ), $this->settings['exclude'] ) ) {
+				// User selected to exclude the data from this table.
+				fwrite( $fh, PHP_EOL . PHP_EOL );
+				continue;
+			}
 
-					$status = array(
-						'status'  => __( 'Success', 'better-wp-security' ),
-						'details' => __( 'emailed to backup recipients and saved locally', 'better-wp-security' ),
-					);
 
+			$num_fields = count( $wpdb->get_results( "DESCRIBE `$table`;" ) );
+
+			$offset = 0;
+			$has_more_rows = true;
+
+			while ( $has_more_rows ) {
+				$rows = $wpdb->get_results( "SELECT * FROM `$table` LIMIT $offset, $max_rows_per_query;", ARRAY_N );
+
+				foreach ( $rows as $row ) {
+					$sql = "INSERT INTO `$table` VALUES (";
+
+					for ( $j = 0; $j < $num_fields; $j ++ ) {
+						if ( isset( $row[$j] ) ) {
+							$row[$j] = addslashes( $row[$j] );
+
+							if ( PHP_EOL !== "\n" ) {
+								$row[$j] = preg_replace( '#' . PHP_EOL . '#', "\n", $row[$j] );
+							}
+
+							$sql .= '"' . $row[$j] . '"';
+						} else {
+							$sql .= '""';
+						}
+
+						if ( $j < ( $num_fields - 1 ) ) {
+							$sql .= ',';
+						}
+					}
+
+					$sql .= ");" . PHP_EOL;
+
+					@fwrite( $fh, $sql );
 				}
 
-				break;
-			case 1:
-
-				if ( false === $mail_success ) {
-
-					$status = array(
-						'status'  => __( 'Error', 'better-wp-security' ),
-						'details' => __( 'email to backup recipients could not be sent.', 'better-wp-security' ),
-					);
-
+				if ( count( $rows ) < $max_rows_per_query ) {
+					$has_more_rows = false;
 				} else {
-
-					$status = array(
-						'status'  => __( 'Success', 'better-wp-security' ),
-						'details' => __( 'emailed to backup recipients', 'better-wp-security' ),
-					);
-
+					$offset += $max_rows_per_query;
 				}
 
-				break;
-			default:
-				$status = array(
-					'status'  => __( 'Success', 'better-wp-security' ),
-					'details' => __( 'saved locally', 'better-wp-security' ),
-				);
-				break;
+			}
+
+			@fwrite( $fh, PHP_EOL . PHP_EOL );
 
 		}
 
-		$itsec_logger->log_event( 'backup', 3, array( $status ) );
+		@fwrite( $fh, PHP_EOL . PHP_EOL );
+		@fclose( $fh );
 
+		if ( $this->settings['zip'] ) {
+			if ( ! class_exists( 'PclZip' ) ) {
+				require( ABSPATH . 'wp-admin/includes/class-pclzip.php' );
+			}
+
+			$zip_file = substr( $file, 0, -4 ) . '.zip';
+			$pclzip = new PclZip( $zip_file );
+
+			if ( 0 != $pclzip->create( $file, PCLZIP_OPT_REMOVE_PATH, $dir ) ) {
+				@unlink( $file );
+				$file = $zip_file;
+			}
+		}
+
+		if ( 2 !== $this->settings['method'] || true === $one_time ) {
+			$mail_success = $this->send_mail( $file );
+		}
+
+		if ( 1 === $this->settings['method'] ) {
+			@unlink( $file );
+		} else if ( $this->settings['retain'] > 0 ) {
+			$files = scandir( $dir, 1 );
+
+			if ( is_array( $files ) && count( $files ) > 0 ) {
+				$count = 0;
+
+				foreach ( $files as $file ) {
+					if ( ! strstr( $file, 'backup' ) ) {
+						continue;
+					}
+
+					if ( $count >= $this->settings['retain'] ) {
+						@unlink( trailingslashit( $dir ) . $file );
+					}
+
+					$count++;
+				}
+			}
+		}
+
+
+		$status  = __( 'Success', 'better-wp-security' );
+		$details = __( 'saved locally', 'better-wp-security' );
+
+		if ( 0 === $this->settings['method'] ) {
+			if ( false === $mail_success ) {
+				$status  = __( 'Error', 'better-wp-security' );
+				$details = __( 'saved locally but email to backup recipients could not be sent.', 'better-wp-security' );
+			} else {
+				$details = __( 'emailed to backup recipients and saved locally', 'better-wp-security' );
+			}
+		} else if ( 1 === $this->settings['method'] ) {
+			if ( false === $mail_success ) {
+				$status  = __( 'Error', 'better-wp-security' );
+				$details = __( 'email to backup recipients could not be sent.', 'better-wp-security' );
+			} else {
+				$details = __( 'emailed to backup recipients', 'better-wp-security' );
+			}
+		}
+
+		$data = compact( 'status', 'details' );
+		$itsec_logger->log_event( 'backup', 3, array( $data ) );
+	}
+
+	private function send_mail( $file ) {
+		require_once( ITSEC_Core::get_core_dir() . 'lib/class-itsec-mail.php' );
+
+		$mail = new ITSEC_Mail();
+		$mail->add_header( esc_html__( 'Database Backup', 'better-wp-security' ), sprintf( wp_kses( __( 'Site Database Backup for <b>%s</b>', 'better-wp-security' ), array( 'b' => array() ) ), date_i18n( get_option( 'date_format' ) ) ) );
+		$mail->add_info_box( esc_html__( 'Attached is the database backup file for your site.', 'better-wp-security' ), 'attachment' );
+
+
+		$mail->add_section_heading( esc_html__( 'Website', 'better-wp-security' ) );
+		$mail->add_text( esc_html( network_home_url() ) );
+
+		$mail->add_section_heading( esc_html__( 'Date', 'better-wp-security' ) );
+		$mail->add_text( esc_html( date_i18n( get_option( 'date_format' ) ) ) );
+
+		$mail->add_footer();
+
+
+		$recipients = ITSEC_Modules::get_setting( 'global', 'backup_email' );
+		$mail->set_recipients( $recipients );
+
+		$subject = sprintf( esc_html__( '[%s] Database Backup', 'better-wp-security' ), esc_url( network_home_url() ) );
+		$subject = apply_filters( 'itsec_backup_email_subject', $subject );
+		$mail->set_subject( $subject, false );
+
+		$mail->add_attachment( $file );
+
+		return $mail->send();
 	}
 
 	/**

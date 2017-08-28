@@ -6,7 +6,7 @@ final class ITSEC_System_Tweaks_Config_Generators {
 	}
 
 	public static function filter_apache_server_config_modification( $modification, $server = 'apache' ) {
-		require_once( $GLOBALS['itsec_globals']['plugin_dir'] . 'core/lib/class-itsec-lib-utility.php' );
+		require_once( ITSEC_Core::get_core_dir() . '/lib/class-itsec-lib-utility.php' );
 
 		$input = ITSEC_Modules::get_settings( 'system-tweaks' );
 		$wp_includes = WPINC;
@@ -157,7 +157,7 @@ final class ITSEC_System_Tweaks_Config_Generators {
 	}
 
 	public static function filter_nginx_server_config_modification( $modification ) {
-		require_once( $GLOBALS['itsec_globals']['plugin_dir'] . 'core/lib/class-itsec-lib-utility.php' );
+		require_once( ITSEC_Core::get_core_dir() . '/lib/class-itsec-lib-utility.php' );
 
 		$input = ITSEC_Modules::get_settings( 'system-tweaks' );
 		$wp_includes = WPINC;

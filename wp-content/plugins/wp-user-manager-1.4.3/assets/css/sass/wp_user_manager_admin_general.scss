@@ -1,0 +1,77 @@
+/**
+ * WP User Manager
+ * http://wp-user-manager.com
+ *
+ * Copyright (c) 2015 Alessandro Tesoro
+ * Licensed under the GPLv2+ license.
+ */
+@font-face {
+  font-family: 'wpusermanager';
+  src: url("../../includes/admin/tinymce/css/fonts/wpusermanager.eot?yn0seh");
+  src: url("../../includes/admin/tinymce/css/fonts/wpusermanager.eot?#iefixyn0seh") format('embedded-opentype'), url("../../includes/admin/tinymce/css/fonts/wpusermanager.woff?yn0seh") format('woff'), url("../../includes/admin/tinymce/css/fonts/wpusermanager.ttf?yn0seh") format('truetype'), url("../../includes/admin/tinymce/css/fonts/wpusermanager.svg?yn0seh#wpusermanager") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'wpusermanager';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-wpusermanager:before {
+  content: "\e600";
+}
+i.wpum-shortcodes-icon:before {
+  font-family: 'wpusermanager';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  content: '\e600';
+}
+body .mce-window .mce-container-body.mce-abs-layout {
+  overflow-y: hidden;
+}
+
+td.page-title span.post-state i.wpum-shortcodes-icon:before {
+	font-size: 14px;
+	font-weight: normal;
+	color: #ADADAD;
+	font-style: normal;
+}
+
+#widgets-right .widgets-holder-wrap .description {
+	padding-left: 0;
+}
+
+@import 'addons';
+@import 'dashboard_widget';
+
+#wpum-tools-page {
+
+  .hndle {
+    &:hover {
+      cursor: auto;
+    }
+  }
+
+  .inside {
+    padding-bottom: 0px;
+  }
+
+}
+
+.wpum-field-editor-side-metaboxes {
+  h2.hndle {
+    cursor: auto !important;
+  }
+}
+
+@import 'menu_editor';

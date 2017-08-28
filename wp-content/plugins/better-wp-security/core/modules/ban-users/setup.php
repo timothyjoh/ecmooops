@@ -96,14 +96,7 @@ if ( ! class_exists( 'ITSEC_Ban_Users_Setup' ) ) {
 					}
 
 					update_site_option( 'itsec_ban_users', $current_options );
-					ITSEC_Response::regenerate_server_config();
 				}
-			}
-
-			if ( $itsec_old_version < 4027 ) {
-
-				ITSEC_Response::regenerate_server_config();
-
 			}
 
 			if ( $itsec_old_version < 4041 ) {
@@ -141,6 +134,9 @@ if ( ! class_exists( 'ITSEC_Ban_Users_Setup' ) ) {
 				}
 			}
 
+			if ( $itsec_old_version < 4069 ) {
+				delete_site_option( 'itsec_ban_users' );
+			}
 		}
 
 	}

@@ -1,0 +1,647 @@
+/**
+ * WP User Manager
+ * http://wp-user-manager.com
+ *
+ * Copyright (c) 2015 Alessandro Tesoro
+ * Licensed under the GPLv2+ license.
+ */
+.wpum_one_half, .wpum_one_third, .wpum_two_third, .wpum_two_fourth, .wpum_three_fourth, .wpum_one_fourth, .wpum_one_fifth, .wpum_two_fifth, .wpum_three_fifth, .wpum_four_fifth, .wpum_one_sixth, .wpum_five_sixth {
+  position: relative;
+  margin-right: 4%;
+  float: left; }
+
+.wpum_one_half {
+  width: 48%; }
+
+.wpum_one_third {
+  width: 30.6666%; }
+
+.wpum_two_third {
+  width: 65.3332%; }
+
+.wpum_one_fourth {
+  width: 22%; }
+
+.wpum_two_fourth {
+  width: 48%; }
+
+.wpum_three_fourth {
+  width: 74%; }
+
+.wpum_one_fifth {
+  width: 16.8%; }
+
+.wpum_two_fifth {
+  width: 37.6%; }
+
+.wpum_three_fifth {
+  width: 58.4%; }
+
+.wpum_four_fifth {
+  width: 79.2%; }
+
+.wpum_one_sixth {
+  width: 13.3333%; }
+
+.wpum_two_sixth {
+  width: 30.6666%; }
+
+.wpum_three_sixth {
+  width: 47.9998%; }
+
+.wpum_four_sixth {
+  width: 65.3332%; }
+
+.wpum_five_sixth {
+  width: 82.6665%; }
+
+.last {
+  margin-right: 0 !important;
+  clear: right; }
+
+/* Two level columns
+---------------------------------------------------------- */
+.wpum_one_half .wpum_one_half {
+  margin-right: 8.3333%;
+  width: 45.8333%; }
+
+.wpum_one_half .wpum_one_third {
+  margin-right: 8.3333%;
+  width: 27.7778%; }
+
+.wpum_one_half .wpum_two_third {
+  margin-right: 8.3333%;
+  width: 63.8889%; }
+
+.wpum_two_third .wpum_one_third {
+  margin-right: 6.1224%;
+  width: 29.2517%; }
+
+.wpum_two_third .wpum_two_third {
+  margin-right: 6.1224%;
+  width: 64.6258%; }
+
+.wpum_two_third .wpum_one_fourth {
+  margin-right: 6.1224%;
+  width: 20.4082%; }
+
+.wpum-registration-form .fieldset-comments, .wpum-registration-form .wpum-honeypot-field {
+  display: none !important; }
+
+.wpum-clearfix {
+  zoom: 1; }
+  .wpum-clearfix:before, .wpum-clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden; }
+  .wpum-clearfix:after {
+    clear: both; }
+
+.wpum-user-details img {
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid #eee;
+  background: #fff;
+  box-shadow: none;
+  max-width: 100%;
+  height: auto; }
+
+.wpum-single-profile .wpum-user-details {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 20px 25px; }
+.wpum-single-profile .wpum-user-links {
+  margin: 15px 0px 10px 0px;
+  padding: 0px; }
+  .wpum-single-profile .wpum-user-links li {
+    list-style: none;
+    margin: 0px 10px 10px 0px; }
+    .wpum-single-profile .wpum-user-links li a {
+      border: solid 1px #cecccc;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      padding: 5px 10px 5px;
+      background: #fbfbfb;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
+      -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.17); }
+      .wpum-single-profile .wpum-user-links li a:hover {
+        background: white; }
+.wpum-single-profile .wpum-user-display-name a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bold; }
+.wpum-single-profile .wpum-user-description p:last-child {
+  margin-bottom: 0px; }
+.wpum-single-profile .wpum-profile-tabs-content {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 20px; }
+
+.wpum-align-right {
+  text-align: right; }
+
+.wpum-align-center {
+  text-align: center; }
+
+/* Profile Tabs */
+.wpum-profile-tabs-holder, .wpum-account-tabs {
+  background: #ddd;
+  border: 1px solid #ccc;
+  border-top: 0px; }
+  .wpum-profile-tabs-holder ul, .wpum-account-tabs ul {
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+    .wpum-profile-tabs-holder ul li, .wpum-account-tabs ul li {
+      display: inline-block;
+      margin: 0px; }
+      .wpum-profile-tabs-holder ul li.active a, .wpum-account-tabs ul li.active a {
+        background-color: #fff;
+        text-decoration: none;
+        margin-bottom: -1px;
+        border-bottom: 1px solid #fff; }
+        .wpum-profile-tabs-holder ul li.active a:hover, .wpum-account-tabs ul li.active a:hover {
+          background-color: #fff; }
+      .wpum-profile-tabs-holder ul li a, .wpum-account-tabs ul li a {
+        display: block;
+        padding: 5px 12px 5px;
+        line-height: 32px;
+        height: 32px;
+        outline: none; }
+        .wpum-profile-tabs-holder ul li a:hover, .wpum-account-tabs ul li a:hover {
+          background: #eaeaea;
+          text-decoration: none; }
+
+.wpum-single-profile ul.wpum-profile-tabs {
+  margin-bottom: 0px; }
+
+/* Profile details */
+.wpum-single-profile .wpum-user-details-list dl {
+  margin-left: 0px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .wpum-single-profile .wpum-user-details-list dl + h3.group-title {
+    margin-top: 30px; }
+.wpum-single-profile .wpum-user-details-list dl dt {
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 5px 5px 0px;
+  width: 110px;
+  border-right: 2px solid #f6f6f6;
+  overflow: hidden;
+  clear: left;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+.wpum-single-profile .wpum-user-details-list dl dd {
+  margin: 2px 0;
+  padding: 5px 0; }
+  .wpum-single-profile .wpum-user-details-list dl dd span.wpum-uploaded-file-name {
+    display: block; }
+.wpum-single-profile .wpum-user-details-list .group-title {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+/* profile posts */
+.wpum-single-profile .wpum-post-meta {
+  margin: 0px;
+  padding: 0px; }
+  .wpum-single-profile .wpum-post-meta li {
+    list-style: none;
+    margin: 0px;
+    display: inline-block; }
+
+.wpum-single-profile {
+  /* Profile comments tab */ }
+  .wpum-single-profile .wpum-post {
+    border-bottom: 2px solid #f6f6f6;
+    padding: 15px 0px; }
+    .wpum-single-profile .wpum-post:first-child {
+      padding-top: 0px; }
+  .wpum-single-profile .wpum-single-comment p {
+    border-bottom: 2px solid #f6f6f6;
+    margin: 0px;
+    padding: 15px 0px; }
+  .wpum-single-profile .wpum-single-comment:first-child p {
+    padding-top: 0px; }
+
+.wpum-recent-users ul.wpum-users-list {
+  list-style: none; }
+  .wpum-recent-users ul.wpum-users-list li {
+    margin: 0px;
+    padding: 0px; }
+
+/* Profile Card */
+.wpum-profile-card {
+  text-align: center;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 70px 15px 30px 15px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+  .wpum-profile-card .wpum-profile-img {
+    position: absolute;
+    left: 50%;
+    border-radius: 999px;
+    margin-left: -48px;
+    top: -48px; }
+    .wpum-profile-card .wpum-profile-img img {
+      border-radius: 999px;
+      box-shadow: none;
+      padding: 5px;
+      background-color: #fff;
+      border: 1px solid #eee; }
+  .wpum-profile-card a.wpum-card-button {
+    border: 1px solid #cecccc;
+    background: #eee;
+    padding: 3px 12px 2px;
+    margin-bottom: -1px;
+    line-height: 32px;
+    height: 32px;
+    text-decoration: none;
+    outline: none;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.17); }
+    .wpum-profile-card a.wpum-card-button:hover {
+      background: #fbfbfb; }
+  .wpum-profile-card h4.wpum-card-name {
+    margin-top: 0px; }
+
+.wpum-profile-card ~ .wpum-profile-card {
+  margin-top: 70px; }
+
+/* User Directory */
+div.wpum-user-directory {
+  margin-bottom: 1em; }
+  div.wpum-user-directory ul.wpum-user-listings {
+    margin: 0; }
+
+ul.wpum-user-listings {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #eee; }
+  ul.wpum-user-listings li.wpum-single-user {
+    list-style: none outside;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 1em 1em 1em 2em;
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    line-height: 1.5em;
+    text-decoration: none; }
+    ul.wpum-user-listings li.wpum-single-user:hover, ul.wpum-user-listings li.wpum-single-user:focus {
+      background-color: #fcfcfc; }
+    ul.wpum-user-listings li.wpum-single-user img.avatar {
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      left: 1em;
+      float: left;
+      margin-right: 1em;
+      vertical-align: middle;
+      box-shadow: none; }
+    ul.wpum-user-listings li.wpum-single-user div.user, ul.wpum-user-listings li.wpum-single-user div.contact-meta, ul.wpum-user-listings li.wpum-single-user ul.meta {
+      -webkit-box-sizing: border-box;
+      /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;
+      /* Firefox, other Gecko */
+      box-sizing: border-box;
+      /* Opera/IE 8+ */ }
+    ul.wpum-user-listings li.wpum-single-user div.user {
+      float: left;
+      width: 55%;
+      padding: 0 0 0 42px;
+      line-height: 1.5em; }
+      ul.wpum-user-listings li.wpum-single-user div.user h3 {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-size: inherit; }
+      ul.wpum-user-listings li.wpum-single-user div.user .description {
+        color: #999; }
+    ul.wpum-user-listings li.wpum-single-user div.contact-meta {
+      float: left;
+      text-align: left;
+      width: 25%;
+      padding: 0 0 0 1em;
+      color: #999;
+      line-height: 1.5em; }
+    ul.wpum-user-listings li.wpum-single-user .meta {
+      float: right;
+      text-align: right;
+      width: 20%;
+      padding: 0 0 0 1em;
+      margin: 0;
+      line-height: 1.5em;
+      color: #999;
+      list-style: none outside; }
+      ul.wpum-user-listings li.wpum-single-user .meta li {
+        list-style: none outside;
+        display: block;
+        margin: 0; }
+
+/* Directory Elements */
+.wpum-directory-top-bar,
+.wpum-directory-search-form {
+  padding: .5em 1em;
+  background: #f9f9f9;
+  border-top: 1px solid #e5e5e5; }
+  .wpum-directory-top-bar div p,
+  .wpum-directory-search-form div p {
+    margin: 0px; }
+
+.wpum-directory-search-form {
+  padding: 1em; }
+  .wpum-directory-search-form input {
+    width: 100%;
+    display: block; }
+  .wpum-directory-search-form .form-fields,
+  .wpum-directory-search-form .form-submit {
+    position: relative;
+    margin-right: 4%;
+    float: left; }
+  .wpum-directory-search-form .form-fields {
+    width: 74%; }
+  .wpum-directory-search-form .form-submit {
+    width: 22%;
+    margin-right: 0;
+    clear: right; }
+
+.wpum-directory-pagination {
+  padding: .5em 1em;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center; }
+  .wpum-directory-pagination a.next {
+    float: right; }
+  .wpum-directory-pagination a.prev {
+    float: left; }
+
+/* Form elements */
+.wpum-profile-form fieldset,
+.wpum-registration-form fieldset,
+.wpum-password-form fieldset,
+.wpum-update-password-form fieldset {
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
+  line-height: 2em;
+  border: 0;
+  border-bottom: 1px solid #eee; }
+  .wpum-profile-form fieldset label,
+  .wpum-registration-form fieldset label,
+  .wpum-password-form fieldset label,
+  .wpum-update-password-form fieldset label {
+    display: block;
+    margin: 0;
+    width: 29%;
+    float: left;
+    vertical-align: middle; }
+    .wpum-profile-form fieldset label small,
+    .wpum-registration-form fieldset label small,
+    .wpum-password-form fieldset label small,
+    .wpum-update-password-form fieldset label small {
+      opacity: .75;
+      font-size: 0.83em; }
+  .wpum-profile-form fieldset div.field,
+  .wpum-registration-form fieldset div.field,
+  .wpum-password-form fieldset div.field,
+  .wpum-update-password-form fieldset div.field {
+    width: 70%;
+    float: right;
+    vertical-align: middle; }
+    .wpum-profile-form fieldset div.field label,
+    .wpum-registration-form fieldset div.field label,
+    .wpum-password-form fieldset div.field label,
+    .wpum-update-password-form fieldset div.field label {
+      float: none;
+      width: auto; }
+    .wpum-profile-form fieldset div.field.field-mailchimp label ~ small,
+    .wpum-registration-form fieldset div.field.field-mailchimp label ~ small,
+    .wpum-password-form fieldset div.field.field-mailchimp label ~ small,
+    .wpum-update-password-form fieldset div.field.field-mailchimp label ~ small {
+      margin-top: 0;
+      margin-bottom: 1.2em; }
+  .wpum-profile-form fieldset input.input-text, .wpum-profile-form fieldset input.input-email, .wpum-profile-form fieldset textarea, .wpum-profile-form fieldset select,
+  .wpum-registration-form fieldset input.input-text,
+  .wpum-registration-form fieldset input.input-email,
+  .wpum-registration-form fieldset textarea,
+  .wpum-registration-form fieldset select,
+  .wpum-password-form fieldset input.input-text,
+  .wpum-password-form fieldset input.input-email,
+  .wpum-password-form fieldset textarea,
+  .wpum-password-form fieldset select,
+  .wpum-update-password-form fieldset input.input-text,
+  .wpum-update-password-form fieldset input.input-email,
+  .wpum-update-password-form fieldset textarea,
+  .wpum-update-password-form fieldset select {
+    margin: 0;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */ }
+  .wpum-profile-form fieldset small.description,
+  .wpum-registration-form fieldset small.description,
+  .wpum-password-form fieldset small.description,
+  .wpum-update-password-form fieldset small.description {
+    opacity: .75;
+    font-size: 0.83em;
+    margin: 1.2em 0 0 0;
+    display: block;
+    line-height: 1.2em; }
+  .wpum-profile-form fieldset input[type=checkbox] ~ .description,
+  .wpum-registration-form fieldset input[type=checkbox] ~ .description,
+  .wpum-password-form fieldset input[type=checkbox] ~ .description,
+  .wpum-update-password-form fieldset input[type=checkbox] ~ .description {
+    display: inline; }
+  .wpum-profile-form fieldset.fieldset-user_avatar .wpum-uploaded-file-preview img,
+  .wpum-registration-form fieldset.fieldset-user_avatar .wpum-uploaded-file-preview img,
+  .wpum-password-form fieldset.fieldset-user_avatar .wpum-uploaded-file-preview img,
+  .wpum-update-password-form fieldset.fieldset-user_avatar .wpum-uploaded-file-preview img {
+    width: 70px;
+    height: 70px; }
+
+.wpum-login-form form p.login-username,
+.wpum-login-form form p.login-password,
+.wpum-login-form form p.login-remember {
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
+  line-height: 2em;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  zoom: 1; }
+  .wpum-login-form form p.login-username:before, .wpum-login-form form p.login-username:after,
+  .wpum-login-form form p.login-password:before,
+  .wpum-login-form form p.login-password:after,
+  .wpum-login-form form p.login-remember:before,
+  .wpum-login-form form p.login-remember:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden; }
+  .wpum-login-form form p.login-username:after,
+  .wpum-login-form form p.login-password:after,
+  .wpum-login-form form p.login-remember:after {
+    clear: both; }
+.wpum-login-form form label {
+  display: block;
+  margin: 0;
+  width: 29%;
+  float: left;
+  vertical-align: middle; }
+  .wpum-login-form form label small {
+    opacity: .75;
+    font-size: 0.83em; }
+.wpum-login-form form div.field {
+  width: 70%;
+  float: right;
+  vertical-align: middle; }
+.wpum-login-form form input[type=text], .wpum-login-form form input[type=email], .wpum-login-form form input[type=password], .wpum-login-form form textarea, .wpum-login-form form select {
+  margin: 0;
+  width: 70%;
+  float: right;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+.wpum-login-form form small.description {
+  opacity: .75;
+  font-size: 0.83em;
+  margin: 1.2em 0 0 0;
+  display: block;
+  line-height: 1.2em; }
+
+/* profile overview */
+.wpum-user-overview .user-content {
+  vertical-align: middle; }
+  .wpum-user-overview .user-content ul {
+    margin: 0px 0px; }
+    .wpum-user-overview .user-content ul li {
+      display: inline-block;
+      margin-right: 5px; }
+
+/* Account page navigation */
+.wpum-account-tabs {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px; }
+
+/* helper links */
+div.wpum-helper-links p {
+  margin-bottom: 0px; }
+
+/* password strength indicator */
+#password-strength {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  margin: 13px 5px 5px 1px;
+  padding: 5px 15px;
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center; }
+  #password-strength.short {
+    background-color: #f1adad;
+    border-color: #e35b5b; }
+  #password-strength.bad {
+    background-color: #fbc5a9;
+    border-color: #f78b53; }
+  #password-strength.good {
+    background-color: #ffe399;
+    border-color: #ffc733; }
+  #password-strength.strong {
+    background-color: #c1e1b9;
+    border-color: #83c373; }
+
+/* Messages */
+div.wpum-message {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853; }
+  div.wpum-message p.the-message {
+    margin: 0px; }
+  div.wpum-message.success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847; }
+  div.wpum-message.error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48; }
+  div.wpum-message.info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #3a87ad; }
+
+/* Styling for account page tabs */
+#wpum-account-forms-tabs {
+  margin-bottom: 30px; }
+  #wpum-account-forms-tabs ul {
+    list-style: none;
+    margin: 0; }
+    #wpum-account-forms-tabs ul li {
+      display: inline-block;
+      margin: 0 15px 0px 0px; }
+      #wpum-account-forms-tabs ul li a {
+        padding: 10px 15px;
+        border-radius: 3px; }
+        #wpum-account-forms-tabs ul li a:hover {
+          text-decoration: none;
+          background: #fcfcfc; }
+      #wpum-account-forms-tabs ul li.active a {
+        background: #efefef;
+        text-decoration: none; }
+
+.wpum-required-star {
+  color: #b94a48; }
+
+.wpum-remove-uploaded-file {
+  display: block; }
+
+#wpum-no-user-found {
+  margin-top: 1rem; }
+
+/* Read only fields styling */
+form.wpum-profile-form input[readonly], form.wpum-profile-form textarea[readonly] {
+  opacity: 0.7;
+  cursor: not-allowed; }
+
+/* Show password field styling */
+#wpum-psw-footer label {
+  display: inline;
+  margin-left: 5px; }
+
+/*# sourceMappingURL=wp_user_manager_frontend.css.map */

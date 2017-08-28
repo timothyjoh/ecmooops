@@ -367,26 +367,7 @@ class ITSEC_Lib_Config_File {
 
 		// Remove matched content.
 		foreach ( $patterns as $pattern ) {
-			// Look for the first beginning tag
-			preg_match( "/\s*{$pattern['begin']}/i", $contents, $matches, PREG_OFFSET_CAPTURE );
-
-			// If the BEGIN string was matched
-			if ( ! empty( $matches ) && ! empty( $matches[0] ) ) {
-				$begin = $matches[0][1];
-
-				// Look for ALL end tags that occur after the BEGIN tag
-				preg_match_all( "/\s*{$pattern['end']}[^\r\n]*\s*/i", $contents, $matches, PREG_OFFSET_CAPTURE, $begin );
-
-				// If the END string was matched
-				if ( ! empty( $matches ) && ! empty( $matches[0] ) ) {
-					// We want the last occurrence of the END tag
-					$last_match = array_pop( $matches[0] );
-					// The end position should be the location of the end tag + the length of the end tag
-					$end = $last_match[1] + strlen( $last_match[0] );
-					// We have a start and end, so let's replace with our placeholder
-					$contents = substr_replace( $contents, "$line_ending$placeholder", $begin, $end - $begin );
-				}
-			}
+			$contents = preg_replace( "/\s*{$pattern['begin']}.+?{$pattern['end']}[^\r\n]*\s*/is", "$line_ending$placeholder", $contents );
 		}
 
 
@@ -426,6 +407,20 @@ class ITSEC_Lib_Config_File {
 
 		// Remaining placeholders are replaced with two newlines to leave a gap between sections of remaining contents.
 		$contents = preg_replace( "/$placeholder/", "$line_ending$line_ending", $contents );
+
+
+		// Fix potentially damaged Windows-style newlines for W3 Total Cache modifications
+		$translated_w3tc_comment = __( 'Added by W3 Total Cache', 'w3-total-cache' );
+
+		if ( preg_match_all( '/[^\r\n]+(?:W3 Total Cache|' . preg_quote( $translated_w3tc_comment, '/' ) . ').*?(?:\r\n|\r|\n)/', $contents, $matches ) ) {
+			foreach ( $matches[0] as $match ) {
+				$new_line = rtrim( $match ) . "\r\n";
+
+				if ( $new_line !== $match ) {
+					$contents = str_replace( $match, $new_line, $contents );
+				}
+			}
+		}
 
 
 		return $contents;
@@ -703,8 +698,6 @@ class ITSEC_Lib_Config_File {
 	 * @return string Full path to the server config file or a blank string if modifications for the file are disabled.
 	 */
 	public static function get_server_config_file_path() {
-		global $itsec_globals;
-
 		$server = ITSEC_Lib_Utility::get_web_server();
 
 

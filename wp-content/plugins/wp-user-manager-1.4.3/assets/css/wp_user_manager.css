@@ -1,0 +1,179 @@
+/**
+ * WP User Manager
+ * http://wp-user-manager.com
+ *
+ * Copyright (c) 2015 Alessandro Tesoro
+ * Licensed under the GPLv2+ license.
+ */
+/* Admin settings page */
+.wpum-admin-message strong {
+  color: green; }
+
+.wpum-page-title {
+  background: url("../../images/title.png") no-repeat;
+  padding-left: 65px !important; }
+
+.wpum-role-option {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: green; }
+
+.select2-container-multi {
+  width: 350px; }
+
+.widefat.users_page_wpum-settings thead th {
+  padding: 10px; }
+.widefat.users_page_wpum-settings tfoot th {
+  padding: 10px; }
+
+.wpum-spinner {
+  display: inline-block;
+  float: none; }
+
+.wpum-ajax-done-message {
+  display: inline-block;
+  margin-left: 10px;
+  color: green; }
+
+.footer-star {
+  font-size: 14px;
+  margin-top: 3px;
+  height: auto;
+  width: auto; }
+
+/* Hide slug */
+body.post-type-wpum_directory #edit-slug-box,
+body.post-type-wpum_directory #preview-action {
+  display: none; }
+
+body.users_page_wpum-custom-fields-editor #screen-options-link-wrap, body.post-type-wpum_directory #visibility {
+  display: none; }
+
+.wpum-fields-editor-wrap .wpum-page-title {
+  margin-bottom: 10px; }
+.wpum-fields-editor-wrap .wp-filter {
+  margin-bottom: 10px; }
+.wpum-fields-editor-wrap #wpum_group_selector {
+  margin-left: 10px; }
+.wpum-fields-editor-wrap .submit-btn {
+  margin-left: 5px; }
+.wpum-fields-editor-wrap #wpum_fields_editor_edit_group .accordion-section-content {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px; }
+.wpum-fields-editor-wrap .wpum-group-settings {
+  padding: 0px 20px 10px 20px; }
+  .wpum-fields-editor-wrap .wpum-group-settings label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; }
+  .wpum-fields-editor-wrap .wpum-group-settings input[type=text], .wpum-fields-editor-wrap .wpum-group-settings textarea {
+    width: 100%; }
+  .wpum-fields-editor-wrap .wpum-group-settings textarea {
+    height: 100px; }
+  .wpum-fields-editor-wrap .wpum-group-settings > span {
+    display: block;
+    margin-bottom: 15px; }
+
+.wpum-editor-container {
+  position: relative; }
+
+.wpum-table-loader {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: wait;
+  display: none; }
+  .wpum-table-loader span {
+    background-position: center center;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+
+table.wpum_fields_table_list .row-dragging, table.users_page_wpum-profile-fields .row-dragging {
+  background-color: #ffffdc; }
+table.wpum_fields_table_list tbody tr:not(.wpum-fields-editor):hover, table.users_page_wpum-profile-fields tbody tr:not(.wpum-fields-editor):hover {
+  background-color: #EAF9FF; }
+table.wpum_fields_table_list th.column-order, table.wpum_fields_table_list td.column-order, table.users_page_wpum-profile-fields th.column-order, table.users_page_wpum-profile-fields td.column-order {
+  max-width: 50px;
+  min-width: 50px;
+  width: 50px;
+  border-right: 1px solid #e1e1e1;
+  text-align: center; }
+  table.wpum_fields_table_list th.column-order a.button, table.wpum_fields_table_list td.column-order a.button, table.users_page_wpum-profile-fields th.column-order a.button, table.users_page_wpum-profile-fields td.column-order a.button {
+    padding-top: 2px; }
+table.wpum_fields_table_list td, table.users_page_wpum-profile-fields td {
+  margin-bottom: 9px;
+  padding: 10px 10px;
+  line-height: 1.3;
+  vertical-align: middle; }
+table.wpum_fields_table_list td.column-order, table.users_page_wpum-profile-fields td.column-order {
+  cursor: move; }
+  table.wpum_fields_table_list td.column-order a:hover, table.users_page_wpum-profile-fields td.column-order a:hover {
+    cursor: move; }
+table.wpum_fields_table_list .move-field, table.users_page_wpum-profile-fields .move-field {
+  padding-top: 3px; }
+table.wpum_fields_table_list .wpum-window-hide, table.users_page_wpum-profile-fields .wpum-window-hide {
+  display: none; }
+
+#wpum-edit-field-form #name {
+  padding: 3px 8px;
+  font-size: 1.7em;
+  line-height: 100%;
+  height: 1.7em;
+  width: 100%;
+  outline: none;
+  margin: 0 0 3px;
+  background-color: #fff; }
+#wpum-edit-field-form .description-editor {
+  margin-top: 20px; }
+#wpum-edit-field-form #normal-metaboxes-wrapper {
+  margin-top: 20px; }
+#wpum-edit-field-form #save-field-container {
+  width: 280px; }
+#wpum-edit-field-form #wpum_field_requirement .inside,
+#wpum-edit-field-form #wpum_field_on_registration .inside,
+#wpum-edit-field-form #wpum_field_adjust_name .inside,
+#wpum-edit-field-form #wpum_profile_visibility .inside {
+  padding-top: 10px; }
+#wpum-edit-field-form #wpum_field_requirement .wpum-description,
+#wpum-edit-field-form #wpum_field_on_registration .wpum-description,
+#wpum-edit-field-form #wpum_field_adjust_name .wpum-description,
+#wpum-edit-field-form #wpum_profile_visibility .wpum-description {
+  font-size: 12px;
+  margin-top: 10px;
+  font-style: italic;
+  color: #969696;
+  display: inline-block; }
+#wpum-edit-field-form #wpum_profile_visibility label {
+  display: block;
+  margin-bottom: 5px; }
+#wpum-edit-field-form #wpum_profile_visibility select {
+  width: 100%; }
+
+/* Hide screen options window */
+body.users_page_wpum-profile-fields #screen-options-link-wrap,
+body.users_page_wpum-profile-fields .postbox .handlediv,
+body.users_page_wpum-profile-fields #wpfooter,
+body.users_page_wpum-edit-field #screen-options-link-wrap,
+body.users_page_wpum-edit-field .postbox .handlediv,
+body.users_page_wpum-edit-field #wpfooter {
+  display: none; }
+body.users_page_wpum-profile-fields #poststuff h3 span, body.users_page_wpum-profile-fields #poststuff h3,
+body.users_page_wpum-edit-field #poststuff h3 span,
+body.users_page_wpum-edit-field #poststuff h3 {
+  cursor: auto; }
+
+/* Settings panel adjustment */
+#wpum-settings-panel .radio-spacer {
+  margin-bottom: 10px; }
+
+/* Fields editor adjustments */
+#wpum_profile_visibility label + br {
+  display: none; }
+#wpum_profile_visibility label + br + span {
+  margin-top: 0 !important; }
+
+/*# sourceMappingURL=wp_user_manager.css.map */
