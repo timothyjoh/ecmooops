@@ -72,7 +72,10 @@ body,
 p{
   color: #282828;
 }
-
+h1, 
+body #page-header-bg h1{
+  color: #AD441D;
+}
 h2{
   color: #0077C8;
 }
@@ -80,12 +83,9 @@ h3, h5{
   color: #AD441D;
 }
 h4, h6{
-  color: #282828;
+  color: #54284E;
 }
-h1, 
-body #page-header-bg h1{
-  color: #ffffff;
-}
+
 body #page-header-bg h1{
   padding-top:10px;
 }
@@ -101,16 +101,7 @@ a:not(.button):focus{
   color:#B94700;
   text-decoration: underline;
 }
-a.blueLink
-{
-  color:#0077C8 !important;
-  text-decoration: none;
-}
-a.blueLink:hover,
-a.blueLink:focus{
-  color:#0077C8;
-  text-decoration: underline;
-}
+
 .nectar-button.large span {
     color: #fff;
 }
@@ -118,63 +109,35 @@ a.blueLink:focus{
     color: #0077C8;
 }
 
-
-body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"], 
-body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"],
+.button:not(.blueButton):not(.whiteButton),
+.login-submit .ascend input[type="submit"],
+body.ascend .container-wrap .container input[type="submit"], 
+body.ascend .container-wrap .container button[type="submit"],
 .ascend .container-wrap .container input[type="submit"],
 .ascend .container-wrap .container button[type="submit"],
 .login-submit .ascend input[type="submit"],
 button,
-a.button,
+.button,
 #ld_course_list .btn-primary,
 #ld_course_list .btn,
 .nectar-button.regular.regular-button,
-body[data-button-style="rounded"] .nectar-button {
-  display: inline-block;
-  transition: all 1s !important;
-  text-transform: uppercase !important;
-  padding: .7em !important;
-  border-radius: 8px !important;
-  font-family: Roboto;
-  font-size: 18px;
-  text-align: center;
-  line-height: 21px;
-  letter-spacing: 1px;
-  font-weight: normal;
-  text-decoration: none;
-  color:#fff;
-}
-.nectar-button.regular.regular-button.has-icon{
-  padding: .7em 2em !important;
-  border-radius: 8px !important;
-  text-decoration: none;
-
-}
-button:hover,
-button:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus,
-a.button:hover,
-a.button:focus,
-#ld_course_list .btn-primary:hover,
-#ld_course_list .btn-primary:focus,
-#ld_course_list .btn:hover,
-#ld_course_list .btn:focus{
-  background-color: transparent;
-  color: #B94700;  
-  text-decoration: none;  
-}
-body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"], 
-body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"],
-.ascend .container-wrap .container input[type="submit"],
-.ascend .container-wrap .container button[type="submit"],
-.button:not(.blueButton):not(.whiteButton),
-.login-submit .ascend input[type="submit"]
-{
-/* ORANGE BUTTON  = default*/  
-  border: 1px solid #903800;
-  background-color: #B94700;
-  color: #fff;
+body .nectar-button {
+	display: inline-block;
+	transition: all 1s !important;
+	text-transform: uppercase !important;
+	padding: .7em !important;
+	border-radius: 8px !important;
+	font-family: Raleway;
+	font-size: 18px;
+	text-align: center;
+	line-height: 21px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: #B94700;
+	border: 1px solid #903800;
+	border-radius: 8px;
+	color:#fff;
 }
 body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:hover, 
 body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:focus, 
@@ -189,23 +152,41 @@ body[data-button-style="rounded"].ascend .container-wrap .container button[type=
 .button:not(.blueButton):focus,
 .button:not(.whiteButton):focus,
 .login-submit .ascend input[type="submit"]:hover,
-.login-submit .ascend input[type="submit"]:focus
-{
-  background-color: transparent;
-  color: #B94700;
+.login-submit .ascend input[type="submit"]:focus,
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+a.button:hover,
+a.button:focus,
+#ld_course_list .btn-primary:hover,
+#ld_course_list .btn-primary:focus,
+#ld_course_list .btn:hover,
+#ld_course_list .btn:focus{
+  background-color: #fff;
+  color: #B94700;  
+  text-decoration: none;  
 }
 
-.blueButton,
-.nectar-button.regular.regular-button {
+/** other buttons **/
+
+.nectar-button.regular.regular-button.has-icon{
+  padding: .7em 2em !important;
+  border-radius: 8px !important;
+  text-decoration: none;
+
+}
+.blueButton/*,
+.nectar-button.regular.regular-button */{
   background-color: #0077C8 !important;
   border: 1px solid #0065A9;
   color: #fff;
 
 }
 .blueButton:hover, 
-.blueButton:focus,
+.blueButton:focus/*,
 .nectar-button.regular.regular-button:hover,
-.nectar-button.regular.regular-button:focus {
+.nectar-button.regular.regular-button:focus */{
   background-color: transparent !important;
   color: #0077C8 !important;
 }
