@@ -90,6 +90,28 @@ body #page-header-bg h1{
   padding-top:10px;
 }
 
+.pseudoH3{
+	font-size: 30px;
+	font-weight: normal;
+	color: #AD441D;
+}
+.pseudoH4{
+	font-size: 24px;
+	font-weight: bold;
+	color: #54284E;
+}
+.pseudoH5{
+	font-size: 22px;
+	font-weight: bold;
+	color: #AD441D;
+}
+.pseudoH6{
+	font-size: 16px;
+	font-weight: bold;
+	color: #54284E;
+}
+
+
 /**3-Links & Buttons**********************************************************************/
 a:not(.button)
 a:not(.nectar-button){
