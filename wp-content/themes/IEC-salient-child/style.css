@@ -190,12 +190,21 @@ a.button:focus,
   text-decoration: none;  
 }
 
+
 /** other buttons **/
 
 .nectar-button.regular.regular-button.has-icon{
+  display: inline-block;
+  transition: all 1s !important;
+  text-transform: uppercase !important;
   padding: .7em 2em !important;
   border-radius: 8px !important;
-  text-decoration: none;
+  font-family: Roboto;
+  font-size: 18px;
+  text-align: center;
+  line-height: 21px;
+  letter-spacing: 1px;
+  font-weight: normal;
 
 }
 .blueButton/*,
@@ -256,6 +265,18 @@ a.button:focus,
 #header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a:focus{
   text-decoration: none;
 }
+
+#header-outer[data-lhe="default"] header#top nav > ul > li > a:hover{
+    text-decoration:none;
+    background-color: #004471;
+}
+
+#page-header-bg{
+    border-bottom: 4px solid #BFBFBF;
+}
+body #page-header-bg h1{
+    text-transform:none !important;
+}
 /**5-Menus********************************************************************************/
 /**6-Footer*******************************************************************************/
 #footer-outer .row {
@@ -273,7 +294,7 @@ a.button:focus,
   text-align: right;
 }
 #footer-outer #footer-widgets p{
-  color:#fff;
+  color:#ccc;
 }
 #footer-outer #footer-widgets a,
 #footer-outer #footer-widgets a:not(.button){
@@ -289,7 +310,11 @@ a.button:focus,
 /* HOME */
 /* Course Catalog */
 /* FAQ */
-
+div[data-style="default"] .toggle h3 a, div[data-style="default"] .toggle h3 {
+    font-size: 16px!important;
+    line-height: 16px!important;
+    color: #282828;
+}
  /*checkout*/
 #customer_details > div.col-1 > div.woocommerce-shipping-fields > h3{
   display:none;
