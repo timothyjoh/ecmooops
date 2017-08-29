@@ -262,7 +262,6 @@ a.button:focus,
   padding: 30px 0px;
 }
 #footer-widgets{
-  text-transform: uppercase;
 }
 #footer-widgets > .container > .row > div:nth-child(1){
   text-align: left;
