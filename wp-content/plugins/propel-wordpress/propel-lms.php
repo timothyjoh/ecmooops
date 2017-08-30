@@ -28,6 +28,7 @@ include 'propel-db.php';
 include 'propel-migrate-course-completion.php';
 include 'propel-reports.php';
 include 'propel-manage-administrators.php';
+include 'popups/popups.php';
 
 
 /**

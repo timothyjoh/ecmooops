@@ -1,0 +1,45 @@
+body{
+  position:relative;
+  min-height: 100vh;
+}
+.launch-propel-popup:hover {
+  cursor: pointer;
+}
+.propel-popup-BG {
+  display:none;
+}
+.propel-popup-BG {
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color:rgba(0,0,0,0.7);
+  min-height: 100%;
+  width: 100%;
+}
+.propel-popup-body{
+    background-color: #fff;
+    max-width: 80%;
+    margin: 5% auto;
+    padding: 20px;
+}
+.propel-close{
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    float: right;
+    left: 45px;
+    top: -50px;
+    transition: all .3s linear;
+    transform-origin: center center;
+    display: block;
+    width: 30px;
+    height: 33px;
+    text-align: center;
+}
+.propel-close:hover{
+  cursor:pointer;
+  transform: rotate(180deg);
+}
+
