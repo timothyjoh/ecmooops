@@ -158,7 +158,6 @@ body .nectar-button {
 	text-decoration: none;
 	background-color: #B94700;
 	border: 1px solid #903800;
-	border-radius: 8px;
 	color:#fff;
 }
 body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:hover, 
