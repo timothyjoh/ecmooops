@@ -45,7 +45,8 @@ function propel_popup_shortcode_fn($given_atts){
 
   $btnID = $atts['slug'].'-button';
 
-  return (apply_filters ('the_content','<a name="'.$atts['slug'].'" class="launch-propel-popup '.$atts['linkclasses'].'">'.$atts['text'].'</a><div id="'.$atts['slug'].'" class="'.$atts['popupclasses'].' propel-popup-BG"><div class="propel-popup-body"><div class="propel-close">&times;</div>'.$content.'</div></div>'));
+  return (apply_filters ('the_content','<a name="'.$atts['slug'].'" class="launch-propel-popup '.$atts['linkclasses'].'">'.$atts['text'].'</a>
+  <div id="'.$atts['slug'].'" class="'.$atts['popupclasses'].' propel-popup-BG"><div class="propel-popup-body"><div class="propel-close">&times;</div>'.$content.'</div></div>'));
 }
 add_shortcode( 'propel_popup', 'propel_popup_shortcode_fn' );
 
