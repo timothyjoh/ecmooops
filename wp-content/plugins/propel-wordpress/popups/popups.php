@@ -27,6 +27,43 @@ function propel_popups_custom_post_type()
 }
 add_action('init', 'propel_popups_custom_post_type');
 
+
+add_filter('the_content', 'propel_popup_bodies', 20);
+
+function propel_popup_bodies($the_content ){
+  $dom = new DOMDocument();
+  $dom->loadHTML($the_content);
+
+   $finder = new DomXPath($dom);
+   $classname="launch-propel-popup-placeholder";
+   $nodes = $finder->query("//*[contains(concat(' ', normalize-space(@class), ' '), ' $classname ')]");
+
+  foreach($nodes as $node) {
+    $slug = $node->attributes->getNamedItem('name')->nodeValue;
+
+    $popupclasses = $node->attributes->getNamedItem('data-popupclasses')->nodeValue;
+    $args = array(
+      'name' => $slug,
+      'post_type' => 'propel_popup',
+      'numberposts' => 1
+    );
+    $post = get_posts( $args );
+    $post_content = $post[0]->post_content;    
+    $check_shortcodes = preg_match_all('/\[[\w\s=\'\"]+\]/', $post_content, $shortcodes);
+    foreach ($shortcodes[0] as $shortcode){
+      $post_content = str_replace($shortcode, do_shortcode($shortcode), $post_content);
+    }
+
+    $the_content .= '<div id="'.$slug.'" class="'.$popupclasses.' propel-popup-BG"><div class="propel-popup-body"><div class="propel-close">&times;</div>'.$post_content.'</div></div>';
+
+  }
+
+  // DONT DO THIS::: apply_filters('the_content',);
+
+  $the_content = str_replace('launch-propel-popup-placeholder','launch-propel-popup',$the_content);
+  return ($the_content);
+}
+
 //define and add shortcode
 function propel_popup_shortcode_fn($given_atts){ 
   $atts = shortcode_atts( array(
@@ -35,18 +72,13 @@ function propel_popup_shortcode_fn($given_atts){
       'linkclasses' => '',
       'popupclasses' => ''
     ), $given_atts );
-  $args = array(
-    'name' => $atts['slug'],
-    'post_type' => 'propel_popup',
-    'numberposts' => 1
-  );
-  $post = get_posts( $args );
-  $content = $post[0]->post_content;
 
   $btnID = $atts['slug'].'-button';
+  $result = '<a name="'.$atts['slug'].'" class="launch-propel-popup-placeholder '.$atts['linkclasses'].'" data-popupclasses="'. $atts['popupclasses'] .'">'.$atts['text'].'</a>';
 
-  return (apply_filters ('the_content','<a name="'.$atts['slug'].'" class="launch-propel-popup '.$atts['linkclasses'].'">'.$atts['text'].'</a>
-  <div id="'.$atts['slug'].'" class="'.$atts['popupclasses'].' propel-popup-BG"><div class="propel-popup-body"><div class="propel-close">&times;</div>'.$content.'</div></div>'));
+  $clean_result1 = preg_replace('/<\/?p>/', ' ', $result, 2);
+  $clean_result2 = preg_replace('/\r?\n/', ' ', $clean_result1, -1);
+  return ($clean_result2);
 }
 add_shortcode( 'propel_popup', 'propel_popup_shortcode_fn' );
 

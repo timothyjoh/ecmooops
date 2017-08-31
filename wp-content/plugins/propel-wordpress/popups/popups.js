@@ -1,7 +1,7 @@
-jQuery(document).ready( function(){
+jQuery(document).ready( function(){    
+  jQuery('.propel-popup-BG').appendTo(document.body);
   jQuery('.launch-propel-popup').on('click',function(e){
     var clickedButton = this.name;
-    jQuery('.propel-popup-BG').appendTo(document.body);
     jQuery('#' + clickedButton).show();
     jQuery(window).scrollTop(0);
   });
