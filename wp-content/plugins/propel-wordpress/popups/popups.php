@@ -31,8 +31,9 @@ add_action('init', 'propel_popups_custom_post_type');
 add_filter('the_content', 'propel_popup_bodies', 20);
 
 function propel_popup_bodies($the_content ){
-  $dom = new DOMDocument();
-  $dom->loadHTML($the_content);
+ 	if (strpos ($the_content, 'launch-propel-popup-placeholder') === false){ return($the_content); }
+	$dom = new DOMDocument();
+	$dom->loadHTML($the_content);
 
    $finder = new DomXPath($dom);
    $classname="launch-propel-popup-placeholder";
