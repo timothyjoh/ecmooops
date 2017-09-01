@@ -206,30 +206,30 @@ a.button:focus,
   font-weight: normal;
 
 }
-body a.blueButton{
+body a.button.blueButton{
   background-color: #0077C8 !important;
   border: 1px solid #0065A9;
   color: #fff !important;
 
 }
-body a.blueButton:hover, 
-body a.blueButton:focus/*,
+body a.button.blueButton:hover, 
+body a.button.blueButton:focus/*,
 .nectar-button.regular.regular-button:hover,
 .nectar-button.regular.regular-button:focus */{
   background-color: transparent !important;
   color: #0077C8 !important;
 }
-body a.whiteButton {
+body a.button.whiteButton {
   background-color: #fff;
   border: 1px solid #fff;
   color: #b94700 !important;
 }
-body a.whiteButton:hover,
-body a.whiteButton:focus {
+body a.button.whiteButton:hover,
+body a.button.whiteButton:focus {
   background-color: transparent;
   color: #fff !important;
 }
-body a.smallButton{
+body a.button.smallButton{
   max-height: 3em;
   line-height: 1.5 !important;
   padding: .7em 1.5em !important;
