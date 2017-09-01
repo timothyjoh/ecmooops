@@ -248,7 +248,9 @@ body a.button.smallButton{
 .woocommerce-page a.button:focus{
 	color: #fff !important;	
 }
-
+.woocommerce #payment #place_order:hover, .woocommerce-page #payment #place_order:hover {
+    background-color: rgba(0, 0, 0, 0.66) !important;
+}
 
 
 
