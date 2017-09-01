@@ -206,31 +206,30 @@ a.button:focus,
   font-weight: normal;
 
 }
-.blueButton/*,
-.nectar-button.regular.regular-button */{
+body a.blueButton{
   background-color: #0077C8 !important;
   border: 1px solid #0065A9;
   color: #fff !important;
 
 }
-.blueButton:hover, 
-.blueButton:focus/*,
+body a.blueButton:hover, 
+body a.blueButton:focus/*,
 .nectar-button.regular.regular-button:hover,
 .nectar-button.regular.regular-button:focus */{
   background-color: transparent !important;
   color: #0077C8 !important;
 }
-.whiteButton {
+body a.whiteButton {
   background-color: #fff;
   border: 1px solid #fff;
   color: #b94700 !important;
 }
-.whiteButton:hover,
-.whiteButton:focus {
+body a.whiteButton:hover,
+body a.whiteButton:focus {
   background-color: transparent;
   color: #fff !important;
 }
-.smallButton{
+body a.smallButton{
   max-height: 3em;
   line-height: 1.5 !important;
   padding: .7em 1.5em !important;
