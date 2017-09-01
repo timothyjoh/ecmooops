@@ -113,13 +113,13 @@ body #page-header-bg h1{
 
 
 /**3-Links & Buttons**********************************************************************/
-a:not(.button)
-a:not(.nectar-button){
+body a:not(.button),
+body a:not(.nectar-button){
   color:#B94700 !important;
   text-decoration: none;
 }
-a:not(.button):hover,
-a:not(.button):focus{
+body a:not(.button):hover,
+body a:not(.button):focus{
   color:#B94700;
   text-decoration: underline;
 }
