@@ -234,6 +234,8 @@ body a.button.smallButton{
   line-height: 1.5 !important;
   padding: .7em 1.5em !important;
 }
+
+.woocommerce-info a.button:hover,
 .woocommerce-message a.button:hover{
 	color: #ffffff !important;
 	text-decoration: underline;
