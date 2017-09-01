@@ -238,9 +238,7 @@ body a.button.smallButton{
 	color: #ffffff !important;
 	text-decoration: underline;
 }
-.ascend .container-wrap input[type="submit"], 
-.ascend .container-wrap button[type="submit"], 
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+.ascend.woocommerce-cart .cart-collaterals .wc-proceed-to-checkout a.checkout-button {
     border-radius: 8px !important;
 }
 
