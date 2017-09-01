@@ -234,6 +234,12 @@ body a.button.smallButton{
   line-height: 1.5 !important;
   padding: .7em 1.5em !important;
 }
+.woocommerce-message a.button:hover{
+	color: #ffffff !important;
+	text-decoration: underline;
+}
+
+
 /**4-Header*******************************************************************************/
 #header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a {
     font-size: 18px !important;
