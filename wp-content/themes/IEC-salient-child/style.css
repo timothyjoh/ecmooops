@@ -234,9 +234,10 @@ body a.button.smallButton{
   line-height: 1.5 !important;
   padding: .7em 1.5em !important;
 }
-
-.woocommerce-info a.button:hover,
-.woocommerce-message a.button:hover{
+.woocommerce .woocommerce-info a.showcoupon:hover,
+.woocommerce .woocommerce-info a.showcoupon:focus,
+.woocommerce-message a.button:hover,
+.woocommerce-message a.button:focus{
 	color: #ffffff !important;
 	text-decoration: underline;
 }
@@ -250,7 +251,8 @@ body a.button.smallButton{
 .woocommerce-page a.button:focus{
 	color: #fff !important;	
 }
-.woocommerce #payment #place_order:hover, .woocommerce-page #payment #place_order:hover {
+.woocommerce #payment #place_order:hover, 
+.woocommerce-page #payment #place_order:hover {
     background-color: rgba(0, 0, 0, 0.66) !important;
 }
 
