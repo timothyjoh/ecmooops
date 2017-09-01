@@ -93,22 +93,22 @@ body #page-header-bg h1{
 .pseudoH3{
 	font-size: 30px !important;
 	font-weight: normal !important;
-	color: #AD441D;
+	color: #AD441D !important;
 }
 .pseudoH4{
 	font-size: 24px !important;
 	font-weight: bold !important;
-	color: #54284E;
+	color: #54284E !important;
 }
 .pseudoH5{
 	font-size: 22px !important;
 	font-weight: bold !important;
-	color: #AD441D;
+	color: #AD441D !important;
 }
 .pseudoH6{
 	font-size: 16px !important;
 	font-weight: bold !important;
-	color: #54284E;
+	color: #54284E !important;
 }
 
 
