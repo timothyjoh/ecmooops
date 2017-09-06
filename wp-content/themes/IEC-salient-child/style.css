@@ -322,6 +322,7 @@ body #page-header-bg h1{
 #footer-outer #footer-widgets a:not(.button){
   color:#0077C8 !important;
   text-decoration: none;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 #footer-outer #footer-widgets a:not(.button):hover,
 #footer-outer #footer-widgets a:not(.button):focus{
