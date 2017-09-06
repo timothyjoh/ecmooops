@@ -72,6 +72,13 @@ function UserEngageScript_widget($meta)
     $name = null;
     if (0 == $current_user->ID) {
         $name = "";
+        $output = "<script type='text/javascript' data-cfasync='false'>
+window.civchat = {
+    apiKey: \"$meta\",
+	state: \"hidden\"
+};
+</script>";
+        echo $output;
     } else {
         if (strlen($current_user->user_firstname) > 0 && strlen($current_user->user_lastname) > 0) {
             $name = $current_user->user_firstname . ' ' . $current_user->user_lastname;
@@ -80,29 +87,32 @@ function UserEngageScript_widget($meta)
         } else if (strlen($current_user->user_lastname) > 0) {
             $name = $current_user->user_lastname;
         }
+		
+	    if (isset($_GET["key"]) && $order_id) {
+	        $name = $order_meta["_billing_first_name"]["0"] . ' ' . $order_meta["_billing_last_name"]["0"];
+	        $output = "<script type='text/javascript' data-cfasync='false'>
+	window.civchat = {
+	    apiKey: \"$meta\",
+	    name: \"$name\",
+	    email: \"$current_user->user_email\",
+	    " . $attribs . "
+	    phone: '" . $order_meta["_billing_phone"]["0"] . "'
+	};
+	</script>";
+	        echo $output;
+	    } else {
+	        $output = "<script type='text/javascript' data-cfasync='false'>
+	window.civchat = {
+	    apiKey: \"$meta\",
+	    name: \"$name\",
+	    email: \"$current_user->user_email\"
+	};
+	</script>";
+	        echo $output;
+	    }
+		
     }
-    if (isset($_GET["key"]) && $order_id) {
-        $name = $order_meta["_billing_first_name"]["0"] . ' ' . $order_meta["_billing_last_name"]["0"];
-        $output = "<script type='text/javascript' data-cfasync='false'>
-window.civchat = {
-    apiKey: \"$meta\",
-    name: \"$name\",
-    email: \"$current_user->user_email\",
-    " . $attribs . "
-    phone: '" . $order_meta["_billing_phone"]["0"] . "'
-};
-</script>";
-        echo $output;
-    } else {
-        $output = "<script type='text/javascript' data-cfasync='false'>
-window.civchat = {
-    apiKey: \"$meta\",
-    name: \"$name\",
-    email: \"$current_user->user_email\"
-};
-</script>";
-        echo $output;
-    }
+
 }
 
 add_action('wp_head', 'hook_userengage_javascript');
