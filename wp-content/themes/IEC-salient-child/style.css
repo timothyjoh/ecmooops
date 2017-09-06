@@ -74,13 +74,13 @@ p{
 }
 h1, 
 body #page-header-bg h1{
-  color: #AD441D;
+  color: #b94700;
 }
 h2{
   color: #0077C8;
 }
 h3, h5{
-  color: #AD441D;
+  color: #b94700;
 }
 h4, h6{
   color: #54284E;
@@ -93,7 +93,7 @@ body #page-header-bg h1{
 .pseudoH3{
 	font-size: 30px !important;
 	font-weight: normal !important;
-	color: #AD441D !important;
+	color: #b94700 !important;
 }
 .pseudoH4{
 	font-size: 24px !important;
@@ -103,7 +103,7 @@ body #page-header-bg h1{
 .pseudoH5{
 	font-size: 22px !important;
 	font-weight: bold !important;
-	color: #AD441D !important;
+	color: #b94700 !important;
 }
 .pseudoH6{
 	font-size: 16px !important;
