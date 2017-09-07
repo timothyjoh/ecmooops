@@ -88,7 +88,7 @@ class Propel_Generate_Keys {
       $new_product = array(
         'product_sku' => get_post_meta( $product['product_id'], '_sku', true ), 
         'product_name' => $product['name'],
-        'quantity' => $product['item_meta']['_qty'][0]
+        'quantity' => $product->get_quantity()
       );
       array_push( $post_data['products'], $new_product );
     }
