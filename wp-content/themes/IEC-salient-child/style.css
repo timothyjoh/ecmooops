@@ -256,6 +256,21 @@ body a.button.smallButton{
     background-color: rgba(0, 0, 0, 0.66) !important;
 }
 
+/** forms **/
+body .gform_wrapper .top_label div.ginput_container {
+    border: 1px solid #ccc;
+}
+body .gform_wrapper .top_label .gfield_label {
+    margin-left: 1% !important;
+    width: 98%;
+}
+body[data-form-style="minimal"] .minimal-form-input.textarea label span.text {
+    top: 35px;
+}
+body[data-form-style="minimal"] input[type="text"]{
+    margin: 0 10px;
+}
+
 
 
 /**4-Header*******************************************************************************/
@@ -271,7 +286,7 @@ body a.button.smallButton{
 
 #header-secondary-outer nav > ul > li > a {
     color: #fff;
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 #header-secondary-outer nav > ul > li > a:hover,
 #header-secondary-outer nav > ul > li > a:focus {
@@ -300,6 +315,30 @@ body #page-header-bg h1{
     text-transform:none !important;
 }
 /**5-Menus********************************************************************************/
+.slide-out-widget-area-toggle.mobile-icon .lines-button.x2 .lines:before, .slide-out-widget-area-toggle.mobile-icon .lines-button.x2 .lines:after, .slide-out-widget-area-toggle[data-icon-animation="simple-transform"].mobile-icon .lines-button:after, header#top .slide-out-widget-area-toggle[data-icon-animation="spin-and-transform"].mobile-icon .lines-button.x2 .lines {
+    background-color: #fff;
+}
+#mobile-menu > .container {
+    width: 100%;
+    max-width: 100% !important;
+}
+#mobile-menu > .container > ul{
+    background-color:#004471;
+   
+}
+#mobile-menu ul li{
+    padding-left:15px;
+    border-bottom: 1px solid #E7F1F7;
+}
+
+#mobile-menu ul li a {
+    color: #fff !important;
+    font-size: 18px;
+}
+#mobile-menu ul li a:hover,
+#mobile-menu ul li a:focus{
+    text-decoration:hover;
+}
 /**6-Footer*******************************************************************************/
 #footer-outer .row {
   padding: 30px 0px;
