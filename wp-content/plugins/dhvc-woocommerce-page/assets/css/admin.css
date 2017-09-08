@@ -1,0 +1,9 @@
+.wpb-select option{
+	margin: 0;
+	padding:0
+}
+[class*="icon-dhvc-woo-product-page"]{
+	background-image: url('../images/woocommerce.png') !important;
+	border-color: transparent;
+	background-repeat: no-repeat;
+}

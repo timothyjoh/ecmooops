@@ -1,0 +1,82 @@
+.dhvc-woocommerce-page *,
+.dhvc-woocommerce-page *:before,
+.dhvc-woocommerce-page *:after{
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.dhvc-woocommerce-page div.images,
+.dhvc-woocommerce-page div.images,
+.dhvc-woocommerce-page .wpb_wrapper div.images,
+.dhvc-woocommerce-page div.images
+{
+	float: none !important;
+	width: 100% !important;
+}
+
+.dhvc-woocommerce-page .images,
+.dhvc-woocommerce-page .images{
+	float: none !important;
+	width: 100% !important;
+}
+
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-add-to-wishlist{
+	
+}
+
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-add-button{
+	
+}
+/* .dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .add_to_wishlist:after,
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistexistsbrowse a:after,
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistaddedbrowse a:after{
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+    text-indent: 0;
+    text-transform: none;
+    top: 0px;
+    white-space: nowrap;
+    position: absolute;
+} */
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .add_to_wishlist:before,
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistexistsbrowse a:before,
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistaddedbrowse a:before{
+	display: inline-block;
+	font-family: "fontawesome";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+	line-height: 1;
+	text-indent: 0;
+	text-decoration: none;
+	text-transform: none;
+	font-size: 16px;
+	margin-right: 5px;
+}
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .add_to_wishlist:before{
+	content: "\f08a";
+}
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistexistsbrowse a:before,
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistaddedbrowse a:before{
+	content: "\f00c";
+}
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-add-to-wishlist a{
+    /* text-indent: -9999px; */
+    position: relative;
+    text-decoration: none;
+}
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistexistsbrowse .feedback, 
+.dhvc-woocommerce-page .dhvc-woocommerce-page-wishlist .yith-wcwl-wishlistaddedbrowse .feedback{
+	display: none;
+}

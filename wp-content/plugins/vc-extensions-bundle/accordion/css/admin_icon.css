@@ -1,0 +1,12 @@
+.wpb-content-layouts .wpb-layout-element-button .icon-wpb-vc_extension_cq {
+    background-image: url(../img/icon.png)!important;
+}
+span.vc_element-icon.icon-wpb-vc_extension_cq{
+    background-image: url(../img/icon.png)!important;
+}
+
+.wpb_cq_vc_extension.wpb_content_element > .wpb_element_wrapper {
+	background-image: url(../img/icon.png)!important;
+}
+
+
