@@ -301,7 +301,7 @@ class Propel_LMS {
             $response = Propel_LMS::ping_api( $auth_array, 'authenticate' );
             $okm_token = $response['auth_token'];
             
-            $out = '<iframe src=" id="okm-frame" name="okm-frame"' . Propel_LMS::okm_server() . '/accounts/' . $okm_token . '/sign_in' . '" width="' . $width . '" height="' . $height . '" frameborder="0" scrolling="auto"></iframe>';
+            $out = '<iframe id="okm-frame" name="okm-frame" src="' . Propel_LMS::okm_server() . '/accounts/' . $okm_token . '/sign_in' . '" width="' . $width . '" height="' . $height . '" frameborder="0" scrolling="auto"></iframe>';
             
             echo $out;
          }
