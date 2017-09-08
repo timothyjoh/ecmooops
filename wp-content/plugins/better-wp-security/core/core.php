@@ -141,6 +141,12 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			add_action( 'wp_login_failed', array( 'ITSEC_Lib', 'handle_wp_login_failed' ) );
 
 			add_action( 'ithemes_sync_register_verbs', array( $this, 'register_sync_verbs' ) );
+
+			if ( ! wp_next_scheduled( 'itsec_clear_locks' ) ) {
+				wp_schedule_event( time(), 'daily', 'itsec_clear_locks' );
+			}
+
+			add_action( 'itsec_clear_locks', array( 'ITSEC_Lib', 'delete_expired_locks' ) );
 		}
 
 		/**
@@ -217,31 +223,33 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			ITSEC_Modules::register_module( 'security-check', "$path/modules/security-check", 'always-active' );
 			ITSEC_Modules::register_module( 'global', "$path/modules/global", 'always-active' );
 			ITSEC_Modules::register_module( '404-detection', "$path/modules/404-detection" );
+			ITSEC_Modules::register_module( 'admin-user', "$path/modules/admin-user", 'always-active' );
 			ITSEC_Modules::register_module( 'away-mode', "$path/modules/away-mode" );
 			ITSEC_Modules::register_module( 'ban-users', "$path/modules/ban-users", 'default-active' );
 			include( "$path/modules/ban-users/init.php" ); // Provides the itsec_ban_users_handle_new_blacklisted_ip function which is always needed.
-			ITSEC_Modules::register_module( 'brute-force', "$path/modules/brute-force", 'default-active' );
-			ITSEC_Modules::register_module( 'core', "$path/modules/core", 'always-active' );
+			ITSEC_Modules::register_module( 'content-directory', "$path/modules/content-directory", 'always-active' );
+			ITSEC_Modules::register_module( 'database-prefix', "$path/modules/database-prefix", 'always-active' );
 			ITSEC_Modules::register_module( 'backup', "$path/modules/backup", 'default-active' );
+			ITSEC_Modules::register_module( 'core', "$path/modules/core", 'always-active' );
 			ITSEC_Modules::register_module( 'file-change', "$path/modules/file-change" );
 			ITSEC_Modules::register_module( 'file-permissions', "$path/modules/file-permissions", 'always-active' );
 			ITSEC_Modules::register_module( 'hide-backend', "$path/modules/hide-backend", 'always-active' );
-			ITSEC_Modules::register_module( 'network-brute-force', "$path/modules/ipcheck", 'default-active' );
-			ITSEC_Modules::register_module( 'malware', "$path/modules/malware", 'always-active' );
-			ITSEC_Modules::register_module( 'ssl', "$path/modules/ssl" );
-			ITSEC_Modules::register_module( 'strong-passwords', "$path/modules/strong-passwords", 'default-active' );
-			ITSEC_Modules::register_module( 'system-tweaks', "$path/modules/system-tweaks" );
-			ITSEC_Modules::register_module( 'wordpress-tweaks', "$path/modules/wordpress-tweaks", 'default-active' );
+			ITSEC_Modules::register_module( 'brute-force', "$path/modules/brute-force", 'default-active' );
 
 			if ( is_multisite() ) {
 				ITSEC_Modules::register_module( 'multisite-tweaks', "$path/modules/multisite-tweaks" );
 			}
 
-			ITSEC_Modules::register_module( 'admin-user', "$path/modules/admin-user", 'always-active' );
+			ITSEC_Modules::register_module( 'network-brute-force', "$path/modules/ipcheck", 'default-active' );
+			ITSEC_Modules::register_module( 'ssl', "$path/modules/ssl" );
+			ITSEC_Modules::register_module( 'strong-passwords', "$path/modules/strong-passwords", 'default-active' );
+			ITSEC_Modules::register_module( 'system-tweaks', "$path/modules/system-tweaks" );
 			ITSEC_Modules::register_module( 'wordpress-salts', "$path/modules/salts", 'always-active' );
-			ITSEC_Modules::register_module( 'content-directory', "$path/modules/content-directory", 'always-active' );
-			ITSEC_Modules::register_module( 'database-prefix', "$path/modules/database-prefix", 'always-active' );
+			ITSEC_Modules::register_module( 'wordpress-tweaks', "$path/modules/wordpress-tweaks", 'default-active' );
+
 			ITSEC_Modules::register_module( 'file-writing', "$path/modules/file-writing", 'always-active' );
+
+			ITSEC_Modules::register_module( 'malware', "$path/modules/malware", 'always-active' );
 
 			if ( ! ITSEC_Core::is_pro() ) {
 				ITSEC_Modules::register_module( 'pro-module-upsells', "$path/modules/pro", 'always-active' );

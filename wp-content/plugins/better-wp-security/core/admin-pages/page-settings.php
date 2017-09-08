@@ -2,7 +2,7 @@
 
 
 final class ITSEC_Settings_Page {
-	private $version = 1.7;
+	private $version = 1.8;
 
 	private static $instance;
 

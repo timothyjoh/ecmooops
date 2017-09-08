@@ -680,3 +680,11 @@
 6.5.1 - 2017-08-23 - Chris Jean & Timothy Jacobs
 	Bug Fix: Fixed logical error that prevented backups from executing.
 	Bug Fix: Fixed issue that could cause database locks to flood the database.
+6.6.0 - 2017-09-06 - Chris Jean & Timothy Jacobs
+	New Feature: Added a new setting in WordPress Tweaks: "Login with Email Address or Username".
+	Enhancement: Host email images from the plugin instead of relying on iThemes servers to help email clients marking messages as spam or blocking images.
+	Bug Fix: Error when searching for modules preventing modules from appearing.
+	Bug Fix: Use the wp_options table when acquiring locks in Multisite.
+	Bug Fix: Prevent duplicate daily digest emails on sites with high load.
+	Misc: Added Magic Links, a new Pro-only feature, to be activated by Security Check.
+	Misc: Rearranged modules to be listed alphabetically.

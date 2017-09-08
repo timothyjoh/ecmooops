@@ -194,10 +194,10 @@ class ITSEC_Brute_Force {
 		}
 
 		if ( empty( $user_id ) ) {
-			$itsec_lockout->check_lockout( false, $username );
+			$itsec_lockout->check_lockout( false, $username, 'brute_force' );
 		} else {
-			$itsec_lockout->check_lockout( $user_id );
-		};
+			$itsec_lockout->check_lockout( $user_id, false, 'brute_force' );
+		}
 
 		$itsec_logger->log_event( 'brute_force', 5, $details, ITSEC_Lib::get_ip(), $username, intval( $user_id ) );
 		$itsec_lockout->do_lockout( 'brute_force', $username );

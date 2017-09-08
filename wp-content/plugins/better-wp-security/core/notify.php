@@ -49,21 +49,28 @@ class ITSEC_Notify {
 			return false;
 		}
 
+		// Check the cached digest_last_sent value. This will be fast but may be inaccurate.
+		if ( ! $use_cron ) {
+			$last_sent = ITSEC_Modules::get_setting( 'global', 'digest_last_sent' );
+			$yesterday = ITSEC_Core::get_current_time_gmt() - DAY_IN_SECONDS;
+
+			if ( $last_sent > $yesterday ) {
+				return false;
+			}
+		}
+
+		// Attempt to acquire a lock so only one process can send the daily digest at a time.
 		if ( ! ITSEC_Lib::get_lock( 'daily-digest' ) ) {
 			return false;
 		}
 
 		if ( ! $use_cron ) {
-
-			$global = ITSEC_Modules::get_settings_obj( 'global' );
-			ITSEC_Storage::reload();
-			$global->load();
-
-			$last_sent = $global->get('digest_last_sent' );
-			$yesterday = ITSEC_Core::get_current_time_gmt() - DAY_IN_SECONDS;
+			// This prevents errors where the last sent value is loaded in memory early in the request, before another process has finished sending the value.
+			$last_sent = $this->get_last_sent_uncached();
 
 			// Send digest if it has been 24 hours
 			if ( $last_sent > $yesterday ) {
+
 				return false;
 			}
 		}
@@ -73,6 +80,37 @@ class ITSEC_Notify {
 		ITSEC_Lib::release_lock( 'daily-digest' );
 
 		return $result;
+	}
+
+	/**
+	 * Get the time the daily digest was last sent directly from the database.
+	 *
+	 * @return int
+	 */
+	private function get_last_sent_uncached() {
+
+		/** @var $wpdb \wpdb */
+		global $wpdb;
+
+		$option = 'itsec-storage';
+		$storage = array();
+
+		if ( is_multisite() ) {
+			$network_id = get_current_site()->id;
+			$row        = $wpdb->get_row( $wpdb->prepare( "SELECT meta_value FROM $wpdb->sitemeta WHERE meta_key = %s AND site_id = %d", $option, $network_id ) );
+
+			if ( is_object( $row ) ) {
+				$storage = maybe_unserialize( $row->meta_value );
+			}
+		} else {
+			$row = $wpdb->get_row( $wpdb->prepare( "SELECT option_value FROM $wpdb->options WHERE option_name = %s LIMIT 1", $option ) );
+
+			if ( is_object( $row ) ) {
+				$storage = maybe_unserialize( $row->option_value );
+			}
+		}
+
+		return isset( $storage['global'], $storage['global']['digest_last_sent'] ) ? $storage['global']['digest_last_sent'] : 0;
 	}
 
 	/**
@@ -155,7 +193,7 @@ class ITSEC_Notify {
 
 		ITSEC_Modules::set_setting( 'global', 'digest_last_sent', ITSEC_Core::get_current_time_gmt() );
 		ITSEC_Modules::set_setting( 'global', 'digest_messages', array() );
-
+		ITSEC_Storage::save();
 
 		$subject = esc_html__( 'Daily Security Digest', 'better-wp-security' );
 		$mail->set_subject( $subject );

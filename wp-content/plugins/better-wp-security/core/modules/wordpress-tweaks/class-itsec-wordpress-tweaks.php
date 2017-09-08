@@ -70,6 +70,18 @@ final class ITSEC_WordPress_Tweaks {
 
 		$this->settings = ITSEC_Modules::get_settings( 'wordpress-tweaks' );
 
+
+		// Functional code for the valid_user_login_type setting.
+		if ( 'email' === $this->settings['valid_user_login_type'] ) {
+			add_action( 'login_init', array( $this, 'add_gettext_filter' ) );
+			add_filter( 'authenticate', array( $this, 'add_gettext_filter' ), 0 );
+			remove_filter( 'authenticate', 'wp_authenticate_username_password', 20 );
+		} else if ( 'username' === $this->settings['valid_user_login_type'] ) {
+			add_action( 'login_init', array( $this, 'add_gettext_filter' ) );
+			add_filter( 'authenticate', array( $this, 'add_gettext_filter' ), 0 );
+			remove_filter( 'authenticate', 'wp_authenticate_email_password', 20 );
+		}
+
 		// Functional code for the allow_xmlrpc_multiauth setting.
 		if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST && ! $this->settings['allow_xmlrpc_multiauth'] ) {
 			add_filter( 'authenticate', array( $this, 'block_multiauth_attempts' ), 0, 3 );
@@ -114,6 +126,48 @@ final class ITSEC_WordPress_Tweaks {
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_block_tabnapping_script' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'add_block_tabnapping_script' ) );
 		}
+	}
+
+	/**
+	 * Add filter for gettext to change text for the valid_user_login_type setting changes.
+	 *
+	 * @return null
+	 */
+	public function add_gettext_filter() {
+		if ( ! has_filter( 'gettext', array( $this, 'filter_gettext' ) ) ) {
+			add_filter( 'gettext', array( $this, 'filter_gettext' ), 20, 3 );
+		}
+	}
+
+	/**
+	 * Filter text for the valid_user_login_type setting changes.
+	 *
+	 * @param string $translation  Translated text.
+	 * @param string $text         Text to translate.
+	 * @param string $domain       Text domain. Unique identifier for retrieving translated strings.
+	 *
+	 * @return string
+	 */
+	public function filter_gettext( $translation, $text, $domain ) {
+		if ( 'default' !== $domain ) {
+			return $translation;
+		}
+
+		if ( 'Username or Email Address' === $text ) {
+			if ( 'email' === $this->settings['valid_user_login_type'] ) {
+				return esc_html__( 'Email Address', 'better-wp-security' );
+			} else if ( 'username' === $this->settings['valid_user_login_type'] ) {
+				return esc_html__( 'Username', 'better-wp-security' );
+			}
+		} else if ( '<strong>ERROR</strong>: Invalid username, email address or incorrect password.' === $text ) {
+			if ( 'email' === $this->settings['valid_user_login_type'] ) {
+				return __( '<strong>ERROR</strong>: Invalid email address or incorrect password.', 'better-wp-security' );
+			} else if ( 'username' === $this->settings['valid_user_login_type'] ) {
+				return __( '<strong>ERROR</strong>: Invalid username or incorrect password.', 'better-wp-security' );
+			}
+		}
+
+		return $translation;
 	}
 
 	/**

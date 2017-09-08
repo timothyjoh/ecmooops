@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'WC_Email_Customer_Reset_Password' ) ) :
+if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 
 /**
  * Customer Reset Password.
@@ -46,21 +46,39 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 	public function __construct() {
 
 		$this->id               = 'customer_reset_password';
+		$this->customer_email   = true;
+
 		$this->title            = __( 'Reset password', 'woocommerce' );
 		$this->description      = __( 'Customer "reset password" emails are sent when customers reset their passwords.', 'woocommerce' );
-		$this->customer_email   = true;
 
 		$this->template_html    = 'emails/customer-reset-password.php';
 		$this->template_plain   = 'emails/plain/customer-reset-password.php';
-
-		$this->subject          = __( 'Password Reset for {site_title}', 'woocommerce');
-		$this->heading          = __( 'Password Reset Instructions', 'woocommerce');
 
 		// Trigger
 		add_action( 'woocommerce_reset_password_notification', array( $this, 'trigger' ), 10, 2 );
 
 		// Call parent constructor
 		parent::__construct();
+	}
+
+	/**
+	 * Get email subject.
+	 *
+	 * @since  3.1.0
+	 * @return string
+	 */
+	public function get_default_subject() {
+		return __( 'Password reset for {site_title}', 'woocommerce' );
+	}
+
+	/**
+	 * Get email heading.
+	 *
+	 * @since  3.1.0
+	 * @return string
+	 */
+	public function get_default_heading() {
+		return __( 'Password reset instructions', 'woocommerce' );
 	}
 
 	/**
@@ -83,8 +101,9 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 			return;
 		}
 
+		$this->setup_locale();
 		$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
-
+		$this->restore_locale();
 	}
 
 	/**
@@ -101,7 +120,7 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 			'blogname'      => $this->get_blogname(),
 			'sent_to_admin' => false,
 			'plain_text'    => false,
-			'email'			=> $this
+			'email'			=> $this,
 		) );
 	}
 
@@ -119,7 +138,7 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 			'blogname'      => $this->get_blogname(),
 			'sent_to_admin' => false,
 			'plain_text'    => true,
-			'email'			=> $this
+			'email'			=> $this,
 		) );
 	}
 }

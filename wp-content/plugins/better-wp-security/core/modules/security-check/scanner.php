@@ -12,6 +12,7 @@ final class ITSEC_Security_Check_Scanner {
 			'ban-users'           => __( 'Banned Users', 'better-wp-security' ),
 			'backup'              => __( 'Database Backups', 'better-wp-security' ),
 			'brute-force'         => __( 'Local Brute Force Protection', 'better-wp-security' ),
+			'magic-links'         => __( 'Magic Links', 'better-wp-security' ),
 			'malware-scheduling'  => __( 'Malware Scan Scheduling', 'better-wp-security' ),
 			'network-brute-force' => __( 'Network Brute Force Protection', 'better-wp-security' ),
 			'strong-passwords'    => __( 'Strong Passwords', 'better-wp-security' ),
@@ -48,6 +49,7 @@ final class ITSEC_Security_Check_Scanner {
 
 		self::enforce_activation( 'backup', __( 'Database Backups', 'better-wp-security' ) );
 		self::enforce_activation( 'brute-force', __( 'Local Brute Force Protection', 'better-wp-security' ) );
+		self::enforce_activation( 'magic-links', __( 'Magic Links', 'better-wp-security' ) );
 		self::enforce_activation( 'malware-scheduling', __( 'Malware Scan Scheduling', 'better-wp-security' ) );
 		self::enforce_setting( 'malware-scheduling', 'email_notifications', true, __( 'Enabled the Email Notifications setting in Malware Scan Scheduling.', 'better-wp-security' ) );
 
