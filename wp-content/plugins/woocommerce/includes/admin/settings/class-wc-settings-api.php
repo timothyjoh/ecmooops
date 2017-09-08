@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'WC_Settings_Rest_API' ) ) :
+if ( ! class_exists( 'WC_Settings_Rest_API', false ) ) :
 
 /**
  * WC_Settings_Rest_API.
@@ -44,7 +44,7 @@ class WC_Settings_Rest_API extends WC_Settings_Page {
 		$sections = array(
 			''         => __( 'Settings', 'woocommerce' ),
 			'keys'     => __( 'Keys/Apps', 'woocommerce' ),
-			'webhooks' => __( 'Webhooks', 'woocommerce' )
+			'webhooks' => __( 'Webhooks', 'woocommerce' ),
 		);
 
 		return apply_filters( 'woocommerce_get_sections_' . $this->id, $sections );
@@ -53,32 +53,37 @@ class WC_Settings_Rest_API extends WC_Settings_Page {
 	/**
 	 * Get settings array.
 	 *
+	 * @param string $current_section
 	 * @return array
 	 */
-	public function get_settings() {
-		$settings = apply_filters( 'woocommerce_settings_rest_api', array(
-			array(
-				'title' => __( 'General Options', 'woocommerce' ),
-				'type'  => 'title',
-				'desc'  => '',
-				'id'    => 'general_options'
-			),
+	public function get_settings( $current_section = '' ) {
+		$settings = array();
 
-			array(
-				'title'   => __( 'API', 'woocommerce' ),
-				'desc'    => __( 'Enable the REST API', 'woocommerce' ),
-				'id'      => 'woocommerce_api_enabled',
-				'type'    => 'checkbox',
-				'default' => 'yes',
-			),
+		if ( '' === $current_section ) {
+			$settings = apply_filters( 'woocommerce_settings_rest_api', array(
+				array(
+					'title' => __( 'General options', 'woocommerce' ),
+					'type'  => 'title',
+					'desc'  => '',
+					'id'    => 'general_options',
+				),
 
-			array(
-				'type' => 'sectionend',
-				'id' => 'general_options'
-			),
-		) );
+				array(
+					'title'   => __( 'API', 'woocommerce' ),
+					'desc'    => __( 'Enable the REST API', 'woocommerce' ),
+					'id'      => 'woocommerce_api_enabled',
+					'type'    => 'checkbox',
+					'default' => 'yes',
+				),
 
-		return apply_filters( 'woocommerce_get_settings_' . $this->id, $settings );
+				array(
+					'type' => 'sectionend',
+					'id' => 'general_options',
+				),
+			) );
+		}
+
+		return apply_filters( 'woocommerce_get_settings_' . $this->id, $settings, $current_section );
 	}
 
 	/**
@@ -135,7 +140,7 @@ class WC_Settings_Rest_API extends WC_Settings_Page {
 
 		if ( 'webhooks' == $current_section ) {
 			WC_Admin_Webhooks::page_output();
-		} else if ( 'keys' == $current_section ) {
+		} elseif ( 'keys' === $current_section ) {
 			WC_Admin_API_Keys::page_output();
 		} else {
 			$settings = $this->get_settings( $current_section );

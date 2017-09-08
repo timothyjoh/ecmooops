@@ -20,7 +20,7 @@ class WC_Cache_Helper {
 	 */
 	public static function init() {
 		add_action( 'template_redirect', array( __CLASS__, 'geolocation_ajax_redirect' ) );
-		add_action( 'before_woocommerce_init', array( __CLASS__, 'prevent_caching' ) );
+		add_action( 'wp', array( __CLASS__, 'prevent_caching' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'notices' ) );
 		add_action( 'delete_version_transients', array( __CLASS__, 'delete_version_transients' ) );
 	}
@@ -55,12 +55,12 @@ class WC_Cache_Helper {
 	 * @return string
 	 */
 	public static function geolocation_ajax_get_location_hash() {
-		$customer             = new WC_Customer();
+		$customer             = new WC_Customer( 0, true );
 		$location             = array();
-		$location['country']  = $customer->get_country();
-		$location['state']    = $customer->get_state();
-		$location['postcode'] = $customer->get_postcode();
-		$location['city']     = $customer->get_city();
+		$location['country']  = $customer->get_billing_country();
+		$location['state']    = $customer->get_billing_state();
+		$location['postcode'] = $customer->get_billing_postcode();
+		$location['city']     = $customer->get_billing_city();
 		return substr( md5( implode( '', $location ) ), 0, 12 );
 	}
 
@@ -107,7 +107,7 @@ class WC_Cache_Helper {
 	 * to append a unique string (based on time()) to each transient. When transients.
 	 * are invalidated, the transient version will increment and data will be regenerated.
 	 *
-	 * Raised in issue https://github.com/woothemes/woocommerce/issues/5777.
+	 * Raised in issue https://github.com/woocommerce/woocommerce/issues/5777.
 	 * Adapted from ideas in http://tollmanz.com/invalidation-schemes/.
 	 *
 	 * @param  string  $group   Name for the group of transients we need to invalidate
@@ -131,6 +131,8 @@ class WC_Cache_Helper {
 	 * Note; this only works on transients appended with the transient version, and when object caching is not being used.
 	 *
 	 * @since  2.3.10
+	 *
+	 * @param string $version
 	 */
 	public static function delete_version_transients( $version = '' ) {
 		if ( ! wp_using_ext_object_cache() && ! empty( $version ) ) {
@@ -147,39 +149,17 @@ class WC_Cache_Helper {
 	}
 
 	/**
-	 * Get the page name/id for a WC page.
-	 * @param  string $wc_page
-	 * @return array
-	 */
-	private static function get_page_uris( $wc_page ) {
-		$wc_page_uris = array();
-
-		if ( ( $page_id = wc_get_page_id( $wc_page ) ) && $page_id > 0 && ( $page = get_post( $page_id ) ) ) {
-			$wc_page_uris[] = 'p=' . $page_id;
-			$wc_page_uris[] = '/' . $page->post_name . '/';
-		}
-
-		return $wc_page_uris;
-	}
-
-	/**
 	 * Prevent caching on dynamic pages.
 	 */
 	public static function prevent_caching() {
-		if ( false === ( $wc_page_uris = get_transient( 'woocommerce_cache_excluded_uris' ) ) ) {
-			$wc_page_uris   = array_filter( array_merge( self::get_page_uris( 'cart' ), self::get_page_uris( 'checkout' ), self::get_page_uris( 'myaccount' ) ) );
-	    	set_transient( 'woocommerce_cache_excluded_uris', $wc_page_uris );
+		if ( ! is_blog_installed() ) {
+			return;
 		}
+		$page_ids        = array_filter( array( wc_get_page_id( 'cart' ), wc_get_page_id( 'checkout' ), wc_get_page_id( 'myaccount' ) ) );
+		$current_page_id = get_queried_object_id();
 
-		if ( isset( $_GET['download_file'] ) ) {
+		if ( isset( $_GET['download_file'] ) || in_array( $current_page_id, $page_ids ) ) {
 			self::nocache();
-		} elseif ( is_array( $wc_page_uris ) ) {
-			foreach ( $wc_page_uris as $uri ) {
-				if ( stristr( trailingslashit( $_SERVER['REQUEST_URI'] ), $uri ) ) {
-					self::nocache();
-					break;
-				}
-			}
 		}
 	}
 
@@ -208,14 +188,14 @@ class WC_Cache_Helper {
 			return;
 		}
 
-		$config   = w3_instance('W3_Config');
+		$config   = w3_instance( 'W3_Config' );
 		$enabled  = $config->get_integer( 'dbcache.enabled' );
 		$settings = array_map( 'trim', $config->get_array( 'dbcache.reject.sql' ) );
 
 		if ( $enabled && ! in_array( '_wc_session_', $settings ) ) {
 			?>
 			<div class="error">
-				<p><?php printf( __( 'In order for <strong>database caching</strong> to work with WooCommerce you must add <code>_wc_session_</code> to the "Ignored Query Strings" option in W3 Total Cache settings <a href="%s">here</a>.', 'woocommerce' ), admin_url( 'admin.php?page=w3tc_dbcache' ) ); ?></p>
+				<p><?php printf( __( 'In order for <strong>database caching</strong> to work with WooCommerce you must add %1$s to the "Ignored Query Strings" option in <a href="%2$s">W3 Total Cache settings</a>.', 'woocommerce' ), '<code>_wc_session_</code>', admin_url( 'admin.php?page=w3tc_dbcache' ) ); ?></p>
 			</div>
 			<?php
 		}
