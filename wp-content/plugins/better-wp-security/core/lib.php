@@ -1033,21 +1033,26 @@ final class ITSEC_Lib {
 
 		/** @var \wpdb $wpdb */
 		global $wpdb;
+		$main_options = $wpdb->base_prefix . 'options';
 
 		$lock = "itsec-lock-{$name}";
 		$now = ITSEC_Core::get_current_time_gmt();
 		$release_at = $now + $expires_in;
 
-		if ( empty( $wpdb->sitemeta ) ) {
-			$result = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO `$wpdb->options` (`option_name`, `option_value`, `autoload`) VALUES (%s, %s, 'no') /* LOCK */", $lock, $release_at ) );
+		if ( is_multisite() ) {
+			$result = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO `{$main_options}` (`option_name`, `option_value`, `autoload`) VALUES (%s, %s, 'no') /* LOCK */", $lock, $release_at ) );
 		} else {
-			$result = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO `$wpdb->sitemeta` (`site_id`, `meta_key`, `meta_value`) VALUES (%d, %s, %s) /* LOCK */", $wpdb->siteid, $lock, $release_at ) );
+			$result = $wpdb->query( $wpdb->prepare( "INSERT IGNORE INTO `$wpdb->options` (`option_name`, `option_value`, `autoload`) VALUES (%s, %s, 'no') /* LOCK */", $lock, $release_at ) );
 		}
 
 		// The lock exists. See if it has expired.
 		if ( ! $result ) {
 
-			$locked_until = get_site_option( $lock );
+			if ( is_multisite() && get_current_blog_id() !== 1 ) {
+				$locked_until = $wpdb->get_var( $wpdb->prepare( "SELECT `option_value` FROM {$main_options} WHERE `option_name` = %s", $main_options ) );
+			} else {
+				$locked_until = get_option( $lock );
+			}
 
 			if ( ! $locked_until ) {
 				// Can't write or read the lock. Bail due to an unknown and hopefully temporary error.
@@ -1061,7 +1066,28 @@ final class ITSEC_Lib {
 		}
 
 		// Ensure that the lock is set properly by triggering all the regular actions and filters.
-		update_site_option( $lock, $release_at );
+		if ( ! is_multisite() || get_current_blog_id() === 1 ) {
+			update_option( $lock, $release_at );
+		} else {
+			$wpdb->update( $main_options, array( 'option_value' => $release_at ), array( 'option_name' => $lock ) );
+
+			if ( function_exists( 'wp_cache_switch_to_blog' ) ) {
+				// Update persistent object caches
+				$current = get_current_blog_id();
+				wp_cache_switch_to_blog( 1 );
+
+				$alloptions = wp_cache_get( 'alloptions' );
+
+				if ( is_array( $alloptions ) && isset( $alloptions[ $lock ] ) ) {
+					$alloptions[ $lock ] = $release_at;
+					wp_cache_set( 'alloptions', $alloptions, 'options' );
+				} else {
+					wp_cache_set( $lock, $release_at, 'options' );
+				}
+
+				wp_cache_switch_to_blog( $current );
+			}
+		}
 
 		return true;
 	}
@@ -1074,7 +1100,95 @@ final class ITSEC_Lib {
 	 * @param string $name The lock name.
 	 */
 	public static function release_lock( $name ) {
-		delete_site_option( "itsec-lock-{$name}" );
+
+		$lock = "itsec-lock-{$name}";
+
+		if ( is_multisite() && get_current_blog_id() !== 1 ) {
+
+			/** @var \wpdb $wpdb */
+			global $wpdb;
+			$main_options = $wpdb->base_prefix . 'options';
+
+			$wpdb->delete( $main_options, array( 'option_name' => $lock ) );
+
+			if ( function_exists( 'wp_cache_switch_to_blog' ) ) {
+				// Update persistent object caches
+				$current = get_current_blog_id();
+				wp_cache_switch_to_blog( 1 );
+
+				$alloptions = wp_cache_get( 'alloptions' );
+
+				if ( is_array( $alloptions ) && isset( $alloptions[ $lock ] ) ) {
+					unset( $alloptions[$lock] );
+					wp_cache_set( 'alloptions', $alloptions, 'options' );
+				} else {
+					wp_cache_delete( $lock, 'options' );
+				}
+
+				wp_cache_switch_to_blog( $current );
+			}
+		} else {
+			delete_option( $lock );
+		}
+	}
+
+	/**
+	 * Clear any expired locks.
+	 *
+	 * The vast majority of locks should be cleared by the same process that acquires them, however, this will clear locks that remain
+	 * due to a time out or fatal error.
+	 *
+	 * @since 3.8.0
+	 */
+	public static function delete_expired_locks() {
+
+		/** @var \wpdb $wpdb */
+		global $wpdb;
+		$main_options = $wpdb->base_prefix . 'options';
+
+		$rows = $wpdb->get_results( $wpdb->prepare(
+			"SELECT `option_name` FROM {$main_options} WHERE `option_name` LIKE %s AND `option_value` < %d",
+			$wpdb->esc_like( 'itsec-lock-' ) . '%', ITSEC_Core::get_current_time_gmt()
+		) );
+
+		if ( $rows ) {
+			if ( is_multisite() && get_current_blog_id() !== 1 ) {
+				if ( function_exists( 'wp_cache_switch_to_blog' ) ) {
+					// Update persistent object caches
+					$current = get_current_blog_id();
+					wp_cache_switch_to_blog( 1 );
+
+					$alloptions = wp_cache_get( 'alloptions' );
+					$set_all = false;
+
+					foreach ( $rows as $row ) {
+						$lock = $row->option_name;
+
+						if ( is_array( $alloptions ) && isset( $alloptions[ $lock ] ) ) {
+							unset( $alloptions[$lock] );
+							$set_all = true;
+						} else {
+							wp_cache_delete( $lock, 'options' );
+						}
+					}
+
+					if ( $set_all ) {
+						wp_cache_set( 'alloptions', $alloptions );
+					}
+
+					wp_cache_switch_to_blog( $current );
+				}
+
+				$wpdb->query( $wpdb->prepare(
+					"DELETE FROM {$main_options} WHERE `option_name` LIKE %s AND `option_value` < %d",
+					$wpdb->esc_like( 'itsec-lock-' ) . '%', ITSEC_Core::get_current_time_gmt()
+				) );
+			} else {
+				foreach ( $rows as $row ) {
+					delete_option( $row->option_name );
+				}
+			}
+		}
 	}
 
 	/**

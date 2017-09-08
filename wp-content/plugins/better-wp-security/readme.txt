@@ -3,7 +3,7 @@ Contributors: ithemes, chrisjean, gerroald, mattdanner, timothyblynjacobs
 Tags: security, security plugin, malware, hack, secure, block, SSL, admin, htaccess, lockdown, login, protect, protection, anti virus, attack, injection, login security, maintenance, permissions, prevention, authentication, administration, password, brute force, ban, permissions, bots, user agents, xml rpc, security log
 Requires at least: 4.6
 Tested up to: 4.8.1
-Stable tag: 6.5.1
+Stable tag: 6.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -188,6 +188,15 @@ Free support may be available with the help of the community in the <a href="htt
 
 == Changelog ==
 
+= 6.6.0 =
+ * New Feature: Added a new setting in WordPress Tweaks: "Login with Email Address or Username".
+ * Enhancement: Host email images from the plugin instead of relying on iThemes servers to help email clients marking messages as spam or blocking images.
+ * Bug Fix: Error when searching for modules preventing modules from appearing.
+ * Bug Fix: Use the wp_options table when acquiring locks in Multisite.
+ * Bug Fix: Prevent duplicate daily digest emails on sites with high load.
+ * Misc: Added Magic Links, a new Pro-only feature, to be activated by Security Check.
+ * Misc: Rearranged modules to be listed alphabetically.
+
 = 6.5.1 =
  * Bug Fix: Fixed logical error that prevented backups from executing.
  * Bug Fix: Fixed issue that could cause database locks to flood the database.
@@ -358,5 +367,5 @@ Free support may be available with the help of the community in the <a href="htt
 
 == Upgrade Notice ==
 
-= 6.5.1 =
-Version 6.5.1 contains important bug fixes. It is recommended for all users.
+= 6.6.0 =
+Version 6.6.0 contains important bug fixes. It is recommended for all users.

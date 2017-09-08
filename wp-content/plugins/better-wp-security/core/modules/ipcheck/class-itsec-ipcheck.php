@@ -234,7 +234,7 @@ class ITSEC_IPCheck {
 
 		if ( $this->settings['enable_ban'] && $this->is_ip_banned() ) {
 			$itsec_logger->log_event( 'ipcheck', 10, array(), ITSEC_Lib::get_ip() );
-			$itsec_lockout->execute_lock( false, true );
+			$itsec_lockout->execute_lock( array( 'network_lock' => true ) );
 		}
 	}
 
@@ -254,7 +254,7 @@ class ITSEC_IPCheck {
 
 		if ( $this->settings['enable_ban'] && $this->report_ip() ) {
 			$itsec_logger->log_event( 'ipcheck', 10, array(), ITSEC_Lib::get_ip() );
-			$itsec_lockout->execute_lock( false, true );
+			$itsec_lockout->execute_lock( array( 'network_lock' => true ) );
 		}
 	}
 

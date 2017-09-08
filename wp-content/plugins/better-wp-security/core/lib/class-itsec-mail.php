@@ -19,7 +19,7 @@ final class ITSEC_Mail {
 			'charset'      => esc_attr( get_bloginfo( 'charset' ) ),
 			'title_tag'    => $title,
 			'banner_title' => $banner_title,
-			'logo'         => ITSEC_Core::is_pro() ? 'https://ithemes.com/email_images/itsec-pro-logo-300x127.png' : 'https://ithemes.com/email_images/itsec-logo-300x127.png',
+			'logo'         => ITSEC_Core::is_pro() ? $this->get_image_url( 'pro_logo' ) : $this->get_image_url( 'logo' ),
 			'title'        => $title,
 		);
 
@@ -36,6 +36,18 @@ final class ITSEC_Mail {
 		}
 
 		return $content;
+	}
+
+	private function replace_images( $content ) {
+		return preg_replace_callback( '/{! \$([a-zA-Z_][\w]*) }}/', array( $this, 'replace_image_callback' ), $content );
+	}
+
+	private function replace_image_callback( $matches ) {
+		if ( empty( $matches ) || empty( $matches[1] ) ) {
+			return '';
+		}
+
+		return esc_url( $this->get_image_url( $matches[1] ) );
 	}
 
 	public function add_footer() {
@@ -100,7 +112,7 @@ final class ITSEC_Mail {
 	}
 
 	public function add_info_box( $content, $icon_type = 'info' ) {
-		$icon_url = "http://ithemes.com/email_images/itsec-$icon_type-icon.png";
+		$icon_url = $this->get_image_url( "{$icon_type}_icon" );
 
 		$module = $this->get_template( 'info-box.html' );
 		$module = $this->replace_all( $module, compact( 'content', 'icon_url' ) );
@@ -120,7 +132,7 @@ final class ITSEC_Mail {
 			$heading = $this->get_template( 'section-heading.html' );
 			$heading = $this->replace_all( $heading, compact( 'content' ) );
 		} else {
-			$icon_url = "https://ithemes.com/email_images/itsec-icon-$icon_type.png";
+			$icon_url = $this->get_image_url( "icon_{$icon_type}" );
 
 			$heading = $this->get_template( 'section-heading-with-icon.html' );
 			$heading = $this->replace_all( $heading, compact( 'content', 'icon_url' ) );
@@ -233,7 +245,11 @@ final class ITSEC_Mail {
 	}
 
 	private function get_template( $template ) {
-		return file_get_contents( $this->template_path . $template );
+		return $this->replace_images( file_get_contents( $this->template_path . $template ) );
+	}
+
+	private function get_image_url( $name ) {
+		return plugin_dir_url( ITSEC_Core::get_core_dir() . 'img/mail/index.php' ) . "{$name}.png";
 	}
 
 	public static function filter_admin_page_url( $url ) {
