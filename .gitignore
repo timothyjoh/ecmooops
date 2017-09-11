@@ -15,6 +15,9 @@ sitemap.xml
 sitemap.xml.gz
 *.log
 
+# LOCALLY, we still use old-fashioned .htaccess:
+.htaccess
+
 # @TODO writable paths
 wp-content/cache/
 wp-content/backups/
