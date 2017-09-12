@@ -11,7 +11,6 @@ jQuery(document).ready( function(){
 
   // close if ESC is pressed
   jQuery(window).keydown(function(e) {
-    console.log(e)
       if(e.which === 27){
         propel_close_popup();
       }
