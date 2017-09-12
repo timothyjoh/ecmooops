@@ -1,8 +1,8 @@
 <?php
-
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
 /**
  * Lean map shortcodes
  *
@@ -29,18 +29,6 @@ function vc_map( $attributes ) {
 	WPBMap::map( $attributes['base'], $attributes );
 }
 
-/* Backwards compatibility  **/
-/**
- * @param $attributes
- *
- * @deprecated, use vc_map instead
- */
-function wpb_map( $attributes ) {
-	// _deprecated_function( 'wpb_map', '4.2 (will be removed in 4.10)', 'vc_map' );
-
-	vc_map( $attributes );
-}
-
 /**
  * @param $shortcode
  *
@@ -48,19 +36,6 @@ function wpb_map( $attributes ) {
  */
 function vc_remove_element( $shortcode ) {
 	WPBMap::dropShortcode( $shortcode );
-}
-
-/* Backwards compatibility  **/
-/**
- * @param $shortcode
- *
- * @since 4.2
- * @deprecated use vc_remove_element instead
- */
-function wpb_remove( $shortcode ) {
-	// _deprecated_function( 'wpb_remove', '4.2 (will be removed in 4.10)', 'vc_remove_element' );
-
-	vc_remove_element( $shortcode );
 }
 
 /**
@@ -89,21 +64,6 @@ function vc_add_params( $shortcode, $attributes ) {
 			vc_add_param( $shortcode, $attr );
 		}
 	}
-}
-
-/**
- * Backwards compatibility
- *
- * @param $shortcode
- * @param $attributes
- *
- * @since 4.2
- * @deprecated
- */
-function wpb_add_param( $shortcode, $attributes ) {
-	// _deprecated_function( 'wpb_add_param', '4.2 (will be removed in 4.10)', 'vc_add_param' );
-
-	vc_add_param( $shortcode, $attributes );
 }
 
 /**
@@ -150,13 +110,12 @@ if ( ! function_exists( 'vc_set_as_theme' ) ) {
 	/**
 	 * Sets plugin as theme plugin.
 	 *
-	 * @param bool $disable_updater - If value is true disables auto updater options.
+	 * @internal param bool $disable_updater - If value is true disables auto updater options.
 	 *
 	 * @since 4.2
 	 */
-	function vc_set_as_theme( $disable_updater = false ) {
+	function vc_set_as_theme() {
 		vc_manager()->setIsAsTheme( true );
-		$disable_updater && vc_manager()->disableUpdater();
 	}
 }
 if ( ! function_exists( 'vc_is_as_theme' ) ) {
@@ -217,7 +176,6 @@ if ( ! function_exists( ( 'vc_editor_set_post_types' ) ) ) {
 	 *
 	 * @param array $post_types
 	 *
-	 * @return array
 	 */
 	function vc_editor_set_post_types( array $post_types ) {
 		vc_manager()->setEditorPostTypes( $post_types );
@@ -258,20 +216,7 @@ if ( ! function_exists( 'vc_shortcodes_theme_templates_dir' ) ) {
 		return vc_manager()->getShortcodesTemplateDir( $template );
 	}
 }
-if ( ! function_exists( 'vc_set_template_dir' ) ) {
-	/**
-	 * Sets directory where Visual Composer should look for template files for content elements.
-	 * @since 4.2
-	 * @deprecated 4.2
-	 *
-	 * @param string - full directory path to new template directory with trailing slash
-	 */
-	function vc_set_template_dir( $dir ) {
-		// _deprecated_function( 'vc_set_template_dir', '4.2 (will be removed in 4.10)', 'vc_set_shortcodes_templates_dir' );
 
-		vc_set_shortcodes_templates_dir( $dir );
-	}
-}
 /**
  * @param bool $value
  *
@@ -280,6 +225,7 @@ if ( ! function_exists( 'vc_set_template_dir' ) ) {
  * @since 4.3
  */
 function set_vc_is_inline( $value = true ) {
+	_deprecated_function( 'set_vc_is_inline', '5.2 (will be removed in 5.3)' );
 	global $vc_is_inline;
 	$vc_is_inline = $value;
 }
@@ -542,20 +488,53 @@ function vc_map_integrate_parse_atts( $base_shortcode, $integrated_shortcode, $a
 
 function vc_map_add_css_animation( $label = true ) {
 	$data = array(
-		'type' => 'dropdown',
+		'type' => 'animation_style',
 		'heading' => __( 'CSS Animation', 'js_composer' ),
 		'param_name' => 'css_animation',
 		'admin_label' => $label,
-		'value' => array(
-			__( 'No', 'js_composer' ) => '',
-			__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-			__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-			__( 'Left to right', 'js_composer' ) => 'left-to-right',
-			__( 'Right to left', 'js_composer' ) => 'right-to-left',
-			__( 'Appear from center', 'js_composer' ) => 'appear',
+		'value' => '',
+		'settings' => array(
+			'type' => 'in',
+			'custom' => array(
+				array(
+					'label' => __( 'Default', 'js_composer' ),
+					'values' => array(
+						__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+						__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+						__( 'Left to right', 'js_composer' ) => 'left-to-right',
+						__( 'Right to left', 'js_composer' ) => 'right-to-left',
+						__( 'Appear from center', 'js_composer' ) => 'appear',
+					),
+				),
+			),
 		),
 		'description' => __( 'Select type of animation for element to be animated when it "enters" the browsers viewport (Note: works only in modern browsers).', 'js_composer' ),
 	);
+
+	/*
+
+			array(
+				'label' => __( 'Slide Exits', 'js_composer' ),
+				'values' => array(
+					__( 'slideOutDown', 'js_composer' ) => array(
+						'value' => 'slideOutDown',
+						'type' => 'out',
+					),
+					__( 'slideOutLeft', 'js_composer' ) => array(
+						'value' => 'slideOutLeft',
+						'type' => 'out',
+					),
+					__( 'slideOutRight', 'js_composer' ) => array(
+						'value' => 'slideOutRight',
+						'type' => 'out',
+					),
+					__( 'slideOutUp', 'js_composer' ) => array(
+						'value' => 'slideOutUp',
+						'type' => 'out',
+					),
+				),
+			)
+	 */
 
 	return apply_filters( 'vc_map_add_css_animation', $data, $label );
 }
@@ -601,6 +580,7 @@ function vc_map_get_defaults( $tag ) {
 
 /**
  * @param $params
+ *
  * @since 4.12
  * @return array
  */
@@ -630,28 +610,45 @@ function vc_map_get_params_defaults( $params ) {
 	return $resultParams;
 }
 
-
 /**
  * @param $tag - shortcode tag3
  * @param $atts - shortcode attributes
  *
- * @return array - return merged values with provided attributes ( 'a'=>1,'b'=>2 + 'b'=>3,'c'=>4 --> 'a'=>1,'b'=>3 )
+ * @return array - return merged values with provided attributes (
+ *     'a'=>1,'b'=>2 + 'b'=>3,'c'=>4 --> 'a'=>1,'b'=>3 )
  *
- * @see vc_shortcode_attribute_parse - return union of provided attributes ( 'a'=>1,'b'=>2 + 'b'=>3,'c'=>4 --> 'a'=>1,
+ * @see vc_shortcode_attribute_parse - return union of provided attributes (
+ *     'a'=>1,'b'=>2 + 'b'=>3,'c'=>4 --> 'a'=>1,
  *     'b'=>3, 'c'=>4 )
  */
 function vc_map_get_attributes( $tag, $atts = array() ) {
 	return shortcode_atts( vc_map_get_defaults( $tag ), $atts, $tag );
 }
 
-/**
- * New Vc now called Frontend editor
- * @deprecated 4.7
- * @return Vc_Frontend_Editor
- * @since 4.3
- */
-function new_vc() {
-	// _deprecated_function( 'new_vc', '4.7 (will be removed in 4.10)', 'vc_frontend_editor' );
+function vc_convert_vc_color( $name ) {
+	$colors = array(
+		'blue' => '#5472d2',
+		'turquoise' => '#00c1cf',
+		'pink' => '#fe6c61',
+		'violet' => '#8d6dc4',
+		'peacoc' => '#4cadc9',
+		'chino' => '#cec2ab',
+		'mulled-wine' => '#50485b',
+		'vista-blue' => '#75d69c',
+		'orange' => '#f7be68',
+		'sky' => '#5aa1e3',
+		'green' => '#6dab3c',
+		'juicy-pink' => '#f4524d',
+		'sandy-brown' => '#f79468',
+		'purple' => '#b97ebb',
+		'black' => '#2a2a2a',
+		'grey' => '#ebebeb',
+		'white' => '#ffffff',
+	);
+	$name = str_replace( '_', '-', $name );
+	if ( isset( $colors[ $name ] ) ) {
+		return $colors[ $name ];
+	}
 
-	return vc_frontend_editor();
+	return '';
 }

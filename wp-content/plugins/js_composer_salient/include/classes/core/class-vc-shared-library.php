@@ -349,7 +349,7 @@ class VcSharedLibrary {
 /**
  * @param string $asset
  *
- * @return array
+ * @return array|string
  */
 function getVcShared( $asset = '' ) {
 	switch ( $asset ) {

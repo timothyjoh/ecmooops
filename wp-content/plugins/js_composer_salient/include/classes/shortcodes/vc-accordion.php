@@ -93,13 +93,12 @@ class WPBakeryShortCode_Toggles extends WPBakeryShortCode {
 
 		$inner = '';
 		foreach ( $this->settings['params'] as $param ) {
-			$param_value = '';
-			$param_value = isset( $$param['param_name'] ) ? $$param['param_name'] : '';
+			$param_value = isset( ${$param['param_name']} ) ? ${$param['param_name']} : '';
 			if ( is_array( $param_value ) ) {
 				// Get first element from the array
 				reset( $param_value );
 				$first_key = key( $param_value );
-				$param_value = $param_value[$first_key];
+				$param_value = $param_value[ $first_key ];
 			}
 			$inner .= $this->singleParamHtmlHolder( $param, $param_value );
 		}

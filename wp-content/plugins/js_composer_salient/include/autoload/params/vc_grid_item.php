@@ -52,13 +52,18 @@ function vc_load_vc_grid_item_param() {
 /* nectar addition */ 
 //add_action( 'vc_load_default_params', 'vc_load_vc_grid_item_param' );
 /* nectar addition end */ 
+
 function vc_gitem_post_data_get_link_target_frontend_editor( $target ) {
 	return ' target="_blank"';
+}
+function vc_gitem_post_data_get_link_rel_frontend_editor( $rel ) {
+	return ' rel="' . $rel . '"';
 }
 
 function vc_gitem_create_link( $atts, $default_class = '', $title = '' ) {
 	$link = '';
 	$target = '';
+	$rel = '';
 	$title_attr = '';
 	$css_class = 'vc_gitem-link' . ( strlen( $default_class ) > 0 ? ' ' . $default_class : '' );
 	if ( isset( $atts['link'] ) ) {
@@ -66,6 +71,9 @@ function vc_gitem_create_link( $atts, $default_class = '', $title = '' ) {
 			$link = vc_build_link( $atts['url'] );
 			if ( strlen( $link['target'] ) ) {
 				$target = ' target="' . esc_attr( $link['target'] ) . '"';
+			}
+			if ( strlen( $link['rel'] ) ) {
+				$rel = ' rel="' . esc_attr( $link['rel'] ) . '"';
 			}
 			if ( strlen( $link['title'] ) ) {
 				$title = $link['title'];
@@ -75,6 +83,11 @@ function vc_gitem_create_link( $atts, $default_class = '', $title = '' ) {
 			$link = 'a href="{{ post_link_url }}" class="' . esc_attr( $css_class ) . '"';
 			if ( ! strlen( $title ) ) {
 				$title = '{{ post_title }}';
+			}
+		} elseif ( 'post_author' === $atts['link'] ) {
+			$link = 'a href="{{ post_author_href }}" class="' . esc_attr( $css_class ) . '"';
+			if ( ! strlen( $title ) ) {
+				$title = '{{ post_author }}';
 			}
 		} elseif ( 'image' === $atts['link'] ) {
 			$link = 'a{{ post_image_url_href }} class="' . esc_attr( $css_class ) . '"';
@@ -88,23 +101,29 @@ function vc_gitem_create_link( $atts, $default_class = '', $title = '' ) {
 
 	return apply_filters( 'vc_gitem_post_data_get_link_link', $link, $atts, $css_class )
 	       . apply_filters( 'vc_gitem_post_data_get_link_target', $target, $atts )
+	       . apply_filters( 'vc_gitem_post_data_get_link_rel', $rel, $atts )
 	       . apply_filters( 'vc_gitem_post_data_get_link_title', $title_attr, $atts );
 }
 
 function vc_gitem_create_link_real( $atts, $post, $default_class = '', $title = '' ) {
 	$link = '';
 	$target = '';
+	$rel = '';
 	$title_attr = '';
 	$link_css_class = 'vc_gitem-link';
 	if ( isset( $atts['link'] ) ) {
 		$link_css_class = 'vc_gitem-link' . ( strlen( $default_class ) > 0 ? ' ' . $default_class : '' );
 		if ( strlen( $atts['el_class'] ) > 0 ) {
-			$link_css_class .= $atts['el_class'];
+			$link_css_class .= ' ' . $atts['el_class'];
 		}
+		$link_css_class = trim( preg_replace( '/\s+/', ' ', $link_css_class ) );
 		if ( 'custom' === $atts['link'] && ! empty( $atts['url'] ) ) {
 			$link = vc_build_link( $atts['url'] );
 			if ( strlen( $link['target'] ) ) {
 				$target = ' target="' . esc_attr( $link['target'] ) . '"';
+			}
+			if ( strlen( $link['rel'] ) ) {
+				$rel = ' rel="' . esc_attr( $link['rel'] ) . '"';
 			}
 			if ( strlen( $link['title'] ) ) {
 				$title = $link['title'];
@@ -131,6 +150,7 @@ function vc_gitem_create_link_real( $atts, $post, $default_class = '', $title = 
 
 	return apply_filters( 'vc_gitem_post_data_get_link_real_link', $link, $atts, $post, $link_css_class )
 	       . apply_filters( 'vc_gitem_post_data_get_link_real_target', $target, $atts, $post )
+	       . apply_filters( 'vc_gitem_post_data_get_link_real_rel', $rel, $atts, $post )
 	       . apply_filters( 'vc_gitem_post_data_get_link_real_title', $title_attr, $atts );
 }
 
@@ -142,5 +162,7 @@ if ( vc_is_page_editable() ) {
 	add_filter( 'vc_gitem_post_data_get_link_link', 'vc_gitem_post_data_get_link_link_frontend_editor' );
 	add_filter( 'vc_gitem_post_data_get_link_real_link', 'vc_gitem_post_data_get_link_link_frontend_editor' );
 	add_filter( 'vc_gitem_post_data_get_link_target', 'vc_gitem_post_data_get_link_target_frontend_editor' );
+	add_filter( 'vc_gitem_post_data_get_link_rel', 'vc_gitem_post_data_get_link_rel_frontend_editor' );
 	add_filter( 'vc_gitem_post_data_get_link_real_target', 'vc_gitem_post_data_get_link_target_frontend_editor' );
+	add_filter( 'vc_gitem_post_data_get_link_real_rel', 'vc_gitem_post_data_get_link_rel_frontend_editor' );
 }

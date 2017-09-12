@@ -2,10 +2,17 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
 /** @var $box Vc_Templates_Panel_Editor */
 $with_tabs = count( $categories ) > 0;
 if ( count( $categories ) > 0 ) :
 	$first = true;
+	
+	/*nectar addition*/
+	if($categories) {
+		$categories = array_reverse($categories);
+	}
+	/*nectar addition end*/
 	?>
 	<ul class="vc_general vc_ui-tabs-line" data-vc-ui-element="panel-tabs-controls">
 						<?php foreach ( $categories as $key => $value ) :

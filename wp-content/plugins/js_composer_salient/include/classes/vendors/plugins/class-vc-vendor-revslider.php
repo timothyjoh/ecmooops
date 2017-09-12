@@ -20,7 +20,7 @@ class Vc_Vendor_Revslider implements Vc_Vendor_Interface {
 	 */
 	public function load() {
 		add_action( 'vc_after_mapping', array(
-			&$this,
+			$this,
 			'buildShortcode',
 		) );
 
@@ -37,7 +37,7 @@ class Vc_Vendor_Revslider implements Vc_Vendor_Interface {
 			) );
 			if ( vc_is_frontend_ajax() || vc_is_frontend_editor() ) {
 				add_filter( 'vc_revslider_shortcode', array(
-					&$this,
+					$this,
 					'setId',
 				) );
 			}

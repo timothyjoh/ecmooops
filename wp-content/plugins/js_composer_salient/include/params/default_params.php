@@ -191,20 +191,6 @@ function vc_taxonomies_form_field( $settings, $value ) {
 }
 
 /**
- * @deprecated 4.9
- *
- * @param $settings
- * @param $value
- *
- * @since 4.4
- * @return string
- */
-function vc_taxomonies_form_field( $settings, $value ) {
-	_deprecated_function( 'vc_taxomonies_form_field', '4.9 (will be removed in 4.11)' );
-	return vc_taxonomies_form_field( $settings, $value );
-}
-
-/**
  * Exploded textarea shortcode attribute type generator.
  *
  * Data saved and coma-separated values are merged with line breaks and returned in a textarea.
@@ -320,10 +306,10 @@ function vc_attach_images_form_field( $settings, $value, $tag, $single = false )
 	$output .= '</div>';
 	if ( true === $single ) {
 		$output .= '<a class="gallery_widget_add_images" href="#" use-single="true" title="'
-		           . __( 'Add image', 'js_composer' ) . '">' . __( 'Add image', 'js_composer' ) . '</a>'; //class: button
+		           . __( 'Add image', 'js_composer' ) . '"><i class="vc-composer-icon vc-c-icon-add"></i>' . __( 'Add image', 'js_composer' ) . '</a>'; //class: button
 	} else {
 		$output .= '<a class="gallery_widget_add_images" href="#" title="'
-		           . __( 'Add images', 'js_composer' ) . '">' . __( 'Add images', 'js_composer' ) . '</a>'; //class: button
+		           . __( 'Add images', 'js_composer' ) . '"><i class="vc-composer-icon vc-c-icon-add"></i>' . __( 'Add images', 'js_composer' ) . '</a>'; //class: button
 	}
 
 	return $output;

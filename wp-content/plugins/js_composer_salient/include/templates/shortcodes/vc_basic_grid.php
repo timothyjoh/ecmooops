@@ -36,8 +36,15 @@ if ( ! empty( $atts['page_id'] ) ) {
 	$this->grid_settings['page_id'] = (int) $atts['page_id'];
 }
 $this->enqueueScripts();
+
+$animation = isset( $this->atts['initial_loading_animation'] ) ? $this->atts['initial_loading_animation'] : 'zoomIn';
+
+$wrapper_attributes = array();
+if ( ! empty( $atts['el_id'] ) ) {
+	$wrapper_attributes[] = 'id="' . esc_attr( $atts['el_id'] ) . '"';
+}
 ?><!-- vc_grid start -->
-<div class="vc_grid-container-wrapper vc_clearfix">
-	<div class="<?php echo esc_attr( $css_class ) ?>" data-vc-<?php echo esc_attr( $this->pagable_type ); ?>-settings="<?php echo esc_attr( json_encode( $this->grid_settings ) ); ?>" data-vc-request="<?php echo esc_attr( admin_url( 'admin-ajax.php', 'relative' ) ); ?>" data-vc-post-id="<?php echo esc_attr( get_the_ID() ); ?>" data-vc-public-nonce="<?php echo vc_generate_nonce( 'vc-public-nonce' ); ?>">
+<div class="vc_grid-container-wrapper vc_clearfix" <?php echo implode( ' ', $wrapper_attributes ); ?>>
+	<div class="<?php echo esc_attr( $css_class ) ?>" data-initial-loading-animation="<?php echo esc_attr( $animation );?>" data-vc-<?php echo esc_attr( $this->pagable_type ); ?>-settings="<?php echo esc_attr( json_encode( $this->grid_settings ) ); ?>" data-vc-request="<?php echo esc_attr( apply_filters( 'vc_grid_request_url', admin_url( 'admin-ajax.php' ) ) ); ?>" data-vc-post-id="<?php echo esc_attr( get_the_ID() ); ?>" data-vc-public-nonce="<?php echo vc_generate_nonce( 'vc-public-nonce' ); ?>">
 	</div>
 </div><!-- vc_grid end -->

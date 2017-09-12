@@ -47,7 +47,7 @@ abstract class Vc_Access {
 					$args = array( $args );
 				}
 				$this->setValidAccess( true );
-				call_user_func_array( array( &$this, $method ), $args );
+				call_user_func_array( array( $this, $method ), $args );
 				if ( $valid === $this->getValidAccess() ) {
 					$access = $valid;
 					break;
@@ -74,8 +74,8 @@ abstract class Vc_Access {
 	 * Call die() function with message if access is invalid.
 	 *
 	 * @param string $message
-	 *
 	 * @return $this
+	 * @throws \Exception
 	 */
 	public function validateDie( $message = '' ) {
 		$result = $this->getValidAccess();
@@ -148,7 +148,7 @@ abstract class Vc_Access {
 	/**
 	 * @param string $nonce
 	 *
-	 * @return Vc_Current_User_Access
+	 * @return Vc_Access
 	 */
 	public function checkAdminNonce( $nonce = '' ) {
 		return $this->check( 'vc_verify_admin_nonce', $nonce );
@@ -157,7 +157,7 @@ abstract class Vc_Access {
 	/**
 	 * @param string $nonce
 	 *
-	 * @return Vc_Current_User_Access
+	 * @return Vc_Access
 	 */
 	public function checkPublicNonce( $nonce = '' ) {
 		return $this->check( 'vc_verify_public_nonce', $nonce );

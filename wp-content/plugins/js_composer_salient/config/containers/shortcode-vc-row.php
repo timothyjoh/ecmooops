@@ -1,10 +1,15 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 return array(
-	'name' => __( 'Row' , 'js_composer' ),
+	'name' => __( 'Row', 'js_composer' ),
 	'is_container' => true,
 	'icon' => 'icon-wpb-row',
 	'show_settings_on_create' => false,
 	'category' => __( 'Content', 'js_composer' ),
+	'class' => 'vc_main-sortable-element',
 	'description' => __( 'Place content elements inside the row', 'js_composer' ),
 	'params' => array(
 		array(
@@ -68,7 +73,7 @@ return array(
 			'heading' => __( 'Equal height', 'js_composer' ),
 			'param_name' => 'equal_height',
 			'description' => __( 'If checked columns will be set to equal height.', 'js_composer' ),
-			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' )
+			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
 		),
 		array(
 			'type' => 'dropdown',
@@ -142,6 +147,8 @@ return array(
 				'not_empty' => true,
 			),
 		),
+
+		vc_map_add_css_animation( false ),
 		array(
 			'type' => 'el_id',
 			'heading' => __( 'Row ID', 'js_composer' ),
@@ -151,7 +158,8 @@ return array(
 		array(
 			'type' => 'checkbox',
 			'heading' => __( 'Disable row', 'js_composer' ),
-			'param_name' => 'disable_element', // Inner param name.
+			'param_name' => 'disable_element',
+			// Inner param name.
 			'description' => __( 'If checked the row won\'t be visible on the public side of your website. You can switch it back any time.', 'js_composer' ),
 			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
 		),
@@ -168,7 +176,8 @@ return array(
 			'heading' => __( 'CSS box', 'js_composer' ),
 			'param_name' => 'css',
 			'group' => __( 'Design Options', 'js_composer' ),
-		),*/
+		),
+		*/
 		/* nectar addition end */ 
 	),
 	'js_view' => 'VcRowView',

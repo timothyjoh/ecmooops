@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
 $total_templates = visual_composer()
 	->templatesPanelEditor()
 	->loadDefaultTemplates();
@@ -74,15 +75,18 @@ $templates_total_count = count( $total_templates );
 			<div class="vc_welcome-visible-ne">
 				<a id="vc_not-empty-add-element" class="vc_add-element-not-empty-button"
 				   title="<?php _e( 'Add Element', 'js_composer' ) ?>" data-vc-element="add-element-action">
+					<i class="vc-composer-icon vc-c-icon-add"></i>
 				</a>
 			</div>
 		<?php endif; ?>
 		<p class="vc_ui-help-block vc_welcome-visible-e">
 			<?php
-			$targetLink = '<a href="http://kb.wpbakery.com" target="_blank">' . __( 'knowledge base', 'js_composer' ) . '</a>';
+			/*nectar addition*/
+			$targetLink = '<a href="http://themenectar.com/docs/salient" target="_blank">' . __( 'knowledge base', 'js_composer' ) . '</a>';
 			$targetText = __( 'Don\'t know where to start? Visit our %s.', 'js_composer' );
 			$targetText = sprintf( $targetText, $targetLink );
 			echo $targetText;
+			/*nectar addition end*/
 			?>
 		</p>
 	</div>

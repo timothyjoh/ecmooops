@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
 return array(
 	'name' => __( 'Inner Row', 'js_composer' ),
 	//Inner Row
@@ -20,7 +24,7 @@ return array(
 			'heading' => __( 'Equal height', 'js_composer' ),
 			'param_name' => 'equal_height',
 			'description' => __( 'If checked columns will be set to equal height.', 'js_composer' ),
-			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' )
+			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
 		),
 		array(
 			'type' => 'dropdown',
@@ -56,6 +60,14 @@ return array(
 			'description' => __( 'Select gap between columns in row.', 'js_composer' ),
 		),
 		array(
+			'type' => 'checkbox',
+			'heading' => __( 'Disable row', 'js_composer' ),
+			'param_name' => 'disable_element',
+			// Inner param name.
+			'description' => __( 'If checked the row won\'t be visible on the public side of your website. You can switch it back any time.', 'js_composer' ),
+			'value' => array( __( 'Yes', 'js_composer' ) => 'yes' ),
+		),
+		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
 			'param_name' => 'el_class',
@@ -68,8 +80,9 @@ return array(
 			'heading' => __( 'CSS box', 'js_composer' ),
 			'param_name' => 'css',
 			'group' => __( 'Design Options', 'js_composer' ),
-		),*/
-/* nectar addition end */ 
+		),
+		*/
+		/* nectar addition end */ 
 	),
 	'js_view' => 'VcRowView',
 );

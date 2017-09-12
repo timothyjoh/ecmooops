@@ -3,7 +3,7 @@
 Plugin Name: Salient Visual Composer
 Plugin URI: http://vc.wpbakery.com
 Description: Drag and drop page builder for WordPress. Take full control over your WordPress site, build any layout you can imagine – no programming knowledge required.
-Version: 4.12
+Version: 5.2.1
 Author: Michael M - WPBakery.com | Modified by ThemeNectar
 Author URI: http://wpbakery.com
 */
@@ -19,10 +19,12 @@ if ( ! defined( 'WPB_VC_VERSION' ) ) {
 	/**
 	 *
 	 */
-	define( 'WPB_VC_VERSION', '4.12' );
+	define( 'WPB_VC_VERSION', '5.2.1' );
 }
 
+/*nectar addition*/
 define( 'SALIENT_VC_ACTIVE', true );
+/*nectar addition end*/
 
 /**
  * Vc starts here. Manager sets mode, adds required wp hooks and loads required object of structure
@@ -105,8 +107,9 @@ class Vc_Manager {
 	/**
 	 * @var string
 	 */
+	 /*nectar addition*/
 	private $plugin_name = 'js_composer_salient/js_composer.php';
-
+  /*nectar addition end*/
 	/**
 	 * Core singleton class
 	 * @var self - pattern realization
@@ -154,7 +157,7 @@ class Vc_Manager {
 		$this->setPaths( array(
 			'APP_ROOT' => $dir,
 			'WP_ROOT' => preg_replace( '/$\//', '', ABSPATH ),
-			'APP_DIR' => basename( $dir ),
+			'APP_DIR' => basename( plugin_basename( $dir ) ),
 			'CONFIG_DIR' => $dir . '/config',
 			'ASSETS_DIR' => $dir . '/assets',
 			'ASSETS_DIR_NAME' => 'assets',
@@ -177,15 +180,25 @@ class Vc_Manager {
 		require_once $this->path( 'CORE_DIR', 'class-wpb-map.php' );
 		require_once $this->path( 'CORE_DIR', 'class-vc-shared-library.php' );
 		require_once $this->path( 'HELPERS_DIR', 'helpers_api.php' );
+		require_once $this->path( 'HELPERS_DIR', 'helpers_deprecated.php' );
 		require_once $this->path( 'HELPERS_DIR', 'filters.php' );
 		require_once $this->path( 'PARAMS_DIR', 'params.php' );
 		require_once $this->path( 'AUTOLOAD_DIR', 'vc-shortcode-autoloader.php' );
 		require_once $this->path( 'SHORTCODES_DIR', 'shortcodes.php' );
 		// Add hooks
-		add_action( 'plugins_loaded', array( &$this, 'pluginsLoaded' ), 9 );
-		add_action( 'init', array( &$this, 'init' ), 9 );
+		add_action( 'plugins_loaded', array(
+			$this,
+			'pluginsLoaded',
+		), 9 );
+		add_action( 'init', array(
+			$this,
+			'init',
+		), 9 );
 		$this->setPluginName( $this->path( 'APP_DIR', 'js_composer.php' ) );
-		register_activation_hook( __FILE__, array( $this, 'activationHook' ) );
+		register_activation_hook( __FILE__, array(
+			$this,
+			'activationHook',
+		) );
 	}
 
 	/**
@@ -202,19 +215,13 @@ class Vc_Manager {
 	}
 
 	/**
-	 * Cloning disabled
+	 * prevent the instance from being cloned (which would create a second instance of it)
 	 */
 	private function __clone() {
 	}
 
 	/**
-	 * Serialization disabled
-	 */
-	private function __sleep() {
-	}
-
-	/**
-	 * De-serialization disabled
+	 * prevent from being unserialized (which would create a second instance of it)
 	 */
 	private function __wakeup() {
 	}
@@ -269,6 +276,10 @@ class Vc_Manager {
 		do_action( 'vc_after_mapping' ); // VC ACTION
 		// Load && Map shortcodes from Automapper.
 		vc_automapper()->map();
+		/* nectar addition */ 
+		/*if ( vc_user_access()->wpAny( 'manage_options' )->part( 'settings' )->can( 'vc-updater-tab' )->get() ) {
+			vc_license()->setupReminder();
+		} */
 		do_action( 'vc_after_init' );
 	}
 
@@ -315,9 +326,11 @@ class Vc_Manager {
 	/**
 	 * Enables to add hooks in activation process.
 	 * @since 4.5
+	 *
+	 * @param $networkWide
 	 */
-	public function activationHook() {
-		do_action( 'vc_activation_hook' );
+	public function activationHook( $networkWide = false ) {
+		do_action( 'vc_activation_hook', $networkWide );
 	}
 
 	/**
@@ -364,7 +377,8 @@ class Vc_Manager {
 	 * @return void
 	 */
 	protected function asAdmin() {
-		vc_license()->init();
+		/* nectar addition
+		vc_license()->init(); */
 		vc_backend_editor()->addHooksSettings();
 	}
 
@@ -391,43 +405,26 @@ class Vc_Manager {
 		 */
 		if ( is_admin() ) {
 			if ( 'vc_inline' === vc_action() ) {
-				vc_user_access()
-					->wpAny( array(
-						'edit_post',
-						(int) vc_request_param( 'post_id' ),
-					) )
-					->validateDie()
-					->part( 'frontend_editor' )
-					->can()
-					->validateDie();
+				vc_user_access()->wpAny( array(
+					'edit_post',
+					(int) vc_request_param( 'post_id' ),
+				) )->validateDie()->part( 'frontend_editor' )->can()->validateDie();
 				$this->mode = 'admin_frontend_editor';
-			} elseif ( ( vc_user_access()
-					->wpAny( 'edit_posts', 'edit_pages' )
+			} elseif ( ( vc_user_access()->wpAny( 'edit_posts', 'edit_pages' )
 					->get() ) && ( 'vc_upgrade' === vc_action() || ( 'update-selected' === vc_get_param( 'action' ) && $this->pluginName() === vc_get_param( 'plugins' ) ) )
 			) {
 				$this->mode = 'admin_updater';
-			} elseif ( vc_user_access()
-				           ->wpAny( 'manage_options' )
-				           ->get() && isset( $_GET['page'] ) && $_GET['page'] === $this->settings()
-			                                                                         ->page()
-			) {
+			} elseif ( vc_user_access()->wpAny( 'manage_options' )->get() && isset( $_GET['page'] ) && array_key_exists( $_GET['page'], vc_settings()->getTabs() ) ) {
 				$this->mode = 'admin_settings_page';
 			} else {
 				$this->mode = 'admin_page';
 			}
 		} else {
 			if ( isset( $_GET['vc_editable'] ) && 'true' === $_GET['vc_editable'] ) {
-				vc_user_access()
-					->checkAdminNonce()
-					->validateDie()
-					->wpAny( array(
-						'edit_post',
-						(int) vc_request_param( 'vc_post_id' ),
-					) )
-					->validateDie()
-					->part( 'frontend_editor' )
-					->can()
-					->validateDie();
+				vc_user_access()->checkAdminNonce()->validateDie()->wpAny( array(
+					'edit_post',
+					(int) vc_request_param( 'vc_post_id' ),
+				) )->validateDie()->part( 'frontend_editor' )->can()->validateDie();
 				$this->mode = 'page_editable';
 			} else {
 				$this->mode = 'page';
@@ -501,10 +498,12 @@ class Vc_Manager {
 	 * @param array $type - list of default post types.
 	 */
 	public function setEditorDefaultPostTypes( array $type ) {
+		/*nectar addition */
 		//$this->editor_default_post_types = $type;
 		global $options;
 		$nectar_vc_post_types = (!empty($options['product_tab_position']) && $options['product_tab_position'] == 'fullwidth') ? array('page','post','portfolio','product') : array('page','post','portfolio');
 		$nectar_vc_post_types = $type;
+		/*nectar addition end */
 	}
 
 	/**
@@ -516,9 +515,11 @@ class Vc_Manager {
 	 * @return array
 	 */
 	public function editorDefaultPostTypes() {
+		/*nectar addition */
 		global $options;
 		$nectar_vc_post_types = (!empty($options['product_tab_position']) && $options['product_tab_position'] == 'fullwidth') ? array('page','post','portfolio','product') : array('page','post','portfolio');
 		return $nectar_vc_post_types;
+		/*nectar addition end */
 	}
 
 	/**
@@ -531,9 +532,7 @@ class Vc_Manager {
 	 */
 	public function editorPostTypes() {
 		if ( is_null( $this->editor_post_types ) ) {
-			$post_types = array_keys( vc_user_access()
-				->part( 'post_types' )
-				->getAllCaps() );
+			$post_types = array_keys( vc_user_access()->part( 'post_types' )->getAllCaps() );
 			$this->editor_post_types = $post_types ? $post_types : $this->editorDefaultPostTypes();
 		}
 
@@ -559,8 +558,7 @@ class Vc_Manager {
 			$all_post_types = $part->getAllCaps();
 
 			foreach ( $all_post_types as $post_type => $value ) {
-				$part->getRole()
-				     ->remove_cap( $part->getStateKey() . '/' . $post_type );
+				$part->getRole()->remove_cap( $part->getStateKey() . '/' . $post_type );
 			}
 			$part->setState( 'custom' );
 
@@ -620,9 +618,7 @@ class Vc_Manager {
 	public function isNetworkPlugin() {
 		if ( is_null( $this->is_network_plugin ) ) {
 			// Check is VC as network plugin
-			if ( is_multisite() && ( is_plugin_active_for_network( 'js_composer_salient/js_composer.php' )
-			                         || is_network_only_plugin( 'js_composer_salient/js_composer.php' ) )
-			) {
+			if ( is_multisite() && ( is_plugin_active_for_network( $this->pluginName() ) || is_network_only_plugin( $this->pluginName() ) ) ) {
 				$this->setAsNetworkPlugin( true );
 			}
 		}
@@ -638,12 +634,7 @@ class Vc_Manager {
 	 * @param bool $value
 	 */
 	public function disableUpdater( $value = true ) {
-		if ( 'administrator' !== vc_user_access()
-				->part( 'settings' )
-				->getRoleName()
-		) {
-			$this->disable_updater = $value;
-		}
+		$this->disable_updater = $value;
 	}
 
 	/**
@@ -744,10 +735,18 @@ class Vc_Manager {
 			$vc = new Vc_Base();
 			// DI Set template new modal editor.
 			require_once $this->path( 'EDITORS_DIR', 'popups/class-vc-templates-panel-editor.php' );
+			require_once $this->path( 'CORE_DIR', 'shared-templates/class-vc-shared-templates.php' );
 			$vc->setTemplatesPanelEditor( new Vc_Templates_Panel_Editor() );
+			// Create shared templates
+			$vc->shared_templates = new Vc_Shared_Templates();
+
 			// DI Set edit form
 			require_once $this->path( 'EDITORS_DIR', 'popups/class-vc-shortcode-edit-form.php' );
 			$vc->setEditForm( new Vc_Shortcode_Edit_Form() );
+
+			// DI Set preset new modal editor.
+			require_once $this->path( 'EDITORS_DIR', 'popups/class-vc-preset-panel-editor.php' );
+			$vc->setPresetPanelEditor( new Vc_Preset_Panel_Editor() );
 
 			$this->factory['vc'] = $vc;
 			do_action( 'vc_after_init_vc' );

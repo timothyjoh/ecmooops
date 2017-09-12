@@ -1,3 +1,113 @@
+03.08.2017 - ver 5.2.1
+   Update: Function add_shortcode_param returned
+   Update: Function get_row_css_class returned
+   Update: Function wpb_map returned
+   Fix: std fixed for attribute types nested in a param group
+   Fix: vc_js error on frontend editor
+
+29.06.2017 - ver 5.2.
+   Added: RTL support
+   Added: HoverBox content element
+   Added: ZigZag separator content element
+   Added: Parallax effect added to columns
+   Added: video background added to columns
+   Update: element presets work as My Elements in Add Element window
+   Update: drag and drop control in Role Manager
+   Update: deprecated functions removed
+   Update: Arabic translation
+   Update: Russian translation
+   Update: Spanish translation
+   Fix: TinyMCE performance in Backend editor
+   Fix: remove obsolete function designOptions
+   Fix: Layer Slider compatibility issues
+   Fix: templates user access
+   Fix: shortcode saving in fe adds 0=""
+   Fix: duplicate icons when adding custom icon font
+   Fix: subscriber see Visual Composer welcome page
+   Fix: WPML vendor issue
+   Fix: page returns 0 when clicking add to cart from grid template
+   Fix: shortcode regexp for dash in shortcode name
+   Fix: preg_replace result, replacement and extra space
+   Fix: filesystem error when saving design options (css) in settings
+   Fix: woocommerce product id in grid api
+   Fix: tabs/tours/accordions role access
+
+11.04.2017 - ver 5.1.1.1.
+   Update: Performance improvements for elements
+   Fix: Element removing warnings
+
+04.04.2017 - ver 5.1.1
+   Added: extra security check for grid ajax calls to harden security
+
+09.03.2017 - ver 5.1
+   Added: Element Id for all elements
+   Added: Image size control for Grid Builder media elements
+   Update: Grid Builder Backend editor style user interface
+   Update: List of available Google Fonts
+   Fix: getJSON backward compatibility for jQuery
+   Fix: vcIcon font family
+   Fix: postDeactivate redirect url
+   Fix: Extra isset check in case if vc_remove_param
+   Fix: Not all child categories are displayed in the drop-down
+   Fix: Autocomplete param sorting
+   Fix: Shortcode mapper and shortcodes with dashes
+   Fix: Can not read property of 'IndexOf'
+   Fix: Custom CSS textarea height
+   Fix: Missing scrollbar for view preset
+   Fix: Fix vc_gitem_template_attribute_post_image_url warning for array_merge
+   Fix: Box-shadow and borders for twenty-seventeen
+   Fix: Media query for added css files
+   Fix: Increase gap in edit form for google fonts
+   Fix: Hiding all "Tabs" in tab module still displays active item
+   Fix: php 7.1 compatibility issues
+   Fix: Section save as template option
+
+17.11.2016 - ver 5.0.1
+   Improved: Auto update process on hostings with wrong chmod on /tmp directory
+   Fixed: CSS Animation "none" works differently on save
+   Fixed: Prettyphoto jumps up on closing in firefox
+   Fixed: Section in template breaks
+   Fixed: Warning for array_merge in vc_gitem_template_attribute_post_image_url
+
+09.11.2016 - ver 5.0
+   Added: Visual Composer Template Library with downloadable templates
+   Added: Section element to combine rows
+   Added: Material icon set to icon libraries
+   Added: Animate CSS animations
+   Added: template saving for section and row
+   Update: all elements has CSS animation attribute
+   Update: UI of element preset saving
+   Update: editor controls with retina friendly icon set
+   Update: IE8-9 support files removed
+   Update: compatibility with Ninja Forms
+   Update: less.js version update for better performance
+   Update: activation/deactivation mechanism
+   Update: iconpicker performance
+   Fix: php notice for default post type
+   Fix: php notices for post save
+   Fix: autocomplete element removing indexes
+   Fix: warning foreach for acf grid shortcodes
+   Fix: activation state on multisite
+   Fix: custom heading google fonts loading
+   Deprecated: class license methods in favor of 4.8
+   Deprecated: droppable and draggable methods in javascript for rows
+
+07.09.2016 - ver 4.12.1
+   Fixed: backend editor loading - getContent in case if #content doesn't exists
+   Fixed: Grid item background image URL quoting
+   Fixed: Entypo icons
+   Fixed: Templates preview element icons
+   Fixed: Remove extra next/prev buttons for prettyPhoto
+   Fixed: Lightbox in firefox
+   Fixed: Empty content welcome block for latest woocommerce
+   Fixed: Hook into the YoastSEO:ready event directly.
+   Fixed: Disable scrollTo when autoplay enabled
+   Fixed: PrettyPhoto is-single hover controls
+   Fixed: Grid Item ajax response rendering when no posts found
+   Updated: Make old names for deprecated elements
+   Updated: Old buttons and CTA removed from add element list
+   Updated: FontAwesome to 4.6.3
+
 08.06.2016 - ver 4.12
    - Added: Set default templates for post types
    - Added: Option to disable/hide row
@@ -29,7 +139,7 @@
    
 15.04.2016 - ver 4.11.2.1
    - # is properly escaped for updated jQuery
-   
+
 07.04.2016 - ver 4.11.2
    - Added: Compatibility with WP 4.5
    - Added: Filter for database query limits
@@ -71,21 +181,21 @@
    - Fixed: Link stripping from images added from "Add Media"
 
 5.02.2016 - ver 4.10
-   - Added: Compatibility with option to add ACF to page
-   - Added: Video width and alignment controls
-   - Added: Parallax speed parameter added
-   - Added: Category and Author elements added to Grid Builder
-   - Added: Link to author in Grid Builder
-   - Update: License tab available with 'set as theme’
-   - Update: TweetMe button updated to support new styles
-   - Update: Fontawesome library updated
-   - Update: Grid Builder templates include user templates
-   - Fixed: Add Media image sorting in WYSIWYG
-   - Fixed: Single image preview in Grid Builder
-   - Fixed: WP Theme 2016 underline fix
-   - Fixed: Tabs outline style fix
-   - Fixed: Iconpicker icons rendering on category change
-   - Fixed: ACF fields rendering in Grid Builder
+	- Added: Compatibility with option to add ACF to page
+	- Added: Video width and alignment controls
+	- Added: Parallax speed parameter added
+	- Added: Category and Author elements added to Grid Builder
+	- Added: Link to author in Grid Builder
+	- Update: License tab available with 'set as theme’
+	- Update: TweetMe button updated to support new styles
+	- Update: Fontawesome library updated
+	- Update: Grid Builder templates include user templates
+	- Fixed: Add Media image sorting in WYSIWYG
+	- Fixed: Single image preview in Grid Builder
+	- Fixed: WP Theme 2016 underline fix
+	- Fixed: Tabs outline style fix
+	- Fixed: Iconpicker icons rendering on category change
+	- Fixed: ACF fields rendering in Grid Builder
 
 12.01.2016 - ver 4.9.2
    - Fixed: "Editing an existing Post Grid, page IDs are displayed instead of titles."

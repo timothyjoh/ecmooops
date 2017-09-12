@@ -110,7 +110,7 @@ if ( ! class_exists( 'WPBakeryVisualComposerCssEditor' ) ) {
 			           . '  <div class="inner" style="width: 80px; height: 80px; overflow: hidden;text-align: center;">'
 			           . '    <img src="{{ img.url }}?id={{ img.id }}" data-image-id="{{ img.id }}" class="vc_ce-image<# if (!_.isUndefined(img.css_class)) {#> {{ img.css_class }}<# }#>">'
 			           . '  </div>'
-			           . '  <a href="#" class="vc_icon-remove"></a>'
+			           . '  <a href="#" class="vc_icon-remove"><i class="vc-composer-icon vc-c-icon-close"></i></a>'
 			           . '</li>'
 			           . '</script>';
 
@@ -123,7 +123,7 @@ if ( ! class_exists( 'WPBakeryVisualComposerCssEditor' ) ) {
 		function getBackgroundImageControl() {
 			return apply_filters( 'vc_css_editor_background_image_control', '<ul class="vc_image">'
 				. '</ul>'
-			. '<a href="#" class="vc_add-image">' . __( 'Add image', 'js_composer' ) . '</a>' );
+			. '<a href="#" class="vc_add-image"><i class="vc-composer-icon vc-c-icon-add"></i>' . __( 'Add image', 'js_composer' ) . '</a>' );
 		}
 
 		/**

@@ -27,14 +27,17 @@ class Vc_Shortcode_Edit_Form implements Vc_Render {
 		}
 		$this->initialized = true;
 
-		add_action( 'wp_ajax_vc_edit_form', array( &$this, 'renderFields' ) );
+		add_action( 'wp_ajax_vc_edit_form', array(
+			$this,
+			'renderFields',
+		) );
 
 		add_filter( 'vc_single_param_edit', array(
-			&$this,
+			$this,
 			'changeEditFormFieldParams',
 		) );
 		add_filter( 'vc_edit_form_class', array(
-			&$this,
+			$this,
 			'changeEditFormParams',
 		) );
 	}
@@ -88,35 +91,6 @@ class Vc_Shortcode_Edit_Form implements Vc_Render {
 		$fields->render();
 		die();
 		/* nectar addition end */ 
-	}
-
-	/**
-	 * Build edit form fields
-	 *
-	 * @deprecated 4.4
-	 * @use Vc_Shortcode_Edit_Form::renderFields
-	 */
-	public function build() {
-		// _deprecated_function( 'Vc_Shortcode_Edit_Form::build', '4.4 (will be removed in 4.10)', 'Vc_Shortcode_Edit_Form::renderFields' );
-
-		$tag = vc_post_param( 'element' );
-		vc_user_access()
-			->checkAdminNonce()
-			->validateDie( __( 'Access denied', 'js_composer' ) )
-			->wpAny(
-				'edit_posts',
-				'edit_pages'
-			)
-			->validateDie( __( 'Access denied', 'js_composer' ) )
-			->check( 'vc_user_access_check_shortcode_edit', $tag )
-			->validateDie( __( 'Access denied', 'js_composer' ) );
-
-		$shortcode = stripslashes( vc_post_param( 'shortcode' ) );
-		require_once vc_path_dir( 'EDITORS_DIR', 'class-vc-edit-form-fields.php' );
-		$fields = new Vc_Edit_Form_Fields( $tag, shortcode_parse_atts( $shortcode ) );
-		$fields->render();
-
-		die();
 	}
 
 	/**

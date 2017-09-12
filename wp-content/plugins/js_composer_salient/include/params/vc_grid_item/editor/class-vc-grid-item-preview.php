@@ -55,6 +55,8 @@ class Vc_Grid_Item_Preview {
 	 *
 	 * @param $link
 	 *
+	 * @param $atts
+	 * @param $css_class
 	 * @return string
 	 */
 	public function disableContentLink( $link, $atts, $css_class ) {
@@ -67,6 +69,9 @@ class Vc_Grid_Item_Preview {
 	 *
 	 * @param $link
 	 *
+	 * @param $atts
+	 * @param $post
+	 * @param $css_class
 	 * @return string
 	 */
 	public function disableRealContentLink( $link, $atts, $post, $css_class ) {
@@ -103,12 +108,29 @@ class Vc_Grid_Item_Preview {
 
 	public function mockingPost() {
 		$post = get_post( $this->post_id );
+		setup_postdata( $post );
 		$post->post_title = __( 'Post title', 'js_composer' );
 		$post->post_content = __( 'The WordPress Excerpt is an optional summary or description of a post; in short, a post summary.', 'js_composer' );
 		$post->post_excerpt = __( 'The WordPress Excerpt is an optional summary or description of a post; in short, a post summary.', 'js_composer' );
+		add_filter( 'get_the_categories', array(
+			$this,
+			'getTheCategories',
+		), 10, 2 );
 		$GLOBALS['post'] = $post;
 
 		return $post;
+	}
+
+	public function getTheCategories( $categories, $post_id ) {
+		$ret = $categories;
+		if ( ! $post_id || ( $post_id && $post_id == $this->post_id ) ) {
+			$cat = get_categories( 'number=5' );
+			if ( empty( $ret ) && ! empty( $cat ) ) {
+				$ret += $cat;
+			}
+		}
+
+		return $ret;
 	}
 
 	public function addPlaceholderImage( $img ) {

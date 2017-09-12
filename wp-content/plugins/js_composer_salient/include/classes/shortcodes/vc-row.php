@@ -42,7 +42,7 @@ class WPBakeryShortCode_VC_Row extends WPBakeryShortCode {
 		global $vc_row_layouts;
 		$controls_layout = '<span class="vc_row_layouts vc_control">';
 		foreach ( $vc_row_layouts as $layout ) {
-			$controls_layout .= '<a class="vc_control-set-column set_columns ' . $layout['icon_class'] . '" data-cells="' . $layout['cells'] . '" data-cells-mask="' . $layout['mask'] . '" title="' . $layout['title'] . '"></a> ';
+			$controls_layout .= '<a class="vc_control-set-column set_columns" data-cells="' . $layout['cells'] . '" data-cells-mask="' . $layout['mask'] . '" title="' . $layout['title'] . '"><i class="vc-composer-icon vc-c-icon-' . $layout['icon_class'] . '"></i></a> ';
 		}
 		$controls_layout .= '<br/><a class="vc_control-set-column set_columns custom_columns" data-cells="custom" data-cells-mask="custom" title="' . __( 'Custom layout', 'js_composer' ) . '">' . __( 'Custom', 'js_composer' ) . '</a> ';
 		$controls_layout .= '</span>';
@@ -56,18 +56,16 @@ class WPBakeryShortCode_VC_Row extends WPBakeryShortCode {
 		//Create columns
 		$controls_layout = $this->getLayoutsControl();
 
-		$controls_move = ' <a class="vc_control column_move vc_column-move" href="#" title="'
-		                 . __( 'Drag row to reorder', 'js_composer' ) . '" data-vc-control="move"><i class="vc_icon"></i></a>';
-		$controls_add = ' <a class="vc_control column_add vc_column-add" href="#" title="'
-		                . __( 'Add column', 'js_composer' ) . '" data-vc-control="add"><i class="vc_icon"></i></a>';
-		$controls_delete = '<a class="vc_control column_delete vc_column-delete" href="#" title="'
-		                   . __( 'Delete this row', 'js_composer' ) . '" data-vc-control="delete"><i class="vc_icon"></i></a>';
-		$controls_edit = ' <a class="vc_control column_edit vc_column-edit" href="#" title="'
-		                 . __( 'Edit this row', 'js_composer' ) . '" data-vc-control="edit"><i class="vc_icon"></i></a>';
-		$controls_clone = ' <a class="vc_control column_clone vc_column-clone" href="#" title="'
-		                  . __( 'Clone this row', 'js_composer' ) . '" data-vc-control="clone"><i class="vc_icon"></i></a>';
-		$controls_toggle = ' <a class="vc_control column_toggle vc_column-toggle" href="#" title="'
-		                   . __( 'Toggle row', 'js_composer' ) . '" data-vc-control="toggle"><i class="vc_icon"></i></a>';
+		$controls_move = ' <a class="vc_control column_move vc_column-move" href="#" title="' . __( 'Drag row to reorder', 'js_composer' ) . '" data-vc-control="move"><i class="vc-composer-icon vc-c-icon-dragndrop"></i></a>';
+		$moveAccess = vc_user_access()->part( 'dragndrop' )->checkStateAny( true, null )->get();
+		if ( ! $moveAccess ) {
+			$controls_move = '';
+		}
+		$controls_add = ' <a class="vc_control column_add vc_column-add" href="#" title="' . __( 'Add column', 'js_composer' ) . '" data-vc-control="add"><i class="vc-composer-icon vc-c-icon-add"></i></a>';
+		$controls_delete = '<a class="vc_control column_delete vc_column-delete" href="#" title="' . __( 'Delete this row', 'js_composer' ) . '" data-vc-control="delete"><i class="vc-composer-icon vc-c-icon-delete_empty"></i></a>';
+		$controls_edit = ' <a class="vc_control column_edit vc_column-edit" href="#" title="' . __( 'Edit this row', 'js_composer' ) . '" data-vc-control="edit"><i class="vc-composer-icon vc-c-icon-mode_edit"></i></a>';
+		$controls_clone = ' <a class="vc_control column_clone vc_column-clone" href="#" title="' . __( 'Clone this row', 'js_composer' ) . '" data-vc-control="clone"><i class="vc-composer-icon vc-c-icon-content_copy"></i></a>';
+		$controls_toggle = ' <a class="vc_control column_toggle vc_column-toggle" href="#" title="' . __( 'Toggle row', 'js_composer' ) . '" data-vc-control="toggle"><i class="vc-composer-icon vc-c-icon-arrow_drop_down"></i></a>';
 		$editAccess = vc_user_access_check_shortcode_edit( $this->shortcode );
 		$allAccess = vc_user_access_check_shortcode_all( $this->shortcode );
 
@@ -155,9 +153,9 @@ class WPBakeryShortCode_VC_Row extends WPBakeryShortCode {
 	}
 
 	public function cssAdminClass() {
-		$sortable = ( vc_user_access_check_shortcode_all( $this->shortcode ) ? ' wpb_sortable' : ' '. $this->nonDraggableClass );
+		$sortable = ( vc_user_access_check_shortcode_all( $this->shortcode ) ? ' wpb_sortable' : ' ' . $this->nonDraggableClass );
 
-		return 'wpb_' . $this->settings['base'] . $sortable;
+		return 'wpb_' . $this->settings['base'] . $sortable . '' . ( ! empty( $this->settings['class'] ) ? ' ' . $this->settings['class'] : '' );
 	}
 
 	/**

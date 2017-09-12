@@ -39,5 +39,6 @@
   "frontend-editor-ie.php": "add ie9 degradation",
   "params-to-init.php": "add required init params",
   "bc-access-rules-4.8.php": "BC for roles via filters >= VC 4.8",
-  "post-type-default-template.php": "Load default templates"
+  "post-type-default-template.php": "Load default templates",
+  "bc-multisite-options.php": "BC for multisite options"
 }

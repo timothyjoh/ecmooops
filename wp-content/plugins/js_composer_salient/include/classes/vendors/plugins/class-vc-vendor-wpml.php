@@ -40,14 +40,17 @@ class Vc_Vendor_WPML implements Vc_Vendor_Interface {
 		$action = vc_post_param( 'action' );
 		if ( vc_is_page_editable() && 'vc_frontend_load_template' === $action ) {
 			// Fix Issue with loading template #135512264670405
-			remove_action( 'wp_loaded', array( $sitepress, 'maybe_set_this_lang' ) );
+			remove_action( 'wp_loaded', array(
+				$sitepress,
+				'maybe_set_this_lang',
+			) );
 		}
 	}
 
 	public function appendLangToUrl( $link ) {
 		global $sitepress;
 		if ( is_object( $sitepress ) ) {
-			if ( is_string( $link ) && strpos( $link, 'lang' ) === false && ( strpos( $link, 'vc_inline' ) !== false || strpos( $link, 'vc_editable' ) !== false || strpos( $link, 'admin-ajax' ) !== false ) ) {
+			if ( is_string( $link ) && strpos( $link, 'lang' ) === false && ( strpos( $link, 'vc_inline' ) !== false || strpos( $link, 'vc_editable' ) !== false && strpos( $link, 'admin-ajax' ) !== false ) ) {
 				return add_query_arg( array( 'lang' => $sitepress->get_current_language() ), $link );
 			}
 		}

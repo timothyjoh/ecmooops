@@ -176,6 +176,13 @@ return array(
 				'not_empty' => true,
 			),
 		),
+		vc_map_add_css_animation(),
+		array(
+			'type' => 'el_id',
+			'heading' => __( 'Element ID', 'js_composer' ),
+			'param_name' => 'el_id',
+			'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'js_composer' ), 'http://www.w3schools.com/tags/att_global_id.asp' ),
+		),
 		array(
 			'type' => 'textfield',
 			'heading' => __( 'Extra class name', 'js_composer' ),
@@ -208,8 +215,9 @@ return array(
 [vc_tta_section title="' . sprintf( '%s %d', __( 'Tab', 'js_composer' ), 2 ) . '"][/vc_tta_section]
 	',
 	/* nectar addition */ 
-	/*'admin_enqueue_js' => array(
+	/*
+	'admin_enqueue_js' => array(
 		vc_asset_url( 'lib/vc_tabs/vc-tabs.min.js' ),
-	),*/
+	), */
 	/* nectar addition end */ 
 );

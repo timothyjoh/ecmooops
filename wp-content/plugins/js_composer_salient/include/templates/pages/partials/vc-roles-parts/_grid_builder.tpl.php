@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
-/* nectar addition */ 
+/* nectar addition */
 /*
 vc_include_template( 'pages/partials/vc-roles-parts/_part.tpl.php', array(
 	'part' => $part,
@@ -18,4 +18,4 @@ vc_include_template( 'pages/partials/vc-roles-parts/_part.tpl.php', array(
 	'description' => __( 'Control user access to Grid Builder and Grid Builder Elements.', 'js_composer' ),
 ) );
 */
-/* nectar addition end */ 
+/* nectar addition end */

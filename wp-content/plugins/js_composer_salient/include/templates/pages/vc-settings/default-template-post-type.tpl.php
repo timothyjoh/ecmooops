@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
+
+?>
 <fieldset>
 	<legend class="screen-reader-text">
 		<span><?php echo esc_html( $title ) ?></span>
@@ -19,12 +25,12 @@
 				<td>
 					<select name="<?php echo $field_key ?>[<?php echo $post_type[0] ?>]">
 						<option value=""><?php _e( 'None', 'js_composer' ) ?></option>
-						<?php foreach ( $templates as $templates_category ): ?>
+						<?php foreach ( $templates as $templates_category ) : ?>
 							<optgroup label="<?php echo esc_attr( $templates_category['category_name'] ) ?>">
-								<?php foreach ( $templates_category['templates'] as $template ): ?>
+								<?php foreach ( $templates_category['templates'] as $template ) : ?>
 									<?php
 									$key = $template['type'] . '::' . esc_attr( $template['unique_id'] );
-									$selected = (!empty($value[ $post_type[0]]) && $value[ $post_type[0] ] === $key) ? ' selected="true"' : '';
+									$selected = isset( $value[ $post_type[0] ] ) && $value[ $post_type[0] ] === $key ? ' selected="true"' : '';
 									?>
 									<option value="<?php echo esc_attr( $key ) ?>"<?php echo $selected ?>><?php echo esc_html( $template['name'] ) ?></option>
 								<?php endforeach; ?>

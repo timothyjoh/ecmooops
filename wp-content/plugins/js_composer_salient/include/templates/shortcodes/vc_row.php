@@ -19,33 +19,50 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $video_bg
  * @var $video_bg_url
  * @var $video_bg_parallax
+ * @var $parallax_speed_bg
+ * @var $parallax_speed_video
  * @var $content - shortcode content
+ * @var $css_animation
  * Shortcode class
  * @var $this WPBakeryShortCode_VC_Row
  */
-$el_class = $full_height = $full_width = $equal_height = $flex_row = $columns_placement = $content_placement = $parallax = $parallax_image = $css = $el_id = $video_bg = $video_bg_url = $video_bg_parallax = '';
+$el_class = $full_height = $parallax_speed_bg = $parallax_speed_video = $full_width = $equal_height = $flex_row = $columns_placement = $content_placement = $parallax = $parallax_image = $css = $el_id = $video_bg = $video_bg_url = $video_bg_parallax = $css_animation = '';
+$disable_element = '';
 $output = $after_output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
 wp_enqueue_script( 'wpb_composer_front_js' );
 
-$el_class = $this->getExtraClass( $el_class );
+$el_class = $this->getExtraClass( $el_class ) . $this->getCSSAnimation( $css_animation );
 
 $css_classes = array(
 	'vc_row',
-	'wpb_row', //deprecated
+	'wpb_row',
+	//deprecated
 	'vc_row-fluid',
 	$el_class,
 	vc_shortcode_custom_css_class( $css ),
 );
 
-if (vc_shortcode_custom_css_has_property( $css, array('border', 'background') ) || $video_bg || $parallax) {
-	$css_classes[]='vc_row-has-fill';
+if ( 'yes' === $disable_element ) {
+	if ( vc_is_page_editable() ) {
+		$css_classes[] = 'vc_hidden-lg vc_hidden-xs vc_hidden-sm vc_hidden-md';
+	} else {
+		return '';
+	}
 }
 
-if (!empty($atts['gap'])) {
-	$css_classes[] = 'vc_column-gap-'.$atts['gap'];
+if ( vc_shortcode_custom_css_has_property( $css, array(
+		'border',
+		'background',
+	) ) || $video_bg || $parallax
+) {
+	$css_classes[] = 'vc_row-has-fill';
+}
+
+if ( ! empty( $atts['gap'] ) ) {
+	$css_classes[] = 'vc_column-gap-' . $atts['gap'];
 }
 
 $wrapper_attributes = array();
@@ -62,43 +79,48 @@ if ( ! empty( $full_width ) ) {
 		$wrapper_attributes[] = 'data-vc-stretch-content="true"';
 		$css_classes[] = 'vc_row-no-padding';
 	}
-	$after_output .= '<div class="vc_row-full-width"></div>';
+	$after_output .= '<div class="vc_row-full-width vc_clearfix"></div>';
 }
 
 if ( ! empty( $full_height ) ) {
-	$css_classes[] = ' vc_row-o-full-height';
+	$css_classes[] = 'vc_row-o-full-height';
 	if ( ! empty( $columns_placement ) ) {
 		$flex_row = true;
-		$css_classes[] = ' vc_row-o-columns-' . $columns_placement;
+		$css_classes[] = 'vc_row-o-columns-' . $columns_placement;
+		if ( 'stretch' === $columns_placement ) {
+			$css_classes[] = 'vc_row-o-equal-height';
+		}
 	}
 }
 
 if ( ! empty( $equal_height ) ) {
 	$flex_row = true;
-	$css_classes[] = ' vc_row-o-equal-height';
+	$css_classes[] = 'vc_row-o-equal-height';
 }
 
 if ( ! empty( $content_placement ) ) {
 	$flex_row = true;
-	$css_classes[] = ' vc_row-o-content-' . $content_placement;
+	$css_classes[] = 'vc_row-o-content-' . $content_placement;
 }
 
 if ( ! empty( $flex_row ) ) {
-	$css_classes[] = ' vc_row-flex';
+	$css_classes[] = 'vc_row-flex';
 }
 
 $has_video_bg = ( ! empty( $video_bg ) && ! empty( $video_bg_url ) && vc_extract_youtube_id( $video_bg_url ) );
 
+$parallax_speed = $parallax_speed_bg;
 if ( $has_video_bg ) {
 	$parallax = $video_bg_parallax;
+	$parallax_speed = $parallax_speed_video;
 	$parallax_image = $video_bg_url;
-	$css_classes[] = ' vc_video-bg-container';
+	$css_classes[] = 'vc_video-bg-container';
 	wp_enqueue_script( 'vc_youtube_iframe_api_js' );
 }
 
 if ( ! empty( $parallax ) ) {
 	wp_enqueue_script( 'vc_jquery_skrollr_js' );
-	$wrapper_attributes[] = 'data-vc-parallax="1.5"'; // parallax speed
+	$wrapper_attributes[] = 'data-vc-parallax="' . esc_attr( $parallax_speed ) . '"'; // parallax speed
 	$css_classes[] = 'vc_general vc_parallax vc_parallax-' . $parallax;
 	if ( false !== strpos( $parallax, 'fade' ) ) {
 		$css_classes[] = 'js-vc_parallax-o-fade';
@@ -123,7 +145,7 @@ if ( ! empty( $parallax_image ) ) {
 if ( ! $parallax && $has_video_bg ) {
 	$wrapper_attributes[] = 'data-vc-video-bg="' . esc_attr( $video_bg_url ) . '"';
 }
-$css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
+$css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( array_unique( $css_classes ) ) ), $this->settings['base'], $atts ) );
 $wrapper_attributes[] = 'class="' . esc_attr( trim( $css_class ) ) . '"';
 
 $output .= '<div ' . implode( ' ', $wrapper_attributes ) . '>';

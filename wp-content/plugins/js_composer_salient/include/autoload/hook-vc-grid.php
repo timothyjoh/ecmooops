@@ -23,18 +23,18 @@ class Vc_Hooks_Vc_Grid implements Vc_Vendor_Interface {
 		 * @since 4.4.3
 		 */
 		add_filter( 'vc_hooks_vc_post_settings', array(
-			&$this,
+			$this,
 			'gridSavePostSettingsId',
 		), 10, 3 );
 		/**
 		 * Used to output shortcode data for ajax request. called on any page request.
 		 */
 		add_action( 'wp_ajax_vc_get_vc_grid_data', array(
-			&$this,
+			$this,
 			'getGridDataForAjax',
 		) );
 		add_action( 'wp_ajax_nopriv_vc_get_vc_grid_data', array(
-			&$this,
+			$this,
 			'getGridDataForAjax',
 		) );
 	}
@@ -57,22 +57,22 @@ class Vc_Hooks_Vc_Grid implements Vc_Vendor_Interface {
 		// WARNING! Do not change this regex without changing do_shortcode_tag() and strip_shortcode_tag()
 		// Also, see shortcode_unautop() and shortcode.js.
 		return '\\['                              // Opening bracket
-		. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
-		. "($tagregexp)"                     // 2: Shortcode name
-		. '(?![\\w-])'                       // Not followed by word character or hyphen
-		. '('                                // 3: Unroll the loop: Inside the opening shortcode tag
-		. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
-		. '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
-		. '[^\\]\\/]*'               // Not a closing bracket or forward slash
-		. ')*?' . ')' . '(?:' . '(\\/)'                        // 4: Self closing tag ...
-		. '\\]'                          // ... and closing bracket
-		. '|' . '\\]'                          // Closing bracket
-		. '(?:' . '('                        // 5: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
-		. '[^\\[]*+'             // Not an opening bracket
-		. '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
-		. '[^\\[]*+'         // Not an opening bracket
-		. ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
-		. ')?' . ')' . '(\\]?)';                          // 6: Optional second closing brocket for escaping shortcodes: [[tag]]
+			. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
+			. "($tagregexp)"                     // 2: Shortcode name
+			. '(?![\\w-])'                       // Not followed by word character or hyphen
+			. '('                                // 3: Unroll the loop: Inside the opening shortcode tag
+			. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
+			. '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
+			. '[^\\]\\/]*'               // Not a closing bracket or forward slash
+			. ')*?' . ')' . '(?:' . '(\\/)'                        // 4: Self closing tag ...
+			. '\\]'                          // ... and closing bracket
+			. '|' . '\\]'                          // Closing bracket
+			. '(?:' . '('                        // 5: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
+			. '[^\\[]*+'             // Not an opening bracket
+			. '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
+			. '[^\\[]*+'         // Not an opening bracket
+			. ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
+			. ')?' . ')' . '(\\]?)';                          // 6: Optional second closing brocket for escaping shortcodes: [[tag]]
 
 	}
 
@@ -82,28 +82,28 @@ class Vc_Hooks_Vc_Grid implements Vc_Vendor_Interface {
 	 */
 	private function getShortcodeRegexForId() {
 		return '\\['                              // Opening bracket
-		. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
-		. '([\\w-_]+)'                     // 2: Shortcode name
-		. '(?![\\w-])'                       // Not followed by word character or hyphen
-		. '('                                // 3: Unroll the loop: Inside the opening shortcode tag
-		. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
-		. '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
-		. '[^\\]\\/]*'               // Not a closing bracket or forward slash
-		. ')*?'
+			. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
+			. '([\\w-_]+)'                     // 2: Shortcode name
+			. '(?![\\w-])'                       // Not followed by word character or hyphen
+			. '('                                // 3: Unroll the loop: Inside the opening shortcode tag
+			. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
+			. '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
+			. '[^\\]\\/]*'               // Not a closing bracket or forward slash
+			. ')*?'
 
-		. '(?:' . '(' . $this->grid_id_unique_name // 4: GridId must exist
-		. '[^\\]\\/]*'               // Not a closing bracket or forward slash
-		. ')+' . ')'
+			. '(?:' . '(' . $this->grid_id_unique_name // 4: GridId must exist
+			. '[^\\]\\/]*'               // Not a closing bracket or forward slash
+			. ')+' . ')'
 
-		. ')' . '(?:' . '(\\/)'                        // 5: Self closing tag ...
-		. '\\]'                          // ... and closing bracket
-		. '|' . '\\]'                          // Closing bracket
-		. '(?:' . '('                        // 6: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
-		. '[^\\[]*+'             // Not an opening bracket
-		. '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
-		. '[^\\[]*+'         // Not an opening bracket
-		. ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
-		. ')?' . ')' . '(\\]?)';            // 7: Optional second closing brocket for escaping shortcodes: [[tag]]
+			. ')' . '(?:' . '(\\/)'                        // 5: Self closing tag ...
+			. '\\]'                          // ... and closing bracket
+			. '|' . '\\]'                          // Closing bracket
+			. '(?:' . '('                        // 6: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
+			. '[^\\[]*+'             // Not an opening bracket
+			. '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
+			. '[^\\[]*+'         // Not an opening bracket
+			. ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
+			. ')?' . ')' . '(\\]?)';            // 7: Optional second closing brocket for escaping shortcodes: [[tag]]
 	}
 
 	/**
@@ -118,7 +118,7 @@ class Vc_Hooks_Vc_Grid implements Vc_Vendor_Interface {
 	 * @return array - shortcode settings to save.
 	 */
 	public function gridSavePostSettings( array $settings, $post_id, $post ) {
-		// _deprecated_function( 'Vc_Hooks_Vc_Grid: gridSavePostSettings method', '4.4.3 (will be removed in 4.10)', 'gridSavePostSettingsId' );
+		_deprecated_function( 'Vc_Hooks_Vc_Grid: gridSavePostSettings method', '4.4.3 (will be removed in 5.3)', 'gridSavePostSettingsId' );
 
 		$pattern = $this->getShortcodeRegexForHash();
 		preg_match_all( "/$pattern/", $post->post_content, $found ); // fetch only needed shortcodes
@@ -207,11 +207,11 @@ class Vc_Hooks_Vc_Grid implements Vc_Vendor_Interface {
 	 * @output/@return string - grid data for ajax request.
 	 */
 	public function getGridDataForAjax() {
-		$tag = vc_request_param( 'tag' );
+		$tag = str_replace( '.', '', vc_request_param( 'tag' ) );
 		$allowed = apply_filters( 'vc_grid_get_grid_data_access', vc_verify_public_nonce() && $tag, $tag );
 		if ( $allowed ) {
 			$shortcode_fishbone = visual_composer()->getShortCode( $tag );
-			if ( is_object( $shortcode_fishbone ) ) {
+			if ( is_object( $shortcode_fishbone ) && vc_get_shortcode( $tag ) ) {
 				/** @var $vc_grid WPBakeryShortcode_Vc_Basic_Grid */
 				$vc_grid = $shortcode_fishbone->shortcodeClass();
 				if ( method_exists( $vc_grid, 'isObjectPageable' ) && $vc_grid->isObjectPageable() && method_exists( $vc_grid, 'renderAjax' ) ) {
@@ -236,8 +236,7 @@ add_action( 'vc_after_init', array(
 ) );
 
 if ( 'vc_edit_form' === vc_post_param( 'action' ) ) {
-	VcShortcodeAutoloader::getInstance()
-	                     ->includeClass( 'WPBakeryShortCode_VC_Basic_Grid' );
+	VcShortcodeAutoloader::getInstance()->includeClass( 'WPBakeryShortCode_VC_Basic_Grid' );
 
 	add_filter( 'vc_edit_form_fields_attributes_vc_basic_grid', array(
 		'WPBakeryShortCode_VC_Basic_Grid',

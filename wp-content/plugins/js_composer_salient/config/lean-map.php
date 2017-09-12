@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 /**
  * WPBakery Visual Composer Shortcodes settings Lazy mapping
  *
@@ -6,15 +9,39 @@
  *
  */
 $vc_config_path = vc_path_dir( 'CONFIG_DIR' );
-vc_lean_map( 'vc_row', null, $vc_config_path . '/containers/shortcode-vc-row.php' );
+
 vc_lean_map( 'vc_row_inner', null, $vc_config_path . '/containers/shortcode-vc-row-inner.php' );
+vc_lean_map( 'vc_column_text', null, $vc_config_path . '/content/shortcode-vc-column-text.php' );
+
+vc_lean_map( 'vc_text_separator', null, $vc_config_path . '/content/shortcode-vc-text-separator.php' );
+
+vc_lean_map( 'vc_single_image', null, $vc_config_path . '/content/shortcode-vc-single-image.php' );
+vc_lean_map( 'vc_gallery', null, $vc_config_path . '/content/shortcode-vc-gallery.php' );
+
+vc_lean_map( 'vc_custom_heading', null, $vc_config_path . '/content/shortcode-vc-custom-heading.php' );
+
+vc_lean_map( 'vc_raw_html', null, $vc_config_path . '/structure/shortcode-vc-raw-html.php' );
+vc_lean_map( 'vc_raw_js', null, $vc_config_path . '/structure/shortcode-vc-raw-js.php' );
+vc_lean_map( 'vc_pie', null, $vc_config_path . '/content/shortcode-vc-pie.php' );
+vc_lean_map( 'vc_video', null, $vc_config_path . '/content/shortcode-vc-video.php' );
+
+vc_lean_map( 'vc_icon', null, $vc_config_path . '/content/shortcode-vc-icon.php' );
+vc_lean_map( 'vc_zigzag', null, $vc_config_path . '/content/shortcode-vc-zigzag.php' );
+
+
+
+/* nectar addition
+vc_lean_map( 'vc_hoverbox', null, $vc_config_path . '/content/shortcode-vc-hoverbox.php' );
+vc_lean_map( 'vc_row', null, $vc_config_path . '/containers/shortcode-vc-row.php' );
 vc_lean_map( 'vc_column', null, $vc_config_path . '/containers/shortcode-vc-column.php' );
 vc_lean_map( 'vc_column_inner', null, $vc_config_path . '/containers/shortcode-vc-column-inner.php' );
-vc_lean_map( 'vc_column_text', null, $vc_config_path . '/content/shortcode-vc-column-text.php' );
-vc_lean_map( 'vc_icon', null, $vc_config_path . '/content/shortcode-vc-icon.php' );
+
+vc_lean_map( 'vc_section', null, $vc_config_path . '/containers/shortcode-vc-section.php' );
+
 vc_lean_map( 'vc_separator', null, $vc_config_path . '/content/shortcode-vc-separator.php' );
-vc_lean_map( 'vc_text_separator', null, $vc_config_path . '/content/shortcode-vc-text-separator.php' );
+
 vc_lean_map( 'vc_message', null, $vc_config_path . '/content/shortcode-vc-message.php' );
+vc_lean_map( 'vc_hoverbox', null, $vc_config_path . '/content/shortcode-vc-hoverbox.php' );
 
 vc_lean_map( 'vc_facebook', null, $vc_config_path . '/social/shortcode-vc-facebook.php' );
 vc_lean_map( 'vc_tweetmeme', null, $vc_config_path . '/social/shortcode-vc-tweetmeme.php' );
@@ -22,8 +49,6 @@ vc_lean_map( 'vc_googleplus', null, $vc_config_path . '/social/shortcode-vc-goog
 vc_lean_map( 'vc_pinterest', null, $vc_config_path . '/social/shortcode-vc-pinterest.php' );
 
 vc_lean_map( 'vc_toggle', null, $vc_config_path . '/content/shortcode-vc-toggle.php' );
-vc_lean_map( 'vc_single_image', null, $vc_config_path . '/content/shortcode-vc-single-image.php' );
-vc_lean_map( 'vc_gallery', null, $vc_config_path . '/content/shortcode-vc-gallery.php' );
 vc_lean_map( 'vc_images_carousel', null, $vc_config_path . '/content/shortcode-vc-images-carousel.php' );
 
 vc_lean_map( 'vc_tta_tabs', null, $vc_config_path . '/tta/shortcode-vc-tta-tabs.php' );
@@ -32,20 +57,14 @@ vc_lean_map( 'vc_tta_accordion', null, $vc_config_path . '/tta/shortcode-vc-tta-
 vc_lean_map( 'vc_tta_pageable', null, $vc_config_path . '/tta/shortcode-vc-tta-pageable.php' );
 vc_lean_map( 'vc_tta_section', null, $vc_config_path . '/tta/shortcode-vc-tta-section.php' );
 
-vc_lean_map( 'vc_custom_heading', null, $vc_config_path . '/content/shortcode-vc-custom-heading.php' );
-
 vc_lean_map( 'vc_btn', null, $vc_config_path . '/buttons/shortcode-vc-btn.php' );
 vc_lean_map( 'vc_cta', null, $vc_config_path . '/buttons/shortcode-vc-cta.php' );
 
 vc_lean_map( 'vc_widget_sidebar', null, $vc_config_path . '/structure/shortcode-vc-widget-sidebar.php' );
 vc_lean_map( 'vc_posts_slider', null, $vc_config_path . '/content/shortcode-vc-posts-slider.php' );
-vc_lean_map( 'vc_video', null, $vc_config_path . '/content/shortcode-vc-video.php' );
 vc_lean_map( 'vc_gmaps', null, $vc_config_path . '/content/shortcode-vc-gmaps.php' );
-vc_lean_map( 'vc_raw_html', null, $vc_config_path . '/structure/shortcode-vc-raw-html.php' );
-vc_lean_map( 'vc_raw_js', null, $vc_config_path . '/structure/shortcode-vc-raw-js.php' );
 vc_lean_map( 'vc_flickr', null, $vc_config_path . '/content/shortcode-vc-flickr.php' );
 vc_lean_map( 'vc_progress_bar', null, $vc_config_path . '/content/shortcode-vc-progress-bar.php' );
-vc_lean_map( 'vc_pie', null, $vc_config_path . '/content/shortcode-vc-pie.php' );
 vc_lean_map( 'vc_round_chart', null, $vc_config_path . '/content/shortcode-vc-round-chart.php' );
 vc_lean_map( 'vc_line_chart', null, $vc_config_path . '/content/shortcode-vc-line-chart.php' );
 
@@ -82,6 +101,8 @@ vc_lean_map( 'vc_button2', null, $vc_config_path . '/deprecated/shortcode-vc-but
 vc_lean_map( 'vc_cta_button', null, $vc_config_path . '/deprecated/shortcode-vc-cta-button.php' );
 vc_lean_map( 'vc_cta_button2', null, $vc_config_path . '/deprecated/shortcode-vc-cta-button2.php' );
 
+*/
+
 if ( is_admin() ) {
 	add_action( 'admin_print_scripts-post.php', array(
 		Vc_Shortcodes_Manager::getInstance(),
@@ -91,29 +112,23 @@ if ( is_admin() ) {
 		Vc_Shortcodes_Manager::getInstance(),
 		'buildShortcodesAssets',
 	), 1 );
+	add_action( 'vc-render-templates-preview-template', array(
+		Vc_Shortcodes_Manager::getInstance(),
+		'buildShortcodesAssets',
+	), 1 );
 } elseif ( vc_is_page_editable() ) {
 	add_action( 'wp_head', array(
 		Vc_Shortcodes_Manager::getInstance(),
 		'buildShortcodesAssetsForEditable',
 	) ); // @todo where these icons are used in iframe?
 }
-// @todo define custom
+
+/**
+ * @deprecated 4.12
+ * @return mixed|void
+ */
 function vc_add_css_animation() {
-	return array(
-		'type' => 'dropdown',
-		'heading' => __( 'CSS Animation', 'js_composer' ),
-		'param_name' => 'css_animation',
-		'admin_label' => true,
-		'value' => array(
-			__( 'No', 'js_composer' ) => '',
-			__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-			__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-			__( 'Left to right', 'js_composer' ) => 'left-to-right',
-			__( 'Right to left', 'js_composer' ) => 'right-to-left',
-			__( 'Appear from center', 'js_composer' ) => 'appear',
-		),
-		'description' => __( 'Select type of animation for element to be animated when it "enters" the browsers viewport (Note: works only in modern browsers).', 'js_composer' ),
-	);
+	return vc_map_add_css_animation();
 }
 
 function vc_target_param_list() {

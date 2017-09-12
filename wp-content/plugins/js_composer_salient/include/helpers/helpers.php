@@ -63,10 +63,11 @@ function wpb_getImageBySize( $params = array() ) {
 			preg_match_all( '/\d+/', $thumb_size, $thumb_matches );
 			if ( isset( $thumb_matches[0] ) ) {
 				$thumb_size = array();
-				if ( count( $thumb_matches[0] ) > 1 ) {
+				$count = count( $thumb_matches[0] );
+				if ( $count > 1 ) {
 					$thumb_size[] = $thumb_matches[0][0]; // width
 					$thumb_size[] = $thumb_matches[0][1]; // height
-				} elseif ( count( $thumb_matches[0] ) > 0 && count( $thumb_matches[0] ) < 2 ) {
+				} elseif ( 1 === $count ) {
 					$thumb_size[] = $thumb_matches[0][0]; // width
 					$thumb_size[] = $thumb_matches[0][0]; // height
 				} else {
@@ -113,47 +114,44 @@ function wpb_getImageBySize( $params = array() ) {
 	), $attach_id, $params );
 }
 
-/**
- * @param $width
- *
- * @deprecated 4.5
- * @since 4.2
- * @return string
- */
-function wpb_getColumnControls( $width ) {
-	// _deprecated_function( 'wpb_getColumnControls', '4.5 (will be removed in 4.10)' );
+function vc_get_image_by_size( $id, $size ) {
+	global $_wp_additional_image_sizes;
 
-	switch ( $width ) {
-		case 'vc_col-md-2' :
-			$w = '1/6';
-			break;
-		case 'vc_col-sm-2' :
-			$w = '1/6';
-			break;
-		case 'vc_col-sm-3' :
-			$w = '1/4';
-			break;
-		case 'vc_col-sm-4' :
-			$w = '1/3';
-			break;
-		case 'vc_col-sm-6' :
-			$w = '1/2';
-			break;
-		case 'vc_col-sm-8' :
-			$w = '2/3';
-			break;
-		case 'vc_col-sm-9' :
-			$w = '3/4';
-			break;
-		case 'vc_col-sm-12' :
-			$w = '1/1';
-			break;
+	if ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
+				'thumbnail',
+				'thumb',
+				'medium',
+				'large',
+				'full',
+			) ) )
+	) {
+		return wp_get_attachment_image_src( $id, $size );
+	} else {
+		if ( is_string( $size ) ) {
+			preg_match_all( '/\d+/', $size, $thumb_matches );
+			if ( isset( $thumb_matches[0] ) ) {
+				$size = array();
+				$count = count( $thumb_matches[0] );
+				if ( $count > 1 ) {
+					$size[] = $thumb_matches[0][0]; // width
+					$size[] = $thumb_matches[0][1]; // height
+				} elseif ( 1 === $count ) {
+					$size[] = $thumb_matches[0][0]; // width
+					$size[] = $thumb_matches[0][0]; // height
+				} else {
+					$size = false;
+				}
+			}
+		}
+		if ( is_array( $size ) ) {
+			// Resize image to custom size
+			$p_img = wpb_resize( $id, null, $size[0], $size[1], true );
 
-		default :
-			$w = $width;
+			return $p_img['url'];
+		}
 	}
 
-	return $w;
+	return '';
 }
 
 /* Convert vc_col-sm-3 to 1/4
@@ -265,26 +263,6 @@ if ( ! function_exists( 'shortcode_exists' ) ) {
    and if image is attached to the current post it adds class
    'added'
 ---------------------------------------------------------- */
-if ( ! function_exists( 'siteAttachedImages' ) ) {
-	/**
-	 * @param array $att_ids
-	 *
-	 * @since 4.2
-	 * @return string
-	 */
-	function siteAttachedImages( $att_ids = array() ) {
-		_deprecated_function( 'siteAttachedImages',
-			'4.11',
-			'vc_siteAttachedImages' );
-
-		return vc_siteAttachedImages( $att_ids );
-	}
-}
-
-/* Helper function which returns list of site attached images,
-   and if image is attached to the current post it adds class
-   'added'
----------------------------------------------------------- */
 if ( ! function_exists( 'vc_siteAttachedImages' ) ) {
 	/**
 	 * @param array $att_ids
@@ -295,21 +273,17 @@ if ( ! function_exists( 'vc_siteAttachedImages' ) ) {
 	function vc_siteAttachedImages( $att_ids = array() ) {
 		$output = '';
 
-		$limit = (int) apply_filters( 'vc_site_attached_images_query_limit',
-			- 1 );
+		$limit = (int) apply_filters( 'vc_site_attached_images_query_limit', - 1 );
 		$media_images = get_posts( 'post_type=attachment&orderby=ID&numberposts=' . $limit );
 		foreach ( $media_images as $image_post ) {
-			$thumb_src = wp_get_attachment_image_src( $image_post->ID,
-				'thumbnail' );
+			$thumb_src = wp_get_attachment_image_src( $image_post->ID, 'thumbnail' );
 			$thumb_src = $thumb_src[0];
 
-			$class = ( in_array( $image_post->ID,
-				$att_ids ) ) ? ' class="added"' : '';
+			$class = ( in_array( $image_post->ID, $att_ids ) ) ? ' class="added"' : '';
 
 			$output .= '<li' . $class . '>
 						<img rel="' . esc_attr( $image_post->ID ) . '" src="' . esc_url( $thumb_src ) . '" />
-						<span class="img-added">' . __( 'Added',
-					'js_composer' ) . '</span>
+						<span class="img-added">' . __( 'Added', 'js_composer' ) . '</span>
 					</li>';
 		}
 
@@ -342,13 +316,15 @@ function fieldAttachedImages( $images = array() ) {
 			$output .= '
 			<li class="added">
 				<img rel="' . esc_attr( $image ) . '" src="' . esc_url( $thumb_src ) . '" />
-				<a href="#" class="vc_icon-remove"></a>
+				<a href="#" class="vc_icon-remove"><i class="vc-composer-icon vc-c-icon-close"></i></a>
 			</li>';
 		}
 	}
 
 	return $output;
 }
+
+
 
 /* nectar addition */ 
 function fjarrett_get_attachment_id_by_url( $url ) {
@@ -373,7 +349,6 @@ function fjarrett_get_attachment_id_by_url( $url ) {
 	return $attachment[0];
 }
 /* nectar addition end */ 
-
 
 /**
  * @param $param_value
@@ -580,78 +555,75 @@ function js_composer_body_class( $classes ) {
  * @since 4.2
  * @return string
  */
+ /* nectar addition */  
+ function vc_convert_shortcode( $m ) {
+ 	list($output, $m_one, $tag, $attr_string, $m_four, $content) = $m;
+     $result = $width = $el_position = '';
+     $shortcode_attr = shortcode_parse_atts( $attr_string );
+     extract(shortcode_atts(array(
+         'width' => '1/1',
+         'el_class' => '',
+         'el_position' => ''
+     ), $shortcode_attr));
+     if($tag == 'vc_row' || $tag == 'full_width_section') return $output;
 
-/* nectar addition */  
-function vc_convert_shortcode( $m ) {
-	list($output, $m_one, $tag, $attr_string, $m_four, $content) = $m;
-    $result = $width = $el_position = '';
-    $shortcode_attr = shortcode_parse_atts( $attr_string );
-    extract(shortcode_atts(array(
-        'width' => '1/1',
-        'el_class' => '',
-        'el_position' => ''
-    ), $shortcode_attr));
-    if($tag == 'vc_row' || $tag == 'full_width_section') return $output;
+     // Start
+     if(preg_match('/first/', $el_position) || empty($shortcode_attr['width']) || $shortcode_attr['width']==='1/1')  {
+ 	    if(!empty($output)) $result = '[vc_row]';
+ 	}
+ 	
+ 	/*if($tag == 'one_half' || $tag == 'one_third' || $tag == 'one_fourth' 
+ 	   || $tag == 'one_sixth' || $tag == 'two_thirds' || $tag == 'three_fourths' || $tag == 'fixth_sixths' || $tag == 'one_whole') {
+ 	  
+ 	   
+ 	   if($rowStart == 0) {
+ 	  	   $rowStart = 1;
+       	   $result = '[vc_row]';
+ 	   }
+ 	   
+ 	 }*/
+ 	   
+     if($tag!='vc_column' && $tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths' && $tag != 'five_sixths_last' && $tag != 'one_whole') $result .= "\n".'[vc_column width="'.$width.'"]';
+ 	
+ 	
+ 	
+     // Tag
+     $pattern = get_shortcode_regex();
+     if($tag == 'vc_column' || $tag == 'one_half' || $tag == 'one_half_last' || $tag == 'one_third' || $tag == 'one_third_last' || $tag == 'one_fourth' || $tag == 'one_fourth_last' 
+ 	   || $tag == 'one_sixth' || $tag == 'one_sixth_last' || $tag == 'two_thirds' || $tag == 'two_thirds_last' || $tag == 'three_fourths' || $tag == 'three_fourtsh_last' || $tag == 'fixth_sixths'
+ 	   || $tag == 'five_sixths_last' || $tag == 'one_whole') {
+         $result .= "[{$m_one}{$tag} {$attr_string}]".preg_replace_callback( "/{$pattern}/s", 'vc_convert_inner_shortcode', $content)."[/{$tag}{$m_four}]";
+     } elseif( $tag == 'vc_tabs' || $tag == 'vc_accordion' || $tag == 'vc_tour' || $tag == 'toggle' || $tag == 'tabbed_section' ||  $tag == 'testimonial_slider' ||  $tag == 'clients' ||  $tag == 'pricing_table' ) {
+     	
+         $result .= "[{$m_one}{$tag} {$attr_string}]".preg_replace_callback( "/{$pattern}/s", 'vc_convert_tab_inner_shortcode', $content)."[/{$tag}{$m_four}]";
+     } else {
+         $result .= preg_replace('/(\"\d\/\d\")/', '"1/1"', $output);
+     }
 
-    // Start
-    if(preg_match('/first/', $el_position) || empty($shortcode_attr['width']) || $shortcode_attr['width']==='1/1')  {
-	    if(!empty($output)) $result = '[vc_row]';
-	}
-	
-	/*if($tag == 'one_half' || $tag == 'one_third' || $tag == 'one_fourth' 
-	   || $tag == 'one_sixth' || $tag == 'two_thirds' || $tag == 'three_fourths' || $tag == 'fixth_sixths' || $tag == 'one_whole') {
-	  
-	   
-	   if($rowStart == 0) {
-	  	   $rowStart = 1;
-      	   $result = '[vc_row]';
-	   }
-	   
-	 }*/
-	   
-    if($tag!='vc_column' && $tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths' && $tag != 'five_sixths_last' && $tag != 'one_whole') $result .= "\n".'[vc_column width="'.$width.'"]';
-	
-	
-	
-    // Tag
-    $pattern = get_shortcode_regex();
-    if($tag == 'vc_column' || $tag == 'one_half' || $tag == 'one_half_last' || $tag == 'one_third' || $tag == 'one_third_last' || $tag == 'one_fourth' || $tag == 'one_fourth_last' 
-	   || $tag == 'one_sixth' || $tag == 'one_sixth_last' || $tag == 'two_thirds' || $tag == 'two_thirds_last' || $tag == 'three_fourths' || $tag == 'three_fourtsh_last' || $tag == 'fixth_sixths'
-	   || $tag == 'five_sixths_last' || $tag == 'one_whole') {
-        $result .= "[{$m_one}{$tag} {$attr_string}]".preg_replace_callback( "/{$pattern}/s", 'vc_convert_inner_shortcode', $content)."[/{$tag}{$m_four}]";
-    } elseif( $tag == 'vc_tabs' || $tag == 'vc_accordion' || $tag == 'vc_tour' || $tag == 'toggle' || $tag == 'tabbed_section' ||  $tag == 'testimonial_slider' ||  $tag == 'clients' ||  $tag == 'pricing_table' ) {
-    	
-        $result .= "[{$m_one}{$tag} {$attr_string}]".preg_replace_callback( "/{$pattern}/s", 'vc_convert_tab_inner_shortcode', $content)."[/{$tag}{$m_four}]";
-    } else {
-        $result .= preg_replace('/(\"\d\/\d\")/', '"1/1"', $output);
-    }
+     // $content = preg_replace_callback( "/{$pattern}/s", 'vc_convert_inner_shortcode', $content );
 
-    // $content = preg_replace_callback( "/{$pattern}/s", 'vc_convert_inner_shortcode', $content );
+     // End
+     if($tag!='vc_column' && $tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths' && $tag != 'five_sixths_last' && $tag != 'one_whole') $result .= '[/vc_column]';
+ 	   
+     if(preg_match('/last/', $el_position) || empty($shortcode_attr['width']) || $shortcode_attr['width']==='1/1') {
+     	/*if($tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' 
+ 		   && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths'
+ 		   && $tag != 'five_sixths_last' && $tag != 'one_whole') {*/
+ 	    	if(!empty($output)) $result .= '[/vc_row]'."\n";
+ 	   /*}*/
+     }
+ 	
+ 	
+ 	/*if($tag == 'one_half_last' || $tag == 'one_third_last'  || $tag == 'one_fourth_last' 
+ 	   || $tag == 'one_sixth_last' || $tag == 'two_thirds_last' || $tag == 'three_fourtsh_last' || $tag !== 'five_sixths_last') {
+         $result .= '[/vc_row]'."\n";
+ 	    $rowStart = 0;
+ 	 }*/
+ 	
+     return $result;
+ }
 
-    // End
-    if($tag!='vc_column' && $tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths' && $tag != 'five_sixths_last' && $tag != 'one_whole') $result .= '[/vc_column]';
-	   
-    if(preg_match('/last/', $el_position) || empty($shortcode_attr['width']) || $shortcode_attr['width']==='1/1') {
-    	/*if($tag != 'one_half' && $tag != 'one_half_last' && $tag != 'one_third' && $tag != 'one_third_last' && $tag != 'one_fourth' && $tag != 'one_fourth_last' 
-		   && $tag != 'one_sixth' && $tag != 'one_sixth_last' && $tag != 'two_thirds' && $tag != 'two_thirds_last' && $tag != 'three_fourths' && $tag != 'three_fourtsh_last' && $tag != 'fixth_sixths'
-		   && $tag != 'five_sixths_last' && $tag != 'one_whole') {*/
-	    	if(!empty($output)) $result .= '[/vc_row]'."\n";
-	   /*}*/
-    }
-	
-	
-	/*if($tag == 'one_half_last' || $tag == 'one_third_last'  || $tag == 'one_fourth_last' 
-	   || $tag == 'one_sixth_last' || $tag == 'two_thirds_last' || $tag == 'three_fourtsh_last' || $tag !== 'five_sixths_last') {
-        $result .= '[/vc_row]'."\n";
-	    $rowStart = 0;
-	 }*/
-	
-    return $result;
-}
-
-/* nectar addition end */ 
-
-
+ /* nectar addition end */ 
 
 /**
  * @param $m
@@ -723,67 +695,67 @@ $vc_row_layouts = array(
 		'cells' => '11',
 		'mask' => '12',
 		'title' => '1/1',
-		'icon_class' => 'l_11',
+		'icon_class' => '1-1',
 	),
 	array(
 		'cells' => '12_12',
 		'mask' => '26',
 		'title' => '1/2 + 1/2',
-		'icon_class' => 'l_12_12',
+		'icon_class' => '1-2_1-2',
 	),
 	array(
 		'cells' => '23_13',
 		'mask' => '29',
 		'title' => '2/3 + 1/3',
-		'icon_class' => 'l_23_13',
+		'icon_class' => '2-3_1-3',
 	),
 	array(
 		'cells' => '13_13_13',
 		'mask' => '312',
 		'title' => '1/3 + 1/3 + 1/3',
-		'icon_class' => 'l_13_13_13',
+		'icon_class' => '1-3_1-3_1-3',
 	),
 	array(
 		'cells' => '14_14_14_14',
 		'mask' => '420',
 		'title' => '1/4 + 1/4 + 1/4 + 1/4',
-		'icon_class' => 'l_14_14_14_14',
+		'icon_class' => '1-4_1-4_1-4_1-4',
 	),
 	array(
 		'cells' => '14_34',
 		'mask' => '212',
 		'title' => '1/4 + 3/4',
-		'icon_class' => 'l_14_34',
+		'icon_class' => '1-4_3-4',
 	),
 	array(
 		'cells' => '14_12_14',
 		'mask' => '313',
 		'title' => '1/4 + 1/2 + 1/4',
-		'icon_class' => 'l_14_12_14',
+		'icon_class' => '1-4_1-2_1-4',
 	),
 	array(
 		'cells' => '56_16',
 		'mask' => '218',
 		'title' => '5/6 + 1/6',
-		'icon_class' => 'l_56_16',
+		'icon_class' => '5-6_1-6',
 	),
 	array(
 		'cells' => '16_16_16_16_16_16',
 		'mask' => '642',
 		'title' => '1/6 + 1/6 + 1/6 + 1/6 + 1/6 + 1/6',
-		'icon_class' => 'l_16_16_16_16_16_16',
+		'icon_class' => '1-6_1-6_1-6_1-6_1-6_1-6',
 	),
 	array(
 		'cells' => '16_23_16',
 		'mask' => '319',
 		'title' => '1/6 + 4/6 + 1/6',
-		'icon_class' => 'l_16_46_16',
+		'icon_class' => '1-6_2-3_1-6',
 	),
 	array(
 		'cells' => '16_16_16_12',
 		'mask' => '424',
 		'title' => '1/6 + 1/6 + 1/6 + 1/2',
-		'icon_class' => 'l_16_16_16_12',
+		'icon_class' => '1-6_1-6_1-6_1-2',
 	),
 );
 
@@ -997,22 +969,6 @@ function vc_parse_multi_attribute( $value, $default = array() ) {
 }
 
 /**
- * @param $string
- *
- * @deprecated 4.5
- * @since 4.2
- * @return string
- */
-function wpb_stripslashes_if_gpc_magic_quotes( $string ) {
-	// _deprecated_function( 'wpb_stripslashes_if_gpc_magic_quotes', '4.5 (will be removed in 4.10)', 'stripslashes' );
-	if ( get_magic_quotes_gpc() ) {
-		return stripslashes( $string );
-	} else {
-		return $string;
-	}
-}
-
-/**
  * @param $v
  *
  * @since 4.2
@@ -1099,28 +1055,6 @@ function vc_parse_options_string( $string, $tag, $param ) {
 	}
 
 	return $options;
-}
-
-/**
- * @since 4.2
- * @deprecated 4.2
- */
-function wpb_js_composer_check_version_schedule_deactivation() {
-	// _deprecated_function( 'wpb_js_composer_check_version_schedule_deactivation', '4.2 (will be removed in 4.10)' );
-	wp_clear_scheduled_hook( 'wpb_check_for_update' );
-	delete_option( 'wpb_js_composer_show_new_version_message' );
-}
-
-/**
- * Helper function to add new third-party adaptation class.
- * @deprecated 4.4
- * @since 4.3
- *
- * @param Vc_Vendor_Interface $vendor - instance of class.
- */
-function vc_add_vendor( Vc_Vendor_Interface $vendor ) {
-	// _deprecated_function( 'vc_add_vendor', '4.4 (will be removed in 4.10)', 'autoload logic' );
-	visual_composer()->vendorsManager()->add( $vendor );
 }
 
 /**
@@ -1247,6 +1181,16 @@ function vc_icon_element_fonts_enqueue( $font ) {
 		case 'linecons':
 			wp_enqueue_style( 'vc_linecons' );
 			break;
+		case 'monosocial':
+			wp_enqueue_style( 'vc_monosocialiconsfont' );
+			break;
+			/*nectar addition */
+			/*
+			case 'material':
+				wp_enqueue_style( 'vc_material' );
+				break;
+				*/
+				/*nectar addition end */
 		default:
 			do_action( 'vc_enqueue_font_icon_element', $font ); // hook to custom do enqueue style
 	}
@@ -1282,22 +1226,22 @@ function vc_get_shortcode_regex( $tagregexp = '' ) {
 	}
 
 	return '\\['                              // Opening bracket
-	       . '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
-	       . "($tagregexp)"                     // 2: Shortcode name
-	       . '(?![\\w-])'                       // Not followed by word character or hyphen
-	       . '('                                // 3: Unroll the loop: Inside the opening shortcode tag
-	       . '[^\\]\\/]*'                   // Not a closing bracket or forward slash
-	       . '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
-	       . '[^\\]\\/]*'               // Not a closing bracket or forward slash
-	       . ')*?' . ')' . '(?:' . '(\\/)'                        // 4: Self closing tag ...
-	       . '\\]'                          // ... and closing bracket
-	       . '|' . '\\]'                          // Closing bracket
-	       . '(?:' . '('                        // 5: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
-	       . '[^\\[]*+'             // Not an opening bracket
-	       . '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
-	       . '[^\\[]*+'         // Not an opening bracket
-	       . ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
-	       . ')?' . ')' . '(\\]?)';
+		. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
+		. "($tagregexp)"                     // 2: Shortcode name
+		. '(?![\\w-])'                       // Not followed by word character or hyphen
+		. '('                                // 3: Unroll the loop: Inside the opening shortcode tag
+		. '[^\\]\\/]*'                   // Not a closing bracket or forward slash
+		. '(?:' . '\\/(?!\\])'               // A forward slash not followed by a closing bracket
+		. '[^\\]\\/]*'               // Not a closing bracket or forward slash
+		. ')*?' . ')' . '(?:' . '(\\/)'                        // 4: Self closing tag ...
+		. '\\]'                          // ... and closing bracket
+		. '|' . '\\]'                          // Closing bracket
+		. '(?:' . '('                        // 5: Unroll the loop: Optionally, anything between the opening and closing shortcode tags
+		. '[^\\[]*+'             // Not an opening bracket
+		. '(?:' . '\\[(?!\\/\\2\\])' // An opening bracket not followed by the closing shortcode tag
+		. '[^\\[]*+'         // Not an opening bracket
+		. ')*+' . ')' . '\\[\\/\\2\\]'             // Closing shortcode tag
+		. ')?' . ')' . '(\\]?)';
 }
 
 /**
@@ -1449,40 +1393,6 @@ function vc_is_responsive_disabled() {
 }
 
 /**
- * @deprecated 4.2
- * @since 4.2
- * @return mixed|string|void
- */
-function get_row_css_class() {
-	// _deprecated_function( 'get_row_css_class', '4.2 (will be removed in 4.10)' );
-	$custom = vc_settings()->get( 'row_css_class' );
-
-	return ! empty( $custom ) ? $custom : 'vc_row-fluid';
-}
-
-/**
- * @deprecated and will be removed
- * @since 4.2
- * @return int
- */
-function vc_get_interface_version() {
-	// _deprecated_function( 'vc_get_interface_version', '4.2 (will be removed in 4.10)' );
-
-	return 2;
-}
-
-/**
- * @deprecated and will be removed.
- * @since 4.2
- * @return int
- */
-function vc_get_initerface_version() {
-	// _deprecated_function( 'vc_get_initerface_version', '4.2 (will be removed in 4.10)' );
-
-	return vc_get_interface_version();
-}
-
-/**
  * Do shortcode single render point
  *
  * @param $atts
@@ -1492,8 +1402,7 @@ function vc_get_initerface_version() {
  * @return string
  */
 function vc_do_shortcode( $atts, $content = null, $tag = null ) {
-	return Vc_Shortcodes_Manager::getInstance()->getElementClass( $tag )
-	                                 ->output( $atts, $content );
+	return Vc_Shortcodes_Manager::getInstance()->getElementClass( $tag )->output( $atts, $content );
 }
 
 /**

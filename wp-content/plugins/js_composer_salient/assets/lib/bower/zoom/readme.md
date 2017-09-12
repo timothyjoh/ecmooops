@@ -1,8 +1,13 @@
 ## About Zoom
 
 A small jQuery plugin for zooming images on mouseover or mousedown. See the [project page](http://jacklmoore.com/zoom/) for documentation and a demonstration.  Released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
- 
+
+To compile the .min.js file, run: `uglifyjs --comments '/license:/' < jquery.zoom.js > jquery.zoom.min.js` 
+
 ## Changelog:
+
+##### v1.7.15 - 2016/2/8
+* Added touchend event, might fix #97 #75 #62.  Merges #100.
 
 ##### v1.7.14 - 2015/3/18
 * Fixes bug with passing the `target` property a selector, rather than a DOM node. Merges #73.

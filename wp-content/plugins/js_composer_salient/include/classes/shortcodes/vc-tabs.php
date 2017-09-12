@@ -135,10 +135,7 @@ class WPBakeryShortCode_Tabbed_Section extends WPBakeryShortCode {
         // Extract tab titles
 
         preg_match_all( '/vc_tab title="([^\"]+)"(\stab_id\=\"([^\"]+)\"){0,1}/i', $content, $matches, PREG_OFFSET_CAPTURE );
-        /*
-$tab_titles = array();
-if ( isset($matches[1]) ) { $tab_titles = $matches[1]; }
-*/
+
         $output = '';
         $tab_titles = array();
 
@@ -161,23 +158,11 @@ if ( isset($matches[1]) ) { $tab_titles = $matches[1]; }
         }
 
 
-        /*
-if ( count($tab_titles) ) {
-    $tmp .= '<ul class="clearfix">';
-    foreach ( $tab_titles as $tab ) {
-        $tmp .= '<li><a href="#tab-'. sanitize_title( $tab[0] ) .'">' . $tab[0] . '</a></li>';
-    }
-    $tmp .= '</ul>';
-} else {
-    $output .= do_shortcode( $content );
-}
-*/
         $elem = $this->getElementHolder( $width );
 
         $iner = '';
         foreach ( $this->settings['params'] as $param ) {
-            $custom_markup = '';
-            $param_value = isset( $$param['param_name'] ) ? $$param['param_name'] : '';
+            $param_value = isset( ${$param['param_name']} ) ? ${$param['param_name']} : '';
             if ( is_array( $param_value ) ) {
                 // Get first element from the array
                 reset( $param_value );

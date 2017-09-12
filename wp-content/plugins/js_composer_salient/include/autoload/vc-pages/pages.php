@@ -22,7 +22,7 @@ function vc_page_css_enqueue() {
  * @return Vc_Pages_Group
  */
 function vc_pages_group_build( $slug, $title, $tab = '' ) {
-	global $vc_page_welcome_tabs;
+	$vc_page_welcome_tabs = vc_get_page_welcome_tabs();
 	require_once vc_path_dir( 'CORE_DIR', 'class-vc-page.php' );
 	require_once vc_path_dir( 'CORE_DIR', 'class-vc-pages-group.php' );
 	// Create page.
@@ -59,11 +59,14 @@ function vc_menu_page_build() {
 	} else {
 		define( 'VC_PAGE_MAIN_SLUG', 'vc-welcome' );
 	}
-	add_menu_page( __( 'Visual Composer', 'js_composer' ), __( 'Visual Composer', 'js_composer' ), 'exist', VC_PAGE_MAIN_SLUG, null, vc_asset_url( 'vc/visual_composer.png' ), 76 );
+	add_menu_page( __( 'Visual Composer', 'js_composer' ), __( 'Visual Composer', 'js_composer' ), 'edit_posts', VC_PAGE_MAIN_SLUG, null, vc_asset_url( 'vc/visual_composer.png' ), 76 );
 	do_action( 'vc_menu_page_build' );
 }
 
 function vc_network_menu_page_build() {
+	if ( ! vc_is_network_plugin() ) {
+		return;
+	}
 	if ( vc_user_access()
 			->wpAny( 'manage_options' )
 			->part( 'settings' )

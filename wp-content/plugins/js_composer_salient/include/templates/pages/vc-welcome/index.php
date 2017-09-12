@@ -2,9 +2,10 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+preg_match( '/^(\d+)(\.\d+)?/', WPB_VC_VERSION, $matches );
 ?>
 <div class="wrap vc-page-welcome about-wrap">
-	<h1><?php echo sprintf( __( 'Welcome to Visual Composer %s', 'js_composer' ), preg_replace( '/^(\d+)(\.\d+)?(\.\d)?/', '$1$2', WPB_VC_VERSION ) ) ?></h1>
+	<h1><?php echo sprintf( __( 'Welcome to Visual Composer %s', 'js_composer' ), isset( $matches[0] ) ? $matches[0] : WPB_VC_VERSION ) ?></h1>
 
 	<div class="about-text">
 		<?php _e( 'Congratulations! You are about to use most powerful time saver for WordPress ever - page builder plugin with Frontend and Backend editors by WPBakery.', 'js_composer' ) ?>
@@ -22,8 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<a href="<?php echo esc_attr( admin_url( 'admin.php?page=vc-general' ) ) ?>"
 			class="button button-primary"><?php _e( 'Settings', 'js_composer' ) ?></a><?php endif; ?>
 		<a href="https://twitter.com/share" class="twitter-share-button"
-			data-text="Take full control over your WordPress site with Visual Composer page builder by @WPBakery"
-			data-url="http://vc.wpbakery.com" data-size="large">Tweet</a>
+			data-via="wpbakery"
+			data-text="Take full control over your #WordPress site with Visual Composer page builder"
+			data-url="http://visualcomposer.io" data-size="large">Tweet</a>
 		<script>! function ( d, s, id ) {
 				var js, fjs = d.getElementsByTagName( s )[ 0 ], p = /^http:/.test( d.location ) ? 'http' : 'https';
 				if ( ! d.getElementById( id ) ) {

@@ -16,11 +16,11 @@ $shortcodes = $grid_item->shortcodes();
 
 if ( vc_user_access()->part( 'presets' )->can()->get() ) {
 	require_once vc_path_dir( 'AUTOLOAD_DIR', 'class-vc-settings-presets.php' );
-	$vc_settings_presets = Vc_Settings_Preset::listDefaultSettingsPresets();
 	$vc_vendor_settings_presets = Vc_Settings_Preset::listDefaultVendorSettingsPresets();
+	$vc_all_presets = Vc_Settings_Preset::listAllPresets();
 } else {
-	$vc_settings_presets = array();
-	$vc_vendor_settings_presets = array();;
+	$vc_vendor_settings_presets = array();
+	$vc_all_presets = array();
 }
 
 ?>
@@ -28,7 +28,7 @@ if ( vc_user_access()->part( 'presets' )->can()->get() ) {
 		var vc_user_mapper = <?php echo json_encode( WpbMap_Grid_Item::getGitemUserShortCodes() ) ?>,
 			vc_mapper = <?php echo json_encode( WpbMap_Grid_Item::getShortCodes() ) ?>,
 			vc_vendor_settings_presets = <?php echo json_encode( $vc_vendor_settings_presets ) ?>,
-			vc_settings_presets = <?php echo json_encode( $vc_settings_presets ) ?>,
+			vc_all_presets = <?php echo json_encode( $vc_all_presets ) ?>,
 			vc_frontend_enabled = false,
 			vc_mode = '<?php echo vc_mode(); ?>',
 			vcAdminNonce = '<?php echo vc_generate_nonce( 'vc-admin-nonce' ); ?>';
@@ -37,9 +37,9 @@ if ( vc_user_access()->part( 'presets' )->can()->get() ) {
 	<script type="text/html" id="vc_settings-image-block">
 		<li class="added">
 			<div class="inner" style="width: 80px; height: 80px; overflow: hidden;text-align: center;">
-				<img rel="<%= id %>" src="<%= url %>"/>
+				<img rel="{{ id }}" src="<# if(sizes && sizes.thumbnail) { #>{{ sizes.thumbnail.url }}<# } else {#>{{ url }}<# } #>"/>
 			</div>
-			<a href="#" class="vc_icon-remove"></a>
+			<a href="#" class="vc_icon-remove"><i class="vc-composer-icon vc-c-icon-close"></i></a>
 		</li>
 	</script>
 <?php foreach ( WpbMap_Grid_Item::getShortCodes() as $sc_base => $el ) :  ?>

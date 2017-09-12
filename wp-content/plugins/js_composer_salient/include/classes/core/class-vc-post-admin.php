@@ -13,7 +13,7 @@ class Vc_Post_Admin {
 	 * Add hooks required to save, update and manipulate post
 	 */
 	public function init() {
-		add_action( 'save_post', array( &$this, 'save' ) );
+		add_action( 'save_post', array( $this, 'save' ) );
 	}
 
 	/**

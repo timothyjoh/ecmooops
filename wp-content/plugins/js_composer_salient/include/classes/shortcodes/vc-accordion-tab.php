@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
 require_once vc_path_dir( 'SHORTCODES_DIR', 'vc-tab.php' );
 
 class WPBakeryShortCode_VC_Accordion_tab extends WPBakeryShortCode_VC_Tab {
@@ -141,6 +142,7 @@ class WPBakeryShortCode_VC_Accordion_tab extends WPBakeryShortCode_VC_Tab {
 	}
 }
 
+
 /* nectar addition */ 
 
 Class WPBakeryShortCode_Toggle extends WPBakeryShortCode_VC_Tab {
@@ -195,12 +197,12 @@ Class WPBakeryShortCode_Toggle extends WPBakeryShortCode_VC_Tab {
 			if ( isset( $this->settings['params'] ) ) {
 				$inner = '';
 				foreach ( $this->settings['params'] as $param ) {
-					$param_value = isset( $$param['param_name'] ) ? $$param['param_name'] : '';
+					$param_value = isset( ${$param['param_name']} ) ? ${$param['param_name']} : '';
 					if ( is_array( $param_value ) ) {
 						// Get first element from the array
 						reset( $param_value );
 						$first_key = key( $param_value );
-						$param_value = $param_value[$first_key];
+						$param_value = $param_value[ $first_key ];
 					}
 					$inner .= $this->singleParamHtmlHolder( $param, $param_value );
 				}

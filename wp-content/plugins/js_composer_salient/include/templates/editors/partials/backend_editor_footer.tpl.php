@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
+
 /** @var $edit Vc_Backend_Editor */
 // [add element box]
 require_once vc_path_dir( 'EDITORS_DIR', 'popups/class-vc-add-element-box.php' );
@@ -18,6 +19,11 @@ if ( vc_user_access()->part( 'templates' )->can()->get() ) {
 	visual_composer()->templatesPanelEditor()->renderUITemplate();
 }
 // [/rendering templates panel editor]
+
+// [preset panel editor render]
+visual_composer()->presetPanelEditor()->renderUIPreset();
+// [/preset panel editor render]
+
 
 // [post settings]
 if ( vc_user_access()->part( 'post_settings' )->can()->get() ) {
