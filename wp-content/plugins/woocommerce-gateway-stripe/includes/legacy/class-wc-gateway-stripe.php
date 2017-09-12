@@ -162,7 +162,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway {
 
 		// Show message if enabled and FORCE SSL is disabled and WordpressHTTPS plugin is not detected
 		if ( ( function_exists( 'wc_site_is_https' ) && ! wc_site_is_https() ) && ( 'no' === get_option( 'woocommerce_force_ssl_checkout' ) && ! class_exists( 'WordPressHTTPS' ) ) ) {
-			echo '<div class="error"><p>' . sprintf( __( 'Stripe is enabled, but the <a href="%s">force SSL option</a> is disabled; your checkout may not be secure! Please enable SSL and ensure your server has a valid SSL certificate - Stripe will only work in test mode.', 'woocommerce-gateway-stripe' ), admin_url( 'admin.php?page=wc-settings&tab=checkout' ) ) . '</p></div>';
+			echo '<div class="error"><p>' . sprintf( __( 'Stripe is enabled, but the <a href="%1$s">force SSL option</a> is disabled; your checkout may not be secure! Please enable SSL and ensure your server has a valid <a href="%2$s" target="_blank">SSL certificate</a> - Stripe will only work in test mode.', 'woocommerce-gateway-stripe' ), admin_url( 'admin.php?page=wc-settings&tab=checkout' ), 'https://en.wikipedia.org/wiki/Transport_Layer_Security' ) . '</p></div>';
 		}
 	}
 
@@ -285,7 +285,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway {
 	public function payment_scripts() {
 		if ( $this->stripe_checkout ) {
 			wp_enqueue_script( 'stripe', 'https://checkout.stripe.com/v2/checkout.js', '', '2.0', true );
-			wp_enqueue_script( 'woocommerce_stripe', plugins_url( 'assets/js/stripe_checkout.js', WC_STRIPE_MAIN_FILE ), array( 'stripe' ), WC_STRIPE_VERSION, true );
+			wp_enqueue_script( 'woocommerce_stripe', plugins_url( 'assets/js/stripe-checkout.js', WC_STRIPE_MAIN_FILE ), array( 'stripe' ), WC_STRIPE_VERSION, true );
 		} else {
 			wp_enqueue_script( 'stripe', 'https://js.stripe.com/v2/', '', '1.0', true );
 			wp_enqueue_script( 'woocommerce_stripe', plugins_url( 'assets/js/stripe.js', WC_STRIPE_MAIN_FILE ), array( 'jquery-payment', 'stripe' ), WC_STRIPE_VERSION, true );
@@ -441,6 +441,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway {
 
 			// Handle payment
 			if ( $order->get_total() > 0 ) {
+
 				if ( $order->get_total() * 100 < WC_Stripe::get_minimum_amount() ) {
 					throw new Exception( sprintf( __( 'Sorry, the minimum allowed order total is %1$s to use this payment method.', 'woocommerce-gateway-stripe' ), wc_price( WC_Stripe::get_minimum_amount() / 100 ) ) );
 				}
@@ -516,7 +517,7 @@ class WC_Gateway_Stripe extends WC_Payment_Gateway {
 			$order->payment_complete( $response->id );
 			WC_Stripe::log( "Successful charge: $response->id" );
 		} else {
-			add_post_meta( $order->id, '_transaction_id', $response->id, true );
+			update_post_meta( $order->id, '_transaction_id', $response->id, true );
 
 			if ( $order->has_status( array( 'pending', 'failed' ) ) ) {
 				$order->reduce_order_stock();

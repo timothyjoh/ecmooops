@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 
+	public $wc_pre_30;
+
 	/**
 	 * Constructor
 	 */
@@ -33,6 +35,8 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 		if ( class_exists( 'WC_Pre_Orders_Order' ) ) {
 			add_action( 'wc_pre_orders_process_pre_order_completion_payment_' . $this->id, array( $this, 'process_pre_order_release_payment' ) );
 		}
+
+		$this->wc_pre_30 = version_compare( WC_VERSION, '3.0.0', '<' );
 	}
 
 	/**
@@ -77,18 +81,21 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	protected function save_source( $order, $source ) {
 		parent::save_source( $order, $source );
 
+		$order_id  = $this->wc_pre_30 ? $order->id : $order->get_id();
+
 		// Also store it on the subscriptions being purchased or paid for in the order
-		if ( function_exists( 'wcs_order_contains_subscription' ) && wcs_order_contains_subscription( $order->id ) ) {
-			$subscriptions = wcs_get_subscriptions_for_order( $order->id );
-		} elseif ( function_exists( 'wcs_order_contains_renewal' ) && wcs_order_contains_renewal( $order->id ) ) {
-			$subscriptions = wcs_get_subscriptions_for_renewal_order( $order->id );
+		if ( function_exists( 'wcs_order_contains_subscription' ) && wcs_order_contains_subscription( $order_id ) ) {
+			$subscriptions = wcs_get_subscriptions_for_order( $order_id );
+		} elseif ( function_exists( 'wcs_order_contains_renewal' ) && wcs_order_contains_renewal( $order_id ) ) {
+			$subscriptions = wcs_get_subscriptions_for_renewal_order( $order_id );
 		} else {
 			$subscriptions = array();
 		}
 
-		foreach( $subscriptions as $subscription ) {
-			update_post_meta( $subscription->id, '_stripe_customer_id', $source->customer );
-			update_post_meta( $subscription->id, '_stripe_card_id', $source->source );
+		foreach ( $subscriptions as $subscription ) {
+			$subscription_id = $this->wc_pre_30 ? $subscription->id : $subscription->get_id();
+			update_post_meta( $subscription_id, '_stripe_customer_id', $source->customer );
+			update_post_meta( $subscription_id, '_stripe_card_id', $source->source );
 		}
 	}
 
@@ -99,7 +106,7 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @param string $stripe_token (default: '')
 	 * @param  bool initial_payment
 	 */
-	public function process_subscription_payment( $order = '', $amount = 0 ) {		
+	public function process_subscription_payment( $order = '', $amount = 0 ) {
 		if ( $amount * 100 < WC_Stripe::get_minimum_amount() ) {
 			return new WP_Error( 'stripe_error', sprintf( __( 'Sorry, the minimum allowed order total is %1$s to use this payment method.', 'woocommerce-gateway-stripe' ), wc_price( WC_Stripe::get_minimum_amount() / 100 ) ) );
 		}
@@ -109,7 +116,7 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 
 		// If no order source was defined, use user source instead.
 		if ( ! $source->customer ) {
-			$source = $this->get_source( $order->customer_user );
+			$source = $this->get_source( ( $this->wc_pre_30 ? $order->customer_user : $order->get_customer_id() ) );
 		}
 
 		// Or fail :(
@@ -117,21 +124,37 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 			return new WP_Error( 'stripe_error', __( 'Customer not found', 'woocommerce-gateway-stripe' ) );
 		}
 
-		WC_Stripe::log( "Info: Begin processing subscription payment for order {$order->id} for the amount of {$amount}" );
+		$order_id = $this->wc_pre_30 ? $order->id : $order->get_id();
+		$this->log( "Info: Begin processing subscription payment for order {$order_id} for the amount of {$amount}" );
 
 		// Make the request
 		$request             = $this->generate_payment_request( $order, $source );
 		$request['capture']  = 'true';
 		$request['amount']   = $this->get_stripe_amount( $amount, $request['currency'] );
 		$request['metadata'] = array(
-			'payment_type'   => 'recurring'
+			'payment_type'   => 'recurring',
+			'site_url'       => esc_url( get_site_url() ),
 		);
 		$response            = WC_Stripe_API::request( $request );
 
 		// Process valid response
-		if ( ! is_wp_error( $response ) ) {
-			$this->process_response( $response, $order );
+		if ( is_wp_error( $response ) ) {
+			if ( 'missing' === $response->get_error_code() ) {
+				// If we can't link customer to a card, we try to charge by customer ID.
+				$request             = $this->generate_payment_request( $order, $this->get_source( ( $this->wc_pre_30 ? $order->customer_user : $order->get_customer_id() ) ) );
+				$request['capture']  = 'true';
+				$request['amount']   = $this->get_stripe_amount( $amount, $request['currency'] );
+				$request['metadata'] = array(
+					'payment_type'   => 'recurring',
+					'site_url'       => esc_url( get_site_url() ),
+				);
+				$response          = WC_Stripe_API::request( $request );
+			} else {
+				return $response; // Default catch all errors.
+			}
 		}
+
+		$this->process_response( $response, $order );
 
 		return $response;
 	}
@@ -169,7 +192,7 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 				// Return thank you page redirect
 				return array(
 					'result'   => 'success',
-					'redirect' => $this->get_return_url( $order )
+					'redirect' => $this->get_return_url( $order ),
 				);
 			} catch ( Exception $e ) {
 				wc_add_notice( $e->getMessage(), 'error' );
@@ -210,7 +233,6 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 					break;
 				}
 			}
-
 		} catch ( Exception $e ) {
 			$order_note = sprintf( __( 'Stripe Transaction Failed (%s)', 'woocommerce-gateway-stripe' ), $e->getMessage() );
 
@@ -229,8 +251,8 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @param int $resubscribe_order The order created for the customer to resubscribe to the old expired/cancelled subscription
 	 */
 	public function delete_resubscribe_meta( $resubscribe_order ) {
-		delete_post_meta( $resubscribe_order->id, '_stripe_customer_id' );
-		delete_post_meta( $resubscribe_order->id, '_stripe_card_id' );
+		delete_post_meta( ( $this->wc_pre_30 ? $resubscribe_order->id : $resubscribe_order->get_id() ), '_stripe_customer_id' );
+		delete_post_meta( ( $this->wc_pre_30 ? $resubscribe_order->id : $resubscribe_order->get_id() ), '_stripe_card_id' );
 		$this->delete_renewal_meta( $resubscribe_order );
 	}
 
@@ -239,9 +261,9 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @param int $resubscribe_order The order created for the customer to resubscribe to the old expired/cancelled subscription
 	 */
 	public function delete_renewal_meta( $renewal_order ) {
-		delete_post_meta( $renewal_order->id, 'Stripe Fee' );
-		delete_post_meta( $renewal_order->id, 'Net Revenue From Stripe' );
-		delete_post_meta( $renewal_order->id, 'Stripe Payment ID' );
+		delete_post_meta( ( $this->wc_pre_30 ? $renewal_order->id : $renewal_order->get_id() ), 'Stripe Fee' );
+		delete_post_meta( ( $this->wc_pre_30 ? $renewal_order->id : $renewal_order->get_id() ), 'Net Revenue From Stripe' );
+		delete_post_meta( ( $this->wc_pre_30 ? $renewal_order->id : $renewal_order->get_id() ), 'Stripe Payment ID' );
 		return $renewal_order;
 	}
 
@@ -264,7 +286,8 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @param  object $order
 	 */
 	public function remove_order_source_before_retry( $order ) {
-		delete_post_meta( $order->id, '_stripe_card_id' );
+		$order_id = $this->wc_pre_30 ? $order->id : $order->get_id();
+		delete_post_meta( $order_id, '_stripe_card_id' );
 	}
 
 	/**
@@ -272,7 +295,8 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @param  object $order
 	 */
 	public function remove_order_customer_before_retry( $order ) {
-		delete_post_meta( $order->id, '_stripe_customer_id' );
+		$order_id = $this->wc_pre_30 ? $order->id : $order->get_id();
+		delete_post_meta( $order_id, '_stripe_customer_id' );
 	}
 
 	/**
@@ -285,8 +309,13 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @return void
 	 */
 	public function update_failing_payment_method( $subscription, $renewal_order ) {
-		update_post_meta( $subscription->id, '_stripe_customer_id', $renewal_order->stripe_customer_id );
-		update_post_meta( $subscription->id, '_stripe_card_id', $renewal_order->stripe_card_id );
+		if ( $this->wc_pre_30 ) {
+			update_post_meta( $subscription->id, '_stripe_customer_id', $renewal_order->stripe_customer_id );
+			update_post_meta( $subscription->id, '_stripe_card_id', $renewal_order->stripe_card_id );
+		} else {
+			$subscription->update_meta_data( '_stripe_customer_id', $renewal_order->get_meta( '_stripe_customer_id', true ) );
+			$subscription->update_meta_data( '_stripe_card_id', $renewal_order->get_meta( '_stripe_card_id', true ) );
+		}
 	}
 
 	/**
@@ -302,11 +331,11 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 		$payment_meta[ $this->id ] = array(
 			'post_meta' => array(
 				'_stripe_customer_id' => array(
-					'value' => get_post_meta( $subscription->id, '_stripe_customer_id', true ),
+					'value' => get_post_meta( ( $this->wc_pre_30 ? $subscription->id : $subscription->get_id() ), '_stripe_customer_id', true ),
 					'label' => 'Stripe Customer ID',
 				),
 				'_stripe_card_id' => array(
-					'value' => get_post_meta( $subscription->id, '_stripe_card_id', true ),
+					'value' => get_post_meta( ( $this->wc_pre_30 ? $subscription->id : $subscription->get_id() ), '_stripe_card_id', true ),
 					'label' => 'Stripe Card ID',
 				),
 			),
@@ -347,26 +376,28 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 	 * @return string the subscription payment method
 	 */
 	public function maybe_render_subscription_payment_method( $payment_method_to_display, $subscription ) {
+		$customer_user = $this->wc_pre_30 ? $subscription->customer_user : $subscription->get_customer_id();
+
 		// bail for other payment methods
-		if ( $this->id !== $subscription->payment_method || ! $subscription->customer_user ) {
+		if ( $this->id !== ( $this->wc_pre_30 ? $subscription->payment_method : $subscription->get_payment_method() ) || ! $customer_user ) {
 			return $payment_method_to_display;
 		}
 
 		$stripe_customer    = new WC_Stripe_Customer();
-		$stripe_customer_id = get_post_meta( $subscription->id, '_stripe_customer_id', true );
-		$stripe_card_id     = get_post_meta( $subscription->id, '_stripe_card_id', true );
+		$stripe_customer_id = get_post_meta( ( $this->wc_pre_30 ? $subscription->id : $subscription->get_id() ), '_stripe_customer_id', true );
+		$stripe_card_id     = get_post_meta( ( $this->wc_pre_30 ? $subscription->id : $subscription->get_id() ), '_stripe_card_id', true );
 
 		// If we couldn't find a Stripe customer linked to the subscription, fallback to the user meta data.
 		if ( ! $stripe_customer_id || ! is_string( $stripe_customer_id ) ) {
-			$user_id            = $subscription->customer_user;
+			$user_id            = $customer_user;
 			$stripe_customer_id = get_user_meta( $user_id, '_stripe_customer_id', true );
 			$stripe_card_id     = get_user_meta( $user_id, '_stripe_card_id', true );
 		}
 
 		// If we couldn't find a Stripe customer linked to the account, fallback to the order meta data.
 		if ( ( ! $stripe_customer_id || ! is_string( $stripe_customer_id ) ) && false !== $subscription->order ) {
-			$stripe_customer_id = get_post_meta( $subscription->order->id, '_stripe_customer_id', true );
-			$stripe_card_id     = get_post_meta( $subscription->order->id, '_stripe_card_id', true );
+			$stripe_customer_id = get_post_meta( ( $this->wc_pre_30 ? $subscription->order->id : $subscription->get_parent_id() ), '_stripe_customer_id', true );
+			$stripe_card_id     = get_post_meta( ( $this->wc_pre_30 ? $subscription->order->id : $subscription->get_parent_id() ), '_stripe_card_id', true );
 		}
 
 		$stripe_customer->set_id( $stripe_customer_id );
@@ -377,15 +408,31 @@ class WC_Gateway_Stripe_Addons extends WC_Gateway_Stripe {
 			foreach ( $cards as $card ) {
 				if ( $card->id === $stripe_card_id ) {
 					$found_card                = true;
-					$payment_method_to_display = sprintf( __( 'Via %s card ending in %s', 'woocommerce-gateway-stripe' ), ( isset( $card->type ) ? $card->type : $card->brand ), $card->last4 );
+					$payment_method_to_display = sprintf( __( 'Via %1$s card ending in %2$s', 'woocommerce-gateway-stripe' ), ( isset( $card->type ) ? $card->type : $card->brand ), $card->last4 );
 					break;
 				}
 			}
 			if ( ! $found_card ) {
-				$payment_method_to_display = sprintf( __( 'Via %s card ending in %s', 'woocommerce-gateway-stripe' ), ( isset( $cards[0]->type ) ? $cards[0]->type : $cards[0]->brand ), $cards[0]->last4 );
+				$payment_method_to_display = sprintf( __( 'Via %1$s card ending in %2$s', 'woocommerce-gateway-stripe' ), ( isset( $cards[0]->type ) ? $cards[0]->type : $cards[0]->brand ), $cards[0]->last4 );
 			}
 		}
 
 		return $payment_method_to_display;
+	}
+
+	/**
+	 * Logs
+	 *
+	 * @since 3.1.0
+	 * @version 3.1.0
+	 *
+	 * @param string $message
+	 */
+	public function log( $message ) {
+		$options = get_option( 'woocommerce_stripe_settings' );
+
+		if ( 'yes' === $options['logging'] ) {
+			WC_Stripe::log( $message );
+		}
 	}
 }
