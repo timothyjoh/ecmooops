@@ -426,6 +426,11 @@ scitent = jQuery.extend({}, scitent, {
 			}).then( scitent.okg_frontend_newokm_helper.callback_name_exists );
 		},
 		callback_name_exists: function( response ) {
+			if( response.indexOf('<?php') === 0 ) {
+				response = JSON.parse(response.slice(5));
+			} else {
+				response = JSON.parse(response);
+			}
 			var dfd = jQuery.Deferred();
 			var name_does_exist = ( !!response && !!response.data && response.data.exists );
 			if( name_does_exist ) {
@@ -445,7 +450,13 @@ scitent = jQuery.extend({}, scitent, {
 				url: scitent.ajaxurl(),
 				type: 'POST',
 				data: data,
-				success: that.successfully_newokmd
+				// success: that.successfully_newokmd
+			})
+			.done(function createdCallback(data) {
+				scitent.okg_frontend_newokm_helper.successfully_newokmd(data,null,null);
+			})
+			.fail(function failedCallback(err) {
+				scitent.okg_frontend_newokm_helper.successfully_newokmd(err.responseText,null,null);
 			});
 		},
 		serialized_a_to_o: function( a ) { // array to object: http://stackoverflow.com/questions/1184624/
@@ -462,7 +473,12 @@ scitent = jQuery.extend({}, scitent, {
 			});
 			return o;
 		},
-		successfully_newokmd: function( data ) {
+		successfully_newokmd: function( data, status, jqXHR ) {
+			if( data.indexOf('<?php') === 0 ) {
+				data = JSON.parse(data.slice(5));
+			} else {
+				data = JSON.parse(data);
+			}
 			var that = this;
 			if( !data || !data.data || !data.data.child ) {
 				scitent.okg_frontend_newokm_helper.actually_failed_to_newokm( data );
