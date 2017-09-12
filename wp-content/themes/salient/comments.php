@@ -22,7 +22,7 @@ $fw_class = (!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend
 <div class="comment-wrap <?php echo $fw_class;?>">
 
 <?php if ( have_comments() ) : ?>
-	<h3 id="comments"><?php  if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') echo '<span><i>'. __("Join the discussion").'</i></span>' ?> <?php comments_number(__('No Comments',NECTAR_THEME_NAME), __('One Comment', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) );?></h3>
+	<h3 id="comments"><?php  if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') echo '<span><i>'. __("Join the discussion", NECTAR_THEME_NAME).'</i></span>' ?> <?php comments_number(__('No Comments',NECTAR_THEME_NAME), __('One Comment', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) );?></h3>
 
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
@@ -50,7 +50,7 @@ $fw_class = (!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend
 
 $required_text = null;
 $form_style = (!empty($options['form-style'])) ? $options['form-style'] : 'default'; 
-$comment_label = ($form_style == 'minimal') ? '<label for="comment">' . __('My comment is..') . '</label>' : null;
+$comment_label = ($form_style == 'minimal') ? '<label for="comment">' . __('My comment is..', NECTAR_THEME_NAME) . '</label>' : null;
 $args = array(
   'id_form'           => 'commentform',
   'id_submit'         => 'submit',

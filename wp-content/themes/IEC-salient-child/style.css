@@ -257,9 +257,11 @@ body a.button.smallButton{
 }
 
 /** forms **/
+/*
 body .gform_wrapper .top_label div.ginput_container {
     border: 1px solid #ccc;
 }
+*/
 body .gform_wrapper .top_label .gfield_label {
     margin-left: 1% !important;
     width: 98%;

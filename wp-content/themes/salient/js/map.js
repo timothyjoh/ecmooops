@@ -84,41 +84,184 @@ jQuery(document).ready(function($){
 
 		    if(darkColorScheme == '1') {
 		    	 $darkColorObj = [{
-				    "featureType": "road",
-				    "stylers": [
-				      { "visibility": "simple" },
-				      { "color": "#3e3e3e" }
-				    ]
-				  },{
-				    "featureType": "water",
-				    "stylers": [
-				      { "color": "#313131" }
-				    ]
-				  },{
-				    "featureType": "landscape",
-				    "stylers": [
-				      { "color": "#2c2c2c" }
-				    ]
-				  },{
-				    "featureType": "poi",
-				    "stylers": [
-				      { "color": "#3e3e3e" },
-				      { "visibility": "simplified" }
-				    ]
-				  },{
-				    "featureType": "administrative",
-				    "elementType": "geometry.stroke",
-				    "stylers": [
-				      { "visibility": "on" },
-				      { "color": "#3e3e3e" }
-				    ]
-				  }];
+			        "featureType": "all",
+			        "elementType": "labels.text.fill",
+			        "stylers": [
+			            {
+			                "saturation": 36
+			            },
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 40
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "all",
+			        "elementType": "labels.text.stroke",
+			        "stylers": [
+			            {
+			                "visibility": "on"
+			            },
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 16
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "all",
+			        "elementType": "labels.icon",
+			        "stylers": [
+			            {
+			                "visibility": "off"
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 20
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "administrative",
+			        "elementType": "geometry.stroke",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 17
+			            },
+			            {
+			                "weight": 1.2
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "landscape",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 20
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "poi",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 21
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road.highway",
+			        "elementType": "geometry.fill",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 17
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road.highway",
+			        "elementType": "geometry.stroke",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 29
+			            },
+			            {
+			                "weight": 0.2
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road.arterial",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 18
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "road.local",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 16
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "transit",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 19
+			            }
+			        ]
+			    },
+			    {
+			        "featureType": "water",
+			        "elementType": "geometry",
+			        "stylers": [
+			            {
+			                "color": "#000000"
+			            },
+			            {
+			                "lightness": 17
+			            }
+			        ]
+			    }];
 		    } else {
 		    	$darkColorObj[0] = {};
 		    	$darkColorObj[1] = {};
 		    	$darkColorObj[2] = {};
 		    	$darkColorObj[3] = {};
 		    	$darkColorObj[4] = {};
+		    	$darkColorObj[5] = {};
+		    	$darkColorObj[6] = {};
+		    	$darkColorObj[7] = {};
+		    	$darkColorObj[8] = {};
+		    	$darkColorObj[9] = {};
+		    	$darkColorObj[10] = {};
+		    	$darkColorObj[11] = {};
+		    	$darkColorObj[12] = {};
 		    }
 
 		    if(greyscale == '1' && extraColor.length > 0) {
@@ -213,6 +356,14 @@ jQuery(document).ready(function($){
 				$darkColorObj[2],
 				$darkColorObj[3],
 				$darkColorObj[4],
+				$darkColorObj[5],
+				$darkColorObj[6],
+				$darkColorObj[7],
+				$darkColorObj[8],
+				$darkColorObj[9],
+				$darkColorObj[10],
+				$darkColorObj[11],
+				$darkColorObj[12],
 				$flatObj[0],
 				$flatObj[1],
 				$flatObj[2]
@@ -298,6 +449,14 @@ jQuery(document).ready(function($){
 				$darkColorObj[2],
 				$darkColorObj[3],
 				$darkColorObj[4],
+				$darkColorObj[5],
+				$darkColorObj[6],
+				$darkColorObj[7],
+				$darkColorObj[8],
+				$darkColorObj[9],
+				$darkColorObj[10],
+				$darkColorObj[11],
+				$darkColorObj[12],
 				$flatObj[0],
 				$flatObj[1],
 				$flatObj[2]
@@ -366,8 +525,65 @@ jQuery(document).ready(function($){
 	    
 	   });
 
-	}
+	
+			
+			CustomMarker.prototype = new google.maps.OverlayView();
+			CustomMarker.prototype.draw = function() {
+
+			  var me = this;
+			  var div = this.div_;
+			  if (!div) {
+			    div = this.div_ = $('' +
+            '<div><div class="animated-dot">' +
+            '<div class="middle-dot"></div>' +
+            '<div class="signal"></div>' +
+            '<div class="signal2"></div>' +
+            '</div></div>' +
+            '')[0];
+
+
+			    div.style.position = 'absolute';
+			    div.style.paddingLeft = '0px';
+			    div.style.cursor = 'pointer';
+
+			    var panes = this.getPanes();
+			    panes.overlayImage.appendChild(div);
+
+			         
+
+			  }
+			  var point = this.getProjection().fromLatLngToDivPixel(this.latlng_);
+			  if (point) {
+			    div.style.left = point.x + 'px';
+			    div.style.top = point.y + 'px';
+			  }
+
+			    //infowindow
+		       google.maps.event.addDomListener(div, "click", function(event) {
+
+		       	    infoWindows[me.mapIndex][me.infoWindowIndex].setPosition(me.latlng_);
+		        	infoWindows[me.mapIndex][me.infoWindowIndex].open(me.map);
+			        
+		        });
+						 
+			};
+			CustomMarker.prototype.remove = function() {
+		     // Check if the overlay was on the map and needs to be removed.
+		     if (this.div_) {
+		       this.div_.parentNode.removeChild(this.div_);
+		       this.div_ = null;
+		     }
+		   };
+
+		   CustomMarker.prototype.getPosition = function() {
+		    return this.latlng_;
+		   };
+
+
+
+	} //api loaded
     
+
 
 	if(typeof google === 'object' && typeof google.maps === 'object') {
 
@@ -391,6 +607,16 @@ jQuery(document).ready(function($){
 
  	}
 
+
+ 
+
+ 	function CustomMarker(latlng,  map, PARAM1, PARAM2) {
+	  this.latlng_ = latlng;
+	  this.infoWindowIndex = PARAM1;
+	  this.mapIndex = PARAM2;
+	  this.setMap(map);
+	}
+
     function setMarkers(map,map_id,count) {
 
 
@@ -399,7 +625,14 @@ jQuery(document).ready(function($){
 		        var enableAnimation = $('#'+map_id).attr('data-enable-animation');
 				
 		      	$(this).find('.map-marker').each(function(i){
-				
+					
+					//nectar marker 
+					if($('#'+map_id).is('[data-marker-style="nectar"]')) {
+						var latlng = new google.maps.LatLng($(this).attr('data-lat'), $(this).attr('data-lng'));
+						var overlay = new CustomMarker(latlng, map, i, count);
+					}
+					
+						 
 		      		 var marker = new google.maps.Marker({
 				      	position: new google.maps.LatLng($(this).attr('data-lat'), $(this).attr('data-lng')),
 				        map: map,
@@ -408,18 +641,21 @@ jQuery(document).ready(function($){
 						infoWindowIndex : i,
 						icon: $('#'+map_id).attr('data-marker-img'),
 						optimized: false
-				      });
-					  
-					  //animation
-					  if(typeof enableAnimation != 'undefined' && enableAnimation == 1 && $(window).width() > 690) {
-					     setTimeout(function() {			     	
-					  	    marker.setAnimation(google.maps.Animation.BOUNCE);
-					  	    marker.setOptions({ visible: true });
-					  	    setTimeout(function(){marker.setAnimation(null);},500);
-					     },   i * 200);
-				      } else {
-				      	marker.setOptions({ visible: true });
-				      }
+				      }); 
+
+					//google default marker
+					if(!$('#'+map_id).is('[data-marker-style="nectar"]')) {
+						  //animation
+						  if(typeof enableAnimation != 'undefined' && enableAnimation == 1 && $(window).width() > 690) {
+						     setTimeout(function() {			     	
+						  	    marker.setAnimation(google.maps.Animation.BOUNCE);
+						  	    marker.setOptions({ visible: true });
+						  	    setTimeout(function(){marker.setAnimation(null);},500);
+						     },   i * 200);
+					      } else {
+					      	marker.setOptions({ visible: true });
+					      }
+					  }
 
 					   //infowindows 
 					  if($(this).attr('data-mapinfo') != '' && $(this).attr('data-mapinfo') != '<br />' && $(this).attr('data-mapinfo') != '<br/>') {

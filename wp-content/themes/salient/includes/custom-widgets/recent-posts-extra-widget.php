@@ -51,7 +51,7 @@ class Recent_Posts_Extra_Widget extends WP_Widget {
 		<li>
 			<?php if ( has_post_thumbnail() ) { ?>
 				<?php global $post ?>
-				<div class="post-widget-image"> <a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>"><?php echo get_the_post_thumbnail($post->ID, 'blog-widget', array('title' => '')); ?></a></div> 
+				<div class="post-widget-image"> <a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>"><?php echo get_the_post_thumbnail($post->ID, 'portfolio-widget', array('title' => '')); ?></a></div> 
 			<?php } ?>
 			<div class="post-widget-text">
 				<a href="<?php the_permalink() ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>"><?php if ( get_the_title() ) the_title(); else the_ID(); ?></a> 

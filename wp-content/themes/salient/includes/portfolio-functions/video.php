@@ -103,7 +103,7 @@ wp_dequeue_script( 'respond' );
 <body class="pp-video-function">
 <?php
 if ( floatval(get_bloginfo('version')) < "3.6" ) {
-	nectar_video($postid); 	
+	//nectar_video($postid); 	
 } else {
 	
 	//self hosted

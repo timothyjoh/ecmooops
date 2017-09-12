@@ -315,7 +315,12 @@ jQuery(document).ready(function($){
 		if(name == 'icon' && $('.icon-option i.selected').is('[data-svg-val]')) {  //svg icons
 			if(name == 'icon' && $('.icon-option i.selected').length > 0 || name == 'button' && $('.icon-option i.selected').length > 0) code += ' image="'+ $('.icon-option i.selected').attr('data-svg-val') +'"';  
 		} else { //standard icons
-			if(name == 'icon' && $('.icon-option i.selected').length > 0 || name == 'button' && $('.icon-option i.selected').length > 0) code += ' image="'+ $('.icon-option i.selected').attr('class').split(' ')[0] +'"'; 
+			if(name == 'icon' && $('.icon-option i.selected').length > 0 || name == 'button' && $('.icon-option i.selected').length > 0) { 
+				if($('.icon-option i.selected').attr('class').split(' ')[0] == 'fa')
+					code += ' image="'+ $('.icon-option i.selected').attr('class').split(' ')[1] +'"'; 
+				else 
+					code += ' image="'+ $('.icon-option i.selected').attr('class').split(' ')[0] +'"'; 
+			}
 		}
 		code += ']';
 
@@ -503,7 +508,7 @@ jQuery(document).ready(function($){
 	
 	//color change
 	$('#options-icon #color').change(function(){
-		if($(this).val() == 'Extra-Color-Gradient-1' || $(this).val() == 'Extra-Color-Gradient-2') {
+		if($(this).val() == 'Extra-Color-Gradient-1' || $(this).val() == 'Extra-Color-Gradient-2' || $('select[name="icon-set-select"]').val() != 'linea') {
 			$('#options-icon #enable_animation').prop('checked', false);
 			$('#options-icon label[for="enable_animation"]').parent().slideUp();
 			$('#options-icon label[for="enable_animation"]').parent().next().slideUp();

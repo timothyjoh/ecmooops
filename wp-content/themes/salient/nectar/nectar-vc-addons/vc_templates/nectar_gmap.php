@@ -13,7 +13,9 @@
 	  'ultra_flat' => '',
 	  'dark_color_scheme' => '',
 	  'marker_animation'=> 'false',
-	  'map_markers' => ''
+	  'map_markers' => '',
+	  'marker_style' => 'default',
+	  'nectar_marker_color' => 'accent-color'
 	),
 	$atts));
 	
@@ -46,7 +48,7 @@
 		$marker_image_src = $marker_image_src[0];
 	}
 	
-	echo '<div id="'.$unique_id.'" style="height: '.$size.'px;" class="nectar-google-map" data-dark-color-scheme="'. $dark_color_scheme .'" data-ultra-flat="'.$ultra_flat.'" data-greyscale="'.$map_greyscale.'" data-extra-color="'.$map_color.'" data-enable-animation="'.$marker_animation.'" data-enable-zoom="'.$enable_zoom.'" data-zoom-level="'.$zoom.'" data-center-lat="'.$map_center_lat.'" data-center-lng="'.$map_center_lng.'" data-marker-img="'.$marker_image_src.'"></div>';
+	echo '<div id="'.$unique_id.'" style="height: '.$size.'px;" class="nectar-google-map" data-dark-color-scheme="'. $dark_color_scheme .'" data-marker-style="'.$marker_style.'" data-nectar-marker-color="'.$nectar_marker_color.'" data-ultra-flat="'.$ultra_flat.'" data-greyscale="'.$map_greyscale.'" data-extra-color="'.$map_color.'" data-enable-animation="'.$marker_animation.'" data-enable-zoom="'.$enable_zoom.'" data-zoom-level="'.$zoom.'" data-center-lat="'.$map_center_lat.'" data-center-lng="'.$map_center_lng.'" data-marker-img="'.$marker_image_src.'"></div>';
 	echo '<div class="'.$unique_id.' map-marker-list">';
 		$count = 0;
 		for($i = 1; $i <= sizeof($markersArr); $i++){

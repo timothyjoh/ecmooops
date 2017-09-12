@@ -1,7 +1,7 @@
 <?php 
 
 	
-	add_action('add_meta_boxes', 'nectar_metabox_posts');
+	add_action('add_meta_boxes_post', 'nectar_metabox_posts');
 	function nectar_metabox_posts(){
 		
 		
@@ -75,6 +75,13 @@
 			'priority' => 'high',
 			'fields' => array(
 				array(
+						'name' =>  __('Quote Author', NECTAR_THEME_NAME),
+						'desc' => __('Please input the name of who your quote is from. Is left blank the post title will be used.', NECTAR_THEME_NAME),
+						'id' => '_nectar_quote_author',
+						'type' => 'text',
+						'std' => ''
+					),
+				array(
 						'name' =>  __('Quote Content', NECTAR_THEME_NAME),
 						'desc' => __('Please type the text for your quote here.', NECTAR_THEME_NAME),
 						'id' => '_nectar_quote',
@@ -119,15 +126,15 @@
 			'priority' => 'high',
 			'fields' => array(
 				array( 
-					'name' => __('M4V File URL', NECTAR_THEME_NAME),
-					'desc' => __('Please upload the .m4v video file. <br/><strong>You must include both formats.</strong>', NECTAR_THEME_NAME),
+					'name' => __('MP4 File URL', NECTAR_THEME_NAME),
+					'desc' => __('Please upload the .m4v video file.', NECTAR_THEME_NAME),
 					'id' => '_nectar_video_m4v',
 					'type' => 'media', 
 					'std' => ''
 				),
 				array( 
 						'name' => __('OGV File URL', NECTAR_THEME_NAME),
-						'desc' => __('Please upload the .ogv video file  <br/><strong>You must include both formats.</strong>', NECTAR_THEME_NAME),
+						'desc' => __('Please upload the .ogv video file', NECTAR_THEME_NAME),
 						'id' => '_nectar_video_ogv',
 						'type' => 'media',
 						'std' => ''

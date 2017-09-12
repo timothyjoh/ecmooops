@@ -5,7 +5,7 @@
 # Create the Portfolio meta boxes
 #-----------------------------------------------------------------# 
 
-add_action('add_meta_boxes', 'nectar_metabox_portfolio');
+add_action('add_meta_boxes_portfolio', 'nectar_metabox_portfolio');
 function nectar_metabox_portfolio(){
 	
 	
@@ -355,6 +355,47 @@ function nectar_metabox_portfolio(){
 		'priority' => 'high',
 		'fields' => array(
 			array( 
+					'name' => __('Background Type', NECTAR_THEME_NAME),
+					'desc' => __('Please select the background type you would like to use for your slide.', NECTAR_THEME_NAME),
+					'id' => '_nectar_slider_bg_type',
+					'type' => 'choice_below',
+					'options' => array(
+						'image_bg' => 'Image Background',
+						'video_bg' => 'Video Background'
+					),
+					'std' => 'image_bg'
+				),
+			array( 
+					'name' => __('Video WebM Upload', NECTAR_THEME_NAME),
+					'desc' => __('Browse for your WebM video file here.<br/> This will be automatically played on load so make sure to use this responsibly for enhancing your design, rather than annoy your user. e.g. A video loop with no sound.<br/><strong>You must include this format & the mp4 format to render your video with cross browser compatibility. OGV is optional.</strong> <br/><strong>Video must be in a 16:9 aspect ratio.</strong>', NECTAR_THEME_NAME),
+					'id' => '_nectar_media_upload_webm',
+					'type' => 'media',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Video MP4 Upload', NECTAR_THEME_NAME),
+					'desc' => __('Browse for your mp4 video file here.<br/> See the note above for recommendations on how to properly use your video background.', NECTAR_THEME_NAME),
+					'id' => '_nectar_media_upload_mp4',
+					'type' => 'media',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Video OGV Upload', NECTAR_THEME_NAME),
+					'desc' => __('Browse for your OGV video file here.<br/>  See the note above for recommendations on how to properly use your video background.', NECTAR_THEME_NAME),
+					'id' => '_nectar_media_upload_ogv',
+					'type' => 'media',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Preview Image', NECTAR_THEME_NAME),
+					'desc' => __('This is the image that will be seen in place of your video on mobile devices & older browsers before your video is played (browsers like IE8 don\'t allow autoplaying).', NECTAR_THEME_NAME),
+					'id' => '_nectar_slider_preview_image',
+					'type' => 'file',
+					'std' => ''
+				),	
+
+
+			array( 
 					'name' => __('Page Header Image', NECTAR_THEME_NAME),
 					'desc' => __('The image should be between 1600px - 2000px wide and have a minimum height of 475px for best results.', NECTAR_THEME_NAME),
 					'id' => '_nectar_header_bg',
@@ -376,9 +417,35 @@ function nectar_metabox_portfolio(){
 					'std' => ''
 				),
 			array( 
+					'name' => __('Fullscreen Height', NECTAR_THEME_NAME),
+					'desc' => __('Chooseing this option will allow your header to always remain fullscreen on all devices/screen sizes.', NECTAR_THEME_NAME),
+					'id' => '_nectar_header_fullscreen',
+					'type' => 'checkbox',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Background Alignment', NECTAR_THEME_NAME),
+					'desc' => __('Please choose how you would like your image background to be aligned', NECTAR_THEME_NAME),
+					'id' => '_nectar_page_header_bg_alignment',
+					'type' => 'select',
+					'std' => 'center',
+					'options' => array(
+						"top" => "Top",
+				  		 "center" => "Center",
+				  		 "bottom" => "Bottom"
+					)
+				),
+			array( 
 					'name' => __('Page Header Background Color', NECTAR_THEME_NAME),
 					'desc' => __('Set your desired page header background color if not using an image', NECTAR_THEME_NAME),
 					'id' => '_nectar_header_bg_color',
+					'type' => 'color',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Page Header Overlay Color', NECTAR_THEME_NAME),
+					'desc' => __('This will be applied ontop on your page header BG image (if supplied).', NECTAR_THEME_NAME),
+					'id' => '_nectar_header_bg_overlay_color',
 					'type' => 'color',
 					'std' => ''
 				),
@@ -418,15 +485,15 @@ function nectar_metabox_portfolio(){
 		'priority' => 'high',
 		'fields' => array(
 			array( 
-					'name' => __('M4V File URL', NECTAR_THEME_NAME),
-					'desc' => __('Please upload the .m4v video file. <br/><strong>You must include both formats.</strong>', NECTAR_THEME_NAME),
+					'name' => __('MP4 File URL', NECTAR_THEME_NAME),
+					'desc' => __('Please upload the .mp4 video file.', NECTAR_THEME_NAME),
 					'id' => '_nectar_video_m4v',
 					'type' => 'media',
 					'std' => ''
 				),
 			array( 
 					'name' => __('OGV File URL', NECTAR_THEME_NAME),
-					'desc' => __('Please upload the .ogv video file. <br/><strong>You must include both formats.</strong>', NECTAR_THEME_NAME),
+					'desc' => __('Please upload the .ogv video file.', NECTAR_THEME_NAME),
 					'id' => '_nectar_video_ogv',
 					'type' => 'media',
 					'std' => ''

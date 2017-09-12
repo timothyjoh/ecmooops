@@ -100,11 +100,12 @@
       //  Calcualtes the limits top and bottom limits for the sidebar
       function calculateLimits() {
 
-        var $bottomControls = ($('.bottom_controls').length > 0) ? 130 : 0;
+        var $bottomControls = ($('.bottom_controls').length > 0) ? $('.bottom_controls').outerHeight(true) : 0;
         var $ascendComments = ($('.comment-wrap.full-width-section').length > 0) ? $('.comment-wrap.full-width-section').outerHeight(true) : 0;
+        var $footerHeight = ($('body[data-footer-reveal="1"]').length == 0) ? $('#footer-outer').height() : 0 ;
 
         return {
-          limit: ($('#ajax-content-wrap').height() + $('#ajax-content-wrap').offset().top) - sticky.stickyHeight - $headerHeight - $extraHeight - secondaryHeader - $bottomControls - $ascendComments,
+          limit: ($('#ajax-content-wrap').height() + $('#ajax-content-wrap').offset().top) - sticky.stickyHeight - $footerHeight -$headerHeight - $extraHeight - secondaryHeader - $bottomControls - $ascendComments,
           windowTop: sticky.win.scrollTop(),
           stickyTop: sticky.stickyTop2 - sticky.marg - $headerHeight - $extraHeight - secondaryHeader
         }

@@ -4,8 +4,8 @@ $title = $el_class = $value = $label_value= $units = '';
 extract(shortcode_atts(array(
 	'image_url_1' => '',
 	'image_url_2' => '',
-	'bg_color' => '',
-	'bg_color_2' => '',
+	'bg_color' => '#fff',
+	'bg_color_2' => '#fff',
 	'bg_color_overlay' => '',
 	'bg_color_overlay_2' => '',
 	'min_height' => '300',
@@ -18,6 +18,7 @@ extract(shortcode_atts(array(
 	'icon_family' => 'fontawesome',
 	'icon_fontawesome' => '',
 	'icon_linea' => '',
+	'icon_iconsmind' => '',
 	'icon_steadysets' => '',
 	'icon_color' => 'accent-color',
 	'icon_size' => '60',
@@ -30,14 +31,26 @@ $style2 = null;
 
 if(!empty($image_url_1)) {
 	
-	$bg_image_src = wp_get_attachment_image_src($image_url_1, 'full');
-	$style .= 'background-image: url(\''.$bg_image_src[0].'\'); ';
+	if(!preg_match('/^\d+$/',$image_url_1)){
+                    
+        $style .= 'background-image: url('.$image_url_1 . '); ';
+    
+    } else {
+		$bg_image_src = wp_get_attachment_image_src($image_url_1, 'full');
+		$style .= 'background-image: url(\''.$bg_image_src[0].'\'); ';
+	}
 }
 
 if(!empty($image_url_2)) {
-	
-	$bg_image_src_2 = wp_get_attachment_image_src($image_url_2, 'full');
-	$style2 .= 'background-image: url(\''.$bg_image_src_2[0].'\'); ';
+
+	if(!preg_match('/^\d+$/',$image_url_2)){
+                    
+        $style2 .= 'background-image: url('.$image_url_2 . '); ';
+    
+    } else {
+		$bg_image_src_2 = wp_get_attachment_image_src($image_url_2, 'full');
+		$style2 .= 'background-image: url(\''.$bg_image_src_2[0].'\'); ';
+	}
 }
 
 if(!empty($bg_color)) 
@@ -45,12 +58,6 @@ if(!empty($bg_color))
 if(!empty($bg_color_2)) 
 	$style2 .= 'background-color: '.$bg_color_2.'; ';
 
-
-if(!empty($image_url_2)) {
-	
-	$bg_image_src_2 = wp_get_attachment_image_src($image_url_2, 'full');
-	$style2 .= 'background-image: url(\''.$bg_image_src_2[0].'\'); ';
-}
 
 
 if(!empty($min_height)) {
@@ -80,6 +87,9 @@ switch($icon_family) {
 	case 'linecons':
 		$icon = $icon_linecons;
 		break;
+	case 'iconsmind':
+			$icon = $icon_iconsmind;
+			break;
 	default:
 		$icon = '';
 		break;

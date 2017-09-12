@@ -12,6 +12,7 @@ $fullscreen_class = ($fullscreen_header == true) ? "fullscreen-header full-width
 $theme_skin = (!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') ? 'ascend' : 'default';
 $hide_sidebar = (!empty($options['blog_hide_sidebar'])) ? $options['blog_hide_sidebar'] : '0'; 
 $blog_type = $options['blog_type']; 
+$blog_social_style = (!empty($options['blog_social_style'])) ? $options['blog_social_style'] : 'default';
 
 if(have_posts()) : while(have_posts()) : the_post();
 
@@ -45,6 +46,10 @@ endwhile; endif;
 			 	 $button_styling = (!empty($options['button-styling'])) ? $options['button-styling'] : 'default'; 
 			 	 if($button_styling == 'default'){
 			 	 	echo '<div class="scroll-down-wrap"><a href="#" class="section-down-arrow"><i class="icon-salient-down-arrow icon-default-style"> </i></a></div>';
+			 	 } else if($button_styling == 'slightly_rounded' || $button_styling == 'slightly_rounded_shadow') {
+			 	 	echo '<div class="scroll-down-wrap no-border"><a href="#" class="section-down-arrow"><svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+                			<path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z"></path>
+            			  </svg></a></div>';
 			 	 } else {
 			 	 	echo '<div class="scroll-down-wrap"><a href="#" class="section-down-arrow"><i class="fa fa-angle-down top"></i><i class="fa fa-angle-down"></i></a></div>';
 			 	 }
@@ -56,7 +61,11 @@ endwhile; endif;
 	if($theme_skin != 'ascend') { ?>
 		<div class="container">
 			<div id="single-below-header" class="<?php echo $fullscreen_class; ?> custom-skip">
-				<span class="meta-share-count"><i class="icon-default-style steadysets-icon-share"></i> <?php echo '<a href=""><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span></a>'; nectar_blog_social_sharing(); ?> </span>
+				<?php if($blog_social_style != 'fixed_bottom_right') { ?>
+					<span class="meta-share-count"><i class="icon-default-style steadysets-icon-share"></i> <?php echo '<a href=""><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span> </a>'; nectar_blog_social_sharing(); ?> </span>
+				<?php } else { ?>
+					<span class="meta-love"><span class="n-shortcode"> <?php echo nectar_love('return'); ?>  </span></span>
+				<?php } ?>
 				<span class="meta-category"><i class="icon-default-style steadysets-icon-book2"></i> <?php the_category(', '); ?></span>
 				<span class="meta-comment-count"><i class="icon-default-style steadysets-icon-chat-3"></i> <a href="<?php comments_link(); ?>"><?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>
 			</div><!--/single-below-header-->
@@ -119,31 +128,31 @@ endwhile; endif;
 									   		<?php echo '<span class="n-shortcode">'.nectar_love('return').'</span>'; ?>
 									   	</li>
 
-										<?php if( !empty($options['blog_social']) && $options['blog_social'] == 1 ) { 
+										<?php if( !empty($options['blog_social']) && $options['blog_social'] == 1 &&  $blog_social_style != 'fixed_bottom_right') { 
 											   
-											   echo '<li class="meta-share-count"><a href="#"><i class="icon-default-style steadysets-icon-share"></i><span class="share-count-total">0</span></a> <div class="nectar-social">';
+											    echo '<li class="meta-share-count"><a href="#"><i class="icon-default-style steadysets-icon-share"></i><span class="share-count-total">0</span></a> <div class="nectar-social">';
 											   
 											
 												//facebook
 												if(!empty($options['blog-facebook-sharing']) && $options['blog-facebook-sharing'] == 1) { 
-													echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-facebook'></i> <span class='count'></span></a>";
+													echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
 												}
 												//twitter
 												if(!empty($options['blog-twitter-sharing']) && $options['blog-twitter-sharing'] == 1) {
-													echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='icon-twitter'></i> <span class='count'></span></a>";
+													echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
 												}
 												//google plus
 												if(!empty($options['blog-google-plus-sharing']) && $options['blog-google-plus-sharing'] == 1) {
-													echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-google-plus'></i> <span class='count'> ".GetGooglePlusShares(get_permalink($post->ID))." </span></a>";
+													echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
 												}
 												
 												//linkedIn
 												if(!empty($options['blog-linkedin-sharing']) && $options['blog-linkedin-sharing'] == 1) {
-													echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-linkedin'></i> <span class='count'> </span></a>";
+													echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
 												}
 												//pinterest
 												if(!empty($options['blog-pinterest-sharing']) && $options['blog-pinterest-sharing'] == 1) {
-													echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='icon-pinterest'></i> <span class='count'></span></a>";
+													echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
 												}
 												
 											  echo '</div></li>';
@@ -178,10 +187,17 @@ endwhile; endif;
 
 			global $options;
 
+			$blog_standard_type = (!empty($options['blog_standard_type'])) ? $options['blog_standard_type'] : 'classic';
+
+			if($blog_standard_type == 'minimal')
+				$std_minimal_class = 'standard-minimal';
+			else
+				$std_minimal_class = '';
+
 			if($blog_type == 'std-blog-fullwidth' || $hide_sidebar == '1'){
-				echo '<div id="post-area" class="col span_12 col_last">';
+				echo '<div id="post-area" class="col '.$std_minimal_class.' span_12 col_last">';
 			} else {
-				echo '<div id="post-area" class="col span_9">';
+				echo '<div id="post-area" class="col '.$std_minimal_class.' span_9">';
 			}
 			
 				 if(have_posts()) : while(have_posts()) : the_post(); 
@@ -210,7 +226,7 @@ endwhile; endif;
 							
 							<div id="author-bio" class="<?php echo $fw_class; ?>">
 								<div class="span_12">
-									<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), $grav_size ); }?>
+									<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), $grav_size, null, get_the_author() ); }?>
 									<div id="author-info">
 										<h3><span><?php if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') { _e('Author', NECTAR_THEME_NAME); } else { _e('About', NECTAR_THEME_NAME); } ?></span> <?php the_author(); ?></h3>
 										<p><?php the_author_meta('description'); ?></p>
@@ -229,7 +245,7 @@ endwhile; endif;
 
 				<?php } ?>
 
-				<?php if($blog_header_type == 'default_minimal')  { ?>
+				<?php if($blog_header_type == 'default_minimal' && $blog_social_style != 'fixed_bottom_right')  { ?>
 				
 					<div class="bottom-meta">	
 						<?php
@@ -262,7 +278,11 @@ endwhile; endif;
 			<?php if($theme_skin == 'ascend' && $fullscreen_header == true) { ?>
 
 			<div id="single-below-header" class="<?php echo $fullscreen_class; ?> custom-skip">
-				<span class="meta-share-count"><i class="icon-default-style steadysets-icon-share"></i> <?php echo '<a href=""><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span> </a>'; nectar_blog_social_sharing(); ?> </span>
+				<?php if($blog_social_style != 'fixed_bottom_right') { ?>
+					<span class="meta-share-count"><i class="icon-default-style steadysets-icon-share"></i> <?php echo '<a href=""><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span> </a>'; nectar_blog_social_sharing(); ?> </span>
+				<?php } else { ?>
+					<span class="meta-love"><span class="n-shortcode"> <?php echo nectar_love('return'); ?>  </span></span>
+				<?php } ?>
 				<span class="meta-category"><i class="icon-default-style steadysets-icon-book2"></i> <?php the_category(', '); ?></span>
 				<span class="meta-comment-count"><i class="icon-default-style steadysets-icon-chat-3"></i> <a class="comments-link" href="<?php comments_link(); ?>"><?php comments_number( __('No Comments', NECTAR_THEME_NAME), __('One Comment ', NECTAR_THEME_NAME), __('% Comments', NECTAR_THEME_NAME) ); ?></a></span>
 			</div><!--/single-below-header-->
@@ -280,7 +300,7 @@ endwhile; endif;
 						
 						<div id="author-bio" class="<?php echo $fw_class; if(empty($next_post) || $next_post_button == 'off' || $fullscreen_header == false && $next_post_button == 'off') echo 'no-pagination'; ?>">
 							<div class="span_12">
-								<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), $grav_size ); }?>
+								<?php if (function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), $grav_size,  null, get_the_author() ); }?>
 								<div id="author-info">
 									<h3><span><?php if(!empty($options['theme-skin']) && $options['theme-skin'] == 'ascend') {  echo '<i>' . __('Author', NECTAR_THEME_NAME) . '</i>'; } else { _e('About', NECTAR_THEME_NAME); } ?></span> <?php the_author(); ?></h3>
 									<p><?php the_author_meta('description'); ?></p>
@@ -309,5 +329,47 @@ endwhile; endif;
 	</div><!--/container-->
 
 </div><!--/container-wrap-->
+
+
+
+<?php if($blog_social_style == 'fixed_bottom_right') { ?>
+	<div class="nectar-social-sharing-fixed"> 
+
+		<?php
+			// portfolio social sharting icons
+			if( !empty($options['blog_social']) && $options['blog_social'] == 1) {
+				
+				echo '<a href="#"><i class="icon-default-style steadysets-icon-share"></i></a> <div class="nectar-social">';
+				
+				
+				//facebook
+				if(!empty($options['blog-facebook-sharing']) && $options['blog-facebook-sharing'] == 1) { 
+					echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> </a>";
+				}
+				//twitter
+				if(!empty($options['blog-twitter-sharing']) && $options['blog-twitter-sharing'] == 1) {
+					echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> </a>";
+				}
+				//google plus
+				if(!empty($options['blog-google-plus-sharing']) && $options['blog-google-plus-sharing'] == 1) {
+					echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> </a>";
+				}
+				
+				//linkedIn
+				if(!empty($options['blog-linkedin-sharing']) && $options['blog-linkedin-sharing'] == 1) {
+					echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> </a>";
+				}
+				//pinterest
+				if(!empty($options['blog-pinterest-sharing']) && $options['blog-pinterest-sharing'] == 1) {
+					echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> </a>";
+				}
+				
+				echo '</div>';
+
+			}	
+			?>
+		</div><!--nectar social sharing fixed-->
+
+	<?php } ?>
 	
 <?php get_footer(); ?>

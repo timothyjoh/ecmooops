@@ -1,5 +1,5 @@
 <?php 
-add_action('add_meta_boxes', 'nectar_metabox_page');
+add_action('add_meta_boxes_page', 'nectar_metabox_page');
 function nectar_metabox_page(){
     
 	$options = get_nectar_theme_options(); 
@@ -81,6 +81,13 @@ function nectar_metabox_page(){
 					'name' =>  __('Add Row Anchors to URL', NECTAR_THEME_NAME),
 					'desc' => __('Enable this to add anchors into your URL for each row.', NECTAR_THEME_NAME),
 					'id' => '_nectar_full_screen_rows_anchors',
+					'type' => 'checkbox',
+	                'std' => '0'
+				),
+				array(
+					'name' =>  __('Disable On Mobile', NECTAR_THEME_NAME),
+					'desc' => __('Check this to disable the page full screen rows when viewing on a mobile device.', NECTAR_THEME_NAME),
+					'id' => '_nectar_full_screen_rows_mobile_disable',
 					'type' => 'checkbox',
 	                'std' => '0'
 				),
@@ -307,7 +314,7 @@ function nectar_metabox_page(){
 				),
 			array( 
 					'name' => __('Background Alignment', NECTAR_THEME_NAME),
-					'desc' => __('Please choose how you would like your slides background to be aligned', NECTAR_THEME_NAME),
+					'desc' => __('Please choose how you would like your header background to be aligned', NECTAR_THEME_NAME),
 					'id' => '_nectar_page_header_bg_alignment',
 					'type' => 'select',
 					'std' => 'center',
@@ -328,6 +335,13 @@ function nectar_metabox_page(){
 					'name' => __('Page Header Font Color', NECTAR_THEME_NAME),
 					'desc' => __('Set your desired page header font color', NECTAR_THEME_NAME),
 					'id' => '_nectar_header_font_color',
+					'type' => 'color',
+					'std' => ''
+				),
+			array( 
+					'name' => __('Page Header Overlay Color', NECTAR_THEME_NAME),
+					'desc' => __('This will be applied ontop on your page header BG image (if supplied).', NECTAR_THEME_NAME),
+					'id' => '_nectar_header_bg_overlay_color',
 					'type' => 'color',
 					'std' => ''
 				),

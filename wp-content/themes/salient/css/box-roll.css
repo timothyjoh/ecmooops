@@ -57,6 +57,12 @@ html {
 	height: auto!important;
 }
 
+.container-wrap.no-trans {
+	-webkit-transform: none;
+	-moz-transform: none;
+	transform: none;
+}
+
 #header-space {
 	display: none!important;
 }

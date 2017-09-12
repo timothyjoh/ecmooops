@@ -35,13 +35,9 @@
 		<div class="content-inner">
 			
 			<?php 
-				if(MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'second-slide')) {
-					nectar_gallery($post->ID);
-				}
 				
-				else {
-					if ( has_post_thumbnail() ) { echo get_the_post_thumbnail($post->ID, 'full', array('title' => '')); }
-				}
+				if ( has_post_thumbnail() ) { echo get_the_post_thumbnail($post->ID, 'full', array('title' => '')); }
+				
 			?>
 			
 			<?php if( !is_single() ) { ?>

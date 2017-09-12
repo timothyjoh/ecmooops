@@ -35,7 +35,7 @@
 		<div class="content-inner">
 			
 			<div class="audio-wrap">		
-				<?php nectar_audio($post->ID); ?>
+				
 			</div><!--/audio-wrap-->
 			
 			<?php if( !is_single() ) { ?>
