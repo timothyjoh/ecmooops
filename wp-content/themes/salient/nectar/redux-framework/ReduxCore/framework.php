@@ -356,10 +356,12 @@
                     }
 
                     // Admin Bar menu
-                    add_action( 'admin_bar_menu', array(
+                    /* nectar addition */ 
+                    /*add_action( 'admin_bar_menu', array(
                         $this,
                         '_admin_bar_menu'
-                    ), $this->args['admin_bar_priority'] );
+                    ), $this->args['admin_bar_priority'] );*/
+                    /* nectar addition end */ 
 
                     // Register setting
                     add_action( 'admin_init', array( $this, '_register_settings' ) );
@@ -385,7 +387,9 @@
                     // Output dynamic CSS
                     // Frontend: Maybe enqueue dynamic CSS and Google fonts
                     if ( empty ( $this->args['output_location'] ) || in_array( 'frontend', $this->args['output_location'] ) ) {
-                        add_action( 'wp_head', array( &$this, '_output_css' ), 150 );
+                    	/* nectar addition */ 
+                       //add_action( 'wp_head', array( &$this, '_output_css' ), 150 );
+                       /* nectar addition end */ 
                         add_action( 'wp_enqueue_scripts', array( &$this, '_enqueue_output' ), 150 );
                     }
 
@@ -1613,6 +1617,11 @@
                         /** @noinspection PhpUnusedLocalVariableInspection */
                         foreach ( $section['fields'] as $fieldk => $field ) {
                             if ( isset ( $field['type'] ) && $field['type'] != "callback" ) {
+                            	
+								/* nectar addition */ 
+								if( $field['type'] != "typography" ) continue;
+								/* nectar addition end */ 
+								
                                 $field_class = "ReduxFramework_{$field['type']}";
                                 if ( ! class_exists( $field_class ) ) {
 
@@ -2012,7 +2021,6 @@
                         '_validate_options'
                     ) );
                 }
-
 
                 if ( is_null( $this->sections ) ) {
                     return;

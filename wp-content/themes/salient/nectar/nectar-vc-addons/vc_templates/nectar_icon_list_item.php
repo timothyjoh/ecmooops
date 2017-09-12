@@ -1,6 +1,6 @@
 <?php 
 
-extract(shortcode_atts(array("icon_type" => "numerical", 'icon_family' => 'fontawesome', 'icon_fontawesome' => '', 'icon_linea' => '', 'icon_steadysets' => '', "header" => "", "text" => ""), $atts));
+extract(shortcode_atts(array("icon_type" => "numerical", 'icon_family' => 'fontawesome', 'icon_fontawesome' => '', 'icon_linea' => '', 'icon_iconsmind' => '', 'icon_steadysets' => '', "header" => "", "text" => ""), $atts));
 
 $icon_markup = null;
 switch($icon_family) {
@@ -10,8 +10,11 @@ switch($icon_family) {
 	case 'steadysets':
 		$icon = $icon_steadysets;
 		break;
-	case 'linecons':
-		$icon = $icon_linecons;
+	case 'linea':
+		$icon = $icon_linea;
+		break;
+	case 'iconsmind':
+		$icon = $icon_iconsmind;
 		break;
 	default:
 		$icon = '';

@@ -399,7 +399,15 @@ jQuery(document).ready(function($){
 			    }
 			    $('#nectar-metabox-portfolio-video, #nectar-metabox-page-header, .portfolio_vc_wrap').stop(true,true).slideDown(500);
 			    
-			    $('.composer-switch:not(.vc-aspect-hidden),  #wpb_visual_composer:not(.vc-aspect-hidden), #nectar-metabox-portfolio-extra:not(.vc-aspect-hidden)').fadeIn(500);
+			    if($('.composer-switch:not(.vc-aspect-hidden).vc_backend-status').length > 0) {
+			    	$('#wpb_visual_composer:not(.vc-aspect-hidden)').fadeIn(500);
+			    }
+			   
+			    if($('.composer-switch.vc_backend-status').length == 0) {
+			    	$('#nectar-metabox-portfolio-extra').fadeIn(500);
+			    }
+			    
+			    $('.composer-switch:not(.vc-aspect-hidden)').fadeIn(500);
 
 		    	$('#nectar-metabox-project-configuration tr').each(function(){
 		    		if($(this).find('label').attr('for') != '_nectar_portfolio_custom_grid_item' && $(this).find('label').attr('for') != '_nectar_portfolio_custom_grid_item_content' && $(this).find('label').attr('for') != '_portfolio_item_masonry_sizing' 
@@ -418,15 +426,19 @@ jQuery(document).ready(function($){
     }
     
     function checkVCVis(){
-    	if($('#nectar-metabox-portfolio-extra').css('display') == 'none') {
-    		$('.composer-switch,  #wpb_visual_composer').removeClass('vc-aspect-hidden');
-    		$('#nectar-metabox-portfolio-extra').addClass('vc-aspect-hidden');
-    		$('.composer-switch,  #wpb_visual_composer').hide();
-    	}
-    	else { 
-    		$('#nectar-metabox-portfolio-extra').removeClass('vc-aspect-hidden');
-    		$('.composer-switch,  #wpb_visual_composer').addClass('vc-aspect-hidden');
-    		$('#nectar-metabox-portfolio-extra').hide();
+    	
+    	if($('#nectar-metabox-project-configuration ._nectar_portfolio_custom_grid_item .ui-state-active[for]').length > 0 && $('#nectar-metabox-project-configuration ._nectar_portfolio_custom_grid_item .ui-state-active').attr('for') == 'nectar_meta_on') {
+   
+	    	if($('#nectar-metabox-portfolio-extra').css('display') == 'none') {
+	    		$('.composer-switch,  #wpb_visual_composer').removeClass('vc-aspect-hidden');
+	    		$('#nectar-metabox-portfolio-extra').addClass('vc-aspect-hidden');
+	    		$('.composer-switch,  #wpb_visual_composer').hide();
+	    	}
+	    	else { 
+	    		$('#nectar-metabox-portfolio-extra').removeClass('vc-aspect-hidden');
+	    		$('.composer-switch,  #wpb_visual_composer').addClass('vc-aspect-hidden');
+	    		$('#nectar-metabox-portfolio-extra').hide();
+	    	}
     	}
     }
  
@@ -596,6 +608,25 @@ jQuery(document).ready(function($){
 
      }
      $('._nectar_full_screen_rows, select[name="nectar_meta[_nectar_full_screen_rows_animation]"]').change(fullScreenRows);
+
+
+     //salient studio scrolling pointer events
+     if($('.vc_edit-form-tab[data-tab="default_templates"] > .vc_col-sm-12').length > 0) {
+	     var studioScrollTimer;
+	     var $studioScrollPanel = $('.vc_edit-form-tab[data-tab="default_templates"] > .vc_col-sm-12');
+
+		$studioScrollPanel.on('scroll',function(){
+
+			 clearTimeout(studioScrollTimer);
+			  if(!$studioScrollPanel.hasClass('nectar-disable-hover')) {
+			    $studioScrollPanel.addClass('nectar-disable-hover')
+			  }
+			  
+			  studioScrollTimer = setTimeout(function(){
+			    $studioScrollPanel.removeClass('nectar-disable-hover')
+			  },400);
+		});
+	}
     
 
 });

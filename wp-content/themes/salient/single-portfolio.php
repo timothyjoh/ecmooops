@@ -10,7 +10,9 @@ global $post;
 
 $bg = get_post_meta($post->ID, '_nectar_header_bg', true);
 $bg_color = get_post_meta($post->ID, '_nectar_header_bg_color', true);
-			
+$bg_type = get_post_meta($post->ID, '_nectar_slider_bg_type', true); 
+if(empty($bg_type)) $bg_type = 'image_bg'; 
+
 $featured_src =  (has_post_thumbnail( $post->ID )) ? wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full') : array('empty') ;
 $full_width_portfolio = (!empty($fwp) && $fwp == 'enabled') ? 'id="full_width_portfolio" data-featured-img="'. $featured_src[0] .'"' : 'data-featured-img="'. $featured_src[0] .'"';
 
@@ -18,12 +20,14 @@ $options = get_nectar_theme_options();
 $single_nav_pos = (!empty($options['portfolio_single_nav'])) ? $options['portfolio_single_nav'] : 'in_header';
 $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 
+$project_social_style = (!empty($options['portfolio_social_style'])) ? $options['portfolio_social_style'] : 'default';
+
 ?>
 <div <?php echo $full_width_portfolio; if(!empty($bg) && $fwp != 'enabled' || !empty($bg_color) && $fwp != 'enabled') echo ' data-project-header-bg="true"'?> >
 	  		
 	  		<?php nectar_page_header($post->ID); 
 			
-			if(empty($bg) && empty($bg_color)) {?>
+			if(empty($bg) && empty($bg_color) && $bg_type != 'video_bg') {?>
 	  		
 				<div class="row project-title">
 					<div class="container">
@@ -74,9 +78,7 @@ $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 								if(class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'second-slide') || !empty($enable_gallery_slider) && $enable_gallery_slider == 'on'){
 									
 									if ( floatval(get_bloginfo('version')) < "3.6" ) {
-										if(MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'second-slide')) {
-											nectar_gallery($post->ID);
-										}
+
 									}
 									else {
 										
@@ -191,31 +193,31 @@ $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 
 								<?php
 									// portfolio social sharting icons
-									if( !empty($options['portfolio_social']) && $options['portfolio_social'] == 1 ) {
+									if( !empty($options['portfolio_social']) && $options['portfolio_social'] == 1 && $project_social_style != 'fixed_bottom_right') {
 										
 										echo '<li class="meta-share-count"><a href="#"><i class="icon-default-style steadysets-icon-share"></i><span class="share-count-total">0</span> <span class="plural">'. __('Shares',NECTAR_THEME_NAME) . '</span> <span class="singular">'. __('Share',NECTAR_THEME_NAME) .'</span></a> <div class="nectar-social">';
 										
 										
 										//facebook
 										if(!empty($options['portfolio-facebook-sharing']) && $options['portfolio-facebook-sharing'] == 1) { 
-											echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-facebook'></i> <span class='count'></span></a>";
+											echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> <span class='count'></span></a>";
 										}
 										//twitter
 										if(!empty($options['portfolio-twitter-sharing']) && $options['portfolio-twitter-sharing'] == 1) {
-											echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='icon-twitter'></i> <span class='count'></span></a>";
+											echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> <span class='count'></span></a>";
 										}
 										//google plus
 										if(!empty($options['portfolio-google-plus-sharing']) && $options['portfolio-google-plus-sharing'] == 1) {
-											echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-google-plus'></i> <span class='count'> ".GetGooglePlusShares(get_permalink($post->ID))." </span></a>";
+											echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> <span class='count'>0</span></a>";
 										}
 										
 										//linkedIn
 										if(!empty($options['portfolio-linkedin-sharing']) && $options['portfolio-linkedin-sharing'] == 1) {
-											echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='icon-linkedin'></i> <span class='count'> </span></a>";
+											echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> <span class='count'> </span></a>";
 										}
 										//pinterest
 										if(!empty($options['portfolio-pinterest-sharing']) && $options['portfolio-pinterest-sharing'] == 1) {
-											echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='icon-pinterest'></i> <span class='count'></span></a>";
+											echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> <span class='count'></span></a>";
 										}
 										
 										echo '</div></li>';
@@ -226,7 +228,7 @@ $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 									
 
 									if(!empty($options['portfolio_date']) && $options['portfolio_date'] == 1) {
-									   if( empty($options['portfolio_social']) || $options['portfolio_social'] == 0 ) { ?>
+									   if( empty($options['portfolio_social']) || $options['portfolio_social'] == 0 || $project_social_style == 'fixed_bottom_right' ) { ?>
 
 											<li class="project-date">
 												<?php the_time('F d, Y'); ?>
@@ -277,7 +279,7 @@ $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 
 		</div><!--/container-->
 
-		<?php if($single_nav_pos == 'after_project') { 
+		<?php if($single_nav_pos == 'after_project' || $single_nav_pos == 'after_project_2') { 
 			echo '<div class="bottom_controls"> <div class="container">';  
 			project_single_controls();
 			echo '</div></div>';  
@@ -287,5 +289,47 @@ $subtitle = get_post_meta($post->ID, '_nectar_header_subtitle', true);
 	</div><!--/container-wrap-->
 
 </div><!--/if portfolio fullwidth-->
+
+
+<?php if($project_social_style == 'fixed_bottom_right') { ?>
+	<div class="nectar-social-sharing-fixed"> 
+
+		<?php
+			// portfolio social sharting icons
+			if( !empty($options['portfolio_social']) && $options['portfolio_social'] == 1) {
+				
+				echo '<a href="#"><i class="icon-default-style steadysets-icon-share"></i></a> <div class="nectar-social">';
+				
+				
+				//facebook
+				if(!empty($options['portfolio-facebook-sharing']) && $options['portfolio-facebook-sharing'] == 1) { 
+					echo "<a class='facebook-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-facebook'></i> </a>";
+				}
+				//twitter
+				if(!empty($options['portfolio-twitter-sharing']) && $options['portfolio-twitter-sharing'] == 1) {
+					echo "<a class='twitter-share nectar-sharing' href='#' title='".__('Tweet this', NECTAR_THEME_NAME)."'> <i class='fa fa-twitter'></i> </a>";
+				}
+				//google plus
+				if(!empty($options['portfolio-google-plus-sharing']) && $options['portfolio-google-plus-sharing'] == 1) {
+					echo "<a class='google-plus-share nectar-sharing-alt' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-google-plus'></i> </a>";
+				}
+				
+				//linkedIn
+				if(!empty($options['portfolio-linkedin-sharing']) && $options['portfolio-linkedin-sharing'] == 1) {
+					echo "<a class='linkedin-share nectar-sharing' href='#' title='".__('Share this', NECTAR_THEME_NAME)."'> <i class='fa fa-linkedin'></i> </a>";
+				}
+				//pinterest
+				if(!empty($options['portfolio-pinterest-sharing']) && $options['portfolio-pinterest-sharing'] == 1) {
+					echo "<a class='pinterest-share nectar-sharing' href='#' title='".__('Pin this', NECTAR_THEME_NAME)."'> <i class='fa fa-pinterest'></i> </a>";
+				}
+				
+				echo '</div>';
+
+			}	
+			?>
+		</div><!--sharing-->
+
+	<?php } ?>
+
 	
 <?php get_footer(); ?>

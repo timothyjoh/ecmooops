@@ -117,6 +117,8 @@ tr.font-option {
 	font-weight: normal!important;
 }*/
 
+div[id*="nectar-metabox"] fieldset.buttonset:not(.ui-buttonset) { opacity: 0;}
+
 tr.font-option th {
 	display: none;
 }
@@ -144,7 +146,22 @@ tr.font-family td, tr.font-family {
 	font-weight: normal!important;
 }*/
 
+.redux-group-tab[data-rel="12"] .form-table.no-border  tr {
+	border-bottom: 0;
+}
 
+.redux-group-tab[data-rel="12"] .redux-notice-field.redux-success {
+	margin-bottom: 30px;
+}
+
+.redux-group-tab[data-rel="12"] .divide .inner {
+	width: 100%!important;
+	margin: 0;
+	left: 0!important;
+}
+.redux-group-tab[data-rel="12"] .redux-field-container {
+	padding: 0;
+}
 
 .redux-opts-group-tab {
 	position: relative;
@@ -299,10 +316,12 @@ tr.font-family, tr.font-family, tr.font-option  {
 	opacity: 0;	
 }
 
-body.taxonomy-category .form-field  .redux-opts-upload-remove {
+body.taxonomy-category .form-field  .redux-opts-upload-remove,
+body.taxonomy-product_cat  .redux-opts-upload-remove {
 	display: block;
 }
-body.taxonomy-category .form-field .redux-opts-screenshot {
+body.taxonomy-category .form-field .redux-opts-screenshot,
+body.taxonomy-product_cat .redux-opts-screenshot {
 	max-width: 250px;
 }
 
@@ -586,7 +605,7 @@ body #adminmenu .wp-menu-image img {
 }
 
 .compat-item tr.compat-field-image-url, .compat-item tr.compat-field-shape-bg-color, .compat-item tr.compat-field-shape-color-mapping, .compat-item tr.compat-field-shape-particle-color, 
-.compat-item tr.compat-field-shape-density, .compat-item tr.compat-field-shape-max-particle-size, .compat-item tr.compat-field-shape-color-alpha {
+.compat-item tr.compat-field-shape-density, .compat-item tr.compat-field-shape-max-particle-size, .compat-item tr.compat-field-shape-color-alpha, .compat-item tr.compat-field-masonry-image-sizing {
 	display: none;
 }
 
@@ -597,6 +616,14 @@ body #adminmenu .wp-menu-image img {
 	display: inline-block;
 }
 
+.compat-field-masonry-image-sizing select {
+	width: 100%;
+}
+
+.compat-field-masonry-image-sizing .label {
+    max-width: 30%;
+}
+
 #nectar_slider_canvas_shape a {
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -604,6 +631,10 @@ body #adminmenu .wp-menu-image img {
 
 div#nectar-metabox-page-header .form-table td {
 	width: 45%;
+}
+
+div#nectar-metabox-page-header .inside {
+	overflow: hidden;
 }
 
 #nectar-metabox-fullscreen-rows .hndle.ui-sortable-handle, #nectar-metabox-page-header .hndle.ui-sortable-handle {

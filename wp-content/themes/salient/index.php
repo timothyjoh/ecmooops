@@ -17,6 +17,7 @@
 			$masonry_style = null;
 			$infinite_scroll_class = null;
 			$load_in_animation = (!empty($options['blog_loading_animation'])) ? $options['blog_loading_animation'] : 'none';
+			$blog_standard_type = (!empty($options['blog_standard_type'])) ? $options['blog_standard_type'] : 'classic';
 
 			//enqueue masonry script if selected
 			if($blog_type == 'masonry-blog-sidebar' || $blog_type == 'masonry-blog-fullwidth' || $blog_type == 'masonry-blog-full-screen-width') {
@@ -34,11 +35,18 @@
 			if($masonry_class != null) {
 				$masonry_style = (!empty($options['blog_masonry_type'])) ? $options['blog_masonry_type']: 'classic';
 			}
+
+			if($blog_standard_type == 'minimal' && $blog_type == 'std-blog-fullwidth')
+				$std_minimal_class = 'standard-minimal full-width-content';
+			else if($blog_standard_type == 'minimal' && $blog_type == 'std-blog-sidebar')
+				$std_minimal_class = 'standard-minimal';
+			else
+				$std_minimal_class = '';
 			
 			if($blog_type == 'std-blog-sidebar' || $blog_type == 'masonry-blog-sidebar'){
-				echo '<div id="post-area" class="col span_9 '.$masonry_class.' '.$masonry_style.' '. $infinite_scroll_class.'"> <div class="posts-container"  data-load-animation="'.$load_in_animation.'">';
+				echo '<div id="post-area" class="col '.$std_minimal_class.' span_9 '.$masonry_class.' '.$masonry_style.' '. $infinite_scroll_class.'"> <div class="posts-container"  data-load-animation="'.$load_in_animation.'">';
 			} else {
-				echo '<div id="post-area" class="col span_12 col_last '.$masonry_class.' '.$masonry_style.' '. $infinite_scroll_class.'"> <div class="posts-container"  data-load-animation="'.$load_in_animation.'">';
+				echo '<div id="post-area" class="col '.$std_minimal_class.' span_12 col_last '.$masonry_class.' '.$masonry_style.' '. $infinite_scroll_class.'"> <div class="posts-container"  data-load-animation="'.$load_in_animation.'">';
 			}
 	
 				if(have_posts()) : while(have_posts()) : the_post(); ?>

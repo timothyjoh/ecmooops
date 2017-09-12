@@ -150,7 +150,21 @@ var Nodes = {
 	  		Nodes.mouse.down = false;
 	    });
     }
-   
+    
+
+    //for non fullscreen mobile
+    if($('#page-header-bg:not(.fullscreen-header)').length > 0 && $(window).width() < 1000) {
+       $(window).load(function(){
+        setTimeout(function(){
+
+          Nodes.canvas.width = ($(canvasID).parents('.nectar-box-roll').length > 0 ) ? window.innerWidth : $(canvasID).parents('.nectar-particles').width();
+          Nodes.canvas.height = ($(canvasID).parents('.nectar-box-roll').length > 0 ) ? window.innerHeight : $(canvasID).parents('.nectar-particles').height();
+          Nodes.onWindowResize();    
+          
+          },50);
+
+       });
+    }
 
 
     window.onresize = function(event) {

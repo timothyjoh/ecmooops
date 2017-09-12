@@ -40,11 +40,12 @@ $cascading_attrs = shortcode_atts(array(
   "image_4_rotate_sign" => "+",
   "image_4_rotate" => "none",
   "image_4_animation" => "Fade In",
-  "image_4_box_shadow" => "none"
+  "image_4_box_shadow" => "none",
+  "animation_timing" => '175'
 ),
 $atts);
 
-echo '<div class="nectar_cascading_images">';
+echo '<div class="nectar_cascading_images" data-animation-timing="'.$cascading_attrs['animation_timing'].'">';
 
 //find largest transform val
 
@@ -96,6 +97,8 @@ $transform_arr = floor($transform_arr/$divider);
 for($i=1;$i<5;$i++){
 
 	$image_url = null;
+	$image_alt = null;
+
 	if(!empty($cascading_attrs['image_'.$i.'_url'])) {
 		
 		if(!preg_match('/^\d+$/',$cascading_attrs['image_'.$i.'_url'])){
@@ -106,6 +109,8 @@ for($i=1;$i<5;$i++){
 			$image_src = wp_get_attachment_image_src($cascading_attrs['image_'.$i.'_url'], 'full');
 			
 			$image_url = $image_src[0];
+
+			$image_alt = get_post_meta( $cascading_attrs['image_'.$i.'_url'], '_wp_attachment_image_alt', true );
 		}
 		
 	}
@@ -121,13 +126,13 @@ for($i=1;$i<5;$i++){
 	if(!empty($cascading_attrs['image_'.$i.'_offset_y'])) $transform_string .= 'translateY('.$transform_y_sign_string . $cascading_attrs['image_'.$i.'_offset_y'].') '; 
 	if(!empty($cascading_attrs['image_'.$i.'_rotate']) && $cascading_attrs['image_'.$i.'_rotate'] != 'none') $transform_string .= 'rotate('.$rotate_sign_string . $cascading_attrs['image_'.$i.'_rotate'].'deg) ';
 
-	$img_markup = (!empty($image_url)) ? '<div style=" -webkit-transform:'.$transform_string.';  -ms-transform:'.$transform_string.'; transform:'.$transform_string.';" class="img-wrap"> <img src="'.$image_url.'" alt="" /> </div>': null;
+	$img_markup = (!empty($image_url)) ? '<div style=" -webkit-transform:'.$transform_string.';  -ms-transform:'.$transform_string.'; transform:'.$transform_string.';" class="img-wrap"> <img src="'.$image_url.'" alt="'.$image_alt.'" /> </div>': null;
 	$data_has_bg_img = (!empty($image_url)) ? 'true': 'false';
 	$data_has_bg_color = (!empty($cascading_attrs['image_'.$i.'_bg_color'])) ? 'true' : 'false';
 	$bg_color_markup = ($data_has_bg_color == 'true') ? '<div class="bg-color" style=" -webkit-transform:'.$transform_string.';  -ms-transform:'.$transform_string.';  transform: '.$transform_string.'; background-color: '.$cascading_attrs['image_'.$i.'_bg_color'].';" data-has-bg-color="'.$data_has_bg_color.'"></div>' : null;
 	
 	if(!empty($image_url) || $data_has_bg_color == 'true') {
-		echo '<div class="cascading-image" data-has-img="'.$data_has_bg_img.'" style=" padding:'.$transform_arr .'%;" data-animation="'.strtolower($parsed_animation).'" data-shadow="'.$cascading_attrs['image_'.$i.'_box_shadow'].'"><span class="inner-wrap">'.$bg_color_markup . $img_markup.'</span></div>';
+		echo '<div class="cascading-image" data-has-img="'.$data_has_bg_img.'" style=" padding:'.$transform_arr .'%;" data-animation="'.strtolower($parsed_animation).'" data-shadow="'.$cascading_attrs['image_'.$i.'_box_shadow'].'"><div class="inner-wrap">'.$bg_color_markup . $img_markup.'</div></div>';
 	}
 }
 

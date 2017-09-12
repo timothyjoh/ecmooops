@@ -4,25 +4,27 @@
  *
  * In 2.1 we show methods per package. This allows for multiple methods per order if so desired.
  *
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-shipping.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.5.0
+ * @version     3.1.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
 ?>
 <tr class="shipping">
-	<th><?php
-		if ( $show_package_details ) {
-			printf( __( 'Shipping #%d', 'woocommerce' ), $index + 1 );
-		} else {
-			_e( 'Shipping and Handling', 'woocommerce' );
-		}
-	?></th>
-	<td>
+	<th><?php echo wp_kses_post( $package_name ); ?></th>
+	<td data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( ! empty( $available_methods ) ) : ?>
 
 			<?php if ( 1 === count( $available_methods ) ) :
@@ -96,6 +98,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				echo '<p class="woocommerce-shipping-contents"><small>' . __( 'Shipping', 'woocommerce' ) . ': ' . implode( ', ', $product_names ) . '</small></p>';
 			?>
+		<?php endif; ?>
+		
+		<?php if ( ! empty( $show_shipping_calculator ) ) : ?>
+			<?php woocommerce_shipping_calculator(); ?>
 		<?php endif; ?>
 
 		

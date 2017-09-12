@@ -7,7 +7,7 @@ $heading_lines = array_filter($array);
 echo '<div class="nectar-split-heading">';
 
 foreach($heading_lines as $k => $v) {
-	echo '<span class="heading-line"> <span>' . do_shortcode($v) . ' </span> </span>';
+	echo '<div class="heading-line"> <div>' . do_shortcode($v) . ' </div> </div>';
 }
 
 echo '</div>';

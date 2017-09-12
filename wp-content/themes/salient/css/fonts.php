@@ -12,7 +12,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 
 	//load custom fonts
 	if(!empty($current_options)) {
-		$font_fields = array('navigation_font_family','navigation_dropdown_font_family','page_heading_font_family','page_heading_subtitle_font_family','off_canvas_nav_font_family','off_canvas_nav_subtext_font_family','body_font_family','h1_font_family','h2_font_family','h3_font_family','h4_font_family','h5_font_family','h6_font_family','i_font_family','label_font_family','nectar_slider_heading_font_family','home_slider_caption_font_family','testimonial_font_family','sidebar_footer_h_font_family','team_member_h_font_family','nectar_dropcap_font_family');
+		$font_fields = array('navigation_font_family','navigation_dropdown_font_family','portfolio_filters_font_family','portfolio_caption_font_family','page_heading_font_family','page_heading_subtitle_font_family','off_canvas_nav_font_family','off_canvas_nav_subtext_font_family','body_font_family','h1_font_family','h2_font_family','h3_font_family','h4_font_family','h5_font_family','h6_font_family','i_font_family','label_font_family','nectar_slider_heading_font_family','home_slider_caption_font_family','testimonial_font_family','sidebar_footer_h_font_family','team_member_h_font_family','nectar_dropcap_font_family');
 		
 		//legacy formatting
 		foreach($font_fields as $k => $v) { 
@@ -27,8 +27,6 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 			if(!empty($options[$v]['font-weight']) && !empty($options[$v]['font-style'])) $options[str_replace('_family', '', $v) . '_style'] = $options[$v]['font-weight'] . $options[$v]['font-style'];
 		}
 
-
-
 	}
 
 
@@ -42,6 +40,41 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	$team_member_names = $options['team_member_h_font'];
 	
 	if($external_dynamic != 'on') { echo '<style type="text/css">'; }
+
+
+	/*responsive heading values */
+	$using_custom_responsive_sizing = ( !empty($options['use-responsive-heading-typography']) && $options['use-responsive-heading-typography'] == '1') ? true : false;
+
+	$nectar_h1_small_desktop = ( !empty($options['h1-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h1-small-desktop-font-size'])/100 : 0.75;
+	$nectar_h1_tablet = ( !empty($options['h1-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h1-tablet-font-size'])/100 : 0.7;
+	$nectar_h1_phone = ( !empty($options['h1-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h1-phone-font-size'])/100 : 0.65;
+	$nectar_h1_default_size = 54;
+
+	$nectar_h2_small_desktop = ( !empty($options['h2-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h2-small-desktop-font-size'])/100 : 0.85;
+	$nectar_h2_tablet = ( !empty($options['h2-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h2-tablet-font-size'])/100 : 0.8;
+	$nectar_h2_phone = ( !empty($options['h2-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h2-phone-font-size'])/100 : 0.75;
+	$nectar_h2_default_size = 34;
+
+	$nectar_h3_small_desktop = ( !empty($options['h3-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h3-small-desktop-font-size'])/100 : 0.85;
+	$nectar_h3_tablet = ( !empty($options['h3-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h3-tablet-font-size'])/100 : 0.8;
+	$nectar_h3_phone = ( !empty($options['h3-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h3-phone-font-size'])/100 : 0.8;
+	$nectar_h3_default_size = 22;
+
+	$nectar_h4_small_desktop = ( !empty($options['h4-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h4-small-desktop-font-size'])/100 : 1;
+	$nectar_h4_tablet = ( !empty($options['h4-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h4-tablet-font-size'])/100 : 1;
+	$nectar_h4_phone = ( !empty($options['h4-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h4-phone-font-size'])/100 : 0.9;
+	$nectar_h4_default_size = 18;
+
+	$nectar_h5_small_desktop = ( !empty($options['h5-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h5-small-desktop-font-size'])/100 : 1;
+	$nectar_h5_tablet = ( !empty($options['h5-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h5-tablet-font-size'])/100 : 1;
+	$nectar_h5_phone = ( !empty($options['h5-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h5-phone-font-size'])/100 : 1;
+	$nectar_h5_default_size = 16;
+
+	$nectar_h6_small_desktop = ( !empty($options['h6-small-desktop-font-size']) && $using_custom_responsive_sizing) ? intval($options['h6-small-desktop-font-size'])/100 : 1;
+	$nectar_h6_tablet = ( !empty($options['h6-tablet-font-size']) && $using_custom_responsive_sizing) ? intval($options['h6-tablet-font-size'])/100 : 1;
+	$nectar_h6_phone = ( !empty($options['h6-phone-font-size']) && $using_custom_responsive_sizing) ? intval($options['h6-phone-font-size'])/100 : 1;
+	$nectar_h6_default_size = 14;
+
 
 	/*-------------------------------------------------------------------------*/
 	/*	Body Font
@@ -94,6 +127,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	
      if($options['body_font'] != '-') {
 	   echo '.bold, strong, b { font-family: ' . $font_family .'; font-weight: 600; } ';
+	   echo '.single #single-below-header span { font-family: ' . $font_family .';  }';
 	 }
 	
 	 echo '.nectar-fancy-ul ul li .icon-default-style[class^="icon-"] {'; 
@@ -138,23 +172,13 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		<?php if(!empty($styles[1])) echo 'font-style:' . $styles[1]; ?>
 	<?php echo '}'; 
 
-		//increase spacing on larger nav fonts
-	    if($options['navigation_font_size'] != '-' && intval(substr($options['navigation_font_size'],0,-2)) >= 15) { 
-	    	echo '#header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a,
-	    	header#top nav > ul > li.button_solid_color > a, body #header-outer.transparent header#top nav > ul > li.button_solid_color > a,
-			#header-outer[data-lhe="animated_underline"] header#top nav > ul > li.button_solid_color > a { margin-left: 13px!important;  margin-right: 13px!important; }';
-
-			echo '#header-outer[data-lhe="default"] header#top nav > ul > li > a { padding-left: 13px;  padding-right: 13px; }';
-			echo 'header#top nav > ul > li.button_solid_color > a, body #header-outer.transparent header#top nav > ul > li.button_solid_color > a, #header-outer[data-lhe="animated_underline"] header#top nav > ul > li.button_solid_color > a { padding-left: 23px!important; padding-right: 23px!important; }';
-	    }
-
 	    if($options['navigation_font_size'] != '-') {
-	    	echo 'header#top nav > ul > li.button_solid_color > a:before, #header-outer.transparent header#top nav > ul > li.button_solid_color > a:before { 
-	    		height: ' . ((intval(substr($options['navigation_font_size'],0,-2)) *1.4)+ 5)  .'px; 
+	    	echo 'header#top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer.transparent header#top nav > ul > li[class*="button_solid_color"] > a:before { 
+	    		height: ' . floor((intval(substr($options['navigation_font_size'],0,-2)) *1.4)+ 5)  .'px; 
 	    	}';
 
-	    	echo 'header#top nav > ul > li.button_bordered > a:before, #header-outer.transparent header#top nav > ul > li.button_bordered > a:before { 
-	    		height: ' . ((intval(substr($options['navigation_font_size'],0,-2)) *1.4)+ 15)  .'px; 
+	    	echo 'header#top nav > ul > li[class*="button_bordered"] > a:before, #header-outer.transparent header#top nav > ul > li[class*="button_bordered"] > a:before { 
+	    		height: ' . floor((intval(substr($options['navigation_font_size'],0,-2)) *1.4)+ 15)  .'px; 
 	    	}';
 		}
 
@@ -274,30 +298,35 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	<?php echo '}'; ?>
 	
 
+	<?php 
+		$defined_font_size = (!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') ? $options['h1_font_size'] : $nectar_h1_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h1_default_size + 6;
+	?>
+
 	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
 		body .row .col.section-title h1, body h1, .full-width-content .recent-post-container .inner-wrap h2 {
-			font-size: <?php if(!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') echo $options['h1_font_size']*0.7 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.7) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*$nectar_h1_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h1_small_desktop) . 'px'; ?>;
 		}
 	}
 	@media only screen and (max-width: 1000px) and (min-width: 690px) {
 		body .row .col.section-title h1, body h1 {
-			font-size: <?php if(!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') echo $options['h1_font_size']*0.65 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.65) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*$nectar_h1_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h1_tablet) . 'px'; ?>;
 		}
 		.full-width-content .recent-post-container .inner-wrap h2 {
-			font-size: <?php if(!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') echo $options['h1_font_size']*0.6 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.6) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*$nectar_h1_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h1_tablet) . 'px'; ?>;
 		}
 	}
 	@media only screen and (max-width: 690px) {
 		body .row .col.section-title h1, body h1 {
-			font-size: <?php if(!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') echo $options['h1_font_size']*0.6 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.6) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*$nectar_h1_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h1_phone) . 'px'; ?>;
 		}
 		.full-width-content .recent-post-container .inner-wrap h2 {
-			font-size: <?php if(!empty($options['h1_font_size']) && $options['h1_font_size'] != '-') echo $options['h1_font_size']*0.45 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.45) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*$nectar_h1_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h1_phone) . 'px'; ?>;
 		}
 	}
 	
@@ -353,21 +382,34 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		<?php if(!empty($styles[1])) echo 'font-style:' . $styles[1]; ?>
 	<?php echo '}'; ?>
 
+
+	<?php 
+		$defined_font_size = (!empty($options['h2_font_size']) && $options['h2_font_size'] != '-') ? $options['h2_font_size'] : $nectar_h2_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h2_default_size + 8;
+	?>
+
 	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
 	 	body h2 {
-	 		font-size: <?php if(!empty($options['h2_font_size']) && $options['h2_font_size'] != '-') echo $options['h2_font_size']*0.85 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.85) . 'px' ?>;
+	 		font-size: <?php echo $defined_font_size*$nectar_h2_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h2_small_desktop) . 'px'; ?>;
 		}
 		.row .span_2 h2, .row .span_3 h2, .row .span_4 h2, .row .vc_col-sm-2 h2, .row .vc_col-sm-3 h2, .row .vc_col-sm-4 h2 { 
-			font-size: <?php if(!empty($options['h2_font_size']) && $options['h2_font_size'] != '-') echo $options['h2_font_size']*0.7 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.7) . 'px' ?>;
+			font-size: <?php echo $defined_font_size*0.7 . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*0.7) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) and (min-width: 690px) {
+	.col h2, h2 {
+			font-size: <?php echo $defined_font_size*$nectar_h2_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h2_tablet) . 'px'; ?>;
 		}
 	}
 
 	@media only screen and (max-width: 690px) {
-	.col h2 {
-			font-size: <?php if(!empty($options['h2_font_size']) && $options['h2_font_size'] != '-') echo $options['h2_font_size']*0.85 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.85) . 'px' ?>;
+	.col h2, h2 {
+			font-size: <?php echo $defined_font_size*$nectar_h2_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h2_phone) . 'px'; ?>;
 		}
 	}
 	
@@ -381,7 +423,8 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	( intval( substr($options['h3_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['h3_font_size'],0,-2)) +8 .'px' : $line_height = null ;  ?>
 	
 	<?php echo 'body h3, .row .col h3, .toggle h3 a, .ascend #respond h3, .ascend h3#comments, .woocommerce ul.products li.product.text_on_hover h3, 
-	.masonry.classic_enhanced .masonry-blog-item h3.title 
+	.masonry.classic_enhanced .masonry-blog-item h3.title, .woocommerce ul.products li.product.material h3, .woocommerce-page ul.products li.product.material h3, .portfolio-items[data-ps="8"] .col h3,
+	.nectar-hor-list-item[data-font-family="h3"], .woocommerce ul.products li.product h2
 	{'; ?>	
 		<?php if($options['h3_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['h3_font'])) ? '"'. $options['h3_font'] .'"' : $options['h3_font'];
@@ -443,12 +486,33 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		}
 	}
 
-	@media only screen and (max-width: 1300px) and (min-width: 1000px), (max-width: 690px) {
-		.row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3 {
-			font-size: <?php if(!empty($options['h3_font_size']) && $options['h3_font_size'] != '-') echo $options['h3_font_size']*0.7 . 'px' ?>;
-			line-height: <?php if($the_line_height) echo ($the_line_height*0.7) . 'px' ?>;
+
+	<?php 
+		$defined_font_size = (!empty($options['h3_font_size']) && $options['h3_font_size'] != '-') ? $options['h3_font_size'] : $nectar_h3_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h3_default_size + 10;
+	?>
+
+	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+		.row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, .row .col h3, body h3 {
+			font-size: <?php echo $defined_font_size*$nectar_h3_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h3_small_desktop) . 'px'; ?>;
 		}
 	}
+
+	@media only screen and (max-width: 1000px) and (min-width: 690px) {
+		.row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, .row .col h3, body h3 {
+			font-size: <?php echo $defined_font_size*$nectar_h3_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h3_tablet) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 690px) {
+		.row .span_2 h3, .row .span_3 h3, .row .span_4 h3, .row .vc_col-sm-2 h3, .row .vc_col-sm-3 h3, .row .vc_col-sm-4 h3, .row .col h3, body h3 {
+			font-size: <?php echo $defined_font_size*$nectar_h3_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h3_phone) . 'px'; ?>;
+		}
+	}
+
 	
 	<?php 
 	/*-------------------------------------------------------------------------*/
@@ -458,7 +522,8 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	
 	( intval( substr($options['h4_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['h4_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
-	<?php echo 'body h4, .row .col h4, .portfolio-items .work-meta h4, .list-icon-holder[data-icon_type="numerical"] span, .portfolio-items .col.span_3 .work-meta h4, #respond h3, h3#comments, .portfolio-items[data-ps="6"] .work-meta h4
+	<?php echo 'body h4, .row .col h4, .portfolio-items .work-meta h4, .list-icon-holder[data-icon_type="numerical"] span, .portfolio-items .col.span_3 .work-meta h4, #respond h3, h3#comments, .portfolio-items[data-ps="6"] .work-meta h4,
+	.nectar-hor-list-item[data-font-family="h4"]
 	{'; ?>	
 		<?php if($options['h4_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['h4_font'])) ? '"'. $options['h4_font'] .'"' : $options['h4_font'];
@@ -505,6 +570,39 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 			line-height: <?php if(!empty($options['h4_font_size']) && $options['h4_font_size'] != '-') echo ($options['h4_font_size']*1.7) +8 . 'px!important' ?>;
 		}
 
+		.nectar-slide-in-cart .widget_shopping_cart .cart_list .mini_cart_item > a:not(.remove) {
+			<?php if($options['h4_font'] != '-') echo 'font-family: ' . $font_family .'!important;'; 
+			if(!empty($styles[0]) && $styles[0] == 'regular') $styles[0] = '400';
+		    if(!empty($styles[0]) && strpos($styles[0],'italic') === false) { echo 'font-weight:' .  $styles[0] .'!important;'; } ?>
+		}
+
+	}
+
+
+	<?php 
+		$defined_font_size = (!empty($options['h4_font_size']) && $options['h4_font_size'] != '-') ? $options['h4_font_size'] : $nectar_h4_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h4_default_size + 10;
+	?>
+
+	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+		.row .col h4, body h4 {
+			font-size: <?php echo $defined_font_size*$nectar_h4_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h4_small_desktop) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) and (min-width: 690px) {
+		.row .col h4, body h4 {
+			font-size: <?php echo $defined_font_size*$nectar_h4_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h4_tablet) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 690px) {
+		.row .col h4, body h4 {
+			font-size: <?php echo $defined_font_size*$nectar_h4_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h4_phone) . 'px'; ?>;
+		}
 	}
 	
 	<?php 
@@ -515,7 +613,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	
 	( intval( substr($options['h5_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['h5_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
-	<?php echo 'body h5, .row .col h5, .portfolio-items .work-item.style-3-alt p
+	<?php echo 'body h5, .row .col h5, .portfolio-items .work-item.style-3-alt p, .nectar-hor-list-item[data-font-family="h5"]
 	{'; ?>	
 		<?php if($options['h5_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['h5_font'])) ? '"'. $options['h5_font'] .'"' : $options['h5_font'];
@@ -562,14 +660,32 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		font-size: <?php if(!empty($options['h5_font_size']) && $options['h5_font_size'] != '-') echo ceil($options['h5_font_size']*1.35) . 'px!important' ?>;
 	}
 	
-	<?php if( intval( substr($options['h5_font_size'],0,-2) ) > 16 ) { ?>
-	@media only screen and (min-width: 1000px) and (max-width: 1300px) {
-		
-		.col.vc_span3 h5, .col.vc_span4 h5, .col.vc_col-sm-3 h5, .col.vc_col-sm-4 h5 {
-			font-size: 16px!important;
+
+	<?php 
+		$defined_font_size = (!empty($options['h5_font_size']) && $options['h5_font_size'] != '-') ? $options['h5_font_size'] : $nectar_h5_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h5_default_size + 10;
+	?>
+
+	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+		.row .col h5, body h5 {
+			font-size: <?php echo $defined_font_size*$nectar_h5_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h5_small_desktop) . 'px'; ?>;
 		}
 	}
-	<?php } ?>
+
+	@media only screen and (max-width: 1000px) and (min-width: 690px) {
+		.row .col h5, body h5 {
+			font-size: <?php echo $defined_font_size*$nectar_h5_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h5_tablet) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 690px) {
+		.row .col h5, body h5 {
+			font-size: <?php echo $defined_font_size*$nectar_h5_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h5_phone) . 'px'; ?>;
+		}
+	}
 
 	<?php 
 	/*-------------------------------------------------------------------------*/
@@ -579,7 +695,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	
 	( intval( substr($options['h6_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['h6_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
-	<?php echo 'body h6, .row .col h6
+	<?php echo 'body h6, .row .col h6, .nectar-hor-list-item[data-font-family="h6"]
 	{'; ?>	
 		<?php if($options['h6_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['h6_font'])) ? '"'. $options['h6_font'] .'"' : $options['h6_font'];
@@ -619,6 +735,34 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		?>
 		<?php if(!empty($styles[1])) echo 'font-style:' . $styles[1]; ?>
 	<?php echo '}'; ?>
+
+	
+	
+	<?php 
+		$defined_font_size = (!empty($options['h6_font_size']) && $options['h6_font_size'] != '-') ? $options['h6_font_size'] : $nectar_h6_default_size;
+		$defined_line_height = (!empty($the_line_height)) ? $the_line_height : $nectar_h6_default_size + 10;
+	?>
+
+	@media only screen and (max-width: 1300px) and (min-width: 1000px) {
+		.row .col h6, body h6 {
+			font-size: <?php echo $defined_font_size*$nectar_h6_small_desktop . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h6_small_desktop) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) and (min-width: 690px) {
+		.row .col h6, body h6 {
+			font-size: <?php echo $defined_font_size*$nectar_h6_tablet . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h6_tablet) . 'px'; ?>;
+		}
+	}
+
+	@media only screen and (max-width: 690px) {
+		.row .col h6, body h6 {
+			font-size: <?php echo $defined_font_size*$nectar_h6_phone . 'px'; ?>;
+			line-height: <?php echo ($defined_line_height*$nectar_h6_phone) . 'px'; ?>;
+		}
+	}
 	
 
 
@@ -631,7 +775,8 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	( intval( substr($options['i_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['i_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
 	<?php echo 'body i, body em, .masonry.meta_overlaid article.post .post-header .meta-author > span, #post-area.masonry.meta_overlaid article.post .post-meta .date,
-	#post-area.masonry.meta_overlaid article.post.quote .quote-inner .author, #post-area.masonry.meta_overlaid  article.post.link .post-content .destination
+	#post-area.masonry.meta_overlaid article.post.quote .quote-inner .author, #post-area.masonry.meta_overlaid  article.post.link .post-content .destination,
+	body .testimonial_slider[data-style="minimal"] blockquote span.title
 	{'; ?>	
 		<?php if($options['i_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['i_font'])) ? '"'. $options['i_font'] .'"' : $options['i_font'];
@@ -682,7 +827,8 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	( intval( substr($options['label_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['label_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
 	<?php echo 'form label, .woocommerce-checkout-review-order-table .product-info .amount, .woocommerce-checkout-review-order-table .product-info .product-quantity,
-	.nectar-progress-bar p, .nectar-progress-bar span strong i, .nectar-progress-bar span strong, .testimonial_slider blockquote span
+	.nectar-progress-bar p, .nectar-progress-bar span strong i, .nectar-progress-bar span strong, .testimonial_slider:not([data-style="minimal"]) blockquote span,  .woocommerce-ordering .select2-container--default .select2-selection--single .select2-selection__rendered, .woocommerce-ordering .select2-container .select2-choice>.select2-chosen,
+	.tabbed[data-style="minimal_alt"] > ul li a
 	{'; ?>	
 		<?php if($options['label_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['label_font'])) ? '"'. $options['label_font'] .'"' : $options['label_font'];
@@ -697,6 +843,111 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 		 if($options['label_font_line_height'] != '-') { 
 		 	echo 'line-height:' . $options['label_font_line_height'] .';'; 
 		 	$the_line_height = $options['label_font_line_height'];
+		 } else if(!empty($line_height)) {
+		//auto line-height
+			echo 'line-height:' . $line_height .';';
+			$the_line_height = $line_height;
+		} else {
+			$the_line_height = null;
+		}
+		?>
+		<?php 
+              if(!empty($styles[0]) && $styles[0] == 'regular') $styles[0] = '400';
+		      if(!empty($styles[0]) && strpos($styles[0],'italic') === false) { echo 'font-weight:' .  $styles[0] .'!important;'; }
+			  else if(!empty($styles[0]) && strpos($styles[0],'0italic') == true) {
+			  	  $the_weight = explode("i",$styles[0]);
+			  	  echo 'font-weight:' .  $the_weight[0] .';'; 
+			  	  echo 'font-style: italic';
+			  }
+			  else if(!empty($styles[0])) {
+			  	  if(strpos($styles[0],'italic') !== false) {
+			  	    echo 'font-weight: 400;'; 
+			  	    echo 'font-style: italic';
+			  	 }
+			  }
+		?>
+		<?php if(!empty($styles[1])) echo 'font-style:' . $styles[1]; ?>
+	<?php echo '}'; ?>
+
+
+
+
+	<?php 
+	/*-------------------------------------------------------------------------*/
+	/*	Portfolio Filter Font
+	/*-------------------------------------------------------------------------*/
+	$styles = explode('-', $options['portfolio_filters_font_style']);
+	
+	( intval( substr($options['portfolio_filters_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['portfolio_filters_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
+	
+	<?php echo '.portfolio-filters-inline .container > ul a, .portfolio-filters > ul a, .portfolio-filters > a span
+	{'; ?>	
+		<?php if($options['portfolio_filters_font'] != '-') {
+			  $font_family = (1 === preg_match('~[0-9]~', $options['portfolio_filters_font'])) ? '"'. $options['portfolio_filters_font'] .'"' : $options['portfolio_filters_font'];
+		}
+			  if($options['portfolio_filters_font'] != '-') echo 'font-family: ' . $font_family .';'; 
+			  if($options['portfolio_filters_font_transform'] != '-') echo 'text-transform: ' . $options['portfolio_filters_font_transform'] .';'; 
+			  if($options['portfolio_filters_font_spacing'] != '-') echo 'letter-spacing: ' . $options['portfolio_filters_font_spacing'] .';'; 
+		      if($options['portfolio_filters_font_size'] != '-') echo 'font-size:' . $options['portfolio_filters_font_size'] .'!important;'; ?>
+	
+		<?php 
+		//user set line-height
+		 if($options['portfolio_filters_font_line_height'] != '-') { 
+		 	echo 'line-height:' . $options['portfolio_filters_font_line_height'] .';'; 
+		 	$the_line_height = $options['portfolio_filters_font_line_height'];
+		 } else if(!empty($line_height)) {
+		//auto line-height
+			echo 'line-height:' . $line_height .';';
+			$the_line_height = $line_height;
+		} else {
+			$the_line_height = null;
+		}
+		?>
+		<?php 
+              if(!empty($styles[0]) && $styles[0] == 'regular') $styles[0] = '400';
+		      if(!empty($styles[0]) && strpos($styles[0],'italic') === false) { echo 'font-weight:' .  $styles[0] .'!important;'; }
+			  else if(!empty($styles[0]) && strpos($styles[0],'0italic') == true) {
+			  	  $the_weight = explode("i",$styles[0]);
+			  	  echo 'font-weight:' .  $the_weight[0] .';'; 
+			  	  echo 'font-style: italic';
+			  }
+			  else if(!empty($styles[0])) {
+			  	  if(strpos($styles[0],'italic') !== false) {
+			  	    echo 'font-weight: 400;'; 
+			  	    echo 'font-style: italic';
+			  	 }
+			  }
+		?>
+		<?php if(!empty($styles[1])) echo 'font-style:' . $styles[1]; ?>
+	<?php echo '}'; ?>
+
+	<?php if($the_line_height !== null) echo '.portfolio-filters-inline #current-category { line-height: '.$the_line_height.'; }'; ?>
+
+
+
+	<?php 
+	/*-------------------------------------------------------------------------*/
+	/*	Portfolio Captions/Excerpts Font
+	/*-------------------------------------------------------------------------*/
+	$styles = explode('-', $options['portfolio_caption_font_style']);
+	
+	( intval( substr($options['portfolio_caption_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['portfolio_caption_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
+	
+	<?php echo '.portfolio-items .col p, .container-wrap[data-nav-pos="after_project_2"] .bottom_controls li span:not(.text)
+	{'; ?>	
+		<?php if($options['portfolio_caption_font'] != '-') {
+			  $font_family = (1 === preg_match('~[0-9]~', $options['portfolio_caption_font'])) ? '"'. $options['portfolio_caption_font'] .'"' : $options['portfolio_caption_font'];
+		}
+			  if($options['portfolio_caption_font'] != '-') echo 'font-family: ' . $font_family .';'; 
+			  if($options['portfolio_caption_font_transform'] != '-') echo 'text-transform: ' . $options['portfolio_caption_font_transform'] .';'; 
+			  if($options['portfolio_caption_font_spacing'] != '-') echo 'letter-spacing: ' . $options['portfolio_caption_font_spacing'] .';'; 
+		      if($options['portfolio_caption_font_size'] != '-') echo 'font-size:' . $options['portfolio_caption_font_size'] .'!important;'; ?>
+	
+		<?php 
+		//user set line-height
+		 if($options['portfolio_caption_font_line_height'] != '-') { 
+		 	echo 'line-height:' . $options['portfolio_caption_font_line_height'] .';'; 
+		 	$the_line_height = $options['portfolio_caption_font_line_height'];
 		 } else if(!empty($line_height)) {
 		//auto line-height
 			echo 'line-height:' . $line_height .';';
@@ -915,6 +1166,16 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 			font-size: <?php if(!empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] != '-') echo $options['page_heading_subtitle_font_size']*0.9 . 'px!important' ?>;
 			line-height: <?php if($the_line_height) echo ($the_line_height*0.9) . 'px!important' ?>;
 		}
+
+		<?php if(!empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] != '-' && $options['page_heading_subtitle_font_size'] > 22) { ?>
+			#page-header-bg .span_6 span.subheader {
+		  		font-size: 22px!important;
+		  	} 
+	  	<?php } else if( empty($options['page_heading_subtitle_font_size']) || !empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] == '-' ) { ?>
+		  	#page-header-bg .span_6 span.subheader {
+		  		font-size: 22px!important;
+		  	} 
+		 <?php } ?>
 	}
 
 	@media only screen and (max-width: 690px) {
@@ -922,6 +1183,16 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 			font-size: <?php if(!empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] != '-') echo $options['page_heading_subtitle_font_size']*0.7 . 'px!important' ?>;
 			line-height: <?php if($the_line_height) echo ($the_line_height*0.7) . 'px!important' ?>;
 		}
+
+		<?php if(!empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] != '-' && $options['page_heading_subtitle_font_size'] > 15) { ?>
+			#page-header-bg .span_6 span.subheader {
+		  		font-size: 15px!important;
+		  	}
+	  	<?php } else if( empty($options['page_heading_subtitle_font_size']) || !empty($options['page_heading_subtitle_font_size']) && $options['page_heading_subtitle_font_size'] == '-' ) { ?>
+	  		#page-header-bg .span_6 span.subheader {
+		  		font-size: 15px!important;
+		  	} 
+		 <?php } ?>
 	}
 
 
@@ -935,7 +1206,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	( intval( substr($options['off_canvas_nav_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['off_canvas_nav_font_size'],0,-2)) +10 .'px' : $line_height = null ;  ?>
 	
 	<?php echo 'body #slide-out-widget-area .inner .off-canvas-menu-container li a, body #slide-out-widget-area.fullscreen .inner .off-canvas-menu-container li a,
-	body #slide-out-widget-area.fullscreen-alt .inner .off-canvas-menu-container li a
+	body #slide-out-widget-area.fullscreen-alt .inner .off-canvas-menu-container li a, body #slide-out-widget-area.slide-out-from-right-hover .inner .off-canvas-menu-container li a, body #nectar-ocm-ht-line-check 
 	{'; ?>	
 		<?php if($options['off_canvas_nav_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['off_canvas_nav_font'])) ? '"'. $options['off_canvas_nav_font'] .'"' : $options['off_canvas_nav_font'];
@@ -1229,7 +1500,7 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	$styles = explode('-', $options['testimonial_font_style']);
 	( intval( substr($options['testimonial_font_size'],0,-2) ) > 8 ) ? $line_height =  intval(substr($options['testimonial_font_size'],0,-2)) + 19 .'px!important' : $line_height = null ;  ?>
 	
-	<?php echo '.testimonial_slider blockquote, .testimonial_slider blockquote span, blockquote
+	<?php echo '.testimonial_slider blockquote, .testimonial_slider blockquote span, .testimonial_slider[data-style="minimal"] blockquote span:not(.title), .testimonial_slider[data-style="minimal"] blockquote,  blockquote, .testimonial_slider[data-style="minimal"] .controls
 	{'; ?>	
 		<?php if($options['testimonial_font'] != '-') {
 			  $font_family = (1 === preg_match('~[0-9]~', $options['testimonial_font'])) ? '"'. $options['testimonial_font'] .'"' : $options['testimonial_font'];	
@@ -1283,10 +1554,15 @@ $external_dynamic = (!empty($options['external-dynamic-css']) && $options['exter
 	$line_height =  substr($options['sidebar_footer_h_font_size'],0,-2); ?>
 	
 	<?php echo '#footer-outer .widget h4, #sidebar h4, #call-to-action .container a, .uppercase, .nectar-button, .nectar-button.medium, .nectar-button.small, .nectar-3d-transparent-button, body .widget_calendar table th, body #footer-outer #footer-widgets .col .widget_calendar table th, .swiper-slide .button a,
-	header#top nav > ul > li.megamenu > ul > li > a, .carousel-heading h2, body .gform_wrapper .top_label .gfield_label, body .vc_pie_chart .wpb_pie_chart_heading, #infscr-loading div, #page-header-bg .author-section a, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .ascend input[type="submit"], .ascend button[type="submit"],
-	.widget h4, .text-on-hover-wrap .categories a, .text_on_hover.product .add_to_cart_button, .woocommerce-page div[data-project-style="text_on_hover"] .single_add_to_cart_button, .woocommerce div[data-project-style="text_on_hover"]  .cart .quantity input.qty, .woocommerce-page #respond input#submit,
+	body:not([data-header-format="left-header"]) header#top nav > ul > li.megamenu > ul > li > a, .carousel-heading h2, body .gform_wrapper .top_label .gfield_label, body .vc_pie_chart .wpb_pie_chart_heading, #infscr-loading div, #page-header-bg .author-section a, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .ascend input[type="submit"], .ascend button[type="submit"],
+	.widget h4, .text-on-hover-wrap .categories a, .text_on_hover.product .add_to_cart_button, .woocommerce-page .single_add_to_cart_button, .woocommerce div[data-project-style="text_on_hover"]  .cart .quantity input.qty, .woocommerce-page #respond input#submit,
 	.meta_overlaid article.post .post-header h2, .meta_overlaid article.post.quote .post-content h2, .meta_overlaid article.post.link .post-content h2, .meta_overlaid article.post.format-status .post-content h2, .meta_overlaid article .meta-author a, .pricing-column.highlight h3 .highlight-reason,
-	.blog-recent[data-style="minimal"] .col > span, .masonry.classic_enhanced .posts-container article .meta-category a, .nectar-recent-posts-slider .container .strong, #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a, .single .heading-title[data-header-style="default_minimal"] .meta-category a, .nectar-fancy-box .link-text
+	.blog-recent[data-style="minimal"] .col > span, body .masonry.classic_enhanced .posts-container article .meta-category a,  body .masonry.classic_enhanced .posts-container article.wide_tall .meta-category a, .blog-recent[data-style*="classic_enhanced"] .meta-category a, .nectar-recent-posts-slider .container .strong, #page-header-bg[data-post-hs="default_minimal"] .inner-wrap > a, .single .heading-title[data-header-style="default_minimal"] .meta-category a, .nectar-fancy-box .link-text,
+	 #post-area.standard-minimal article.post .post-meta .date a, #post-area.standard-minimal article.post .more-link span, .nectar-slide-in-cart .widget_shopping_cart .buttons a, .material.product .product-wrap .product-add-to-cart a .price .amount,  .material.product .product-wrap .product-add-to-cart a span, ul.products li.material.product  span.onsale,
+	body[data-button-style="rounded"] #pagination > a, html body #pagination > span, .woocommerce nav.woocommerce-pagination ul li a, html body nav.woocommerce-pagination ul li a, html body nav.woocommerce-pagination ul li span, .woocommerce .material.product .product-wrap .product-add-to-cart a.added_to_cart,
+	.woocommerce-page ul.products li.product.material .price, .woocommerce-page ul.products li.product.material .price ins span, body[data-form-submit="see-through-2"] input[type=submit], body[data-form-submit="see-through-2"] button[type=submit], body[data-form-submit="see-through"] input[type=submit], body[data-form-submit="see-through"] button[type=submit], 
+	 body[data-form-submit="regular"] input[type=submit] body[data-form-submit="regular"] button[type=submit], .nectar_team_member_overlay .team_member_details .title, body:not([data-header-format="left-header"]) header#top nav > ul > li.megamenu > ul > li > ul > li.has-ul > a, .nectar_fullscreen_zoom_recent_projects .project-slide .project-info .normal-container > a,
+	 .nectar-hor-list-item .nectar-list-item-btn
 	{'; ?>	
 		<?php if($options['sidebar_footer_h_font'] != '-') {
 			   $font_family = (1 === preg_match('~[0-9]~', $options['sidebar_footer_h_font'])) ? '"'. $options['sidebar_footer_h_font'] .'"' : $options['sidebar_footer_h_font'];

@@ -4,6 +4,10 @@ get_header(); ?>
 	
 <?php $options = get_nectar_theme_options();  ?> 
 
+<?php 
+$nectar_disable_home_slider = (!empty($options['disable_home_slider_pt']) && $options['disable_home_slider_pt'] == '1') ? true : false; 
+if($nectar_disable_home_slider != true) { ?>
+
 <div id="featured" data-caption-animation="<?php echo (!empty($options['slider-caption-animation']) && $options['slider-caption-animation'] == 1) ? '1' : '0'; ?>" data-bg-color="<?php if(!empty($options['slider-bg-color'])) echo $options['slider-bg-color']; ?>" data-slider-height="<?php if(!empty($options['slider-height'])) echo $options['slider-height']; ?>" data-animation-speed="<?php if(!empty($options['slider-animation-speed'])) echo $options['slider-animation-speed']; ?>" data-advance-speed="<?php if(!empty($options['slider-advance-speed'])) echo $options['slider-advance-speed']; ?>" data-autoplay="<?php echo $options['slider-autoplay'];?>"> 
 	
 	<?php 
@@ -42,7 +46,7 @@ get_header(); ?>
 							        else if( !empty($video_m4v) && $wp_version < "3.6" || !empty($video_ogv) && $wp_version < "3.6") {
 							        	
 							        	 echo '<div class="video">'; 
-							            	 nectar_video($post->ID); 
+							            	 //nectar_video($post->ID); 
 										 echo '</div>'; 
 										 
 							        } 
@@ -94,6 +98,8 @@ get_header(); ?>
 	<?php endif; ?>
 	<?php wp_reset_postdata(); ?>
 </div>
+
+<?php } ?>
 
 <div class="home-wrap">
 

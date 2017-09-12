@@ -59,6 +59,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             }
 
             // Set field array defaults.  No errors please
+            /* nectar addition */
             $defaults    = array(
                 'font-family'     => true,
                 'font-size'       => true,
@@ -84,6 +85,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 'update_weekly'   => false,    // Enable to force updates of Google Fonts to be weekly
                 'font_family_clear' => true
             );
+            /* nectar addition end */
+
             $this->field = wp_parse_args( $this->field, $defaults );
 
             // Set value defaults.
@@ -140,9 +143,11 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
          */
         function render() {
 
+            /* nectar addition */
             //upgrade proof
             $old_options = get_option('salient');
             global $salient_redux;
+            /* nectar addition end */
 
             // Since fonts declared is CSS (@font-face) are not rendered in the preview,
             // they can be declared in a CSS file and passed here so they DO display in
@@ -183,12 +188,12 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Font Family */
             if ( $this->field['font-family'] === true ) {
 
-
+                /* nectar addition */
                 //upgrade proof
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_family = (!empty($old_options[$fixed_ID])) ? $old_options[$fixed_ID] : '-';
                 $display_val = (isset($salient_redux[$this->field['id']]['font-family']) || $legacy_font_family == '-') ? $this->value['font-family'] : $legacy_font_family;
-
+                /* nectar addition end */
 
                 // font family clear
                 echo '<input type="hidden" class="redux-font-clear" value="' . $this->field['font_family_clear'] . '">';
@@ -212,12 +217,12 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
                 // If no fontFamily array exists, create one and set array 0
                 // with font value
+                /* nectar addtion */
                 if ( ! isset( $fontFamily ) ) {
                     $fontFamily    = array();
                     $fontFamily[0] = $display_val;
                     $fontFamily[1] = "";
                 }
-
                 // Is selected font a Google font
                 $isGoogleFont = '0';
                 if ( isset( $this->parent->fonts['google'][ $fontFamily[0] ] ) ) {
@@ -229,13 +234,17 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                     $fontFamily[0] = $display_val;
                 }
 
+                /* nectar addtion end */
+
                 $userFonts = '0';
                 if ( true == $this->user_fonts ) {
                     $userFonts = '1';
                 }
 
-
+                 /* nectar addtion */
                 echo '<input type="hidden" class="redux-typography-font-family ' . $this->field['class'] . '" data-user-fonts="' . $userFonts . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-family]' . '" value="' . $display_val . '" data-id="' . $this->field['id'] . '"  />';
+                 /* nectar addtion end */
+
                 echo '<input type="hidden" class="redux-typography-font-options ' . $this->field['class'] . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-options]' . '" value="' . $this->value['font-options'] . '" data-id="' . $this->field['id'] . '"  />';
 
                 echo '<input type="hidden" class="redux-typography-google-font" value="' . $isGoogleFont . '" id="' . $this->field['id'] . '-google-font">';
@@ -286,18 +295,20 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 echo '<div class="select_wrapper typography-style" original-title="' . __( 'Font style', 'redux-framework' ) . '">';
                 echo '<label>' . __( 'Font Weight &amp; Style', 'redux-framework' ) . '</label>';
 
+                /* nectar addition */
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_style = (!empty($old_options[$fixed_ID.'_style'])) ? $old_options[$fixed_ID.'_style'] : '-';
                 $display_val = (isset($salient_redux[$this->field['id']]['font-weight']) || $legacy_font_style == '-' ) ? $this->value['font-weight'] . $this->value['font-style'] : $legacy_font_style;
 
                 $style = $display_val;
+                /* nectar addition end */
 
                 echo '<input type="hidden" class="typography-font-weight" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-weight]' . '" value="' . $this->value['font-weight'] . '" data-id="' . $this->field['id'] . '"  /> ';
                 echo '<input type="hidden" class="typography-font-style" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-style]' . '" value="' . $this->value['font-style'] . '" data-id="' . $this->field['id'] . '"  /> ';
                 $multi = ( isset( $this->field['multi']['weight'] ) && $this->field['multi']['weight'] ) ? ' multiple="multiple"' : "";
                 echo '<select' . $multi . ' data-placeholder="' . __( 'Style', 'redux-framework' ) . '" class="redux-typography redux-typography-style select ' . $this->field['class'] . '" original-title="' . __( 'Font style', 'redux-framework' ) . '" id="' . $this->field['id'] . '_style" data-id="' . $this->field['id'] . '" data-value="' . $style . '">';
 
-                if ( empty( $this->value['subset'] ) || empty( $this->value['font-weight'] ) ) {
+                if ( empty( $this->value['subsets'] ) || empty( $this->value['font-weight'] ) ) {
                     echo '<option value=""></option>';
                 }
 
@@ -310,13 +321,11 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
                 if ( isset( $gfonts[ $this->value['font-family'] ] ) ) {
                     foreach ( $gfonts[ $this->value['font-family'] ]['variants'] as $v ) {
-                        echo '<option value="' . $v['id'] . '" ' . selected( $this->value['subset'], $v['id'], false ) . '>' . $v['name'] . '</option>';
+                        echo '<option value="' . $v['id'] . '" ' . selected( $this->value['subsets'], $v['id'], false ) . '>' . $v['name'] . '</option>';
                     }
                 } else {
-
-
-                    if ( ! isset( $this->value['font-weight'] ) && isset( $this->value['subset'] ) ) {
-                        $this->value['font-weight'] = $this->value['subset'];
+                    if ( ! isset( $this->value['font-weight'] ) && isset( $this->value['subsets'] ) ) {
+                        $this->value['font-weight'] = $this->value['subsets'];
                     }
 
                     foreach ( $nonGStyles as $i => $style ) {
@@ -324,8 +333,8 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                             $this->value['font-weight'] = false;
                         }
 
-                        if ( ! isset( $this->value['subset'] ) ) {
-                            $this->value['subset'] = false;
+                        if ( ! isset( $this->value['subsets'] ) ) {
+                            $this->value['subsets'] = false;
                         }
 
                         echo '<option value="' . $i . '" ' . selected( $this->value['font-weight'], $i, false ) . '>' . $style . '</option>';
@@ -386,15 +395,17 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             /* Text Transform */
             if ( $this->field['text-transform'] === true ) {
+                /* nectar addition */
                 //upgrade proof
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_transform = (!empty($old_options[$fixed_ID .'_transform'])) ? $old_options[$fixed_ID .'_transform'] : '-';
                 $display_val = (isset($salient_redux[$this->field['id']]['text-transform']) || $legacy_font_transform == '-' ) ? $this->value['text-transform'] : $legacy_font_transform;
-
+                
                 echo '<div class="select_wrapper typography-transform tooltip" original-title="' . __( 'Text Transform', 'redux-framework' ) . '">';
                 echo '<label>' . __( 'Text Transform', 'redux-framework' ) . '</label>';
                 echo '<select data-placeholder="' . __( 'Text Transform', 'redux-framework' ) . '" class="redux-typography redux-typography-transform ' . $this->field['class'] . '" original-title="' . __( 'Text Transform', 'redux-framework' ) . '"  id="' . $this->field['id'] . '-transform" name="' . $this->field['name'] . $this->field['name_suffix'] . '[text-transform]' . '" data-value="' . $display_val . '" data-id="' . $this->field['id'] . '" >';
                 echo '<option value=""></option>';
+                /* nectar addition end */
 
                 $values = array(
                     'none',
@@ -405,9 +416,11 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                     'inherit'
                 );
 
+                /* nectar addition */
                 foreach ( $values as $v ) {
                     echo '<option value="' . $v . '" ' . selected( $display_val, $v, false ) . '>' . ucfirst( $v ) . '</option>';
                 }
+                /* nectar addition end */
 
                 echo '</select></div>';
             }
@@ -458,6 +471,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Font Size */
             if ( $this->field['font-size'] === true ) {
 
+                /* nectar addition */
                 //upgrade proof
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_size = (!empty($old_options[$fixed_ID .'_size'])) ? $old_options[$fixed_ID .'_size'] : '-';
@@ -467,12 +481,14 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 echo '<label>' . __( 'Font Size', 'redux-framework' ) . '</label>';
                 echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-size mini typography-input ' . $this->field['class'] . '" title="' . __( 'Font Size', 'redux-framework' ) . '" placeholder="' . __( 'Size', 'redux-framework' ) . '" id="' . $this->field['id'] . '-size" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-size]' . '" value="' . str_replace( $unit, '', $display_val ) . '" data-value="' . str_replace( $unit, '', $display_val ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-font-size" name="' . $this->field['name'] . $this->field['name_suffix'] . '[font-size]' . '" value="' . $display_val . '" data-id="' . $this->field['id'] . '"  />';
+                /* nectar addition end */
                 echo '</div>';
             }
 
             /* Line Height */
             if ( $this->field['line-height'] === true ) {
 
+                /* nectar addition */
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_line_height = (!empty($old_options[$fixed_ID.'_line_height'])) ? $old_options[$fixed_ID.'_line_height'] : '-';
                 $display_val = (isset($salient_redux[$this->field['id']]['line-height']) || $legacy_font_line_height == '-' ) ? $this->value['line-height'] : $legacy_font_line_height;
@@ -481,6 +497,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 echo '<label>' . __( 'Line Height', 'redux-framework' ) . '</label>';
                 echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-height mini typography-input ' . $this->field['class'] . '" title="' . __( 'Line Height', 'redux-framework' ) . '" placeholder="' . __( 'Height', 'redux-framework' ) . '" id="' . $this->field['id'] . '-height" value="' . str_replace( $unit, '', $display_val ) . '" data-value="' . str_replace( $unit, '', $display_val ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-line-height" name="' . $this->field['name'] . $this->field['name_suffix'] . '[line-height]' . '" value="' . $display_val . '" data-id="' . $this->field['id'] . '"  />';
+                 /* nectar addition end */
                 echo '</div>';
             }
 
@@ -496,6 +513,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             /* Letter Spacing */
             if ( $this->field['letter-spacing'] === true ) {
 
+                /* nectar addition */
                 //upgrade proof
                 $fixed_ID = str_replace('_family', '', $this->field['id']);
                 $legacy_font_letter_spacing = (!empty($old_options[$fixed_ID .'_spacing'])) ? $old_options[$fixed_ID .'_spacing'] : '-';
@@ -505,6 +523,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 echo '<label>' . __( 'Letter Spacing', 'redux-framework' ) . '</label>';
                 echo '<div class="input-append"><input type="text" class="span2 redux-typography redux-typography-letter mini typography-input ' . $this->field['class'] . '" title="' . __( 'Letter Spacing', 'redux-framework' ) . '" placeholder="' . __( 'Letter Spacing', 'redux-framework' ) . '" id="' . $this->field['id'] . '-letter" value="' . str_replace( $unit, '', $display_val ) . '" data-value="' . str_replace( $unit, '', $display_val ) . '"><span class="add-on">' . $unit . '</span></div>';
                 echo '<input type="hidden" class="typography-letter-spacing" name="' . $this->field['name'] . $this->field['name_suffix'] . '[letter-spacing]' . '" value="' . $display_val . '" data-id="' . $this->field['id'] . '"  />';
+                /* nectar addition end */
                 echo '</div>';
             }
 
@@ -534,8 +553,10 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 if ( isset( $this->field['preview']['text'] ) ) {
                     $g_text = $this->field['preview']['text'];
                 } else {
+                    /* nectar addition */
                     //$g_text = '1 2 3 4 5 6 7 8 9 0 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z';
                     $g_text = 'a b c d e f g h i j k l m n o p q r s t u v w x y z';
+                    /* nectar addition end */
                 }
 
                 $style = '';
@@ -544,7 +565,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                         if ( $isGoogleFont == true ) {
                             $this->parent->typography_preview[ $fontFamily[0] ] = array(
                                 'font-style' => array( $this->value['font-weight'] . $this->value['font-style'] ),
-                                'subset'     => array( $this->value['subset'] )
+                                'subset'     => array( $this->value['subsets'] )
                             );
 
                             $protocol = ( ! empty( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443 ) ? "https:" : "http:";
@@ -655,18 +676,19 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
                 }
             }
 
+            /* nectar addition */
             if ( ! empty( $subsets ) ) {
 
-                function subsetFilter($string) {
+                function nectar_subsetFilter($string) {
                     return strpos($string, 'subset') === false;
                 }
 
-                $filteredSubsets = array_filter($subsets, 'subsetFilter');
+                $filteredSubsets = array_filter($subsets, 'nectar_subsetFilter');
                 
-            	if(!empty($filteredSubsets))
-               	   $link .= "&amp;subset=" . implode( ',', $filteredSubsets );
+                if(!empty($filteredSubsets))
+                   $link .= "&subset=" . implode( ',', $filteredSubsets );
             }
-
+            /* nectar addition end */
 
             return '//fonts.googleapis.com/css?family=' . str_replace( '|', '%7C', $link );
         }
@@ -706,7 +728,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
             }
 
             if ( ! empty( $subsets ) ) {
-                $link .= "&amp;subset=" . implode( ',', $subsets );
+                $link .= "&subset=" . implode( ',', $subsets );
             }
 
             return "'" . $link . "'";
@@ -979,7 +1001,6 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
         /**
          *   Construct the google array from the stored JSON/HTML
-
          */
         function getGoogleArray() {
 
@@ -1004,7 +1025,7 @@ if ( ! class_exists( 'ReduxFramework_typography' ) ) {
 
             if ( ! file_exists( $gFile ) ) {
 
-                $result = wp_remote_get( apply_filters( 'redux-google-fonts-api-url', 'https://www.googleapis.com/webfonts/v1/webfonts?key=' ) . $this->parent->args['google_api_key'], array( 'sslverify' => false ) );
+                $result = @wp_remote_get( apply_filters( 'redux-google-fonts-api-url', 'https://www.googleapis.com/webfonts/v1/webfonts?key=' ) . $this->parent->args['google_api_key'], array( 'sslverify' => false ) );
 
                 if ( ! is_wp_error( $result ) && $result['response']['code'] == 200 ) {
                     $result = json_decode( $result['body'] );

@@ -40,7 +40,7 @@
 	            if( !empty( $video_embed ) ) {
 	                echo '<div class="video-wrap">' . stripslashes(htmlspecialchars_decode($video_embed)) . '</div>';
 	            } else { 
-	                nectar_video($post->ID); 
+	               //nectar_video($post->ID); 
 	            }
 	        ?>
 	        
