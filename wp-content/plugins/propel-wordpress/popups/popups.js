@@ -19,7 +19,7 @@ jQuery(document).ready( function(){
   //close if background is clicked
   jQuery('.propel-popup-BG').on('click',function(e){
     //don't close-popup submit button is clicked
-    if(isSubmitButton(e)){
+    if(isSubmitButton(e) || isCheckbox(e)){
       return undefined;
     } 
     propel_close_popup();
@@ -28,13 +28,12 @@ jQuery(document).ready( function(){
   //don't close if the form is clicked
   jQuery('.propel-popup-body').on('click',function(e){
     //don't prevent sumbission if the sumbit button is clicked
-    if(isSubmitButton(e)){
+    if(isSubmitButton(e) || isCheckbox(e)){
       return undefined;
     } 
     e.preventDefault();
-    return false;
+      return false;
   })
-
   // HELPERS!  
   function propel_close_popup(){
     jQuery('.propel-popup-BG').hide();
@@ -45,6 +44,11 @@ jQuery(document).ready( function(){
     if(e.target.id.slice(0, gsb.length) === gsb){
       return true; /*allows form sumbit*/
     }  
+  }
+  function isCheckbox(e){
+    if(e.target.type === 'checkbox' || 'radio'){
+      return true; /*allow them to be checked */
+    }
   }
   
 })
