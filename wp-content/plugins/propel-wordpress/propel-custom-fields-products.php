@@ -6,6 +6,43 @@ if(function_exists("register_field_group"))
     'id' => 'acf_woo-product-extras',
     'title' => 'Propel Catalog Extras',
     'fields' => array (
+      /*******/
+      array (
+        'key' => 'field_course_sales_page_image',
+        'label' => 'Course Sales Page Image',
+        'name' => 'course_sales_page_image',
+        'type' => 'image',
+        'instructions' => 'This is the image that shows on the individual course sale page. ',
+        'save_format' => 'url',
+        'preview_size' => 'full',
+        'library' => 'all',
+      ),
+      array (
+        'key' => 'field_video_embed',
+        'label' => 'Course Sales Page Video',
+        'name' => 'video_embed',
+        'type' => 'oembed',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'width' => 345,
+        'height' => 230,
+      ),
+      array (
+        'key' => 'field_you_will_learn',
+        'label' => 'You Will Learn',
+        'name' => 'you_will_learn',
+        'type' => 'wysiwyg',
+        'default_value' => '',
+        'toolbar' => 'full',
+        'media_upload' => 'yes',
+      ),
+      /*******/
       array (
         'key' => 'field_product_course_price_for_members',
         'label' => 'Price for Members',
