@@ -46,7 +46,7 @@ jQuery(document).ready( function(){
     }  
   }
   function isCheckbox(e){
-    if(e.target.type === 'checkbox' || 'radio'){
+    if(e.target.type === 'checkbox' || e.target.type === 'radio'){
       return true; /*allow them to be checked */
     }
   }
