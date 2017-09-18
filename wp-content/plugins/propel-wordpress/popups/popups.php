@@ -41,7 +41,7 @@ function propel_popup_bodies($the_content ){
 
   foreach($nodes as $node) {
     $slug = $node->attributes->getNamedItem('name')->nodeValue;
-    $the_content.='<!-- greppable here is where the id is in the content'.strpos ($the_content, 'id="'.$slug.'"').'-->';
+   
     if (strpos ($the_content, 'id="'.$slug.'"') !== false){ continue; }
 
     $popupclasses = $node->attributes->getNamedItem('data-popupclasses')->nodeValue;
