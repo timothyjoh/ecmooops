@@ -42,6 +42,8 @@ function propel_popup_bodies($the_content ){
   foreach($nodes as $node) {
     $slug = $node->attributes->getNamedItem('name')->nodeValue;
 
+    if (strpos ($the_content, 'id="'.$slug.'"') !== false){ return($the_content); }
+
     $popupclasses = $node->attributes->getNamedItem('data-popupclasses')->nodeValue;
     $args = array(
       'name' => $slug,
