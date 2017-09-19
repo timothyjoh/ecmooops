@@ -32,6 +32,7 @@ add_filter('the_content', 'propel_popup_bodies', 20);
 
 function propel_popup_bodies($the_content ){
  	if (strpos ($the_content, 'launch-propel-popup-placeholder') === false){ return($the_content); }
+  libxml_use_internal_errors(true);
 	$dom = new DOMDocument();
 	$dom->loadHTML($the_content);
 
@@ -41,6 +42,8 @@ function propel_popup_bodies($the_content ){
 
   foreach($nodes as $node) {
     $slug = $node->attributes->getNamedItem('name')->nodeValue;
+
+    if (strpos ($the_content, 'id="'.$slug.'"') !== false){ continue; }
 
     $popupclasses = $node->attributes->getNamedItem('data-popupclasses')->nodeValue;
     $args = array(
