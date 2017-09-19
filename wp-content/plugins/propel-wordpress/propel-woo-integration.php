@@ -7,6 +7,9 @@ class Propel_Woo_Integration {
     add_action( 'init',
       array( $this, 'redirect_sku_slugs' ) );
 
+    add_action( 'init',
+      array( $this, 'display_sku_image' ) );
+
     add_action( 'woocommerce_review_order_before_payment',
       array( $this, 'auto_enroll_render_form' ) );
 
@@ -67,7 +70,7 @@ class Propel_Woo_Integration {
   function display_sku_image() {
     global $wpdb;
     $uri = explode('/', $_SERVER["REQUEST_URI"]);
-    if ($uri[1] == 'skuimage') {
+    if (count($uri)>2 && $uri[1] === 'skuimage') {
       error_log("sku slugs loaded: ".$uri[2]);
       $product_query = "SELECT post_id FROM $wpdb->postmeta WHERE meta_key='_sku' AND meta_value='%s' LIMIT 1";
       $product_id = $wpdb->get_var( 
