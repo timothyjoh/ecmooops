@@ -11,10 +11,6 @@ if(!scitent.utils) { scitent.utils = {}; }
  */
  // activate remodal popups when user opens a course in a new tab
 jQuery( document ).ready( function() {
-	jQuery('.grassblade_launch_link').click( function(e) {
- 		var inst = jQuery('#remodal').remodal();
- 		inst.open();
- 	});
  	jQuery('.scitent-refresh').click( function(e){
  		location.reload();
  	});
