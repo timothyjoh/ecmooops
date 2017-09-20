@@ -141,12 +141,28 @@ class Propel_Settings {
 		);
 
 		add_settings_field(
-			'okm_server',
-			'OKM Server',
-			array( $this, 'okm_server_callback' ),
+			'okm_server_stag',
+			'OKM Server - Staging',
+			array( $this, 'okm_server_stag_callback' ),
 			'propel-settings',
 			'propel-settings-general'
 		);
+      
+		add_settings_field(
+			'okm_server_prod',
+			'OKM Server - Production',
+			array( $this, 'okm_server_prod_callback' ),
+			'propel-settings',
+			'propel-settings-general'
+		);
+      
+		// add_settings_field(
+		// 	'okm_server',
+		// 	'OKM Server - (Fallback)',
+		// 	array( $this, 'okm_server_callback' ),
+		// 	'propel-settings',
+		// 	'propel-settings-general'
+		// );
       
 		add_settings_field(
           'store_url',
@@ -292,8 +308,14 @@ class Propel_Settings {
 		if ( isset( $input['order_on_hold_page_id'] ) )
 			$propel_settings['order_on_hold_page_id'] = $input['order_on_hold_page_id'];
 
-		if ( isset( $input['okm_server'] ) )
-			$propel_settings['okm_server'] = $input['okm_server'];
+		if ( isset( $input['okm_server_stag'] ) )
+			$propel_settings['okm_server_stag'] = $input['okm_server_stag'];
+
+		if ( isset( $input['okm_server_prod'] ) )
+			$propel_settings['okm_server_prod'] = $input['okm_server_prod'];
+
+		// if ( isset( $input['okm_server'] ) )
+		// 	$propel_settings['okm_server'] = $input['okm_server'];
 
 		if ( isset( $input['auth0_token'] ) )
 			$propel_settings['auth0_token'] = $input['auth0_token'];
@@ -546,6 +568,42 @@ class Propel_Settings {
 
 
 	/**
+	 * Renders input field for okm_server setting for prod
+	 * @author  pmalcolm
+	 * @return  void
+	 */
+	function okm_server_stag_callback() {
+		$is_live = Propel_LMS::is_this_pantheon_live();
+		$icon_color = $is_live ? ' filter: grayscale(100%);' : ' '; // gray beaker, live!
+		?>
+		<img style="width:60px;<?php echo $icon_color; ?>" src="<?php echo plugin_dir_url(__FILE__) . '/img/testing.png'; ?>" />
+		<?php
+		printf(
+			'<input style="width:320px;" type="text" id="okm_server_stag" name="propel_settings[okm_server_stag]" value="%s" />',
+			isset( $this->settings['okm_server_stag'] ) ? esc_attr( $this->settings['okm_server_stag'] ) : ''
+		);
+		if( !$is_live ) { echo '<- This OKM will be used, as this site is NOT on a Pantheon live environment.'; }
+	}
+   
+	/**
+	 * Renders input field for okm_server setting for staging
+	 * @author  pmalcolm
+	 * @return  void
+	 */
+	function okm_server_prod_callback() {
+		$is_live = Propel_LMS::is_this_pantheon_live();
+		$icon_color = $is_live ? ' ' : ' filter: grayscale(100%);'; // gray globe, not live
+		?>
+		<img style="width:60px;<?php echo $icon_color; ?>" src="<?php echo plugin_dir_url(__FILE__) . '/img/production.png'; ?>" />
+		<?php
+		printf(
+			'<input style="width:320px;" type="text" id="okm_server_prod" name="propel_settings[okm_server_prod]" value="%s" />',
+			isset( $this->settings['okm_server_prod'] ) ? esc_attr( $this->settings['okm_server_prod'] ) : ''
+		);
+		if( $is_live ) { echo '<- This OKM will be used, as this site IS on a Pantheon live environment.'; }
+	}
+   
+	/**
 	 * Renders input field for okm_server setting
 	 *
 	 * @author  caseypatrickdriscoll
@@ -558,7 +616,7 @@ class Propel_Settings {
 	 */
 	function okm_server_callback() {
 		printf(
-			'<input type="text" id="okm_server" name="propel_settings[okm_server]" value="%s" />',
+			'<input style="width:320px;" type="text" id="okm_server" name="propel_settings[okm_server]" value="%s" />',
 			isset( $this->settings['okm_server'] ) ? esc_attr( $this->settings['okm_server'] ) : ''
 		);
 		echo '<p>If blank, defaults to <a href="' . Propel_LMS::OKM_SERVER . '" target="_blank">' . Propel_LMS::OKM_SERVER . '</a>. URI must include http/https. Staging OKM currently at ' . Propel_LMS::OKM_STAGING.'</p>';

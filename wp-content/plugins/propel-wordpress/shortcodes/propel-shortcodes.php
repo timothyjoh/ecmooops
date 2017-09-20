@@ -202,7 +202,7 @@ class propel_shortcodes {
 
     $propel_settings = get_option( 'propel_settings' );
     $tenant_secret_key = $propel_settings['okm_tenant_secret_key'];
-    $okm_server = $propel_settings['okm_server'];
+    $okm_server = Propel_LMS::okm_server();
     $course_name = get_the_title( $course );
     $key_code = get_active_enrollment_key($current_user->ID, $course_id);
     

@@ -51,7 +51,7 @@ class Propel_LMS {
 
   // Returned from self::okm_server() if no option set.
   // Declared here for access
-  const OKM_SERVER  = 'https://propellms.com';
+  const OKM_SERVER  = 'https://example.com';
 
   // Used as a helpful hint in Propel_Settings::okm_server_callback()
   // Declared here for access
@@ -548,6 +548,26 @@ class Propel_LMS {
       return $responseData;
     }
 
+    /**
+     * Detect Pantheon environment
+     * Returns:
+     * (if successful) 'dev' | 'test' | 'live' | '...' other multidev value
+     * (if failure) WP_Error with details
+     */
+    static function pantheon_env() {
+      if( !isset($_ENV['PANTHEON_ENVIRONMENT']) ) {
+        return new WP_Error('not_pantheon','This is not Pantheon.');
+      } else {
+        return $_ENV['PANTHEON_ENVIRONMENT'];
+      }
+    }
+
+    /**
+     * Boolean version of pantheon_env();
+     */
+    static function is_this_pantheon_live() {
+      return self::pantheon_env() === 'live';
+    }
 
     /**
      * Returns the name of okm server, if saved in settings
@@ -555,11 +575,18 @@ class Propel_LMS {
     static function okm_server() {
 
       $settings = get_option( 'propel_settings' );
-
-      if ( isset( $settings['okm_server'] ) && ! empty( $settings['okm_server'] ) )
-        return $settings['okm_server'];
-      else
+      if( isset($settings['okm_server_prod']) && !empty($settings['okm_server_prod']) && self::is_this_pantheon_live() ) {
+        return $settings['okm_server_prod'];
+      } else if( isset($settings['okm_server_stag']) && !empty( $settings['okm_server_stag']) && !self::is_this_pantheon_live() ) {
+        return $settings['okm_server_stag'];
+      } else {
         return self::OKM_SERVER;
+      }
+
+      // if ( isset( $settings['okm_server'] ) && ! empty( $settings['okm_server'] ) )
+      //   return $settings['okm_server'];
+      // else
+      //   return self::OKM_SERVER;
     }
 
 
