@@ -15,8 +15,10 @@ Class Propel_OKG {
 
 		////////
 		//// Menuing / General OKG UI
-		add_filter( 'wp_nav_menu_items', 
-		  array( $this, 'okg_menu' ), 10, 2 );
+
+
+//		add_filter( 'wp_nav_menu_items', 
+//		  array( $this, 'okg_menu' ), 10, 2 );
 
 		add_action( 'template_redirect',
 		  array( $this, 'special_homepage' ));

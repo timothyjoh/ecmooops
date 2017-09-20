@@ -17,6 +17,12 @@
 	content: ' |<<-';
 }
 
+#okg-nav .fa{
+	line-height: inherit;
+	position: relative;
+	top:3px;
+}
+
 /* MANAGE OKMS */
 
 .propel-manage.propel-title {
@@ -32,6 +38,9 @@
 }
 .propel-grid-header {
 	font-weight: bold;
+	display: flex;
+    justify-content: space-evenly;
+
 /*	border: 1px solid black; FOR DEV */
 }
 .propel-grid-body {
@@ -42,23 +51,30 @@
 }
 .propel-grid-row {
 	width: 100%;
-	float: left;
-	clear: both;
-	display: block;
+	/*float: left;*/
+	/*clear: both;*/
+	display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #DDD;
 /*	border: 1px solid #F00;	 FOR DEV */
 }
 .propel-grid-cell {
-	width: 10%;
+	/*width: 10%;*/
 	min-width: 140px;
 	float: left;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 4px;
+	display:grid;
 /*	border: 1px solid black;  FOR DEV */
 }
+.propel-grid-cell span {
+    margin: auto 0;
+}
+
 .propel-grid-row .propel-grid-cell {
-	border-top: 1px solid #DDD;	
+	/*border-top: 1px solid #DDD;	*/
 }
 .propel-grid-name-spot {
 	width: 40%;
@@ -106,7 +122,7 @@ input {
 }
 .propel-editing-button {
 	float: right;
-	height: 22px;
+	/*height: 22px;*/
 	font-size: 12px;
 	line-height: 1;
 	cursor: pointer;
@@ -116,7 +132,9 @@ input {
 	float: left;
 	width: 80% !important;
 }
-
+.propel-new-okm input[type="submit"]{
+    height: auto;
+}
 /* CREATE KEYS */
 .propel-globalcartbtn {
 	float: right;
@@ -144,4 +162,42 @@ input {
     padding: 6px 10px;
     text-transform: uppercase !important;
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 1000px){
+	.container.main-content {
+    	max-width: 90% !important;
+	}
+	.propel-grid-header{
+		display: none;
+	}
+	.propel-grid-row{
+		display:block;
+		text-align: left;
+		border:none;
+	}
+	.propel-grid-row:nth-of-type(1){
+	    border-top: 1px solid #DDD;
+	}
+	.propel-grid-cell {
+		display: block;
+	}
+	.propel-grid-cell:nth-of-type(1),
+	.propel-grid-cell:nth-of-type(2){
+		width:100%;
+	}
+	.propel-grid-cell:nth-of-type(3),
+	.propel-grid-cell:nth-of-type(4){
+		width: 50%;
+		float:left;
+	    border-bottom: 1px solid #a0a0a0;
+	    padding-bottom: 10px;
+   	}
+	.propel-grid-cell:nth-of-type(1):before{
+		content:"OKM Name:";
+	}
+	.propel-grid-cell:nth-of-type(2):before{
+		content:"Date Created:";
+	}
 }

@@ -50,3 +50,9 @@ function redirect_sku_slugs() {
   }
 }
 add_action( 'init', 'redirect_sku_slugs' );
+
+//OKG Menu
+function register_okg_menu() {
+  register_nav_menu('okg-menu',__( 'OKG Menu' ));
+}
+add_action( 'init', 'register_okg_menu' );
