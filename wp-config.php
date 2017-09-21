@@ -114,6 +114,26 @@ else:
   endif;
 endif;
 
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+
+  // Redirect to HTTPS on every Pantheon environment.
+  $primary_domain = $_SERVER['HTTP_HOST'];
+
+  if ($_SERVER['HTTP_HOST'] != $primary_domain
+      || !isset($_SERVER['HTTP_X_SSL'])
+      || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+
+    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    if (extension_loaded('newrelic')) {
+      newrelic_name_transaction("redirect");
+    }
+
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://'. $primary_domain . $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
+
 /** Standard wp-config.php stuff from here on down. **/
 
 /**
