@@ -128,48 +128,9 @@ function propel_render_my_courses_list($post_id, $active) {
             echo scitent_render_xapi_button($post_id, $progress["percentage"]);
           } 
 
-        ?> 
-
-        <?php 
-        ////////////////cert button
-     if ($progress["percentage"] ==100 ){ 
-          // if OKM Cert  ///
-          if( get_field('embed_code', $post_id)){ 
-            $embedCode = get_field('embed_code', $post_id);
-            $embedThis = " embed_code='".$embedCode . "' course='" . $post_id . "'";
-            echo do_shortcode('[propel-certificate ' . $embedThis . ']');
-          } 
-           else{           
-           $user_id = get_current_user_id();
-           $cert_details = new_learndash_certificate_details();
-           $course_meta = get_post_meta($post_id);
-           $course_array = get_post_meta($post_id,'_sfwd-courses');
-           $cert_id = $course_array[0]['sfwd-courses_certificate'];
-           $cert_path = get_post_permalink($cert_id);
-           $course_certficate_link = new_learndash_get_course_certificate_link( $course_id, $user_id );
-           $new_course_certficate_link = $cert_path ."?". "course_id=" . $post_id . "&user_id=" . $user_id;
-           
-           $quiz_id = $course_array[0]['sfwd-courses_wdm_final_quiz'];
-           $quiz_meta = get_post_meta($quiz_id);
-           $quiz_array = $quiz_meta['_sfwd-quiz'];
-           $unser_quiz_array = maybe_unserialize($quiz_array[0]);
-           $quiz_cert_id = $unser_quiz_array['sfwd-quiz_certificate'];
-           $quiz_cert_path = get_post_permalink($quiz_cert_id);
-           $new_quiz_certficate_link = $quiz_cert_path ."?". "quiz=" . $quiz_id . "&print=" . wp_create_nonce( $quiz_id . $user_id );
-        
-           ?>
-            <div id="learndash_course_certificate">
-              <?php if ($cert_id != 0){  ?>
-                <a class="btn certBtn"  target="_blank" href="<?php echo  $new_course_certficate_link ?>"> <?php _e( 'Access Your Certificate', 'learndash' ); ?></a>
-              <?php }
-              elseif ($quiz_cert_id != 0){ ?>
-                <a class="btn certBtn"  target="_blank" href="<?php echo  $new_quiz_certficate_link ?>"> <?php _e( 'Access Your Certificate', 'learndash' ); ?></a> 
-            </div> 
-            <?php
-          }  //end elseif
-                      
-          }  //end else
-        }; //end cert button section
+          if ($progress["percentage"] ==100) {
+            echo link_to_certificate($post_id, $user_id, $claimable, get_field("certificate_button_label", $post_id));
+          }
         ?>
          </div><!-- end .caption -->
       </div><!-- end .btnWrapper -->
@@ -179,6 +140,52 @@ function propel_render_my_courses_list($post_id, $active) {
 <?php 
  // end the function
 }
+
+function link_to_certificate($post_id, $user_id, $claimable, $button_label) {
+  if( get_field('embed_code', $post_id) ){
+    $link = link_to_propelokm_certificate($post_id, $claimable, $button_label);
+  } else {
+    $link = link_to_learndash_certificate($post_id, $user_id, $button_label);
+  }
+  if ($link == null) {
+    return "No certificate available";
+  } else {
+    return $link;
+  }
+}
+function link_to_learndash_certificate($post_id, $user_id, $button_label) {
+  $cert_details = new_learndash_certificate_details($post_id);
+  $course_meta = get_post_meta($post_id);
+  $course_array = get_post_meta($post_id,'_sfwd-courses');
+  $cert_id = $course_array[0]['sfwd-courses_certificate'];
+  $cert_path = get_post_permalink($cert_id);
+  $course_certficate_link = new_learndash_get_course_certificate_link( $course_id, $user_id );
+  $new_course_certficate_link = $cert_path ."?". "course_id=" . $post_id . "&user_id=" . $user_id;
+
+  $quiz_id = $course_array[0]['sfwd-courses_wdm_final_quiz'];
+  $quiz_meta = get_post_meta($quiz_id);
+  $quiz_array = $quiz_meta['_sfwd-quiz'];
+  $unser_quiz_array = maybe_unserialize($quiz_array[0]);
+  $quiz_cert_id = $unser_quiz_array['sfwd-quiz_certificate'];
+  $quiz_cert_path = get_post_permalink($quiz_cert_id);
+  $new_quiz_certficate_link = $quiz_cert_path ."?". "quiz=" . $quiz_id . "&print=" . wp_create_nonce( $quiz_id . $user_id );
+  if ($cert_id != 0){
+    $url = $new_course_certficate_link;
+  } elseif ($quiz_cert_id != 0) {
+    $url = $new_quiz_certficate_link;
+  }
+  if (isset($url)) {
+    return "<a href='$url' class='cert-button push-bottom' target='_blank'>".$button_label."</a>";
+  } else {
+    return null;
+  }
+}
+function link_to_propelokm_certificate($post_id, $claimable, $button_label) {
+  $embedCode = get_field('embed_code', $post_id);
+  $embedThis = " embed_code='".$embedCode . "' course='" . $post_id . "' button_label='" . $button_label . "' claimable='" . $claimable . "'";
+  return do_shortcode('[propel-certificate ' . $embedThis . ']');
+}
+
 
 function scitent_render_xapi_button( $post_id, $percentage ) {
 	if ($percentage == 0) {
