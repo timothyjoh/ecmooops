@@ -83,7 +83,8 @@ add_shortcode( 'my_courses', 'propel_my_courses_shortcode' );
 function propel_render_my_courses_list($post_id, $active) {
 
   $post = get_post( $post_id );
-
+  $claimable = 1;
+  
   $options = get_option('sfwd_cpt_options');
   ?>
     <div class="ld_course_grid remodal-bg">
