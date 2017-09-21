@@ -180,80 +180,84 @@ class propel_shortcodes {
    *
    * @return  string   $out   The html output
    */
-  function propel_certificate( $atts_in ) {
-
-    global $current_user;
-    get_currentuserinfo();
-
-    if ( isset( $atts_in ) && ! empty( $atts_in ) ) {
-      $atts = shortcode_atts( array(
-            'embed_code' => '',
-            'course' => 'COURSE'
-      ), $atts_in );  
-    }
-    // var_dump($atts);
-    // wp_die();
+   function propel_certificate( $atts_in, $button_label ) {
     
-    $embed_code = $atts['embed_code'];
-    if( '' === $embed_code ) {
-      return '';
-    }
-    $course_id = $atts['course'];
-
-    $propel_settings = get_option( 'propel_settings' );
-    $tenant_secret_key = $propel_settings['okm_tenant_secret_key'];
-    $okm_server = Propel_LMS::okm_server();
-    $course_name = get_the_title( $course );
-    $key_code = get_active_enrollment_key($current_user->ID, $course_id);
+      global $current_user;
+      get_currentuserinfo();
     
-    $button_text = 'Access Your Certificate';
-    global $propel_shortcode_embed_certificate_script_included_already;
-    if (empty($propel_shortcode_embed_certificate_script_included_already)){
-
-          $out = "
-          <script>
-            window.certificate_modal_shown = window.certificate_modal_hidden = function() {
-              console.log('cert button pressed');
-            };
-            jQuery(document).ready(function(){
-              Claimer = window.Claimer || {}; 
-              Claimer.pageVars = {};
-              Claimer.pageData = {};
-
-              var cpv = Claimer.pageVars;
-              cpv.uri = '".$okm_server."/';
-              cpv.location = window.location;
-              cpv.tenant_secret_key = '". $tenant_secret_key ."';
-              cpv.product = '". $course_name ."';
-              cpv.user_email = '". $current_user->user_email ."';
-              cpv.first_name = '". $current_user->user_firstname ."';
-              cpv.last_name = '". $current_user->user_lastname ."';
-              cpv.ext_user_id = '". $current_user->ID ."';
-              cpv.button_name = '". $button_text ."';
-              cpv.showModalCallback = function(){
-                window.certificate_modal_shown();
-              };
-              cpv.hideModalCallback = function(){
-                window.certificate_modal_hidden();
-              };
-              var script = document.createElement('script');
-              script.src = cpv.uri + 'claim/claim.js';
-              script.async = true;
-              var entry = document.getElementsByTagName('script')[0];
-              entry.parentNode.insertBefore(script, entry);               
-            });
-          </script>
-          ";
-        
-      $propel_shortcode_embed_certificate_script_included_already = true;        
+      if ( isset( $atts_in ) && ! empty( $atts_in ) ) {
+        $atts = shortcode_atts( array(
+              'embed_code' => '',
+              'course' => 'COURSE',
+              'button_label' => 'Access Certificate',
+              'claimable' => '1'
+        ), $atts_in );
+      }
+      // var_dump($atts);
+      // wp_die();
+    
+      $embed_code = $atts['embed_code'];
+      if( '' === $embed_code ) {
+        return '';
+      }
+      $course_id = $atts['course'];
+      error_log(json_encode($atts));
+    
+      $propel_settings = get_option( 'propel_settings' );
+      $tenant_secret_key = $propel_settings['okm_tenant_secret_key'];
+      $okm_server = Propel_LMS::okm_server();
+      $course_name = get_the_title( $course );
+      $key_code = get_active_enrollment_key($current_user->ID, $course_id);
+    
+      $button_text = $atts['button_label'];
+      $claimable = $atts['claimable'];
+      global $propel_shortcode_embed_certificate_script_included_already;
+      if (empty($propel_shortcode_embed_certificate_script_included_already)){
+    
+            $out = "
+            <script>
+              jQuery(document).ready(function(){
+                  Claimer = window.Claimer || {};
+                  Claimer.pageVars = {};
+                  Claimer.pageData = {};
+                    var cpv = Claimer.pageVars;
+                    cpv.uri = '".$okm_server."/';
+                    cpv.location = window.location;
+                    cpv.tenant_secret_key = '". $tenant_secret_key ."';
+                    cpv.product = '". addslashes($course_name) ."';
+                    cpv.user_email = '". addslashes($current_user->user_email) ."';
+                    cpv.first_name = '". addslashes($current_user->user_firstname) ."';
+                    cpv.last_name = '". addslashes($current_user->user_lastname) ."';
+                    cpv.ext_user_id = '". $current_user->ID ."';
+                    cpv.button_name = '". $button_text ."';
+                    cpv.showModalCallback = function(){
+                      jQuery('#header-secondary-outer').addClass( 'hideme' );
+                      jQuery('#header-outer').addClass( 'hideme' );
+                      jQuery('.page-header-no-bg').addClass( 'hideme' );
+                    };
+                    cpv.hideModalCallback = function(){
+                      jQuery('#header-secondary-outer').removeClass( 'hideme' );
+                      jQuery('#header-outer').removeClass( 'hideme' );
+                      jQuery('.page-header-no-bg').removeClass( 'hideme' );
+                    };
+                    var script = document.createElement('script');
+                    script.src = cpv.uri + 'claim/claim.js';
+                    script.async = true;
+                    var entry = document.getElementsByTagName('script')[0];
+                    entry.parentNode.insertBefore(script, entry);
+    
+              });
+            </script>
+            ";
+    
+        $propel_shortcode_embed_certificate_script_included_already = true;
+      }
+        //$out .= '<div data-claimer-embed-id="1" button_text="Get Your Certificate"></div>';
+        $out .= '<a data-claimer-embed-id="' . $embed_code . '" data-claimer-key-code="' . $key_code . '" data-claimer-claimable="' . $claimable . '" class="cert-button act-btn push-bottom">'.$button_text.'</a>';
+    
+    
+      return $out;
     }
-      //$out .= '<div data-claimer-embed-id="1" button_text="Get Your Certificate"></div>';
-      $out .= '<div data-claimer-embed-id="' . $embed_code . '" data-claimer-key-code="' . $key_code . '"></div>';
-
-
-    return $out;
-  }
-
 
    function register_scripts_and_styles() {
       wp_register_script( 'key-activator',
