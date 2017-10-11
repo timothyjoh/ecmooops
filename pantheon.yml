@@ -1,3 +1,10 @@
 # Put overrides to your pantheon.upstream.yml file here.
 # For more information, see: https://pantheon.io/docs/pantheon-yml/
 api_version: 1
+
+workflows:
+  clone_database:
+    after:
+      - type: webphp
+        description: Sanitize the db
+        script: private/scripts/db_sanitization_wordpress.php
