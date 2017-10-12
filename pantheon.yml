@@ -1,0 +1,24 @@
+# Put overrides to your pantheon.upstream.yml file here.
+# For more information, see: https://pantheon.io/docs/pantheon-yml/
+
+api_version: 1
+
+workflows:
+  # Log to New Relic when deploying to test or live.
+  deploy:
+    after:
+      - type: webphp
+        description: Log to New Relic
+        script: private/scripts/new_relic_deploy.php
+  # Also log sync_code so you can track new code going into dev/multidev.
+  sync_code:
+    after:
+      - type: webphp
+        description: Log to New Relic
+        script: private/scripts/new_relic_deploy.php
+  # Sanitize the DB after a clone
+  clone_database:
+    after:
+      - type: webphp
+        description: Sanitize the db
+        script: private/scripts/db_sanitization_wordpress.php
