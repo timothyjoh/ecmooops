@@ -4,14 +4,6 @@
 api_version: 1
 
 workflows:
-  clone_database:
-    after:
-      - type: webphp
-        description: Sanitize the db
-        script: private/scripts/db_sanitization_wordpress.php
-
-
-workflows:
   # Log to New Relic when deploying to test or live.
   deploy:
     after:
@@ -24,3 +16,9 @@ workflows:
       - type: webphp
         description: Log to New Relic
         script: private/scripts/new_relic_deploy.php
+  # Sanitize the DB after a clone
+  clone_database:
+    after:
+      - type: webphp
+        description: Sanitize the db
+        script: private/scripts/db_sanitization_wordpress.php
