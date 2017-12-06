@@ -26,6 +26,8 @@ wp-content/backups/
 # created from this upstream
 pantheon.upstream.yml
 
+.lando.yml
+
 # Packages #
 ############
 *.7z
