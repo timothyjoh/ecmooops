@@ -12,7 +12,7 @@ class propel_shortcodes {
 
       add_shortcode( 'propel-okm', array( $this, 'okm' ) );
       add_shortcode( 'current_user_email_in_js', array( $this, 'current_user_email_in_js' ) );
-
+      add_shortcode( 'propel-auto-reload', array( $this, 'auto_reload' ) );
       add_shortcode( 'propel-certificate', array( $this, 'propel_certificate' ) );
 
       add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts_and_styles' ) );
@@ -258,6 +258,10 @@ class propel_shortcodes {
     
       return $out;
     }
+   
+   function auto_reload() { // Just enqueues JavaScript for reloading the page
+      wp_enqueue_script('propel-auto-reload');
+   }
 
    function register_scripts_and_styles() {
       wp_register_script( 'key-activator',
@@ -269,6 +273,10 @@ class propel_shortcodes {
          plugins_url( '../css/shortcodes/key-submit.css', __FILE__ ) );
       wp_register_style( 'terms-of-service',
          plugins_url( '../css/shortcodes/terms-of-service.css', __FILE__ ) );
+      
+      wp_register_script( 'propel-auto-reload',
+         plugins_url( '../js/auto-reload.js', __FILE__ ),  array( 'jquery' ) );
+
    }
 }
 
