@@ -1,0 +1,18 @@
+.simple-banner {
+  width: 100%;
+  background: #e91f00;
+  text-align: center;
+  z-index: 200000;
+  position: fixed;
+  display: block; 
+}
+.simple-banner .simple-banner-text {
+  color: #ffffff;
+  font-size: 1.1em;
+  font-weight: 700;
+  padding: 10px; 
+  line-height: 1.2;
+}
+.simple-banner .simple-banner-text a {
+  color: #ffffff;
+}
