@@ -1,0 +1,101 @@
+v3.0.3
+- Fix problem with Jupiter theme.
+
+v3.0.0
+- Add support for Cornerstone plugin
+- Add edit Custom Template when view Product
+- Change shortcode 'dhvc_woo_product_custom_field' to 'dhvc_woo_product_page_custom_field'
+- Change shortcode 'dhvc_woo_product_page_custom_field' to 'dhvc_woo_product_page_acf_field'
+- Change filter 'dhvc_woo_product_page_custom_field_value' to 'dhvc_woo_product_page_acf_field'
+- Change filter 'dhvc_woocommerce_post_type_template' to 'dhvc_woocommerce_page_template_type'
+- Change shortcode 'dhvc_woo_product_breadcrumb' to 'dhvc_woo_product_page_breadcrumb'
+
+v2.0.2
+- Support custom template 'single-product.php' for custom template 
+- Fix problem with Visual Composer 4.11.2 
+- Add new shortcode 'Woo Breadcrumb' 
+- Fix problem with Theme use woocommerce template.
+- Fix problem for Jupiter Theme
+- Small fixes and improvements
+
+v1.9.9 
+- Add "WC Single Product Custom Field shortcode to display Custom fields data from meta values of the product
+- Fix problem when use WC Product Page shortcode to display Product with Custom template.
+- Fix error when add shortcode with Visual Composer
+- Fix error when Empty Custom Template. 
+- Small fixes and improvements
+
+v1.9.4 
+- Add support custom template post type.
+- Small fixes and improvements
+
+v1.9.3
+- Fix problem with ACF pro.
+- Fix problem in Woo Shortcode 
+- Add do_shortcode in Advanced Custom Fields shortcode - Add filter for Advanced Custom Fields value : apply_filters('dhvc_woo_product_page_custom_field_value', $value, $field)
+
+v1.9.0 
+- Compatibility with Visual Composer 4.8.x 
+- Small fixes and improvements
+
+v1.8.14 
+- Small fixes and improvements
+
+v1.8.13 
+- Compatibility with Visual Composer 4.5.3 added 
+
+v1.8.12
+- fix bug can not select product in Chosen select
+
+v1.8.11
+ - Fix bug Chosen select in WooCommerce new version.
+
+v1.8.10 
+- Small fixes and improvements
+
+v1.8.9 
+- Add support deregister style font awesome
+
+v1.8.8 
+- Change Woo Single Product Images shortcode to default load "woocommerce_show_product_images" function
+
+v1.8.7 
+- Fix bug custom VC shortcode custom css not working
+
+v1.8.6 
+- Add support DHWC Product Labels plugin
+
+v1.8.5 
+- Add support select page Template  private status 
+
+v1.8.4
+- Fix bug remove page template in product
+
+v1.8.3
+- Support YITH WooCommerce Wishlist shortcode
+- Small fixes and improvements
+
+v1.8.2
+- Fixed no select page template and improvements
+
+v1.8.1
+- Update load visual composer css
+
+v1.8
+- Update to work with any theme
+
+v1.2.6
+- Support display single product description, product additional information and product reviews
+
+v1.2.4
+- Update to support display field in http://advancedcustomfields.com/
+- Fixbug code
+
+v1.2.2
+- Add custom single product image and and product thumbnails size
+
+v1.2.0
+- Update to support Woocommerce shortcodes
+
+v1.0.0
+- Initial Release

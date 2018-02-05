@@ -1,31 +1,31 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: 2014-08-06 21:21+0700\n"
-"PO-Revision-Date: 2014-08-06 21:21+0700\n"
+"Project-Id-Version: WooCommerce Single Product Page Builder\n"
+"POT-Creation-Date: 2017-10-05 09:50+0700\n"
+"PO-Revision-Date: 2017-10-05 09:50+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
 "X-Poedit-Basepath: /Volumes/WORK/webserver/www/wordpress/wp-content/plugins\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: dhvc-woocommerce-page\n"
 
-#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:86
-msgid "Browse Wishlist"
-msgstr ""
-
-#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:139
+#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:165
 #, php-format
 msgid ""
-"<strong>%s</strong> requires <strong><a href=\"http://bit.ly/1gKaeh5\" "
-"target=\"_blank\">Visual Composer</a></strong> plugin to be installed and "
-"activated on your site."
+"<strong>%s</strong> requires <strong><a href=\"codecanyon.net/item/visual-"
+"composer-page-builder-for-wordpress/242431?ref=Sitesao\" target=\"_blank"
+"\">Visual Composer</a></strong> plugin or <a href=\"http://codecanyon.net/"
+"item/cornerstone-the-wordpress-page-builder/15518868?ref=Sitesao\" target="
+"\"_blank\">Cornerstone</a> plugin to be installed and activated on your site."
 msgstr ""
 
-#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:147
+#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:173
 #, php-format
 msgid ""
 "<strong>%s</strong> requires <strong><a href=\"http://www.woothemes.com/"
@@ -33,507 +33,868 @@ msgid ""
 "installed and activated on your site."
 msgstr ""
 
+#: dhvc-woocommerce-page/dhvc-woocommerce-page.php:186
+#: dhvc-woocommerce-page/includes/post-types.php:35
+msgid "Edit Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/admin.php:35
+msgid "Product Template Type"
+msgstr ""
+
 #: dhvc-woocommerce-page/includes/admin.php:36
-#: dhvc-woocommerce-page/includes/admin.php:59
-#: dhvc-woocommerce-page/includes/admin.php:89
-msgid "Select a page&hellip;"
+msgid "This controls what is template post type for product."
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/functions.php:143
-msgid "(more&hellip;)"
+#: dhvc-woocommerce-page/includes/admin.php:70
+msgid "Preview Template Editor"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:18
-msgid "Woo Single Product Advanced Custom Fields"
+#: dhvc-woocommerce-page/includes/admin.php:83
+#: dhvc-woocommerce-page/includes/post-types.php:30
+msgid "Product Template"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:20
-#: dhvc-woocommerce-page/includes/map.php:61
-#: dhvc-woocommerce-page/includes/map.php:127
-#: dhvc-woocommerce-page/includes/map.php:142
-#: dhvc-woocommerce-page/includes/map.php:157
-#: dhvc-woocommerce-page/includes/map.php:171
-#: dhvc-woocommerce-page/includes/map.php:186
-#: dhvc-woocommerce-page/includes/map.php:200
-#: dhvc-woocommerce-page/includes/map.php:215
-#: dhvc-woocommerce-page/includes/map.php:230
-#: dhvc-woocommerce-page/includes/map.php:245
-#: dhvc-woocommerce-page/includes/map.php:260
-#: dhvc-woocommerce-page/includes/map.php:275
-#: dhvc-woocommerce-page/includes/map.php:290
-#: dhvc-woocommerce-page/includes/map.php:331
-#: dhvc-woocommerce-page/includes/map.php:373
-#: dhvc-woocommerce-page/includes/map.php:388
-#: dhvc-woocommerce-page/includes/map.php:403
-#: dhvc-woocommerce-page/includes/map.php:418
-#: dhvc-woocommerce-page/includes/map.php:433
-#: dhvc-woocommerce-page/includes/map.php:502
-#: dhvc-woocommerce-page/includes/map.php:573
-#: dhvc-woocommerce-page/includes/map.php:624
-#: dhvc-woocommerce-page/includes/map.php:674
-#: dhvc-woocommerce-page/includes/map.php:725
-#: dhvc-woocommerce-page/includes/map.php:752
-#: dhvc-woocommerce-page/includes/map.php:803
-#: dhvc-woocommerce-page/includes/map.php:854
-#: dhvc-woocommerce-page/includes/map.php:869
-msgid "Woo Shortcodes"
+#: dhvc-woocommerce-page/includes/admin.php:101
+msgid "Current use Custom Template by Category:"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:25
+#: dhvc-woocommerce-page/includes/admin.php:103
+msgid "OR"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/admin.php:106
+#: dhvc-woocommerce-page/includes/admin.php:156
+#: dhvc-woocommerce-page/includes/admin.php:188
+msgid "Select a template&hellip;"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/admin.php:107
+msgid ""
+"You can change template post type with setting \"Product Template Type\" in "
+"\"WooCommerce Settings -> Products -> Display\""
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/acf_field/definition.php:8
+msgid "WC Single Product ACF Custom Fields"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/acf_field/definition.php:46
+#: dhvc-woocommerce-page/includes/vc.php:519
 msgid "Field Name"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:32
-#: dhvc-woocommerce-page/includes/map.php:117
-#: dhvc-woocommerce-page/includes/map.php:132
-#: dhvc-woocommerce-page/includes/map.php:147
-#: dhvc-woocommerce-page/includes/map.php:162
-#: dhvc-woocommerce-page/includes/map.php:176
-#: dhvc-woocommerce-page/includes/map.php:191
-#: dhvc-woocommerce-page/includes/map.php:205
-#: dhvc-woocommerce-page/includes/map.php:220
-#: dhvc-woocommerce-page/includes/map.php:235
-#: dhvc-woocommerce-page/includes/map.php:250
-#: dhvc-woocommerce-page/includes/map.php:265
-#: dhvc-woocommerce-page/includes/map.php:280
-#: dhvc-woocommerce-page/includes/map.php:322
-#: dhvc-woocommerce-page/includes/map.php:363
-#: dhvc-woocommerce-page/includes/map.php:378
-#: dhvc-woocommerce-page/includes/map.php:393
-#: dhvc-woocommerce-page/includes/map.php:408
-#: dhvc-woocommerce-page/includes/map.php:423
-#: dhvc-woocommerce-page/includes/map.php:492
-#: dhvc-woocommerce-page/includes/map.php:563
-#: dhvc-woocommerce-page/includes/map.php:614
-#: dhvc-woocommerce-page/includes/map.php:664
-#: dhvc-woocommerce-page/includes/map.php:715
-#: dhvc-woocommerce-page/includes/map.php:742
-#: dhvc-woocommerce-page/includes/map.php:793
-#: dhvc-woocommerce-page/includes/map.php:844
-#: dhvc-woocommerce-page/includes/map.php:859
-#: dhvc-woocommerce-page/includes/map.php:920
+#: dhvc-woocommerce-page/includes/cs-elements/add_to_cart/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:199
+msgid "WC Single Product Add to Cart"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/additional_information/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:176
+msgid "WC Single Product Additional Information"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/best_selling_products/definition.php:8
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:8
+msgid "WC Sale Products"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/best_selling_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:15
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:15
+#: dhvc-woocommerce-page/includes/vc.php:322
+#: dhvc-woocommerce-page/includes/vc.php:375
+#: dhvc-woocommerce-page/includes/vc.php:699
+#: dhvc-woocommerce-page/includes/vc.php:868
+#: dhvc-woocommerce-page/includes/vc.php:997
+#: dhvc-woocommerce-page/includes/vc.php:1062
+#: dhvc-woocommerce-page/includes/vc.php:1099
+#: dhvc-woocommerce-page/includes/vc.php:1164
+#: dhvc-woocommerce-page/includes/vc.php:1252
+msgid "Product Per Page"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/best_selling_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:16
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:16
+#: dhvc-woocommerce-page/includes/vc.php:328
+#: dhvc-woocommerce-page/includes/vc.php:381
+#: dhvc-woocommerce-page/includes/vc.php:706
+#: dhvc-woocommerce-page/includes/vc.php:792
+#: dhvc-woocommerce-page/includes/vc.php:875
+#: dhvc-woocommerce-page/includes/vc.php:939
+#: dhvc-woocommerce-page/includes/vc.php:1004
+#: dhvc-woocommerce-page/includes/vc.php:1069
+#: dhvc-woocommerce-page/includes/vc.php:1106
+#: dhvc-woocommerce-page/includes/vc.php:1171
+#: dhvc-woocommerce-page/includes/vc.php:1259
+msgid "Columns"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/breadcrumb/definition.php:7
+msgid "WC Breadcrumb"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/cart/definition.php:8
+msgid "WC Cart"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/checkout/definition.php:8
+msgid "WC Checkout"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/custom_field/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:420
+msgid "WC Single Product Custom Field"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/custom_field/definition.php:18
+#: dhvc-woocommerce-page/includes/vc.php:428
+msgid "Field key name"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/custom_field/definition.php:19
+#: dhvc-woocommerce-page/includes/vc.php:432
+msgid "Enter custom field name to retrieve meta data value."
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/custom_field/definition.php:24
+#: dhvc-woocommerce-page/includes/vc.php:436
+msgid "Label"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/custom_field/definition.php:25
+#: dhvc-woocommerce-page/includes/vc.php:440
+msgid "Enter label to display before key value."
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/data_tabs/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:268
+msgid "WC Single Product Data Tabs"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/description/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:155
+msgid "WC Single Product Description"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/excerpt/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:132
+msgid "WC Single Product Excerpt"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:8
+msgid "WC Featured Products"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:20
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:20
+#: dhvc-woocommerce-page/includes/vc.php:335
+#: dhvc-woocommerce-page/includes/vc.php:388
+#: dhvc-woocommerce-page/includes/vc.php:713
+#: dhvc-woocommerce-page/includes/vc.php:799
+#: dhvc-woocommerce-page/includes/vc.php:882
+#: dhvc-woocommerce-page/includes/vc.php:946
+#: dhvc-woocommerce-page/includes/vc.php:1011
+#: dhvc-woocommerce-page/includes/vc.php:1113
+#: dhvc-woocommerce-page/includes/vc.php:1178
+#: dhvc-woocommerce-page/includes/vc.php:1266
+msgid "Products Ordering"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:26
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:26
+#: dhvc-woocommerce-page/includes/vc.php:341
+#: dhvc-woocommerce-page/includes/vc.php:394
+#: dhvc-woocommerce-page/includes/vc.php:719
+#: dhvc-woocommerce-page/includes/vc.php:803
+#: dhvc-woocommerce-page/includes/vc.php:886
+#: dhvc-woocommerce-page/includes/vc.php:950
+#: dhvc-woocommerce-page/includes/vc.php:1015
+#: dhvc-woocommerce-page/includes/vc.php:1117
+#: dhvc-woocommerce-page/includes/vc.php:1182
+#: dhvc-woocommerce-page/includes/vc.php:1270
+msgid "Publish Date"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:27
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:27
+#: dhvc-woocommerce-page/includes/vc.php:342
+#: dhvc-woocommerce-page/includes/vc.php:395
+#: dhvc-woocommerce-page/includes/vc.php:720
+#: dhvc-woocommerce-page/includes/vc.php:804
+#: dhvc-woocommerce-page/includes/vc.php:887
+#: dhvc-woocommerce-page/includes/vc.php:951
+#: dhvc-woocommerce-page/includes/vc.php:1016
+#: dhvc-woocommerce-page/includes/vc.php:1118
+#: dhvc-woocommerce-page/includes/vc.php:1183
+#: dhvc-woocommerce-page/includes/vc.php:1271
+msgid "Modified Date"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:28
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:28
+#: dhvc-woocommerce-page/includes/vc.php:343
+#: dhvc-woocommerce-page/includes/vc.php:396
+#: dhvc-woocommerce-page/includes/vc.php:721
+#: dhvc-woocommerce-page/includes/vc.php:805
+#: dhvc-woocommerce-page/includes/vc.php:888
+#: dhvc-woocommerce-page/includes/vc.php:952
+#: dhvc-woocommerce-page/includes/vc.php:1017
+#: dhvc-woocommerce-page/includes/vc.php:1119
+#: dhvc-woocommerce-page/includes/vc.php:1184
+#: dhvc-woocommerce-page/includes/vc.php:1272
+msgid "Random"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:29
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:29
+#: dhvc-woocommerce-page/includes/vc.php:344
+#: dhvc-woocommerce-page/includes/vc.php:397
+#: dhvc-woocommerce-page/includes/vc.php:722
+#: dhvc-woocommerce-page/includes/vc.php:806
+#: dhvc-woocommerce-page/includes/vc.php:889
+#: dhvc-woocommerce-page/includes/vc.php:953
+#: dhvc-woocommerce-page/includes/vc.php:1018
+#: dhvc-woocommerce-page/includes/vc.php:1120
+#: dhvc-woocommerce-page/includes/vc.php:1185
+#: dhvc-woocommerce-page/includes/vc.php:1273
+msgid "Alphabetic"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:30
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:30
+#: dhvc-woocommerce-page/includes/vc.php:345
+#: dhvc-woocommerce-page/includes/vc.php:398
+#: dhvc-woocommerce-page/includes/vc.php:723
+#: dhvc-woocommerce-page/includes/vc.php:807
+#: dhvc-woocommerce-page/includes/vc.php:890
+#: dhvc-woocommerce-page/includes/vc.php:954
+#: dhvc-woocommerce-page/includes/vc.php:1019
+#: dhvc-woocommerce-page/includes/vc.php:1121
+#: dhvc-woocommerce-page/includes/vc.php:1186
+#: dhvc-woocommerce-page/includes/vc.php:1274
+msgid "Popularity"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:31
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:31
+#: dhvc-woocommerce-page/includes/vc.php:346
+#: dhvc-woocommerce-page/includes/vc.php:399
+#: dhvc-woocommerce-page/includes/vc.php:724
+#: dhvc-woocommerce-page/includes/vc.php:808
+#: dhvc-woocommerce-page/includes/vc.php:891
+#: dhvc-woocommerce-page/includes/vc.php:955
+#: dhvc-woocommerce-page/includes/vc.php:1020
+#: dhvc-woocommerce-page/includes/vc.php:1122
+#: dhvc-woocommerce-page/includes/vc.php:1187
+#: dhvc-woocommerce-page/includes/vc.php:1275
+msgid "Rate"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/featured_products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/sale_products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:32
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:32
+#: dhvc-woocommerce-page/includes/vc.php:347
+#: dhvc-woocommerce-page/includes/vc.php:400
+#: dhvc-woocommerce-page/includes/vc.php:725
+#: dhvc-woocommerce-page/includes/vc.php:809
+#: dhvc-woocommerce-page/includes/vc.php:892
+#: dhvc-woocommerce-page/includes/vc.php:956
+#: dhvc-woocommerce-page/includes/vc.php:1021
+#: dhvc-woocommerce-page/includes/vc.php:1123
+#: dhvc-woocommerce-page/includes/vc.php:1188
+#: dhvc-woocommerce-page/includes/vc.php:1276
+msgid "Price"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/images/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:41
+msgid "WC Single Product Images"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/meta/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:222
+msgid "WC Single Product Meta"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/my_account/definition.php:8
+msgid "WC My Account"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/order_tracking/definition.php:8
+msgid "WC Order Tracking"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/price/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:110
+msgid "WC Single Product Price"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:1244
+msgid "Woo Product Attribute"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:36
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:36
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:36
+#: dhvc-woocommerce-page/includes/vc.php:732
+#: dhvc-woocommerce-page/includes/vc.php:816
+#: dhvc-woocommerce-page/includes/vc.php:899
+#: dhvc-woocommerce-page/includes/vc.php:963
+#: dhvc-woocommerce-page/includes/vc.php:1028
+#: dhvc-woocommerce-page/includes/vc.php:1130
+#: dhvc-woocommerce-page/includes/vc.php:1195
+#: dhvc-woocommerce-page/includes/vc.php:1283
+msgid "Ascending or Descending"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:41
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:41
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:41
+#: dhvc-woocommerce-page/includes/vc.php:736
+#: dhvc-woocommerce-page/includes/vc.php:820
+#: dhvc-woocommerce-page/includes/vc.php:904
+#: dhvc-woocommerce-page/includes/vc.php:967
+#: dhvc-woocommerce-page/includes/vc.php:1032
+#: dhvc-woocommerce-page/includes/vc.php:1134
+#: dhvc-woocommerce-page/includes/vc.php:1199
+#: dhvc-woocommerce-page/includes/vc.php:1287
+msgid "Ascending"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:41
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:41
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:41
+#: dhvc-woocommerce-page/includes/vc.php:737
+#: dhvc-woocommerce-page/includes/vc.php:821
+#: dhvc-woocommerce-page/includes/vc.php:903
+#: dhvc-woocommerce-page/includes/vc.php:968
+#: dhvc-woocommerce-page/includes/vc.php:1033
+#: dhvc-woocommerce-page/includes/vc.php:1135
+#: dhvc-woocommerce-page/includes/vc.php:1200
+#: dhvc-woocommerce-page/includes/vc.php:1288
+msgid "Descending"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:42
+#: dhvc-woocommerce-page/includes/vc.php:1294
+msgid "Attribute"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_attribute/definition.php:43
+#: dhvc-woocommerce-page/includes/vc.php:1300
+msgid "Filter"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:771
+msgid "Woo Product Categories"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:51
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:54
+#: dhvc-woocommerce-page/includes/vc.php:694
+#: dhvc-woocommerce-page/includes/vc.php:781
+msgid "Categories"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:55
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:61
+#: dhvc-woocommerce-page/includes/vc.php:743
+msgid "Query type"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:61
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:67
+#: dhvc-woocommerce-page/includes/vc.php:748
+msgid "IN"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:62
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:68
+#: dhvc-woocommerce-page/includes/vc.php:749
+msgid "AND"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:63
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:69
+#: dhvc-woocommerce-page/includes/vc.php:750
+msgid "NOT IN"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:67
+#: dhvc-woocommerce-page/includes/vc.php:828
+msgid "Hide Empty"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:72
+#: dhvc-woocommerce-page/includes/vc.php:832
+msgid "Yes"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:72
+#: dhvc-woocommerce-page/includes/vc.php:833
+msgid "No"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_categories/definition.php:73
+#: dhvc-woocommerce-page/includes/vc.php:839
+msgid "Parent"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/product_category/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:685
+msgid "Woo Product Category"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:8
+msgid "WC Products"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/products/definition.php:15
+msgid "Add Products IDS"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/rating/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:87
+msgid "WC Single Product Rating"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/recent_products/definition.php:8
+msgid "WC Recent Products"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/related_products/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:367
+msgid "WC Single Product Related"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/reviews/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:291
+msgid "WC Single Product Reviews"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/sharing/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:245
+msgid "WC Single Product Sharing"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/shop_messages/definition.php:7
+msgid "WC Shop Messages"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/title/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:64
+msgid "WC Single Product Title"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/top_rated_products/definition.php:8
+msgid "WC Top Rated Products"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/upsell_products/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:314
+msgid "WC Single Product Upsell"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/cs-elements/wishlist/definition.php:8
+#: dhvc-woocommerce-page/includes/vc.php:546
+msgid "WC Single Product Wishlist"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/functions.php:353
+msgid "(more&hellip;)"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:29
+msgid "Product Templates"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:32
+msgid "Add Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:33
+msgid "Add New Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:34
+msgid "Edit"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:36
+msgid "New Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:37
+#: dhvc-woocommerce-page/includes/post-types.php:38
+msgid "View Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:39
+msgid "Search Product Templates"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:40
+msgid "No Product Templates found"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:41
+msgid "No Product Templates found in trash"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/post-types.php:42
+msgid "Parent Product Template"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/shortcode.php:206
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/shortcode.php:350
+msgid "N/A"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/vc-backend-editor.php:29
+msgid "Template Builder"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/vc.php:43
+#: dhvc-woocommerce-page/includes/vc.php:66
+#: dhvc-woocommerce-page/includes/vc.php:89
+#: dhvc-woocommerce-page/includes/vc.php:112
+#: dhvc-woocommerce-page/includes/vc.php:134
+#: dhvc-woocommerce-page/includes/vc.php:157
+#: dhvc-woocommerce-page/includes/vc.php:178
+#: dhvc-woocommerce-page/includes/vc.php:201
+#: dhvc-woocommerce-page/includes/vc.php:224
+#: dhvc-woocommerce-page/includes/vc.php:247
+#: dhvc-woocommerce-page/includes/vc.php:270
+#: dhvc-woocommerce-page/includes/vc.php:293
+#: dhvc-woocommerce-page/includes/vc.php:316
+#: dhvc-woocommerce-page/includes/vc.php:369
+#: dhvc-woocommerce-page/includes/vc.php:422
+#: dhvc-woocommerce-page/includes/vc.php:461
+#: dhvc-woocommerce-page/includes/vc.php:513
+#: dhvc-woocommerce-page/includes/vc.php:548
+#: dhvc-woocommerce-page/includes/vc.php:572
+#: dhvc-woocommerce-page/includes/vc.php:595
+#: dhvc-woocommerce-page/includes/vc.php:618
+#: dhvc-woocommerce-page/includes/vc.php:641
+#: dhvc-woocommerce-page/includes/vc.php:664
+#: dhvc-woocommerce-page/includes/vc.php:687
+#: dhvc-woocommerce-page/includes/vc.php:773
+#: dhvc-woocommerce-page/includes/vc.php:862
+#: dhvc-woocommerce-page/includes/vc.php:927
+#: dhvc-woocommerce-page/includes/vc.php:991
+#: dhvc-woocommerce-page/includes/vc.php:1056
+#: dhvc-woocommerce-page/includes/vc.php:1093
+#: dhvc-woocommerce-page/includes/vc.php:1158
+#: dhvc-woocommerce-page/includes/vc.php:1223
+#: dhvc-woocommerce-page/includes/vc.php:1246
+msgid "WC Single Product"
+msgstr ""
+
+#: dhvc-woocommerce-page/includes/vc.php:48
+#: dhvc-woocommerce-page/includes/vc.php:72
+#: dhvc-woocommerce-page/includes/vc.php:95
+#: dhvc-woocommerce-page/includes/vc.php:118
+#: dhvc-woocommerce-page/includes/vc.php:139
+#: dhvc-woocommerce-page/includes/vc.php:163
+#: dhvc-woocommerce-page/includes/vc.php:184
+#: dhvc-woocommerce-page/includes/vc.php:206
+#: dhvc-woocommerce-page/includes/vc.php:229
+#: dhvc-woocommerce-page/includes/vc.php:252
+#: dhvc-woocommerce-page/includes/vc.php:275
+#: dhvc-woocommerce-page/includes/vc.php:298
+#: dhvc-woocommerce-page/includes/vc.php:352
+#: dhvc-woocommerce-page/includes/vc.php:406
+#: dhvc-woocommerce-page/includes/vc.php:444
+#: dhvc-woocommerce-page/includes/vc.php:466
+#: dhvc-woocommerce-page/includes/vc.php:527
+#: dhvc-woocommerce-page/includes/vc.php:554
+#: dhvc-woocommerce-page/includes/vc.php:578
+#: dhvc-woocommerce-page/includes/vc.php:601
+#: dhvc-woocommerce-page/includes/vc.php:624
+#: dhvc-woocommerce-page/includes/vc.php:647
+#: dhvc-woocommerce-page/includes/vc.php:669
+#: dhvc-woocommerce-page/includes/vc.php:755
+#: dhvc-woocommerce-page/includes/vc.php:845
+#: dhvc-woocommerce-page/includes/vc.php:910
+#: dhvc-woocommerce-page/includes/vc.php:974
+#: dhvc-woocommerce-page/includes/vc.php:1039
+#: dhvc-woocommerce-page/includes/vc.php:1076
+#: dhvc-woocommerce-page/includes/vc.php:1141
+#: dhvc-woocommerce-page/includes/vc.php:1206
+#: dhvc-woocommerce-page/includes/vc.php:1229
+#: dhvc-woocommerce-page/includes/vc.php:1306
 msgid "Extra class name"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:34
-#: dhvc-woocommerce-page/includes/map.php:119
-#: dhvc-woocommerce-page/includes/map.php:134
-#: dhvc-woocommerce-page/includes/map.php:149
-#: dhvc-woocommerce-page/includes/map.php:164
-#: dhvc-woocommerce-page/includes/map.php:178
-#: dhvc-woocommerce-page/includes/map.php:193
-#: dhvc-woocommerce-page/includes/map.php:207
-#: dhvc-woocommerce-page/includes/map.php:222
-#: dhvc-woocommerce-page/includes/map.php:237
-#: dhvc-woocommerce-page/includes/map.php:252
-#: dhvc-woocommerce-page/includes/map.php:267
-#: dhvc-woocommerce-page/includes/map.php:282
-#: dhvc-woocommerce-page/includes/map.php:324
-#: dhvc-woocommerce-page/includes/map.php:365
-#: dhvc-woocommerce-page/includes/map.php:380
-#: dhvc-woocommerce-page/includes/map.php:395
-#: dhvc-woocommerce-page/includes/map.php:410
-#: dhvc-woocommerce-page/includes/map.php:425
-#: dhvc-woocommerce-page/includes/map.php:494
-#: dhvc-woocommerce-page/includes/map.php:565
-#: dhvc-woocommerce-page/includes/map.php:616
-#: dhvc-woocommerce-page/includes/map.php:666
-#: dhvc-woocommerce-page/includes/map.php:717
-#: dhvc-woocommerce-page/includes/map.php:744
-#: dhvc-woocommerce-page/includes/map.php:795
-#: dhvc-woocommerce-page/includes/map.php:846
-#: dhvc-woocommerce-page/includes/map.php:861
-#: dhvc-woocommerce-page/includes/map.php:922
+#: dhvc-woocommerce-page/includes/vc.php:52
+#: dhvc-woocommerce-page/includes/vc.php:75
+#: dhvc-woocommerce-page/includes/vc.php:98
+#: dhvc-woocommerce-page/includes/vc.php:121
+#: dhvc-woocommerce-page/includes/vc.php:143
+#: dhvc-woocommerce-page/includes/vc.php:165
+#: dhvc-woocommerce-page/includes/vc.php:187
+#: dhvc-woocommerce-page/includes/vc.php:210
+#: dhvc-woocommerce-page/includes/vc.php:233
+#: dhvc-woocommerce-page/includes/vc.php:256
+#: dhvc-woocommerce-page/includes/vc.php:279
+#: dhvc-woocommerce-page/includes/vc.php:302
+#: dhvc-woocommerce-page/includes/vc.php:356
+#: dhvc-woocommerce-page/includes/vc.php:409
+#: dhvc-woocommerce-page/includes/vc.php:469
+#: dhvc-woocommerce-page/includes/vc.php:531
+#: dhvc-woocommerce-page/includes/vc.php:557
+#: dhvc-woocommerce-page/includes/vc.php:581
+#: dhvc-woocommerce-page/includes/vc.php:604
+#: dhvc-woocommerce-page/includes/vc.php:627
+#: dhvc-woocommerce-page/includes/vc.php:650
+#: dhvc-woocommerce-page/includes/vc.php:673
+#: dhvc-woocommerce-page/includes/vc.php:759
+#: dhvc-woocommerce-page/includes/vc.php:848
+#: dhvc-woocommerce-page/includes/vc.php:913
+#: dhvc-woocommerce-page/includes/vc.php:977
+#: dhvc-woocommerce-page/includes/vc.php:1042
+#: dhvc-woocommerce-page/includes/vc.php:1079
+#: dhvc-woocommerce-page/includes/vc.php:1144
+#: dhvc-woocommerce-page/includes/vc.php:1209
+#: dhvc-woocommerce-page/includes/vc.php:1232
+#: dhvc-woocommerce-page/includes/vc.php:1309
 msgid ""
 "If you wish to style particular content element differently, then use this "
 "field to add a class name and then refer to it in your css file."
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:59
-msgid "Woo Single Product Images"
+#: dhvc-woocommerce-page/includes/vc.php:56
+#: dhvc-woocommerce-page/includes/vc.php:79
+#: dhvc-woocommerce-page/includes/vc.php:102
+#: dhvc-woocommerce-page/includes/vc.php:125
+#: dhvc-woocommerce-page/includes/vc.php:147
+#: dhvc-woocommerce-page/includes/vc.php:169
+#: dhvc-woocommerce-page/includes/vc.php:191
+#: dhvc-woocommerce-page/includes/vc.php:214
+#: dhvc-woocommerce-page/includes/vc.php:237
+#: dhvc-woocommerce-page/includes/vc.php:260
+#: dhvc-woocommerce-page/includes/vc.php:283
+#: dhvc-woocommerce-page/includes/vc.php:306
+#: dhvc-woocommerce-page/includes/vc.php:360
+#: dhvc-woocommerce-page/includes/vc.php:413
+#: dhvc-woocommerce-page/includes/vc.php:451
+#: dhvc-woocommerce-page/includes/vc.php:473
+#: dhvc-woocommerce-page/includes/vc.php:535
+#: dhvc-woocommerce-page/includes/vc.php:561
+#: dhvc-woocommerce-page/includes/vc.php:585
+#: dhvc-woocommerce-page/includes/vc.php:608
+#: dhvc-woocommerce-page/includes/vc.php:631
+#: dhvc-woocommerce-page/includes/vc.php:654
+#: dhvc-woocommerce-page/includes/vc.php:677
+#: dhvc-woocommerce-page/includes/vc.php:763
+#: dhvc-woocommerce-page/includes/vc.php:852
+#: dhvc-woocommerce-page/includes/vc.php:917
+#: dhvc-woocommerce-page/includes/vc.php:981
+#: dhvc-woocommerce-page/includes/vc.php:1046
+#: dhvc-woocommerce-page/includes/vc.php:1083
+#: dhvc-woocommerce-page/includes/vc.php:1148
+#: dhvc-woocommerce-page/includes/vc.php:1213
+#: dhvc-woocommerce-page/includes/vc.php:1236
+#: dhvc-woocommerce-page/includes/vc.php:1313
+msgid "CSS box"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:67
-msgid "Hide Sale Flash"
+#: dhvc-woocommerce-page/includes/vc.php:58
+#: dhvc-woocommerce-page/includes/vc.php:81
+#: dhvc-woocommerce-page/includes/vc.php:104
+#: dhvc-woocommerce-page/includes/vc.php:127
+#: dhvc-woocommerce-page/includes/vc.php:149
+#: dhvc-woocommerce-page/includes/vc.php:171
+#: dhvc-woocommerce-page/includes/vc.php:193
+#: dhvc-woocommerce-page/includes/vc.php:216
+#: dhvc-woocommerce-page/includes/vc.php:239
+#: dhvc-woocommerce-page/includes/vc.php:262
+#: dhvc-woocommerce-page/includes/vc.php:285
+#: dhvc-woocommerce-page/includes/vc.php:308
+#: dhvc-woocommerce-page/includes/vc.php:362
+#: dhvc-woocommerce-page/includes/vc.php:415
+#: dhvc-woocommerce-page/includes/vc.php:453
+#: dhvc-woocommerce-page/includes/vc.php:475
+#: dhvc-woocommerce-page/includes/vc.php:537
+#: dhvc-woocommerce-page/includes/vc.php:563
+#: dhvc-woocommerce-page/includes/vc.php:587
+#: dhvc-woocommerce-page/includes/vc.php:610
+#: dhvc-woocommerce-page/includes/vc.php:633
+#: dhvc-woocommerce-page/includes/vc.php:656
+#: dhvc-woocommerce-page/includes/vc.php:679
+#: dhvc-woocommerce-page/includes/vc.php:765
+#: dhvc-woocommerce-page/includes/vc.php:854
+#: dhvc-woocommerce-page/includes/vc.php:919
+#: dhvc-woocommerce-page/includes/vc.php:983
+#: dhvc-woocommerce-page/includes/vc.php:1048
+#: dhvc-woocommerce-page/includes/vc.php:1085
+#: dhvc-woocommerce-page/includes/vc.php:1150
+#: dhvc-woocommerce-page/includes/vc.php:1215
+#: dhvc-woocommerce-page/includes/vc.php:1238
+#: dhvc-woocommerce-page/includes/vc.php:1315
+msgid "Design Options"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:70
-msgid "Yes, please"
+#: dhvc-woocommerce-page/includes/vc.php:424
+msgid "Custom fields data from meta values of the product."
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:75
-msgid "Single Product Image Width"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:77
+#: dhvc-woocommerce-page/includes/vc.php:447
 msgid ""
-"This is custom the image width used by the main image on the product page. "
-"If value is NULL or 0 will use default settings in Woocommerce"
+"Style particular content element differently - add a class name and refer to "
+"it in custom CSS."
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:81
-msgid "Single Product Image Height"
+#: dhvc-woocommerce-page/includes/vc.php:459
+msgid "WC Single FPD Designer"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:83
-msgid ""
-"This is custom the image height used by the main image on the product page. "
-"If value is NULL or 0 will use default settings in Woocommerce"
+#: dhvc-woocommerce-page/includes/vc.php:511
+msgid "WC ACF Custom Fields"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:88
-msgid "No Crop Single Product Image?"
+#: dhvc-woocommerce-page/includes/vc.php:514
+msgid "Advanced Custom Fields (ACF Plugin)."
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:91
-#: dhvc-woocommerce-page/includes/map.php:112
-msgid "No, please"
+#: dhvc-woocommerce-page/includes/vc.php:570
+msgid "Woo Breadcrumb"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:96
-msgid "Product Thumbnails Width"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:98
-msgid ""
-"This is custom the thumbnails width used by the main image on the product "
-"page. If value is NULL or 0 will use default settings in Woocommerce"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:102
-msgid "Product Thumbnails Height"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:104
-msgid ""
-"This is custom the thumbnails height used by the main image on the product "
-"page. If value is NULL or 0 will use default settings in Woocommerce"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:109
-msgid "No Crop Product Thumbnails Image?"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:125
-msgid "Woo Single Product Title"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:140
-msgid "Woo Single Product Rating"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:155
-msgid "Woo Single Product Price"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:169
-msgid "Woo Single Product Excerpt"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:184
-msgid "Woo Single Product Description"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:198
-msgid "Woo Single Product Additional Information"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:213
-msgid "Woo Single Product Add to Cart"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:228
-msgid "Woo Single Product Meta"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:243
-msgid "Woo Single Product Sharing"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:258
-msgid "Woo Single Product Data Tabs"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:273
-msgid "Woo Single Product Reviews"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:288
-msgid "Woo Product Upsell"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:295
-#: dhvc-woocommerce-page/includes/map.php:336
-#: dhvc-woocommerce-page/includes/map.php:438
-#: dhvc-woocommerce-page/includes/map.php:578
-#: dhvc-woocommerce-page/includes/map.php:679
-#: dhvc-woocommerce-page/includes/map.php:730
-#: dhvc-woocommerce-page/includes/map.php:757
-#: dhvc-woocommerce-page/includes/map.php:808
-#: dhvc-woocommerce-page/includes/map.php:874
-msgid "Product Per Page"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:301
-#: dhvc-woocommerce-page/includes/map.php:342
-#: dhvc-woocommerce-page/includes/map.php:444
-#: dhvc-woocommerce-page/includes/map.php:518
-#: dhvc-woocommerce-page/includes/map.php:584
-#: dhvc-woocommerce-page/includes/map.php:634
-#: dhvc-woocommerce-page/includes/map.php:685
-#: dhvc-woocommerce-page/includes/map.php:736
-#: dhvc-woocommerce-page/includes/map.php:763
-#: dhvc-woocommerce-page/includes/map.php:814
-#: dhvc-woocommerce-page/includes/map.php:880
-msgid "Columns"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:307
-#: dhvc-woocommerce-page/includes/map.php:348
-#: dhvc-woocommerce-page/includes/map.php:450
-#: dhvc-woocommerce-page/includes/map.php:524
-#: dhvc-woocommerce-page/includes/map.php:590
-#: dhvc-woocommerce-page/includes/map.php:640
-#: dhvc-woocommerce-page/includes/map.php:691
-#: dhvc-woocommerce-page/includes/map.php:769
-#: dhvc-woocommerce-page/includes/map.php:820
-#: dhvc-woocommerce-page/includes/map.php:886
-msgid "Products Ordering"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:311
-#: dhvc-woocommerce-page/includes/map.php:352
-#: dhvc-woocommerce-page/includes/map.php:454
-#: dhvc-woocommerce-page/includes/map.php:527
-#: dhvc-woocommerce-page/includes/map.php:593
-#: dhvc-woocommerce-page/includes/map.php:643
-#: dhvc-woocommerce-page/includes/map.php:694
-#: dhvc-woocommerce-page/includes/map.php:772
-#: dhvc-woocommerce-page/includes/map.php:823
-#: dhvc-woocommerce-page/includes/map.php:889
-msgid "Publish Date"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:312
-#: dhvc-woocommerce-page/includes/map.php:353
-#: dhvc-woocommerce-page/includes/map.php:455
-#: dhvc-woocommerce-page/includes/map.php:528
-#: dhvc-woocommerce-page/includes/map.php:594
-#: dhvc-woocommerce-page/includes/map.php:644
-#: dhvc-woocommerce-page/includes/map.php:695
-#: dhvc-woocommerce-page/includes/map.php:773
-#: dhvc-woocommerce-page/includes/map.php:824
-#: dhvc-woocommerce-page/includes/map.php:890
-msgid "Modified Date"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:313
-#: dhvc-woocommerce-page/includes/map.php:354
-#: dhvc-woocommerce-page/includes/map.php:456
-#: dhvc-woocommerce-page/includes/map.php:529
-#: dhvc-woocommerce-page/includes/map.php:595
-#: dhvc-woocommerce-page/includes/map.php:645
-#: dhvc-woocommerce-page/includes/map.php:696
-#: dhvc-woocommerce-page/includes/map.php:774
-#: dhvc-woocommerce-page/includes/map.php:825
-#: dhvc-woocommerce-page/includes/map.php:891
-msgid "Random"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:314
-#: dhvc-woocommerce-page/includes/map.php:355
-#: dhvc-woocommerce-page/includes/map.php:457
-#: dhvc-woocommerce-page/includes/map.php:530
-#: dhvc-woocommerce-page/includes/map.php:596
-#: dhvc-woocommerce-page/includes/map.php:646
-#: dhvc-woocommerce-page/includes/map.php:697
-#: dhvc-woocommerce-page/includes/map.php:775
-#: dhvc-woocommerce-page/includes/map.php:826
-#: dhvc-woocommerce-page/includes/map.php:892
-msgid "Alphabetic"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:315
-#: dhvc-woocommerce-page/includes/map.php:356
-#: dhvc-woocommerce-page/includes/map.php:458
-#: dhvc-woocommerce-page/includes/map.php:531
-#: dhvc-woocommerce-page/includes/map.php:597
-#: dhvc-woocommerce-page/includes/map.php:647
-#: dhvc-woocommerce-page/includes/map.php:698
-#: dhvc-woocommerce-page/includes/map.php:776
-#: dhvc-woocommerce-page/includes/map.php:827
-#: dhvc-woocommerce-page/includes/map.php:893
-msgid "Popularity"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:316
-#: dhvc-woocommerce-page/includes/map.php:357
-#: dhvc-woocommerce-page/includes/map.php:459
-#: dhvc-woocommerce-page/includes/map.php:532
-#: dhvc-woocommerce-page/includes/map.php:598
-#: dhvc-woocommerce-page/includes/map.php:648
-#: dhvc-woocommerce-page/includes/map.php:699
-#: dhvc-woocommerce-page/includes/map.php:777
-#: dhvc-woocommerce-page/includes/map.php:828
-#: dhvc-woocommerce-page/includes/map.php:894
-msgid "Rate"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:317
-#: dhvc-woocommerce-page/includes/map.php:358
-#: dhvc-woocommerce-page/includes/map.php:460
-#: dhvc-woocommerce-page/includes/map.php:533
-#: dhvc-woocommerce-page/includes/map.php:599
-#: dhvc-woocommerce-page/includes/map.php:649
-#: dhvc-woocommerce-page/includes/map.php:700
-#: dhvc-woocommerce-page/includes/map.php:778
-#: dhvc-woocommerce-page/includes/map.php:829
-#: dhvc-woocommerce-page/includes/map.php:895
-msgid "Price"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:329
-msgid "Woo Product Related Products"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:371
+#: dhvc-woocommerce-page/includes/vc.php:593
 msgid "Woo Cart"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:386
+#: dhvc-woocommerce-page/includes/vc.php:616
 msgid "Woo Checkout"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:401
+#: dhvc-woocommerce-page/includes/vc.php:639
 msgid "Woo Order Tracking"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:416
+#: dhvc-woocommerce-page/includes/vc.php:662
 msgid "Woo My Account"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:431
-msgid "Woo Product Category"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:466
-#: dhvc-woocommerce-page/includes/map.php:539
-#: dhvc-woocommerce-page/includes/map.php:605
-#: dhvc-woocommerce-page/includes/map.php:655
-#: dhvc-woocommerce-page/includes/map.php:706
-#: dhvc-woocommerce-page/includes/map.php:784
-#: dhvc-woocommerce-page/includes/map.php:835
-#: dhvc-woocommerce-page/includes/map.php:901
-msgid "Ascending or Descending"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:469
-#: dhvc-woocommerce-page/includes/map.php:542
-#: dhvc-woocommerce-page/includes/map.php:608
-#: dhvc-woocommerce-page/includes/map.php:658
-#: dhvc-woocommerce-page/includes/map.php:709
-#: dhvc-woocommerce-page/includes/map.php:787
-#: dhvc-woocommerce-page/includes/map.php:838
-#: dhvc-woocommerce-page/includes/map.php:904
-msgid "Ascending"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:470
-#: dhvc-woocommerce-page/includes/map.php:543
-#: dhvc-woocommerce-page/includes/map.php:609
-#: dhvc-woocommerce-page/includes/map.php:659
-#: dhvc-woocommerce-page/includes/map.php:710
-#: dhvc-woocommerce-page/includes/map.php:788
-#: dhvc-woocommerce-page/includes/map.php:839
-#: dhvc-woocommerce-page/includes/map.php:905
-msgid "Descending"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:476
-#: dhvc-woocommerce-page/includes/map.php:508
-msgid "Categories"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:482
-msgid "Query type"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:485
-msgid "IN"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:486
-msgid "AND"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:487
-msgid "NOT IN"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:500
-msgid "Woo Product Categories"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:513
+#: dhvc-woocommerce-page/includes/vc.php:787
 msgid "Number"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:549
-msgid "Hide Empty"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:552
-msgid "Yes"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:553
-msgid "No"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:558
-msgid "Parent"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:571
+#: dhvc-woocommerce-page/includes/vc.php:860
 msgid "Woo Recent Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:622
+#: dhvc-woocommerce-page/includes/vc.php:925
 msgid "Woo Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:629
+#: dhvc-woocommerce-page/includes/vc.php:932
 msgid "Select products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:672
+#: dhvc-woocommerce-page/includes/vc.php:989
 msgid "Woo Sale Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:723
+#: dhvc-woocommerce-page/includes/vc.php:1054
 msgid "Woo Best Selling Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:750
+#: dhvc-woocommerce-page/includes/vc.php:1091
 msgid "Woo Top Rated Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:801
+#: dhvc-woocommerce-page/includes/vc.php:1156
 msgid "Woo Featured Products"
 msgstr ""
 
-#: dhvc-woocommerce-page/includes/map.php:852
+#: dhvc-woocommerce-page/includes/vc.php:1221
 msgid "Woo Shop Messages"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:867
-msgid "Woo Product Attribute"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:910
-msgid "Attribute"
-msgstr ""
-
-#: dhvc-woocommerce-page/includes/map.php:915
-msgid "Filter"
 msgstr ""

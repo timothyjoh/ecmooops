@@ -1,8 +1,19 @@
+.edit_form_line .chosen-container,
+.chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+	width: 100% !important;
+}
+
+
 .wpb-select option{
 	margin: 0;
 	padding:0
 }
 [class*="icon-dhvc-woo-product-page"]{
+	background-image: url('../images/single-product.png') !important;
+	border-color: transparent;
+	background-repeat: no-repeat;
+}
+[class*="icon-dhvc-woo-shortcode"]{
 	background-image: url('../images/woocommerce.png') !important;
 	border-color: transparent;
 	background-repeat: no-repeat;

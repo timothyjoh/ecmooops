@@ -20,9 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	echo get_the_password_form();
 	 	return;
 	 }
+	 $class = 'dhvc-woocommerce-page';
+	 if(dhvc_woo_product_page_is_jupiter_theme())
+	 	$class .=' mk-product style-default';
+	 
+	 $class = apply_filters('dhvc_woocommerce_page_class',$class);
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class('dhvc-woocommerce-page'); ?>>
+<div id="product-<?php the_ID(); ?>" <?php post_class($class); ?>>
 
 	<?php the_product_page_content();?>
 
