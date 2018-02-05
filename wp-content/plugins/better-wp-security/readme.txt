@@ -1,9 +1,9 @@
 === iThemes Security (formerly Better WP Security) ===
 Contributors: ithemes, chrisjean, gerroald, mattdanner, timothyblynjacobs
 Tags: security, security plugin, malware, hack, secure, block, SSL, admin, htaccess, lockdown, login, protect, protection, anti virus, attack, injection, login security, maintenance, permissions, prevention, authentication, administration, password, brute force, ban, permissions, bots, user agents, xml rpc, security log
-Requires at least: 4.6
-Tested up to: 4.8.1
-Stable tag: 6.6.0
+Requires at least: 4.7
+Tested up to: 4.9.2
+Stable tag: 6.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -188,6 +188,39 @@ Free support may be available with the help of the community in the <a href="htt
 
 == Changelog ==
 
+= 6.8.1 =
+* Enhancement: Display user lockouts in Lockout Sidebar.
+* Bug Fix: Load translations on the plugins_loaded hook.
+* Bug Fix: Fixed method that could be used to discover hidden login slug on some sites.
+* Bug Fix: Fixed issue that could prevent Sync from loading Malware Scan results if a scan previously failed.
+* Bug Fix: Update to the REST API "Restricted Access" feature to protect against methods to work around the restricted access.
+* Bug Fix: Prevent login page being hidden when following the "Confirm Email Address" notification URL.
+* Bug Fix: Hide Backend notifications not being properly sent when first enabled.
+
+= 6.8.0 =
+* New Feature: Introduces a scheduling framework for handling events. Cron is now used by default, and will switch to using an alternate scheduling system if it detects an error. To disable this detection set ITSEC_DISABLE_CRON_TEST in your wp-config.php file.
+* Important: The ITSEC_FILE_CHECK_CRON and ITSEC_BACKUP_CRON constants have been deprecated. Use ITSEC_USE_CRON instead.
+* Enhancement: Preserve notification settings when the responsible module is deactivated.
+* Bug Fix: Process 404 lockouts on the 'wp' hook to prevent a headers have already been sent warning message.
+* Bug Fix: Ensure Hide Backend emails are properly sent when activating Hide Backend before saving the Notification Center for the first time.
+* Bug Fix: Prevent warning from being issued on new installs by allowing previous settings to be preserved if they exist.
+* Bug Fix: Better handle WP_Error objects in mail errors that occurred before updating to first patch release.
+* Bug Fix: A non static method was being called statically.
+* Bug Fix: Fix occasional duplicate backups and file scans.
+* Bug Fix: Fixed issue where scheduled events could repeat on sites that do not properly support WordPress's cron system.
+* Bug Fix: Reactivating Away Mode now replaces the active file if you had previously removed it.
+* Bug Fix: Ensure lockouts take effect immediately, even on systems where changes to server configuration files do not take effect immediately.
+
+= 6.7.0 =
+* New Feature: Introduces the Notification Center, a centralized place to manage and customize email notifications sent by iThemes Security.
+* Enhancement: Updated queries and prepare statements to account for changes to the esc_sql() function in WordPress 4.8.3.
+* Bug Fix: Corrected some Javascript and CSS links not generating correctly on Windows servers.
+
+= 6.6.1 =
+ * Bug Fix: Fixed SQL query bug that resulted in the "Minutes to Remember Bad Login (check period)" setting being ignored.
+ * Bug Fix: Fixed bug that prevents wp-admin/install.php blocking from working properly on nginx servers.
+ * Bug Fix: Don't attempt to do an SSL redirect when WP CLI is running.
+
 = 6.6.0 =
  * New Feature: Added a new setting in WordPress Tweaks: "Login with Email Address or Username".
  * Enhancement: Host email images from the plugin instead of relying on iThemes servers to help email clients marking messages as spam or blocking images.
@@ -367,5 +400,5 @@ Free support may be available with the help of the community in the <a href="htt
 
 == Upgrade Notice ==
 
-= 6.6.0 =
-Version 6.6.0 contains important bug fixes. It is recommended for all users.
+= 6.8.1 =
+Version 6.8.1 contains important bug fixes and improvements. It is recommended for all users.
