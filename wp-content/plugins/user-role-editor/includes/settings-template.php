@@ -8,7 +8,7 @@
  *
  */
 
-
+$tabs_index = array();
 ?>
 <div class="wrap">
     <a href="http://role-editor.com">
@@ -20,24 +20,34 @@
         <ul>
             <li><a href="#ure_tabs-1"><?php esc_html_e('General', 'user-role-editor');?></a></li>
 <?php
+$tabs_index['1'] = 0;
 if (!$license_key_only) {
-    if ($this->lib->is_pro() || !$multisite) {
+    if ($lib->is_pro() || !$multisite) {
 ?>
             <li><a href="#ure_tabs-2"><?php esc_html_e('Additional Modules', 'user-role-editor'); ?></a></li>
 <?php
+        $tabs_index['2'] = 1;
     }
 ?>
             <li><a href="#ure_tabs-3"><?php esc_html_e('Default Roles', 'user-role-editor'); ?></a></li>
 <?php
-    if ($multisite && ($this->lib->is_pro() || $this->lib->is_super_admin())) {
+    $tabs_index['3'] = count($tabs_index);
+    if ($multisite && ($lib->is_pro() || $lib->is_super_admin())) {
 ?>
             <li><a href="#ure_tabs-4"><?php esc_html_e('Multisite', 'user-role-editor'); ?></a></li>
 <?php
+        $tabs_index['4'] = count($tabs_index);
     }
 }
 ?>
-            <li><a href="#ure_tabs-5"><?php esc_html_e('About', 'user-role-editor');?></a></li>
+            <li><a href="#ure_tabs-5"><?php esc_html_e('Tools', 'user-role-editor');?></a></li>
+<?php
+        $tabs_index['5'] = count($tabs_index);
+?>
+            <li><a href="#ure_tabs-6"><?php esc_html_e('About', 'user-role-editor');?></a></li>
+            
         </ul>
+        
     <div id="ure_tabs-1">
     <div id="ure-settings-form">
         <form method="post" action="<?php echo $link; ?>?page=settings-<?php echo URE_PLUGIN_FILE; ?>" >   
@@ -86,6 +96,19 @@ if (!$license_key_only) {
                     <td>                        
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <?php esc_html_e('Show capabilities in', 'user-role-editor'); ?>&nbsp;
+                        <select name="caps_columns_quant" id="caps_columns_quant"> 
+                            <option value="1" <?php selected(1, $caps_columns_quant);?> >1</option>
+                            <option value="2" <?php selected(2, $caps_columns_quant);?> >2</option>
+                            <option value="3" <?php selected(3, $caps_columns_quant);?> >3</option>
+                        </select>    
+                        <?php esc_html_e('columns', 'user-role-editor'); ?>
+                    </td>
+                    <td>                        
+                    </td>
+                </tr>
                 
 <?php
 }
@@ -103,7 +126,7 @@ if (!$license_key_only) {
     </div> <!-- ure_tabs-1 -->
 <?php
 if (!$license_key_only) {
-    if ($this->lib->is_pro() || !$multisite) {
+    if ($lib->is_pro() || !$multisite) {
 ?>
     
     <div id="ure_tabs-2">
@@ -152,7 +175,7 @@ if (!$multisite) {
 ?>
         <?php esc_html_e('Other default roles for new registered user: ', 'user-role-editor'); ?>
         <div id="other_default_roles">
-            <?php $this->lib->show_other_default_roles(); ?>
+            <?php $lib->show_other_default_roles(); ?>
         </div>
 <?php 
     if ($multisite) {
@@ -161,7 +184,7 @@ if (!$multisite) {
 ?>
         <hr>
         <?php wp_nonce_field('user-role-editor'); ?>   
-            <input type="hidden" name="ure_tab_idx" value="2" />
+            <input type="hidden" name="ure_tab_idx" value="<?php echo $tabs_index[3];?>" />
             <p class="submit">
                 <input type="submit" class="button-primary" name="ure_default_roles_update" value="<?php _e('Save', 'user-role-editor') ?>" />
             </p>
@@ -169,14 +192,14 @@ if (!$multisite) {
     </div> <!-- ure_tabs-3 -->   
     
 <?php
-    if ( $multisite && ($this->lib->is_pro() || $this->lib->is_super_admin())) {
+    if ( $multisite && ($lib->is_pro() || $lib->is_super_admin())) {
 ?>
     <div id="ure_tabs-4">
         <div id="ure-settings-form-ms">
             <form name="ure_settings_ms" method="post" action="<?php echo $link; ?>?page=settings-<?php echo URE_PLUGIN_FILE; ?>" >
                 <table id="ure_settings_ms">
 <?php
-    if ($this->lib->is_super_admin()) {
+    if ($lib->is_super_admin()) {
 ?>
                     <tr>
                          <td>
@@ -193,9 +216,9 @@ if (!$multisite) {
 ?>                    
                 </table>
 <?php wp_nonce_field('user-role-editor'); ?>   
-                <input type="hidden" name="ure_tab_idx" value="3" />
+                <input type="hidden" name="ure_tab_idx" value="<?php echo $tabs_index[4];?>" />
             <p class="submit">
-                <input type="submit" class="button-primary" name="ure_settings_ms_update" value="<?php _e('Save', 'user-role-editor') ?>" />
+                <input type="submit" class="button-primary" name="ure_settings_ms_update" value="<?php esc_html_e('Save', 'user-role-editor'); ?>" />
             </p>                  
             </form>
         </div>   <!-- ure-settings-form-ms --> 
@@ -204,20 +227,33 @@ if (!$multisite) {
     }
 }   // if (!$license_key_only) {
 ?>
-        <div id="ure_tabs-5">
-            <?php $this->lib->about(); ?>
-        </div> <!-- ure_tabs-5 -->
+    <div id="ure_tabs-5">        
+        <?php  
+            $tools = new URE_Tools();            
+            $tools->show($tabs_index[5]);
+        ?>                          
+    </div> <!-- ure_tabs-5 -->
+    
+    <div id="ure_tabs-6">
+        <?php $lib->about(); ?>
+    </div> <!-- ure_tabs-6 -->
     </div> <!-- ure_tabs -->
 </div>
+
+<?php
+    URE_View::output_confirmation_dialog();
+?>
 <script>
     jQuery(function() {
         jQuery('#ure_tabs').tabs();
 <?php
-    if ($ure_tab_idx>0) {
+    $ure_tab_idx = (int) $ure_tab_idx;
+    if ($ure_tab_idx>0 && $ure_tab_idx<=count($tabs_index)) {
 ?>
         jQuery("#ure_tabs").tabs("option", "active", <?php echo $ure_tab_idx; ?>);    
 <?php
     }
-?>
+?>               
+        
     });    
 </script>

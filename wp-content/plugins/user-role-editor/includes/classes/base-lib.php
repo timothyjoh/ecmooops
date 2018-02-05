@@ -83,14 +83,19 @@ class URE_Base_Lib {
 
 
     /**
-     * Returns the array of multisite WP blogs IDs
+     * Returns the array of multi-site WP sites/blogs IDs for the current network
      * @global wpdb $wpdb
      * @return array
      */
     protected function get_blog_ids() {
         global $wpdb;
 
-        $blog_ids = $wpdb->get_col("select blog_id from $wpdb->blogs order by blog_id asc");
+        $network = get_current_site();        
+        $query = $wpdb->prepare(
+                    "SELECT blog_id FROM {$wpdb->blogs}
+                        WHERE site_id=%d ORDER BY blog_id ASC",
+                        array($network->id));
+        $blog_ids = $wpdb->get_col($query);
 
         return $blog_ids;
     }
@@ -136,21 +141,32 @@ class URE_Base_Lib {
     public function get_request_var($var_name, $request_type = 'request', $var_type = 'string') {
 
         $result = 0;
-        if ($request_type == 'get') {
-            if (isset($_GET[$var_name])) {
-                $result = filter_var($_GET[$var_name], FILTER_SANITIZE_STRING);
+        $request_type = strtolower($request_type);
+        switch ($request_type) {
+            case 'get': {
+                if (isset($_GET[$var_name])) {
+                    $result = filter_var($_GET[$var_name], FILTER_SANITIZE_STRING);
+                }                
+                break;
             }
-        } else if ($request_type == 'post') {
-            if (isset($_POST[$var_name])) {
-                if ($var_type != 'checkbox') {
-                    $result = filter_var($_POST[$var_name], FILTER_SANITIZE_STRING);;
-                } else {
-                    $result = 1;
+            case 'post': {
+                if (isset($_POST[$var_name])) {
+                    if ($var_type!='checkbox') {
+                        $result = filter_var($_POST[$var_name], FILTER_SANITIZE_STRING);
+                    } else {
+                        $result = 1;
+                    }
                 }
+                break;
             }
-        } else {
-            if (isset($_REQUEST[$var_name])) {
-                $result = filter_var($_REQUEST[$var_name], FILTER_SANITIZE_STRING);
+            case 'request': {
+                if (isset($_REQUEST[$var_name])) {
+                    $result = filter_var($_REQUEST[$var_name], FILTER_SANITIZE_STRING);
+                }
+                break;
+            }
+            default: {
+                $result = -1;   //  Wrong request type value, possible mistake in a function call
             }
         }
 
@@ -173,13 +189,17 @@ class URE_Base_Lib {
     public function get_option($option_name, $default = false) {
 
         if (isset($this->options[$option_name])) {
-            return $this->options[$option_name];
+            $value = $this->options[$option_name];
         } else {
-            return $default;
+            $value = $default;
         }
+        $value = apply_filters('ure_get_option_'. $option_name, $value);
+        
+        return $value;
     }
     // end of get_option()
 
+    
     /**
      * puts option value according to $option_name option name into options array property
      */
@@ -217,15 +237,15 @@ class URE_Base_Lib {
     // end of flush_options()
 
     /**
-     * Check product versrion and stop execution if product version is not compatible
-     * @param type $must_have_version
-     * @param type $version_to_check
-     * @param type $error_message
-     * @return type
+     * Check product version and stop execution if product version is not compatible
+     * @param string $version1
+     * @param string $version2
+     * @param string $error_message
+     * @return void
      */
-    public static function check_version($must_have_version, $version_to_check, $error_message, $plugin_file_name) {
+    public static function check_version($version1, $version2, $error_message, $plugin_file_name) {
 
-        if (version_compare($must_have_version, $version_to_check, '<')) {
+        if (version_compare($version1, $version2, '<')) {
             if (is_admin() && (!defined('DOING_AJAX') || !DOING_AJAX )) {
                 require_once ABSPATH . '/wp-admin/includes/plugin.php';
                 deactivate_plugins($plugin_file_name);
@@ -273,6 +293,36 @@ class URE_Base_Lib {
         return $str;
     }    
     //  end of get_short_list_str()
+    
+    
+    /**
+     * Prepare the list of integer or string values for usage in SQL query IN (val1, val2, ... , valN) claster
+     * @global wpdb $wpdb
+     * @param string $list_type: allowed values 'int', 'string'
+     * @param array $list_values: array of integers or strings
+     * @return string - comma separated values (CSV)
+     */
+    public static function esc_sql_in_list($list_type, $list_values) {
+        global $wpdb;
+        
+        if (empty($list_values) || !is_array($list_values) || count($list_values)==0) {
+            return '';
+        }
+        
+        if ($list_type=='int') {
+            $placeholder = '%d';   //  Integer
+        } else {
+            $placeholder = '%s';   // String
+        }
+        
+        $placeholders = array_fill(0, count($list_values), $placeholder);
+        $format_str = implode(',', $placeholders);
+        
+        $result = $wpdb->prepare($format_str, $list_values);
+        
+        return $result;        
+    }
+    // end of esc_sql_in_list()
     
     
     /**
