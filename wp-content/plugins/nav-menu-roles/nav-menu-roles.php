@@ -3,7 +3,7 @@
 Plugin Name: Nav Menu Roles
 Plugin URI: http://www.kathyisawesome.com/449/nav-menu-roles/
 Description: Hide custom menu items based on user roles.
-Version: 1.8.6
+Version: 1.9.1
 Author: Kathy Darling
 Author URI: http://www.kathyisawesome.com
 License: GPL-3.0
@@ -48,13 +48,13 @@ class Nav_Menu_Roles {
 	* @constant string donate url
 	* @since 1.5
 	*/
-	CONST DONATE_URL = "https://inspirepay.com/pay/helgatheviking/10";
+	CONST DONATE_URL = "https://paypal.me/kathyisawesome/20";
 
 	/**
 	* @constant string version number
-	* @since 1.7.1
+	* @since 1.7.0
 	*/
-	CONST VERSION = '1.8.6';
+	CONST VERSION = '1.9.1';
 
 	/**
 	* Main Nav Menu Roles Instance
@@ -103,7 +103,7 @@ class Nav_Menu_Roles {
 		add_action( 'admin_init', array( $this, 'admin_init' ) );
 
 		// load the textdomain
-		add_action( 'plugins_loaded', array( $this, 'load_text_domain' ) );
+		add_action( 'init', array( $this, 'load_text_domain' ) );
 
 		// add FAQ and Donate link to plugin
 		add_filter( 'plugin_row_meta', array( $this, 'add_action_links' ), 10, 2 );
@@ -329,7 +329,7 @@ class Nav_Menu_Roles {
 		    <br />
 
 		    <?php
-		    
+
 		    $i = 1;
 
 		    /* Loop through each of the available roles. */
@@ -426,11 +426,15 @@ class Nav_Menu_Roles {
 	}
 
 	/**
-	* Exclude menu items via wp_get_nav_menu_items filter
-	* this fixes plugin's incompatibility with theme's that use their own custom Walker
-	* Thanks to Evan Stein @vanpop http://vanpop.com/
-	* @since 1.2
-	*/
+	 * Exclude menu items via wp_get_nav_menu_items filter
+	 * this fixes plugin's incompatibility with theme's that use their own custom Walker
+	 * Thanks to Evan Stein @vanpop http://vanpop.com/
+	 *
+	 * @since 1.2
+	 *
+	 * Multisite compatibility added in 1.9.0
+	 * by @open-dsi https://www.open-dsi.fr/ with props to @fiech
+	 */
 	public function exclude_menu_items( $items ) {
 
 		$hide_children_of = array();
@@ -452,10 +456,26 @@ class Nav_Menu_Roles {
 				// check all logged in, all logged out, or role
 				switch( $item->roles ) {
 					case 'in' :
-					$visible = is_user_logged_in() ? true : false;
+						/**
+						 * Multisite compatibility.
+						 *
+						 * For the logged in condition to work,
+						 * the user has to be a logged in member of the current blog
+						 * or be a logged in super user.
+						 */
+						$visible = is_user_member_of_blog() || is_super_admin() ? true : false;
 						break;
 					case 'out' :
-					$visible = ! is_user_logged_in() ? true : false;
+						/**
+						 * Multisite compatibility.
+						 *
+						 * For the logged out condition to work,
+						 * the user has to be either logged out
+						 * or not be a member of the current blog.
+						 * But they also may not be a super admin,
+						 * because logged in super admins should see the internal stuff, not the external.
+						 */
+						$visible = ! is_user_member_of_blog() && ! is_super_admin() ? true : false;
 						break;
 					default:
 						$visible = false;
