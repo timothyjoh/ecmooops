@@ -129,6 +129,12 @@ https://userengage.com/ || contact@userengage.com
 
 
 == Changelog ==
+= 1.3.4.4
+* removed version selection, only .com is supported now
+
+= 1.3.4.3
+* fixed empty strings
+
 = 1.3.4.2
 * fixed woocommerce integration
 
