@@ -11,11 +11,6 @@ function salient_child_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'salient_child_enqueue_styles');
 
-function course_catalog_js() {
-    wp_enqueue_script( 'course_catalog_js', get_stylesheet_directory_uri() . '/js/tmci-catalog.js', array( 'jquery' ), false, true );
-}
-add_action( 'wp_enqueue_scripts', 'course_catalog_js' );
-
 function return_to_course_button() {
   $post_type = get_post_type();
   $post_id = get_post()->ID;
