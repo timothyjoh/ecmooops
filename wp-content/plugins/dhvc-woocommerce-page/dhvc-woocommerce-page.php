@@ -78,6 +78,7 @@ class DHVC_Woo_Page{
 			add_action( 'template_redirect', array( &$this, 'register_assets' ) );
 			add_action(	'wp_enqueue_scripts', array(&$this, 'frontend_assets'));
 			add_filter(	'wc_get_template_part', array(&$this,'wc_get_template_part'),50,3);
+			add_filter(	'woocommerce_locate_template', array(&$this,'woo_adon_plugin_template'),1,3);
 			add_action( 'admin_bar_menu', array(&$this,'adminBarEditLink'), 1000 );
 			if(apply_filters('dhvc_woocommerce_page_use_custom_single_product_template',false))
 				add_filter( 'template_include', array( &$this, 'template_loader' ),50 );
@@ -158,6 +159,32 @@ class DHVC_Woo_Page{
 		}
 		return $template;
 	}
+
+
+	//adds override templates for Woo elements
+	public function woo_adon_plugin_template( $template, $template_name, $template_path ) {
+		global $woocommerce;
+		$_template = $template;
+		if ( ! $template_path ) 
+			$template_path = $woocommerce->template_url;
+
+			$plugin_path  = untrailingslashit( plugin_dir_path( __FILE__ ) )  . '/templates/woocommerce/';
+
+			// Look within passed path within the theme - this is priority
+			$template = locate_template(
+				array(
+					$template_path . $template_name,
+					$template_name
+				)
+			);
+
+			if( ! $template && file_exists( $plugin_path . $template_name ) )
+			$template = $plugin_path . $template_name;
+
+			if ( ! $template )
+			$template = $_template;
+			return $template;
+	 }
 	
 	public function notice(){
 		$plugin = get_plugin_data(__FILE__);
@@ -189,6 +216,8 @@ class DHVC_Woo_Page{
 			) );
 		}
 	}
+
+
 }
 
 new DHVC_Woo_Page();

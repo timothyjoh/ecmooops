@@ -170,6 +170,11 @@ class DHVC_Woo_Page_Shortcode {
 		extract ( $this->_shortcode_atts ( array (
 				'el_class' => '' 
 		), $atts ) );
+
+		extract ( $this->_shortcode_atts ( array (
+				'heading_type' => '' 
+		), $atts ) );
+
 		ob_start ();
 		if (! empty ( $el_class ))
 			echo '<div class="' . $el_class . '">';
@@ -180,7 +185,10 @@ class DHVC_Woo_Page_Shortcode {
 			<h1 itemprop="name" class="single_product_title entry-title"><?php the_title(); ?></h1>
 			<?php
 		}else{
-			woocommerce_template_single_title ();
+			echo '<' . $heading_type . '>';
+			woocommerce_template_single_title (); 
+			echo '</' . $heading_type . '>';
+
 		}
 		if (! empty ( $el_class ))
 			echo '</div>';

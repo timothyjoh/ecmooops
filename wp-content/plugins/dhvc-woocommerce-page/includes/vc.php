@@ -74,6 +74,20 @@ class DHVC_Woo_Page_VisualComposer{
 					'value'=>'',
 					"description" => __ ( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", DHVC_WOO_PAGE )
 				),
+				array (
+					"type" => "dropdown",
+					'save_always'=>true,
+					"heading" => __ ( "Heading Type", DHVC_WOO_PAGE ),
+					"param_name" => "heading_type",
+					"value" => array (
+						__ ( 'H1', DHVC_WOO_PAGE ) => 'h1',
+						__ ( 'H2', DHVC_WOO_PAGE ) => 'h2',
+						__ ( 'H3', DHVC_WOO_PAGE ) => 'h3',
+						__ ( 'H4', DHVC_WOO_PAGE ) => 'h4',
+						__ ( 'H5', DHVC_WOO_PAGE ) => 'h5',
+						__ ( 'H6', DHVC_WOO_PAGE ) => 'h6'
+					)
+				),
 				array(
 					'type' => 'css_editor',
 					'heading' => __( 'CSS box', DHVC_WOO_PAGE ),
