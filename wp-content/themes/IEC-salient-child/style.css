@@ -160,6 +160,12 @@ body .nectar-button {
 	border: 1px solid #903800 !important;
 	color:#fff !important;
 }
+
+
+.product-template-default.woocommerce input.button:hover, 
+.product-template-default.woocommerce-page input.button:hover,
+.product-template-default.woocommerce input.button:focus, 
+.product-template-default.woocommerce-page input.button:focus,
 body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:hover, 
 body[data-button-style="rounded"].ascend .container-wrap .container input[type="submit"]:focus, 
 body[data-button-style="rounded"].ascend .container-wrap .container button[type="submit"]:hover,
