@@ -118,6 +118,7 @@ body a:not(.nectar-button){
   color:#B94700 !important;
   text-decoration: none;
 }
+
 body a:not(.button):hover,
 body a:not(.button):focus{
   color:#B94700 !important;
@@ -197,6 +198,28 @@ a.button:focus,
 
 
 /** other buttons **/
+
+
+a.grassblade_launch_link,
+.cert-button.act-btn.push-bottom{
+    color: #B94700 !important;
+    border: 1px solid #b94700;
+    background-color: #fff !important;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin: 0 0 5px !important;
+}
+body a.grassblade_launch_link:hover,
+body a.grassblade_launch_link:focus,
+.cert-button.act-btn.push-bottom:hover,
+.cert-button.act-btn.push-bottom:focus{
+    color: #fff !important;
+    background-color: #B94700 !important;
+    text-decoration: none !important;
+  }
+
 
 .nectar-button.regular.regular-button.has-icon{
   display: inline-block;
