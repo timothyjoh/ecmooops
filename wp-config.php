@@ -179,3 +179,7 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+if (file_exists(dirname(__FILE__) . '/wp-config-forcessl.php')){
+  require_once(dirname(__FILE__) . '/wp-config-forcessl.php');  
+}
